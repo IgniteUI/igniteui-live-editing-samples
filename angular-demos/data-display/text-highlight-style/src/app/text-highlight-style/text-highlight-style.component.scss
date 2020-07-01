@@ -1,0 +1,43 @@
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+$dark-highlight: igx-highlight-theme(
+    $resting-background: #FFCD0F,
+    $resting-color: #292826,
+    $active-background: #292826,
+    $active-color: #FFCD0F
+);
+
+:host {
+    display: block;
+    padding: 4px;
+
+    ::ng-deep {
+        @include igx-highlight($dark-highlight);
+
+        .custom-highlight {
+            border: 1px solid #FFCD0F;
+        }
+
+        .custom-active-highlight {
+            box-shadow: 0 0 3px 0 rgba(0,0,0, .5);
+        }
+    }
+}
+
+.caseSensitiveIcon {
+    width: 1rem;
+    height: 1rem;
+    font-size: 1rem;
+}
+
+.caseSensitiveButton + span {
+    margin-left: 8px;
+}
+
+.searchButtons {
+    margin-left: 8px;
+}
+
+.sample-text-container {
+    margin-top: 16px;
+}

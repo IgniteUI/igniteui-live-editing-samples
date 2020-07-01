@@ -1,0 +1,67 @@
+
+@import '~igniteui-angular/lib/core/styles/themes/index';
+
+$my-color: igx-color($default-palette, 'success');
+:root {
+    --success-color: igx-color($default-palette, 'success');
+}
+
+$custom-checkbox-theme: igx-checkbox-theme(
+    $fill-color: $my-color,
+    $border-radius: 10px
+);
+
+.list-sample ::ng-deep {
+    @include igx-checkbox($custom-checkbox-theme);
+}
+
+.sample {
+    display: flex;
+
+    .grid_wrapper {
+        padding-left: 15px;
+        padding-top: 15px;
+        width: 75%;
+    }
+
+
+    .list-sample {
+        padding-top: 15px;
+        width: 20%;
+
+        .disabled {
+            opacity: .4;
+        }
+
+        .active {
+            opacity: 1;
+        }
+
+        igx-list {
+            .igx-list__item-line-title, .igx-list__item-line-subtitle {
+                font-size: 13px;
+            }
+
+            height: 450px;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+            0 1px 1px 0 rgba(0, 0, 0, 0.14),
+            0 2px 1px -1px rgba(0, 0, 0, 0.12);
+        }
+
+        .empty-list {
+            opacity: 1;
+            h6 {
+                padding: 15px;
+                font-size: 15px;
+            }
+
+            ul {
+                li {
+                    font-size: 13px;
+                }
+                margin-left: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+}
