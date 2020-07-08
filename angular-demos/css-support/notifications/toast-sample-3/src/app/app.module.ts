@@ -7,9 +7,9 @@ import {
 	IgxButtonModule,
 	IgxRippleModule,
 	IgxIconModule,
-	IgxSnackbarModule
+	IgxToastModule
  } from "igniteui-angular";
-import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.component";
+import { ToastSample3Component } from "./toast-sample-3/toast-sample-3.component";
 
 
 
@@ -17,7 +17,7 @@ import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-		SnackbarSample2Component
+		ToastSample3Component
   ],
   imports: [
     BrowserModule,
@@ -25,7 +25,7 @@ import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.
     FormsModule,
 		IgxButtonModule,
 		IgxRippleModule,
-		IgxSnackbarModule,
+		IgxToastModule,
 		IgxIconModule
   ],
   providers: [],

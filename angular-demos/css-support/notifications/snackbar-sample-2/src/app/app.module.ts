@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { 
 	IgxButtonModule,
 	IgxRippleModule,
+	IgxIconModule,
 	IgxSnackbarModule
  } from "igniteui-angular";
 import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.component";
@@ -24,7 +25,8 @@ import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.
     FormsModule,
 		IgxButtonModule,
 		IgxRippleModule,
-		IgxSnackbarModule
+		IgxSnackbarModule,
+		IgxIconModule
   ],
   providers: [],
   entryComponents: [],
