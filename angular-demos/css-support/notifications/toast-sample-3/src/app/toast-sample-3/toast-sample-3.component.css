@@ -1,0 +1,21 @@
+.columnWrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row;
+      flex-flow: row;
+  padding-top: 30px; }
+
+.columnWrapper span {
+  min-width: 250px;
+  -ms-flex: 1 0 0px;
+      flex: 1 0 0px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center; }
+
+button {
+  margin: 15px 10px 10px 0; }

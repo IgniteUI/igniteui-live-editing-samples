@@ -1,0 +1,22 @@
+igx-select {
+    width: 230px;
+    padding-top: 70px;
+    padding-left: 40px;
+}
+
+igx-select-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+:host ::ng-deep {
+    .select__entry {
+        span {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-right: 12px;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+[hidden] {
+  display: none !important; }
+
+.igx-display-container {
+  display: inherit;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
+
+.igx-display-container--inactive {
+  width: 100%; }
+
+.igx-drag {
+  -ms-touch-action: none;
+      touch-action: none; }
+
+.igx-drag--select-disabled {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.igx-drag__handle {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+
+.igx-svg-container {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden; }
+
+.igx-radio-group {
+  display: block; }
+
+[class^='igx-'],
+[class^='igx-'] *,
+[class^='igx-'] *::before,
+[class^='igx-'] *::after {
+  box-sizing: border-box; }
+
+:host {
+  display: block;
+  padding: 4px; }
+  :host ::ng-deep {
+    --igx-highlight-resting-background: #FFCD0F;
+    --igx-highlight-resting-color: #292826;
+    --igx-highlight-active-background: #292826;
+    --igx-highlight-active-color: #FFCD0F; }
+  :host ::ng-deep .igx-highlight, :host ::ng-deep .igx-highlight--active {
+    color: var(--igx-highlight-resting-color);
+    background: var(--igx-highlight-resting-background); }
+  :host ::ng-deep .igx-highlight--active {
+    color: var(--igx-highlight-active-color);
+    background: var(--igx-highlight-active-background); }
+  :host ::ng-deep .custom-highlight {
+    border: 1px solid #FFCD0F; }
+  :host ::ng-deep .custom-active-highlight {
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5); }
+
+.caseSensitiveIcon {
+  width: 1rem;
+  height: 1rem;
+  font-size: 1rem; }
+
+.caseSensitiveButton + span {
+  margin-left: 8px; }
+
+.searchButtons {
+  margin-left: 8px; }
+
+.sample-text-container {
+  margin-top: 16px; }
