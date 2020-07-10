@@ -142,7 +142,7 @@
 :host ::ng-deep .igx-drop-down {
   position: absolute; }
 
-:host ::ng-deep .igx-drop-down__list {
+:host ::ng-deep .igx-drop-down__list, :host ::ng-deep .igx-drop-down__list--empty {
   overflow: hidden;
   border-radius: var(--igx-drop-down-border-radius);
   background: var(--igx-drop-down-background-color);
@@ -150,12 +150,13 @@
   min-width: 8rem;
   border: var(--igx-drop-down-border-width) solid var(--igx-drop-down-border-color); }
 
+:host ::ng-deep .igx-drop-down__list--empty {
+  box-shadow: none; }
+
 :host ::ng-deep .igx-drop-down__list-scroll {
   overflow-y: auto;
   overflow-x: hidden;
   position: relative; }
-  :host ::ng-deep .igx-drop-down__list-scroll:empty {
-    box-shadow: none; }
   :host ::ng-deep .igx-drop-down__list-scroll igx-input-group {
     margin-top: -16px !important; }
 

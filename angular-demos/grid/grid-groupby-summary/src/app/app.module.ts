@@ -9,7 +9,8 @@ import {
 	IgxGridModule,
 	IgxSwitchModule,
 	IgxIconModule,
-	IgxBadgeModule
+	IgxBadgeModule,
+	IgxSwitchModule
  } from "igniteui-angular";
 import { GridGroupBySummarySampleComponent } from "./grid/grid-groupby-summary-sample/grid-groupby-summary-sample.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -31,7 +32,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 		IgxButtonGroupModule,
 		IgxGridModule,
 		IgxIconModule,
-		IgxBadgeModule
+		IgxBadgeModule,
+		IgxSwitchModule
   ],
   providers: [],
   entryComponents: [],
