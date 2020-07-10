@@ -6219,35 +6219,43 @@
         justify-content: space-between;
     width: 100%;
     height: 56px;
-    padding: 0 1em;
+    padding: 0 1rem;
     background: var(--igx-navbar-background);
     color: var(--igx-navbar-text-color);
     box-shadow: var(--igx-navbar-shadow);
     z-index: 4; }
-  :host ::ng-deep .igx-navbar__title {
-    margin: 0; }
-  :host ::ng-deep .igx-navbar__left, :host ::ng-deep .igx-navbar__right {
+  :host ::ng-deep .igx-navbar__left, :host ::ng-deep .igx-navbar__right, :host ::ng-deep igx-navbar-action,
+  :host ::ng-deep [igxNavbarAction], :host ::ng-deep igx-navbar-title,
+  :host ::ng-deep [igxNavbarTitle] {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
-        align-items: center;
+        align-items: center; }
+  :host ::ng-deep .igx-navbar__title, :host ::ng-deep igx-navbar-title,
+  :host ::ng-deep [igxNavbarTitle] {
+    margin: 0;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text; }
+  :host ::ng-deep .igx-navbar__left, :host ::ng-deep .igx-navbar__right {
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
     :host ::ng-deep .igx-navbar__left > * + *, :host ::ng-deep .igx-navbar__right > * + * {
-      margin-left: 16px; }
+      margin-left: 1rem; }
   :host ::ng-deep .igx-navbar__left igx-icon, :host ::ng-deep .igx-navbar__right igx-icon {
     cursor: pointer;
     color: var(--igx-navbar-idle-icon-color);
     transition: color 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
     :host ::ng-deep .igx-navbar__left igx-icon:hover, :host ::ng-deep .igx-navbar__right igx-icon:hover {
       color: var(--igx-navbar-hover-icon-color); }
-  :host ::ng-deep igx-action-icon {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
+  :host ::ng-deep .igx-navbar__left {
+    -ms-flex-positive: 1;
+        flex-grow: 1; }
   :host ::ng-deep {
     --igx-navdrawer-border-radius: 0px;
     --igx-navdrawer-item-border-radius: 4px;
