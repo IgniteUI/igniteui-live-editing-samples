@@ -2472,6 +2472,20 @@
     background-size: 1px 10px;
     /* dash size */ }
   :host ::ng-deep {
+    --igc-active-color: #09f;
+    --igc-border-color: #f6fbfe;
+    --igc-button-text: rgba(0, 0, 0, 0.74);
+    --igc-context-menu-color-active: black;
+    --igc-floating-pane-border-color: #fff;
+    --igc-flyout-shadow-color: rgba(0, 0, 0, 0.08);
+    --igc-joystick-border-color: rgba(0, 0, 0, 0.12);
+    --igc-joystick-icon-color: rgba(0, 0, 0, 0.54);
+    --igc-joystick-icon-color-active: black;
+    --igc-pane-content-background: #f6fbfe;
+    --igc-splitter-background: rgba(0, 0, 0, 0.12);
+    --igc-tab-background-active: #f6fbfe;
+    --igc-text-color: rgba(0, 0, 0, 0.74); }
+  :host ::ng-deep {
     --igx-drop-down-border-radius: 4px;
     --igx-drop-down-elevation: 8;
     --igx-drop-down-background-color: #fff;
@@ -4920,7 +4934,6 @@
     outline-style: none; }
     :host ::ng-deep .igx-grid-summary::after, :host ::ng-deep .igx-grid-summary--pinned::after, :host ::ng-deep .igx-grid-summary--empty::after, :host ::ng-deep .igx-grid-summary--fw::after, :host ::ng-deep .igx-grid-summary--cosy::after, :host ::ng-deep .igx-grid-summary--compact::after {
       position: absolute;
-      content: '';
       top: 0;
       bottom: 0;
       left: 0;
@@ -5584,14 +5597,14 @@
       color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    :host ::ng-deep .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   :host ::ng-deep .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
@@ -10206,7 +10219,6 @@
     outline-style: none; }
     :host ::ng-deep .igx-grid-summary::after, :host ::ng-deep .igx-grid-summary--pinned::after, :host ::ng-deep .igx-grid-summary--empty::after, :host ::ng-deep .igx-grid-summary--fw::after, :host ::ng-deep .igx-grid-summary--cosy::after, :host ::ng-deep .igx-grid-summary--compact::after {
       position: absolute;
-      content: '';
       top: 0;
       bottom: 0;
       left: 0;
@@ -10715,14 +10727,14 @@
       color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    :host ::ng-deep .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   :host ::ng-deep .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
@@ -11714,14 +11726,14 @@
       color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep .igx-drop-down__list .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    :host ::ng-deep .igx-drop-down__list .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   :host ::ng-deep .igx-drop-down__list .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy :host ::ng-deep .igx-drop-down__list .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
