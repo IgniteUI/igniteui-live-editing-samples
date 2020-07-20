@@ -51,98 +51,6 @@
   font-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .igx-typography h1, .igx-typography .igx-typography__h1, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h1, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h1 {
-    font-weight: 300;
-    font-size: 6rem;
-    letter-spacing: -0.09375rem;
-    text-transform: none;
-    line-height: 7rem;
-    margin-top: 1.75rem;
-    margin-bottom: 3.5rem; }
-  .igx-typography h2, .igx-typography .igx-typography__h2, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h2, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h2 {
-    font-weight: 300;
-    font-size: 3.75rem;
-    letter-spacing: -0.03125rem;
-    text-transform: none;
-    line-height: 4.4375rem;
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem; }
-  .igx-typography h3, .igx-typography .igx-typography__h3, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h3, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h3 {
-    font-weight: 400;
-    font-size: 3rem;
-    letter-spacing: 0;
-    text-transform: none;
-    line-height: 3.5625rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0; }
-  .igx-typography h4, .igx-typography .igx-typography__h4, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h4, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h4 {
-    font-weight: 400;
-    font-size: 2.125rem;
-    letter-spacing: 0.01563rem;
-    text-transform: none;
-    line-height: 2.5rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0; }
-  .igx-typography h5, .igx-typography .igx-typography__h5, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h5, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h5 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 0;
-    text-transform: none;
-    line-height: 1.75rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0; }
-  .igx-typography h6, .igx-typography .igx-typography__h6, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h6, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h6 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: 0.00937rem;
-    text-transform: none;
-    line-height: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 0; }
-  .igx-typography .igx-typography__subtitle-1 {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.00937rem;
-    text-transform: none;
-    line-height: 1.5rem; }
-  .igx-typography .igx-typography__subtitle-2 {
-    font-weight: 600;
-    font-size: 0.875rem;
-    letter-spacing: 0.00625rem;
-    text-transform: none;
-    line-height: 1.5rem; }
-  .igx-typography p, .igx-typography .igx-typography__body-1, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper p, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography p {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.03125rem;
-    text-transform: none;
-    line-height: 1.75rem;
-    margin-top: 1.75rem;
-    margin-bottom: 1rem; }
-  .igx-typography .igx-typography__body-2 {
-    font-weight: 400;
-    font-size: 0.875rem;
-    letter-spacing: 0.01563rem;
-    text-transform: none;
-    line-height: 1.25rem; }
-  .igx-typography .igx-typography__button {
-    font-weight: 600;
-    font-size: 0.875rem;
-    letter-spacing: 0.04688rem;
-    text-transform: uppercase;
-    line-height: 1rem; }
-  .igx-typography .igx-typography__caption {
-    font-weight: 400;
-    font-size: 0.75rem;
-    letter-spacing: 0.025rem;
-    text-transform: none;
-    line-height: 1rem; }
-  .igx-typography .igx-typography__overline {
-    font-weight: 400;
-    font-size: 0.625rem;
-    letter-spacing: 0.09375rem;
-    text-transform: uppercase;
-    line-height: 1rem; }
   .igx-typography .igx-excel-filter__menu .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__menu .igx-excel-filter__secondary-header > h4 {
     font-weight: 600;
     font-size: 1.25rem;
@@ -595,6 +503,98 @@
   .igx-typography .igx-tooltip--desktop {
     font-size: 0.625rem;
     font-weight: 600; }
+  .igx-typography h1, .igx-typography .igx-typography__h1 {
+    font-weight: 300;
+    font-size: 6rem;
+    letter-spacing: -0.09375rem;
+    text-transform: none;
+    line-height: 7rem;
+    margin-top: 1.75rem;
+    margin-bottom: 3.5rem; }
+  .igx-typography h2, .igx-typography .igx-typography__h2 {
+    font-weight: 300;
+    font-size: 3.75rem;
+    letter-spacing: -0.03125rem;
+    text-transform: none;
+    line-height: 4.4375rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem; }
+  .igx-typography h3, .igx-typography .igx-typography__h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 3.5625rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0; }
+  .igx-typography h4, .igx-typography .igx-typography__h4 {
+    font-weight: 400;
+    font-size: 2.125rem;
+    letter-spacing: 0.01563rem;
+    text-transform: none;
+    line-height: 2.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0; }
+  .igx-typography h5, .igx-typography .igx-typography__h5 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0; }
+  .igx-typography h6, .igx-typography .igx-typography__h6 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.00937rem;
+    text-transform: none;
+    line-height: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .igx-typography .igx-typography__subtitle-1 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.00937rem;
+    text-transform: none;
+    line-height: 1.5rem; }
+  .igx-typography .igx-typography__subtitle-2 {
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.00625rem;
+    text-transform: none;
+    line-height: 1.5rem; }
+  .igx-typography p, .igx-typography .igx-typography__body-1 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.03125rem;
+    text-transform: none;
+    line-height: 1.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem; }
+  .igx-typography .igx-typography__body-2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.01563rem;
+    text-transform: none;
+    line-height: 1.25rem; }
+  .igx-typography .igx-typography__button {
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.04688rem;
+    text-transform: uppercase;
+    line-height: 1rem; }
+  .igx-typography .igx-typography__caption {
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+    text-transform: none;
+    line-height: 1rem; }
+  .igx-typography .igx-typography__overline {
+    font-weight: 400;
+    font-size: 0.625rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+    line-height: 1rem; }
 
 .igx-vhelper--vertical, .igx-vhelper--horizontal {
   display: block;
@@ -7518,14 +7518,14 @@ igx-date-range-end,
 
 .igx-input-group__textarea {
   min-height: 5.125rem;
-  /* 3 lines * 22px + 8px bottom padding + 8px top padding */
   margin-right: -1rem;
-  /* this fixes resizing in chrome !?!? */
-  line-height: normal !important;
-  /* resets typography styles */
   height: auto;
   resize: vertical;
-  overflow: hidden; }
+  overflow: hidden;
+  line-height: normal !important; }
+  .igx-input-group__textarea:not([type='*']) {
+    line-height: normal !important;
+    /* resets typography styles */ }
 
 .igx-input-group--cosy .igx-input-group__textarea {
   min-height: 4.31579rem;
@@ -16108,14 +16108,14 @@ body {
       color: var(--igx-input-group-disabled-placeholder-color); }
   .fin-dark-theme .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    .fin-dark-theme .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   .fin-dark-theme .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
@@ -24103,14 +24103,14 @@ body {
       color: rgba(255, 255, 255, 0.26); }
   .dark-theme .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    .dark-theme .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   .dark-theme .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy .dark-theme .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
@@ -26357,106 +26357,6 @@ body {
     subgroup encapsulates children of each
     thead item and group.
     */ }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h1, .dark-theme .grid-chart-contextmenu-wrapper h1 {
-      font-weight: 700;
-      font-size: 4.25rem;
-      letter-spacing: -0.09375rem;
-      text-transform: none;
-      line-height: 4.75rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h2, .dark-theme .grid-chart-contextmenu-wrapper h2 {
-      font-weight: 700;
-      font-size: 2.625rem;
-      letter-spacing: -0.03125rem;
-      text-transform: none;
-      line-height: 3.25rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h3, .dark-theme .grid-chart-contextmenu-wrapper h3 {
-      font-weight: 600;
-      font-size: 2rem;
-      letter-spacing: 0;
-      text-transform: none;
-      line-height: 2.5rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h4, .dark-theme .grid-chart-contextmenu-wrapper h4 {
-      font-weight: 400;
-      font-size: 1.75rem;
-      letter-spacing: 0.01563rem;
-      text-transform: none;
-      line-height: 2.25rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h5, .dark-theme .grid-chart-contextmenu-wrapper h5 {
-      font-weight: 400;
-      font-size: 1.25rem;
-      letter-spacing: 0;
-      text-transform: none;
-      line-height: 1.75rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h6, .dark-theme .grid-chart-contextmenu-wrapper h6 {
-      font-weight: 400;
-      font-size: 1.125rem;
-      letter-spacing: 0.00937rem;
-      text-transform: none;
-      line-height: 1.375rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__subtitle-1 {
-      font-weight: 400;
-      font-size: 0.75rem;
-      letter-spacing: 0.00937rem;
-      text-transform: none;
-      line-height: 1rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__subtitle-2 {
-      font-weight: 400;
-      font-size: 0.875rem;
-      letter-spacing: 0.00625rem;
-      text-transform: none;
-      line-height: 1rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__body-1, .dark-theme .grid-chart-contextmenu-wrapper p {
-      font-weight: 400;
-      font-size: 1rem;
-      letter-spacing: 0.03125rem;
-      text-transform: none;
-      line-height: 1.375rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__body-2 {
-      font-weight: 400;
-      font-size: 0.875rem;
-      letter-spacing: 0.01563rem;
-      text-transform: none;
-      line-height: 1.25rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__button {
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.04688rem;
-      text-transform: capitalize;
-      line-height: 0.875rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__caption {
-      font-weight: 400;
-      font-size: 0.75rem;
-      letter-spacing: 0.025rem;
-      text-transform: none;
-      line-height: 1rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__overline {
-      font-weight: 400;
-      font-size: 0.625rem;
-      letter-spacing: 0.09375rem;
-      text-transform: uppercase;
-      line-height: 1rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu .igx-excel-filter__menu-header > h4, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu .igx-excel-filter__secondary-header > h4 {
       font-weight: 400;
       font-size: 1.125rem;
@@ -32738,14 +32638,14 @@ body {
         color: var(--igx-input-group-disabled-placeholder-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
       min-height: 5.125rem;
-      /* 3 lines * 22px + 8px bottom padding + 8px top padding */
       margin-right: -1rem;
-      /* this fixes resizing in chrome !?!? */
-      line-height: normal !important;
-      /* resets typography styles */
       height: auto;
       resize: vertical;
-      overflow: hidden; }
+      overflow: hidden;
+      line-height: normal !important; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea:not([type='*']) {
+        line-height: normal !important;
+        /* resets typography styles */ }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
       min-height: 4.31579rem;
       margin-right: -0.84211rem; }
