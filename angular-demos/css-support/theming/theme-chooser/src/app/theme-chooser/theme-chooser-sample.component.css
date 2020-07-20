@@ -2736,14 +2736,14 @@
           color: var(--igx-input-group-disabled-placeholder-color); }
       :host.light-theme ::ng-deep .igx-input-group__textarea {
         min-height: 5.125rem;
-        /* 3 lines * 22px + 8px bottom padding + 8px top padding */
         margin-right: -1rem;
-        /* this fixes resizing in chrome !?!? */
-        line-height: normal !important;
-        /* resets typography styles */
         height: auto;
         resize: vertical;
-        overflow: hidden; }
+        overflow: hidden;
+        line-height: normal !important; }
+        :host.light-theme ::ng-deep .igx-input-group__textarea:not([type='*']) {
+          line-height: normal !important;
+          /* resets typography styles */ }
       :host.light-theme ::ng-deep .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy :host.light-theme ::ng-deep .igx-input-group__textarea {
         min-height: 4.31579rem;
         margin-right: -0.84211rem; }
@@ -7048,14 +7048,14 @@
           color: var(--igx-input-group-disabled-placeholder-color); }
       :host.dark-theme ::ng-deep .igx-input-group__textarea {
         min-height: 5.125rem;
-        /* 3 lines * 22px + 8px bottom padding + 8px top padding */
         margin-right: -1rem;
-        /* this fixes resizing in chrome !?!? */
-        line-height: normal !important;
-        /* resets typography styles */
         height: auto;
         resize: vertical;
-        overflow: hidden; }
+        overflow: hidden;
+        line-height: normal !important; }
+        :host.dark-theme ::ng-deep .igx-input-group__textarea:not([type='*']) {
+          line-height: normal !important;
+          /* resets typography styles */ }
       :host.dark-theme ::ng-deep .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea {
         min-height: 4.31579rem;
         margin-right: -0.84211rem; }
@@ -11360,14 +11360,14 @@
           color: var(--igx-input-group-disabled-placeholder-color); }
       :host.black-theme ::ng-deep .igx-input-group__textarea {
         min-height: 5.125rem;
-        /* 3 lines * 22px + 8px bottom padding + 8px top padding */
         margin-right: -1rem;
-        /* this fixes resizing in chrome !?!? */
-        line-height: normal !important;
-        /* resets typography styles */
         height: auto;
         resize: vertical;
-        overflow: hidden; }
+        overflow: hidden;
+        line-height: normal !important; }
+        :host.black-theme ::ng-deep .igx-input-group__textarea:not([type='*']) {
+          line-height: normal !important;
+          /* resets typography styles */ }
       :host.black-theme ::ng-deep .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy :host.black-theme ::ng-deep .igx-input-group__textarea {
         min-height: 4.31579rem;
         margin-right: -0.84211rem; }

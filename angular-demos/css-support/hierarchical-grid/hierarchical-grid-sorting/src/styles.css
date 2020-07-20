@@ -51,98 +51,6 @@
   font-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  .igx-typography h1, .igx-typography .igx-typography__h1, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h1, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h1 {
-    font-weight: 300;
-    font-size: 6rem;
-    letter-spacing: -0.09375rem;
-    text-transform: none;
-    line-height: 7rem;
-    margin-top: 1.75rem;
-    margin-bottom: 3.5rem; }
-  .igx-typography h2, .igx-typography .igx-typography__h2, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h2, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h2 {
-    font-weight: 300;
-    font-size: 3.75rem;
-    letter-spacing: -0.03125rem;
-    text-transform: none;
-    line-height: 4.4375rem;
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem; }
-  .igx-typography h3, .igx-typography .igx-typography__h3, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h3, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h3 {
-    font-weight: 400;
-    font-size: 3rem;
-    letter-spacing: 0;
-    text-transform: none;
-    line-height: 3.5625rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0; }
-  .igx-typography h4, .igx-typography .igx-typography__h4, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h4, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h4 {
-    font-weight: 400;
-    font-size: 2.125rem;
-    letter-spacing: 0.01563rem;
-    text-transform: none;
-    line-height: 2.5rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0; }
-  .igx-typography h5, .igx-typography .igx-typography__h5, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h5, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h5 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    letter-spacing: 0;
-    text-transform: none;
-    line-height: 1.75rem;
-    margin-top: 1.75rem;
-    margin-bottom: 0; }
-  .igx-typography h6, .igx-typography .igx-typography__h6, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper h6, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography h6 {
-    font-weight: 600;
-    font-size: 1.25rem;
-    letter-spacing: 0.00937rem;
-    text-transform: none;
-    line-height: 1.5rem;
-    margin-top: 0;
-    margin-bottom: 0; }
-  .igx-typography .igx-typography__subtitle-1 {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.00937rem;
-    text-transform: none;
-    line-height: 1.5rem; }
-  .igx-typography .igx-typography__subtitle-2 {
-    font-weight: 600;
-    font-size: 0.875rem;
-    letter-spacing: 0.00625rem;
-    text-transform: none;
-    line-height: 1.5rem; }
-  .igx-typography p, .igx-typography .igx-typography__body-1, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper p, .dark-theme .grid-chart-contextmenu-wrapper .igx-typography p {
-    font-weight: 400;
-    font-size: 1rem;
-    letter-spacing: 0.03125rem;
-    text-transform: none;
-    line-height: 1.75rem;
-    margin-top: 1.75rem;
-    margin-bottom: 1rem; }
-  .igx-typography .igx-typography__body-2 {
-    font-weight: 400;
-    font-size: 0.875rem;
-    letter-spacing: 0.01563rem;
-    text-transform: none;
-    line-height: 1.25rem; }
-  .igx-typography .igx-typography__button {
-    font-weight: 600;
-    font-size: 0.875rem;
-    letter-spacing: 0.04688rem;
-    text-transform: uppercase;
-    line-height: 1rem; }
-  .igx-typography .igx-typography__caption {
-    font-weight: 400;
-    font-size: 0.75rem;
-    letter-spacing: 0.025rem;
-    text-transform: none;
-    line-height: 1rem; }
-  .igx-typography .igx-typography__overline {
-    font-weight: 400;
-    font-size: 0.625rem;
-    letter-spacing: 0.09375rem;
-    text-transform: uppercase;
-    line-height: 1rem; }
   .igx-typography .igx-excel-filter__menu .igx-excel-filter__menu-header > h4, .igx-typography .igx-excel-filter__menu .igx-excel-filter__secondary-header > h4 {
     font-weight: 600;
     font-size: 1.25rem;
@@ -308,6 +216,18 @@
     text-transform: none;
     line-height: 1.25rem;
     margin: 0; }
+  .igx-typography {
+    --category-chart-title-text-style: 300 6rem/7rem inherit; }
+  .igx-typography {
+    --category-chart-subtitle-text-style: 400 1rem/1.5rem inherit; }
+  .igx-typography {
+    --category-chart-x-axis-label-text-style: 400 2.125rem/2.5rem inherit; }
+  .igx-typography {
+    --category-chart-x-axis-title-text-style: 400 3rem/3.5625rem inherit; }
+  .igx-typography {
+    --category-chart-y-axis-label-text-style: 400 2.125rem/2.5rem inherit; }
+  .igx-typography {
+    --category-chart-y-axis-title-text-style: 400 3rem/3.5625rem inherit; }
   .igx-typography .igx-checkbox__label, .igx-typography .igx-checkbox__label--before {
     font-weight: 400;
     font-size: 1rem;
@@ -361,6 +281,8 @@
     margin-top: 1.75rem;
     margin-bottom: 1rem;
     margin: 0; }
+  .igx-typography {
+    --igc-font-family: inherit; }
   .igx-typography .igx-drop-down__header, .igx-typography .igx-drop-down__group label, .igx-drop-down__group .igx-typography label, .igx-typography .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__group label, .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__group .igx-typography label,
   .igx-typography .igx-drop-down__group > label {
     font-weight: 400;
@@ -597,6 +519,98 @@
   .igx-typography .igx-tooltip--desktop {
     font-size: 0.625rem;
     font-weight: 600; }
+  .igx-typography h1, .igx-typography .igx-typography__h1 {
+    font-weight: 300;
+    font-size: 6rem;
+    letter-spacing: -0.09375rem;
+    text-transform: none;
+    line-height: 7rem;
+    margin-top: 1.75rem;
+    margin-bottom: 3.5rem; }
+  .igx-typography h2, .igx-typography .igx-typography__h2 {
+    font-weight: 300;
+    font-size: 3.75rem;
+    letter-spacing: -0.03125rem;
+    text-transform: none;
+    line-height: 4.4375rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem; }
+  .igx-typography h3, .igx-typography .igx-typography__h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 3.5625rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0; }
+  .igx-typography h4, .igx-typography .igx-typography__h4 {
+    font-weight: 400;
+    font-size: 2.125rem;
+    letter-spacing: 0.01563rem;
+    text-transform: none;
+    line-height: 2.5rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0; }
+  .igx-typography h5, .igx-typography .igx-typography__h5 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 0; }
+  .igx-typography h6, .igx-typography .igx-typography__h6 {
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 0.00937rem;
+    text-transform: none;
+    line-height: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .igx-typography .igx-typography__subtitle-1 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.00937rem;
+    text-transform: none;
+    line-height: 1.5rem; }
+  .igx-typography .igx-typography__subtitle-2 {
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.00625rem;
+    text-transform: none;
+    line-height: 1.5rem; }
+  .igx-typography p, .igx-typography .igx-typography__body-1 {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 0.03125rem;
+    text-transform: none;
+    line-height: 1.75rem;
+    margin-top: 1.75rem;
+    margin-bottom: 1rem; }
+  .igx-typography .igx-typography__body-2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    letter-spacing: 0.01563rem;
+    text-transform: none;
+    line-height: 1.25rem; }
+  .igx-typography .igx-typography__button {
+    font-weight: 600;
+    font-size: 0.875rem;
+    letter-spacing: 0.04688rem;
+    text-transform: uppercase;
+    line-height: 1rem; }
+  .igx-typography .igx-typography__caption {
+    font-weight: 400;
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+    text-transform: none;
+    line-height: 1rem; }
+  .igx-typography .igx-typography__overline {
+    font-weight: 400;
+    font-size: 0.625rem;
+    letter-spacing: 0.09375rem;
+    text-transform: uppercase;
+    line-height: 1rem; }
 
 .igx-vhelper--vertical, .igx-vhelper--horizontal {
   display: block;
@@ -3817,6 +3831,21 @@ igx-date-range-end,
   /* dash size */ }
 
 :root {
+  --igc-active-color: #09f;
+  --igc-border-color: #f6fbfe;
+  --igc-button-text: rgba(0, 0, 0, 0.74);
+  --igc-context-menu-color-active: black;
+  --igc-floating-pane-border-color: #fff;
+  --igc-flyout-shadow-color: rgba(0, 0, 0, 0.08);
+  --igc-joystick-border-color: rgba(0, 0, 0, 0.12);
+  --igc-joystick-icon-color: rgba(0, 0, 0, 0.54);
+  --igc-joystick-icon-color-active: black;
+  --igc-pane-content-background: #f6fbfe;
+  --igc-splitter-background: rgba(0, 0, 0, 0.12);
+  --igc-tab-background-active: #f6fbfe;
+  --igc-text-color: rgba(0, 0, 0, 0.74); }
+
+:root {
   --igx-drop-down-border-radius: 4px;
   --igx-drop-down-elevation: 8;
   --igx-drop-down-background-color: #fff;
@@ -6738,7 +6767,6 @@ igx-date-range-end,
   outline-style: none; }
   .igx-grid-summary::after, .igx-grid-summary--pinned::after, .igx-grid-summary--empty::after, .igx-grid-summary--fw::after, .igx-grid-summary--cosy::after, .igx-grid-summary--compact::after {
     position: absolute;
-    content: '';
     top: 0;
     bottom: 0;
     left: 0;
@@ -7520,14 +7548,14 @@ igx-date-range-end,
 
 .igx-input-group__textarea {
   min-height: 5.125rem;
-  /* 3 lines * 22px + 8px bottom padding + 8px top padding */
   margin-right: -1rem;
-  /* this fixes resizing in chrome !?!? */
-  line-height: normal !important;
-  /* resets typography styles */
   height: auto;
   resize: vertical;
-  overflow: hidden; }
+  overflow: hidden;
+  line-height: normal !important; }
+  .igx-input-group__textarea:not([type='*']) {
+    line-height: normal !important;
+    /* resets typography styles */ }
 
 .igx-input-group--cosy .igx-input-group__textarea {
   min-height: 4.31579rem;
@@ -13004,6 +13032,23 @@ body {
     background-size: 1px 10px;
     /* dash size */ }
   .fin-dark-theme {
+    --igc-active-color: #09f;
+    --igc-border-color: #333;
+    --igc-button-text: white;
+    --igc-context-menu-color-active: white;
+    --igc-floating-pane-border-color: #0a0a0a;
+    --igc-flyout-shadow-color: rgba(0, 0, 0, 0.38);
+    --igc-joystick-border-color: #424242;
+    --igc-joystick-icon-color: white;
+    --igc-joystick-icon-color-active: white;
+    --igc-pane-content-background: #333;
+    --igc-splitter-background: #0a0a0a;
+    --igc-tab-background-active: #333;
+    --igc-text-color: rgba(255, 255, 255, 0.74);
+    --igc-accent-color: #424242;
+    --igc-background-color: #141414;
+    --igc-joystick-background-active: #333; }
+  .fin-dark-theme {
     --igx-drop-down-border-radius: 4px;
     --igx-drop-down-elevation: 8;
     --igx-drop-down-background-color: #333;
@@ -15463,7 +15508,6 @@ body {
     outline-style: none; }
     .fin-dark-theme .igx-grid-summary::after, .fin-dark-theme .igx-grid-summary--pinned::after, .fin-dark-theme .igx-grid-summary--empty::after, .fin-dark-theme .igx-grid-summary--fw::after, .fin-dark-theme .igx-grid-summary--cosy::after, .fin-dark-theme .igx-grid-summary--compact::after {
       position: absolute;
-      content: '';
       top: 0;
       bottom: 0;
       left: 0;
@@ -16128,14 +16172,14 @@ body {
       color: var(--igx-input-group-disabled-placeholder-color); }
   .fin-dark-theme .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    .fin-dark-theme .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   .fin-dark-theme .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
@@ -21010,6 +21054,23 @@ body {
     background-size: 1px 10px;
     /* dash size */ }
   .dark-theme {
+    --igc-active-color: #09f;
+    --igc-border-color: #333;
+    --igc-button-text: white;
+    --igc-context-menu-color-active: white;
+    --igc-floating-pane-border-color: #0a0a0a;
+    --igc-flyout-shadow-color: rgba(0, 0, 0, 0.38);
+    --igc-joystick-border-color: #424242;
+    --igc-joystick-icon-color: white;
+    --igc-joystick-icon-color-active: white;
+    --igc-pane-content-background: #333;
+    --igc-splitter-background: #0a0a0a;
+    --igc-tab-background-active: #333;
+    --igc-text-color: rgba(255, 255, 255, 0.74);
+    --igc-accent-color: #424242;
+    --igc-background-color: #141414;
+    --igc-joystick-background-active: #333; }
+  .dark-theme {
     --igx-drop-down-border-radius: 4px;
     --igx-drop-down-elevation: 8;
     --igx-drop-down-background-color: #333;
@@ -23469,7 +23530,6 @@ body {
     outline-style: none; }
     .dark-theme .igx-grid-summary::after, .dark-theme .igx-grid-summary--pinned::after, .dark-theme .igx-grid-summary--empty::after, .dark-theme .igx-grid-summary--fw::after, .dark-theme .igx-grid-summary--cosy::after, .dark-theme .igx-grid-summary--compact::after {
       position: absolute;
-      content: '';
       top: 0;
       bottom: 0;
       left: 0;
@@ -24134,14 +24194,14 @@ body {
       color: rgba(255, 255, 255, 0.26); }
   .dark-theme .igx-input-group__textarea {
     min-height: 5.125rem;
-    /* 3 lines * 22px + 8px bottom padding + 8px top padding */
     margin-right: -1rem;
-    /* this fixes resizing in chrome !?!? */
-    line-height: normal !important;
-    /* resets typography styles */
     height: auto;
     resize: vertical;
-    overflow: hidden; }
+    overflow: hidden;
+    line-height: normal !important; }
+    .dark-theme .igx-input-group__textarea:not([type='*']) {
+      line-height: normal !important;
+      /* resets typography styles */ }
   .dark-theme .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy .dark-theme .igx-input-group__textarea {
     min-height: 4.31579rem;
     margin-right: -0.84211rem; }
@@ -26399,106 +26459,6 @@ body {
     subgroup encapsulates children of each
     thead item and group.
     */ }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h1, .dark-theme .grid-chart-contextmenu-wrapper h1 {
-      font-weight: 700;
-      font-size: 4.25rem;
-      letter-spacing: -0.09375rem;
-      text-transform: none;
-      line-height: 4.75rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h2, .dark-theme .grid-chart-contextmenu-wrapper h2 {
-      font-weight: 700;
-      font-size: 2.625rem;
-      letter-spacing: -0.03125rem;
-      text-transform: none;
-      line-height: 3.25rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h3, .dark-theme .grid-chart-contextmenu-wrapper h3 {
-      font-weight: 600;
-      font-size: 2rem;
-      letter-spacing: 0;
-      text-transform: none;
-      line-height: 2.5rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h4, .dark-theme .grid-chart-contextmenu-wrapper h4 {
-      font-weight: 400;
-      font-size: 1.75rem;
-      letter-spacing: 0.01563rem;
-      text-transform: none;
-      line-height: 2.25rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h5, .dark-theme .grid-chart-contextmenu-wrapper h5 {
-      font-weight: 400;
-      font-size: 1.25rem;
-      letter-spacing: 0;
-      text-transform: none;
-      line-height: 1.75rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__h6, .dark-theme .grid-chart-contextmenu-wrapper h6 {
-      font-weight: 400;
-      font-size: 1.125rem;
-      letter-spacing: 0.00937rem;
-      text-transform: none;
-      line-height: 1.375rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__subtitle-1 {
-      font-weight: 400;
-      font-size: 0.75rem;
-      letter-spacing: 0.00937rem;
-      text-transform: none;
-      line-height: 1rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__subtitle-2 {
-      font-weight: 400;
-      font-size: 0.875rem;
-      letter-spacing: 0.00625rem;
-      text-transform: none;
-      line-height: 1rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__body-1, .dark-theme .grid-chart-contextmenu-wrapper p {
-      font-weight: 400;
-      font-size: 1rem;
-      letter-spacing: 0.03125rem;
-      text-transform: none;
-      line-height: 1.375rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__body-2 {
-      font-weight: 400;
-      font-size: 0.875rem;
-      letter-spacing: 0.01563rem;
-      text-transform: none;
-      line-height: 1.25rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__button {
-      font-weight: 600;
-      font-size: 0.875rem;
-      letter-spacing: 0.04688rem;
-      text-transform: capitalize;
-      line-height: 0.875rem;
-      margin-top: 0;
-      margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__caption {
-      font-weight: 400;
-      font-size: 0.75rem;
-      letter-spacing: 0.025rem;
-      text-transform: none;
-      line-height: 1rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-typography__overline {
-      font-weight: 400;
-      font-size: 0.625rem;
-      letter-spacing: 0.09375rem;
-      text-transform: uppercase;
-      line-height: 1rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu .igx-excel-filter__menu-header > h4, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu .igx-excel-filter__secondary-header > h4 {
       font-weight: 400;
       font-size: 1.125rem;
@@ -26688,6 +26648,18 @@ body {
       margin-top: 0;
       margin-bottom: 0;
       margin: 0; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --category-chart-title-text-style: 700 4.25rem/4.75rem inherit; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --category-chart-subtitle-text-style: 400 0.75rem/1rem inherit; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --category-chart-x-axis-label-text-style: 400 1.75rem/2.25rem inherit; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --category-chart-x-axis-title-text-style: 600 2rem/2.5rem inherit; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --category-chart-y-axis-label-text-style: 400 1.75rem/2.25rem inherit; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --category-chart-y-axis-title-text-style: 600 2rem/2.5rem inherit; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox__label, .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox__label--before {
       font-weight: 400;
       font-size: 0.75rem;
@@ -26749,6 +26721,8 @@ body {
       margin-top: 0;
       margin-bottom: 0;
       margin: 0; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
+      --igc-font-family: inherit; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__header, .igx-drop-down__group .dark-theme .grid-chart-contextmenu-wrapper label, .dark-theme .igx-drop-down__group .grid-chart-contextmenu-wrapper label, .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__group label,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__group > label {
       font-weight: 400;
@@ -29658,6 +29632,37 @@ body {
       background-size: 1px 10px;
       /* dash size */ }
     .dark-theme .grid-chart-contextmenu-wrapper {
+      --igc-active-color: #217346;
+      --igc-border-color: #222;
+      --igc-button-text: white;
+      --igc-context-menu-color-active: white;
+      --igc-floating-pane-border-color: transparent;
+      --igc-flyout-shadow-color: rgba(0, 0, 0, 0.08);
+      --igc-joystick-border-color: transparent;
+      --igc-joystick-icon-color: white;
+      --igc-joystick-icon-color-active: white;
+      --igc-pane-content-background: #222;
+      --igc-splitter-background: #171717;
+      --igc-tab-background-active: #222;
+      --igc-text-color: white;
+      --igc-background-color: #1c1c1c;
+      --igc-context-menu-background-active: #111111;
+      --igc-context-menu-color: white;
+      --igc-dock-background: #1c1c1c;
+      --igc-joystick-background-active: #111111;
+      --igc-pane-header-background: white;
+      --igc-pinned-header-background: #1c1c1c;
+      --igc-splitter-handle: #060606;
+      --igc-tab-background: #222;
+      --igc-tab-border-color-active: #222;
+      --igc-tab-border-color: #222;
+      --igc-tab-text-active: #217346;
+      --igc-tab-text: white;
+      --igc-accent-color: #111111;
+      --igc-context-menu-background: #424242;
+      --igc-joystick-background: #424242;
+      --igc-pane-header-backround: #1c1c1c; }
+    .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-drop-down-border-radius: 2px;
       --igx-drop-down-elevation: 4;
       --igx-drop-down-background-color: #222;
@@ -32116,7 +32121,6 @@ body {
       outline-style: none; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-summary::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-summary--pinned::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-summary--empty::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-summary--fw::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-summary--cosy::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-summary--compact::after {
         position: absolute;
-        content: '';
         top: 0;
         bottom: 0;
         left: 0;
@@ -32781,14 +32785,14 @@ body {
         color: var(--igx-input-group-disabled-placeholder-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
       min-height: 5.125rem;
-      /* 3 lines * 22px + 8px bottom padding + 8px top padding */
       margin-right: -1rem;
-      /* this fixes resizing in chrome !?!? */
-      line-height: normal !important;
-      /* resets typography styles */
       height: auto;
       resize: vertical;
-      overflow: hidden; }
+      overflow: hidden;
+      line-height: normal !important; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea:not([type='*']) {
+        line-height: normal !important;
+        /* resets typography styles */ }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
       min-height: 4.31579rem;
       margin-right: -0.84211rem; }
