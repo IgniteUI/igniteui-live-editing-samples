@@ -1,0 +1,20 @@
+.grid-controls {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 0 16px 24px; }
+  .grid-controls igx-switch {
+    margin-top: 24px; }
+
+.grid__wrapper {
+  margin: 0 16px; }
+
+.header {
+  height: 100%; }
+
+.igx-grid__th .title {
+  width: 100%;
+  cursor: auto; }
