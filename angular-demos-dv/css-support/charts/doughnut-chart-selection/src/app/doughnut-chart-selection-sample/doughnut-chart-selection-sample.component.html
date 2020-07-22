@@ -1,0 +1,16 @@
+<div class="container"> 
+<div class="chart">
+        <igx-doughnut-chart #chart height="100%" width="100%">
+            <igx-ring-series
+            [dataSource]="data"
+            valueMemberPath="Value"
+            labelMemberPath="Label"
+            selectedSliceStroke = "white"
+            selectedSliceFill= "rgb(143,143,143)"
+            selectedSliceOpacity =1.0
+            selectedSliceStrokeThickness=2>
+            </igx-ring-series>
+        </igx-doughnut-chart>
+    </div>
+</div>
+

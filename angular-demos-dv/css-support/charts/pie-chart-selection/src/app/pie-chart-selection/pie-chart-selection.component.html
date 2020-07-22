@@ -1,0 +1,24 @@
+<div class="container">
+    <div>
+        <span>Selection Type: </span>
+        <select [(ngModel)]="selectionType">
+            <option>Single</option>
+            <option>Multiple</option>
+        </select>
+    </div>
+    <div class="chart">
+        <igx-pie-chart #chart height="100%" 
+        width="100%" 
+        [dataSource]="data" 
+        valueMemberPath="Value" 
+        labelMemberPath="Label" 
+        labelsPosition="bestFit" 
+        [selectionMode]="selectionType"
+        selectedSliceStroke = "white"
+        selectedSliceFill= "rgb(143,143,143)"
+        selectedSliceOpacity =1.0
+        selectedSliceStrokeThickness=2>
+        </igx-pie-chart>
+
+    </div>
+</div>

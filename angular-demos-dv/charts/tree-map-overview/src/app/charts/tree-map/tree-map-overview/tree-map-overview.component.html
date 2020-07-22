@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="options">
+        <button igxButton="raised" (click)="onClickSliceVer()"
+                igxButtonColor="black" style="width: 180px"
+                igxButtonBackground="#e2e2e2"
+                class="sample-button">Slice Vertically</button>
+        <button igxButton="raised" (click)="onClickSliceHor()"
+                igxButtonColor="black" style="width: 180px"
+                igxButtonBackground="#e2e2e2"
+                class="sample-button">Slice Horizontally</button>
+
+        <button igxButton="raised" (click)="onClickSquared()"
+                igxButtonColor="black" style="width: 180px"
+                igxButtonBackground="#e2e2e2"
+                class="sample-button">Squarified</button>
+    </div>
+    <div class="options">
+        <button igxButton="raised" (click)="onClickStripVer()"
+                igxButtonColor="black" style="width: 180px"
+                igxButtonBackground="#e2e2e2"
+                class="sample-button">Strip Vertically</button>
+        <button igxButton="raised" (click)="onClickStripHor()"
+                igxButtonColor="black" style="width: 180px"
+                igxButtonBackground="#e2e2e2"
+                class="sample-button">Strip Horizontally</button>
+    </div>
+
+    <div style="width: 100%; height: calc(100% - 100px)">
+        <igx-treemap
+            #treeMap
+            height="100%"
+            width="100%"
+            parentIdMemberPath="parent"
+            idMemberPath="id"
+            labelMemberPath="name"
+            valueMemberPath="pop"
+            transitionDuration="500"
+            rootTitle="Countries">
+        </igx-treemap>
+    </div>
+</div>
