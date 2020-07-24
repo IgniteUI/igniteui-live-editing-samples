@@ -54,6 +54,7 @@
     **/ }
   :host ::ng-deep {
     --igx-drop-down-border-radius: 4px;
+    --igx-drop-down-item-border-radius: 0px;
     --igx-drop-down-elevation: 8;
     --igx-drop-down-background-color: #fff;
     --igx-drop-down-header-text-color: #5434b8;
@@ -105,7 +106,8 @@
   :host ::ng-deep .igx-drop-down__item {
     color: var(--igx-drop-down-item-text-color);
     cursor: pointer;
-    padding: 0 1.5rem; }
+    padding: 0 1.5rem;
+    border-radius: var(--igx-drop-down-item-border-radius); }
     :host ::ng-deep .igx-drop-down__item:focus {
       outline: 0;
       outline-color: transparent;

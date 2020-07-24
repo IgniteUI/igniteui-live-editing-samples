@@ -497,7 +497,7 @@
         -ms-flex-positive: 0;
             flex-grow: 0;
         outline-style: none; }
-      :host.dark-theme ::ng-deep .igx-grid__td--active, :host.dark-theme ::ng-deep .igx-grid__th--active, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.dark-theme ::ng-deep .igx-grid-summary--active, :host.dark-theme ::ng-deep .igx-grid__group-row--active, :host.dark-theme ::ng-deep .igx-grid__tr-container--active {
+      :host.dark-theme ::ng-deep .igx-grid__td--active, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__thead-title, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.dark-theme ::ng-deep .igx-grid-summary--active, :host.dark-theme ::ng-deep .igx-grid__group-row--active, :host.dark-theme ::ng-deep .igx-grid__tr-container--active {
         box-shadow: inset 0 0 0 1px var(--igx-grid-cell-active-border-color); }
       :host.dark-theme ::ng-deep .igx-grid__td--selected {
         color: var(--igx-grid-cell-selected-text-color);
@@ -544,6 +544,12 @@
           color: var(--igx-grid-row-selected-text-color); }
       :host.dark-theme ::ng-deep .igx-grid__th--pinned-last, :host.dark-theme ::ng-deep .igx-grid__td--pinned-last {
         border-right: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
+        :host.dark-theme ::ng-deep .igx-grid__th--pinned-last .igx-grid__filtering-cell, :host.dark-theme ::ng-deep .igx-grid__td--pinned-last .igx-grid__filtering-cell, :host.dark-theme ::ng-deep .igx-grid__th--pinned-last .igx-grid__filtering-cell--selected, :host.dark-theme ::ng-deep .igx-grid__td--pinned-last .igx-grid__filtering-cell--selected,
+        :host.dark-theme ::ng-deep .igx-grid__th--pinned-last .igx-grid__thead-title,
+        :host.dark-theme ::ng-deep .igx-grid__td--pinned-last .igx-grid__thead-title,
+        :host.dark-theme ::ng-deep .igx-grid__th--pinned-last .igx-grid__th,
+        :host.dark-theme ::ng-deep .igx-grid__td--pinned-last .igx-grid__th {
+          border-right: none; }
       :host.dark-theme ::ng-deep .igx-grid__th--pinned-first, :host.dark-theme ::ng-deep .igx-grid__td--pinned-first {
         border-left: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
       :host.dark-theme ::ng-deep .igx-grid__td--row-pinned-first {
@@ -594,8 +600,8 @@
             flex-grow: 1;
         /* hey IE, the text should take most of the space */
         line-height: 4.16667;
-        opacity: .7;
-        transition: opacity 250ms ease-in-out, color 250ms ease-in-out; }
+        transition: opacity 250ms ease-in-out, color 250ms ease-in-out;
+        opacity: .7; }
       :host.dark-theme ::ng-deep .igx-grid--cosy .igx-grid__th-title, .igx-grid--cosy :host.dark-theme ::ng-deep .igx-grid__th-title {
         line-height: 3.33333; }
       :host.dark-theme ::ng-deep .igx-grid--compact .igx-grid__th-title, .igx-grid--compact :host.dark-theme ::ng-deep .igx-grid__th-title {
@@ -647,7 +653,7 @@
       :host.dark-theme ::ng-deep .igx-grid__th--selectable {
         color: var(--igx-grid-header-selected-text-color);
         background: var(--igx-grid-header-selected-background);
-        opacity: .7; }
+        opacity: 0.7; }
       :host.dark-theme ::ng-deep .igx-grid__th--selected {
         color: var(--igx-grid-header-selected-text-color);
         background: var(--igx-grid-header-selected-background); }
@@ -1433,8 +1439,9 @@
           box-shadow: 0 1px 0 var(--igx-grid-filtering-row-background), 0 4px 10px rgba(0, 0, 0, 0.12);
           z-index: -1; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-input-group {
-          -ms-flex: 0 0 200px;
-              flex: 0 0 200px; }
+          width: 100%;
+          max-width: 12.5rem;
+          min-width: 8.75rem; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-prefix:focus {
           color: #FFA500; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-suffix igx-icon {
@@ -1443,6 +1450,13 @@
             color: #FFA500; }
           :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-suffix igx-icon + igx-icon {
             margin-left: 0.25rem; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-dropdown-items {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-dropdown-text {
+        margin-left: 1rem; }
       :host.dark-theme ::ng-deep .igx-grid__filtering-row--cosy {
         height: 2.5rem; }
       :host.dark-theme ::ng-deep .igx-grid__filtering-row--compact {
@@ -1453,7 +1467,8 @@
         -ms-flex: 1;
             flex: 1;
         overflow: hidden;
-        max-width: calc(100% - 176px); }
+        max-width: calc(100% - 176px);
+        min-width: 3.5rem; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row-main igx-chips-area {
           transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           -ms-flex-wrap: nowrap;
@@ -2234,6 +2249,16 @@
       :host.dark-theme ::ng-deep .igx-filter-contextual-menu--compact igx-buttongroup + [igxButton],
       :host.dark-theme ::ng-deep .igx-filter-contextual-menu--compact [igxButton] + igx-buttongroup {
         margin-top: 0.5rem; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons--small,
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons button igx-icon {
+        margin-right: 0.5rem; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
+        color: var(--igx-grid-sorted-header-icon-color); }
       :host.dark-theme ::ng-deep {
         --igx-paginator-variant: material;
         --igx-paginator-text-color: #d28800;
@@ -2348,6 +2373,7 @@
         --igx-input-group-search-hover-elevation: 2;
         --igx-input-group-search-disabled-elevation: 0;
         --igx-input-group-variant: material;
+        --igx-input-group-theme-variant: material;
         --igx-input-group-input-prefix-color: rgba(0, 0, 0, 0.54);
         --igx-input-group-input-prefix-background: transparent;
         --igx-input-group-input-suffix-color: rgba(0, 0, 0, 0.54);
@@ -2415,9 +2441,9 @@
         :host.dark-theme ::ng-deep .igx-input-group input[type='search']::-webkit-search-decoration,
         :host.dark-theme ::ng-deep .igx-input-group--focused input[type='search']::-webkit-search-decoration {
           -webkit-appearance: none; }
-      :host.dark-theme ::ng-deep .igx-input-group--box, :host.dark-theme ::ng-deep .igx-input-group--border, :host.dark-theme ::ng-deep .igx-input-group--search {
+      :host.dark-theme ::ng-deep .igx-input-group--box, :host.dark-theme ::ng-deep .igx-input-group--border, :host.dark-theme ::ng-deep .igx-input-group--indigo, :host.dark-theme ::ng-deep .igx-input-group--search {
         margin-top: 0; }
-      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__wrapper, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__wrapper {
+      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__wrapper, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__wrapper, :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__wrapper, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__wrapper {
         border-radius: var(--igx-input-group-box-border-radius);
         overflow: hidden; }
       :host.dark-theme ::ng-deep .igx-input-group:hover {
@@ -2427,7 +2453,7 @@
            -moz-user-select: none;
             -ms-user-select: none;
                 user-select: none;
-        color: var(--igx-input-group-disabled-text-color); }
+        color: var(--igx-input-group-disabled-text-color) !important; }
       :host.dark-theme ::ng-deep .igx-input-group__bundle {
         position: relative;
         display: -ms-flexbox;
@@ -2447,12 +2473,27 @@
         padding: 0 1rem;
         background: var(--igx-input-group-box-background);
         box-shadow: inset 0 -2px 0 0 var(--igx-input-group-idle-bottom-line-color); }
-        :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group--search .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--search .igx-input-group__label + .igx-input-group__input {
+        :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group--indigo .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--indigo .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle .igx-input-group--search .igx-input-group__label + .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--search .igx-input-group__label + .igx-input-group__input {
           -ms-transform: translateY(0);
               transform: translateY(0); }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__bundle, .igx-input-group--box.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle {
+      :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__bundle, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__bundle {
+        padding: 0 1rem;
+        background: transparent;
+        transition: background 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
+        box-shadow: inset 0 -1px 0 0 var(--igx-input-group-idle-bottom-line-color); }
+        :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__bundle:hover, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__bundle:hover, :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__bundle:focus, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__bundle:focus {
+          background: var(--igx-input-group-box-background); }
+      :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--focused .igx-input-group__bundle, .igx-input-group--indigo.igx-input-group--focused :host.dark-theme ::ng-deep .igx-input-group__bundle {
+        background: var(--igx-input-group-box-background); }
+      :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--valid .igx-input-group__bundle, .igx-input-group--indigo.igx-input-group--valid :host.dark-theme ::ng-deep .igx-input-group__bundle {
+        box-shadow: inset 0 -2px 0 0 var(--igx-input-group-success-secondary-color); }
+      :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--invalid .igx-input-group__bundle, .igx-input-group--indigo.igx-input-group--invalid :host.dark-theme ::ng-deep .igx-input-group__bundle {
+        box-shadow: inset 0 -2px 0 0 var(--igx-input-group-error-secondary-color); }
+      :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--disabled .igx-input-group__hint, .igx-input-group--indigo.igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__hint {
+        color: var(--igx-input-group-disabled-text-color); }
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__bundle, .igx-input-group--box.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__bundle, .igx-input-group--indigo.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle {
         padding: 0 0.84211rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__bundle, .igx-input-group--box.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle {
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__bundle, .igx-input-group--box.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--compact .igx-input-group__bundle, .igx-input-group--indigo.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle {
         padding: 0 0.72727rem; }
       :host.dark-theme ::ng-deep .igx-input-group__bundle:hover {
         cursor: pointer;
@@ -2472,7 +2513,7 @@
         background-position: bottom;
         background-size: 4px 1px;
         background-repeat: repeat-x; }
-      :host.dark-theme ::ng-deep .igx-input-group--disabled.igx-input-group--box .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle {
+      :host.dark-theme ::ng-deep .igx-input-group--disabled.igx-input-group--box .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--disabled .igx-input-group__bundle, .igx-input-group--indigo.igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__bundle {
         background: var(--igx-input-group-box-disabled-background); }
       :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__bundle, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__bundle {
         padding: 0 1rem;
@@ -2575,7 +2616,9 @@
         box-shadow: none;
         border-radius: var(--igx-input-group-border-border-radius);
         background: var(--igx-input-group-border-background);
-        position: relative; }
+        position: relative;
+        -ms-flex-align: stretch;
+            align-items: stretch; }
       :host.dark-theme ::ng-deep .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__bundle:hover, :host.dark-theme ::ng-deep .igx-input-group--fluent-search .igx-input-group__bundle:hover, .igx-input-group--fluent-search :host.dark-theme ::ng-deep .igx-input-group__bundle:hover {
         border-color: var(--igx-input-group-hover-border-color);
         box-shadow: none; }
@@ -2587,7 +2630,7 @@
       .igx-input-group--disabled.igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__bundle {
         border-color: var(--igx-input-group-disabled-border-color);
         background: var(--igx-input-group-border-disabled-background); }
-      :host.dark-theme ::ng-deep .igx-input-group--invalid.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--invalid.igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__bundle:hover,
+      :host.dark-theme ::ng-deep .igx-input-group--invalid.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--invalid.igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__bundle:hover, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--invalid .igx-input-group__bundle:hover, .igx-input-group--indigo.igx-input-group--invalid :host.dark-theme ::ng-deep .igx-input-group__bundle:hover,
       :host.dark-theme ::ng-deep .igx-input-group--invalid.igx-input-group--fluent .igx-input-group__bundle,
       .igx-input-group--invalid.igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__bundle {
         border-color: var(--igx-input-group-error-secondary-color); }
@@ -2602,7 +2645,9 @@
       :host.dark-theme ::ng-deep .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__input {
         color: var(--igx-input-group-disabled-text-color); }
       :host.dark-theme ::ng-deep .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--fluent-search .igx-input-group__bundle-main, .igx-input-group--fluent-search :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
-        padding-left: 0.5rem; }
+        padding-left: 0.5rem;
+        -ms-flex-item-align: center;
+            align-self: center; }
       :host.dark-theme ::ng-deep .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent :host.dark-theme ::ng-deep igx-prefix + .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--fluent-search igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent-search :host.dark-theme ::ng-deep igx-prefix + .igx-input-group__bundle-main,
       :host.dark-theme ::ng-deep .igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main,
       .igx-input-group--fluent :host.dark-theme ::ng-deep [igx-prefix] + .igx-input-group__bundle-main,
@@ -2643,7 +2688,7 @@
         border-radius: var(--igx-input-group-search-border-radius);
         background: var(--igx-input-group-search-background);
         box-shadow: var(--igx-input-group-search-resting-shadow); }
-        :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group--box .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--box .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input {
+        :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group--indigo .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--indigo .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group--box .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--box .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group--border .igx-input-group__label + .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle .igx-input-group__label + .igx-input-group__input {
           -ms-transform: translateY(0);
               transform: translateY(0); }
       :host.dark-theme ::ng-deep .bundle {
@@ -2664,11 +2709,11 @@
         position: relative;
         -ms-flex-positive: 1;
             flex-grow: 1; }
-      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle-main, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__bundle-main, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle-main, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
+      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__bundle-main, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__bundle-main, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__bundle-main, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__bundle-main, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
         padding-top: 1.125rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--box.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--border.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--search.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--box.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--border.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--indigo.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy .igx-input-group__bundle-main, .igx-input-group--search.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
         padding-top: 0.94737rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--box.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--border.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--search.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--box.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--border.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--indigo.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact .igx-input-group__bundle-main, .igx-input-group--search.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__bundle-main {
         padding-top: 0.81818rem; }
       :host.dark-theme ::ng-deep .igx-input-group__label {
         white-space: nowrap;
@@ -2744,7 +2789,7 @@
         padding-bottom: 0.1875rem; }
         :host.dark-theme ::ng-deep .igx-input-group__input:not([type='date']), :host.dark-theme ::ng-deep .igx-input-group__textarea:not([type='date']) {
           line-height: 0 !important;
-          /* resets typography styles */ }
+          /* Reset typography */ }
         :host.dark-theme ::ng-deep .igx-input-group__input::-moz-placeholder, :host.dark-theme ::ng-deep .igx-input-group__textarea::-moz-placeholder {
           color: var(--igx-input-group-placeholder-color);
           opacity: 1;
@@ -2774,7 +2819,7 @@
         transition-delay: 99999s; }
       :host.dark-theme ::ng-deep .igx-input-group__input::-ms-clear {
         display: none; }
-      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__input, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__input {
+      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__input, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__input, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__input, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__input, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__input {
         -ms-transform: translateY(-25%);
             transform: translateY(-25%); }
       :host.dark-theme ::ng-deep .igx-input-group__input:hover, :host.dark-theme ::ng-deep .igx-input-group__textarea:hover {
@@ -2783,7 +2828,7 @@
         cursor: text;
         color: var(--igx-input-group-focused-text-color); }
       :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input {
-        color: var(--igx-input-group-disabled-text-color); }
+        color: var(--igx-input-group-disabled-text-color) !important; }
         :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input::-moz-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input:-ms-input-placeholder {
@@ -2808,19 +2853,19 @@
       :host.dark-theme ::ng-deep .igx-input-group--compact .igx-input-group__textarea, .igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea {
         min-height: 3.72727rem;
         margin-right: -0.72727rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__textarea, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__textarea, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__textarea, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__textarea {
+      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__textarea, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__textarea, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__textarea, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__textarea {
         width: calc(100% + 2rem);
         /* add the padding to the width */
         margin: 0 -1rem;
         padding-left: 1rem;
         padding-left: 1rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--box.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea {
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--box.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy :host.dark-theme ::ng-deep .igx-input-group__textarea {
         width: calc(100% + 1.68421rem);
         /* add the padding to the width */
         margin: 0 -0.84211rem;
         padding-left: 0.84211rem;
         padding-left: 0.84211rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--box.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea {
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--box.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact :host.dark-theme ::ng-deep .igx-input-group__textarea {
         width: calc(100% + 1.45455rem);
         /* add the padding to the width */
         margin: 0 -0.72727rem;
@@ -2968,24 +3013,28 @@
       :host.dark-theme ::ng-deep .igx-input-group--compact.igx-input-group--fluent igx-suffix,
       :host.dark-theme ::ng-deep .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
         padding: 0.36364rem; }
-      :host.dark-theme ::ng-deep .igx-input-group--box igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--border igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--search igx-prefix,
+      :host.dark-theme ::ng-deep .igx-input-group--box igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--border igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--indigo igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--search igx-prefix,
       :host.dark-theme ::ng-deep .igx-input-group--box [igxPrefix],
       :host.dark-theme ::ng-deep .igx-input-group--border [igxPrefix],
+      :host.dark-theme ::ng-deep .igx-input-group--indigo [igxPrefix],
       :host.dark-theme ::ng-deep .igx-input-group--search [igxPrefix] {
         padding: 0 0.5rem 0 0; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy igx-prefix,
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--cosy igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy igx-prefix,
       :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--cosy [igxPrefix],
       :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--cosy [igxPrefix],
+      :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--cosy [igxPrefix],
       :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--cosy [igxPrefix] {
         padding: 0 0.42105rem 0 0; }
-      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact igx-prefix,
+      :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--compact igx-prefix, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact igx-prefix,
       :host.dark-theme ::ng-deep .igx-input-group--box.igx-input-group--compact [igxPrefix],
       :host.dark-theme ::ng-deep .igx-input-group--border.igx-input-group--compact [igxPrefix],
+      :host.dark-theme ::ng-deep .igx-input-group--indigo.igx-input-group--compact [igxPrefix],
       :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--compact [igxPrefix] {
         padding: 0 0.36364rem 0 0; }
-      :host.dark-theme ::ng-deep .igx-input-group--box igx-suffix, :host.dark-theme ::ng-deep .igx-input-group--border igx-suffix, :host.dark-theme ::ng-deep .igx-input-group--search igx-suffix,
+      :host.dark-theme ::ng-deep .igx-input-group--box igx-suffix, :host.dark-theme ::ng-deep .igx-input-group--border igx-suffix, :host.dark-theme ::ng-deep .igx-input-group--indigo igx-suffix, :host.dark-theme ::ng-deep .igx-input-group--search igx-suffix,
       :host.dark-theme ::ng-deep .igx-input-group--box [igxSuffix],
       :host.dark-theme ::ng-deep .igx-input-group--border [igxSuffix],
+      :host.dark-theme ::ng-deep .igx-input-group--indigo [igxSuffix],
       :host.dark-theme ::ng-deep .igx-input-group--search [igxSuffix] {
         padding: 0; }
       :host.dark-theme ::ng-deep .igx-input-group--invalid igx-prefix,
@@ -3022,7 +3071,7 @@
         padding-top: 0.375rem; }
         :host.dark-theme ::ng-deep .igx-input-group__hint:empty {
           display: none; }
-      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__hint, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__hint, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__hint, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search :host.dark-theme ::ng-deep .igx-input-group__hint {
+      :host.dark-theme ::ng-deep .igx-input-group--box .igx-input-group__hint, .igx-input-group--box :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--border .igx-input-group__hint, .igx-input-group--border :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--search .igx-input-group__hint, .igx-input-group--search :host.dark-theme ::ng-deep .igx-input-group__hint, :host.dark-theme ::ng-deep .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search :host.dark-theme ::ng-deep .igx-input-group__hint {
         margin-left: 0.75rem;
         /* 16px, base is 12px */
         margin-right: 0.75rem;
@@ -3044,6 +3093,11 @@
       :host.dark-theme ::ng-deep .igx-input-group__hint-item--end {
         -ms-flex-order: 1;
             order: 1; }
+      :host.dark-theme ::ng-deep .igx-input-group--disabled igx-prefix,
+      :host.dark-theme ::ng-deep .igx-input-group--disabled [igxPrefix],
+      :host.dark-theme ::ng-deep .igx-input-group--disabled igx-suffix,
+      :host.dark-theme ::ng-deep .igx-input-group--disabled [igxSuffix] {
+        color: var(--igx-input-group-disabled-text-color); }
       :host.dark-theme ::ng-deep .igx-input-group--bootstrap igx-prefix:first-child,
       :host.dark-theme ::ng-deep .igx-input-group--bootstrap :first-child[igxPrefix] {
         border-top-left-radius: var(--igx-input-group-box-border-radius);
@@ -3149,8 +3203,7 @@
         border-radius: var(--igx-input-group-box-border-radius);
         border: 1px solid var(--igx-input-group-border-color);
         font-size: 1.25rem;
-        padding: 0.5rem 1rem;
-        transition: box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+        padding: 0.5rem 1rem; }
       :host.dark-theme ::ng-deep .igx-input-group--focused.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--focused.igx-input-group--bootstrap :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--focused.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--focused.igx-input-group--bootstrap :host.dark-theme ::ng-deep .igx-input-group__textarea {
         border: 1px solid var(--igx-input-group-focused-secondary-color);
         box-shadow: 0 0 0 0.1875rem var(--igx-input-group-focused-shadow-color); }
@@ -3332,11 +3385,11 @@
           :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive {
             color: var(--igx-button-flat-focus-icon-color); }
       :host.dark-theme ::ng-deep .igx-button--outlined {
-        border: 1px solid transparent;
-        border-color: var(--igx-button-outlined-outline-color);
         background: var(--igx-button-outlined-background);
         color: var(--igx-button-outlined-text-color);
-        border-radius: var(--igx-button-outlined-border-radius); }
+        border-radius: var(--igx-button-outlined-border-radius);
+        border: 1px solid transparent;
+        border-color: var(--igx-button-outlined-outline-color); }
         :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--inactive {
           color: var(--igx-button-outlined-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--outlined:hover {
@@ -4138,7 +4191,7 @@
         :host.dark-theme ::ng-deep .igx-chip__ghost--compact .igx-chip__content {
           padding: 0 0.125rem; }
       :host.dark-theme ::ng-deep {
-        --igx-icon-color: ' currentColor ';
+        --igx-icon-color: 'currentColor';
         --igx-icon-size: 1.5rem;
         --igx-icon-disabled-color: 'currentColor'; }
       :host.dark-theme ::ng-deep .igx-icon, :host.dark-theme ::ng-deep .igx-icon--inactive {
@@ -4157,6 +4210,7 @@
         opacity: .54; }
       :host.dark-theme ::ng-deep {
         --igx-drop-down-border-radius: 4px;
+        --igx-drop-down-item-border-radius: 0px;
         --igx-drop-down-elevation: 8;
         --igx-drop-down-background-color: #fff;
         --igx-drop-down-header-text-color: #FFA500;
@@ -4208,7 +4262,8 @@
       :host.dark-theme ::ng-deep .igx-drop-down__item {
         color: var(--igx-drop-down-item-text-color);
         cursor: pointer;
-        padding: 0 1.5rem; }
+        padding: 0 1.5rem;
+        border-radius: var(--igx-drop-down-item-border-radius); }
         :host.dark-theme ::ng-deep .igx-drop-down__item:focus {
           outline: 0;
           outline-color: transparent;

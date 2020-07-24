@@ -213,11 +213,11 @@
       color: var(--igx-button-flat-focus-icon-color); }
 
 :host ::ng-deep .igx-column-hiding .igx-button--outlined {
-  border: 1px solid transparent;
-  border-color: var(--igx-button-outlined-outline-color);
   background: var(--igx-button-outlined-background);
   color: var(--igx-button-outlined-text-color);
-  border-radius: var(--igx-button-outlined-border-radius); }
+  border-radius: var(--igx-button-outlined-border-radius);
+  border: 1px solid transparent;
+  border-color: var(--igx-button-outlined-outline-color); }
   :host ::ng-deep .igx-column-hiding .igx-button--outlined .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--outlined .igx-icon--inactive {
     color: var(--igx-button-outlined-icon-color); }
   :host ::ng-deep .igx-column-hiding .igx-button--outlined:hover {

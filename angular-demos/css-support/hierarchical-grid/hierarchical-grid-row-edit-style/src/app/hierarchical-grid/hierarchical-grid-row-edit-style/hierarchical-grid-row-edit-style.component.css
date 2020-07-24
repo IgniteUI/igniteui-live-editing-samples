@@ -176,11 +176,11 @@
       color: var(--igx-button-flat-focus-icon-color); }
 
 .custom-buttons .igx-button--outlined {
-  border: 1px solid transparent;
-  border-color: var(--igx-button-outlined-outline-color);
   background: var(--igx-button-outlined-background);
   color: var(--igx-button-outlined-text-color);
-  border-radius: var(--igx-button-outlined-border-radius); }
+  border-radius: var(--igx-button-outlined-border-radius);
+  border: 1px solid transparent;
+  border-color: var(--igx-button-outlined-outline-color); }
   .custom-buttons .igx-button--outlined .igx-icon, .custom-buttons .igx-button--outlined .igx-icon--inactive {
     color: var(--igx-button-outlined-icon-color); }
   .custom-buttons .igx-button--outlined:hover {
@@ -1019,7 +1019,7 @@
     -ms-flex-positive: 0;
         flex-grow: 0;
     outline-style: none; }
-  :host ::ng-deep .igx-grid__td--active, :host ::ng-deep .igx-grid__th--active, :host ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host ::ng-deep .igx-grid-summary--active, :host ::ng-deep .igx-grid__group-row--active, :host ::ng-deep .igx-grid__tr-container--active {
+  :host ::ng-deep .igx-grid__td--active, :host ::ng-deep .igx-grid__th--active .igx-grid__thead-title, :host ::ng-deep .igx-grid__th--active .igx-grid__th, :host ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host ::ng-deep .igx-grid-summary--active, :host ::ng-deep .igx-grid__group-row--active, :host ::ng-deep .igx-grid__tr-container--active {
     box-shadow: inset 0 0 0 1px var(--igx-grid-cell-active-border-color); }
   :host ::ng-deep .igx-grid__td--selected {
     color: var(--igx-grid-cell-selected-text-color);
@@ -1066,6 +1066,12 @@
       color: var(--igx-grid-row-selected-text-color); }
   :host ::ng-deep .igx-grid__th--pinned-last, :host ::ng-deep .igx-grid__td--pinned-last {
     border-right: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
+    :host ::ng-deep .igx-grid__th--pinned-last .igx-grid__filtering-cell, :host ::ng-deep .igx-grid__td--pinned-last .igx-grid__filtering-cell, :host ::ng-deep .igx-grid__th--pinned-last .igx-grid__filtering-cell--selected, :host ::ng-deep .igx-grid__td--pinned-last .igx-grid__filtering-cell--selected,
+    :host ::ng-deep .igx-grid__th--pinned-last .igx-grid__thead-title,
+    :host ::ng-deep .igx-grid__td--pinned-last .igx-grid__thead-title,
+    :host ::ng-deep .igx-grid__th--pinned-last .igx-grid__th,
+    :host ::ng-deep .igx-grid__td--pinned-last .igx-grid__th {
+      border-right: none; }
   :host ::ng-deep .igx-grid__th--pinned-first, :host ::ng-deep .igx-grid__td--pinned-first {
     border-left: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
   :host ::ng-deep .igx-grid__td--row-pinned-first {
@@ -1116,8 +1122,8 @@
         flex-grow: 1;
     /* hey IE, the text should take most of the space */
     line-height: 4.16667;
-    opacity: .7;
-    transition: opacity 250ms ease-in-out, color 250ms ease-in-out; }
+    transition: opacity 250ms ease-in-out, color 250ms ease-in-out;
+    opacity: .7; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__th-title, .igx-grid--cosy :host ::ng-deep .igx-grid__th-title {
     line-height: 3.33333; }
   :host ::ng-deep .igx-grid--compact .igx-grid__th-title, .igx-grid--compact :host ::ng-deep .igx-grid__th-title {
@@ -1169,7 +1175,7 @@
   :host ::ng-deep .igx-grid__th--selectable {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background);
-    opacity: .7; }
+    opacity: 0.7; }
   :host ::ng-deep .igx-grid__th--selected {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background); }
@@ -1967,8 +1973,9 @@
       box-shadow: 0 1px 0 var(--igx-grid-filtering-row-background), 0 4px 10px rgba(0, 0, 0, 0.12);
       z-index: -1; }
     :host ::ng-deep .igx-grid__filtering-row igx-input-group {
-      -ms-flex: 0 0 200px;
-          flex: 0 0 200px; }
+      width: 100%;
+      max-width: 12.5rem;
+      min-width: 8.75rem; }
     :host ::ng-deep .igx-grid__filtering-row igx-prefix:focus {
       color: #514590; }
     :host ::ng-deep .igx-grid__filtering-row igx-suffix igx-icon {
@@ -1977,6 +1984,13 @@
         color: #514590; }
       :host ::ng-deep .igx-grid__filtering-row igx-suffix igx-icon + igx-icon {
         margin-left: 0.25rem; }
+  :host ::ng-deep .igx-grid__filtering-dropdown-items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+  :host ::ng-deep .igx-grid__filtering-dropdown-text {
+    margin-left: 1rem; }
   :host ::ng-deep .igx-grid__filtering-row--cosy {
     height: 2.5rem; }
   :host ::ng-deep .igx-grid__filtering-row--compact {
@@ -1987,7 +2001,8 @@
     -ms-flex: 1;
         flex: 1;
     overflow: hidden;
-    max-width: calc(100% - 176px); }
+    max-width: calc(100% - 176px);
+    min-width: 3.5rem; }
     :host ::ng-deep .igx-grid__filtering-row-main igx-chips-area {
       transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       -ms-flex-wrap: nowrap;
@@ -2768,6 +2783,16 @@
   :host ::ng-deep .igx-filter-contextual-menu--compact igx-buttongroup + [igxButton],
   :host ::ng-deep .igx-filter-contextual-menu--compact [igxButton] + igx-buttongroup {
     margin-top: 0.5rem; }
+  :host ::ng-deep .igx-grid__filtering-row-editing-buttons--small,
+  :host ::ng-deep .igx-grid__filtering-row-editing-buttons {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
+  :host ::ng-deep .igx-grid__filtering-row-editing-buttons button igx-icon {
+    margin-right: 0.5rem; }
+  :host ::ng-deep .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
+    color: var(--igx-grid-sorted-header-icon-color); }
   :host ::ng-deep {
     --igx-banner-banner-background: #e3e3e3;
     --igx-banner-banner-message-color: #3f318a;
