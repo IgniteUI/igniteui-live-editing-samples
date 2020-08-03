@@ -394,6 +394,16 @@
         border-top: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important;
         position: absolute;
         bottom: 0; }
+      :host.light-theme ::ng-deep .igx-grid__td--bool {
+        -ms-flex-pack: center;
+            justify-content: center; }
+        :host.light-theme ::ng-deep .igx-grid__td--bool igx-icon {
+          height: 1.125rem;
+          width: 1.125rem;
+          font-size: 1.125rem;
+          color: rgba(0, 0, 0, 0.38); }
+      :host.light-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+        color: rgba(0, 0, 0, 0.62); }
       :host.light-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
         position: relative; }
@@ -499,7 +509,7 @@
         -ms-flex-positive: 0;
             flex-grow: 0;
         outline-style: none; }
-      :host.light-theme ::ng-deep .igx-grid__td--active, :host.light-theme ::ng-deep .igx-grid__th--active .igx-grid__thead-title, :host.light-theme ::ng-deep .igx-grid__th--active .igx-grid__th, :host.light-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.light-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.light-theme ::ng-deep .igx-grid-summary--active, :host.light-theme ::ng-deep .igx-grid__group-row--active, :host.light-theme ::ng-deep .igx-grid__tr-container--active {
+      :host.light-theme ::ng-deep .igx-grid__td--active, :host.light-theme ::ng-deep .igx-grid__th--active, :host.light-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.light-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.light-theme ::ng-deep .igx-grid-summary--active, :host.light-theme ::ng-deep .igx-grid__group-row--active, :host.light-theme ::ng-deep .igx-grid__tr-container--active {
         box-shadow: inset 0 0 0 1px var(--igx-grid-cell-active-border-color); }
       :host.light-theme ::ng-deep .igx-grid__td--selected {
         color: var(--igx-grid-cell-selected-text-color);
@@ -631,7 +641,18 @@
           height: 0.9375rem;
           min-width: 0.9375rem;
           /* yeah IE, it really needs to be 15px wide... */
-          font-size: 0.9375rem; }
+          font-size: 0.9375rem;
+          position: relative; }
+          :host.light-theme ::ng-deep .igx-grid__th-icons .sort-icon::after {
+            content: attr(data-sortIndex);
+            position: absolute;
+            top: -5px;
+            right: -1px;
+            font-size: 0.625rem;
+            text-align: right;
+            font-family: sans-serif;
+            line-height: 0.625rem;
+            background: var(--igx-grid-header-background); }
       :host.light-theme ::ng-deep .igx-grid__th-expander {
         display: -ms-flexbox;
         display: flex;
@@ -1960,6 +1981,8 @@
           :host.light-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-input-group,
           :host.light-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-date-picker {
             margin-left: 1rem; }
+        :host.light-theme ::ng-deep .igx-excel-filter__condition igx-buttongroup {
+          min-width: 30%; }
         :host.light-theme ::ng-deep .igx-excel-filter__condition [igxButton='icon'] {
           margin-left: 1rem; }
       :host.light-theme ::ng-deep .igx-excel-filter__add-filter {
@@ -4761,6 +4784,16 @@
         border-top: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important;
         position: absolute;
         bottom: 0; }
+      :host.dark-theme ::ng-deep .igx-grid__td--bool {
+        -ms-flex-pack: center;
+            justify-content: center; }
+        :host.dark-theme ::ng-deep .igx-grid__td--bool igx-icon {
+          height: 1.125rem;
+          width: 1.125rem;
+          font-size: 1.125rem;
+          color: rgba(0, 0, 0, 0.38); }
+      :host.dark-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+        color: rgba(0, 0, 0, 0.62); }
       :host.dark-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
         position: relative; }
@@ -4866,7 +4899,7 @@
         -ms-flex-positive: 0;
             flex-grow: 0;
         outline-style: none; }
-      :host.dark-theme ::ng-deep .igx-grid__td--active, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__thead-title, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.dark-theme ::ng-deep .igx-grid-summary--active, :host.dark-theme ::ng-deep .igx-grid__group-row--active, :host.dark-theme ::ng-deep .igx-grid__tr-container--active {
+      :host.dark-theme ::ng-deep .igx-grid__td--active, :host.dark-theme ::ng-deep .igx-grid__th--active, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.dark-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.dark-theme ::ng-deep .igx-grid-summary--active, :host.dark-theme ::ng-deep .igx-grid__group-row--active, :host.dark-theme ::ng-deep .igx-grid__tr-container--active {
         box-shadow: inset 0 0 0 1px var(--igx-grid-cell-active-border-color); }
       :host.dark-theme ::ng-deep .igx-grid__td--selected {
         color: var(--igx-grid-cell-selected-text-color);
@@ -4998,7 +5031,18 @@
           height: 0.9375rem;
           min-width: 0.9375rem;
           /* yeah IE, it really needs to be 15px wide... */
-          font-size: 0.9375rem; }
+          font-size: 0.9375rem;
+          position: relative; }
+          :host.dark-theme ::ng-deep .igx-grid__th-icons .sort-icon::after {
+            content: attr(data-sortIndex);
+            position: absolute;
+            top: -5px;
+            right: -1px;
+            font-size: 0.625rem;
+            text-align: right;
+            font-family: sans-serif;
+            line-height: 0.625rem;
+            background: var(--igx-grid-header-background); }
       :host.dark-theme ::ng-deep .igx-grid__th-expander {
         display: -ms-flexbox;
         display: flex;
@@ -6327,6 +6371,8 @@
           :host.dark-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-input-group,
           :host.dark-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-date-picker {
             margin-left: 1rem; }
+        :host.dark-theme ::ng-deep .igx-excel-filter__condition igx-buttongroup {
+          min-width: 30%; }
         :host.dark-theme ::ng-deep .igx-excel-filter__condition [igxButton='icon'] {
           margin-left: 1rem; }
       :host.dark-theme ::ng-deep .igx-excel-filter__add-filter {
@@ -9128,6 +9174,16 @@
         border-top: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important;
         position: absolute;
         bottom: 0; }
+      :host.black-theme ::ng-deep .igx-grid__td--bool {
+        -ms-flex-pack: center;
+            justify-content: center; }
+        :host.black-theme ::ng-deep .igx-grid__td--bool igx-icon {
+          height: 1.125rem;
+          width: 1.125rem;
+          font-size: 1.125rem;
+          color: rgba(255, 255, 255, 0.38); }
+      :host.black-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+        color: rgba(255, 255, 255, 0.62); }
       :host.black-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
         position: relative; }
@@ -9233,7 +9289,7 @@
         -ms-flex-positive: 0;
             flex-grow: 0;
         outline-style: none; }
-      :host.black-theme ::ng-deep .igx-grid__td--active, :host.black-theme ::ng-deep .igx-grid__th--active .igx-grid__thead-title, :host.black-theme ::ng-deep .igx-grid__th--active .igx-grid__th, :host.black-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.black-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.black-theme ::ng-deep .igx-grid-summary--active, :host.black-theme ::ng-deep .igx-grid__group-row--active, :host.black-theme ::ng-deep .igx-grid__tr-container--active {
+      :host.black-theme ::ng-deep .igx-grid__td--active, :host.black-theme ::ng-deep .igx-grid__th--active, :host.black-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selected, :host.black-theme ::ng-deep .igx-grid__th--active .igx-grid__th--selectable, :host.black-theme ::ng-deep .igx-grid-summary--active, :host.black-theme ::ng-deep .igx-grid__group-row--active, :host.black-theme ::ng-deep .igx-grid__tr-container--active {
         box-shadow: inset 0 0 0 1px var(--igx-grid-cell-active-border-color); }
       :host.black-theme ::ng-deep .igx-grid__td--selected {
         color: var(--igx-grid-cell-selected-text-color);
@@ -9365,7 +9421,18 @@
           height: 0.9375rem;
           min-width: 0.9375rem;
           /* yeah IE, it really needs to be 15px wide... */
-          font-size: 0.9375rem; }
+          font-size: 0.9375rem;
+          position: relative; }
+          :host.black-theme ::ng-deep .igx-grid__th-icons .sort-icon::after {
+            content: attr(data-sortIndex);
+            position: absolute;
+            top: -5px;
+            right: -1px;
+            font-size: 0.625rem;
+            text-align: right;
+            font-family: sans-serif;
+            line-height: 0.625rem;
+            background: var(--igx-grid-header-background); }
       :host.black-theme ::ng-deep .igx-grid__th-expander {
         display: -ms-flexbox;
         display: flex;
@@ -10694,6 +10761,8 @@
           :host.black-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-input-group,
           :host.black-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-date-picker {
             margin-left: 1rem; }
+        :host.black-theme ::ng-deep .igx-excel-filter__condition igx-buttongroup {
+          min-width: 30%; }
         :host.black-theme ::ng-deep .igx-excel-filter__condition [igxButton='icon'] {
           margin-left: 1rem; }
       :host.black-theme ::ng-deep .igx-excel-filter__add-filter {

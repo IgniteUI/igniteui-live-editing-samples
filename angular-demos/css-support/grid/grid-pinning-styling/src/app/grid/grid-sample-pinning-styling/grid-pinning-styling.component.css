@@ -483,6 +483,18 @@
   position: absolute;
   bottom: 0; }
 
+.igx-grid__td--bool {
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .igx-grid__td--bool igx-icon {
+    height: 1.125rem;
+    width: 1.125rem;
+    font-size: 1.125rem;
+    color: rgba(0, 0, 0, 0.38); }
+
+.igx-grid__td--bool-true igx-icon {
+  color: rgba(0, 0, 0, 0.62); }
+
 .igx-grid__tr--edit {
   border-bottom: 1px solid var(--igx-grid-edit-mode-color);
   position: relative; }
@@ -613,7 +625,7 @@
       flex-grow: 0;
   outline-style: none; }
 
-.igx-grid__td--active, .igx-grid__th--active .igx-grid__thead-title, .igx-grid__th--active .igx-grid__th, .igx-grid__th--active .igx-grid__th--selected, .igx-grid__th--active .igx-grid__th--selectable, .igx-grid-summary--active, .igx-grid__group-row--active, .igx-grid__tr-container--active {
+.igx-grid__td--active, .igx-grid__th--active, .igx-grid__th--active .igx-grid__th--selected, .igx-grid__th--active .igx-grid__th--selectable, .igx-grid-summary--active, .igx-grid__group-row--active, .igx-grid__tr-container--active {
   box-shadow: inset 0 0 0 1px var(--igx-grid-cell-active-border-color); }
 
 .igx-grid__td--selected {
@@ -769,7 +781,18 @@
     height: 0.9375rem;
     min-width: 0.9375rem;
     /* yeah IE, it really needs to be 15px wide... */
-    font-size: 0.9375rem; }
+    font-size: 0.9375rem;
+    position: relative; }
+    .igx-grid__th-icons .sort-icon::after {
+      content: attr(data-sortIndex);
+      position: absolute;
+      top: -5px;
+      right: -1px;
+      font-size: 0.625rem;
+      text-align: right;
+      font-family: sans-serif;
+      line-height: 0.625rem;
+      background: var(--igx-grid-header-background); }
 
 .igx-grid__th-expander {
   display: -ms-flexbox;
@@ -2386,6 +2409,8 @@
     .igx-excel-filter__condition igx-select ~ igx-input-group,
     .igx-excel-filter__condition igx-select ~ igx-date-picker {
       margin-left: 1rem; }
+  .igx-excel-filter__condition igx-buttongroup {
+    min-width: 30%; }
   .igx-excel-filter__condition [igxButton='icon'] {
     margin-left: 1rem; }
 
