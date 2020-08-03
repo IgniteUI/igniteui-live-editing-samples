@@ -7,8 +7,8 @@
 .button-sample {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 1 0 30%;
-      flex: 1 0 30%;
+  -ms-flex: 1 0 20%;
+      flex: 1 0 20%;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: space-evenly;
