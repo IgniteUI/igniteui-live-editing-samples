@@ -56,17 +56,17 @@
     --igx-drop-down-border-radius: 4px;
     --igx-drop-down-elevation: 8;
     --igx-drop-down-background-color: #fff;
-    --igx-drop-down-header-text-color: #5434b8;
+    --igx-drop-down-header-text-color: #09f;
     --igx-drop-down-item-text-color: rgba(0, 0, 0, 0.74);
     --igx-drop-down-hover-item-text-color: rgba(0, 0, 0, 0.74);
     --igx-drop-down-hover-item-background: rgba(0, 0, 0, 0.04);
     --igx-drop-down-focused-item-background: rgba(0, 0, 0, 0.04);
     --igx-drop-down-focused-item-text-color: rgba(0, 0, 0, 0.74);
-    --igx-drop-down-selected-item-background: #baaee1;
+    --igx-drop-down-selected-item-background: #a7d9fa;
     --igx-drop-down-selected-item-text-color: black;
-    --igx-drop-down-selected-hover-item-background: #9483c8;
+    --igx-drop-down-selected-hover-item-background: #6dbcf1;
     --igx-drop-down-selected-hover-item-text-color: black;
-    --igx-drop-down-selected-focus-item-background: #9483c8;
+    --igx-drop-down-selected-focus-item-background: #6dbcf1;
     --igx-drop-down-selected-focus-item-text-color: black;
     --igx-drop-down-disabled-item-background: transparent;
     --igx-drop-down-disabled-item-text-color: rgba(0, 0, 0, 0.38);
@@ -161,3 +161,42 @@
     pointer-events: none; }
     :host ::ng-deep .igx-drop-down__item--disabled:hover, :host ::ng-deep .igx-drop-down__group--disabled:hover {
       background: var(--igx-drop-down-disabled-item-background); }
+  :host ::ng-deep {
+    --igx-overlay-background-color: rgba(0, 153, 255, 0.3); }
+  :host ::ng-deep .igx-overlay {
+    width: 0;
+    height: 0;
+    box-sizing: content-box; }
+  :host ::ng-deep .igx-overlay__wrapper, :host ::ng-deep .igx-overlay__wrapper--modal, :host ::ng-deep .igx-overlay__wrapper--flex, :host ::ng-deep .igx-overlay__wrapper--flex-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: transparent;
+    transition: background 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    pointer-events: none;
+    z-index: 10;
+    box-sizing: content-box; }
+  :host ::ng-deep .igx-overlay__wrapper--modal {
+    background: var(--igx-overlay-background-color);
+    pointer-events: initial; }
+  :host ::ng-deep .igx-overlay__wrapper--flex {
+    display: -ms-flexbox;
+    display: flex; }
+  :host ::ng-deep .igx-overlay__wrapper--flex-container {
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute; }
+  :host ::ng-deep .igx-overlay__content, :host ::ng-deep .igx-overlay__content--modal, :host ::ng-deep .igx-overlay__content--elastic, :host ::ng-deep .igx-overlay__content--relative {
+    position: absolute;
+    pointer-events: all;
+    box-sizing: content-box; }
+  :host ::ng-deep .igx-overlay__content--modal {
+    pointer-events: initial; }
+  :host ::ng-deep .igx-overlay__content--elastic {
+    overflow: auto; }
+  :host ::ng-deep .igx-overlay__content--relative {
+    position: relative; }
+  :host ::ng-deep .igx-toggle--hidden {
+    display: none !important; }
