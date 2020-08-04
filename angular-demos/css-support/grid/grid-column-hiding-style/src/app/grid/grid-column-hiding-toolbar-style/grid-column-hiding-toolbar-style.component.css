@@ -1809,9 +1809,9 @@
           filter: blur(0); }
 
 :host ::ng-deep igx-column-hiding .igx-button--fab, :host ::ng-deep igx-grid-toolbar .igx-button--fab {
-  padding: 0.9375rem;
-  min-width: 3.5rem;
-  min-height: 3.5rem;
+  padding: 0.5rem 1rem;
+  min-width: 3rem;
+  min-height: 3rem;
   line-height: unset;
   white-space: nowrap;
   color: var(--igx-button-fab-text-color);
@@ -1826,16 +1826,29 @@
     color: var(--igx-button-fab-focus-text-color);
     background: var(--igx-button-fab-focus-background);
     box-shadow: var(--igx-button-fab-focus-shadow); }
+  :host ::ng-deep igx-column-hiding .igx-button--fab igx-icon, :host ::ng-deep igx-grid-toolbar .igx-button--fab igx-icon {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-order: -1;
+        order: -1;
+    margin: 0.5rem 0; }
+  :host ::ng-deep igx-column-hiding .igx-button--fab * + igx-icon, :host ::ng-deep igx-grid-toolbar .igx-button--fab * + igx-icon {
+    margin: 0;
+    margin-right: 0.75rem; }
 
 :host ::ng-deep igx-column-hiding .igx-button--fab-cosy.igx-button--fab, :host ::ng-deep igx-grid-toolbar .igx-button--fab-cosy.igx-button--fab {
-  padding: 0.6875rem;
-  min-width: 3rem;
-  min-height: 3rem; }
-
-:host ::ng-deep igx-column-hiding .igx-button--fab-compact.igx-button--fab, :host ::ng-deep igx-grid-toolbar .igx-button--fab-compact.igx-button--fab {
-  padding: 0.4375rem;
+  padding: 0.25rem 0.75rem;
   min-width: 2.5rem;
   min-height: 2.5rem; }
+  :host ::ng-deep igx-column-hiding .igx-button--fab-cosy.igx-button--fab * + igx-icon, :host ::ng-deep igx-grid-toolbar .igx-button--fab-cosy.igx-button--fab * + igx-icon {
+    margin-right: 0.5rem; }
+
+:host ::ng-deep igx-column-hiding .igx-button--fab-compact.igx-button--fab, :host ::ng-deep igx-grid-toolbar .igx-button--fab-compact.igx-button--fab {
+  padding: 0 0.5rem;
+  min-width: 2rem;
+  min-height: 2rem; }
+  :host ::ng-deep igx-column-hiding .igx-button--fab-compact.igx-button--fab * + igx-icon, :host ::ng-deep igx-grid-toolbar .igx-button--fab-compact.igx-button--fab * + igx-icon {
+    margin-right: 0.25rem; }
 
 :host ::ng-deep igx-column-hiding .igx-button--icon, :host ::ng-deep igx-grid-toolbar .igx-button--icon {
   width: 2.25rem;

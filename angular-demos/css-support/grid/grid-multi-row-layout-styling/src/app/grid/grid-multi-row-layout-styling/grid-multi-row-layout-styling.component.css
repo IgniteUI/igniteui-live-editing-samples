@@ -2018,7 +2018,8 @@
   -ms-flex-positive: 1;
       flex-grow: 1;
   box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-  overflow: auto; }
+  overflow: auto;
+  min-width: 20rem; }
 
 .igx-excel-filter--inline {
   box-shadow: none; }
@@ -2049,10 +2050,8 @@
   -ms-flex-direction: column;
       flex-direction: column;
   height: 100%;
-  width: 320px;
-  min-width: 320px;
   background: var(--igx-grid-filtering-row-background);
-  border-radius: 4px; }
+  border-radius: 0.25rem; }
   .igx-excel-filter__menu {
     --igx-button-group-border-radius: 4px;
     --igx-button-group-elevation: 2;
@@ -2077,6 +2076,10 @@
     box-shadow: var(--igx-button-group-shadow);
     transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     border-radius: var(--igx-button-group-border-radius); }
+    .igx-excel-filter__menu .igx-button-group button, .igx-excel-filter__menu .igx-button-group--vertical button {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0; }
   .igx-excel-filter__menu .igx-button-group__item, .igx-excel-filter__menu .igx-button-group__item--selected {
     border: 1px solid var(--igx-button-group-item-border-color);
     color: var(--igx-button-group-item-text-color);
@@ -2184,6 +2187,13 @@
   margin-left: auto; }
   .igx-excel-filter__menu-header-actions [igxButton] + [igxButton] {
     margin-left: 0.25rem; }
+  .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled {
+    padding: 0 !important;
+    margin: 0 !important; }
+  .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled,
+  .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected {
+    -ms-flex-pack: center;
+        justify-content: center; }
 
 .igx-excel-filter__menu-footer, .igx-excel-filter__secondary-footer {
   display: -ms-flexbox;

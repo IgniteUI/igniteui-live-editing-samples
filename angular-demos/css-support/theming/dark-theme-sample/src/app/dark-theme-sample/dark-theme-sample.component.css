@@ -1637,7 +1637,8 @@
         -ms-flex-positive: 1;
             flex-grow: 1;
         box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-        overflow: auto; }
+        overflow: auto;
+        min-width: 20rem; }
       :host.dark-theme ::ng-deep .igx-excel-filter--inline {
         box-shadow: none; }
         :host.dark-theme ::ng-deep .igx-excel-filter--inline .igx-excel-filter__menu {
@@ -1663,10 +1664,8 @@
         -ms-flex-direction: column;
             flex-direction: column;
         height: 100%;
-        width: 320px;
-        min-width: 320px;
         background: var(--igx-grid-filtering-row-background);
-        border-radius: 4px; }
+        border-radius: 0.25rem; }
         :host.dark-theme ::ng-deep .igx-excel-filter__menu {
           --igx-button-group-border-radius: 4px;
           --igx-button-group-elevation: 2;
@@ -1691,6 +1690,10 @@
           box-shadow: var(--igx-button-group-shadow);
           transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
           border-radius: var(--igx-button-group-border-radius); }
+          :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group button, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group--vertical button {
+            margin-top: 0;
+            margin-right: 0;
+            margin-bottom: 0; }
         :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected {
           border: 1px solid var(--igx-button-group-item-border-color);
           color: var(--igx-button-group-item-text-color);
@@ -1796,6 +1799,13 @@
         margin-left: auto; }
         :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions [igxButton] + [igxButton] {
           margin-left: 0.25rem; }
+        :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled {
+          padding: 0 !important;
+          margin: 0 !important; }
+        :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled,
+        :host.dark-theme ::ng-deep .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected {
+          -ms-flex-pack: center;
+              justify-content: center; }
       :host.dark-theme ::ng-deep .igx-excel-filter__menu-footer, :host.dark-theme ::ng-deep .igx-excel-filter__secondary-footer {
         display: -ms-flexbox;
         display: flex;
@@ -3468,9 +3478,9 @@
         -webkit-filter: blur(0);
                 filter: blur(0); }
       :host.dark-theme ::ng-deep .igx-button--fab {
-        padding: 0.9375rem;
-        min-width: 3.5rem;
-        min-height: 3.5rem;
+        padding: 0.5rem 1rem;
+        min-width: 3rem;
+        min-height: 3rem;
         line-height: unset;
         white-space: nowrap;
         color: var(--igx-button-fab-text-color);
@@ -3485,14 +3495,27 @@
           color: var(--igx-button-fab-focus-text-color);
           background: var(--igx-button-fab-focus-background);
           box-shadow: var(--igx-button-fab-focus-shadow); }
+        :host.dark-theme ::ng-deep .igx-button--fab igx-icon {
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          -ms-flex-order: -1;
+              order: -1;
+          margin: 0.5rem 0; }
+        :host.dark-theme ::ng-deep .igx-button--fab * + igx-icon {
+          margin: 0;
+          margin-right: 0.75rem; }
       :host.dark-theme ::ng-deep .igx-button--fab-cosy.igx-button--fab {
-        padding: 0.6875rem;
-        min-width: 3rem;
-        min-height: 3rem; }
-      :host.dark-theme ::ng-deep .igx-button--fab-compact.igx-button--fab {
-        padding: 0.4375rem;
+        padding: 0.25rem 0.75rem;
         min-width: 2.5rem;
         min-height: 2.5rem; }
+        :host.dark-theme ::ng-deep .igx-button--fab-cosy.igx-button--fab * + igx-icon {
+          margin-right: 0.5rem; }
+      :host.dark-theme ::ng-deep .igx-button--fab-compact.igx-button--fab {
+        padding: 0 0.5rem;
+        min-width: 2rem;
+        min-height: 2rem; }
+        :host.dark-theme ::ng-deep .igx-button--fab-compact.igx-button--fab * + igx-icon {
+          margin-right: 0.25rem; }
       :host.dark-theme ::ng-deep .igx-button--icon {
         width: 2.25rem;
         height: 2.25rem;
@@ -3548,6 +3571,10 @@
         box-shadow: var(--igx-button-group-shadow);
         transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
         border-radius: var(--igx-button-group-border-radius); }
+        :host.dark-theme ::ng-deep .igx-button-group button, :host.dark-theme ::ng-deep .igx-button-group--vertical button {
+          margin-top: 0;
+          margin-right: 0;
+          margin-bottom: 0; }
       :host.dark-theme ::ng-deep .igx-button-group__item, :host.dark-theme ::ng-deep .igx-button-group__item--selected {
         border: 1px solid var(--igx-button-group-item-border-color);
         color: var(--igx-button-group-item-text-color);

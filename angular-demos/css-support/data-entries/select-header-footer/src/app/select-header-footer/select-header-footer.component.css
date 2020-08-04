@@ -129,6 +129,10 @@ igx-select {
   box-shadow: var(--igx-button-group-shadow);
   transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   border-radius: var(--igx-button-group-border-radius); }
+  .igx-button-group button, .igx-button-group--vertical button {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0; }
 
 .igx-button-group__item, .igx-button-group__item--selected, .igx-button-group--vertical .igx-button-group__item, .igx-button-group--vertical .igx-button-group__item--selected {
   border: 1px solid var(--igx-button-group-item-border-color);
@@ -250,6 +254,10 @@ igx-select {
   box-shadow: var(--igx-button-group-shadow);
   transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
   border-radius: var(--igx-button-group-border-radius); }
+  :host ::ng-deep .igx-button-group button, :host ::ng-deep .igx-button-group--vertical button {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0; }
 
 :host ::ng-deep .igx-button-group__item, :host ::ng-deep .igx-button-group__item--selected {
   border: 1px solid var(--igx-button-group-item-border-color);
