@@ -594,12 +594,6 @@
       color: var(--igx-grid-row-selected-text-color); }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th--pinned-last, ::ng-deep .default-theme .grid__wrapper .igx-grid__td--pinned-last {
     border-right: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
-    ::ng-deep .default-theme .grid__wrapper .igx-grid__th--pinned-last .igx-grid__filtering-cell, ::ng-deep .default-theme .grid__wrapper .igx-grid__td--pinned-last .igx-grid__filtering-cell, ::ng-deep .default-theme .grid__wrapper .igx-grid__th--pinned-last .igx-grid__filtering-cell--selected, ::ng-deep .default-theme .grid__wrapper .igx-grid__td--pinned-last .igx-grid__filtering-cell--selected,
-    ::ng-deep .default-theme .grid__wrapper .igx-grid__th--pinned-last .igx-grid__thead-title,
-    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--pinned-last .igx-grid__thead-title,
-    ::ng-deep .default-theme .grid__wrapper .igx-grid__th--pinned-last .igx-grid__th,
-    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--pinned-last .igx-grid__th {
-      border-right: none; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th--pinned-first, ::ng-deep .default-theme .grid__wrapper .igx-grid__td--pinned-first {
     border-left: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__td--row-pinned-first {
@@ -650,8 +644,8 @@
         flex-grow: 1;
     /* hey IE, the text should take most of the space */
     line-height: 4.16667;
-    transition: opacity 250ms ease-in-out, color 250ms ease-in-out;
-    opacity: .7; }
+    opacity: .7;
+    transition: opacity 250ms ease-in-out, color 250ms ease-in-out; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid--cosy .igx-grid__th-title, .igx-grid--cosy ::ng-deep .default-theme .grid__wrapper .igx-grid__th-title {
     line-height: 3.33333; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid--compact .igx-grid__th-title, .igx-grid--compact ::ng-deep .default-theme .grid__wrapper .igx-grid__th-title {
@@ -679,18 +673,7 @@
       height: 0.9375rem;
       min-width: 0.9375rem;
       /* yeah IE, it really needs to be 15px wide... */
-      font-size: 0.9375rem;
-      position: relative; }
-      ::ng-deep .default-theme .grid__wrapper .igx-grid__th-icons .sort-icon::after {
-        content: attr(data-sortIndex);
-        position: absolute;
-        top: -5px;
-        right: -1px;
-        font-size: 0.625rem;
-        text-align: right;
-        font-family: sans-serif;
-        line-height: 0.625rem;
-        background: var(--igx-grid-header-background); }
+      font-size: 0.9375rem; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th-expander {
     display: -ms-flexbox;
     display: flex;
@@ -714,7 +697,7 @@
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th--selectable {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background);
-    opacity: 0.7; }
+    opacity: .7; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th--selected {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background); }
