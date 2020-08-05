@@ -392,6 +392,16 @@
         border-top: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important;
         position: absolute;
         bottom: 0; }
+      :host.dark-theme ::ng-deep .igx-grid__td--bool {
+        -ms-flex-pack: center;
+            justify-content: center; }
+        :host.dark-theme ::ng-deep .igx-grid__td--bool igx-icon {
+          height: 1.125rem;
+          width: 1.125rem;
+          font-size: 1.125rem;
+          color: rgba(0, 0, 0, 0.38); }
+      :host.dark-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+        color: rgba(0, 0, 0, 0.62); }
       :host.dark-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
         position: relative; }
@@ -1433,8 +1443,9 @@
           box-shadow: 0 1px 0 var(--igx-grid-filtering-row-background), 0 4px 10px rgba(0, 0, 0, 0.12);
           z-index: -1; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-input-group {
-          -ms-flex: 0 0 200px;
-              flex: 0 0 200px; }
+          width: 100%;
+          max-width: 12.5rem;
+          min-width: 8.75rem; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-prefix:focus {
           color: #FFA500; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-suffix igx-icon {
@@ -1443,6 +1454,13 @@
             color: #FFA500; }
           :host.dark-theme ::ng-deep .igx-grid__filtering-row igx-suffix igx-icon + igx-icon {
             margin-left: 0.25rem; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-dropdown-items {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-dropdown-text {
+        margin-left: 1rem; }
       :host.dark-theme ::ng-deep .igx-grid__filtering-row--cosy {
         height: 2.5rem; }
       :host.dark-theme ::ng-deep .igx-grid__filtering-row--compact {
@@ -1453,7 +1471,8 @@
         -ms-flex: 1;
             flex: 1;
         overflow: hidden;
-        max-width: calc(100% - 176px); }
+        max-width: calc(100% - 176px);
+        min-width: 3.5rem; }
         :host.dark-theme ::ng-deep .igx-grid__filtering-row-main igx-chips-area {
           transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
           -ms-flex-wrap: nowrap;
@@ -1943,6 +1962,8 @@
           :host.dark-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-input-group,
           :host.dark-theme ::ng-deep .igx-excel-filter__condition igx-select ~ igx-date-picker {
             margin-left: 1rem; }
+        :host.dark-theme ::ng-deep .igx-excel-filter__condition igx-buttongroup {
+          min-width: 30%; }
         :host.dark-theme ::ng-deep .igx-excel-filter__condition [igxButton='icon'] {
           margin-left: 1rem; }
       :host.dark-theme ::ng-deep .igx-excel-filter__add-filter {
@@ -2234,6 +2255,16 @@
       :host.dark-theme ::ng-deep .igx-filter-contextual-menu--compact igx-buttongroup + [igxButton],
       :host.dark-theme ::ng-deep .igx-filter-contextual-menu--compact [igxButton] + igx-buttongroup {
         margin-top: 0.5rem; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons--small,
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+            align-items: center; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons button igx-icon {
+        margin-right: 0.5rem; }
+      :host.dark-theme ::ng-deep .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
+        color: var(--igx-grid-sorted-header-icon-color); }
       :host.dark-theme ::ng-deep {
         --igx-paginator-variant: material;
         --igx-paginator-text-color: #d28800;
@@ -3149,8 +3180,7 @@
         border-radius: var(--igx-input-group-box-border-radius);
         border: 1px solid var(--igx-input-group-border-color);
         font-size: 1.25rem;
-        padding: 0.5rem 1rem;
-        transition: box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+        padding: 0.5rem 1rem; }
       :host.dark-theme ::ng-deep .igx-input-group--focused.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--focused.igx-input-group--bootstrap :host.dark-theme ::ng-deep .igx-input-group__input, :host.dark-theme ::ng-deep .igx-input-group--focused.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--focused.igx-input-group--bootstrap :host.dark-theme ::ng-deep .igx-input-group__textarea {
         border: 1px solid var(--igx-input-group-focused-secondary-color);
         box-shadow: 0 0 0 0.1875rem var(--igx-input-group-focused-shadow-color); }

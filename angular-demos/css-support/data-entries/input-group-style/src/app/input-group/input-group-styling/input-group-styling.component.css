@@ -1008,8 +1008,7 @@
   border-radius: var(--igx-input-group-box-border-radius);
   border: 1px solid var(--igx-input-group-border-color);
   font-size: 1.25rem;
-  padding: 0.5rem 1rem;
-  transition: box-shadow 0.25s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.25s cubic-bezier(0.215, 0.61, 0.355, 1); }
+  padding: 0.5rem 1rem; }
 
 :host ::ng-deep .igx-input-group--focused.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--focused.igx-input-group--bootstrap :host ::ng-deep .igx-input-group__input, :host ::ng-deep .igx-input-group--focused.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--focused.igx-input-group--bootstrap :host ::ng-deep .igx-input-group__textarea {
   border: 1px solid var(--igx-input-group-focused-secondary-color);
