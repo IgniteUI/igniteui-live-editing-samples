@@ -50,42 +50,42 @@
 /*SCHEMAS*/
 /*INCLUSION by DEFAULT ViewEncapsulation strategy*/
 :host ::ng-deep {
-  --igx-column-hiding-background-color: steelblue;
-  --igx-column-hiding-title-color: gold; }
+  --igx-column-actions-background-color: steelblue;
+  --igx-column-actions-title-color: gold; }
 
-:host ::ng-deep .igx-column-hiding {
+:host ::ng-deep .igx-column-actions {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  background: var(--igx-column-hiding-background-color);
+  background: var(--igx-column-actions-background-color);
   width: 100%;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   min-width: 11.25rem; }
 
-:host ::ng-deep .igx-column-hiding__header-title {
-  color: var(--igx-column-hiding-title-color);
+:host ::ng-deep .igx-column-actions__header-title {
+  color: var(--igx-column-actions-title-color);
   margin: 0;
   padding: 1rem 1rem 0.5rem; }
 
-:host ::ng-deep .igx-column-hiding__header-input {
+:host ::ng-deep .igx-column-actions__header-input {
   font-size: 1rem !important;
   margin: -16px 0 0 !important;
   padding: 0.5rem 1rem; }
 
-:host ::ng-deep .igx-column-hiding__columns {
+:host ::ng-deep .igx-column-actions__columns {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   overflow-y: auto; }
 
-:host ::ng-deep .igx-column-hiding__columns-item {
+:host ::ng-deep .igx-column-actions__columns-item {
   padding: 1rem;
   min-height: 3.25rem; }
 
-:host ::ng-deep .igx-column-hiding__buttons {
+:host ::ng-deep .igx-column-actions__buttons {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;

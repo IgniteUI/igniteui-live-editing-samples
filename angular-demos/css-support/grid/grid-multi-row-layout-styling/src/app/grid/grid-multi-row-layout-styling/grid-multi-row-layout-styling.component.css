@@ -2013,7 +2013,7 @@
 
 .igx-excel-filter {
   display: block;
-  width: 100%;
+  width: 20rem;
   height: 100%;
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -2022,9 +2022,8 @@
   min-width: 20rem; }
 
 .igx-excel-filter--inline {
-  box-shadow: none; }
-  .igx-excel-filter--inline .igx-excel-filter__menu {
-    width: 100%; }
+  box-shadow: none;
+  width: 100%; }
 
 .igx-excel-filter__loading {
   display: -ms-flexbox;
@@ -2209,8 +2208,7 @@
 
 .igx-excel-filter__sort {
   display: block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding: 0.5rem 1rem; }
   .igx-excel-filter__sort header {
     color: rgba(0, 0, 0, 0.62);
     margin-bottom: 0.25rem; }
@@ -2238,7 +2236,8 @@
   color: #e41c77; }
 
 .igx-excel-filter__move {
-  margin-bottom: 0.5rem; }
+  display: block;
+  padding: 0.5rem 1rem; }
   .igx-excel-filter__move header {
     color: rgba(0, 0, 0, 0.62);
     margin-bottom: 0.25rem; }
@@ -2268,7 +2267,6 @@
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 0.5rem 1rem;
-  margin: 0 -1rem;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.62);
   outline-style: none; }
@@ -2303,15 +2301,16 @@
   padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding: 0.5rem; }
+
+.igx-excel-filter__menu--cosy .igx-excel-filter__move {
+  padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
   padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-  padding: 0.5rem;
-  margin: 0 -0.5rem; }
+  padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
   padding: 0 0.5rem; }
@@ -2328,22 +2327,21 @@
   padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem; }
+  padding: 0.25rem; }
   .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
     width: 13rem; }
     .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
       margin-left: 0.5rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__move {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__actions {
   padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-  padding: 0.25rem;
-  margin: 0 -0.25rem; }
+  padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
   padding: 0 0.25rem; }
@@ -2427,6 +2425,16 @@
     height: 1.125rem;
     font-size: 1.125rem;
     margin-right: 0.5rem; }
+
+igx-excel-style-filter-operations,
+[igxExcelStyleFilterOperations] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  overflow: hidden; }
 
 .igx-advanced-filter {
   width: 660px;

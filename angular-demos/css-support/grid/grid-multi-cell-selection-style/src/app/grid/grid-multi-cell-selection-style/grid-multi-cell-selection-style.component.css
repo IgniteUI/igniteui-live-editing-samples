@@ -1684,7 +1684,7 @@
       margin-right: calc(0.75rem + 18px); }
   :host ::ng-deep .igx-excel-filter {
     display: block;
-    width: 100%;
+    width: 20rem;
     height: 100%;
     -ms-flex-positive: 1;
         flex-grow: 1;
@@ -1692,9 +1692,8 @@
     overflow: auto;
     min-width: 20rem; }
   :host ::ng-deep .igx-excel-filter--inline {
-    box-shadow: none; }
-    :host ::ng-deep .igx-excel-filter--inline .igx-excel-filter__menu {
-      width: 100%; }
+    box-shadow: none;
+    width: 100%; }
   :host ::ng-deep .igx-excel-filter__loading {
     display: -ms-flexbox;
     display: flex;
@@ -1871,8 +1870,7 @@
         margin-left: 1rem; }
   :host ::ng-deep .igx-excel-filter__sort {
     display: block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem 1rem; }
     :host ::ng-deep .igx-excel-filter__sort header {
       color: rgba(0, 0, 0, 0.62);
       margin-bottom: 0.25rem; }
@@ -1896,7 +1894,8 @@
   :host ::ng-deep .igx-excel-filter__actions-selected igx-icon {
     color: #e41c77; }
   :host ::ng-deep .igx-excel-filter__move {
-    margin-bottom: 0.5rem; }
+    display: block;
+    padding: 0.5rem 1rem; }
     :host ::ng-deep .igx-excel-filter__move header {
       color: rgba(0, 0, 0, 0.62);
       margin-bottom: 0.25rem; }
@@ -1924,7 +1923,6 @@
     -ms-flex-pack: justify;
         justify-content: space-between;
     padding: 0.5rem 1rem;
-    margin: 0 -1rem;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.62);
     outline-style: none; }
@@ -1955,13 +1953,13 @@
         justify-content: space-between;
     padding: 0.5rem; }
   :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem; }
+  :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__move {
+    padding: 0.5rem; }
   :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
     padding: 0.5rem; }
   :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-    padding: 0.5rem;
-    margin: 0 -0.5rem; }
+    padding: 0.5rem; }
   :host ::ng-deep .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
     padding: 0 0.5rem; }
   :host ::ng-deep .igx-excel-filter__menu--cosy igx-list {
@@ -1973,19 +1971,18 @@
         justify-content: space-between;
     padding: 0.25rem; }
   :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem; }
+    padding: 0.25rem; }
     :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
       width: 13rem; }
       :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
         margin-left: 0.5rem; }
   :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__move {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0.25rem; }
   :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions {
     padding: 0.25rem; }
   :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-    padding: 0.25rem;
-    margin: 0 -0.25rem; }
+    padding: 0.25rem; }
   :host ::ng-deep .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
     padding: 0 0.25rem; }
   :host ::ng-deep .igx-excel-filter__menu--compact igx-list {
@@ -2052,6 +2049,15 @@
       height: 1.125rem;
       font-size: 1.125rem;
       margin-right: 0.5rem; }
+  :host ::ng-deep igx-excel-style-filter-operations,
+  :host ::ng-deep [igxExcelStyleFilterOperations] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    overflow: hidden; }
   :host ::ng-deep .igx-advanced-filter {
     width: 660px;
     min-width: 660px;

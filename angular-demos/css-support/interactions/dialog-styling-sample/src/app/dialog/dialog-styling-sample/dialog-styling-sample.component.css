@@ -94,6 +94,9 @@ igx-icon {
     color: var(--igx-dialog-message-color);
     max-width: 40ch;
     padding: 0.75rem 1.5rem; }
+    @media all and (-ms-high-contrast: none) {
+      :host ::ng-deep .igx-dialog__window-content {
+        max-width: 62ch; } }
   :host ::ng-deep .igx-dialog__window-actions {
     display: -ms-flexbox;
     display: flex;

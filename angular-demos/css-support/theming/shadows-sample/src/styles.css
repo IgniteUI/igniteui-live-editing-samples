@@ -263,7 +263,7 @@
     line-height: 1.25rem;
     font-size: 12px;
     font-weight: 600; }
-  .igx-typography .igx-column-hiding__header-title {
+  .igx-typography .igx-column-actions__header-title {
     font-weight: 400;
     font-size: 1rem;
     letter-spacing: 0.00937rem;
@@ -3551,10 +3551,10 @@
     padding: 0 0.125rem; }
 
 :root {
-  --igx-column-hiding-background-color: transparent;
-  --igx-column-hiding-title-color: #09f; }
+  --igx-column-actions-background-color: transparent;
+  --igx-column-actions-title-color: #09f; }
 
-.igx-column-hiding {
+.igx-column-actions {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
@@ -3565,28 +3565,28 @@
       flex: 1 1 auto;
   min-width: 11.25rem; }
 
-.igx-column-hiding__header-title {
+.igx-column-actions__header-title {
   color: #09f;
   margin: 0;
   padding: 1rem 1rem 0.5rem; }
 
-.igx-column-hiding__header-input {
+.igx-column-actions__header-input {
   font-size: 1rem !important;
   margin: -16px 0 0 !important;
   padding: 0.5rem 1rem; }
 
-.igx-column-hiding__columns {
+.igx-column-actions__columns {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   overflow-y: auto; }
 
-.igx-column-hiding__columns-item {
+.igx-column-actions__columns-item {
   padding: 1rem;
   min-height: 3.25rem; }
 
-.igx-column-hiding__buttons {
+.igx-column-actions__buttons {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
@@ -3822,6 +3822,9 @@ igx-date-range-end,
   color: rgba(0, 0, 0, 0.6);
   max-width: 40ch;
   padding: 0.75rem 1.5rem; }
+  @media all and (-ms-high-contrast: none) {
+    .igx-dialog__window-content {
+      max-width: 62ch; } }
 
 .igx-dialog__window-actions {
   display: -ms-flexbox;
@@ -6081,7 +6084,7 @@ igx-date-range-end,
 
 .igx-excel-filter {
   display: block;
-  width: 100%;
+  width: 20rem;
   height: 100%;
   -ms-flex-positive: 1;
       flex-grow: 1;
@@ -6090,9 +6093,8 @@ igx-date-range-end,
   min-width: 20rem; }
 
 .igx-excel-filter--inline {
-  box-shadow: none; }
-  .igx-excel-filter--inline .igx-excel-filter__menu {
-    width: 100%; }
+  box-shadow: none;
+  width: 100%; }
 
 .igx-excel-filter__loading {
   display: -ms-flexbox;
@@ -6277,8 +6279,7 @@ igx-date-range-end,
 
 .igx-excel-filter__sort {
   display: block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding: 0.5rem 1rem; }
   .igx-excel-filter__sort header {
     color: rgba(0, 0, 0, 0.62);
     margin-bottom: 0.25rem; }
@@ -6306,7 +6307,8 @@ igx-date-range-end,
   color: #e41c77; }
 
 .igx-excel-filter__move {
-  margin-bottom: 0.5rem; }
+  display: block;
+  padding: 0.5rem 1rem; }
   .igx-excel-filter__move header {
     color: rgba(0, 0, 0, 0.62);
     margin-bottom: 0.25rem; }
@@ -6336,7 +6338,6 @@ igx-date-range-end,
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 0.5rem 1rem;
-  margin: 0 -1rem;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.62);
   outline-style: none; }
@@ -6371,15 +6372,16 @@ igx-date-range-end,
   padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding: 0.5rem; }
+
+.igx-excel-filter__menu--cosy .igx-excel-filter__move {
+  padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
   padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-  padding: 0.5rem;
-  margin: 0 -0.5rem; }
+  padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
   padding: 0 0.5rem; }
@@ -6396,22 +6398,21 @@ igx-date-range-end,
   padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem; }
+  padding: 0.25rem; }
   .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
     width: 13rem; }
     .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
       margin-left: 0.5rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__move {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__actions {
   padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-  padding: 0.25rem;
-  margin: 0 -0.25rem; }
+  padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
   padding: 0 0.25rem; }
@@ -6495,6 +6496,16 @@ igx-date-range-end,
     height: 1.125rem;
     font-size: 1.125rem;
     margin-right: 0.5rem; }
+
+igx-excel-style-filter-operations,
+[igxExcelStyleFilterOperations] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  overflow: hidden; }
 
 .igx-advanced-filter {
   width: 660px;
@@ -12982,36 +12993,36 @@ body {
     .fin-dark-theme .igx-chip__ghost--compact .igx-chip__content {
       padding: 0 0.125rem; }
   .fin-dark-theme {
-    --igx-column-hiding-background-color: transparent;
-    --igx-column-hiding-title-color: #09f; }
-  .fin-dark-theme .igx-column-hiding {
+    --igx-column-actions-background-color: transparent;
+    --igx-column-actions-title-color: #09f; }
+  .fin-dark-theme .igx-column-actions {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
-    background: var(--igx-column-hiding-background-color);
+    background: var(--igx-column-actions-background-color);
     width: 100%;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     min-width: 11.25rem; }
-  .fin-dark-theme .igx-column-hiding__header-title {
-    color: var(--igx-column-hiding-title-color);
+  .fin-dark-theme .igx-column-actions__header-title {
+    color: var(--igx-column-actions-title-color);
     margin: 0;
     padding: 1rem 1rem 0.5rem; }
-  .fin-dark-theme .igx-column-hiding__header-input {
+  .fin-dark-theme .igx-column-actions__header-input {
     font-size: 1rem !important;
     margin: -16px 0 0 !important;
     padding: 0.5rem 1rem; }
-  .fin-dark-theme .igx-column-hiding__columns {
+  .fin-dark-theme .igx-column-actions__columns {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
     overflow-y: auto; }
-  .fin-dark-theme .igx-column-hiding__columns-item {
+  .fin-dark-theme .igx-column-actions__columns-item {
     padding: 1rem;
     min-height: 3.25rem; }
-  .fin-dark-theme .igx-column-hiding__buttons {
+  .fin-dark-theme .igx-column-actions__buttons {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -13220,6 +13231,9 @@ body {
     color: var(--igx-dialog-message-color);
     max-width: 40ch;
     padding: 0.75rem 1.5rem; }
+    @media all and (-ms-high-contrast: none) {
+      .fin-dark-theme .igx-dialog__window-content {
+        max-width: 62ch; } }
   .fin-dark-theme .igx-dialog__window-actions {
     display: -ms-flexbox;
     display: flex;
@@ -15102,7 +15116,7 @@ body {
       margin-right: calc(0.75rem + 18px); }
   .fin-dark-theme .igx-excel-filter {
     display: block;
-    width: 100%;
+    width: 20rem;
     height: 100%;
     -ms-flex-positive: 1;
         flex-grow: 1;
@@ -15110,9 +15124,8 @@ body {
     overflow: auto;
     min-width: 20rem; }
   .fin-dark-theme .igx-excel-filter--inline {
-    box-shadow: none; }
-    .fin-dark-theme .igx-excel-filter--inline .igx-excel-filter__menu {
-      width: 100%; }
+    box-shadow: none;
+    width: 100%; }
   .fin-dark-theme .igx-excel-filter__loading {
     display: -ms-flexbox;
     display: flex;
@@ -15289,8 +15302,7 @@ body {
         margin-left: 1rem; }
   .fin-dark-theme .igx-excel-filter__sort {
     display: block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem 1rem; }
     .fin-dark-theme .igx-excel-filter__sort header {
       color: rgba(255, 255, 255, 0.62);
       margin-bottom: 0.25rem; }
@@ -15314,7 +15326,8 @@ body {
   .fin-dark-theme .igx-excel-filter__actions-selected igx-icon {
     color: #72da67; }
   .fin-dark-theme .igx-excel-filter__move {
-    margin-bottom: 0.5rem; }
+    display: block;
+    padding: 0.5rem 1rem; }
     .fin-dark-theme .igx-excel-filter__move header {
       color: rgba(255, 255, 255, 0.62);
       margin-bottom: 0.25rem; }
@@ -15342,7 +15355,6 @@ body {
     -ms-flex-pack: justify;
         justify-content: space-between;
     padding: 0.5rem 1rem;
-    margin: 0 -1rem;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.62);
     outline-style: none; }
@@ -15373,13 +15385,13 @@ body {
         justify-content: space-between;
     padding: 0.5rem; }
   .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem; }
+  .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__move {
+    padding: 0.5rem; }
   .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
     padding: 0.5rem; }
   .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-    padding: 0.5rem;
-    margin: 0 -0.5rem; }
+    padding: 0.5rem; }
   .fin-dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
     padding: 0 0.5rem; }
   .fin-dark-theme .igx-excel-filter__menu--cosy igx-list {
@@ -15391,19 +15403,18 @@ body {
         justify-content: space-between;
     padding: 0.25rem; }
   .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem; }
+    padding: 0.25rem; }
     .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
       width: 13rem; }
       .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
         margin-left: 0.5rem; }
   .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__move {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0.25rem; }
   .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions {
     padding: 0.25rem; }
   .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-    padding: 0.25rem;
-    margin: 0 -0.25rem; }
+    padding: 0.25rem; }
   .fin-dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
     padding: 0 0.25rem; }
   .fin-dark-theme .igx-excel-filter__menu--compact igx-list {
@@ -15470,6 +15481,15 @@ body {
       height: 1.125rem;
       font-size: 1.125rem;
       margin-right: 0.5rem; }
+  .fin-dark-theme igx-excel-style-filter-operations,
+  .fin-dark-theme [igxExcelStyleFilterOperations] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    overflow: hidden; }
   .fin-dark-theme .igx-advanced-filter {
     width: 660px;
     min-width: 660px;
@@ -21168,9 +21188,9 @@ body {
     .dark-theme .igx-chip__ghost--compact .igx-chip__content {
       padding: 0 0.125rem; }
   .dark-theme {
-    --igx-column-hiding-background-color: transparent;
-    --igx-column-hiding-title-color: #09f; }
-  .dark-theme .igx-column-hiding {
+    --igx-column-actions-background-color: transparent;
+    --igx-column-actions-title-color: #09f; }
+  .dark-theme .igx-column-actions {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column nowrap;
@@ -21180,24 +21200,24 @@ body {
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     min-width: 11.25rem; }
-  .dark-theme .igx-column-hiding__header-title {
+  .dark-theme .igx-column-actions__header-title {
     color: #09f;
     margin: 0;
     padding: 1rem 1rem 0.5rem; }
-  .dark-theme .igx-column-hiding__header-input {
+  .dark-theme .igx-column-actions__header-input {
     font-size: 1rem !important;
     margin: -16px 0 0 !important;
     padding: 0.5rem 1rem; }
-  .dark-theme .igx-column-hiding__columns {
+  .dark-theme .igx-column-actions__columns {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
     overflow-y: auto; }
-  .dark-theme .igx-column-hiding__columns-item {
+  .dark-theme .igx-column-actions__columns-item {
     padding: 1rem;
     min-height: 3.25rem; }
-  .dark-theme .igx-column-hiding__buttons {
+  .dark-theme .igx-column-actions__buttons {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: end;
@@ -21406,6 +21426,9 @@ body {
     color: rgba(255, 255, 255, 0.6);
     max-width: 40ch;
     padding: 0.75rem 1.5rem; }
+    @media all and (-ms-high-contrast: none) {
+      .dark-theme .igx-dialog__window-content {
+        max-width: 62ch; } }
   .dark-theme .igx-dialog__window-actions {
     display: -ms-flexbox;
     display: flex;
@@ -23288,7 +23311,7 @@ body {
       margin-right: calc(0.75rem + 18px); }
   .dark-theme .igx-excel-filter {
     display: block;
-    width: 100%;
+    width: 20rem;
     height: 100%;
     -ms-flex-positive: 1;
         flex-grow: 1;
@@ -23296,9 +23319,8 @@ body {
     overflow: auto;
     min-width: 20rem; }
   .dark-theme .igx-excel-filter--inline {
-    box-shadow: none; }
-    .dark-theme .igx-excel-filter--inline .igx-excel-filter__menu {
-      width: 100%; }
+    box-shadow: none;
+    width: 100%; }
   .dark-theme .igx-excel-filter__loading {
     display: -ms-flexbox;
     display: flex;
@@ -23475,8 +23497,7 @@ body {
         margin-left: 1rem; }
   .dark-theme .igx-excel-filter__sort {
     display: block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem 1rem; }
     .dark-theme .igx-excel-filter__sort header {
       color: rgba(255, 255, 255, 0.62);
       margin-bottom: 0.25rem; }
@@ -23500,7 +23521,8 @@ body {
   .dark-theme .igx-excel-filter__actions-selected igx-icon {
     color: #72da67; }
   .dark-theme .igx-excel-filter__move {
-    margin-bottom: 0.5rem; }
+    display: block;
+    padding: 0.5rem 1rem; }
     .dark-theme .igx-excel-filter__move header {
       color: rgba(255, 255, 255, 0.62);
       margin-bottom: 0.25rem; }
@@ -23528,7 +23550,6 @@ body {
     -ms-flex-pack: justify;
         justify-content: space-between;
     padding: 0.5rem 1rem;
-    margin: 0 -1rem;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.62);
     outline-style: none; }
@@ -23559,13 +23580,13 @@ body {
         justify-content: space-between;
     padding: 0.5rem; }
   .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem; }
+  .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__move {
+    padding: 0.5rem; }
   .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
     padding: 0.5rem; }
   .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-    padding: 0.5rem;
-    margin: 0 -0.5rem; }
+    padding: 0.5rem; }
   .dark-theme .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
     padding: 0 0.5rem; }
   .dark-theme .igx-excel-filter__menu--cosy igx-list {
@@ -23577,19 +23598,18 @@ body {
         justify-content: space-between;
     padding: 0.25rem; }
   .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem; }
+    padding: 0.25rem; }
     .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
       width: 13rem; }
       .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
         margin-left: 0.5rem; }
   .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__move {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0.25rem; }
   .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions {
     padding: 0.25rem; }
   .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-    padding: 0.25rem;
-    margin: 0 -0.25rem; }
+    padding: 0.25rem; }
   .dark-theme .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
     padding: 0 0.25rem; }
   .dark-theme .igx-excel-filter__menu--compact igx-list {
@@ -23656,6 +23676,15 @@ body {
       height: 1.125rem;
       font-size: 1.125rem;
       margin-right: 0.5rem; }
+  .dark-theme igx-excel-style-filter-operations,
+  .dark-theme [igxExcelStyleFilterOperations] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    overflow: hidden; }
   .dark-theme .igx-advanced-filter {
     width: 660px;
     min-width: 660px;
@@ -27230,7 +27259,7 @@ body {
       margin-bottom: 0;
       font-size: 12px;
       font-weight: 600; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding__header-title {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__header-title {
       font-weight: 400;
       font-size: 0.75rem;
       letter-spacing: 0.00937rem;
@@ -29921,36 +29950,36 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact .igx-chip__content {
         padding: 0 0.125rem; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --igx-column-hiding-background-color: transparent;
-      --igx-column-hiding-title-color: #217346; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding {
+      --igx-column-actions-background-color: transparent;
+      --igx-column-actions-title-color: #217346; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-      background: var(--igx-column-hiding-background-color);
+      background: var(--igx-column-actions-background-color);
       width: 100%;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
       min-width: 11.25rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding__header-title {
-      color: var(--igx-column-hiding-title-color);
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__header-title {
+      color: var(--igx-column-actions-title-color);
       margin: 0;
       padding: 1rem 1rem 0.5rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding__header-input {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__header-input {
       font-size: 1rem !important;
       margin: -16px 0 0 !important;
       padding: 0.5rem 1rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding__columns {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__columns {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
       overflow-y: auto; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding__columns-item {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__columns-item {
       padding: 1rem;
       min-height: 3.25rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-hiding__buttons {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__buttons {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: end;
@@ -30159,6 +30188,9 @@ body {
       color: var(--igx-dialog-message-color);
       max-width: 40ch;
       padding: 0 1.5rem 1.25rem 1.5rem; }
+      @media all and (-ms-high-contrast: none) {
+        .dark-theme .grid-chart-contextmenu-wrapper .igx-dialog__window-content {
+          max-width: 48ch; } }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-dialog__window-actions {
       display: -ms-flexbox;
       display: flex;
@@ -32052,7 +32084,7 @@ body {
         margin-right: calc(0.75rem + 18px); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter {
       display: block;
-      width: 100%;
+      width: 20rem;
       height: 100%;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -32060,9 +32092,8 @@ body {
       overflow: auto;
       min-width: 20rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter--inline {
-      box-shadow: none; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter--inline .igx-excel-filter__menu {
-        width: 100%; }
+      box-shadow: none;
+      width: 100%; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__loading {
       display: -ms-flexbox;
       display: flex;
@@ -32239,8 +32270,7 @@ body {
           margin-left: 1rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__sort {
       display: block;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem; }
+      padding: 0.5rem 1rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__sort header {
         color: rgba(255, 255, 255, 0.62);
         margin-bottom: 0.25rem; }
@@ -32264,7 +32294,8 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__actions-selected igx-icon {
       color: #217346; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__move {
-      margin-bottom: 0.5rem; }
+      display: block;
+      padding: 0.5rem 1rem; }
       
       .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__move header {
         color: rgba(255, 255, 255, 0.62);
@@ -32293,7 +32324,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
       padding: 0.5rem 1rem;
-      margin: 0 -1rem;
       cursor: pointer;
       color: rgba(255, 255, 255, 0.62);
       outline-style: none; }
@@ -32324,13 +32354,13 @@ body {
           justify-content: space-between;
       padding: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem; }
+      padding: 0.5rem; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__move {
+      padding: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
       padding: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-      padding: 0.5rem;
-      margin: 0 -0.5rem; }
+      padding: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
       padding: 0 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--cosy igx-list {
@@ -32342,19 +32372,18 @@ body {
           justify-content: space-between;
       padding: 0.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-      padding-top: 0.25rem;
-      padding-bottom: 0.25rem; }
+      padding: 0.25rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
         width: 13rem; }
         .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
           margin-left: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__move {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding: 0.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions {
       padding: 0.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-      padding: 0.25rem;
-      margin: 0 -0.25rem; }
+      padding: 0.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
       padding: 0 0.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu--compact igx-list {
@@ -32421,6 +32450,15 @@ body {
         height: 1.125rem;
         font-size: 1.125rem;
         margin-right: 0.5rem; }
+    .dark-theme .grid-chart-contextmenu-wrapper igx-excel-style-filter-operations,
+    .dark-theme .grid-chart-contextmenu-wrapper [igxExcelStyleFilterOperations] {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+      overflow: hidden; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-advanced-filter {
       width: 660px;
       min-width: 660px;
