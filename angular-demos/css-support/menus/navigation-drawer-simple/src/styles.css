@@ -3902,16 +3902,13 @@ igx-date-range-end,
 .igx-drop-down {
   position: absolute; }
 
-.igx-drop-down__list, .igx-drop-down__list--empty {
+.igx-drop-down__list {
   overflow: hidden;
   border-radius: 4px;
   background: #fff;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
   min-width: 8rem;
   border: 0 solid rgba(0, 0, 0, 0.12); }
-
-.igx-drop-down__list--empty {
-  box-shadow: none; }
 
 .igx-drop-down__list-scroll {
   overflow-y: auto;
@@ -13304,15 +13301,13 @@ body {
     --igx-drop-down-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   .fin-dark-theme .igx-drop-down {
     position: absolute; }
-  .fin-dark-theme .igx-drop-down__list, .fin-dark-theme .igx-drop-down__list--empty {
+  .fin-dark-theme .igx-drop-down__list {
     overflow: hidden;
     border-radius: var(--igx-drop-down-border-radius);
     background: var(--igx-drop-down-background-color);
     box-shadow: var(--igx-drop-down-shadow);
     min-width: 8rem;
     border: var(--igx-drop-down-border-width) solid var(--igx-drop-down-border-color); }
-  .fin-dark-theme .igx-drop-down__list--empty {
-    box-shadow: none; }
   .fin-dark-theme .igx-drop-down__list-scroll {
     overflow-y: auto;
     overflow-x: hidden;
@@ -21499,15 +21494,13 @@ body {
     --igx-drop-down-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   .dark-theme .igx-drop-down {
     position: absolute; }
-  .dark-theme .igx-drop-down__list, .dark-theme .igx-drop-down__list--empty {
+  .dark-theme .igx-drop-down__list {
     overflow: hidden;
     border-radius: 4px;
     background: #333;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     min-width: 8rem;
     border: 0 solid rgba(255, 255, 255, 0.12); }
-  .dark-theme .igx-drop-down__list--empty {
-    box-shadow: none; }
   .dark-theme .igx-drop-down__list-scroll {
     overflow-y: auto;
     overflow-x: hidden;
@@ -28290,9 +28283,9 @@ body {
           justify-content: center;
       min-height: 2.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --igx-calendar-border-radius: 0%;
-      --igx-calendar-date-border-radius: 0%;
-      --igx-calendar-month-border-radius: 0%;
+      --igx-calendar-border-radius: 0px;
+      --igx-calendar-date-border-radius: 0px;
+      --igx-calendar-month-border-radius: 0px;
       --igx-calendar-variant: fluent;
       --igx-calendar-content-background: #222;
       --igx-calendar-picker-background-color: #222;
@@ -28814,7 +28807,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-card-actions__igroup--end {
       margin-left: auto; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --igx-carousel-border-radius: 0%;
+      --igx-carousel-border-radius: 0px;
       --igx-carousel-button-elevation: 0;
       --igx-carousel-slide-background: #222;
       --igx-carousel-button-background: #222;
@@ -30274,15 +30267,13 @@ body {
       --igx-drop-down-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.26), 0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.08); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down {
       position: absolute; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__list, .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__list--empty {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__list {
       overflow: hidden;
       border-radius: var(--igx-drop-down-border-radius);
       background: var(--igx-drop-down-background-color);
       box-shadow: var(--igx-drop-down-shadow);
       min-width: 8rem;
       border: var(--igx-drop-down-border-width) solid var(--igx-drop-down-border-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__list--empty {
-      box-shadow: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-drop-down__list-scroll {
       overflow-y: auto;
       overflow-x: hidden;
