@@ -4,9 +4,10 @@
   .references p {
     margin: 0;
     letter-spacing: initial;
-    line-height: initial;
+    line-height: 2;
     font-size: 1em; }
 
 .grid__wrapper {
   margin: 0 auto;
-  width: 950px; }
+  width: 950px;
+  height: 450px; }
