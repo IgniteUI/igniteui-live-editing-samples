@@ -50,49 +50,49 @@
 /*SCHEMAS*/
 /*INCLUSION by DEFAULT ViewEncapsulation strategy*/
 :host ::ng-deep {
-  --igx-column-hiding-background-color: steelblue;
-  --igx-column-hiding-title-color: gold; }
+  --igx-column-actions-background-color: steelblue;
+  --igx-column-actions-title-color: gold; }
 
-:host ::ng-deep .igx-column-hiding {
+:host ::ng-deep .igx-column-actions {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  background: var(--igx-column-hiding-background-color);
+  background: var(--igx-column-actions-background-color);
   width: 100%;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
   min-width: 11.25rem; }
 
-:host ::ng-deep .igx-column-hiding__header-title {
-  color: var(--igx-column-hiding-title-color);
+:host ::ng-deep .igx-column-actions__header-title {
+  color: var(--igx-column-actions-title-color);
   margin: 0;
   padding: 1rem 1rem 0.5rem; }
 
-:host ::ng-deep .igx-column-hiding__header-input {
+:host ::ng-deep .igx-column-actions__header-input {
   font-size: 1rem !important;
   margin: -16px 0 0 !important;
   padding: 0.5rem 1rem; }
 
-:host ::ng-deep .igx-column-hiding__columns {
+:host ::ng-deep .igx-column-actions__columns {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   overflow-y: auto; }
 
-:host ::ng-deep .igx-column-hiding__columns-item {
+:host ::ng-deep .igx-column-actions__columns-item {
   padding: 1rem;
   min-height: 3.25rem; }
 
-:host ::ng-deep .igx-column-hiding__buttons {
+:host ::ng-deep .igx-column-actions__buttons {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: end;
       justify-content: flex-end;
   padding: 0.5rem 1rem; }
 
-:host ::ng-deep .igx-column-hiding {
+:host ::ng-deep .igx-column-actions {
   --igx-button-flat-border-radius: 4px;
   --igx-button-raised-border-radius: 4px;
   --igx-button-outlined-border-radius: 4px;
@@ -159,7 +159,7 @@
   --igx-button-icon-shadow-color: transparent;
   --igx-button-fab-shadow-color: transparent; }
 
-:host ::ng-deep .igx-column-hiding .igx-button, :host ::ng-deep .igx-column-hiding .igx-button--flat, :host ::ng-deep .igx-column-hiding .igx-button--outlined, :host ::ng-deep .igx-column-hiding .igx-button--raised {
+:host ::ng-deep .igx-column-actions .igx-button, :host ::ng-deep .igx-column-actions .igx-button--flat, :host ::ng-deep .igx-column-actions .igx-button--outlined, :host ::ng-deep .igx-column-actions .igx-button--raised {
   position: relative;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -182,76 +182,76 @@
   white-space: nowrap;
   transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
   font-family: inherit; }
-  :host ::ng-deep .igx-column-hiding .igx-button .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--flat .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--outlined .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--raised .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button .igx-icon--inactive, :host ::ng-deep .igx-column-hiding .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-column-hiding .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-column-hiding .igx-button--raised .igx-icon--inactive {
+  :host ::ng-deep .igx-column-actions .igx-button .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--flat .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--outlined .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--raised .igx-icon, :host ::ng-deep .igx-column-actions .igx-button .igx-icon--inactive, :host ::ng-deep .igx-column-actions .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-column-actions .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-column-actions .igx-button--raised .igx-icon--inactive {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
 
-:host ::ng-deep .igx-column-hiding .igx-button--cosy {
+:host ::ng-deep .igx-column-actions .igx-button--cosy {
   padding: 0.375rem 1rem;
   min-height: 1.875rem; }
 
-:host ::ng-deep .igx-column-hiding .igx-button--compact {
+:host ::ng-deep .igx-column-actions .igx-button--compact {
   padding: 0.1875rem 1rem;
   min-height: 1.5rem; }
 
-:host ::ng-deep .igx-column-hiding .igx-button--flat {
+:host ::ng-deep .igx-column-actions .igx-button--flat {
   background: var(--igx-button-flat-background);
   color: var(--igx-button-flat-text-color);
   border-radius: var(--igx-button-flat-border-radius); }
-  :host ::ng-deep .igx-column-hiding .igx-button--flat .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--flat .igx-icon--inactive {
+  :host ::ng-deep .igx-column-actions .igx-button--flat .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--flat .igx-icon--inactive {
     color: var(--igx-button-flat-icon-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--flat:hover {
+  :host ::ng-deep .igx-column-actions .igx-button--flat:hover {
     background: var(--igx-button-flat-hover-background);
     color: var(--igx-button-flat-hover-text-color); }
-    :host ::ng-deep .igx-column-hiding .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--flat:hover .igx-icon--inactive {
+    :host ::ng-deep .igx-column-actions .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--flat:hover .igx-icon--inactive {
       color: var(--igx-button-flat-hover-icon-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--flat:focus, :host ::ng-deep .igx-column-hiding .igx-button--flat:active {
+  :host ::ng-deep .igx-column-actions .igx-button--flat:focus, :host ::ng-deep .igx-column-actions .igx-button--flat:active {
     background: var(--igx-button-flat-focus-background);
     color: var(--igx-button-flat-focus-text-color); }
-    :host ::ng-deep .igx-column-hiding .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-column-hiding .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--flat:active .igx-icon--inactive {
+    :host ::ng-deep .igx-column-actions .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-column-actions .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--flat:active .igx-icon--inactive {
       color: var(--igx-button-flat-focus-icon-color); }
 
-:host ::ng-deep .igx-column-hiding .igx-button--outlined {
-  border: 1px solid transparent;
-  border-color: var(--igx-button-outlined-outline-color);
+:host ::ng-deep .igx-column-actions .igx-button--outlined {
   background: var(--igx-button-outlined-background);
   color: var(--igx-button-outlined-text-color);
-  border-radius: var(--igx-button-outlined-border-radius); }
-  :host ::ng-deep .igx-column-hiding .igx-button--outlined .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--outlined .igx-icon--inactive {
+  border-radius: var(--igx-button-outlined-border-radius);
+  border: 1px solid transparent;
+  border-color: var(--igx-button-outlined-outline-color); }
+  :host ::ng-deep .igx-column-actions .igx-button--outlined .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--outlined .igx-icon--inactive {
     color: var(--igx-button-outlined-icon-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--outlined:hover {
+  :host ::ng-deep .igx-column-actions .igx-button--outlined:hover {
     background: var(--igx-button-outlined-hover-background);
     color: var(--igx-button-outlined-hover-text-color); }
-    :host ::ng-deep .igx-column-hiding .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--outlined:hover .igx-icon--inactive {
+    :host ::ng-deep .igx-column-actions .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--outlined:hover .igx-icon--inactive {
       color: var(--igx-button-outlined-hover-icon-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--outlined:focus, :host ::ng-deep .igx-column-hiding .igx-button--outlined:active {
+  :host ::ng-deep .igx-column-actions .igx-button--outlined:focus, :host ::ng-deep .igx-column-actions .igx-button--outlined:active {
     background: var(--igx-button-outlined-focus-background);
     color: var(--igx-button-outlined-focus-text-color); }
-    :host ::ng-deep .igx-column-hiding .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-column-hiding .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--outlined:active .igx-icon--inactive {
+    :host ::ng-deep .igx-column-actions .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-column-actions .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--outlined:active .igx-icon--inactive {
       color: var(--igx-button-outlined-focus-icon-color); }
 
-:host ::ng-deep .igx-column-hiding .igx-button--raised {
+:host ::ng-deep .igx-column-actions .igx-button--raised {
   color: var(--igx-button-raised-text-color);
   background: var(--igx-button-raised-background);
   box-shadow: var(--igx-button-raised-resting-shadow);
   border-radius: var(--igx-button-raised-border-radius); }
-  :host ::ng-deep .igx-column-hiding .igx-button--raised .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--raised .igx-icon--inactive {
+  :host ::ng-deep .igx-column-actions .igx-button--raised .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--raised .igx-icon--inactive {
     color: var(--igx-button-raised-icon-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--raised:hover {
+  :host ::ng-deep .igx-column-actions .igx-button--raised:hover {
     color: var(--igx-button-raised-hover-text-color);
     background: var(--igx-button-raised-hover-background);
     box-shadow: var(--igx-button-raised-hover-shadow); }
-    :host ::ng-deep .igx-column-hiding .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--raised:hover .igx-icon--inactive {
+    :host ::ng-deep .igx-column-actions .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--raised:hover .igx-icon--inactive {
       color: var(--igx-button-raised-hover-icon-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--raised:focus, :host ::ng-deep .igx-column-hiding .igx-button--raised:active {
+  :host ::ng-deep .igx-column-actions .igx-button--raised:focus, :host ::ng-deep .igx-column-actions .igx-button--raised:active {
     color: var(--igx-button-raised-focus-text-color);
     background: var(--igx-button-raised-focus-background);
     box-shadow: var(--igx-button-raised-focus-shadow); }
-    :host ::ng-deep .igx-column-hiding .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-column-hiding .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--raised:active .igx-icon--inactive {
+    :host ::ng-deep .igx-column-actions .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-column-actions .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-column-actions .igx-button--raised:active .igx-icon--inactive {
       color: var(--igx-button-raised-focus-icon-color); }
 
-:host ::ng-deep .igx-column-hiding .igx-button--fab, :host ::ng-deep .igx-column-hiding .igx-button--icon {
+:host ::ng-deep .igx-column-actions .igx-button--fab, :host ::ng-deep .igx-column-actions .igx-button--icon {
   display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
@@ -275,36 +275,49 @@
   -webkit-filter: blur(0);
           filter: blur(0); }
 
-:host ::ng-deep .igx-column-hiding .igx-button--fab {
-  padding: 0.9375rem;
-  min-width: 3.5rem;
-  min-height: 3.5rem;
+:host ::ng-deep .igx-column-actions .igx-button--fab {
+  padding: 0.5rem 1rem;
+  min-width: 3rem;
+  min-height: 3rem;
   line-height: unset;
   white-space: nowrap;
   color: var(--igx-button-fab-text-color);
   background: var(--igx-button-fab-background);
   box-shadow: var(--igx-button-fab-resting-shadow);
   border-radius: var(--igx-button-fab-border-radius); }
-  :host ::ng-deep .igx-column-hiding .igx-button--fab:hover {
+  :host ::ng-deep .igx-column-actions .igx-button--fab:hover {
     color: var(--igx-button-fab-hover-text-color);
     background: var(--igx-button-fab-hover-background);
     box-shadow: var(--igx-button-fab-resting-shadow); }
-  :host ::ng-deep .igx-column-hiding .igx-button--fab:focus, :host ::ng-deep .igx-column-hiding .igx-button--fab:active {
+  :host ::ng-deep .igx-column-actions .igx-button--fab:focus, :host ::ng-deep .igx-column-actions .igx-button--fab:active {
     color: var(--igx-button-fab-focus-text-color);
     background: var(--igx-button-fab-focus-background);
     box-shadow: var(--igx-button-fab-focus-shadow); }
+  :host ::ng-deep .igx-column-actions .igx-button--fab igx-icon {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-order: -1;
+        order: -1;
+    margin: 0.5rem 0; }
+  :host ::ng-deep .igx-column-actions .igx-button--fab * + igx-icon {
+    margin: 0;
+    margin-right: 0.75rem; }
 
-:host ::ng-deep .igx-column-hiding .igx-button--fab-cosy.igx-button--fab {
-  padding: 0.6875rem;
-  min-width: 3rem;
-  min-height: 3rem; }
-
-:host ::ng-deep .igx-column-hiding .igx-button--fab-compact.igx-button--fab {
-  padding: 0.4375rem;
+:host ::ng-deep .igx-column-actions .igx-button--fab-cosy.igx-button--fab {
+  padding: 0.25rem 0.75rem;
   min-width: 2.5rem;
   min-height: 2.5rem; }
+  :host ::ng-deep .igx-column-actions .igx-button--fab-cosy.igx-button--fab * + igx-icon {
+    margin-right: 0.5rem; }
 
-:host ::ng-deep .igx-column-hiding .igx-button--icon {
+:host ::ng-deep .igx-column-actions .igx-button--fab-compact.igx-button--fab {
+  padding: 0 0.5rem;
+  min-width: 2rem;
+  min-height: 2rem; }
+  :host ::ng-deep .igx-column-actions .igx-button--fab-compact.igx-button--fab * + igx-icon {
+    margin-right: 0.25rem; }
+
+:host ::ng-deep .igx-column-actions .igx-button--icon {
   width: 2.25rem;
   height: 2.25rem;
   font-size: 1rem;
@@ -312,29 +325,29 @@
   color: var(--igx-button-icon-color);
   background: var(--igx-button-icon-background);
   border-radius: var(--igx-button-icon-border-radius); }
-  :host ::ng-deep .igx-column-hiding .igx-button--icon:hover {
+  :host ::ng-deep .igx-column-actions .igx-button--icon:hover {
     transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
     color: var(--igx-button-icon-hover-color);
     background: var(--igx-button-icon-hover-background); }
-  :host ::ng-deep .igx-column-hiding .igx-button--icon:focus, :host ::ng-deep .igx-column-hiding .igx-button--icon:active {
+  :host ::ng-deep .igx-column-actions .igx-button--icon:focus, :host ::ng-deep .igx-column-actions .igx-button--icon:active {
     color: var(--igx-button-icon-focus-color);
     background: var(--igx-button-icon-focus-background);
     box-shadow: var(--igx-button-raised-focus-shadow); }
 
-:host ::ng-deep .igx-column-hiding .igx-button--disabled {
+:host ::ng-deep .igx-column-actions .igx-button--disabled {
   pointer-events: none;
   box-shadow: none; }
-  :host ::ng-deep .igx-column-hiding .igx-button--outlined.igx-button--disabled, :host ::ng-deep .igx-column-hiding .igx-button--flat.igx-button--disabled, :host ::ng-deep .igx-column-hiding .igx-button--raised.igx-button--disabled, :host ::ng-deep .igx-column-hiding .igx-button--fab.igx-button--disabled, :host ::ng-deep .igx-column-hiding .igx-button--icon.igx-button--disabled {
+  :host ::ng-deep .igx-column-actions .igx-button--outlined.igx-button--disabled, :host ::ng-deep .igx-column-actions .igx-button--flat.igx-button--disabled, :host ::ng-deep .igx-column-actions .igx-button--raised.igx-button--disabled, :host ::ng-deep .igx-column-actions .igx-button--fab.igx-button--disabled, :host ::ng-deep .igx-column-actions .igx-button--icon.igx-button--disabled {
     color: var(--igx-button-disabled-color); }
-    :host ::ng-deep .igx-column-hiding .igx-button--outlined.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--flat.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--raised.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--fab.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-hiding .igx-button--icon.igx-button--disabled igx-icon {
+    :host ::ng-deep .igx-column-actions .igx-button--outlined.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-actions .igx-button--flat.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-actions .igx-button--raised.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-actions .igx-button--fab.igx-button--disabled igx-icon, :host ::ng-deep .igx-column-actions .igx-button--icon.igx-button--disabled igx-icon {
       color: inherit; }
-  :host ::ng-deep .igx-column-hiding .igx-button--raised.igx-button--disabled, :host ::ng-deep .igx-column-hiding .igx-button--fab.igx-button--disabled {
+  :host ::ng-deep .igx-column-actions .igx-button--raised.igx-button--disabled, :host ::ng-deep .igx-column-actions .igx-button--fab.igx-button--disabled {
     background: var(--igx-button-disabled-background); }
-  :host ::ng-deep .igx-column-hiding .igx-button--flat.igx-button--disabled, :host ::ng-deep .igx-column-hiding .igx-button--outlined.igx-button--disabled {
+  :host ::ng-deep .igx-column-actions .igx-button--flat.igx-button--disabled, :host ::ng-deep .igx-column-actions .igx-button--outlined.igx-button--disabled {
     background: transparent; }
-  :host ::ng-deep .igx-column-hiding .igx-button--outlined.igx-button--disabled {
+  :host ::ng-deep .igx-column-actions .igx-button--outlined.igx-button--disabled {
     border-color: var(--igx-button-outlined-disabled-outline-color); }
-  :host ::ng-deep .igx-column-hiding .igx-button--disabled:focus {
+  :host ::ng-deep .igx-column-actions .igx-button--disabled:focus {
     box-shadow: none; }
 
 .grid__wrapper {

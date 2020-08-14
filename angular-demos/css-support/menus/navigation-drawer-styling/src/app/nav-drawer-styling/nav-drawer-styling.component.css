@@ -68,6 +68,7 @@ main {
     --igx-navdrawer-border-radius: 0px;
     --igx-navdrawer-item-border-radius: 4px;
     --igx-navdrawer-elevation: 16;
+    --igx-navdrawer-variant: material;
     --igx-navdrawer-background: #2d313a;
     --igx-navdrawer-border-color: rgba(0, 0, 0, 0.14);
     --igx-navdrawer-item-header-text-color: #f3c03e;
@@ -170,6 +171,7 @@ main {
     color: var(--igx-navdrawer-item-text-color);
     max-height: 3rem;
     min-width: 2rem;
+    margin: 0.5rem !important;
     padding: 0.75rem 0.5rem;
     cursor: pointer;
     -webkit-user-select: none;
@@ -179,7 +181,6 @@ main {
     outline: transparent;
     white-space: nowrap;
     border-radius: var(--igx-navdrawer-item-border-radius);
-    margin: 0.5rem;
     text-decoration: none;
     width: calc(100% - 1rem);
     border: none;

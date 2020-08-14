@@ -77,7 +77,6 @@
     outline-style: none; }
     :host ::ng-deep .igx-grid-summary::after, :host ::ng-deep .igx-grid-summary--pinned::after, :host ::ng-deep .igx-grid-summary--empty::after, :host ::ng-deep .igx-grid-summary--fw::after, :host ::ng-deep .igx-grid-summary--cosy::after, :host ::ng-deep .igx-grid-summary--compact::after {
       position: absolute;
-      content: '';
       top: 0;
       bottom: 0;
       left: 0;

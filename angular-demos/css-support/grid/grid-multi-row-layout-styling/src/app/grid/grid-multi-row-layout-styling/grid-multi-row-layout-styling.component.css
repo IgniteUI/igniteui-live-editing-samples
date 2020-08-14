@@ -679,6 +679,12 @@
 
 .igx-grid__th--pinned-last, .igx-grid__td--pinned-last {
   border-right: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
+  .igx-grid__th--pinned-last .igx-grid__filtering-cell, .igx-grid__td--pinned-last .igx-grid__filtering-cell, .igx-grid__th--pinned-last .igx-grid__filtering-cell--selected, .igx-grid__td--pinned-last .igx-grid__filtering-cell--selected,
+  .igx-grid__th--pinned-last .igx-grid__thead-title,
+  .igx-grid__td--pinned-last .igx-grid__thead-title,
+  .igx-grid__th--pinned-last .igx-grid__th,
+  .igx-grid__td--pinned-last .igx-grid__th {
+    border-right: none; }
 
 .igx-grid__th--pinned-first, .igx-grid__td--pinned-first {
   border-left: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
@@ -739,8 +745,8 @@
       flex-grow: 1;
   /* hey IE, the text should take most of the space */
   line-height: 4.16667;
-  opacity: .7;
-  transition: opacity 250ms ease-in-out, color 250ms ease-in-out; }
+  transition: opacity 250ms ease-in-out, color 250ms ease-in-out;
+  opacity: .7; }
 
 .igx-grid--cosy .igx-grid__th-title {
   line-height: 3.33333; }
@@ -771,7 +777,18 @@
     height: 0.9375rem;
     min-width: 0.9375rem;
     /* yeah IE, it really needs to be 15px wide... */
-    font-size: 0.9375rem; }
+    font-size: 0.9375rem;
+    position: relative; }
+    .igx-grid__th-icons .sort-icon::after {
+      content: attr(data-sortIndex);
+      position: absolute;
+      top: -5px;
+      right: -1px;
+      font-size: 0.625rem;
+      text-align: right;
+      font-family: sans-serif;
+      line-height: 0.625rem;
+      background: var(--igx-grid-header-background); }
 
 .igx-grid__th-expander {
   display: -ms-flexbox;
@@ -799,7 +816,7 @@
 .igx-grid__th--selectable {
   color: var(--igx-grid-header-selected-text-color);
   background: var(--igx-grid-header-selected-background);
-  opacity: .7; }
+  opacity: 0.7; }
 
 .igx-grid__th--selected {
   color: var(--igx-grid-header-selected-text-color);
@@ -1996,17 +2013,17 @@
 
 .igx-excel-filter {
   display: block;
-  width: 100%;
+  width: 20rem;
   height: 100%;
   -ms-flex-positive: 1;
       flex-grow: 1;
   box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-  overflow: auto; }
+  overflow: auto;
+  min-width: 20rem; }
 
 .igx-excel-filter--inline {
-  box-shadow: none; }
-  .igx-excel-filter--inline .igx-excel-filter__menu {
-    width: 100%; }
+  box-shadow: none;
+  width: 100%; }
 
 .igx-excel-filter__loading {
   display: -ms-flexbox;
@@ -2032,10 +2049,8 @@
   -ms-flex-direction: column;
       flex-direction: column;
   height: 100%;
-  width: 320px;
-  min-width: 320px;
   background: var(--igx-grid-filtering-row-background);
-  border-radius: 4px; }
+  border-radius: 0.25rem; }
   .igx-excel-filter__menu {
     --igx-button-group-border-radius: 4px;
     --igx-button-group-elevation: 2;
@@ -2060,6 +2075,10 @@
     box-shadow: var(--igx-button-group-shadow);
     transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
     border-radius: var(--igx-button-group-border-radius); }
+    .igx-excel-filter__menu .igx-button-group button, .igx-excel-filter__menu .igx-button-group--vertical button {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0; }
   .igx-excel-filter__menu .igx-button-group__item, .igx-excel-filter__menu .igx-button-group__item--selected {
     border: 1px solid var(--igx-button-group-item-border-color);
     color: var(--igx-button-group-item-text-color);
@@ -2167,6 +2186,13 @@
   margin-left: auto; }
   .igx-excel-filter__menu-header-actions [igxButton] + [igxButton] {
     margin-left: 0.25rem; }
+  .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled {
+    padding: 0 !important;
+    margin: 0 !important; }
+  .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled,
+  .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected {
+    -ms-flex-pack: center;
+        justify-content: center; }
 
 .igx-excel-filter__menu-footer, .igx-excel-filter__secondary-footer {
   display: -ms-flexbox;
@@ -2182,8 +2208,7 @@
 
 .igx-excel-filter__sort {
   display: block;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding: 0.5rem 1rem; }
   .igx-excel-filter__sort header {
     color: rgba(0, 0, 0, 0.62);
     margin-bottom: 0.25rem; }
@@ -2211,7 +2236,8 @@
   color: #e41c77; }
 
 .igx-excel-filter__move {
-  margin-bottom: 0.5rem; }
+  display: block;
+  padding: 0.5rem 1rem; }
   .igx-excel-filter__move header {
     color: rgba(0, 0, 0, 0.62);
     margin-bottom: 0.25rem; }
@@ -2241,7 +2267,6 @@
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 0.5rem 1rem;
-  margin: 0 -1rem;
   cursor: pointer;
   color: rgba(0, 0, 0, 0.62);
   outline-style: none; }
@@ -2276,15 +2301,16 @@
   padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem; }
+  padding: 0.5rem; }
+
+.igx-excel-filter__menu--cosy .igx-excel-filter__move {
+  padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
   padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-  padding: 0.5rem;
-  margin: 0 -0.5rem; }
+  padding: 0.5rem; }
 
 .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
   padding: 0 0.5rem; }
@@ -2301,22 +2327,21 @@
   padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem; }
+  padding: 0.25rem; }
   .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
     width: 13rem; }
     .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
       margin-left: 0.5rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__move {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__actions {
   padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-  padding: 0.25rem;
-  margin: 0 -0.25rem; }
+  padding: 0.25rem; }
 
 .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
   padding: 0 0.25rem; }
@@ -2400,6 +2425,16 @@
     height: 1.125rem;
     font-size: 1.125rem;
     margin-right: 0.5rem; }
+
+igx-excel-style-filter-operations,
+[igxExcelStyleFilterOperations] {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  overflow: hidden; }
 
 .igx-advanced-filter {
   width: 660px;

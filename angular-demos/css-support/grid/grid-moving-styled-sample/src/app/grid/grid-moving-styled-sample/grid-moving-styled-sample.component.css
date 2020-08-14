@@ -603,6 +603,12 @@
       color: var(--igx-grid-row-selected-text-color); }
   :host ::ng-deep .grid__wrapper .igx-grid__th--pinned-last, :host ::ng-deep .grid__wrapper .igx-grid__td--pinned-last {
     border-right: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
+    :host ::ng-deep .grid__wrapper .igx-grid__th--pinned-last .igx-grid__filtering-cell, :host ::ng-deep .grid__wrapper .igx-grid__td--pinned-last .igx-grid__filtering-cell, :host ::ng-deep .grid__wrapper .igx-grid__th--pinned-last .igx-grid__filtering-cell--selected, :host ::ng-deep .grid__wrapper .igx-grid__td--pinned-last .igx-grid__filtering-cell--selected,
+    :host ::ng-deep .grid__wrapper .igx-grid__th--pinned-last .igx-grid__thead-title,
+    :host ::ng-deep .grid__wrapper .igx-grid__td--pinned-last .igx-grid__thead-title,
+    :host ::ng-deep .grid__wrapper .igx-grid__th--pinned-last .igx-grid__th,
+    :host ::ng-deep .grid__wrapper .igx-grid__td--pinned-last .igx-grid__th {
+      border-right: none; }
   :host ::ng-deep .grid__wrapper .igx-grid__th--pinned-first, :host ::ng-deep .grid__wrapper .igx-grid__td--pinned-first {
     border-left: var(--igx-grid-pinned-border-width) var(--igx-grid-pinned-border-style) var(--igx-grid-pinned-border-color) !important; }
   :host ::ng-deep .grid__wrapper .igx-grid__td--row-pinned-first {
@@ -653,8 +659,8 @@
         flex-grow: 1;
     /* hey IE, the text should take most of the space */
     line-height: 4.16667;
-    opacity: .7;
-    transition: opacity 250ms ease-in-out, color 250ms ease-in-out; }
+    transition: opacity 250ms ease-in-out, color 250ms ease-in-out;
+    opacity: .7; }
   :host ::ng-deep .grid__wrapper .igx-grid--cosy .igx-grid__th-title, .igx-grid--cosy :host ::ng-deep .grid__wrapper .igx-grid__th-title {
     line-height: 3.33333; }
   :host ::ng-deep .grid__wrapper .igx-grid--compact .igx-grid__th-title, .igx-grid--compact :host ::ng-deep .grid__wrapper .igx-grid__th-title {
@@ -682,7 +688,18 @@
       height: 0.9375rem;
       min-width: 0.9375rem;
       /* yeah IE, it really needs to be 15px wide... */
-      font-size: 0.9375rem; }
+      font-size: 0.9375rem;
+      position: relative; }
+      :host ::ng-deep .grid__wrapper .igx-grid__th-icons .sort-icon::after {
+        content: attr(data-sortIndex);
+        position: absolute;
+        top: -5px;
+        right: -1px;
+        font-size: 0.625rem;
+        text-align: right;
+        font-family: sans-serif;
+        line-height: 0.625rem;
+        background: var(--igx-grid-header-background); }
   :host ::ng-deep .grid__wrapper .igx-grid__th-expander {
     display: -ms-flexbox;
     display: flex;
@@ -706,7 +723,7 @@
   :host ::ng-deep .grid__wrapper .igx-grid__th--selectable {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background);
-    opacity: .7; }
+    opacity: 0.7; }
   :host ::ng-deep .grid__wrapper .igx-grid__th--selected {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background); }
@@ -1676,16 +1693,16 @@
       margin-right: calc(0.75rem + 18px); }
   :host ::ng-deep .grid__wrapper .igx-excel-filter {
     display: block;
-    width: 100%;
+    width: 20rem;
     height: 100%;
     -ms-flex-positive: 1;
         flex-grow: 1;
     box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-    overflow: auto; }
+    overflow: auto;
+    min-width: 20rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter--inline {
-    box-shadow: none; }
-    :host ::ng-deep .grid__wrapper .igx-excel-filter--inline .igx-excel-filter__menu {
-      width: 100%; }
+    box-shadow: none;
+    width: 100%; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__loading {
     display: -ms-flexbox;
     display: flex;
@@ -1707,10 +1724,8 @@
     -ms-flex-direction: column;
         flex-direction: column;
     height: 100%;
-    width: 320px;
-    min-width: 320px;
     background: var(--igx-grid-filtering-row-background);
-    border-radius: 4px; }
+    border-radius: 0.25rem; }
     :host ::ng-deep .grid__wrapper .igx-excel-filter__menu {
       --igx-button-group-border-radius: 4px;
       --igx-button-group-elevation: 2;
@@ -1735,6 +1750,10 @@
       box-shadow: var(--igx-button-group-shadow);
       transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
       border-radius: var(--igx-button-group-border-radius); }
+      :host ::ng-deep .grid__wrapper .igx-excel-filter__menu .igx-button-group button, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu .igx-button-group--vertical button {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 0; }
     :host ::ng-deep .grid__wrapper .igx-excel-filter__menu .igx-button-group__item, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu .igx-button-group__item--selected {
       border: 1px solid var(--igx-button-group-item-border-color);
       color: var(--igx-button-group-item-text-color);
@@ -1840,6 +1859,13 @@
     margin-left: auto; }
     :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions [igxButton] + [igxButton] {
       margin-left: 0.25rem; }
+    :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled {
+      padding: 0 !important;
+      margin: 0 !important; }
+    :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-pin--disabled, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-unpin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-hide, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-select, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-filter, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-clear--disabled,
+    :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-header-actions .igx-excel-filter__actions-selected {
+      -ms-flex-pack: center;
+          justify-content: center; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu-footer, :host ::ng-deep .grid__wrapper .igx-excel-filter__secondary-footer {
     display: -ms-flexbox;
     display: flex;
@@ -1853,8 +1879,7 @@
         margin-left: 1rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__sort {
     display: block;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem 1rem; }
     :host ::ng-deep .grid__wrapper .igx-excel-filter__sort header {
       color: rgba(0, 0, 0, 0.62);
       margin-bottom: 0.25rem; }
@@ -1878,7 +1903,8 @@
   :host ::ng-deep .grid__wrapper .igx-excel-filter__actions-selected igx-icon {
     color: #575757; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__move {
-    margin-bottom: 0.5rem; }
+    display: block;
+    padding: 0.5rem 1rem; }
     :host ::ng-deep .grid__wrapper .igx-excel-filter__move header {
       color: rgba(0, 0, 0, 0.62);
       margin-bottom: 0.25rem; }
@@ -1906,7 +1932,6 @@
     -ms-flex-pack: justify;
         justify-content: space-between;
     padding: 0.5rem 1rem;
-    margin: 0 -1rem;
     cursor: pointer;
     color: rgba(0, 0, 0, 0.62);
     outline-style: none; }
@@ -1937,13 +1962,13 @@
         justify-content: space-between;
     padding: 0.5rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__sort {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem; }
+    padding: 0.5rem; }
+  :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__move {
+    padding: 0.5rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions {
     padding: 0.5rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-pin--disabled, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-unpin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-hide, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-select, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-selected, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-filter, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__actions-clear--disabled {
-    padding: 0.5rem;
-    margin: 0 -0.5rem; }
+    padding: 0.5rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy .igx-excel-filter__menu-main {
     padding: 0 0.5rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--cosy igx-list {
@@ -1955,19 +1980,18 @@
         justify-content: space-between;
     padding: 0.25rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__sort {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem; }
+    padding: 0.25rem; }
     :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup {
       width: 13rem; }
       :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__sort igx-buttongroup [igxButton] > igx-icon + span {
         margin-left: 0.5rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__move {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding: 0.25rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions {
     padding: 0.25rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-pin--disabled, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-unpin, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-hide, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-select, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-selected, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-filter, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__actions-clear--disabled {
-    padding: 0.25rem;
-    margin: 0 -0.25rem; }
+    padding: 0.25rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact .igx-excel-filter__menu-main {
     padding: 0 0.25rem; }
   :host ::ng-deep .grid__wrapper .igx-excel-filter__menu--compact igx-list {
@@ -2034,6 +2058,15 @@
       height: 1.125rem;
       font-size: 1.125rem;
       margin-right: 0.5rem; }
+  :host ::ng-deep .grid__wrapper igx-excel-style-filter-operations,
+  :host ::ng-deep .grid__wrapper [igxExcelStyleFilterOperations] {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    overflow: hidden; }
   :host ::ng-deep .grid__wrapper .igx-advanced-filter {
     width: 660px;
     min-width: 660px;
