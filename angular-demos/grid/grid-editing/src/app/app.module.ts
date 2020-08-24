@@ -12,6 +12,7 @@ import {
 	IgxInputGroupModule,
 	IgxIconModule,
 	IgxComboModule,
+	IgxToastModule,
 	IgxRippleModule
  } from "igniteui-angular";
 import { GridEditingSampleComponent } from "./grid/grid-editing-sample/grid-editing-sample.component";
@@ -38,6 +39,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 		IgxInputGroupModule,
 		IgxIconModule,
 		IgxRippleModule,
+		IgxToastModule,
 		IgxComboModule
   ],
   providers: [],
