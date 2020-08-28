@@ -3580,7 +3580,8 @@
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  overflow-y: auto; }
+  overflow-y: auto;
+  outline-style: none; }
 
 .igx-column-actions__columns-item {
   padding: 1rem;
@@ -13015,7 +13016,8 @@ body {
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
-    overflow-y: auto; }
+    overflow-y: auto;
+    outline-style: none; }
   .fin-dark-theme .igx-column-actions__columns-item {
     padding: 1rem;
     min-height: 3.25rem; }
@@ -21208,7 +21210,8 @@ body {
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
-    overflow-y: auto; }
+    overflow-y: auto;
+    outline-style: none; }
   .dark-theme .igx-column-actions__columns-item {
     padding: 1rem;
     min-height: 3.25rem; }
@@ -29968,7 +29971,8 @@ body {
       display: flex;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-      overflow-y: auto; }
+      overflow-y: auto;
+      outline-style: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions__columns-item {
       padding: 1rem;
       min-height: 3.25rem; }

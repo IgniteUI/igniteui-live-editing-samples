@@ -79,7 +79,8 @@
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  overflow-y: auto; }
+  overflow-y: auto;
+  outline-style: none; }
 
 :host ::ng-deep .igx-column-actions__columns-item {
   padding: 1rem;
