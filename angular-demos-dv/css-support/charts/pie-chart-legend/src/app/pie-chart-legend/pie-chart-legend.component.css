@@ -1,11 +1,8 @@
 .container {
-  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
+  -ms-flex-flow: row;
+      flex-flow: row;
   height: 100%;
   min-width: 600px; }
 

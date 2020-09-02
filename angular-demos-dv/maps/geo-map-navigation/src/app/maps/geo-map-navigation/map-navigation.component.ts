@@ -38,21 +38,21 @@ export class MapNavigationComponent implements AfterViewInit {
     public mapHoverY: string = "0.0000";
     public mapHoverPixelX = "0 px";
     public mapHoverPixelY = "0 px";
-    public NavigationOptions: Element[] = [];
-    public NavigationRegions: any = {};
-    
+    public navigationOptions: Element[] = [];
+    public navigationRegions: any = {};
+
     constructor(private ref: ChangeDetectorRef) {
-        
+
         const regions =  MapUtility.getRegions();
         for (const key in regions) {
             if (regions.hasOwnProperty(key)) {
                 const region = regions[key];
                 const name = region.name;
-                this.NavigationRegions[name] = region;                
+                this.navigationRegions[name] = region;
             }
         }
     }
-    
+
     public ngAfterViewInit(): void {
         this.componentDidMount();
 
@@ -60,10 +60,10 @@ export class MapNavigationComponent implements AfterViewInit {
             console.log("ngAfterViewInit map");
             this.geoMap.actualWindowRectChanged.subscribe((e: IgxRectChangedEventArgs) =>
                 this.onMapWindowRectChanged(this.geoMap, e)
-            );            
+            );
 
-            this.geoMap.zoomToGeographic({ left:-134.5, top:16.5, width:70.0, height:37.0 });           
-       
+            this.geoMap.zoomToGeographic({ left: -134.5, top: 16.5, width: 70.0, height: 37.0 });
+
             const tileSource = new IgxArcGISOnlineMapImagery();
             tileSource.mapServerUri = EsriUtility.getUri(EsriStyle.WorldOceansMap);
             // or
@@ -84,27 +84,27 @@ export class MapNavigationComponent implements AfterViewInit {
         // calculating center of geographic region
         geoRect.longitude = geoRect.left + (geoRect.width / 2);
         geoRect.latitude = geoRect.top + (geoRect.height / 2);
-        this.geoRect = geoRect; 
+        this.geoRect = geoRect;
 
-        const h = geoMap.actualWindowPositionHorizontal        
+        const h = geoMap.actualWindowPositionHorizontal
         const v = geoMap.actualWindowPositionVertical;
         const s = geoMap.actualWindowScale;
-     
+
         this.geoTop = MapUtility.toLat(this.geoRect.top);
         this.geoLeft = MapUtility.toLng(this.geoRect.left);
         this.geoHeight = MapUtility.toLng(this.geoRect.height);
         this.geoWidth = MapUtility.toLng(this.geoRect.width);
-       
+
         this.winTop = e.args.newRect.top.toFixed(4);
         this.winLeft = e.args.newRect.left.toFixed(4);
         this.winHeight = e.args.newRect.height.toFixed(4);
         this.winWidth = e.args.newRect.width.toFixed(4);
-       
+
         this.posHorizontal = parseFloat(h.toFixed(4));
         this.posVertical = parseFloat(v.toFixed(4));
         this.scale = parseFloat(s.toFixed(4));
 
-        this.ref.detectChanges();       
+        this.ref.detectChanges();
     }
 
     public onMapMouseMove = (e: any) => {
@@ -118,7 +118,7 @@ export class MapNavigationComponent implements AfterViewInit {
             x: (e.clientX - bounds.left) / bounds.width,
             y: (e.clientY - bounds.top) / bounds.height
         };
-        
+
         // converting mouse pixel coordinate to geographic coordinate:
         const geoCoordinate: any = this.geoMap.getGeographicPoint(relativeCoordinate);
 
@@ -128,8 +128,8 @@ export class MapNavigationComponent implements AfterViewInit {
         this.mapHoverY = windowCoordinate.y.toFixed(4);
         this.mapHoverPixelX = MapUtility.toPixel(relativeCoordinate.x);
         this.mapHoverPixelY = MapUtility.toPixel(relativeCoordinate.y);
-        
-        this.ref.detectChanges();       
+
+        this.ref.detectChanges();
     }
 
     public componentDidMount() {
@@ -137,12 +137,12 @@ export class MapNavigationComponent implements AfterViewInit {
         elem.addEventListener('mousemove', this.onMapMouseMove, false);
     }
 
-    public onSelectionChanged = (e: any) =>{
+    public onSelectionChanged = (e: any) => {
         if (this.geoMap === undefined) return;
 
         const name = e.target.value.toString();
-        const region = this.NavigationRegions[name];
+        const region = this.navigationRegions[name];
 
         this.geoMap.zoomToGeographic(region);
-    }    
+    }
 }
