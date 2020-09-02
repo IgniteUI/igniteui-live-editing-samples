@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { 
 	IgxMaskModule,
 	IgxInputGroupModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxTextSelectionModule
  } from "igniteui-angular";
 import { 
 	MaskSample4Component,
@@ -30,7 +31,8 @@ import {
     FormsModule,
 		IgxMaskModule,
 		IgxInputGroupModule,
-		IgxIconModule
+		IgxIconModule,
+		IgxTextSelectionModule
   ],
   providers: [],
   entryComponents: [],
