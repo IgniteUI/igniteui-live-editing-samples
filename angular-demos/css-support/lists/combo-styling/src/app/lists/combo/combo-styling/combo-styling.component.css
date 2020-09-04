@@ -1,12 +1,3 @@
-.control-wrapper {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-flow: row;
-      flex-flow: row;
-  max-width: 900px;
-  padding-left: 10px;
-  padding-top: 10px; }
-
 [hidden] {
   display: none !important; }
 
@@ -53,23 +44,31 @@
 [class^='igx-'] *::after {
   box-sizing: border-box; }
 
+.control-wrapper {
+  padding: 8px; }
+
+/* Using Theme Overrides to provide IE 11 support.
+ * NOTE: Theming using this approach will greatly increase the size
+ * of the output CSS. If you do not plan to target IE 11,
+ * delete this section and use the `igx-css-vars` mixin as shown above.
+**/
 :host ::ng-deep {
   --igx-drop-down-border-radius: 4px;
   --igx-drop-down-item-border-radius: 0px;
   --igx-drop-down-elevation: 8;
-  --igx-drop-down-background-color: #dcd1f4;
-  --igx-drop-down-header-text-color: #5c1fea;
-  --igx-drop-down-item-text-color: #fff;
-  --igx-drop-down-hover-item-text-color: #5c1fea;
-  --igx-drop-down-hover-item-background: #ffffff;
-  --igx-drop-down-focused-item-background: #9577db;
-  --igx-drop-down-focused-item-text-color: #ffffff;
-  --igx-drop-down-selected-item-background: #835cdc;
-  --igx-drop-down-selected-item-text-color: #ffffff;
-  --igx-drop-down-selected-hover-item-background: #835cdc;
-  --igx-drop-down-selected-hover-item-text-color: #ffffff;
-  --igx-drop-down-selected-focus-item-background: #835cdc;
-  --igx-drop-down-selected-focus-item-text-color: #ffffff;
+  --igx-drop-down-background-color: #d9f5d6;
+  --igx-drop-down-header-text-color: #1a5214;
+  --igx-drop-down-item-text-color: #1a5214;
+  --igx-drop-down-hover-item-text-color: #1a5214;
+  --igx-drop-down-hover-item-background: #a0e698;
+  --igx-drop-down-focused-item-background: #72da67;
+  --igx-drop-down-focused-item-text-color: #1a5214;
+  --igx-drop-down-selected-item-background: #a0e698;
+  --igx-drop-down-selected-item-text-color: #1a5214;
+  --igx-drop-down-selected-hover-item-background: #72da67;
+  --igx-drop-down-selected-hover-item-text-color: #1a5214;
+  --igx-drop-down-selected-focus-item-background: #72da67;
+  --igx-drop-down-selected-focus-item-text-color: #1a5214;
   --igx-drop-down-disabled-item-background: transparent;
   --igx-drop-down-disabled-item-text-color: rgba(0, 0, 0, 0.36);
   --igx-drop-down-border-color: rgba(0, 0, 0, 0.12);
@@ -181,7 +180,7 @@
 
 :host ::ng-deep {
   --igx-combo-empty-list-background: #fff;
-  --igx-combo-search-separator-border-color: #5c1fea;
+  --igx-combo-search-separator-border-color: #1a5214;
   --igx-combo-empty-list-placeholder-color: rgba(0, 0, 0, 0.26); }
 
 :host ::ng-deep .igx-combo {
@@ -251,9 +250,9 @@
   --igx-checkbox-border-radius-ripple: 24px;
   --igx-checkbox-variant: material;
   --igx-checkbox-tick-color: #fff;
-  --igx-checkbox-label-color: #7344df;
-  --igx-checkbox-empty-color: #7344df;
-  --igx-checkbox-fill-color: #7344df;
+  --igx-checkbox-label-color: rgba(0, 0, 0, 0.87);
+  --igx-checkbox-empty-color: #1a5214;
+  --igx-checkbox-fill-color: #1a5214;
   --igx-checkbox-disabled-color: rgba(0, 0, 0, 0.26);
   --igx-checkbox-disabled-color-label: rgba(0, 0, 0, 0.26); }
 

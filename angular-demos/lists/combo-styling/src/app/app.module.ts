@@ -3,7 +3,10 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxComboModule } from "igniteui-angular";
+import { 
+	IgxComboModule,
+	IgxToastModule
+ } from "igniteui-angular";
 import { ComboStyling } from "./lists/combo/combo-styling/combo-styling.component";
 
 
@@ -18,7 +21,8 @@ import { ComboStyling } from "./lists/combo/combo-styling/combo-styling.componen
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-		IgxComboModule
+		IgxComboModule,
+		IgxToastModule
   ],
   providers: [],
   entryComponents: [],
