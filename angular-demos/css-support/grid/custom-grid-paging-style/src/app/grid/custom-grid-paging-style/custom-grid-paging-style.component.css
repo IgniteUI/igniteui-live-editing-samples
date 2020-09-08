@@ -509,7 +509,6 @@
   --igx-input-group-search-hover-elevation: 2;
   --igx-input-group-search-disabled-elevation: 0;
   --igx-input-group-variant: material;
-  --igx-input-group-theme-variant: material;
   --igx-input-group-input-prefix-color: rgba(0, 0, 0, 0.54);
   --igx-input-group-input-prefix-background: transparent;
   --igx-input-group-input-suffix-color: rgba(0, 0, 0, 0.54);
@@ -718,21 +717,21 @@
     margin-left: -0.5rem !important;
     cursor: pointer !important; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search {
+:host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-prefix,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxPrefix] {
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-prefix,
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
     outline-style: none;
     overflow: hidden; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-suffix,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxSuffix] {
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-suffix,
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
 
-:host ::ng-deep igx-paginator .igx-input-group--focused.igx-input-group--fluent-search igx-prefix,
-:host ::ng-deep igx-paginator .igx-input-group--focused.igx-input-group--fluent-search [igxPrefix] {
+:host ::ng-deep igx-paginator .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search igx-prefix,
+:host ::ng-deep igx-paginator .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search [igxPrefix] {
   visibility: hidden;
   width: 0;
   padding-left: 0 !important; }
@@ -745,16 +744,16 @@
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
   outline-style: none; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy {
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix] {
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix] {
     outline-style: none; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix] {
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix] {
     outline-style: none; }
 
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent igx-prefix,
@@ -765,16 +764,16 @@
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
   outline-style: none; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact {
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix] {
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix] {
     outline-style: none; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix] {
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  :host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix] {
     outline-style: none; }
 
 :host ::ng-deep igx-paginator .igx-input-group--required.igx-input-group--fluent .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle::after {
@@ -784,10 +783,10 @@
   left: calc(100% + 0.25rem);
   color: var(--igx-input-group-error-secondary-color); }
 
-:host ::ng-deep igx-paginator .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__label + .igx-input-group__bundle::after {
+:host ::ng-deep igx-paginator .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group--indigo .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after {
   display: none; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle, :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__bundle {
+:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle {
   padding: 0;
   min-height: 32px;
   border: 1px solid var(--igx-input-group-border-color);
@@ -798,7 +797,7 @@
   -ms-flex-align: stretch;
       align-items: stretch; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle:hover, :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__bundle:hover, .igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__bundle:hover {
+:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle:hover {
   border-color: var(--igx-input-group-hover-border-color);
   box-shadow: none; }
 
@@ -822,7 +821,7 @@
 .igx-input-group--valid.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle {
   border-color: var(--igx-input-group-success-secondary-color); }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__input, :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__input, .igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__input {
+:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__input {
   padding: 0;
   margin: 0;
   border: none; }
@@ -830,23 +829,21 @@
 :host ::ng-deep igx-paginator .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__input {
   color: var(--igx-input-group-disabled-text-color); }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle-main, :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__bundle-main, .igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__bundle-main {
+:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__bundle-main {
   padding-left: 0.5rem;
   -ms-flex-item-align: center;
       align-self: center; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-paginator igx-prefix + .igx-input-group__bundle-main, :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent-search :host ::ng-deep igx-paginator igx-prefix + .igx-input-group__bundle-main,
+:host ::ng-deep igx-paginator .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-paginator igx-prefix + .igx-input-group__bundle-main,
 :host ::ng-deep igx-paginator .igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main,
-.igx-input-group--fluent :host ::ng-deep igx-paginator [igx-prefix] + .igx-input-group__bundle-main,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search [igx-prefix] + .igx-input-group__bundle-main,
-.igx-input-group--fluent-search :host ::ng-deep igx-paginator [igx-prefix] + .igx-input-group__bundle-main {
+.igx-input-group--fluent :host ::ng-deep igx-paginator [igx-prefix] + .igx-input-group__bundle-main {
   padding-left: 0; }
 
 :host ::ng-deep igx-paginator .igx-input-group--placeholder.igx-input-group--fluent .igx-input-group__label, .igx-input-group--placeholder.igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__label {
   -ms-transform: translateY(0) scale(1);
       transform: translateY(0) scale(1); }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__label, :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__label, .igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__label {
+:host ::ng-deep igx-paginator .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent :host ::ng-deep igx-paginator .igx-input-group__label, :host ::ng-deep igx-paginator .igx-input-group--indigo .igx-input-group__label, .igx-input-group--indigo :host ::ng-deep igx-paginator .igx-input-group__label {
   padding: 0.3125rem 0;
   line-height: normal !important;
   position: static;
@@ -902,7 +899,7 @@
   box-shadow: var(--igx-input-group-search-hover-shadow);
   border-color: var(--igx-input-group-hover-border-color); }
 
-:host ::ng-deep igx-paginator .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search :host ::ng-deep igx-paginator .igx-input-group__bundle, :host ::ng-deep igx-paginator .igx-input-group--disabled.igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__bundle {
+:host ::ng-deep igx-paginator .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search :host ::ng-deep igx-paginator .igx-input-group__bundle {
   background: var(--igx-input-group-search-disabled-background);
   box-shadow: var(--igx-input-group-search-disabled-shadow);
   border-color: var(--igx-input-group-disabled-border-color); }
@@ -1170,8 +1167,10 @@
   color: var(--igx-input-group-input-prefix-color);
   background: var(--igx-input-group-input-prefix-background);
   padding: 0.5rem;
+  width: auto;
   height: auto;
-  line-height: normal; }
+  line-height: normal;
+  font-weight: 400; }
   :host ::ng-deep igx-paginator .igx-input-group--fluent igx-prefix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--fluent [igxPrefix] igx-icon {
     width: 1.125rem;
     height: 1.125rem;
@@ -1180,15 +1179,15 @@
   :host ::ng-deep igx-paginator .igx-input-group--fluent :last-of-type[igxPrefix] {
     margin-right: 0.5rem; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-prefix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxPrefix] {
+:host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-prefix,
+:host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
   padding: 0.5rem; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-prefix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxPrefix] igx-icon {
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-prefix:last-of-type,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search :last-of-type[igxPrefix] {
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-prefix:last-of-type,
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent :last-of-type[igxPrefix] {
     margin-right: 0; }
 
 :host ::ng-deep igx-paginator .igx-input-group--fluent igx-suffix,
@@ -1196,6 +1195,7 @@
   color: var(--igx-input-group-input-suffix-color);
   padding: 0.5rem;
   background: var(--igx-input-group-input-suffix-background);
+  width: auto;
   height: auto;
   line-height: normal; }
   :host ::ng-deep igx-paginator .igx-input-group--fluent igx-suffix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--fluent [igxSuffix] igx-icon {
@@ -1206,23 +1206,24 @@
   :host ::ng-deep igx-paginator .igx-input-group--fluent :first-of-type[igxSuffix] {
     margin-left: 0.5rem; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-suffix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxSuffix] {
+:host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-suffix,
+:host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
+  width: auto;
   height: auto;
   padding: 0.5rem;
   line-height: normal; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-suffix .igx-icon, :host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxSuffix] .igx-icon, :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, :host ::ng-deep igx-paginator .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive {
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search igx-suffix:first-of-type,
-  :host ::ng-deep igx-paginator .igx-input-group--fluent-search :first-of-type[igxSuffix] {
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent igx-suffix:first-of-type,
+  :host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--fluent :first-of-type[igxSuffix] {
     margin-left: 0; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent [igxPrefix],
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
@@ -1230,10 +1231,10 @@
   height: auto;
   line-height: normal; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent igx-prefix,
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent [igxPrefix],
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent igx-suffix,
@@ -1242,28 +1243,28 @@
   height: auto;
   line-height: normal; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent [igxPrefix] {
   padding: 0.42105rem; }
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent igx-prefix,
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
   padding: 0.36364rem; }
 
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
   padding: 0.42105rem; }
 
 
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-:host ::ng-deep igx-paginator .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+:host ::ng-deep igx-paginator .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent igx-suffix,
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
   padding: 0.36364rem; }
@@ -1337,7 +1338,7 @@
   :host ::ng-deep igx-paginator .igx-input-group__hint:empty {
     display: none; }
 
-:host ::ng-deep igx-paginator .igx-input-group--box .igx-input-group__hint, .igx-input-group--box :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--border .igx-input-group__hint, .igx-input-group--border :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--search .igx-input-group__hint, .igx-input-group--search :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search :host ::ng-deep igx-paginator .igx-input-group__hint {
+:host ::ng-deep igx-paginator .igx-input-group--box .igx-input-group__hint, .igx-input-group--box :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--border .igx-input-group__hint, .igx-input-group--border :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo :host ::ng-deep igx-paginator .igx-input-group__hint, :host ::ng-deep igx-paginator .igx-input-group--search .igx-input-group__hint, .igx-input-group--search :host ::ng-deep igx-paginator .igx-input-group__hint {
   margin-left: 0.75rem;
   /* 16px, base is 12px */
   margin-right: 0.75rem;
@@ -1410,9 +1411,18 @@
   border: 1px solid var(--igx-input-group-border-color);
   padding: 0.5rem 1rem;
   z-index: -1;
+  width: auto;
   height: auto;
+  font-size: 1.25rem;
   line-height: 1.5;
   white-space: nowrap; }
+  :host ::ng-deep igx-paginator .igx-input-group--bootstrap igx-prefix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--bootstrap [igxPrefix] igx-icon,
+  :host ::ng-deep igx-paginator .igx-input-group--bootstrap igx-suffix igx-icon,
+  :host ::ng-deep igx-paginator .igx-input-group--bootstrap [igxSuffix] igx-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 400; }
 
 :host ::ng-deep igx-paginator .igx-input-group--bootstrap igx-prefix,
 :host ::ng-deep igx-paginator .igx-input-group--bootstrap [igxPrefix] {
@@ -1441,6 +1451,7 @@
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix,
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap [igxSuffix] {
   padding: 0.375rem 0.75rem;
+  width: auto;
   height: auto; }
   :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon,
   :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix igx-icon,
@@ -1454,6 +1465,7 @@
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--bootstrap igx-suffix,
 :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--bootstrap [igxSuffix] {
   padding: 0.25rem 0.5rem;
+  width: auto;
   height: auto; }
   :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon,
   :host ::ng-deep igx-paginator .igx-input-group--compact.igx-input-group--bootstrap igx-suffix igx-icon,
@@ -1510,6 +1522,10 @@
   background: var(--igx-input-group-border-disabled-background);
   border: 1px solid var(--igx-input-group-disabled-border-color);
   box-shadow: none; }
+
+:host ::ng-deep igx-paginator .igx-input-group--search.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--search.igx-input-group--bootstrap :host ::ng-deep igx-paginator .igx-input-group__input {
+  -ms-transform: translateY(0);
+      transform: translateY(0); }
 
 :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--cosy.igx-input-group--bootstrap :host ::ng-deep igx-paginator .igx-input-group__input, :host ::ng-deep igx-paginator .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--cosy.igx-input-group--bootstrap :host ::ng-deep igx-paginator .igx-input-group__textarea {
   font-size: 1rem;

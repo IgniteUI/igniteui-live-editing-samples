@@ -186,9 +186,6 @@
 :host ::ng-deep .igx-combo {
   position: relative;
   display: block; }
-  :host ::ng-deep .igx-combo .igx-button--icon {
-    width: 1.5rem;
-    height: 1.5rem; }
 
 :host ::ng-deep .igx-combo__checkbox {
   margin-right: 0.5rem; }

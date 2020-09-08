@@ -148,8 +148,7 @@
     overflow: hidden;
     box-shadow: var(--igx-grid-grid-shadow);
     outline-style: none;
-    z-index: 1;
-    border: 0 solid var(--igx-grid-grid-border-color); }
+    z-index: 1; }
     :host ::ng-deep .igx-grid .igx-checkbox, :host ::ng-deep .igx-grid--cosy .igx-checkbox, :host ::ng-deep .igx-grid--compact .igx-checkbox {
       min-width: 1.25rem; }
   :host ::ng-deep .igx-grid__caption {
@@ -577,10 +576,22 @@
     color: var(--igx-grid-cell-disabled-color); }
   :host ::ng-deep .igx-grid__td--editing {
     background: var(--igx-grid-cell-editing-background) !important;
-    box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color); }
+    box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color);
+    padding: 0 !important; }
     :host ::ng-deep .igx-grid__td--editing igx-input-group {
+      --igx-input-group-variant: fluent;
       width: 100%;
-      margin-top: -16px; }
+      height: 100%;
+      padding-top: 0 !important; }
+    :host ::ng-deep .igx-grid__td--editing igx-date-picker,
+    :host ::ng-deep .igx-grid__td--editing igx-time-picker,
+    :host ::ng-deep .igx-grid__td--editing igx-date-range-picker {
+      height: 100%; }
+    :host ::ng-deep .igx-grid__td--editing .igx-input-group__bundle {
+      height: 100%; }
+    :host ::ng-deep .igx-grid__td--editing input {
+      margin: 0 auto;
+      max-width: 100%; }
     :host ::ng-deep .igx-grid__td--editing .igx-input-group__input, :host ::ng-deep .igx-grid__td--editing .igx-input-group__textarea {
       font-size: 0.8125rem !important;
       line-height: 1rem !important; }
@@ -720,9 +731,13 @@
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background);
     opacity: 0.7; }
+    :host ::ng-deep .igx-grid__th--selectable .sort-icon::after {
+      background: var(--igx-grid-header-selected-background); }
   :host ::ng-deep .igx-grid__th--selected {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background); }
+    :host ::ng-deep .igx-grid__th--selected .sort-icon::after {
+      background: var(--igx-grid-header-selected-background); }
   :host ::ng-deep .igx-grid__th--sortable .sort-icon {
     cursor: pointer;
     opacity: .7; }
@@ -2728,7 +2743,6 @@
     --igx-input-group-search-hover-elevation: 2;
     --igx-input-group-search-disabled-elevation: 0;
     --igx-input-group-variant: material;
-    --igx-input-group-theme-variant: material;
     --igx-input-group-input-prefix-color: rgba(0, 0, 0, 0.54);
     --igx-input-group-input-prefix-background: transparent;
     --igx-input-group-input-suffix-color: rgba(0, 0, 0, 0.54);
@@ -2905,20 +2919,20 @@
       width: calc(100% + 0.5rem);
       margin-left: -0.5rem !important;
       cursor: pointer !important; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-prefix,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxPrefix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-prefix,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
       outline-style: none;
       overflow: hidden; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-suffix,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxSuffix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-suffix,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
       outline-style: none; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--focused.igx-input-group--fluent-search igx-prefix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--focused.igx-input-group--fluent-search [igxPrefix] {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search igx-prefix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search [igxPrefix] {
     visibility: hidden;
     width: 0;
     padding-left: 0 !important; }
@@ -2928,16 +2942,16 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix] {
       outline-style: none; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix] {
       outline-style: none; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
@@ -2945,16 +2959,16 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix] {
       outline-style: none; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix] {
       outline-style: none; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--required.igx-input-group--fluent .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle::after {
     content: '*';
@@ -2962,9 +2976,9 @@
     top: -0.5rem;
     left: calc(100% + 0.25rem);
     color: var(--igx-input-group-error-secondary-color); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__label + .igx-input-group__bundle::after {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--indigo .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after {
     display: none; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle {
     padding: 0;
     min-height: 32px;
     border: 1px solid var(--igx-input-group-border-color);
@@ -2974,7 +2988,7 @@
     position: relative;
     -ms-flex-align: stretch;
         align-items: stretch; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle:hover, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__bundle:hover, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle:hover {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle:hover {
     border-color: var(--igx-input-group-hover-border-color);
     box-shadow: none; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--focused.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--focused.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle:hover {
@@ -2993,26 +3007,24 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--valid.igx-input-group--fluent .igx-input-group__bundle,
   .igx-input-group--valid.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle {
     border-color: var(--igx-input-group-success-secondary-color); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__input, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input {
     padding: 0;
     margin: 0;
     border: none; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input {
     color: var(--igx-input-group-disabled-text-color); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle-main, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__bundle-main, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle-main {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle-main {
     padding-left: 0.5rem;
     -ms-flex-item-align: center;
         align-self: center; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog igx-prefix + .igx-input-group__bundle-main, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog igx-prefix + .igx-input-group__bundle-main,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog igx-prefix + .igx-input-group__bundle-main,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main,
-  .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog [igx-prefix] + .igx-input-group__bundle-main,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igx-prefix] + .igx-input-group__bundle-main,
-  .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog [igx-prefix] + .igx-input-group__bundle-main {
+  .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog [igx-prefix] + .igx-input-group__bundle-main {
     padding-left: 0; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--placeholder.igx-input-group--fluent .igx-input-group__label, .igx-input-group--placeholder.igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label {
     -ms-transform: translateY(0) scale(1);
         transform: translateY(0) scale(1); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__label, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--indigo .igx-input-group__label, .igx-input-group--indigo :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__label {
     padding: 0.3125rem 0;
     line-height: normal !important;
     position: static;
@@ -3056,7 +3068,7 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--focused.igx-input-group--search .igx-input-group__bundle, .igx-input-group--focused.igx-input-group--search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle {
     box-shadow: var(--igx-input-group-search-hover-shadow);
     border-color: var(--igx-input-group-hover-border-color); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled.igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__bundle {
     background: var(--igx-input-group-search-disabled-background);
     box-shadow: var(--igx-input-group-search-disabled-shadow);
     border-color: var(--igx-input-group-disabled-border-color); }
@@ -3280,8 +3292,10 @@
     color: var(--igx-input-group-input-prefix-color);
     background: var(--igx-input-group-input-prefix-background);
     padding: 0.5rem;
+    width: auto;
     height: auto;
-    line-height: normal; }
+    line-height: normal;
+    font-weight: 400; }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-prefix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent [igxPrefix] igx-icon {
       width: 1.125rem;
       height: 1.125rem;
@@ -3289,21 +3303,22 @@
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-prefix:last-of-type,
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent :last-of-type[igxPrefix] {
       margin-right: 0.5rem; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-prefix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxPrefix] {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-prefix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
     padding: 0.5rem; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-prefix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxPrefix] igx-icon {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-prefix:last-of-type,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search :last-of-type[igxPrefix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-prefix:last-of-type,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent :last-of-type[igxPrefix] {
       margin-right: 0; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent [igxSuffix] {
     color: var(--igx-input-group-input-suffix-color);
     padding: 0.5rem;
     background: var(--igx-input-group-input-suffix-background);
+    width: auto;
     height: auto;
     line-height: normal; }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-suffix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent [igxSuffix] igx-icon {
@@ -3313,32 +3328,33 @@
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent igx-suffix:first-of-type,
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent :first-of-type[igxSuffix] {
       margin-left: 0.5rem; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-suffix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxSuffix] {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-suffix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
+    width: auto;
     height: auto;
     padding: 0.5rem;
     line-height: normal; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-suffix .igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxSuffix] .igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search igx-suffix:first-of-type,
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search :first-of-type[igxSuffix] {
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent igx-suffix:first-of-type,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--fluent :first-of-type[igxSuffix] {
       margin-left: 0; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent [igxPrefix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     height: auto;
     line-height: normal; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent [igxPrefix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent igx-suffix,
@@ -3346,25 +3362,25 @@
     font-size: 0.95455rem;
     height: auto;
     line-height: normal; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent [igxPrefix] {
     padding: 0.42105rem; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
     padding: 0.36364rem; }
   
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     padding: 0.42105rem; }
   
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
     padding: 0.36364rem; }
@@ -3426,7 +3442,7 @@
     padding-top: 0.375rem; }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint:empty {
       display: none; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--box .igx-input-group__hint, .igx-input-group--box :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--border .igx-input-group__hint, .igx-input-group--border :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search .igx-input-group__hint, .igx-input-group--search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--box .igx-input-group__hint, .igx-input-group--box :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--border .igx-input-group__hint, .igx-input-group--border :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search .igx-input-group__hint, .igx-input-group--search :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__hint {
     margin-left: 0.75rem;
     /* 16px, base is 12px */
     margin-right: 0.75rem;
@@ -3485,9 +3501,18 @@
     border: 1px solid var(--igx-input-group-border-color);
     padding: 0.5rem 1rem;
     z-index: -1;
+    width: auto;
     height: auto;
+    font-size: 1.25rem;
     line-height: 1.5;
     white-space: nowrap; }
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--bootstrap igx-prefix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--bootstrap [igxPrefix] igx-icon,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--bootstrap igx-suffix igx-icon,
+    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--bootstrap [igxSuffix] igx-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: 400; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--bootstrap igx-prefix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--bootstrap [igxPrefix] {
     color: var(--igx-input-group-input-prefix-color);
@@ -3512,6 +3537,7 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap [igxSuffix] {
     padding: 0.375rem 0.75rem;
+    width: auto;
     height: auto; }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon,
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix igx-icon,
@@ -3524,6 +3550,7 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--bootstrap igx-suffix,
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--bootstrap [igxSuffix] {
     padding: 0.25rem 0.5rem;
+    width: auto;
     height: auto; }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon,
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--compact.igx-input-group--bootstrap igx-suffix igx-icon,
@@ -3572,6 +3599,9 @@
     background: var(--igx-input-group-border-disabled-background);
     border: 1px solid var(--igx-input-group-disabled-border-color);
     box-shadow: none; }
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--search.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--search.igx-input-group--bootstrap :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input {
+    -ms-transform: translateY(0);
+        transform: translateY(0); }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--cosy.igx-input-group--bootstrap :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--cosy.igx-input-group--bootstrap :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__textarea {
     font-size: 1rem;
     padding: 0.375rem 0.75rem; }
@@ -3812,12 +3842,12 @@
     cursor: pointer;
     -webkit-filter: opacity(1);
             filter: opacity(1); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__item:hover {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--cosy:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--compact:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--cosy:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--compact:hover .igx-chip__item {
     color: var(--igx-chip-hover-text-color);
     background: var(--igx-chip-hover-background);
     border-color: var(--igx-chip-hover-border-color);
     transition: all 120ms ease-in; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__item:focus {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip:focus .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost:focus .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--cosy:focus .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--compact:focus .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--cosy:focus .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--compact:focus .igx-chip__item {
     color: var(--igx-chip-focus-text-color);
     background: var(--igx-chip-focus-background);
     border-color: var(--igx-chip-focus-border-color);
@@ -3826,12 +3856,12 @@
     color: var(--igx-chip-selected-text-color);
     background: var(--igx-chip-selected-background);
     border-color: var(--igx-chip-selected-border-color); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__item--selected:hover {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip:hover .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost:hover .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--cosy:hover .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--compact:hover .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--cosy:hover .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--compact:hover .igx-chip__item--selected {
     color: var(--igx-chip-hover-selected-text-color);
     background: var(--igx-chip-hover-selected-background);
     border-color: var(--igx-chip-hover-selected-border-color);
     transition: all 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__item--selected:focus {
+  :host ::ng-deep igx-advanced-filtering-dialog .igx-chip:focus .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost:focus .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--cosy:focus .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--compact:focus .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--cosy:focus .igx-chip__item--selected, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--compact:focus .igx-chip__item--selected {
     color: var(--igx-chip-focus-selected-text-color);
     background: var(--igx-chip-focus-selected-background);
     border-color: var(--igx-chip-focus-selected-border-color);

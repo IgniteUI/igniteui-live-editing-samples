@@ -219,10 +219,7 @@
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  -ms-flex-preferred-size: 14.28%;
-      flex-basis: 14.28%;
+  min-width: 14.28%;
   color: var(--igx-calendar-content-text-color);
   cursor: pointer;
   outline: none; }
@@ -242,8 +239,8 @@
   -ms-flex-align: center;
       align-items: center;
   width: 2.5em;
+  min-width: 2.5em;
   height: 2.5em;
-  min-width: 2ch;
   border-radius: var(--igx-calendar-date-border-radius);
   z-index: 0; }
   :host ::ng-deep .igx-calendar__date-content::after {
@@ -259,8 +256,7 @@
 :host ::ng-deep .igx-calendar__label {
   color: var(--igx-calendar-label-color);
   border-radius: 0;
-  -ms-flex-preferred-size: 14.28%;
-      flex-basis: 14.28%; }
+  min-width: 14.28%; }
   :host ::ng-deep .igx-calendar__label:hover, :host ::ng-deep .igx-calendar__label:focus {
     color: var(--igx-calendar-label-color); }
 

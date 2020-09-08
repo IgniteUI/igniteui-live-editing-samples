@@ -1938,10 +1938,7 @@
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-positive: 1;
-      flex-grow: 1;
-  -ms-flex-preferred-size: 14.28%;
-      flex-basis: 14.28%;
+  min-width: 14.28%;
   color: rgba(0, 0, 0, 0.87);
   cursor: pointer;
   outline: none; }
@@ -1961,8 +1958,8 @@
   -ms-flex-align: center;
       align-items: center;
   width: 2.5em;
+  min-width: 2.5em;
   height: 2.5em;
-  min-width: 2ch;
   border-radius: 20px;
   z-index: 0; }
   .igx-calendar__date-content::after {
@@ -1978,8 +1975,7 @@
 .igx-calendar__label {
   color: rgba(0, 0, 0, 0.26);
   border-radius: 0;
-  -ms-flex-preferred-size: 14.28%;
-      flex-basis: 14.28%; }
+  min-width: 14.28%; }
   .igx-calendar__label:hover, .igx-calendar__label:focus {
     color: rgba(0, 0, 0, 0.26); }
 
@@ -3494,13 +3490,13 @@
   -webkit-filter: opacity(1);
           filter: opacity(1); }
 
-.igx-chip__item:hover {
+.igx-chip:hover .igx-chip__item, .igx-chip__ghost:hover .igx-chip__item, .igx-chip__ghost--cosy:hover .igx-chip__item, .igx-chip__ghost--compact:hover .igx-chip__item, .igx-chip--cosy:hover .igx-chip__item, .igx-chip--compact:hover .igx-chip__item, .fin-dark-theme .igx-chip:hover .igx-chip__item, .fin-dark-theme .igx-chip__ghost:hover .igx-chip__item, .fin-dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item, .fin-dark-theme .igx-chip__ghost--compact:hover .igx-chip__item, .fin-dark-theme .igx-chip--cosy:hover .igx-chip__item, .fin-dark-theme .igx-chip--compact:hover .igx-chip__item, .dark-theme .igx-chip:hover .igx-chip__item, .dark-theme .igx-chip__ghost:hover .igx-chip__item, .dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item, .dark-theme .igx-chip__ghost--compact:hover .igx-chip__item, .dark-theme .igx-chip--cosy:hover .igx-chip__item, .dark-theme .igx-chip--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item {
   color: rgba(0, 0, 0, 0.62);
   background: rgba(0, 0, 0, 0.12);
   border-color: transparent;
   transition: all 120ms ease-in; }
 
-.igx-chip__item:focus {
+.igx-chip:focus .igx-chip__item, .igx-chip__ghost:focus .igx-chip__item, .igx-chip__ghost--cosy:focus .igx-chip__item, .igx-chip__ghost--compact:focus .igx-chip__item, .igx-chip--cosy:focus .igx-chip__item, .igx-chip--compact:focus .igx-chip__item, .fin-dark-theme .igx-chip:focus .igx-chip__item, .fin-dark-theme .igx-chip__ghost:focus .igx-chip__item, .fin-dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item, .fin-dark-theme .igx-chip__ghost--compact:focus .igx-chip__item, .fin-dark-theme .igx-chip--cosy:focus .igx-chip__item, .fin-dark-theme .igx-chip--compact:focus .igx-chip__item, .dark-theme .igx-chip:focus .igx-chip__item, .dark-theme .igx-chip__ghost:focus .igx-chip__item, .dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item, .dark-theme .igx-chip__ghost--compact:focus .igx-chip__item, .dark-theme .igx-chip--cosy:focus .igx-chip__item, .dark-theme .igx-chip--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item {
   color: rgba(0, 0, 0, 0.62);
   background: rgba(0, 0, 0, 0.26);
   border-color: transparent;
@@ -3511,13 +3507,13 @@
   background: rgba(0, 0, 0, 0.12);
   border-color: transparent; }
 
-.igx-chip__item--selected:hover {
+.igx-chip:hover .igx-chip__item--selected, .igx-chip__ghost:hover .igx-chip__item--selected, .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .igx-chip__ghost--compact:hover .igx-chip__item--selected, .igx-chip--cosy:hover .igx-chip__item--selected, .igx-chip--compact:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--compact:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip--cosy:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip--compact:hover .igx-chip__item--selected, .dark-theme .igx-chip:hover .igx-chip__item--selected, .dark-theme .igx-chip__ghost:hover .igx-chip__item--selected, .dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .dark-theme .igx-chip__ghost--compact:hover .igx-chip__item--selected, .dark-theme .igx-chip--cosy:hover .igx-chip__item--selected, .dark-theme .igx-chip--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item--selected {
   color: rgba(0, 0, 0, 0.62);
   background: rgba(0, 0, 0, 0.26);
   border-color: transparent;
   transition: all 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
-.igx-chip__item--selected:focus {
+.igx-chip:focus .igx-chip__item--selected, .igx-chip__ghost:focus .igx-chip__item--selected, .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .igx-chip__ghost--compact:focus .igx-chip__item--selected, .igx-chip--cosy:focus .igx-chip__item--selected, .igx-chip--compact:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--compact:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip--cosy:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip--compact:focus .igx-chip__item--selected, .dark-theme .igx-chip:focus .igx-chip__item--selected, .dark-theme .igx-chip__ghost:focus .igx-chip__item--selected, .dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .dark-theme .igx-chip__ghost--compact:focus .igx-chip__item--selected, .dark-theme .igx-chip--cosy:focus .igx-chip__item--selected, .dark-theme .igx-chip--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item--selected {
   color: rgba(0, 0, 0, 0.62);
   background: rgba(0, 0, 0, 0.26);
   border-color: transparent;
@@ -3602,9 +3598,6 @@
 .igx-combo {
   position: relative;
   display: block; }
-  .igx-combo .igx-button--icon {
-    width: 1.5rem;
-    height: 1.5rem; }
 
 .igx-combo__checkbox {
   margin-right: 0.5rem; }
@@ -3682,8 +3675,7 @@
       color: #e41c77; }
   .igx-date-picker .igx-calendar__label, .igx-date-picker .igx-calendar__date, .igx-date-picker .igx-calendar__date--inactive, .igx-date-picker .igx-calendar__date--selected, .igx-date-picker .igx-calendar__date--current, .igx-date-picker .igx-calendar__date--weekend, .igx-date-picker .igx-calendar__date--special, .igx-date-picker .igx-calendar__date--disabled, .igx-date-picker .igx-calendar__year, .igx-date-picker .igx-calendar__year--current, .igx-date-picker .igx-calendar__month, .igx-date-picker .igx-calendar__month--current {
     color: rgba(0, 0, 0, 0.87);
-    -ms-flex-preferred-size: 14.28%;
-        flex-basis: 14.28%; }
+    min-width: 14.28%; }
   .igx-date-picker .igx-calendar__label {
     color: rgba(0, 0, 0, 0.26); }
     .igx-date-picker .igx-calendar__label:hover, .igx-date-picker .igx-calendar__label:focus {
@@ -4194,8 +4186,7 @@ igx-date-range-end,
   overflow: hidden;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
   outline-style: none;
-  z-index: 1;
-  border: 0 solid transparent; }
+  z-index: 1; }
   
   .igx-grid .igx-checkbox,
   .igx-grid--cosy .igx-checkbox,
@@ -4720,10 +4711,22 @@ igx-date-range-end,
 
 .igx-grid__td--editing {
   background: #fff !important;
-  box-shadow: inset 0 0 0 0.125rem #e41c77; }
+  box-shadow: inset 0 0 0 0.125rem #e41c77;
+  padding: 0 !important; }
   .igx-grid__td--editing igx-input-group {
+    --igx-input-group-variant: fluent;
     width: 100%;
-    margin-top: -16px; }
+    height: 100%;
+    padding-top: 0 !important; }
+  .igx-grid__td--editing igx-date-picker,
+  .igx-grid__td--editing igx-time-picker,
+  .igx-grid__td--editing igx-date-range-picker {
+    height: 100%; }
+  .igx-grid__td--editing .igx-input-group__bundle {
+    height: 100%; }
+  .igx-grid__td--editing input {
+    margin: 0 auto;
+    max-width: 100%; }
   .igx-grid__td--editing .igx-input-group__input, .igx-grid__td--editing .igx-input-group__textarea {
     font-size: 0.8125rem !important;
     line-height: 1rem !important; }
@@ -4884,10 +4887,14 @@ igx-date-range-end,
   color: black;
   background: #f99ec8;
   opacity: 0.7; }
+  .igx-grid__th--selectable .sort-icon::after {
+    background: #f99ec8; }
 
 .igx-grid__th--selected {
   color: black;
   background: #f99ec8; }
+  .igx-grid__th--selected .sort-icon::after {
+    background: #f99ec8; }
 
 .igx-grid__th--sortable .sort-icon {
   cursor: pointer;
@@ -6962,6 +6969,7 @@ igx-excel-style-filter-operations,
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   background: rgba(0, 0, 0, 0.02);
   height: 3.625rem;
+  position: relative;
   padding: 0 1rem 0 1.5rem; }
   .igx-grid-toolbar .igx-button--outlined, .igx-grid-toolbar--cosy .igx-button--outlined, .igx-grid-toolbar--compact .igx-button--outlined,
   .igx-grid-toolbar .igx-button--raised,
@@ -7052,6 +7060,18 @@ igx-excel-style-filter-operations,
     -ms-flex-pack: justify;
         justify-content: space-between; }
 
+.igx-grid-toolbar__progress-bar {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: -0.0625rem;
+  height: 0.125rem;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.02); }
+  .igx-grid-toolbar__progress-bar igx-linear-bar > * {
+    border-radius: 0; }
+
 .igx-grid-toolbar__adv-filter--filtered {
   border-color: #e41c77 !important; }
 
@@ -7120,7 +7140,6 @@ igx-excel-style-filter-operations,
   --igx-input-group-search-hover-elevation: 2;
   --igx-input-group-search-disabled-elevation: 0;
   --igx-input-group-variant: material;
-  --igx-input-group-theme-variant: material;
   --igx-input-group-input-prefix-color: rgba(0, 0, 0, 0.54);
   --igx-input-group-input-prefix-background: transparent;
   --igx-input-group-input-suffix-color: rgba(0, 0, 0, 0.54);
@@ -7331,21 +7350,21 @@ igx-excel-style-filter-operations,
     margin-left: -0.5rem !important;
     cursor: pointer !important; }
 
-.igx-input-group--fluent-search {
+.igx-input-group--search.igx-input-group--fluent {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  .igx-input-group--fluent-search igx-prefix,
-  .igx-input-group--fluent-search [igxPrefix] {
+  .igx-input-group--search.igx-input-group--fluent igx-prefix,
+  .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
     outline-style: none;
     overflow: hidden; }
-  .igx-input-group--fluent-search igx-suffix,
-  .igx-input-group--fluent-search [igxSuffix] {
+  .igx-input-group--search.igx-input-group--fluent igx-suffix,
+  .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
 
-.igx-input-group--focused.igx-input-group--fluent-search igx-prefix,
-.igx-input-group--focused.igx-input-group--fluent-search [igxPrefix] {
+.igx-input-group--focused.igx-input-group--fluent.igx-input-group--search igx-prefix,
+.igx-input-group--focused.igx-input-group--fluent.igx-input-group--search [igxPrefix] {
   visibility: hidden;
   width: 0;
   padding-left: 0 !important; }
@@ -7358,16 +7377,16 @@ igx-excel-style-filter-operations,
 .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
   outline-style: none; }
 
-.igx-input-group--fluent-search.igx-input-group--cosy {
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix] {
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix] {
     outline-style: none; }
-  .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix] {
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix] {
     outline-style: none; }
 
 .igx-input-group--compact.igx-input-group--fluent igx-prefix,
@@ -7378,16 +7397,16 @@ igx-excel-style-filter-operations,
 .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
   outline-style: none; }
 
-.igx-input-group--fluent-search.igx-input-group--compact {
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column; }
-  .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix] {
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix] {
     outline-style: none; }
-  .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix] {
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix] {
     outline-style: none; }
 
 .igx-input-group--required.igx-input-group--fluent .igx-input-group__bundle::after {
@@ -7397,10 +7416,10 @@ igx-excel-style-filter-operations,
   left: calc(100% + 0.25rem);
   color: #ff134a; }
 
-.igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .igx-input-group--fluent-search .igx-input-group__label + .igx-input-group__bundle::after {
+.igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .igx-input-group--indigo .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .igx-input-group--search.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after {
   display: none; }
 
-.igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent-search .igx-input-group__bundle {
+.igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--search.igx-input-group--fluent .igx-input-group__bundle {
   padding: 0;
   min-height: 32px;
   border: 1px solid rgba(0, 0, 0, 0.54);
@@ -7411,7 +7430,7 @@ igx-excel-style-filter-operations,
   -ms-flex-align: stretch;
       align-items: stretch; }
 
-.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent-search .igx-input-group__bundle:hover {
+.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--search.igx-input-group--fluent .igx-input-group__bundle:hover {
   border-color: rgba(0, 0, 0, 0.87);
   box-shadow: none; }
 
@@ -7432,7 +7451,7 @@ igx-excel-style-filter-operations,
 .igx-input-group--valid.igx-input-group--fluent .igx-input-group__bundle {
   border-color: #4eb862; }
 
-.igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent-search .igx-input-group__input {
+.igx-input-group--fluent .igx-input-group__input, .igx-input-group--search.igx-input-group--fluent .igx-input-group__input {
   padding: 0;
   margin: 0;
   border: none; }
@@ -7440,22 +7459,21 @@ igx-excel-style-filter-operations,
 .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input:hover, .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input:focus {
   color: rgba(0, 0, 0, 0.38); }
 
-.igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent-search .igx-input-group__bundle-main {
+.igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--search.igx-input-group--fluent .igx-input-group__bundle-main {
   padding-left: 0.5rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center; }
 
-.igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent-search igx-prefix + .igx-input-group__bundle-main,
-.igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main,
-.igx-input-group--fluent-search [igx-prefix] + .igx-input-group__bundle-main {
+.igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--search.igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main,
+.igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main {
   padding-left: 0; }
 
 .igx-input-group--placeholder.igx-input-group--fluent .igx-input-group__label {
   -ms-transform: translateY(0) scale(1);
       transform: translateY(0) scale(1); }
 
-.igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent-search .igx-input-group__label {
+.igx-input-group--fluent .igx-input-group__label, .igx-input-group--indigo .igx-input-group__label, .igx-input-group--search.igx-input-group--fluent .igx-input-group__label {
   padding: 0.3125rem 0;
   line-height: normal !important;
   position: static;
@@ -7511,7 +7529,7 @@ igx-excel-style-filter-operations,
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
   border-color: rgba(0, 0, 0, 0.87); }
 
-.igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent-search .igx-input-group__bundle {
+.igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent.igx-input-group--search .igx-input-group__bundle {
   background: rgba(0, 0, 0, 0.04);
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.12); }
@@ -7854,8 +7872,10 @@ igx-excel-style-filter-operations,
   color: rgba(0, 0, 0, 0.54);
   background: transparent;
   padding: 0.5rem;
+  width: auto;
   height: auto;
-  line-height: normal; }
+  line-height: normal;
+  font-weight: 400; }
   .igx-input-group--fluent igx-prefix igx-icon, .igx-input-group--fluent [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--fluent igx-prefix igx-icon, .fin-dark-theme .igx-input-group--fluent [igxPrefix] igx-icon, .dark-theme .igx-input-group--fluent igx-prefix igx-icon, .dark-theme .igx-input-group--fluent [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxPrefix] igx-icon {
     width: 1.125rem;
     height: 1.125rem;
@@ -7865,19 +7885,16 @@ igx-excel-style-filter-operations,
   .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent :last-of-type[igxPrefix] {
     margin-right: 0.5rem; }
 
-.igx-input-group--fluent-search igx-prefix,
-.igx-input-group--fluent-search [igxPrefix], .fin-dark-theme .igx-input-group--fluent-search igx-prefix,
-.fin-dark-theme .igx-input-group--fluent-search [igxPrefix], .dark-theme .igx-input-group--fluent-search igx-prefix,
-.dark-theme .igx-input-group--fluent-search [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] {
+.igx-input-group--search.igx-input-group--fluent igx-prefix,
+.igx-input-group--search.igx-input-group--fluent [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-prefix,
+.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
   padding: 0.5rem; }
-  .igx-input-group--fluent-search igx-prefix igx-icon, .igx-input-group--fluent-search [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--fluent-search igx-prefix igx-icon, .fin-dark-theme .igx-input-group--fluent-search [igxPrefix] igx-icon, .dark-theme .igx-input-group--fluent-search igx-prefix igx-icon, .dark-theme .igx-input-group--fluent-search [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] igx-icon {
+  .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
-  .igx-input-group--fluent-search igx-prefix:last-of-type,
-  .igx-input-group--fluent-search :last-of-type[igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix:last-of-type,
-  .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search :last-of-type[igxPrefix] {
+  .igx-input-group--search.igx-input-group--fluent igx-prefix:last-of-type,
+  .igx-input-group--search.igx-input-group--fluent :last-of-type[igxPrefix] {
     margin-right: 0; }
 
 .igx-input-group--fluent igx-suffix,
@@ -7888,6 +7905,7 @@ igx-excel-style-filter-operations,
   color: rgba(0, 0, 0, 0.54);
   padding: 0.5rem;
   background: transparent;
+  width: auto;
   height: auto;
   line-height: normal; }
   .igx-input-group--fluent igx-suffix igx-icon, .igx-input-group--fluent [igxSuffix] igx-icon, .fin-dark-theme .igx-input-group--fluent igx-suffix igx-icon, .fin-dark-theme .igx-input-group--fluent [igxSuffix] igx-icon, .dark-theme .igx-input-group--fluent igx-suffix igx-icon, .dark-theme .igx-input-group--fluent [igxSuffix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxSuffix] igx-icon {
@@ -7899,30 +7917,25 @@ igx-excel-style-filter-operations,
   .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent :first-of-type[igxSuffix] {
     margin-left: 0.5rem; }
 
-.igx-input-group--fluent-search igx-suffix,
-.igx-input-group--fluent-search [igxSuffix], .fin-dark-theme .igx-input-group--fluent-search igx-suffix,
-.fin-dark-theme .igx-input-group--fluent-search [igxSuffix], .dark-theme .igx-input-group--fluent-search igx-suffix,
-.dark-theme .igx-input-group--fluent-search [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] {
+.igx-input-group--search.igx-input-group--fluent igx-suffix,
+.igx-input-group--search.igx-input-group--fluent [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-suffix,
+.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
+  width: auto;
   height: auto;
   padding: 0.5rem;
   line-height: normal; }
-  .igx-input-group--fluent-search igx-suffix .igx-icon, .igx-input-group--fluent-search [igxSuffix] .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] .igx-icon, .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive {
+  .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
-  .igx-input-group--fluent-search igx-suffix:first-of-type,
-  .igx-input-group--fluent-search :first-of-type[igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix:first-of-type,
-  .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search :first-of-type[igxSuffix] {
+  .igx-input-group--search.igx-input-group--fluent igx-suffix:first-of-type,
+  .igx-input-group--search.igx-input-group--fluent :first-of-type[igxSuffix] {
     margin-left: 0; }
 
-.igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-.igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
-.igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-.igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
 .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
 .igx-input-group--cosy.igx-input-group--fluent [igxPrefix],
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
@@ -7934,13 +7947,10 @@ igx-excel-style-filter-operations,
   height: auto;
   line-height: normal; }
 
-.igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-.igx-input-group--fluent-search.igx-input-group--compact [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
-.igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-.igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
 .igx-input-group--compact.igx-input-group--fluent igx-prefix,
 .igx-input-group--compact.igx-input-group--fluent [igxPrefix],
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent igx-prefix,
@@ -7953,18 +7963,16 @@ igx-excel-style-filter-operations,
   height: auto;
   line-height: normal; }
 
-.igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-.igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
 .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
 .igx-input-group--cosy.igx-input-group--fluent [igxPrefix],
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent [igxPrefix] {
   padding: 0.42105rem; }
 
-.igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-.igx-input-group--fluent-search.igx-input-group--compact [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
 .igx-input-group--compact.igx-input-group--fluent igx-prefix,
 .igx-input-group--compact.igx-input-group--fluent [igxPrefix],
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent igx-prefix,
@@ -7972,10 +7980,8 @@ igx-excel-style-filter-operations,
   padding: 0.36364rem; }
 
 
-.igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-.igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
 .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
 .igx-input-group--cosy.igx-input-group--fluent [igxSuffix],
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
@@ -7983,10 +7989,8 @@ igx-excel-style-filter-operations,
   padding: 0.42105rem; }
 
 
-.igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-.igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-.dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+.igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
 .igx-input-group--compact.igx-input-group--fluent igx-suffix,
 .igx-input-group--compact.igx-input-group--fluent [igxSuffix],
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent igx-suffix,
@@ -8103,7 +8107,7 @@ igx-excel-style-filter-operations,
   .igx-input-group__hint:empty {
     display: none; }
 
-.igx-input-group--box .igx-input-group__hint, .igx-input-group--border .igx-input-group__hint, .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--search .igx-input-group__hint, .igx-input-group--fluent-search .igx-input-group__hint {
+.igx-input-group--box .igx-input-group__hint, .igx-input-group--border .igx-input-group__hint, .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--search .igx-input-group__hint, .igx-input-group--search.igx-input-group--fluent .igx-input-group__hint {
   margin-left: 0.75rem;
   /* 16px, base is 12px */
   margin-right: 0.75rem;
@@ -8197,9 +8201,24 @@ igx-excel-style-filter-operations,
   border: 1px solid rgba(0, 0, 0, 0.54);
   padding: 0.5rem 1rem;
   z-index: -1;
+  width: auto;
   height: auto;
+  font-size: 1.25rem;
   line-height: 1.5;
   white-space: nowrap; }
+  .igx-input-group--bootstrap igx-prefix igx-icon, .igx-input-group--bootstrap [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--bootstrap igx-prefix igx-icon, .fin-dark-theme .igx-input-group--bootstrap [igxPrefix] igx-icon, .dark-theme .igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .igx-input-group--bootstrap [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix] igx-icon,
+  .igx-input-group--bootstrap igx-suffix igx-icon,
+  .igx-input-group--bootstrap [igxSuffix] igx-icon,
+  .fin-dark-theme .igx-input-group--bootstrap igx-suffix igx-icon,
+  .fin-dark-theme .igx-input-group--bootstrap [igxSuffix] igx-icon,
+  .dark-theme .igx-input-group--bootstrap igx-suffix igx-icon,
+  .dark-theme .igx-input-group--bootstrap [igxSuffix] igx-icon,
+  .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-suffix igx-icon,
+  .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxSuffix] igx-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 400; }
 
 .igx-input-group--bootstrap igx-prefix,
 .igx-input-group--bootstrap [igxPrefix], .fin-dark-theme .igx-input-group--bootstrap igx-prefix,
@@ -8238,6 +8257,7 @@ igx-excel-style-filter-operations,
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix,
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap [igxSuffix] {
   padding: 0.375rem 0.75rem;
+  width: auto;
   height: auto; }
   .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon,
   .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix igx-icon,
@@ -8256,6 +8276,7 @@ igx-excel-style-filter-operations,
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap igx-suffix,
 .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap [igxSuffix] {
   padding: 0.25rem 0.5rem;
+  width: auto;
   height: auto; }
   .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon,
   .igx-input-group--compact.igx-input-group--bootstrap igx-suffix igx-icon,
@@ -8314,6 +8335,10 @@ igx-excel-style-filter-operations,
   background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-shadow: none; }
+
+.igx-input-group--search.igx-input-group--bootstrap .igx-input-group__input {
+  -ms-transform: translateY(0);
+      transform: translateY(0); }
 
 .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__textarea {
   font-size: 1rem;
@@ -11486,10 +11511,7 @@ body {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
-    -ms-flex-preferred-size: 14.28%;
-        flex-basis: 14.28%;
+    min-width: 14.28%;
     color: var(--igx-calendar-content-text-color);
     cursor: pointer;
     outline: none; }
@@ -11506,8 +11528,8 @@ body {
     -ms-flex-align: center;
         align-items: center;
     width: 2.5em;
+    min-width: 2.5em;
     height: 2.5em;
-    min-width: 2ch;
     border-radius: var(--igx-calendar-date-border-radius);
     z-index: 0; }
     .fin-dark-theme .igx-calendar__date-content::after {
@@ -11522,8 +11544,7 @@ body {
   .fin-dark-theme .igx-calendar__label {
     color: var(--igx-calendar-label-color);
     border-radius: 0;
-    -ms-flex-preferred-size: 14.28%;
-        flex-basis: 14.28%; }
+    min-width: 14.28%; }
     .fin-dark-theme .igx-calendar__label:hover, .fin-dark-theme .igx-calendar__label:focus {
       color: var(--igx-calendar-label-color); }
   .fin-dark-theme .igx-calendar__date--weekend {
@@ -12944,12 +12965,12 @@ body {
     cursor: pointer;
     -webkit-filter: opacity(1);
             filter: opacity(1); }
-  .fin-dark-theme .igx-chip__item:hover {
+  .igx-chip:hover .fin-dark-theme .igx-chip__item, .igx-chip__ghost:hover .fin-dark-theme .igx-chip__item, .igx-chip__ghost--cosy:hover .fin-dark-theme .igx-chip__item, .igx-chip__ghost--compact:hover .fin-dark-theme .igx-chip__item, .igx-chip--cosy:hover .fin-dark-theme .igx-chip__item, .igx-chip--compact:hover .fin-dark-theme .igx-chip__item, .fin-dark-theme .igx-chip:hover .igx-chip__item, .fin-dark-theme .igx-chip__ghost:hover .igx-chip__item, .fin-dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item, .fin-dark-theme .igx-chip__ghost--compact:hover .igx-chip__item, .fin-dark-theme .igx-chip--cosy:hover .igx-chip__item, .fin-dark-theme .igx-chip--compact:hover .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .fin-dark-theme .igx-chip__item {
     color: var(--igx-chip-hover-text-color);
     background: var(--igx-chip-hover-background);
     border-color: var(--igx-chip-hover-border-color);
     transition: all 120ms ease-in; }
-  .fin-dark-theme .igx-chip__item:focus {
+  .igx-chip:focus .fin-dark-theme .igx-chip__item, .igx-chip__ghost:focus .fin-dark-theme .igx-chip__item, .igx-chip__ghost--cosy:focus .fin-dark-theme .igx-chip__item, .igx-chip__ghost--compact:focus .fin-dark-theme .igx-chip__item, .igx-chip--cosy:focus .fin-dark-theme .igx-chip__item, .igx-chip--compact:focus .fin-dark-theme .igx-chip__item, .fin-dark-theme .igx-chip:focus .igx-chip__item, .fin-dark-theme .igx-chip__ghost:focus .igx-chip__item, .fin-dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item, .fin-dark-theme .igx-chip__ghost--compact:focus .igx-chip__item, .fin-dark-theme .igx-chip--cosy:focus .igx-chip__item, .fin-dark-theme .igx-chip--compact:focus .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .fin-dark-theme .igx-chip__item, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .fin-dark-theme .igx-chip__item {
     color: var(--igx-chip-focus-text-color);
     background: var(--igx-chip-focus-background);
     border-color: var(--igx-chip-focus-border-color);
@@ -12958,12 +12979,12 @@ body {
     color: var(--igx-chip-selected-text-color);
     background: var(--igx-chip-selected-background);
     border-color: var(--igx-chip-selected-border-color); }
-  .fin-dark-theme .igx-chip__item--selected:hover {
+  .igx-chip:hover .fin-dark-theme .igx-chip__item--selected, .igx-chip__ghost:hover .fin-dark-theme .igx-chip__item--selected, .igx-chip__ghost--cosy:hover .fin-dark-theme .igx-chip__item--selected, .igx-chip__ghost--compact:hover .fin-dark-theme .igx-chip__item--selected, .igx-chip--cosy:hover .fin-dark-theme .igx-chip__item--selected, .igx-chip--compact:hover .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .igx-chip:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--compact:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip--cosy:hover .igx-chip__item--selected, .fin-dark-theme .igx-chip--compact:hover .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .fin-dark-theme .igx-chip__item--selected {
     color: var(--igx-chip-hover-selected-text-color);
     background: var(--igx-chip-hover-selected-background);
     border-color: var(--igx-chip-hover-selected-border-color);
     transition: all 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  .fin-dark-theme .igx-chip__item--selected:focus {
+  .igx-chip:focus .fin-dark-theme .igx-chip__item--selected, .igx-chip__ghost:focus .fin-dark-theme .igx-chip__item--selected, .igx-chip__ghost--cosy:focus .fin-dark-theme .igx-chip__item--selected, .igx-chip__ghost--compact:focus .fin-dark-theme .igx-chip__item--selected, .igx-chip--cosy:focus .fin-dark-theme .igx-chip__item--selected, .igx-chip--compact:focus .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .igx-chip:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip__ghost--compact:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip--cosy:focus .igx-chip__item--selected, .fin-dark-theme .igx-chip--compact:focus .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .fin-dark-theme .igx-chip__item--selected, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .fin-dark-theme .igx-chip__item--selected {
     color: var(--igx-chip-focus-selected-text-color);
     background: var(--igx-chip-focus-selected-background);
     border-color: var(--igx-chip-focus-selected-border-color);
@@ -13034,9 +13055,6 @@ body {
   .fin-dark-theme .igx-combo {
     position: relative;
     display: block; }
-    .fin-dark-theme .igx-combo .igx-button--icon {
-      width: 1.5rem;
-      height: 1.5rem; }
   .fin-dark-theme .igx-combo__checkbox {
     margin-right: 0.5rem; }
   .fin-dark-theme .igx-combo__drop-down {
@@ -13105,8 +13123,7 @@ body {
         color: var(--igx-calendar-picker-text-hover-color); }
     .fin-dark-theme .igx-date-picker .igx-calendar__label, .fin-dark-theme .igx-date-picker .igx-calendar__date, .fin-dark-theme .igx-date-picker .igx-calendar__date--inactive, .fin-dark-theme .igx-date-picker .igx-calendar__date--selected, .fin-dark-theme .igx-date-picker .igx-calendar__date--current, .fin-dark-theme .igx-date-picker .igx-calendar__date--weekend, .fin-dark-theme .igx-date-picker .igx-calendar__date--special, .fin-dark-theme .igx-date-picker .igx-calendar__date--disabled, .fin-dark-theme .igx-date-picker .igx-calendar__year, .fin-dark-theme .igx-date-picker .igx-calendar__year--current, .fin-dark-theme .igx-date-picker .igx-calendar__month, .fin-dark-theme .igx-date-picker .igx-calendar__month--current {
       color: var(--igx-calendar-content-text-color);
-      -ms-flex-preferred-size: 14.28%;
-          flex-basis: 14.28%; }
+      min-width: 14.28%; }
     .fin-dark-theme .igx-date-picker .igx-calendar__label {
       color: var(--igx-calendar-label-color); }
       .fin-dark-theme .igx-date-picker .igx-calendar__label:hover, .fin-dark-theme .igx-date-picker .igx-calendar__label:focus {
@@ -13564,8 +13581,7 @@ body {
     overflow: hidden;
     box-shadow: var(--igx-grid-grid-shadow);
     outline-style: none;
-    z-index: 1;
-    border: 0 solid var(--igx-grid-grid-border-color); }
+    z-index: 1; }
     .fin-dark-theme .igx-grid .igx-checkbox, .fin-dark-theme .igx-grid--cosy .igx-checkbox, .fin-dark-theme .igx-grid--compact .igx-checkbox {
       min-width: 1.25rem; }
   .fin-dark-theme .igx-grid__caption {
@@ -14000,10 +14016,22 @@ body {
     color: var(--igx-grid-cell-disabled-color); }
   .fin-dark-theme .igx-grid__td--editing {
     background: var(--igx-grid-cell-editing-background) !important;
-    box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color); }
+    box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color);
+    padding: 0 !important; }
     .fin-dark-theme .igx-grid__td--editing igx-input-group {
+      --igx-input-group-variant: fluent;
       width: 100%;
-      margin-top: -16px; }
+      height: 100%;
+      padding-top: 0 !important; }
+    .fin-dark-theme .igx-grid__td--editing igx-date-picker,
+    .fin-dark-theme .igx-grid__td--editing igx-time-picker,
+    .fin-dark-theme .igx-grid__td--editing igx-date-range-picker {
+      height: 100%; }
+    .fin-dark-theme .igx-grid__td--editing .igx-input-group__bundle {
+      height: 100%; }
+    .fin-dark-theme .igx-grid__td--editing input {
+      margin: 0 auto;
+      max-width: 100%; }
     .fin-dark-theme .igx-grid__td--editing .igx-input-group__input, .fin-dark-theme .igx-grid__td--editing .igx-input-group__textarea {
       font-size: 0.8125rem !important;
       line-height: 1rem !important; }
@@ -14143,9 +14171,13 @@ body {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background);
     opacity: 0.7; }
+    .fin-dark-theme .igx-grid__th--selectable .sort-icon::after {
+      background: var(--igx-grid-header-selected-background); }
   .fin-dark-theme .igx-grid__th--selected {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background); }
+    .fin-dark-theme .igx-grid__th--selected .sort-icon::after {
+      background: var(--igx-grid-header-selected-background); }
   .fin-dark-theme .igx-grid__th--sortable .sort-icon {
     cursor: pointer;
     opacity: .7; }
@@ -15880,6 +15912,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     background: var(--igx-grid-toolbar-background-color);
     height: 3.625rem;
+    position: relative;
     padding: 0 1rem 0 1.5rem; }
     .fin-dark-theme .igx-grid-toolbar .igx-button--outlined, .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--outlined, .fin-dark-theme .igx-grid-toolbar--compact .igx-button--outlined,
     .fin-dark-theme .igx-grid-toolbar .igx-button--raised,
@@ -15963,6 +15996,17 @@ body {
           align-items: center;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .fin-dark-theme .igx-grid-toolbar__progress-bar {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -0.0625rem;
+    height: 0.125rem;
+    overflow: hidden;
+    background: var(--igx-grid-toolbar-background-color); }
+    .fin-dark-theme .igx-grid-toolbar__progress-bar igx-linear-bar > * {
+      border-radius: 0; }
   .fin-dark-theme .igx-grid-toolbar__adv-filter--filtered {
     border-color: #72da67 !important; }
   .fin-dark-theme .igx-grid-toolbar__dropdown {
@@ -16021,7 +16065,6 @@ body {
     --igx-input-group-search-hover-elevation: 2;
     --igx-input-group-search-disabled-elevation: 0;
     --igx-input-group-variant: material;
-    --igx-input-group-theme-variant: material;
     --igx-input-group-input-prefix-color: rgba(255, 255, 255, 0.54);
     --igx-input-group-input-prefix-background: transparent;
     --igx-input-group-input-suffix-color: rgba(255, 255, 255, 0.54);
@@ -16198,20 +16241,20 @@ body {
       width: calc(100% + 0.5rem);
       margin-left: -0.5rem !important;
       cursor: pointer !important; }
-  .fin-dark-theme .igx-input-group--fluent-search {
+  .fin-dark-theme .igx-input-group--search.igx-input-group--fluent {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    .fin-dark-theme .igx-input-group--fluent-search igx-prefix,
-    .fin-dark-theme .igx-input-group--fluent-search [igxPrefix] {
+    .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix,
+    .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
       outline-style: none;
       overflow: hidden; }
-    .fin-dark-theme .igx-input-group--fluent-search igx-suffix,
-    .fin-dark-theme .igx-input-group--fluent-search [igxSuffix] {
+    .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix,
+    .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
       outline-style: none; }
-  .fin-dark-theme .igx-input-group--focused.igx-input-group--fluent-search igx-prefix,
-  .fin-dark-theme .igx-input-group--focused.igx-input-group--fluent-search [igxPrefix] {
+  .fin-dark-theme .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search igx-prefix,
+  .fin-dark-theme .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search [igxPrefix] {
     visibility: hidden;
     width: 0;
     padding-left: 0 !important; }
@@ -16221,16 +16264,16 @@ body {
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy {
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix] {
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix] {
       outline-style: none; }
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix] {
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix] {
       outline-style: none; }
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
@@ -16238,16 +16281,16 @@ body {
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent igx-suffix,
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact {
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix] {
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix] {
       outline-style: none; }
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-    .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix] {
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+    .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix] {
       outline-style: none; }
   .fin-dark-theme .igx-input-group--required.igx-input-group--fluent .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle::after {
     content: '*';
@@ -16255,9 +16298,9 @@ body {
     top: -0.5rem;
     left: calc(100% + 0.25rem);
     color: var(--igx-input-group-error-secondary-color); }
-  .fin-dark-theme .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .fin-dark-theme .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__label + .igx-input-group__bundle::after {
+  .fin-dark-theme .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .fin-dark-theme .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .fin-dark-theme .igx-input-group--indigo .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .fin-dark-theme .igx-input-group--search.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after {
     display: none; }
-  .fin-dark-theme .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle, .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--fluent-search .fin-dark-theme .igx-input-group__bundle {
+  .fin-dark-theme .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle {
     padding: 0;
     min-height: 32px;
     border: 1px solid var(--igx-input-group-border-color);
@@ -16267,7 +16310,7 @@ body {
     position: relative;
     -ms-flex-align: stretch;
         align-items: stretch; }
-  .fin-dark-theme .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle:hover, .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__bundle:hover, .igx-input-group--fluent-search .fin-dark-theme .igx-input-group__bundle:hover {
+  .fin-dark-theme .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle:hover {
     border-color: var(--igx-input-group-hover-border-color);
     box-shadow: none; }
   .fin-dark-theme .igx-input-group--focused.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--focused.igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle:hover {
@@ -16286,27 +16329,25 @@ body {
   .fin-dark-theme .igx-input-group--valid.igx-input-group--fluent .igx-input-group__bundle,
   .igx-input-group--valid.igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle {
     border-color: var(--igx-input-group-success-secondary-color); }
-  .fin-dark-theme .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent .fin-dark-theme .igx-input-group__input, .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__input, .igx-input-group--fluent-search .fin-dark-theme .igx-input-group__input {
+  .fin-dark-theme .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent .fin-dark-theme .igx-input-group__input {
     padding: 0;
     margin: 0;
     border: none; }
   .fin-dark-theme .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent .fin-dark-theme .igx-input-group__input {
     color: var(--igx-input-group-disabled-text-color); }
-  .fin-dark-theme .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle-main, .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__bundle-main, .igx-input-group--fluent-search .fin-dark-theme .igx-input-group__bundle-main {
+  .fin-dark-theme .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent .fin-dark-theme .igx-input-group__bundle-main {
     padding-left: 0.5rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center; }
-  .fin-dark-theme .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent .fin-dark-theme igx-prefix + .igx-input-group__bundle-main, .fin-dark-theme .igx-input-group--fluent-search igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent-search .fin-dark-theme igx-prefix + .igx-input-group__bundle-main,
+  .fin-dark-theme .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent .fin-dark-theme igx-prefix + .igx-input-group__bundle-main,
   .fin-dark-theme .igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main,
-  .igx-input-group--fluent .fin-dark-theme [igx-prefix] + .igx-input-group__bundle-main,
-  .fin-dark-theme .igx-input-group--fluent-search [igx-prefix] + .igx-input-group__bundle-main,
-  .igx-input-group--fluent-search .fin-dark-theme [igx-prefix] + .igx-input-group__bundle-main {
+  .igx-input-group--fluent .fin-dark-theme [igx-prefix] + .igx-input-group__bundle-main {
     padding-left: 0; }
   .fin-dark-theme .igx-input-group--placeholder.igx-input-group--fluent .igx-input-group__label, .igx-input-group--placeholder.igx-input-group--fluent .fin-dark-theme .igx-input-group__label {
     -ms-transform: translateY(0) scale(1);
         transform: translateY(0) scale(1); }
-  .fin-dark-theme .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent .fin-dark-theme .igx-input-group__label, .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__label, .igx-input-group--fluent-search .fin-dark-theme .igx-input-group__label {
+  .fin-dark-theme .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent .fin-dark-theme .igx-input-group__label, .fin-dark-theme .igx-input-group--indigo .igx-input-group__label, .igx-input-group--indigo .fin-dark-theme .igx-input-group__label {
     padding: 0.3125rem 0;
     line-height: normal !important;
     position: static;
@@ -16350,7 +16391,7 @@ body {
   .fin-dark-theme .igx-input-group--focused.igx-input-group--search .igx-input-group__bundle, .igx-input-group--focused.igx-input-group--search .fin-dark-theme .igx-input-group__bundle {
     box-shadow: var(--igx-input-group-search-hover-shadow);
     border-color: var(--igx-input-group-hover-border-color); }
-  .fin-dark-theme .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search .fin-dark-theme .igx-input-group__bundle, .fin-dark-theme .igx-input-group--disabled.igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent-search .fin-dark-theme .igx-input-group__bundle {
+  .fin-dark-theme .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search .fin-dark-theme .igx-input-group__bundle {
     background: var(--igx-input-group-search-disabled-background);
     box-shadow: var(--igx-input-group-search-disabled-shadow);
     border-color: var(--igx-input-group-disabled-border-color); }
@@ -16631,8 +16672,10 @@ body {
     color: var(--igx-input-group-input-prefix-color);
     background: var(--igx-input-group-input-prefix-background);
     padding: 0.5rem;
+    width: auto;
     height: auto;
-    line-height: normal; }
+    line-height: normal;
+    font-weight: 400; }
     .igx-input-group--fluent .fin-dark-theme igx-prefix igx-icon, .igx-input-group--fluent .fin-dark-theme [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--fluent igx-prefix igx-icon, .fin-dark-theme .igx-input-group--fluent [igxPrefix] igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .fin-dark-theme igx-prefix igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .fin-dark-theme [igxPrefix] igx-icon {
       width: 1.125rem;
       height: 1.125rem;
@@ -16640,16 +16683,15 @@ body {
     .igx-input-group--fluent .fin-dark-theme igx-prefix:last-of-type, .igx-input-group--fluent .fin-dark-theme :last-of-type[igxPrefix], .fin-dark-theme .igx-input-group--fluent igx-prefix:last-of-type,
     .fin-dark-theme .igx-input-group--fluent :last-of-type[igxPrefix] {
       margin-right: 0.5rem; }
-  .igx-input-group--fluent-search .fin-dark-theme igx-prefix, .igx-input-group--fluent-search .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent-search igx-prefix,
-  .fin-dark-theme .igx-input-group--fluent-search [igxPrefix], .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .fin-dark-theme igx-prefix,
-  .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .fin-dark-theme [igxPrefix] {
+  .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-prefix, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix,
+  .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
     padding: 0.5rem; }
-    .igx-input-group--fluent-search .fin-dark-theme igx-prefix igx-icon, .igx-input-group--fluent-search .fin-dark-theme [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--fluent-search igx-prefix igx-icon, .fin-dark-theme .igx-input-group--fluent-search [igxPrefix] igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .fin-dark-theme igx-prefix igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .fin-dark-theme [igxPrefix] igx-icon {
+    .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-prefix igx-icon, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
-    .igx-input-group--fluent-search .fin-dark-theme igx-prefix:last-of-type, .igx-input-group--fluent-search .fin-dark-theme :last-of-type[igxPrefix], .fin-dark-theme .igx-input-group--fluent-search igx-prefix:last-of-type,
-    .fin-dark-theme .igx-input-group--fluent-search :last-of-type[igxPrefix] {
+    .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-prefix:last-of-type, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme :last-of-type[igxPrefix], .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix:last-of-type,
+    .fin-dark-theme .igx-input-group--search.igx-input-group--fluent :last-of-type[igxPrefix] {
       margin-right: 0; }
   .igx-input-group--fluent .fin-dark-theme igx-suffix, .igx-input-group--fluent .fin-dark-theme [igxSuffix], .fin-dark-theme .igx-input-group--fluent igx-suffix,
   .fin-dark-theme .igx-input-group--fluent [igxSuffix], .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .fin-dark-theme igx-suffix,
@@ -16657,6 +16699,7 @@ body {
     color: var(--igx-input-group-input-suffix-color);
     padding: 0.5rem;
     background: var(--igx-input-group-input-suffix-background);
+    width: auto;
     height: auto;
     line-height: normal; }
     .igx-input-group--fluent .fin-dark-theme igx-suffix igx-icon, .igx-input-group--fluent .fin-dark-theme [igxSuffix] igx-icon, .fin-dark-theme .igx-input-group--fluent igx-suffix igx-icon, .fin-dark-theme .igx-input-group--fluent [igxSuffix] igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .fin-dark-theme igx-suffix igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxSuffix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .fin-dark-theme [igxSuffix] igx-icon {
@@ -16666,25 +16709,25 @@ body {
     .igx-input-group--fluent .fin-dark-theme igx-suffix:first-of-type, .igx-input-group--fluent .fin-dark-theme :first-of-type[igxSuffix], .fin-dark-theme .igx-input-group--fluent igx-suffix:first-of-type,
     .fin-dark-theme .igx-input-group--fluent :first-of-type[igxSuffix] {
       margin-left: 0.5rem; }
-  .igx-input-group--fluent-search .fin-dark-theme igx-suffix, .igx-input-group--fluent-search .fin-dark-theme [igxSuffix], .fin-dark-theme .igx-input-group--fluent-search igx-suffix,
-  .fin-dark-theme .igx-input-group--fluent-search [igxSuffix], .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .fin-dark-theme igx-suffix,
-  .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .fin-dark-theme [igxSuffix] {
+  .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-suffix, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme [igxSuffix], .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix,
+  .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
+    width: auto;
     height: auto;
     padding: 0.5rem;
     line-height: normal; }
-    .igx-input-group--fluent-search .fin-dark-theme igx-suffix .igx-icon, .igx-input-group--fluent-search .fin-dark-theme [igxSuffix] .igx-icon, .fin-dark-theme .igx-input-group--fluent-search igx-suffix .igx-icon, .fin-dark-theme .igx-input-group--fluent-search [igxSuffix] .igx-icon, .igx-input-group--fluent-search .fin-dark-theme igx-suffix .igx-icon--inactive, .igx-input-group--fluent-search .fin-dark-theme [igxSuffix] .igx-icon--inactive, .fin-dark-theme .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, .fin-dark-theme .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive {
+    .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-suffix .igx-icon, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme [igxSuffix] .igx-icon, .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-suffix .igx-icon--inactive, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme [igxSuffix] .igx-icon--inactive, .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, .fin-dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
-    .igx-input-group--fluent-search .fin-dark-theme igx-suffix:first-of-type, .igx-input-group--fluent-search .fin-dark-theme :first-of-type[igxSuffix], .fin-dark-theme .igx-input-group--fluent-search igx-suffix:first-of-type,
-    .fin-dark-theme .igx-input-group--fluent-search :first-of-type[igxSuffix] {
+    .igx-input-group--search.igx-input-group--fluent .fin-dark-theme igx-suffix:first-of-type, .igx-input-group--search.igx-input-group--fluent .fin-dark-theme :first-of-type[igxSuffix], .fin-dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix:first-of-type,
+    .fin-dark-theme .igx-input-group--search.igx-input-group--fluent :first-of-type[igxSuffix] {
       margin-left: 0; }
-  .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
-  .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme [igxSuffix],
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme [igxSuffix],
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
   .igx-input-group--cosy.igx-input-group--fluent .fin-dark-theme igx-prefix,
   .igx-input-group--cosy.igx-input-group--fluent .fin-dark-theme [igxPrefix],
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
@@ -16695,12 +16738,12 @@ body {
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     height: auto;
     line-height: normal; }
-  .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
-  .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme [igxSuffix],
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme [igxSuffix],
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
   .igx-input-group--compact.igx-input-group--fluent .fin-dark-theme igx-prefix,
   .igx-input-group--compact.igx-input-group--fluent .fin-dark-theme [igxPrefix],
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent igx-prefix,
@@ -16712,35 +16755,35 @@ body {
     font-size: 0.95455rem;
     height: auto;
     line-height: normal; }
-  .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
   .igx-input-group--cosy.igx-input-group--fluent .fin-dark-theme igx-prefix,
   .igx-input-group--cosy.igx-input-group--fluent .fin-dark-theme [igxPrefix],
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxPrefix] {
     padding: 0.42105rem; }
-  .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
   .igx-input-group--compact.igx-input-group--fluent .fin-dark-theme igx-prefix,
   .igx-input-group--compact.igx-input-group--fluent .fin-dark-theme [igxPrefix],
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
     padding: 0.36364rem; }
   
-  .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--cosy .fin-dark-theme [igxSuffix],
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .fin-dark-theme [igxSuffix],
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
   .igx-input-group--cosy.igx-input-group--fluent .fin-dark-theme igx-suffix,
   .igx-input-group--cosy.igx-input-group--fluent .fin-dark-theme [igxSuffix],
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     padding: 0.42105rem; }
   
-  .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--compact .fin-dark-theme [igxSuffix],
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  .fin-dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .fin-dark-theme [igxSuffix],
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  .fin-dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
   .igx-input-group--compact.igx-input-group--fluent .fin-dark-theme igx-suffix,
   .igx-input-group--compact.igx-input-group--fluent .fin-dark-theme [igxSuffix],
   .fin-dark-theme .igx-input-group--compact.igx-input-group--fluent igx-suffix,
@@ -16819,7 +16862,7 @@ body {
     padding-top: 0.375rem; }
     .fin-dark-theme .igx-input-group__hint:empty {
       display: none; }
-  .fin-dark-theme .igx-input-group--box .igx-input-group__hint, .igx-input-group--box .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--border .igx-input-group__hint, .igx-input-group--border .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--search .igx-input-group__hint, .igx-input-group--search .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search .fin-dark-theme .igx-input-group__hint {
+  .fin-dark-theme .igx-input-group--box .igx-input-group__hint, .igx-input-group--box .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--border .igx-input-group__hint, .igx-input-group--border .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo .fin-dark-theme .igx-input-group__hint, .fin-dark-theme .igx-input-group--search .igx-input-group__hint, .igx-input-group--search .fin-dark-theme .igx-input-group__hint {
     margin-left: 0.75rem;
     /* 16px, base is 12px */
     margin-right: 0.75rem;
@@ -16892,9 +16935,24 @@ body {
     border: 1px solid var(--igx-input-group-border-color);
     padding: 0.5rem 1rem;
     z-index: -1;
+    width: auto;
     height: auto;
+    font-size: 1.25rem;
     line-height: 1.5;
     white-space: nowrap; }
+    .igx-input-group--bootstrap .fin-dark-theme igx-prefix igx-icon, .igx-input-group--bootstrap .fin-dark-theme [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--bootstrap igx-prefix igx-icon, .fin-dark-theme .igx-input-group--bootstrap [igxPrefix] igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap .fin-dark-theme igx-prefix igx-icon, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap .fin-dark-theme [igxPrefix] igx-icon,
+    .igx-input-group--bootstrap .fin-dark-theme igx-suffix igx-icon,
+    .igx-input-group--bootstrap .fin-dark-theme [igxSuffix] igx-icon,
+    .fin-dark-theme .igx-input-group--bootstrap igx-suffix igx-icon,
+    .fin-dark-theme .igx-input-group--bootstrap [igxSuffix] igx-icon,
+    .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-suffix igx-icon,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap .fin-dark-theme igx-suffix igx-icon,
+    .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxSuffix] igx-icon,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap .fin-dark-theme [igxSuffix] igx-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: 400; }
   .igx-input-group--bootstrap .fin-dark-theme igx-prefix, .igx-input-group--bootstrap .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group--bootstrap igx-prefix,
   .fin-dark-theme .igx-input-group--bootstrap [igxPrefix], .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap .fin-dark-theme igx-prefix,
   .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap .fin-dark-theme [igxPrefix] {
@@ -16930,6 +16988,7 @@ body {
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix,
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--bootstrap [igxSuffix] {
     padding: 0.375rem 0.75rem;
+    width: auto;
     height: auto; }
     .igx-input-group--cosy.igx-input-group--bootstrap .fin-dark-theme igx-prefix igx-icon, .igx-input-group--cosy.igx-input-group--bootstrap .fin-dark-theme [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, .fin-dark-theme .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon,
     .igx-input-group--cosy.igx-input-group--bootstrap .fin-dark-theme igx-suffix igx-icon,
@@ -16946,6 +17005,7 @@ body {
   .fin-dark-theme .igx-input-group--compact.igx-input-group--bootstrap igx-suffix,
   .fin-dark-theme .igx-input-group--compact.igx-input-group--bootstrap [igxSuffix] {
     padding: 0.25rem 0.5rem;
+    width: auto;
     height: auto; }
     .igx-input-group--compact.igx-input-group--bootstrap .fin-dark-theme igx-prefix igx-icon, .igx-input-group--compact.igx-input-group--bootstrap .fin-dark-theme [igxPrefix] igx-icon, .fin-dark-theme .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, .fin-dark-theme .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon,
     .igx-input-group--compact.igx-input-group--bootstrap .fin-dark-theme igx-suffix igx-icon,
@@ -16996,6 +17056,9 @@ body {
     background: var(--igx-input-group-border-disabled-background);
     border: 1px solid var(--igx-input-group-disabled-border-color);
     box-shadow: none; }
+  .fin-dark-theme .igx-input-group--search.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--search.igx-input-group--bootstrap .fin-dark-theme .igx-input-group__input {
+    -ms-transform: translateY(0);
+        transform: translateY(0); }
   .fin-dark-theme .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--cosy.igx-input-group--bootstrap .fin-dark-theme .igx-input-group__input, .fin-dark-theme .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--cosy.igx-input-group--bootstrap .fin-dark-theme .igx-input-group__textarea {
     font-size: 1rem;
     padding: 0.375rem 0.75rem; }
@@ -19728,10 +19791,7 @@ body {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-positive: 1;
-        flex-grow: 1;
-    -ms-flex-preferred-size: 14.28%;
-        flex-basis: 14.28%;
+    min-width: 14.28%;
     color: rgba(255, 255, 255, 0.87);
     cursor: pointer;
     outline: none; }
@@ -19748,8 +19808,8 @@ body {
     -ms-flex-align: center;
         align-items: center;
     width: 2.5em;
+    min-width: 2.5em;
     height: 2.5em;
-    min-width: 2ch;
     border-radius: 20px;
     z-index: 0; }
     .dark-theme .igx-calendar__date-content::after {
@@ -19764,8 +19824,7 @@ body {
   .dark-theme .igx-calendar__label {
     color: rgba(255, 255, 255, 0.26);
     border-radius: 0;
-    -ms-flex-preferred-size: 14.28%;
-        flex-basis: 14.28%; }
+    min-width: 14.28%; }
     .dark-theme .igx-calendar__label:hover, .dark-theme .igx-calendar__label:focus {
       color: rgba(255, 255, 255, 0.26); }
   .dark-theme .igx-calendar__date--weekend {
@@ -21138,12 +21197,12 @@ body {
     cursor: pointer;
     -webkit-filter: opacity(1);
             filter: opacity(1); }
-  .dark-theme .igx-chip__item:hover {
+  .igx-chip:hover .dark-theme .igx-chip__item, .igx-chip__ghost:hover .dark-theme .igx-chip__item, .igx-chip__ghost--cosy:hover .dark-theme .igx-chip__item, .igx-chip__ghost--compact:hover .dark-theme .igx-chip__item, .igx-chip--cosy:hover .dark-theme .igx-chip__item, .igx-chip--compact:hover .dark-theme .igx-chip__item, .dark-theme .igx-chip:hover .igx-chip__item, .dark-theme .igx-chip__ghost:hover .igx-chip__item, .dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item, .dark-theme .igx-chip__ghost--compact:hover .igx-chip__item, .dark-theme .igx-chip--cosy:hover .igx-chip__item, .dark-theme .igx-chip--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item {
     color: rgba(255, 255, 255, 0.62);
     background: rgba(255, 255, 255, 0.12);
     border-color: transparent;
     transition: all 120ms ease-in; }
-  .dark-theme .igx-chip__item:focus {
+  .igx-chip:focus .dark-theme .igx-chip__item, .igx-chip__ghost:focus .dark-theme .igx-chip__item, .igx-chip__ghost--cosy:focus .dark-theme .igx-chip__item, .igx-chip__ghost--compact:focus .dark-theme .igx-chip__item, .igx-chip--cosy:focus .dark-theme .igx-chip__item, .igx-chip--compact:focus .dark-theme .igx-chip__item, .dark-theme .igx-chip:focus .igx-chip__item, .dark-theme .igx-chip__ghost:focus .igx-chip__item, .dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item, .dark-theme .igx-chip__ghost--compact:focus .igx-chip__item, .dark-theme .igx-chip--cosy:focus .igx-chip__item, .dark-theme .igx-chip--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item {
     color: rgba(255, 255, 255, 0.62);
     background: rgba(255, 255, 255, 0.26);
     border-color: transparent;
@@ -21152,12 +21211,12 @@ body {
     color: rgba(255, 255, 255, 0.62);
     background: rgba(255, 255, 255, 0.12);
     border-color: transparent; }
-  .dark-theme .igx-chip__item--selected:hover {
+  .igx-chip:hover .dark-theme .igx-chip__item--selected, .igx-chip__ghost:hover .dark-theme .igx-chip__item--selected, .igx-chip__ghost--cosy:hover .dark-theme .igx-chip__item--selected, .igx-chip__ghost--compact:hover .dark-theme .igx-chip__item--selected, .igx-chip--cosy:hover .dark-theme .igx-chip__item--selected, .igx-chip--compact:hover .dark-theme .igx-chip__item--selected, .dark-theme .igx-chip:hover .igx-chip__item--selected, .dark-theme .igx-chip__ghost:hover .igx-chip__item--selected, .dark-theme .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .dark-theme .igx-chip__ghost--compact:hover .igx-chip__item--selected, .dark-theme .igx-chip--cosy:hover .igx-chip__item--selected, .dark-theme .igx-chip--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item--selected {
     color: rgba(255, 255, 255, 0.62);
     background: rgba(255, 255, 255, 0.26);
     border-color: transparent;
     transition: all 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  .dark-theme .igx-chip__item--selected:focus {
+  .igx-chip:focus .dark-theme .igx-chip__item--selected, .igx-chip__ghost:focus .dark-theme .igx-chip__item--selected, .igx-chip__ghost--cosy:focus .dark-theme .igx-chip__item--selected, .igx-chip__ghost--compact:focus .dark-theme .igx-chip__item--selected, .igx-chip--cosy:focus .dark-theme .igx-chip__item--selected, .igx-chip--compact:focus .dark-theme .igx-chip__item--selected, .dark-theme .igx-chip:focus .igx-chip__item--selected, .dark-theme .igx-chip__ghost:focus .igx-chip__item--selected, .dark-theme .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .dark-theme .igx-chip__ghost--compact:focus .igx-chip__item--selected, .dark-theme .igx-chip--cosy:focus .igx-chip__item--selected, .dark-theme .igx-chip--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item--selected {
     color: rgba(255, 255, 255, 0.62);
     background: rgba(255, 255, 255, 0.26);
     border-color: transparent;
@@ -21228,9 +21287,6 @@ body {
   .dark-theme .igx-combo {
     position: relative;
     display: block; }
-    .dark-theme .igx-combo .igx-button--icon {
-      width: 1.5rem;
-      height: 1.5rem; }
   .dark-theme .igx-combo__checkbox {
     margin-right: 0.5rem; }
   .dark-theme .igx-combo__drop-down {
@@ -21299,8 +21355,7 @@ body {
         color: #72da67; }
     .dark-theme .igx-date-picker .igx-calendar__label, .dark-theme .igx-date-picker .igx-calendar__date, .dark-theme .igx-date-picker .igx-calendar__date--inactive, .dark-theme .igx-date-picker .igx-calendar__date--selected, .dark-theme .igx-date-picker .igx-calendar__date--current, .dark-theme .igx-date-picker .igx-calendar__date--weekend, .dark-theme .igx-date-picker .igx-calendar__date--special, .dark-theme .igx-date-picker .igx-calendar__date--disabled, .dark-theme .igx-date-picker .igx-calendar__year, .dark-theme .igx-date-picker .igx-calendar__year--current, .dark-theme .igx-date-picker .igx-calendar__month, .dark-theme .igx-date-picker .igx-calendar__month--current {
       color: rgba(255, 255, 255, 0.87);
-      -ms-flex-preferred-size: 14.28%;
-          flex-basis: 14.28%; }
+      min-width: 14.28%; }
     .dark-theme .igx-date-picker .igx-calendar__label {
       color: rgba(255, 255, 255, 0.26); }
       .dark-theme .igx-date-picker .igx-calendar__label:hover, .dark-theme .igx-date-picker .igx-calendar__label:focus {
@@ -21758,8 +21813,7 @@ body {
     overflow: hidden;
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
     outline-style: none;
-    z-index: 1;
-    border: 0 solid transparent; }
+    z-index: 1; }
     .dark-theme .igx-grid .igx-checkbox, .dark-theme .igx-grid--cosy .igx-checkbox, .dark-theme .igx-grid--compact .igx-checkbox {
       min-width: 1.25rem; }
   .dark-theme .igx-grid__caption {
@@ -22194,10 +22248,22 @@ body {
     color: rgba(255, 255, 255, 0.38); }
   .dark-theme .igx-grid__td--editing {
     background: #222 !important;
-    box-shadow: inset 0 0 0 0.125rem #72da67; }
+    box-shadow: inset 0 0 0 0.125rem #72da67;
+    padding: 0 !important; }
     .dark-theme .igx-grid__td--editing igx-input-group {
+      --igx-input-group-variant: fluent;
       width: 100%;
-      margin-top: -16px; }
+      height: 100%;
+      padding-top: 0 !important; }
+    .dark-theme .igx-grid__td--editing igx-date-picker,
+    .dark-theme .igx-grid__td--editing igx-time-picker,
+    .dark-theme .igx-grid__td--editing igx-date-range-picker {
+      height: 100%; }
+    .dark-theme .igx-grid__td--editing .igx-input-group__bundle {
+      height: 100%; }
+    .dark-theme .igx-grid__td--editing input {
+      margin: 0 auto;
+      max-width: 100%; }
     .dark-theme .igx-grid__td--editing .igx-input-group__input, .dark-theme .igx-grid__td--editing .igx-input-group__textarea {
       font-size: 0.8125rem !important;
       line-height: 1rem !important; }
@@ -22337,9 +22403,13 @@ body {
     color: white;
     background: #466742;
     opacity: 0.7; }
+    .dark-theme .igx-grid__th--selectable .sort-icon::after {
+      background: #466742; }
   .dark-theme .igx-grid__th--selected {
     color: white;
     background: #466742; }
+    .dark-theme .igx-grid__th--selected .sort-icon::after {
+      background: #466742; }
   .dark-theme .igx-grid__th--sortable .sort-icon {
     cursor: pointer;
     opacity: .7; }
@@ -24074,6 +24144,7 @@ body {
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     background: #222;
     height: 3.625rem;
+    position: relative;
     padding: 0 1rem 0 1.5rem; }
     .dark-theme .igx-grid-toolbar .igx-button--outlined, .dark-theme .igx-grid-toolbar--cosy .igx-button--outlined, .dark-theme .igx-grid-toolbar--compact .igx-button--outlined,
     .dark-theme .igx-grid-toolbar .igx-button--raised,
@@ -24157,6 +24228,17 @@ body {
           align-items: center;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .dark-theme .igx-grid-toolbar__progress-bar {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: -0.0625rem;
+    height: 0.125rem;
+    overflow: hidden;
+    background: #222; }
+    .dark-theme .igx-grid-toolbar__progress-bar igx-linear-bar > * {
+      border-radius: 0; }
   .dark-theme .igx-grid-toolbar__adv-filter--filtered {
     border-color: #72da67 !important; }
   .dark-theme .igx-grid-toolbar__dropdown {
@@ -24215,7 +24297,6 @@ body {
     --igx-input-group-search-hover-elevation: 2;
     --igx-input-group-search-disabled-elevation: 0;
     --igx-input-group-variant: material;
-    --igx-input-group-theme-variant: material;
     --igx-input-group-input-prefix-color: rgba(255, 255, 255, 0.54);
     --igx-input-group-input-prefix-background: transparent;
     --igx-input-group-input-suffix-color: rgba(255, 255, 255, 0.54);
@@ -24392,20 +24473,20 @@ body {
       width: calc(100% + 0.5rem);
       margin-left: -0.5rem !important;
       cursor: pointer !important; }
-  .dark-theme .igx-input-group--fluent-search {
+  .dark-theme .igx-input-group--search.igx-input-group--fluent {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    .dark-theme .igx-input-group--fluent-search igx-prefix,
-    .dark-theme .igx-input-group--fluent-search [igxPrefix] {
+    .dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix,
+    .dark-theme .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
       outline-style: none;
       overflow: hidden; }
-    .dark-theme .igx-input-group--fluent-search igx-suffix,
-    .dark-theme .igx-input-group--fluent-search [igxSuffix] {
+    .dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix,
+    .dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
       outline-style: none; }
-  .dark-theme .igx-input-group--focused.igx-input-group--fluent-search igx-prefix,
-  .dark-theme .igx-input-group--focused.igx-input-group--fluent-search [igxPrefix] {
+  .dark-theme .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search igx-prefix,
+  .dark-theme .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search [igxPrefix] {
     visibility: hidden;
     width: 0;
     padding-left: 0 !important; }
@@ -24415,16 +24496,16 @@ body {
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy {
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix] {
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix] {
       outline-style: none; }
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix] {
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix] {
       outline-style: none; }
   .dark-theme .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   .dark-theme .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
@@ -24432,16 +24513,16 @@ body {
   .dark-theme .igx-input-group--compact.igx-input-group--fluent igx-suffix,
   .dark-theme .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
     outline-style: none; }
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact {
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column; }
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix] {
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix] {
       outline-style: none; }
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix] {
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix] {
       outline-style: none; }
   .dark-theme .igx-input-group--required.igx-input-group--fluent .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .igx-input-group__bundle::after {
     content: '*';
@@ -24449,9 +24530,9 @@ body {
     top: -0.5rem;
     left: calc(100% + 0.25rem);
     color: #ff134a; }
-  .dark-theme .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .igx-input-group--fluent-search .igx-input-group__label + .igx-input-group__bundle::after {
+  .dark-theme .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .igx-input-group--indigo .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .igx-input-group--search.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after {
     display: none; }
-  .dark-theme .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent .dark-theme .igx-input-group__bundle, .dark-theme .igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--fluent-search .dark-theme .igx-input-group__bundle {
+  .dark-theme .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent .dark-theme .igx-input-group__bundle {
     padding: 0;
     min-height: 32px;
     border: 1px solid rgba(255, 255, 255, 0.54);
@@ -24461,7 +24542,7 @@ body {
     position: relative;
     -ms-flex-align: stretch;
         align-items: stretch; }
-  .dark-theme .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent .dark-theme .igx-input-group__bundle:hover, .dark-theme .igx-input-group--fluent-search .igx-input-group__bundle:hover, .igx-input-group--fluent-search .dark-theme .igx-input-group__bundle:hover {
+  .dark-theme .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent .dark-theme .igx-input-group__bundle:hover {
     border-color: rgba(255, 255, 255, 0.87);
     box-shadow: none; }
   .dark-theme .igx-input-group--focused.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--focused.igx-input-group--fluent .dark-theme .igx-input-group__bundle:hover {
@@ -24480,27 +24561,25 @@ body {
   .dark-theme .igx-input-group--valid.igx-input-group--fluent .igx-input-group__bundle,
   .igx-input-group--valid.igx-input-group--fluent .dark-theme .igx-input-group__bundle {
     border-color: #4eb862; }
-  .dark-theme .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent .dark-theme .igx-input-group__input, .dark-theme .igx-input-group--fluent-search .igx-input-group__input, .igx-input-group--fluent-search .dark-theme .igx-input-group__input {
+  .dark-theme .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent .dark-theme .igx-input-group__input {
     padding: 0;
     margin: 0;
     border: none; }
   .dark-theme .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent .dark-theme .igx-input-group__input {
     color: rgba(255, 255, 255, 0.38); }
-  .dark-theme .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent .dark-theme .igx-input-group__bundle-main, .dark-theme .igx-input-group--fluent-search .igx-input-group__bundle-main, .igx-input-group--fluent-search .dark-theme .igx-input-group__bundle-main {
+  .dark-theme .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent .dark-theme .igx-input-group__bundle-main {
     padding-left: 0.5rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center; }
-  .dark-theme .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent .dark-theme igx-prefix + .igx-input-group__bundle-main, .dark-theme .igx-input-group--fluent-search igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent-search .dark-theme igx-prefix + .igx-input-group__bundle-main,
+  .dark-theme .igx-input-group--fluent igx-prefix + .igx-input-group__bundle-main, .igx-input-group--fluent .dark-theme igx-prefix + .igx-input-group__bundle-main,
   .dark-theme .igx-input-group--fluent [igx-prefix] + .igx-input-group__bundle-main,
-  .igx-input-group--fluent .dark-theme [igx-prefix] + .igx-input-group__bundle-main,
-  .dark-theme .igx-input-group--fluent-search [igx-prefix] + .igx-input-group__bundle-main,
-  .igx-input-group--fluent-search .dark-theme [igx-prefix] + .igx-input-group__bundle-main {
+  .igx-input-group--fluent .dark-theme [igx-prefix] + .igx-input-group__bundle-main {
     padding-left: 0; }
   .dark-theme .igx-input-group--placeholder.igx-input-group--fluent .igx-input-group__label, .igx-input-group--placeholder.igx-input-group--fluent .dark-theme .igx-input-group__label {
     -ms-transform: translateY(0) scale(1);
         transform: translateY(0) scale(1); }
-  .dark-theme .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent .dark-theme .igx-input-group__label, .dark-theme .igx-input-group--fluent-search .igx-input-group__label, .igx-input-group--fluent-search .dark-theme .igx-input-group__label {
+  .dark-theme .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent .dark-theme .igx-input-group__label, .dark-theme .igx-input-group--indigo .igx-input-group__label, .igx-input-group--indigo .dark-theme .igx-input-group__label {
     padding: 0.3125rem 0;
     line-height: normal !important;
     position: static;
@@ -24544,7 +24623,7 @@ body {
   .dark-theme .igx-input-group--focused.igx-input-group--search .igx-input-group__bundle, .igx-input-group--focused.igx-input-group--search .dark-theme .igx-input-group__bundle {
     box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
     border-color: rgba(255, 255, 255, 0.87); }
-  .dark-theme .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search .dark-theme .igx-input-group__bundle, .dark-theme .igx-input-group--disabled.igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent-search .dark-theme .igx-input-group__bundle {
+  .dark-theme .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search .dark-theme .igx-input-group__bundle {
     background: rgba(255, 255, 255, 0.04);
     box-shadow: none;
     border-color: rgba(255, 255, 255, 0.12); }
@@ -24809,8 +24888,10 @@ body {
     color: rgba(255, 255, 255, 0.54);
     background: transparent;
     padding: 0.5rem;
+    width: auto;
     height: auto;
-    line-height: normal; }
+    line-height: normal;
+    font-weight: 400; }
     .igx-input-group--fluent .dark-theme igx-prefix igx-icon, .igx-input-group--fluent .dark-theme [igxPrefix] igx-icon, .dark-theme .igx-input-group--fluent igx-prefix igx-icon, .dark-theme .igx-input-group--fluent [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxPrefix] igx-icon {
       width: 1.125rem;
       height: 1.125rem;
@@ -24818,16 +24899,15 @@ body {
     .igx-input-group--fluent .dark-theme igx-prefix:last-of-type, .igx-input-group--fluent .dark-theme :last-of-type[igxPrefix], .dark-theme .igx-input-group--fluent igx-prefix:last-of-type,
     .dark-theme .igx-input-group--fluent :last-of-type[igxPrefix] {
       margin-right: 0.5rem; }
-  .igx-input-group--fluent-search .dark-theme igx-prefix, .igx-input-group--fluent-search .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent-search igx-prefix,
-  .dark-theme .igx-input-group--fluent-search [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix,
-  .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] {
+  .igx-input-group--search.igx-input-group--fluent .dark-theme igx-prefix, .igx-input-group--search.igx-input-group--fluent .dark-theme [igxPrefix], .dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix,
+  .dark-theme .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
     padding: 0.5rem; }
-    .igx-input-group--fluent-search .dark-theme igx-prefix igx-icon, .igx-input-group--fluent-search .dark-theme [igxPrefix] igx-icon, .dark-theme .igx-input-group--fluent-search igx-prefix igx-icon, .dark-theme .igx-input-group--fluent-search [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] igx-icon {
+    .igx-input-group--search.igx-input-group--fluent .dark-theme igx-prefix igx-icon, .igx-input-group--search.igx-input-group--fluent .dark-theme [igxPrefix] igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
-    .igx-input-group--fluent-search .dark-theme igx-prefix:last-of-type, .igx-input-group--fluent-search .dark-theme :last-of-type[igxPrefix], .dark-theme .igx-input-group--fluent-search igx-prefix:last-of-type,
-    .dark-theme .igx-input-group--fluent-search :last-of-type[igxPrefix] {
+    .igx-input-group--search.igx-input-group--fluent .dark-theme igx-prefix:last-of-type, .igx-input-group--search.igx-input-group--fluent .dark-theme :last-of-type[igxPrefix], .dark-theme .igx-input-group--search.igx-input-group--fluent igx-prefix:last-of-type,
+    .dark-theme .igx-input-group--search.igx-input-group--fluent :last-of-type[igxPrefix] {
       margin-right: 0; }
   .igx-input-group--fluent .dark-theme igx-suffix, .igx-input-group--fluent .dark-theme [igxSuffix], .dark-theme .igx-input-group--fluent igx-suffix,
   .dark-theme .igx-input-group--fluent [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix,
@@ -24835,6 +24915,7 @@ body {
     color: rgba(255, 255, 255, 0.54);
     padding: 0.5rem;
     background: transparent;
+    width: auto;
     height: auto;
     line-height: normal; }
     .igx-input-group--fluent .dark-theme igx-suffix igx-icon, .igx-input-group--fluent .dark-theme [igxSuffix] igx-icon, .dark-theme .igx-input-group--fluent igx-suffix igx-icon, .dark-theme .igx-input-group--fluent [igxSuffix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxSuffix] igx-icon {
@@ -24844,25 +24925,25 @@ body {
     .igx-input-group--fluent .dark-theme igx-suffix:first-of-type, .igx-input-group--fluent .dark-theme :first-of-type[igxSuffix], .dark-theme .igx-input-group--fluent igx-suffix:first-of-type,
     .dark-theme .igx-input-group--fluent :first-of-type[igxSuffix] {
       margin-left: 0.5rem; }
-  .igx-input-group--fluent-search .dark-theme igx-suffix, .igx-input-group--fluent-search .dark-theme [igxSuffix], .dark-theme .igx-input-group--fluent-search igx-suffix,
-  .dark-theme .igx-input-group--fluent-search [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix,
-  .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] {
+  .igx-input-group--search.igx-input-group--fluent .dark-theme igx-suffix, .igx-input-group--search.igx-input-group--fluent .dark-theme [igxSuffix], .dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix,
+  .dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
+    width: auto;
     height: auto;
     padding: 0.5rem;
     line-height: normal; }
-    .igx-input-group--fluent-search .dark-theme igx-suffix .igx-icon, .igx-input-group--fluent-search .dark-theme [igxSuffix] .igx-icon, .dark-theme .igx-input-group--fluent-search igx-suffix .igx-icon, .dark-theme .igx-input-group--fluent-search [igxSuffix] .igx-icon, .igx-input-group--fluent-search .dark-theme igx-suffix .igx-icon--inactive, .igx-input-group--fluent-search .dark-theme [igxSuffix] .igx-icon--inactive, .dark-theme .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, .dark-theme .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive {
+    .igx-input-group--search.igx-input-group--fluent .dark-theme igx-suffix .igx-icon, .igx-input-group--search.igx-input-group--fluent .dark-theme [igxSuffix] .igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, .igx-input-group--search.igx-input-group--fluent .dark-theme igx-suffix .igx-icon--inactive, .igx-input-group--search.igx-input-group--fluent .dark-theme [igxSuffix] .igx-icon--inactive, .dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, .dark-theme .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
-    .igx-input-group--fluent-search .dark-theme igx-suffix:first-of-type, .igx-input-group--fluent-search .dark-theme :first-of-type[igxSuffix], .dark-theme .igx-input-group--fluent-search igx-suffix:first-of-type,
-    .dark-theme .igx-input-group--fluent-search :first-of-type[igxSuffix] {
+    .igx-input-group--search.igx-input-group--fluent .dark-theme igx-suffix:first-of-type, .igx-input-group--search.igx-input-group--fluent .dark-theme :first-of-type[igxSuffix], .dark-theme .igx-input-group--search.igx-input-group--fluent igx-suffix:first-of-type,
+    .dark-theme .igx-input-group--search.igx-input-group--fluent :first-of-type[igxSuffix] {
       margin-left: 0; }
-  .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
-  .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme [igxSuffix],
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme [igxSuffix],
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
   .igx-input-group--cosy.igx-input-group--fluent .dark-theme igx-prefix,
   .igx-input-group--cosy.igx-input-group--fluent .dark-theme [igxPrefix],
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
@@ -24873,12 +24954,12 @@ body {
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     height: auto;
     line-height: normal; }
-  .igx-input-group--fluent-search.igx-input-group--compact .dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--compact .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
-  .igx-input-group--fluent-search.igx-input-group--compact .dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--compact .dark-theme [igxSuffix],
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme [igxSuffix],
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
   .igx-input-group--compact.igx-input-group--fluent .dark-theme igx-prefix,
   .igx-input-group--compact.igx-input-group--fluent .dark-theme [igxPrefix],
   .dark-theme .igx-input-group--compact.igx-input-group--fluent igx-prefix,
@@ -24890,35 +24971,35 @@ body {
     font-size: 0.95455rem;
     height: auto;
     line-height: normal; }
-  .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
   .igx-input-group--cosy.igx-input-group--fluent .dark-theme igx-prefix,
   .igx-input-group--cosy.igx-input-group--fluent .dark-theme [igxPrefix],
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxPrefix] {
     padding: 0.42105rem; }
-  .igx-input-group--fluent-search.igx-input-group--compact .dark-theme igx-prefix, .igx-input-group--fluent-search.igx-input-group--compact .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
   .igx-input-group--compact.igx-input-group--fluent .dark-theme igx-prefix,
   .igx-input-group--compact.igx-input-group--fluent .dark-theme [igxPrefix],
   .dark-theme .igx-input-group--compact.igx-input-group--fluent igx-prefix,
   .dark-theme .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
     padding: 0.36364rem; }
   
-  .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme [igxSuffix],
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme [igxSuffix],
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
   .igx-input-group--cosy.igx-input-group--fluent .dark-theme igx-suffix,
   .igx-input-group--cosy.igx-input-group--fluent .dark-theme [igxSuffix],
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
   .dark-theme .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
     padding: 0.42105rem; }
   
-  .igx-input-group--fluent-search.igx-input-group--compact .dark-theme igx-suffix,
-  .igx-input-group--fluent-search.igx-input-group--compact .dark-theme [igxSuffix],
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-  .dark-theme .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme igx-suffix,
+  .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme [igxSuffix],
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+  .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
   .igx-input-group--compact.igx-input-group--fluent .dark-theme igx-suffix,
   .igx-input-group--compact.igx-input-group--fluent .dark-theme [igxSuffix],
   .dark-theme .igx-input-group--compact.igx-input-group--fluent igx-suffix,
@@ -24995,7 +25076,7 @@ body {
     padding-top: 0.375rem; }
     .dark-theme .igx-input-group__hint:empty {
       display: none; }
-  .dark-theme .igx-input-group--box .igx-input-group__hint, .igx-input-group--box .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--border .igx-input-group__hint, .igx-input-group--border .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--search .igx-input-group__hint, .igx-input-group--search .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search .dark-theme .igx-input-group__hint {
+  .dark-theme .igx-input-group--box .igx-input-group__hint, .igx-input-group--box .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--border .igx-input-group__hint, .igx-input-group--border .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo .dark-theme .igx-input-group__hint, .dark-theme .igx-input-group--search .igx-input-group__hint, .igx-input-group--search .dark-theme .igx-input-group__hint {
     margin-left: 0.75rem;
     /* 16px, base is 12px */
     margin-right: 0.75rem;
@@ -25064,9 +25145,22 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.54);
     padding: 0.5rem 1rem;
     z-index: -1;
+    width: auto;
     height: auto;
+    font-size: 1.25rem;
     line-height: 1.5;
     white-space: nowrap; }
+    .igx-input-group--bootstrap .dark-theme igx-prefix igx-icon, .igx-input-group--bootstrap .dark-theme [igxPrefix] igx-icon, .dark-theme .igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .igx-input-group--bootstrap [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix] igx-icon,
+    .igx-input-group--bootstrap .dark-theme igx-suffix igx-icon,
+    .igx-input-group--bootstrap .dark-theme [igxSuffix] igx-icon,
+    .dark-theme .igx-input-group--bootstrap igx-suffix igx-icon,
+    .dark-theme .igx-input-group--bootstrap [igxSuffix] igx-icon,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-suffix igx-icon,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxSuffix] igx-icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: 400; }
   .igx-input-group--bootstrap .dark-theme igx-prefix, .igx-input-group--bootstrap .dark-theme [igxPrefix], .dark-theme .igx-input-group--bootstrap igx-prefix,
   .dark-theme .igx-input-group--bootstrap [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix,
   .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix] {
@@ -25100,6 +25194,7 @@ body {
   .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix,
   .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap [igxSuffix] {
     padding: 0.375rem 0.75rem;
+    width: auto;
     height: auto; }
     .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme igx-prefix igx-icon, .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme [igxPrefix] igx-icon, .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon,
     .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme igx-suffix igx-icon,
@@ -25116,6 +25211,7 @@ body {
   .dark-theme .igx-input-group--compact.igx-input-group--bootstrap igx-suffix,
   .dark-theme .igx-input-group--compact.igx-input-group--bootstrap [igxSuffix] {
     padding: 0.25rem 0.5rem;
+    width: auto;
     height: auto; }
     .igx-input-group--compact.igx-input-group--bootstrap .dark-theme igx-prefix igx-icon, .igx-input-group--compact.igx-input-group--bootstrap .dark-theme [igxPrefix] igx-icon, .dark-theme .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon,
     .igx-input-group--compact.igx-input-group--bootstrap .dark-theme igx-suffix igx-icon,
@@ -25166,6 +25262,9 @@ body {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.12);
     box-shadow: none; }
+  .dark-theme .igx-input-group--search.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--search.igx-input-group--bootstrap .dark-theme .igx-input-group__input {
+    -ms-transform: translateY(0);
+        transform: translateY(0); }
   .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .igx-input-group__input, .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .igx-input-group__textarea {
     font-size: 1rem;
     padding: 0.375rem 0.75rem; }
@@ -28433,10 +28532,7 @@ body {
           justify-content: center;
       -ms-flex-align: center;
           align-items: center;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-      -ms-flex-preferred-size: 14.28%;
-          flex-basis: 14.28%;
+      min-width: 14.28%;
       color: var(--igx-calendar-content-text-color);
       cursor: pointer;
       outline: none; }
@@ -28453,8 +28549,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
       width: 2.5em;
+      min-width: 2.5em;
       height: 2.5em;
-      min-width: 2ch;
       border-radius: var(--igx-calendar-date-border-radius);
       z-index: 0; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date-content::after {
@@ -28469,8 +28565,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__label {
       color: var(--igx-calendar-label-color);
       border-radius: 0;
-      -ms-flex-preferred-size: 14.28%;
-          flex-basis: 14.28%; }
+      min-width: 14.28%; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__label:hover, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__label:focus {
         color: var(--igx-calendar-label-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--weekend {
@@ -29898,12 +29993,12 @@ body {
       cursor: pointer;
       -webkit-filter: opacity(1);
               filter: opacity(1); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item:hover {
+    .igx-chip:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip__ghost:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip__ghost--cosy:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip__ghost--compact:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip--cosy:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip--compact:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip:hover .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip__ghost:hover .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip__ghost--cosy:hover .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip__ghost--compact:hover .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip--cosy:hover .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip--compact:hover .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item {
       color: var(--igx-chip-hover-text-color);
       background: var(--igx-chip-hover-background);
       border-color: var(--igx-chip-hover-border-color);
       transition: all 120ms ease-in; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item:focus {
+    .igx-chip:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip__ghost:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip__ghost--cosy:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip__ghost--compact:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip--cosy:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .igx-chip--compact:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip:focus .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip__ghost:focus .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip__ghost--cosy:focus .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip__ghost--compact:focus .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip--cosy:focus .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .igx-chip--compact:focus .grid-chart-contextmenu-wrapper .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item {
       color: var(--igx-chip-focus-text-color);
       background: var(--igx-chip-focus-background);
       border-color: var(--igx-chip-focus-border-color);
@@ -29912,12 +30007,12 @@ body {
       color: var(--igx-chip-selected-text-color);
       background: var(--igx-chip-selected-background);
       border-color: var(--igx-chip-selected-border-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected:hover {
+    .igx-chip:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip__ghost:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip__ghost--cosy:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip__ghost--compact:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip--cosy:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip--compact:hover .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip:hover .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip__ghost:hover .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip__ghost--cosy:hover .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip__ghost--compact:hover .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip--cosy:hover .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip--compact:hover .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:hover .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:hover .igx-chip__item--selected {
       color: var(--igx-chip-hover-selected-text-color);
       background: var(--igx-chip-hover-selected-background);
       border-color: var(--igx-chip-hover-selected-border-color);
       transition: all 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected:focus {
+    .igx-chip:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip__ghost:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip__ghost--cosy:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip__ghost--compact:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip--cosy:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .igx-chip--compact:focus .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip:focus .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip__ghost:focus .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip__ghost--cosy:focus .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip__ghost--compact:focus .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip--cosy:focus .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .igx-chip--compact:focus .grid-chart-contextmenu-wrapper .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--cosy:focus .igx-chip__item--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip--compact:focus .igx-chip__item--selected {
       color: var(--igx-chip-focus-selected-text-color);
       background: var(--igx-chip-focus-selected-background);
       border-color: var(--igx-chip-focus-selected-border-color);
@@ -29989,9 +30084,6 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-combo {
       position: relative;
       display: block; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-combo .igx-button--icon {
-        width: 1.5rem;
-        height: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-combo__checkbox {
       margin-right: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-combo__drop-down {
@@ -30060,8 +30152,7 @@ body {
           color: var(--igx-calendar-picker-text-hover-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__label, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date--current, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date--weekend, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date--special, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__date--disabled, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__year--current, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__month, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__month--current {
         color: var(--igx-calendar-content-text-color);
-        -ms-flex-preferred-size: 14.28%;
-            flex-basis: 14.28%; }
+        min-width: 14.28%; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__label {
         color: var(--igx-calendar-label-color); }
         .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__label:hover, .dark-theme .grid-chart-contextmenu-wrapper .igx-date-picker .igx-calendar__label:focus {
@@ -30529,9 +30620,9 @@ body {
       grid-template-columns: 1fr;
       overflow: hidden;
       box-shadow: var(--igx-grid-grid-shadow);
+      box-shadow: 0 0 0 1px var(--igx-grid-grid-border-color);
       outline-style: none;
-      z-index: 1;
-      border: 1px solid var(--igx-grid-grid-border-color); }
+      z-index: 1; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid .igx-checkbox, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-checkbox, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-checkbox {
         min-width: 1.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__caption {
@@ -30966,10 +31057,22 @@ body {
       color: var(--igx-grid-cell-disabled-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing {
       background: var(--igx-grid-cell-editing-background) !important;
-      box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color); }
+      box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color);
+      padding: 0 !important; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing igx-input-group {
+        --igx-input-group-variant: fluent;
         width: 100%;
-        margin-top: -16px; }
+        height: 100%;
+        padding-top: 0 !important; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing igx-date-picker,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing igx-time-picker,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing igx-date-range-picker {
+        height: 100%; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing .igx-input-group__bundle {
+        height: 100%; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing input {
+        margin: 0 auto;
+        max-width: 100%; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing .igx-input-group__input, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__td--editing .igx-input-group__textarea {
         font-size: 0.8125rem !important;
         line-height: 1rem !important; }
@@ -31109,9 +31212,13 @@ body {
       color: var(--igx-grid-header-selected-text-color);
       background: var(--igx-grid-header-selected-background);
       opacity: 0.7; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__th--selectable .sort-icon::after {
+        background: var(--igx-grid-header-selected-background); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__th--selected {
       color: var(--igx-grid-header-selected-text-color);
       background: var(--igx-grid-header-selected-background); }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__th--selected .sort-icon::after {
+        background: var(--igx-grid-header-selected-background); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__th--sortable .sort-icon {
       cursor: pointer;
       opacity: .7; }
@@ -32847,6 +32954,7 @@ body {
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       background: var(--igx-grid-toolbar-background-color);
       height: 3.625rem;
+      position: relative;
       padding: 0 1rem 0 1.5rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar .igx-button--outlined, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--outlined, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--outlined,
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar .igx-button--raised,
@@ -32930,6 +33038,17 @@ body {
             align-items: center;
         -ms-flex-pack: justify;
             justify-content: space-between; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__progress-bar {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      bottom: -0.0625rem;
+      height: 0.125rem;
+      overflow: hidden;
+      background: var(--igx-grid-toolbar-background-color); }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__progress-bar igx-linear-bar > * {
+        border-radius: 0; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__adv-filter--filtered {
       border-color: #217346 !important; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__dropdown {
@@ -32988,7 +33107,6 @@ body {
       --igx-input-group-search-hover-elevation: 0;
       --igx-input-group-search-disabled-elevation: 0;
       --igx-input-group-variant: fluent;
-      --igx-input-group-theme-variant: material;
       --igx-input-group-input-prefix-color: rgba(255, 255, 255, 0.54);
       --igx-input-group-input-prefix-background: #2a2a2a;
       --igx-input-group-input-suffix-color: rgba(255, 255, 255, 0.54);
@@ -33165,20 +33283,20 @@ body {
         width: calc(100% + 0.5rem);
         margin-left: -0.5rem !important;
         cursor: pointer !important; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
           flex-direction: column; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-prefix,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
         outline-style: none;
         overflow: hidden; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-suffix,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
         outline-style: none; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused.igx-input-group--fluent-search igx-prefix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused.igx-input-group--fluent-search [igxPrefix] {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search igx-prefix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused.igx-input-group--fluent.igx-input-group--search [igxPrefix] {
       visibility: hidden;
       width: 0;
       padding-left: 0 !important; }
@@ -33188,16 +33306,16 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent igx-suffix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
       outline-style: none; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
           flex-direction: column; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix] {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix] {
         outline-style: none; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix] {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix] {
         outline-style: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent igx-prefix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
@@ -33205,16 +33323,16 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent igx-suffix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent [igxSuffix] {
       outline-style: none; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-direction: column;
           flex-direction: column; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix] {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix] {
         outline-style: none; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix] {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix] {
         outline-style: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--required.igx-input-group--fluent .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle::after {
       content: '*';
@@ -33222,9 +33340,9 @@ body {
       top: -0.5rem;
       left: calc(100% + 0.25rem);
       color: var(--igx-input-group-error-secondary-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__label + .igx-input-group__bundle::after {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--required.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo .igx-input-group__label + .igx-input-group__bundle::after, .igx-input-group--required.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent .igx-input-group__label + .igx-input-group__bundle::after {
       display: none; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__bundle, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle {
       padding: 0;
       min-height: 32px;
       border: 1px solid var(--igx-input-group-border-color);
@@ -33234,7 +33352,7 @@ body {
       position: relative;
       -ms-flex-align: stretch;
           align-items: stretch; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle:hover, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__bundle:hover, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle:hover {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle:hover {
       border-color: var(--igx-input-group-hover-border-color);
       box-shadow: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused.igx-input-group--fluent .igx-input-group__bundle:hover, .igx-input-group--focused.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle:hover {
@@ -33253,13 +33371,13 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--valid.igx-input-group--fluent .igx-input-group__bundle,
     .igx-input-group--valid.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle {
       border-color: var(--igx-input-group-success-secondary-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__input, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__input, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__input {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__input, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__input {
       padding: 0;
       margin: 0;
       border: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--disabled.igx-input-group--fluent .igx-input-group__input, .igx-input-group--disabled.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__input {
       color: var(--igx-input-group-disabled-text-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle-main, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__bundle-main, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle-main {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__bundle-main, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle-main {
       padding-left: 0.5rem;
       -ms-flex-item-align: center;
           -ms-grid-row-align: center;
@@ -33267,7 +33385,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--placeholder.igx-input-group--fluent .igx-input-group__label, .igx-input-group--placeholder.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label {
       -ms-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__label, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent .igx-input-group__label, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo .igx-input-group__label, .igx-input-group--indigo .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__label {
       padding: 0.3125rem 0;
       line-height: normal !important;
       position: static;
@@ -33311,7 +33429,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused.igx-input-group--search .igx-input-group__bundle, .igx-input-group--focused.igx-input-group--search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle {
       box-shadow: var(--igx-input-group-search-hover-shadow);
       border-color: var(--igx-input-group-hover-border-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--disabled.igx-input-group--fluent-search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--disabled.igx-input-group--search .igx-input-group__bundle, .igx-input-group--disabled.igx-input-group--search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__bundle {
       background: var(--igx-input-group-search-disabled-background);
       box-shadow: var(--igx-input-group-search-disabled-shadow);
       border-color: var(--igx-input-group-disabled-border-color); }
@@ -33567,8 +33685,10 @@ body {
       color: var(--igx-input-group-input-prefix-color);
       background: var(--igx-input-group-input-prefix-background);
       padding: 0.5rem;
+      width: auto;
       height: auto;
-      line-height: normal; }
+      line-height: normal;
+      font-weight: 400; }
       .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxPrefix] igx-icon {
         width: 1.125rem;
         height: 1.125rem;
@@ -33576,21 +33696,22 @@ body {
       .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix:last-of-type, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper :last-of-type[igxPrefix], .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix:last-of-type, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper :last-of-type[igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-prefix:last-of-type,
       .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent :last-of-type[igxPrefix] {
         margin-right: 0.5rem; }
-    .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] {
+    .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-prefix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxPrefix] {
       padding: 0.5rem; }
-      .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxPrefix] igx-icon {
+      .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxPrefix] igx-icon {
         width: 1.125rem;
         height: 1.125rem;
         font-size: 1.125rem; }
-      .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-prefix:last-of-type, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper :last-of-type[igxPrefix], .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-prefix:last-of-type, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper :last-of-type[igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-prefix:last-of-type,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search :last-of-type[igxPrefix] {
+      .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix:last-of-type, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper :last-of-type[igxPrefix], .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix:last-of-type, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper :last-of-type[igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-prefix:last-of-type,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent :last-of-type[igxPrefix] {
         margin-right: 0; }
     .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix], .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxSuffix] {
       color: var(--igx-input-group-input-suffix-color);
       padding: 0.5rem;
       background: var(--igx-input-group-input-suffix-background);
+      width: auto;
       height: auto;
       line-height: normal; }
       .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix igx-icon, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix] igx-icon, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix igx-icon, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxSuffix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent [igxSuffix] igx-icon {
@@ -33600,26 +33721,27 @@ body {
       .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix:first-of-type, .igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper :first-of-type[igxSuffix], .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix:first-of-type, .dark-theme .igx-input-group--fluent .grid-chart-contextmenu-wrapper :first-of-type[igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent igx-suffix:first-of-type,
       .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent :first-of-type[igxSuffix] {
         margin-left: 0.5rem; }
-    .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-suffix, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix], .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-suffix, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] {
+    .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix], .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-suffix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxSuffix] {
+      width: auto;
       height: auto;
       padding: 0.5rem;
       line-height: normal; }
-      .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-suffix .igx-icon, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-suffix .igx-icon, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] .igx-icon, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-suffix .igx-icon--inactive, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon--inactive, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-suffix .igx-icon--inactive, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search [igxSuffix] .igx-icon--inactive {
+      .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix .igx-icon, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix .igx-icon, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix .igx-icon--inactive, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon--inactive, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix .igx-icon--inactive, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper [igxSuffix] .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
         width: 1.125rem;
         height: 1.125rem;
         font-size: 1.125rem; }
-      .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper igx-suffix:first-of-type, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper :first-of-type[igxSuffix], .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper igx-suffix:first-of-type, .dark-theme .igx-input-group--fluent-search .grid-chart-contextmenu-wrapper :first-of-type[igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search igx-suffix:first-of-type,
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search :first-of-type[igxSuffix] {
+      .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix:first-of-type, .igx-input-group--search.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper :first-of-type[igxSuffix], .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix:first-of-type, .dark-theme .igx-input-group--search.igx-input-group--fluent .grid-chart-contextmenu-wrapper :first-of-type[igxSuffix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent igx-suffix:first-of-type,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--fluent :first-of-type[igxSuffix] {
         margin-left: 0; }
-    .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
-    .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
-    .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-suffix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-suffix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
     .igx-input-group--cosy.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix,
     .igx-input-group--cosy.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix],
     .dark-theme .igx-input-group--cosy.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix,
@@ -33634,14 +33756,14 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
       height: auto;
       line-height: normal; }
-    .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
-    .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
-    .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-suffix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-suffix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
     .igx-input-group--compact.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix,
     .igx-input-group--compact.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix],
     .dark-theme .igx-input-group--compact.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix,
@@ -33657,8 +33779,8 @@ body {
       font-size: 0.95455rem;
       height: auto;
       line-height: normal; }
-    .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-prefix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxPrefix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-prefix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxPrefix],
     .igx-input-group--cosy.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix,
     .igx-input-group--cosy.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix],
     .dark-theme .igx-input-group--cosy.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix,
@@ -33666,8 +33788,8 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent igx-prefix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent [igxPrefix] {
       padding: 0.42105rem; }
-    .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-prefix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxPrefix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-prefix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxPrefix],
     .igx-input-group--compact.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-prefix,
     .igx-input-group--compact.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix],
     .dark-theme .igx-input-group--compact.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-prefix,
@@ -33676,12 +33798,12 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--fluent [igxPrefix] {
       padding: 0.36364rem; }
     
-    .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
-    .igx-input-group--fluent-search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-suffix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy igx-suffix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--cosy [igxSuffix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper igx-suffix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy igx-suffix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--cosy [igxSuffix],
     .igx-input-group--cosy.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
     .igx-input-group--cosy.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
     .dark-theme .igx-input-group--cosy.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix,
@@ -33690,12 +33812,12 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--fluent [igxSuffix] {
       padding: 0.42105rem; }
     
-    .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
-    .igx-input-group--fluent-search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-suffix,
-    .dark-theme .igx-input-group--fluent-search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxSuffix],
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact igx-suffix,
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search.igx-input-group--compact [igxSuffix],
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
+    .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper igx-suffix,
+    .dark-theme .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact .grid-chart-contextmenu-wrapper [igxSuffix],
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact igx-suffix,
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent.igx-input-group--search.igx-input-group--compact [igxSuffix],
     .igx-input-group--compact.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper igx-suffix,
     .igx-input-group--compact.igx-input-group--fluent .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix],
     .dark-theme .igx-input-group--compact.igx-input-group--fluent .grid-chart-contextmenu-wrapper igx-suffix,
@@ -33765,7 +33887,7 @@ body {
       padding-top: 0.375rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint:empty {
         display: none; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--box .igx-input-group__hint, .igx-input-group--box .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--border .igx-input-group__hint, .igx-input-group--border .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search .igx-input-group__hint, .igx-input-group--search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--fluent-search .igx-input-group__hint, .igx-input-group--fluent-search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--box .igx-input-group__hint, .igx-input-group--box .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--border .igx-input-group__hint, .igx-input-group--border .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo .igx-input-group__hint, .igx-input-group--indigo .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search .igx-input-group__hint, .igx-input-group--search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__hint {
       margin-left: 0.75rem;
       /* 16px, base is 12px */
       margin-right: 0.75rem;
@@ -33832,9 +33954,22 @@ body {
       border: 1px solid var(--igx-input-group-border-color);
       padding: 0.5rem 1rem;
       z-index: -1;
+      width: auto;
       height: auto;
+      font-size: 1.25rem;
       line-height: 1.5;
       white-space: nowrap; }
+      .igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .igx-input-group--bootstrap .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .dark-theme .igx-input-group--bootstrap .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix] igx-icon,
+      .igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-suffix igx-icon,
+      .igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper [igxSuffix] igx-icon,
+      .dark-theme .igx-input-group--bootstrap .grid-chart-contextmenu-wrapper igx-suffix igx-icon,
+      .dark-theme .igx-input-group--bootstrap .grid-chart-contextmenu-wrapper [igxSuffix] igx-icon,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-suffix igx-icon,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxSuffix] igx-icon {
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 1.25rem;
+        font-weight: 400; }
     .igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--bootstrap .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--bootstrap .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap igx-prefix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--bootstrap [igxPrefix] {
       color: var(--igx-input-group-input-prefix-color);
@@ -33873,6 +34008,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap igx-suffix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap [igxSuffix] {
       padding: 0.375rem 0.75rem;
+      width: auto;
       height: auto; }
       .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .dark-theme .igx-input-group--cosy.igx-input-group--bootstrap .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap [igxPrefix] igx-icon,
       .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-suffix igx-icon,
@@ -33893,6 +34029,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap igx-suffix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap [igxSuffix] {
       padding: 0.25rem 0.5rem;
+      width: auto;
       height: auto; }
       .igx-input-group--compact.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .igx-input-group--compact.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .igx-input-group--compact.igx-input-group--bootstrap .grid-chart-contextmenu-wrapper igx-prefix igx-icon, .dark-theme .igx-input-group--compact.igx-input-group--bootstrap .grid-chart-contextmenu-wrapper [igxPrefix] igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap igx-prefix igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact.igx-input-group--bootstrap [igxPrefix] igx-icon,
       .igx-input-group--compact.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper igx-suffix igx-icon,
@@ -33945,6 +34082,9 @@ body {
       background: var(--igx-input-group-border-disabled-background);
       border: 1px solid var(--igx-input-group-disabled-border-color);
       box-shadow: none; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--search.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__input {
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__input, .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__input, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--cosy.igx-input-group--bootstrap .igx-input-group__textarea, .igx-input-group--cosy.igx-input-group--bootstrap .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
       font-size: 1rem;
       padding: 0.375rem 0.75rem; }
