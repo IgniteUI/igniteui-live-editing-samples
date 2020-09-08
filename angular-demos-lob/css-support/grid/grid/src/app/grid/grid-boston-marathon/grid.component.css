@@ -143,8 +143,7 @@
     overflow: hidden;
     box-shadow: var(--igx-grid-grid-shadow);
     outline-style: none;
-    z-index: 1;
-    border: 0 solid var(--igx-grid-grid-border-color); }
+    z-index: 1; }
     ::ng-deep .default-theme .grid__wrapper .igx-grid .igx-checkbox, ::ng-deep .default-theme .grid__wrapper .igx-grid--cosy .igx-checkbox, ::ng-deep .default-theme .grid__wrapper .igx-grid--compact .igx-checkbox {
       min-width: 1.25rem; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__caption {
@@ -572,10 +571,22 @@
     color: var(--igx-grid-cell-disabled-color); }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing {
     background: var(--igx-grid-cell-editing-background) !important;
-    box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color); }
+    box-shadow: inset 0 0 0 0.125rem var(--igx-grid-edit-mode-color);
+    padding: 0 !important; }
     ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing igx-input-group {
+      --igx-input-group-variant: fluent;
       width: 100%;
-      margin-top: -16px; }
+      height: 100%;
+      padding-top: 0 !important; }
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing igx-date-picker,
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing igx-time-picker,
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing igx-date-range-picker {
+      height: 100%; }
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing .igx-input-group__bundle {
+      height: 100%; }
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing input {
+      margin: 0 auto;
+      max-width: 100%; }
     ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing .igx-input-group__input, ::ng-deep .default-theme .grid__wrapper .igx-grid__td--editing .igx-input-group__textarea {
       font-size: 0.8125rem !important;
       line-height: 1rem !important; }
@@ -715,9 +726,13 @@
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background);
     opacity: 0.7; }
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__th--selectable .sort-icon::after {
+      background: var(--igx-grid-header-selected-background); }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th--selected {
     color: var(--igx-grid-header-selected-text-color);
     background: var(--igx-grid-header-selected-background); }
+    ::ng-deep .default-theme .grid__wrapper .igx-grid__th--selected .sort-icon::after {
+      background: var(--igx-grid-header-selected-background); }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__th--sortable .sort-icon {
     cursor: pointer;
     opacity: .7; }
