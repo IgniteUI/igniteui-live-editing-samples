@@ -572,24 +572,12 @@
   :host ::ng-deep .igx-input-group--compact .igx-input-group__textarea, .igx-input-group--compact :host ::ng-deep .igx-input-group__textarea {
     min-height: 3.72727rem;
     margin-right: -0.72727rem; }
-  :host ::ng-deep .igx-input-group--box .igx-input-group__textarea, .igx-input-group--box :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--border .igx-input-group__textarea, .igx-input-group--border :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--search .igx-input-group__textarea, .igx-input-group--search :host ::ng-deep .igx-input-group__textarea {
-    width: calc(100% + 2rem);
-    /* add the padding to the width */
-    margin: 0 -1rem;
-    padding-left: 1rem;
-    padding-left: 1rem; }
-  :host ::ng-deep .igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--box.igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea {
-    width: calc(100% + 1.68421rem);
-    /* add the padding to the width */
-    margin: 0 -0.84211rem;
-    padding-left: 0.84211rem;
-    padding-left: 0.84211rem; }
-  :host ::ng-deep .igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--box.igx-input-group--compact :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact :host ::ng-deep .igx-input-group__textarea, :host ::ng-deep .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact :host ::ng-deep .igx-input-group__textarea {
-    width: calc(100% + 1.45455rem);
-    /* add the padding to the width */
-    margin: 0 -0.72727rem;
-    padding-left: 0.72727rem;
-    padding-left: 0.72727rem; }
+  :host ::ng-deep .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo :host ::ng-deep .igx-input-group__textarea {
+    margin-top: -1.125rem !important; }
+  :host ::ng-deep .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy :host ::ng-deep .igx-input-group__textarea {
+    margin-top: -0.94737rem !important; }
+  :host ::ng-deep .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact :host ::ng-deep .igx-input-group__textarea {
+    margin-top: -0.81818rem !important; }
   :host ::ng-deep .igx-input-group igx-prefix, :host ::ng-deep .igx-input-group--focused igx-prefix,
   :host ::ng-deep .igx-input-group [igxPrefix],
   :host ::ng-deep .igx-input-group--focused [igxPrefix],

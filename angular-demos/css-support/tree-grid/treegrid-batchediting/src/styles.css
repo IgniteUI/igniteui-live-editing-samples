@@ -7713,26 +7713,14 @@ igx-excel-style-filter-operations,
   min-height: 3.72727rem;
   margin-right: -0.72727rem; }
 
-.igx-input-group--box .igx-input-group__textarea, .igx-input-group--border .igx-input-group__textarea, .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--search .igx-input-group__textarea {
-  width: calc(100% + 2rem);
-  /* add the padding to the width */
-  margin: 0 -1rem;
-  padding-left: 1rem;
-  padding-left: 1rem; }
+.igx-input-group--indigo .igx-input-group__textarea {
+  margin-top: -1.125rem !important; }
 
-.igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea {
-  width: calc(100% + 1.68421rem);
-  /* add the padding to the width */
-  margin: 0 -0.84211rem;
-  padding-left: 0.84211rem;
-  padding-left: 0.84211rem; }
+.igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea {
+  margin-top: -0.94737rem !important; }
 
-.igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea {
-  width: calc(100% + 1.45455rem);
-  /* add the padding to the width */
-  margin: 0 -0.72727rem;
-  padding-left: 0.72727rem;
-  padding-left: 0.72727rem; }
+.igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea {
+  margin-top: -0.81818rem !important; }
 
 .igx-input-group igx-prefix, .igx-input-group--focused igx-prefix,
 .igx-input-group [igxPrefix],
@@ -16543,24 +16531,12 @@ body {
   .fin-dark-theme .igx-input-group--compact .igx-input-group__textarea, .igx-input-group--compact .fin-dark-theme .igx-input-group__textarea {
     min-height: 3.72727rem;
     margin-right: -0.72727rem; }
-  .fin-dark-theme .igx-input-group--box .igx-input-group__textarea, .igx-input-group--box .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--border .igx-input-group__textarea, .igx-input-group--border .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--search .igx-input-group__textarea, .igx-input-group--search .fin-dark-theme .igx-input-group__textarea {
-    width: calc(100% + 2rem);
-    /* add the padding to the width */
-    margin: 0 -1rem;
-    padding-left: 1rem;
-    padding-left: 1rem; }
-  .fin-dark-theme .igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--box.igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea {
-    width: calc(100% + 1.68421rem);
-    /* add the padding to the width */
-    margin: 0 -0.84211rem;
-    padding-left: 0.84211rem;
-    padding-left: 0.84211rem; }
-  .fin-dark-theme .igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--box.igx-input-group--compact .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .fin-dark-theme .igx-input-group__textarea, .fin-dark-theme .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact .fin-dark-theme .igx-input-group__textarea {
-    width: calc(100% + 1.45455rem);
-    /* add the padding to the width */
-    margin: 0 -0.72727rem;
-    padding-left: 0.72727rem;
-    padding-left: 0.72727rem; }
+  .fin-dark-theme .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo .fin-dark-theme .igx-input-group__textarea {
+    margin-top: -1.125rem !important; }
+  .fin-dark-theme .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .fin-dark-theme .igx-input-group__textarea {
+    margin-top: -0.94737rem !important; }
+  .fin-dark-theme .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .fin-dark-theme .igx-input-group__textarea {
+    margin-top: -0.81818rem !important; }
   .igx-input-group .fin-dark-theme igx-prefix, .igx-input-group--focused .fin-dark-theme igx-prefix, .igx-input-group .fin-dark-theme [igxPrefix], .igx-input-group--focused .fin-dark-theme [igxPrefix], .fin-dark-theme .igx-input-group igx-prefix, .fin-dark-theme .igx-input-group--focused igx-prefix,
   .fin-dark-theme .igx-input-group [igxPrefix],
   .fin-dark-theme .igx-input-group--focused [igxPrefix], .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group igx-prefix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group .fin-dark-theme igx-prefix, .fin-dark-theme .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused igx-prefix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused .fin-dark-theme igx-prefix,
@@ -24775,24 +24751,12 @@ body {
   .dark-theme .igx-input-group--compact .igx-input-group__textarea, .igx-input-group--compact .dark-theme .igx-input-group__textarea {
     min-height: 3.72727rem;
     margin-right: -0.72727rem; }
-  .dark-theme .igx-input-group--box .igx-input-group__textarea, .igx-input-group--box .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--border .igx-input-group__textarea, .igx-input-group--border .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--search .igx-input-group__textarea, .igx-input-group--search .dark-theme .igx-input-group__textarea {
-    width: calc(100% + 2rem);
-    /* add the padding to the width */
-    margin: 0 -1rem;
-    padding-left: 1rem;
-    padding-left: 1rem; }
-  .dark-theme .igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--box.igx-input-group--cosy .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy .dark-theme .igx-input-group__textarea {
-    width: calc(100% + 1.68421rem);
-    /* add the padding to the width */
-    margin: 0 -0.84211rem;
-    padding-left: 0.84211rem;
-    padding-left: 0.84211rem; }
-  .dark-theme .igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--box.igx-input-group--compact .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .dark-theme .igx-input-group__textarea, .dark-theme .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact .dark-theme .igx-input-group__textarea {
-    width: calc(100% + 1.45455rem);
-    /* add the padding to the width */
-    margin: 0 -0.72727rem;
-    padding-left: 0.72727rem;
-    padding-left: 0.72727rem; }
+  .dark-theme .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo .dark-theme .igx-input-group__textarea {
+    margin-top: -1.125rem !important; }
+  .dark-theme .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .dark-theme .igx-input-group__textarea {
+    margin-top: -0.94737rem !important; }
+  .dark-theme .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .dark-theme .igx-input-group__textarea {
+    margin-top: -0.81818rem !important; }
   .igx-input-group .dark-theme igx-prefix, .igx-input-group--focused .dark-theme igx-prefix, .igx-input-group .dark-theme [igxPrefix], .igx-input-group--focused .dark-theme [igxPrefix], .dark-theme .igx-input-group igx-prefix, .dark-theme .igx-input-group--focused igx-prefix,
   .dark-theme .igx-input-group [igxPrefix],
   .dark-theme .igx-input-group--focused [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group igx-prefix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused igx-prefix,
@@ -33581,24 +33545,12 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--compact .igx-input-group__textarea, .igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
       min-height: 3.72727rem;
       margin-right: -0.72727rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--box .igx-input-group__textarea, .igx-input-group--box .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--border .igx-input-group__textarea, .igx-input-group--border .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search .igx-input-group__textarea, .igx-input-group--search .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
-      width: calc(100% + 2rem);
-      /* add the padding to the width */
-      margin: 0 -1rem;
-      padding-left: 1rem;
-      padding-left: 1rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--box.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--box.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--border.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--border.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--search.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
-      width: calc(100% + 1.68421rem);
-      /* add the padding to the width */
-      margin: 0 -0.84211rem;
-      padding-left: 0.84211rem;
-      padding-left: 0.84211rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--box.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--box.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--border.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--border.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--search.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--search.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
-      width: calc(100% + 1.45455rem);
-      /* add the padding to the width */
-      margin: 0 -0.72727rem;
-      padding-left: 0.72727rem;
-      padding-left: 0.72727rem; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo .igx-input-group__textarea, .igx-input-group--indigo .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
+      margin-top: -1.125rem !important; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo.igx-input-group--cosy .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
+      margin-top: -0.94737rem !important; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--indigo.igx-input-group--compact .igx-input-group__textarea, .igx-input-group--indigo.igx-input-group--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group__textarea {
+      margin-top: -0.81818rem !important; }
     .igx-input-group .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group--focused .dark-theme .grid-chart-contextmenu-wrapper igx-prefix, .igx-input-group .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .igx-input-group--focused .dark-theme .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group--focused .grid-chart-contextmenu-wrapper igx-prefix, .dark-theme .igx-input-group .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .igx-input-group--focused .grid-chart-contextmenu-wrapper [igxPrefix], .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group igx-prefix, .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused igx-prefix,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group [igxPrefix],
     .dark-theme .grid-chart-contextmenu-wrapper .igx-input-group--focused [igxPrefix],
