@@ -304,13 +304,13 @@ igx-chip {
   -webkit-filter: opacity(1);
           filter: opacity(1); }
 
-:host ::ng-deep .igx-chip__item:hover {
+:host ::ng-deep .igx-chip:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item, :host ::ng-deep .igx-chip--cosy:hover .igx-chip__item, :host ::ng-deep .igx-chip--compact:hover .igx-chip__item {
   color: var(--igx-chip-hover-text-color);
   background: var(--igx-chip-hover-background);
   border-color: var(--igx-chip-hover-border-color);
   transition: all 120ms ease-in; }
 
-:host ::ng-deep .igx-chip__item:focus {
+:host ::ng-deep .igx-chip:focus .igx-chip__item, :host ::ng-deep .igx-chip__ghost:focus .igx-chip__item, :host ::ng-deep .igx-chip__ghost--cosy:focus .igx-chip__item, :host ::ng-deep .igx-chip__ghost--compact:focus .igx-chip__item, :host ::ng-deep .igx-chip--cosy:focus .igx-chip__item, :host ::ng-deep .igx-chip--compact:focus .igx-chip__item {
   color: var(--igx-chip-focus-text-color);
   background: var(--igx-chip-focus-background);
   border-color: var(--igx-chip-focus-border-color);
@@ -321,13 +321,13 @@ igx-chip {
   background: var(--igx-chip-selected-background);
   border-color: var(--igx-chip-selected-border-color); }
 
-:host ::ng-deep .igx-chip__item--selected:hover {
+:host ::ng-deep .igx-chip:hover .igx-chip__item--selected, :host ::ng-deep .igx-chip__ghost:hover .igx-chip__item--selected, :host ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item--selected, :host ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item--selected, :host ::ng-deep .igx-chip--cosy:hover .igx-chip__item--selected, :host ::ng-deep .igx-chip--compact:hover .igx-chip__item--selected {
   color: var(--igx-chip-hover-selected-text-color);
   background: var(--igx-chip-hover-selected-background);
   border-color: var(--igx-chip-hover-selected-border-color);
   transition: all 120ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
-:host ::ng-deep .igx-chip__item--selected:focus {
+:host ::ng-deep .igx-chip:focus .igx-chip__item--selected, :host ::ng-deep .igx-chip__ghost:focus .igx-chip__item--selected, :host ::ng-deep .igx-chip__ghost--cosy:focus .igx-chip__item--selected, :host ::ng-deep .igx-chip__ghost--compact:focus .igx-chip__item--selected, :host ::ng-deep .igx-chip--cosy:focus .igx-chip__item--selected, :host ::ng-deep .igx-chip--compact:focus .igx-chip__item--selected {
   color: var(--igx-chip-focus-selected-text-color);
   background: var(--igx-chip-focus-selected-background);
   border-color: var(--igx-chip-focus-selected-border-color);
