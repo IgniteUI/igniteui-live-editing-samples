@@ -75,17 +75,21 @@
     --igx-icon-color: #1481b8;
     --igx-icon-size: 1.5rem;
     --igx-icon-disabled-color: #494949; }
-  :host ::ng-deep .igx-icon, :host ::ng-deep .igx-icon--inactive {
+  :host ::ng-deep .igx-icon, :host ::ng-deep .igx-icon--inactive, :host ::ng-deep .igx-icon--success, :host ::ng-deep .igx-icon--error {
     width: var(--igx-icon-size);
     height: var(--igx-icon-size);
     font-size: var(--igx-icon-size);
     color: var(--igx-icon-color); }
-    :host ::ng-deep .igx-icon svg, :host ::ng-deep .igx-icon--inactive svg {
+    :host ::ng-deep .igx-icon svg, :host ::ng-deep .igx-icon--inactive svg, :host ::ng-deep .igx-icon--success svg, :host ::ng-deep .igx-icon--error svg {
       width: inherit;
       height: inherit;
       fill: currentColor; }
-      :host ::ng-deep .igx-icon svg use, :host ::ng-deep .igx-icon--inactive svg use {
+      :host ::ng-deep .igx-icon svg use, :host ::ng-deep .igx-icon--inactive svg use, :host ::ng-deep .igx-icon--success svg use, :host ::ng-deep .igx-icon--error svg use {
         pointer-events: none; }
+  :host ::ng-deep .igx-icon--success {
+    color: #4eb862; }
+  :host ::ng-deep .igx-icon--error {
+    color: #ff134a; }
   :host ::ng-deep .igx-icon--inactive {
     color: var(--igx-icon-disabled-color) !important;
     opacity: .54; }

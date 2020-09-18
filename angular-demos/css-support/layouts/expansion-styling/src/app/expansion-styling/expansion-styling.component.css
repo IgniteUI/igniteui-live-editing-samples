@@ -230,7 +230,7 @@
   white-space: nowrap;
   transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
   font-family: inherit; }
-  :host ::ng-deep .igx-button .igx-icon, :host ::ng-deep .igx-button--flat .igx-icon, :host ::ng-deep .igx-button--outlined .igx-icon, :host ::ng-deep .igx-button--raised .igx-icon, :host ::ng-deep .igx-button .igx-icon--inactive, :host ::ng-deep .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-button--raised .igx-icon--inactive {
+  :host ::ng-deep .igx-button .igx-icon, :host ::ng-deep .igx-button--flat .igx-icon, :host ::ng-deep .igx-button--outlined .igx-icon, :host ::ng-deep .igx-button--raised .igx-icon, :host ::ng-deep .igx-button .igx-icon--inactive, :host ::ng-deep .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-button .igx-icon--success, :host ::ng-deep .igx-button--flat .igx-icon--success, :host ::ng-deep .igx-button--outlined .igx-icon--success, :host ::ng-deep .igx-button--raised .igx-icon--success, :host ::ng-deep .igx-button .igx-icon--error, :host ::ng-deep .igx-button--flat .igx-icon--error, :host ::ng-deep .igx-button--outlined .igx-icon--error, :host ::ng-deep .igx-button--raised .igx-icon--error {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
@@ -247,17 +247,17 @@
   background: var(--igx-button-flat-background);
   color: var(--igx-button-flat-text-color);
   border-radius: var(--igx-button-flat-border-radius); }
-  :host ::ng-deep .igx-button--flat .igx-icon, :host ::ng-deep .igx-button--flat .igx-icon--inactive {
+  :host ::ng-deep .igx-button--flat .igx-icon, :host ::ng-deep .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-button--flat .igx-icon--success, :host ::ng-deep .igx-button--flat .igx-icon--error {
     color: var(--igx-button-flat-icon-color); }
   :host ::ng-deep .igx-button--flat:hover {
     background: var(--igx-button-flat-hover-background);
     color: var(--igx-button-flat-hover-text-color); }
-    :host ::ng-deep .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-button--flat:hover .igx-icon--inactive {
+    :host ::ng-deep .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-button--flat:hover .igx-icon--inactive, :host ::ng-deep .igx-button--flat:hover .igx-icon--success, :host ::ng-deep .igx-button--flat:hover .igx-icon--error {
       color: var(--igx-button-flat-hover-icon-color); }
   :host ::ng-deep .igx-button--flat:focus, :host ::ng-deep .igx-button--flat:active {
     background: var(--igx-button-flat-focus-background);
     color: var(--igx-button-flat-focus-text-color); }
-    :host ::ng-deep .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-button--flat:active .igx-icon--inactive {
+    :host ::ng-deep .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-button--flat:focus .igx-icon--success, :host ::ng-deep .igx-button--flat:focus .igx-icon--error, :host ::ng-deep .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-button--flat:active .igx-icon--inactive, :host ::ng-deep .igx-button--flat:active .igx-icon--success, :host ::ng-deep .igx-button--flat:active .igx-icon--error {
       color: var(--igx-button-flat-focus-icon-color); }
 
 :host ::ng-deep .igx-button--outlined {
@@ -266,17 +266,17 @@
   border-radius: var(--igx-button-outlined-border-radius);
   border: 1px solid transparent;
   border-color: var(--igx-button-outlined-outline-color); }
-  :host ::ng-deep .igx-button--outlined .igx-icon, :host ::ng-deep .igx-button--outlined .igx-icon--inactive {
+  :host ::ng-deep .igx-button--outlined .igx-icon, :host ::ng-deep .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-button--outlined .igx-icon--success, :host ::ng-deep .igx-button--outlined .igx-icon--error {
     color: var(--igx-button-outlined-icon-color); }
   :host ::ng-deep .igx-button--outlined:hover {
     background: var(--igx-button-outlined-hover-background);
     color: var(--igx-button-outlined-hover-text-color); }
-    :host ::ng-deep .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-button--outlined:hover .igx-icon--inactive {
+    :host ::ng-deep .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-button--outlined:hover .igx-icon--inactive, :host ::ng-deep .igx-button--outlined:hover .igx-icon--success, :host ::ng-deep .igx-button--outlined:hover .igx-icon--error {
       color: var(--igx-button-outlined-hover-icon-color); }
   :host ::ng-deep .igx-button--outlined:focus, :host ::ng-deep .igx-button--outlined:active {
     background: var(--igx-button-outlined-focus-background);
     color: var(--igx-button-outlined-focus-text-color); }
-    :host ::ng-deep .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-button--outlined:active .igx-icon--inactive {
+    :host ::ng-deep .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-button--outlined:focus .igx-icon--success, :host ::ng-deep .igx-button--outlined:focus .igx-icon--error, :host ::ng-deep .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-button--outlined:active .igx-icon--inactive, :host ::ng-deep .igx-button--outlined:active .igx-icon--success, :host ::ng-deep .igx-button--outlined:active .igx-icon--error {
       color: var(--igx-button-outlined-focus-icon-color); }
 
 :host ::ng-deep .igx-button--raised {
@@ -284,19 +284,19 @@
   background: var(--igx-button-raised-background);
   box-shadow: var(--igx-button-raised-resting-shadow);
   border-radius: var(--igx-button-raised-border-radius); }
-  :host ::ng-deep .igx-button--raised .igx-icon, :host ::ng-deep .igx-button--raised .igx-icon--inactive {
+  :host ::ng-deep .igx-button--raised .igx-icon, :host ::ng-deep .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-button--raised .igx-icon--success, :host ::ng-deep .igx-button--raised .igx-icon--error {
     color: var(--igx-button-raised-icon-color); }
   :host ::ng-deep .igx-button--raised:hover {
     color: var(--igx-button-raised-hover-text-color);
     background: var(--igx-button-raised-hover-background);
     box-shadow: var(--igx-button-raised-hover-shadow); }
-    :host ::ng-deep .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-button--raised:hover .igx-icon--inactive {
+    :host ::ng-deep .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-button--raised:hover .igx-icon--inactive, :host ::ng-deep .igx-button--raised:hover .igx-icon--success, :host ::ng-deep .igx-button--raised:hover .igx-icon--error {
       color: var(--igx-button-raised-hover-icon-color); }
   :host ::ng-deep .igx-button--raised:focus, :host ::ng-deep .igx-button--raised:active {
     color: var(--igx-button-raised-focus-text-color);
     background: var(--igx-button-raised-focus-background);
     box-shadow: var(--igx-button-raised-focus-shadow); }
-    :host ::ng-deep .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-button--raised:active .igx-icon--inactive {
+    :host ::ng-deep .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-button--raised:focus .igx-icon--success, :host ::ng-deep .igx-button--raised:focus .igx-icon--error, :host ::ng-deep .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-button--raised:active .igx-icon--inactive, :host ::ng-deep .igx-button--raised:active .igx-icon--success, :host ::ng-deep .igx-button--raised:active .igx-icon--error {
       color: var(--igx-button-raised-focus-icon-color); }
 
 :host ::ng-deep .igx-button--fab, :host ::ng-deep .igx-button--icon {

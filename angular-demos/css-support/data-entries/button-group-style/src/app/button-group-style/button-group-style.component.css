@@ -107,7 +107,7 @@ igx-buttongroup {
   transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   :host ::ng-deep .igx-button--flat.igx-button-group__item, :host ::ng-deep .igx-button--flat.igx-button-group__item--selected {
     border-radius: 0; }
-  :host ::ng-deep .igx-button-group__item .igx-icon, :host ::ng-deep .igx-button-group__item--selected .igx-icon, :host ::ng-deep .igx-button-group__item .igx-icon--inactive, :host ::ng-deep .igx-button-group__item--selected .igx-icon--inactive {
+  :host ::ng-deep .igx-button-group__item .igx-icon, :host ::ng-deep .igx-button-group__item--selected .igx-icon, :host ::ng-deep .igx-button-group__item .igx-icon--inactive, :host ::ng-deep .igx-button-group__item--selected .igx-icon--inactive, :host ::ng-deep .igx-button-group__item .igx-icon--success, :host ::ng-deep .igx-button-group__item--selected .igx-icon--success, :host ::ng-deep .igx-button-group__item .igx-icon--error, :host ::ng-deep .igx-button-group__item--selected .igx-icon--error {
     color: currentColor; }
   :host ::ng-deep .igx-button-group__item:not(:nth-child(0)), :host ::ng-deep .igx-button-group__item--selected:not(:nth-child(0)) {
     margin-left: -1px; }
@@ -125,7 +125,7 @@ igx-buttongroup {
     color: var(--igx-button-group-item-hover-text-color);
     background: var(--igx-button-group-item-hover-background);
     z-index: 1; }
-    :host ::ng-deep .igx-button-group__item:hover .igx-icon, :host ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host ::ng-deep .igx-button-group__item:focus .igx-icon, :host ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive {
+    :host ::ng-deep .igx-button-group__item:hover .igx-icon, :host ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host ::ng-deep .igx-button-group__item:hover .igx-icon--success, :host ::ng-deep .igx-button-group__item--selected:hover .igx-icon--success, :host ::ng-deep .igx-button-group__item:hover .igx-icon--error, :host ::ng-deep .igx-button-group__item--selected:hover .igx-icon--error, :host ::ng-deep .igx-button-group__item:focus .igx-icon, :host ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive, :host ::ng-deep .igx-button-group__item:focus .igx-icon--success, :host ::ng-deep .igx-button-group__item--selected:focus .igx-icon--success, :host ::ng-deep .igx-button-group__item:focus .igx-icon--error, :host ::ng-deep .igx-button-group__item--selected:focus .igx-icon--error {
       color: currentColor; }
 
 :host ::ng-deep .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host ::ng-deep .igx-button-group__item:not(:nth-child(0)) {

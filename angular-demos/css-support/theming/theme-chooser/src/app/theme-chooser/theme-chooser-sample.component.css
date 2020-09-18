@@ -107,6 +107,8 @@
         --igx-grid-row-selected-cell-background: #c0cef9;
         --igx-grid-grid-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
         --igx-grid-drag-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 5px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 14px 0 rgba(0, 0, 0, 0.08); }
+      :host.light-theme ::ng-deep .igx-grid__thead-wrapper:focus, :host.light-theme ::ng-deep .igx-grid__tbody-content:focus, :host.light-theme ::ng-deep .igx-grid__tfoot:focus {
+        outline: 0; }
       :host.light-theme ::ng-deep .igx-grid, :host.light-theme ::ng-deep .igx-grid--cosy, :host.light-theme ::ng-deep .igx-grid--compact {
         position: relative;
         display: grid;
@@ -338,7 +340,7 @@
         background: inherit;
         z-index: 4;
         cursor: move; }
-        :host.light-theme ::ng-deep .igx-grid__drag-indicator .igx-icon, :host.light-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-grid__drag-indicator .igx-icon, :host.light-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host.light-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host.light-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
           width: 1.5rem;
           height: 1.5rem;
           font-size: 1.5rem; }
@@ -396,12 +398,13 @@
       :host.light-theme ::ng-deep .igx-grid__td--bool {
         -ms-flex-pack: center;
             justify-content: center; }
-        :host.light-theme ::ng-deep .igx-grid__td--bool igx-icon {
+        :host.light-theme ::ng-deep .igx-grid__td--bool .igx-icon, :host.light-theme ::ng-deep .igx-grid__td--bool .igx-icon--inactive, :host.light-theme ::ng-deep .igx-grid__td--bool .igx-icon--success, :host.light-theme ::ng-deep .igx-grid__td--bool .igx-icon--error {
           height: 1.125rem;
           width: 1.125rem;
-          font-size: 1.125rem;
+          font-size: 1.125rem; }
+        :host.light-theme ::ng-deep .igx-grid__td--bool .igx-icon--error {
           color: rgba(0, 0, 0, 0.38); }
-      :host.light-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+      :host.light-theme ::ng-deep .igx-grid__td--bool-true .igx-icon--success {
         color: rgba(0, 0, 0, 0.62); }
       :host.light-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
@@ -915,7 +918,7 @@
            -moz-user-select: none;
             -ms-user-select: none;
                 user-select: none; }
-        :host.light-theme ::ng-deep .igx-group-label__icon.igx-icon, :host.light-theme ::ng-deep .igx-group-label__icon.igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-group-label__icon.igx-icon, :host.light-theme ::ng-deep .igx-group-label__icon.igx-icon--inactive, :host.light-theme ::ng-deep .igx-group-label__icon.igx-icon--success, :host.light-theme ::ng-deep .igx-group-label__icon.igx-icon--error {
           color: var(--igx-grid-group-label-icon);
           width: 1rem;
           height: 1rem;
@@ -1734,7 +1737,7 @@
           transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
           :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item--selected {
             border-radius: 0; }
-          :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--success, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--success, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--error, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--error {
             color: currentColor; }
           :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)), :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:not(:nth-child(0)) {
             margin-left: -1px; }
@@ -1752,7 +1755,7 @@
             color: var(--igx-button-group-item-hover-text-color);
             background: var(--igx-button-group-item-hover-background);
             z-index: 1; }
-            :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive {
+            :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--error, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--error, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--error, :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--error {
               color: currentColor; }
         :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host.light-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)) {
           margin-top: -1px;
@@ -2948,7 +2951,7 @@
         height: auto;
         padding: 0.5rem;
         line-height: normal; }
-        :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--success, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--success, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--error, :host.light-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--error {
           width: 1.125rem;
           height: 1.125rem;
           font-size: 1.125rem; }
@@ -3377,7 +3380,7 @@
         white-space: nowrap;
         transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
         font-family: inherit; }
-        :host.light-theme ::ng-deep .igx-button .igx-icon, :host.light-theme ::ng-deep .igx-button--flat .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon, :host.light-theme ::ng-deep .igx-button--raised .igx-icon, :host.light-theme ::ng-deep .igx-button .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-button .igx-icon, :host.light-theme ::ng-deep .igx-button--flat .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon, :host.light-theme ::ng-deep .igx-button--raised .igx-icon, :host.light-theme ::ng-deep .igx-button .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button .igx-icon--success, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--success, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--success, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--success, :host.light-theme ::ng-deep .igx-button .igx-icon--error, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--error, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--error, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--error {
           width: 1.125rem;
           height: 1.125rem;
           font-size: 1.125rem; }
@@ -3391,17 +3394,17 @@
         background: var(--igx-button-flat-background);
         color: var(--igx-button-flat-text-color);
         border-radius: var(--igx-button-flat-border-radius); }
-        :host.light-theme ::ng-deep .igx-button--flat .igx-icon, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-button--flat .igx-icon, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--success, :host.light-theme ::ng-deep .igx-button--flat .igx-icon--error {
           color: var(--igx-button-flat-icon-color); }
         :host.light-theme ::ng-deep .igx-button--flat:hover {
           background: var(--igx-button-flat-hover-background);
           color: var(--igx-button-flat-hover-text-color); }
-          :host.light-theme ::ng-deep .igx-button--flat:hover .igx-icon, :host.light-theme ::ng-deep .igx-button--flat:hover .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button--flat:hover .igx-icon, :host.light-theme ::ng-deep .igx-button--flat:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-button--flat:hover .igx-icon--error {
             color: var(--igx-button-flat-hover-icon-color); }
         :host.light-theme ::ng-deep .igx-button--flat:focus, :host.light-theme ::ng-deep .igx-button--flat:active {
           background: var(--igx-button-flat-focus-background);
           color: var(--igx-button-flat-focus-text-color); }
-          :host.light-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.light-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.light-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.light-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-button--flat:focus .igx-icon--error, :host.light-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.light-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--flat:active .igx-icon--success, :host.light-theme ::ng-deep .igx-button--flat:active .igx-icon--error {
             color: var(--igx-button-flat-focus-icon-color); }
       :host.light-theme ::ng-deep .igx-button--outlined {
         background: var(--igx-button-outlined-background);
@@ -3409,36 +3412,36 @@
         border-radius: var(--igx-button-outlined-border-radius);
         border: 1px solid transparent;
         border-color: var(--igx-button-outlined-outline-color); }
-        :host.light-theme ::ng-deep .igx-button--outlined .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-button--outlined .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--success, :host.light-theme ::ng-deep .igx-button--outlined .igx-icon--error {
           color: var(--igx-button-outlined-icon-color); }
         :host.light-theme ::ng-deep .igx-button--outlined:hover {
           background: var(--igx-button-outlined-hover-background);
           color: var(--igx-button-outlined-hover-text-color); }
-          :host.light-theme ::ng-deep .igx-button--outlined:hover .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined:hover .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button--outlined:hover .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-button--outlined:hover .igx-icon--error {
             color: var(--igx-button-outlined-hover-icon-color); }
         :host.light-theme ::ng-deep .igx-button--outlined:focus, :host.light-theme ::ng-deep .igx-button--outlined:active {
           background: var(--igx-button-outlined-focus-background);
           color: var(--igx-button-outlined-focus-text-color); }
-          :host.light-theme ::ng-deep .igx-button--outlined:focus .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined:active .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined:active .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button--outlined:focus .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-button--outlined:focus .igx-icon--error, :host.light-theme ::ng-deep .igx-button--outlined:active .igx-icon, :host.light-theme ::ng-deep .igx-button--outlined:active .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--outlined:active .igx-icon--success, :host.light-theme ::ng-deep .igx-button--outlined:active .igx-icon--error {
             color: var(--igx-button-outlined-focus-icon-color); }
       :host.light-theme ::ng-deep .igx-button--raised {
         color: var(--igx-button-raised-text-color);
         background: var(--igx-button-raised-background);
         box-shadow: var(--igx-button-raised-resting-shadow);
         border-radius: var(--igx-button-raised-border-radius); }
-        :host.light-theme ::ng-deep .igx-button--raised .igx-icon, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-button--raised .igx-icon, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--success, :host.light-theme ::ng-deep .igx-button--raised .igx-icon--error {
           color: var(--igx-button-raised-icon-color); }
         :host.light-theme ::ng-deep .igx-button--raised:hover {
           color: var(--igx-button-raised-hover-text-color);
           background: var(--igx-button-raised-hover-background);
           box-shadow: var(--igx-button-raised-hover-shadow); }
-          :host.light-theme ::ng-deep .igx-button--raised:hover .igx-icon, :host.light-theme ::ng-deep .igx-button--raised:hover .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button--raised:hover .igx-icon, :host.light-theme ::ng-deep .igx-button--raised:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-button--raised:hover .igx-icon--error {
             color: var(--igx-button-raised-hover-icon-color); }
         :host.light-theme ::ng-deep .igx-button--raised:focus, :host.light-theme ::ng-deep .igx-button--raised:active {
           color: var(--igx-button-raised-focus-text-color);
           background: var(--igx-button-raised-focus-background);
           box-shadow: var(--igx-button-raised-focus-shadow); }
-          :host.light-theme ::ng-deep .igx-button--raised:focus .igx-icon, :host.light-theme ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised:active .igx-icon, :host.light-theme ::ng-deep .igx-button--raised:active .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button--raised:focus .igx-icon, :host.light-theme ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-button--raised:focus .igx-icon--error, :host.light-theme ::ng-deep .igx-button--raised:active .igx-icon, :host.light-theme ::ng-deep .igx-button--raised:active .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button--raised:active .igx-icon--success, :host.light-theme ::ng-deep .igx-button--raised:active .igx-icon--error {
             color: var(--igx-button-raised-focus-icon-color); }
       :host.light-theme ::ng-deep .igx-button--fab, :host.light-theme ::ng-deep .igx-button--icon {
         display: -ms-inline-flexbox;
@@ -3632,7 +3635,7 @@
         transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
         :host.light-theme ::ng-deep .igx-button--flat.igx-button-group__item, :host.light-theme ::ng-deep .igx-button--flat.igx-button-group__item--selected {
           border-radius: 0; }
-        :host.light-theme ::ng-deep .igx-button-group__item .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item--selected .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item--selected .igx-icon--inactive {
+        :host.light-theme ::ng-deep .igx-button-group__item .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item--selected .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item--selected .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item .igx-icon--success, :host.light-theme ::ng-deep .igx-button-group__item--selected .igx-icon--success, :host.light-theme ::ng-deep .igx-button-group__item .igx-icon--error, :host.light-theme ::ng-deep .igx-button-group__item--selected .igx-icon--error {
           color: currentColor; }
         :host.light-theme ::ng-deep .igx-button-group__item:not(:nth-child(0)), :host.light-theme ::ng-deep .igx-button-group__item--selected:not(:nth-child(0)) {
           margin-left: -1px; }
@@ -3650,7 +3653,7 @@
           color: var(--igx-button-group-item-hover-text-color);
           background: var(--igx-button-group-item-hover-background);
           z-index: 1; }
-          :host.light-theme ::ng-deep .igx-button-group__item:hover .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item:focus .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive {
+          :host.light-theme ::ng-deep .igx-button-group__item:hover .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--success, :host.light-theme ::ng-deep .igx-button-group__item:hover .igx-icon--error, :host.light-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--error, :host.light-theme ::ng-deep .igx-button-group__item:focus .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host.light-theme ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive, :host.light-theme ::ng-deep .igx-button-group__item:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--success, :host.light-theme ::ng-deep .igx-button-group__item:focus .igx-icon--error, :host.light-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--error {
             color: currentColor; }
       :host.light-theme ::ng-deep .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host.light-theme ::ng-deep .igx-button-group__item:not(:nth-child(0)) {
         margin-top: -1px;
@@ -3732,7 +3735,9 @@
         --igx-calendar-date-special-background: rgba(0, 0, 0, 0.04);
         --igx-calendar-date-special-text-color: white;
         --igx-calendar-date-disabled-text-color: rgba(158, 158, 158, 0.6);
-        --igx-calendar-date-disabled-background: rgba(0, 0, 0, 0.04); }
+        --igx-calendar-date-disabled-background: rgba(0, 0, 0, 0.04);
+        --igx-calendar-week-number-color: rgba(0, 0, 0, 0.38);
+        --igx-calendar-week-number-background: rgba(0, 0, 0, 0.08); }
       :host.light-theme ::ng-deep .igx-calendar, :host.light-theme ::ng-deep .igx-calendar--vertical {
         display: -ms-flexbox;
         display: flex;
@@ -3740,9 +3745,9 @@
             flex-flow: column nowrap;
         width: 100%;
         background: var(--igx-calendar-content-background);
-        overflow: hidden;
         outline: none;
         border-radius: var(--igx-calendar-border-radius);
+        overflow: hidden;
         border: 0 solid var(--igx-calendar-border-color); }
       :host.light-theme ::ng-deep .igx-calendar + .igx-calendar, :host.light-theme ::ng-deep .igx-calendar--vertical + .igx-calendar, :host.light-theme ::ng-deep .igx-calendar + .igx-calendar--vertical, :host.light-theme ::ng-deep .igx-calendar--vertical + .igx-calendar--vertical {
         margin-left: 1rem; }
@@ -3828,12 +3833,108 @@
         display: flex;
         -ms-flex-pack: justify;
             justify-content: space-between;
-        margin: 0.125em 0;
+        margin: 0.125rem 0;
         padding: 0; }
         :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:first-of-type {
-          padding-left: 0.5em; }
+          padding-left: 0.5rem; }
         :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:last-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:last-of-type {
-          padding-right: 0.5em; }
+          padding-right: 0.5rem; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current,
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label,
+        :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label {
+          min-width: 14.28%; }
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:nth-last-child(8):first-child, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:nth-last-child(8):first-child,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child,
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child ~ * {
+            min-width: 12.5% !important; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__label, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__label, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--inactive, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--inactive, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--selected, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--selected, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--current, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--current, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--weekend, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--weekend, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--special, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--special, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--disabled, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--disabled, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__year, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__year, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__year--current, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__year--current, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__month, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__month, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__month--current, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__month--current {
+          padding-left: 0 !important; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number,
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number,
+        :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number {
+          position: relative;
+          color: var(--igx-calendar-week-number-color) !important;
+          border-radius: 0;
+          pointer-events: none; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number {
+          padding-right: 0 !important;
+          cursor: default; }
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number:hover .igx-calendar__date-content--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number:hover .igx-calendar__date-content--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number:focus .igx-calendar__date-content--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number:focus .igx-calendar__date-content--week-number {
+            color: var(--igx-calendar-week-number-color) !important; }
+        
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number,
+        :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number {
+          position: relative;
+          background: var(--igx-calendar-week-number-background) !important;
+          min-width: auto; }
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number::after, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number::after {
+            display: none; }
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number::before, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.25rem;
+            left: 0;
+            top: 100%;
+            background: var(--igx-calendar-week-number-background) !important; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number {
+          padding-right: 0 !important;
+          text-align: center; }
+          :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span {
+            width: 2.5em;
+            position: relative;
+            background: var(--igx-calendar-week-number-background); }
+            :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::before, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::before, :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::after, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              background: var(--igx-calendar-week-number-background);
+              left: 0; }
+            :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::after, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::after {
+              top: 100%;
+              height: 0.375rem; }
+            :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::before, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::before {
+              bottom: 100%;
+              height: 0.5rem;
+              border-top-left-radius: 4px;
+              border-top-right-radius: 4px; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number + .igx-calendar__label, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number + .igx-calendar__label {
+          padding-left: 0 !important; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row:first-of-type, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap:first-of-type {
+          margin-bottom: 0; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row:nth-child(2), :host.light-theme ::ng-deep .igx-calendar__body-row--wrap:nth-child(2) {
+          margin-top: 0; }
+        :host.light-theme ::ng-deep .igx-calendar__body-row:last-of-type .igx-calendar__date-content--week-number, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap:last-of-type .igx-calendar__date-content--week-number {
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px; }
+          :host.light-theme ::ng-deep .igx-calendar__body-row:last-of-type .igx-calendar__date-content--week-number::before, :host.light-theme ::ng-deep .igx-calendar__body-row--wrap:last-of-type .igx-calendar__date-content--week-number::before {
+            display: none; }
       :host.light-theme ::ng-deep .igx-calendar__body-row--wrap {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
@@ -3848,7 +3949,6 @@
             justify-content: center;
         -ms-flex-align: center;
             align-items: center;
-        min-width: 14.28%;
         color: var(--igx-calendar-content-text-color);
         cursor: pointer;
         outline: none; }
@@ -3879,9 +3979,9 @@
           border-radius: inherit;
           z-index: -1; }
       :host.light-theme ::ng-deep .igx-calendar__label {
+        height: 2.5em;
         color: var(--igx-calendar-label-color);
-        border-radius: 0;
-        min-width: 14.28%; }
+        border-radius: 0; }
         :host.light-theme ::ng-deep .igx-calendar__label:hover, :host.light-theme ::ng-deep .igx-calendar__label:focus {
           color: var(--igx-calendar-label-color); }
       :host.light-theme ::ng-deep .igx-calendar__date--weekend {
@@ -4021,17 +4121,21 @@
         --igx-icon-color: 'currentColor';
         --igx-icon-size: 1.5rem;
         --igx-icon-disabled-color: 'currentColor'; }
-      :host.light-theme ::ng-deep .igx-icon, :host.light-theme ::ng-deep .igx-icon--inactive {
+      :host.light-theme ::ng-deep .igx-icon, :host.light-theme ::ng-deep .igx-icon--inactive, :host.light-theme ::ng-deep .igx-icon--success, :host.light-theme ::ng-deep .igx-icon--error {
         width: var(--igx-icon-size);
         height: var(--igx-icon-size);
         font-size: var(--igx-icon-size);
         color: var(--igx-icon-color); }
-        :host.light-theme ::ng-deep .igx-icon svg, :host.light-theme ::ng-deep .igx-icon--inactive svg {
+        :host.light-theme ::ng-deep .igx-icon svg, :host.light-theme ::ng-deep .igx-icon--inactive svg, :host.light-theme ::ng-deep .igx-icon--success svg, :host.light-theme ::ng-deep .igx-icon--error svg {
           width: inherit;
           height: inherit;
           fill: currentColor; }
-          :host.light-theme ::ng-deep .igx-icon svg use, :host.light-theme ::ng-deep .igx-icon--inactive svg use {
+          :host.light-theme ::ng-deep .igx-icon svg use, :host.light-theme ::ng-deep .igx-icon--inactive svg use, :host.light-theme ::ng-deep .igx-icon--success svg use, :host.light-theme ::ng-deep .igx-icon--error svg use {
             pointer-events: none; }
+      :host.light-theme ::ng-deep .igx-icon--success {
+        color: #4eb862; }
+      :host.light-theme ::ng-deep .igx-icon--error {
+        color: #ff134a; }
       :host.light-theme ::ng-deep .igx-icon--inactive {
         color: var(--igx-icon-disabled-color) !important;
         opacity: .54; }
@@ -4545,6 +4649,8 @@
         --igx-grid-row-selected-cell-background: #ffda97;
         --igx-grid-grid-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
         --igx-grid-drag-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 5px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 14px 0 rgba(0, 0, 0, 0.08); }
+      :host.dark-theme ::ng-deep .igx-grid__thead-wrapper:focus, :host.dark-theme ::ng-deep .igx-grid__tbody-content:focus, :host.dark-theme ::ng-deep .igx-grid__tfoot:focus {
+        outline: 0; }
       :host.dark-theme ::ng-deep .igx-grid, :host.dark-theme ::ng-deep .igx-grid--cosy, :host.dark-theme ::ng-deep .igx-grid--compact {
         position: relative;
         display: grid;
@@ -4776,7 +4882,7 @@
         background: inherit;
         z-index: 4;
         cursor: move; }
-        :host.dark-theme ::ng-deep .igx-grid__drag-indicator .igx-icon, :host.dark-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-grid__drag-indicator .igx-icon, :host.dark-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host.dark-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
           width: 1.5rem;
           height: 1.5rem;
           font-size: 1.5rem; }
@@ -4834,12 +4940,13 @@
       :host.dark-theme ::ng-deep .igx-grid__td--bool {
         -ms-flex-pack: center;
             justify-content: center; }
-        :host.dark-theme ::ng-deep .igx-grid__td--bool igx-icon {
+        :host.dark-theme ::ng-deep .igx-grid__td--bool .igx-icon, :host.dark-theme ::ng-deep .igx-grid__td--bool .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-grid__td--bool .igx-icon--success, :host.dark-theme ::ng-deep .igx-grid__td--bool .igx-icon--error {
           height: 1.125rem;
           width: 1.125rem;
-          font-size: 1.125rem;
+          font-size: 1.125rem; }
+        :host.dark-theme ::ng-deep .igx-grid__td--bool .igx-icon--error {
           color: rgba(0, 0, 0, 0.38); }
-      :host.dark-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+      :host.dark-theme ::ng-deep .igx-grid__td--bool-true .igx-icon--success {
         color: rgba(0, 0, 0, 0.62); }
       :host.dark-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
@@ -5353,7 +5460,7 @@
            -moz-user-select: none;
             -ms-user-select: none;
                 user-select: none; }
-        :host.dark-theme ::ng-deep .igx-group-label__icon.igx-icon, :host.dark-theme ::ng-deep .igx-group-label__icon.igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-group-label__icon.igx-icon, :host.dark-theme ::ng-deep .igx-group-label__icon.igx-icon--inactive, :host.dark-theme ::ng-deep .igx-group-label__icon.igx-icon--success, :host.dark-theme ::ng-deep .igx-group-label__icon.igx-icon--error {
           color: var(--igx-grid-group-label-icon);
           width: 1rem;
           height: 1rem;
@@ -6172,7 +6279,7 @@
           transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
           :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item--selected {
             border-radius: 0; }
-          :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--success, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--success, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--error, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--error {
             color: currentColor; }
           :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)), :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:not(:nth-child(0)) {
             margin-left: -1px; }
@@ -6190,7 +6297,7 @@
             color: var(--igx-button-group-item-hover-text-color);
             background: var(--igx-button-group-item-hover-background);
             z-index: 1; }
-            :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive {
+            :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--error, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--error, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--error, :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--error {
               color: currentColor; }
         :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host.dark-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)) {
           margin-top: -1px;
@@ -7386,7 +7493,7 @@
         height: auto;
         padding: 0.5rem;
         line-height: normal; }
-        :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--success, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--success, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--error, :host.dark-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--error {
           width: 1.125rem;
           height: 1.125rem;
           font-size: 1.125rem; }
@@ -7815,7 +7922,7 @@
         white-space: nowrap;
         transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
         font-family: inherit; }
-        :host.dark-theme ::ng-deep .igx-button .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon, :host.dark-theme ::ng-deep .igx-button .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-button .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon, :host.dark-theme ::ng-deep .igx-button .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--success, :host.dark-theme ::ng-deep .igx-button .igx-icon--error, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--error, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--error, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--error {
           width: 1.125rem;
           height: 1.125rem;
           font-size: 1.125rem; }
@@ -7829,17 +7936,17 @@
         background: var(--igx-button-flat-background);
         color: var(--igx-button-flat-text-color);
         border-radius: var(--igx-button-flat-border-radius); }
-        :host.dark-theme ::ng-deep .igx-button--flat .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-button--flat .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--flat .igx-icon--error {
           color: var(--igx-button-flat-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--flat:hover {
           background: var(--igx-button-flat-hover-background);
           color: var(--igx-button-flat-hover-text-color); }
-          :host.dark-theme ::ng-deep .igx-button--flat:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:hover .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button--flat:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--flat:hover .igx-icon--error {
             color: var(--igx-button-flat-hover-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--flat:focus, :host.dark-theme ::ng-deep .igx-button--flat:active {
           background: var(--igx-button-flat-focus-background);
           color: var(--igx-button-flat-focus-text-color); }
-          :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--flat:focus .igx-icon--error, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--flat:active .igx-icon--error {
             color: var(--igx-button-flat-focus-icon-color); }
       :host.dark-theme ::ng-deep .igx-button--outlined {
         background: var(--igx-button-outlined-background);
@@ -7847,36 +7954,36 @@
         border-radius: var(--igx-button-outlined-border-radius);
         border: 1px solid transparent;
         border-color: var(--igx-button-outlined-outline-color); }
-        :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--outlined .igx-icon--error {
           color: var(--igx-button-outlined-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--outlined:hover {
           background: var(--igx-button-outlined-hover-background);
           color: var(--igx-button-outlined-hover-text-color); }
-          :host.dark-theme ::ng-deep .igx-button--outlined:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined:hover .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button--outlined:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--outlined:hover .igx-icon--error {
             color: var(--igx-button-outlined-hover-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--outlined:focus, :host.dark-theme ::ng-deep .igx-button--outlined:active {
           background: var(--igx-button-outlined-focus-background);
           color: var(--igx-button-outlined-focus-text-color); }
-          :host.dark-theme ::ng-deep .igx-button--outlined:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined:active .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button--outlined:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--outlined:focus .igx-icon--error, :host.dark-theme ::ng-deep .igx-button--outlined:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--outlined:active .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--outlined:active .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--outlined:active .igx-icon--error {
             color: var(--igx-button-outlined-focus-icon-color); }
       :host.dark-theme ::ng-deep .igx-button--raised {
         color: var(--igx-button-raised-text-color);
         background: var(--igx-button-raised-background);
         box-shadow: var(--igx-button-raised-resting-shadow);
         border-radius: var(--igx-button-raised-border-radius); }
-        :host.dark-theme ::ng-deep .igx-button--raised .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-button--raised .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--raised .igx-icon--error {
           color: var(--igx-button-raised-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--raised:hover {
           color: var(--igx-button-raised-hover-text-color);
           background: var(--igx-button-raised-hover-background);
           box-shadow: var(--igx-button-raised-hover-shadow); }
-          :host.dark-theme ::ng-deep .igx-button--raised:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised:hover .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button--raised:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--raised:hover .igx-icon--error {
             color: var(--igx-button-raised-hover-icon-color); }
         :host.dark-theme ::ng-deep .igx-button--raised:focus, :host.dark-theme ::ng-deep .igx-button--raised:active {
           color: var(--igx-button-raised-focus-text-color);
           background: var(--igx-button-raised-focus-background);
           box-shadow: var(--igx-button-raised-focus-shadow); }
-          :host.dark-theme ::ng-deep .igx-button--raised:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised:active .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button--raised:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--raised:focus .igx-icon--error, :host.dark-theme ::ng-deep .igx-button--raised:active .igx-icon, :host.dark-theme ::ng-deep .igx-button--raised:active .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button--raised:active .igx-icon--success, :host.dark-theme ::ng-deep .igx-button--raised:active .igx-icon--error {
             color: var(--igx-button-raised-focus-icon-color); }
       :host.dark-theme ::ng-deep .igx-button--fab, :host.dark-theme ::ng-deep .igx-button--icon {
         display: -ms-inline-flexbox;
@@ -8070,7 +8177,7 @@
         transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
         :host.dark-theme ::ng-deep .igx-button--flat.igx-button-group__item, :host.dark-theme ::ng-deep .igx-button--flat.igx-button-group__item--selected {
           border-radius: 0; }
-        :host.dark-theme ::ng-deep .igx-button-group__item .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item--selected .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item--selected .igx-icon--inactive {
+        :host.dark-theme ::ng-deep .igx-button-group__item .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item--selected .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item--selected .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item .igx-icon--success, :host.dark-theme ::ng-deep .igx-button-group__item--selected .igx-icon--success, :host.dark-theme ::ng-deep .igx-button-group__item .igx-icon--error, :host.dark-theme ::ng-deep .igx-button-group__item--selected .igx-icon--error {
           color: currentColor; }
         :host.dark-theme ::ng-deep .igx-button-group__item:not(:nth-child(0)), :host.dark-theme ::ng-deep .igx-button-group__item--selected:not(:nth-child(0)) {
           margin-left: -1px; }
@@ -8088,7 +8195,7 @@
           color: var(--igx-button-group-item-hover-text-color);
           background: var(--igx-button-group-item-hover-background);
           z-index: 1; }
-          :host.dark-theme ::ng-deep .igx-button-group__item:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive {
+          :host.dark-theme ::ng-deep .igx-button-group__item:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--success, :host.dark-theme ::ng-deep .igx-button-group__item:hover .igx-icon--error, :host.dark-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--error, :host.dark-theme ::ng-deep .igx-button-group__item:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host.dark-theme ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-button-group__item:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--success, :host.dark-theme ::ng-deep .igx-button-group__item:focus .igx-icon--error, :host.dark-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--error {
             color: currentColor; }
       :host.dark-theme ::ng-deep .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host.dark-theme ::ng-deep .igx-button-group__item:not(:nth-child(0)) {
         margin-top: -1px;
@@ -8170,7 +8277,9 @@
         --igx-calendar-date-special-background: rgba(0, 0, 0, 0.04);
         --igx-calendar-date-special-text-color: white;
         --igx-calendar-date-disabled-text-color: rgba(158, 158, 158, 0.6);
-        --igx-calendar-date-disabled-background: rgba(0, 0, 0, 0.04); }
+        --igx-calendar-date-disabled-background: rgba(0, 0, 0, 0.04);
+        --igx-calendar-week-number-color: rgba(0, 0, 0, 0.38);
+        --igx-calendar-week-number-background: rgba(0, 0, 0, 0.08); }
       :host.dark-theme ::ng-deep .igx-calendar, :host.dark-theme ::ng-deep .igx-calendar--vertical {
         display: -ms-flexbox;
         display: flex;
@@ -8178,9 +8287,9 @@
             flex-flow: column nowrap;
         width: 100%;
         background: var(--igx-calendar-content-background);
-        overflow: hidden;
         outline: none;
         border-radius: var(--igx-calendar-border-radius);
+        overflow: hidden;
         border: 0 solid var(--igx-calendar-border-color); }
       :host.dark-theme ::ng-deep .igx-calendar + .igx-calendar, :host.dark-theme ::ng-deep .igx-calendar--vertical + .igx-calendar, :host.dark-theme ::ng-deep .igx-calendar + .igx-calendar--vertical, :host.dark-theme ::ng-deep .igx-calendar--vertical + .igx-calendar--vertical {
         margin-left: 1rem; }
@@ -8266,12 +8375,108 @@
         display: flex;
         -ms-flex-pack: justify;
             justify-content: space-between;
-        margin: 0.125em 0;
+        margin: 0.125rem 0;
         padding: 0; }
         :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:first-of-type {
-          padding-left: 0.5em; }
+          padding-left: 0.5rem; }
         :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:last-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:last-of-type {
-          padding-right: 0.5em; }
+          padding-right: 0.5rem; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current,
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label,
+        :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label {
+          min-width: 14.28%; }
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:nth-last-child(8):first-child, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:nth-last-child(8):first-child,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child ~ * {
+            min-width: 12.5% !important; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__label, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__label, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--inactive, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--inactive, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--selected, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--selected, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--current, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--current, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--weekend, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--weekend, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--special, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--special, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--disabled, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--disabled, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__year, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__year, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__year--current, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__year--current, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__month, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__month, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__month--current, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__month--current {
+          padding-left: 0 !important; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number,
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number,
+        :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number {
+          position: relative;
+          color: var(--igx-calendar-week-number-color) !important;
+          border-radius: 0;
+          pointer-events: none; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number {
+          padding-right: 0 !important;
+          cursor: default; }
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number:hover .igx-calendar__date-content--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number:hover .igx-calendar__date-content--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number:focus .igx-calendar__date-content--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number:focus .igx-calendar__date-content--week-number {
+            color: var(--igx-calendar-week-number-color) !important; }
+        
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number,
+        :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number {
+          position: relative;
+          background: var(--igx-calendar-week-number-background) !important;
+          min-width: auto; }
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number::after, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number::after {
+            display: none; }
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number::before, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.25rem;
+            left: 0;
+            top: 100%;
+            background: var(--igx-calendar-week-number-background) !important; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number {
+          padding-right: 0 !important;
+          text-align: center; }
+          :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span {
+            width: 2.5em;
+            position: relative;
+            background: var(--igx-calendar-week-number-background); }
+            :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::before, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::before, :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::after, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              background: var(--igx-calendar-week-number-background);
+              left: 0; }
+            :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::after, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::after {
+              top: 100%;
+              height: 0.375rem; }
+            :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::before, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::before {
+              bottom: 100%;
+              height: 0.5rem;
+              border-top-left-radius: 4px;
+              border-top-right-radius: 4px; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number + .igx-calendar__label, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number + .igx-calendar__label {
+          padding-left: 0 !important; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row:first-of-type, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap:first-of-type {
+          margin-bottom: 0; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row:nth-child(2), :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap:nth-child(2) {
+          margin-top: 0; }
+        :host.dark-theme ::ng-deep .igx-calendar__body-row:last-of-type .igx-calendar__date-content--week-number, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap:last-of-type .igx-calendar__date-content--week-number {
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px; }
+          :host.dark-theme ::ng-deep .igx-calendar__body-row:last-of-type .igx-calendar__date-content--week-number::before, :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap:last-of-type .igx-calendar__date-content--week-number::before {
+            display: none; }
       :host.dark-theme ::ng-deep .igx-calendar__body-row--wrap {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
@@ -8286,7 +8491,6 @@
             justify-content: center;
         -ms-flex-align: center;
             align-items: center;
-        min-width: 14.28%;
         color: var(--igx-calendar-content-text-color);
         cursor: pointer;
         outline: none; }
@@ -8317,9 +8521,9 @@
           border-radius: inherit;
           z-index: -1; }
       :host.dark-theme ::ng-deep .igx-calendar__label {
+        height: 2.5em;
         color: var(--igx-calendar-label-color);
-        border-radius: 0;
-        min-width: 14.28%; }
+        border-radius: 0; }
         :host.dark-theme ::ng-deep .igx-calendar__label:hover, :host.dark-theme ::ng-deep .igx-calendar__label:focus {
           color: var(--igx-calendar-label-color); }
       :host.dark-theme ::ng-deep .igx-calendar__date--weekend {
@@ -8459,17 +8663,21 @@
         --igx-icon-color: 'currentColor';
         --igx-icon-size: 1.5rem;
         --igx-icon-disabled-color: 'currentColor'; }
-      :host.dark-theme ::ng-deep .igx-icon, :host.dark-theme ::ng-deep .igx-icon--inactive {
+      :host.dark-theme ::ng-deep .igx-icon, :host.dark-theme ::ng-deep .igx-icon--inactive, :host.dark-theme ::ng-deep .igx-icon--success, :host.dark-theme ::ng-deep .igx-icon--error {
         width: var(--igx-icon-size);
         height: var(--igx-icon-size);
         font-size: var(--igx-icon-size);
         color: var(--igx-icon-color); }
-        :host.dark-theme ::ng-deep .igx-icon svg, :host.dark-theme ::ng-deep .igx-icon--inactive svg {
+        :host.dark-theme ::ng-deep .igx-icon svg, :host.dark-theme ::ng-deep .igx-icon--inactive svg, :host.dark-theme ::ng-deep .igx-icon--success svg, :host.dark-theme ::ng-deep .igx-icon--error svg {
           width: inherit;
           height: inherit;
           fill: currentColor; }
-          :host.dark-theme ::ng-deep .igx-icon svg use, :host.dark-theme ::ng-deep .igx-icon--inactive svg use {
+          :host.dark-theme ::ng-deep .igx-icon svg use, :host.dark-theme ::ng-deep .igx-icon--inactive svg use, :host.dark-theme ::ng-deep .igx-icon--success svg use, :host.dark-theme ::ng-deep .igx-icon--error svg use {
             pointer-events: none; }
+      :host.dark-theme ::ng-deep .igx-icon--success {
+        color: #4eb862; }
+      :host.dark-theme ::ng-deep .igx-icon--error {
+        color: #ff134a; }
       :host.dark-theme ::ng-deep .igx-icon--inactive {
         color: var(--igx-icon-disabled-color) !important;
         opacity: .54; }
@@ -8983,6 +9191,8 @@
         --igx-grid-row-selected-cell-background: #226177;
         --igx-grid-grid-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
         --igx-grid-drag-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 5px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 14px 0 rgba(0, 0, 0, 0.08); }
+      :host.black-theme ::ng-deep .igx-grid__thead-wrapper:focus, :host.black-theme ::ng-deep .igx-grid__tbody-content:focus, :host.black-theme ::ng-deep .igx-grid__tfoot:focus {
+        outline: 0; }
       :host.black-theme ::ng-deep .igx-grid, :host.black-theme ::ng-deep .igx-grid--cosy, :host.black-theme ::ng-deep .igx-grid--compact {
         position: relative;
         display: grid;
@@ -9214,7 +9424,7 @@
         background: inherit;
         z-index: 4;
         cursor: move; }
-        :host.black-theme ::ng-deep .igx-grid__drag-indicator .igx-icon, :host.black-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-grid__drag-indicator .igx-icon, :host.black-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host.black-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host.black-theme ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
           width: 1.5rem;
           height: 1.5rem;
           font-size: 1.5rem; }
@@ -9272,12 +9482,13 @@
       :host.black-theme ::ng-deep .igx-grid__td--bool {
         -ms-flex-pack: center;
             justify-content: center; }
-        :host.black-theme ::ng-deep .igx-grid__td--bool igx-icon {
+        :host.black-theme ::ng-deep .igx-grid__td--bool .igx-icon, :host.black-theme ::ng-deep .igx-grid__td--bool .igx-icon--inactive, :host.black-theme ::ng-deep .igx-grid__td--bool .igx-icon--success, :host.black-theme ::ng-deep .igx-grid__td--bool .igx-icon--error {
           height: 1.125rem;
           width: 1.125rem;
-          font-size: 1.125rem;
+          font-size: 1.125rem; }
+        :host.black-theme ::ng-deep .igx-grid__td--bool .igx-icon--error {
           color: rgba(255, 255, 255, 0.38); }
-      :host.black-theme ::ng-deep .igx-grid__td--bool-true igx-icon {
+      :host.black-theme ::ng-deep .igx-grid__td--bool-true .igx-icon--success {
         color: rgba(255, 255, 255, 0.62); }
       :host.black-theme ::ng-deep .igx-grid__tr--edit {
         border-bottom: 1px solid var(--igx-grid-edit-mode-color);
@@ -9791,7 +10002,7 @@
            -moz-user-select: none;
             -ms-user-select: none;
                 user-select: none; }
-        :host.black-theme ::ng-deep .igx-group-label__icon.igx-icon, :host.black-theme ::ng-deep .igx-group-label__icon.igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-group-label__icon.igx-icon, :host.black-theme ::ng-deep .igx-group-label__icon.igx-icon--inactive, :host.black-theme ::ng-deep .igx-group-label__icon.igx-icon--success, :host.black-theme ::ng-deep .igx-group-label__icon.igx-icon--error {
           color: var(--igx-grid-group-label-icon);
           width: 1rem;
           height: 1rem;
@@ -10610,7 +10821,7 @@
           transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
           :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item--selected {
             border-radius: 0; }
-          :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--success, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--success, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--error, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--error {
             color: currentColor; }
           :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)), :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:not(:nth-child(0)) {
             margin-left: -1px; }
@@ -10628,7 +10839,7 @@
             color: var(--igx-button-group-item-hover-text-color);
             background: var(--igx-button-group-item-hover-background);
             z-index: 1; }
-            :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive {
+            :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--error, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--error, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--error, :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--error {
               color: currentColor; }
         :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host.black-theme ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)) {
           margin-top: -1px;
@@ -11824,7 +12035,7 @@
         height: auto;
         padding: 0.5rem;
         line-height: normal; }
-        :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--success, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--success, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--error, :host.black-theme ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--error {
           width: 1.125rem;
           height: 1.125rem;
           font-size: 1.125rem; }
@@ -12253,7 +12464,7 @@
         white-space: nowrap;
         transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
         font-family: inherit; }
-        :host.black-theme ::ng-deep .igx-button .igx-icon, :host.black-theme ::ng-deep .igx-button--flat .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon, :host.black-theme ::ng-deep .igx-button--raised .igx-icon, :host.black-theme ::ng-deep .igx-button .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-button .igx-icon, :host.black-theme ::ng-deep .igx-button--flat .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon, :host.black-theme ::ng-deep .igx-button--raised .igx-icon, :host.black-theme ::ng-deep .igx-button .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button .igx-icon--success, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--success, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--success, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--success, :host.black-theme ::ng-deep .igx-button .igx-icon--error, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--error, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--error, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--error {
           width: 1.125rem;
           height: 1.125rem;
           font-size: 1.125rem; }
@@ -12267,17 +12478,17 @@
         background: var(--igx-button-flat-background);
         color: var(--igx-button-flat-text-color);
         border-radius: var(--igx-button-flat-border-radius); }
-        :host.black-theme ::ng-deep .igx-button--flat .igx-icon, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-button--flat .igx-icon, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--success, :host.black-theme ::ng-deep .igx-button--flat .igx-icon--error {
           color: var(--igx-button-flat-icon-color); }
         :host.black-theme ::ng-deep .igx-button--flat:hover {
           background: var(--igx-button-flat-hover-background);
           color: var(--igx-button-flat-hover-text-color); }
-          :host.black-theme ::ng-deep .igx-button--flat:hover .igx-icon, :host.black-theme ::ng-deep .igx-button--flat:hover .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button--flat:hover .igx-icon, :host.black-theme ::ng-deep .igx-button--flat:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-button--flat:hover .igx-icon--error {
             color: var(--igx-button-flat-hover-icon-color); }
         :host.black-theme ::ng-deep .igx-button--flat:focus, :host.black-theme ::ng-deep .igx-button--flat:active {
           background: var(--igx-button-flat-focus-background);
           color: var(--igx-button-flat-focus-text-color); }
-          :host.black-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.black-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.black-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button--flat:focus .igx-icon, :host.black-theme ::ng-deep .igx-button--flat:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-button--flat:focus .igx-icon--error, :host.black-theme ::ng-deep .igx-button--flat:active .igx-icon, :host.black-theme ::ng-deep .igx-button--flat:active .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--flat:active .igx-icon--success, :host.black-theme ::ng-deep .igx-button--flat:active .igx-icon--error {
             color: var(--igx-button-flat-focus-icon-color); }
       :host.black-theme ::ng-deep .igx-button--outlined {
         background: var(--igx-button-outlined-background);
@@ -12285,36 +12496,36 @@
         border-radius: var(--igx-button-outlined-border-radius);
         border: 1px solid transparent;
         border-color: var(--igx-button-outlined-outline-color); }
-        :host.black-theme ::ng-deep .igx-button--outlined .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-button--outlined .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--success, :host.black-theme ::ng-deep .igx-button--outlined .igx-icon--error {
           color: var(--igx-button-outlined-icon-color); }
         :host.black-theme ::ng-deep .igx-button--outlined:hover {
           background: var(--igx-button-outlined-hover-background);
           color: var(--igx-button-outlined-hover-text-color); }
-          :host.black-theme ::ng-deep .igx-button--outlined:hover .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined:hover .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button--outlined:hover .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-button--outlined:hover .igx-icon--error {
             color: var(--igx-button-outlined-hover-icon-color); }
         :host.black-theme ::ng-deep .igx-button--outlined:focus, :host.black-theme ::ng-deep .igx-button--outlined:active {
           background: var(--igx-button-outlined-focus-background);
           color: var(--igx-button-outlined-focus-text-color); }
-          :host.black-theme ::ng-deep .igx-button--outlined:focus .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined:active .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined:active .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button--outlined:focus .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-button--outlined:focus .igx-icon--error, :host.black-theme ::ng-deep .igx-button--outlined:active .igx-icon, :host.black-theme ::ng-deep .igx-button--outlined:active .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--outlined:active .igx-icon--success, :host.black-theme ::ng-deep .igx-button--outlined:active .igx-icon--error {
             color: var(--igx-button-outlined-focus-icon-color); }
       :host.black-theme ::ng-deep .igx-button--raised {
         color: var(--igx-button-raised-text-color);
         background: var(--igx-button-raised-background);
         box-shadow: var(--igx-button-raised-resting-shadow);
         border-radius: var(--igx-button-raised-border-radius); }
-        :host.black-theme ::ng-deep .igx-button--raised .igx-icon, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-button--raised .igx-icon, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--success, :host.black-theme ::ng-deep .igx-button--raised .igx-icon--error {
           color: var(--igx-button-raised-icon-color); }
         :host.black-theme ::ng-deep .igx-button--raised:hover {
           color: var(--igx-button-raised-hover-text-color);
           background: var(--igx-button-raised-hover-background);
           box-shadow: var(--igx-button-raised-hover-shadow); }
-          :host.black-theme ::ng-deep .igx-button--raised:hover .igx-icon, :host.black-theme ::ng-deep .igx-button--raised:hover .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button--raised:hover .igx-icon, :host.black-theme ::ng-deep .igx-button--raised:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-button--raised:hover .igx-icon--error {
             color: var(--igx-button-raised-hover-icon-color); }
         :host.black-theme ::ng-deep .igx-button--raised:focus, :host.black-theme ::ng-deep .igx-button--raised:active {
           color: var(--igx-button-raised-focus-text-color);
           background: var(--igx-button-raised-focus-background);
           box-shadow: var(--igx-button-raised-focus-shadow); }
-          :host.black-theme ::ng-deep .igx-button--raised:focus .igx-icon, :host.black-theme ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised:active .igx-icon, :host.black-theme ::ng-deep .igx-button--raised:active .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button--raised:focus .igx-icon, :host.black-theme ::ng-deep .igx-button--raised:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-button--raised:focus .igx-icon--error, :host.black-theme ::ng-deep .igx-button--raised:active .igx-icon, :host.black-theme ::ng-deep .igx-button--raised:active .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button--raised:active .igx-icon--success, :host.black-theme ::ng-deep .igx-button--raised:active .igx-icon--error {
             color: var(--igx-button-raised-focus-icon-color); }
       :host.black-theme ::ng-deep .igx-button--fab, :host.black-theme ::ng-deep .igx-button--icon {
         display: -ms-inline-flexbox;
@@ -12508,7 +12719,7 @@
         transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
         :host.black-theme ::ng-deep .igx-button--flat.igx-button-group__item, :host.black-theme ::ng-deep .igx-button--flat.igx-button-group__item--selected {
           border-radius: 0; }
-        :host.black-theme ::ng-deep .igx-button-group__item .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item--selected .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item--selected .igx-icon--inactive {
+        :host.black-theme ::ng-deep .igx-button-group__item .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item--selected .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item--selected .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item .igx-icon--success, :host.black-theme ::ng-deep .igx-button-group__item--selected .igx-icon--success, :host.black-theme ::ng-deep .igx-button-group__item .igx-icon--error, :host.black-theme ::ng-deep .igx-button-group__item--selected .igx-icon--error {
           color: currentColor; }
         :host.black-theme ::ng-deep .igx-button-group__item:not(:nth-child(0)), :host.black-theme ::ng-deep .igx-button-group__item--selected:not(:nth-child(0)) {
           margin-left: -1px; }
@@ -12526,7 +12737,7 @@
           color: var(--igx-button-group-item-hover-text-color);
           background: var(--igx-button-group-item-hover-background);
           z-index: 1; }
-          :host.black-theme ::ng-deep .igx-button-group__item:hover .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item:focus .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive {
+          :host.black-theme ::ng-deep .igx-button-group__item:hover .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--success, :host.black-theme ::ng-deep .igx-button-group__item:hover .igx-icon--error, :host.black-theme ::ng-deep .igx-button-group__item--selected:hover .igx-icon--error, :host.black-theme ::ng-deep .igx-button-group__item:focus .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon, :host.black-theme ::ng-deep .igx-button-group__item:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--inactive, :host.black-theme ::ng-deep .igx-button-group__item:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--success, :host.black-theme ::ng-deep .igx-button-group__item:focus .igx-icon--error, :host.black-theme ::ng-deep .igx-button-group__item--selected:focus .igx-icon--error {
             color: currentColor; }
       :host.black-theme ::ng-deep .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host.black-theme ::ng-deep .igx-button-group__item:not(:nth-child(0)) {
         margin-top: -1px;
@@ -12608,7 +12819,9 @@
         --igx-calendar-date-special-background: rgba(255, 255, 255, 0.04);
         --igx-calendar-date-special-text-color: rgba(255, 255, 255, 0.87);
         --igx-calendar-date-disabled-text-color: rgba(255, 255, 255, 0.38);
-        --igx-calendar-date-disabled-background: rgba(255, 255, 255, 0.04); }
+        --igx-calendar-date-disabled-background: rgba(255, 255, 255, 0.04);
+        --igx-calendar-week-number-color: rgba(255, 255, 255, 0.38);
+        --igx-calendar-week-number-background: rgba(255, 255, 255, 0.08); }
       :host.black-theme ::ng-deep .igx-calendar, :host.black-theme ::ng-deep .igx-calendar--vertical {
         display: -ms-flexbox;
         display: flex;
@@ -12616,9 +12829,9 @@
             flex-flow: column nowrap;
         width: 100%;
         background: var(--igx-calendar-content-background);
-        overflow: hidden;
         outline: none;
         border-radius: var(--igx-calendar-border-radius);
+        overflow: hidden;
         border: 0 solid var(--igx-calendar-border-color); }
       :host.black-theme ::ng-deep .igx-calendar + .igx-calendar, :host.black-theme ::ng-deep .igx-calendar--vertical + .igx-calendar, :host.black-theme ::ng-deep .igx-calendar + .igx-calendar--vertical, :host.black-theme ::ng-deep .igx-calendar--vertical + .igx-calendar--vertical {
         margin-left: 1rem; }
@@ -12704,12 +12917,108 @@
         display: flex;
         -ms-flex-pack: justify;
             justify-content: space-between;
-        margin: 0.125em 0;
+        margin: 0.125rem 0;
         padding: 0; }
         :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:first-of-type {
-          padding-left: 0.5em; }
+          padding-left: 0.5rem; }
         :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:last-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:last-of-type {
-          padding-right: 0.5em; }
+          padding-right: 0.5rem; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current,
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label,
+        :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label {
+          min-width: 14.28%; }
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:nth-last-child(8):first-child, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:nth-last-child(8):first-child,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--inactive:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--inactive:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--selected:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--selected:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--current:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--current:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--weekend:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--weekend:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--special:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--special:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--disabled:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--disabled:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__year--current:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__year--current:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__month--current:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__month--current:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child,
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label:nth-last-child(8):first-child ~ *,
+          :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label:nth-last-child(8):first-child ~ * {
+            min-width: 12.5% !important; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__label, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__label, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--inactive, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--inactive, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--selected, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--selected, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--current, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--current, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--weekend, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--weekend, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--special, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--special, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__date--disabled, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__date--disabled, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__year, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__year, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__year--current, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__year--current, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__month, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__month, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number + .igx-calendar__month--current, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number + .igx-calendar__month--current {
+          padding-left: 0 !important; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number,
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number,
+        :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number {
+          position: relative;
+          color: var(--igx-calendar-week-number-color) !important;
+          border-radius: 0;
+          pointer-events: none; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number {
+          padding-right: 0 !important;
+          cursor: default; }
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number:hover .igx-calendar__date-content--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number:hover .igx-calendar__date-content--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date--week-number:focus .igx-calendar__date-content--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date--week-number:focus .igx-calendar__date-content--week-number {
+            color: var(--igx-calendar-week-number-color) !important; }
+        
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number,
+        :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number {
+          position: relative;
+          background: var(--igx-calendar-week-number-background) !important;
+          min-width: auto; }
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number::after, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number::after {
+            display: none; }
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__date-content--week-number::before, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__date-content--week-number::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0.25rem;
+            left: 0;
+            top: 100%;
+            background: var(--igx-calendar-week-number-background) !important; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number {
+          padding-right: 0 !important;
+          text-align: center; }
+          :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span {
+            width: 2.5em;
+            position: relative;
+            background: var(--igx-calendar-week-number-background); }
+            :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::before, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::before, :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::after, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::after {
+              content: '';
+              position: absolute;
+              width: 100%;
+              background: var(--igx-calendar-week-number-background);
+              left: 0; }
+            :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::after, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::after {
+              top: 100%;
+              height: 0.375rem; }
+            :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number span::before, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number span::before {
+              bottom: 100%;
+              height: 0.5rem;
+              border-top-left-radius: 4px;
+              border-top-right-radius: 4px; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row .igx-calendar__label--week-number + .igx-calendar__label, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap .igx-calendar__label--week-number + .igx-calendar__label {
+          padding-left: 0 !important; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row:first-of-type, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap:first-of-type {
+          margin-bottom: 0; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row:nth-child(2), :host.black-theme ::ng-deep .igx-calendar__body-row--wrap:nth-child(2) {
+          margin-top: 0; }
+        :host.black-theme ::ng-deep .igx-calendar__body-row:last-of-type .igx-calendar__date-content--week-number, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap:last-of-type .igx-calendar__date-content--week-number {
+          border-bottom-left-radius: 4px;
+          border-bottom-right-radius: 4px; }
+          :host.black-theme ::ng-deep .igx-calendar__body-row:last-of-type .igx-calendar__date-content--week-number::before, :host.black-theme ::ng-deep .igx-calendar__body-row--wrap:last-of-type .igx-calendar__date-content--week-number::before {
+            display: none; }
       :host.black-theme ::ng-deep .igx-calendar__body-row--wrap {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
@@ -12724,7 +13033,6 @@
             justify-content: center;
         -ms-flex-align: center;
             align-items: center;
-        min-width: 14.28%;
         color: var(--igx-calendar-content-text-color);
         cursor: pointer;
         outline: none; }
@@ -12755,9 +13063,9 @@
           border-radius: inherit;
           z-index: -1; }
       :host.black-theme ::ng-deep .igx-calendar__label {
+        height: 2.5em;
         color: var(--igx-calendar-label-color);
-        border-radius: 0;
-        min-width: 14.28%; }
+        border-radius: 0; }
         :host.black-theme ::ng-deep .igx-calendar__label:hover, :host.black-theme ::ng-deep .igx-calendar__label:focus {
           color: var(--igx-calendar-label-color); }
       :host.black-theme ::ng-deep .igx-calendar__date--weekend {
@@ -12897,17 +13205,21 @@
         --igx-icon-color: 'currentColor';
         --igx-icon-size: 1.5rem;
         --igx-icon-disabled-color: 'currentColor'; }
-      :host.black-theme ::ng-deep .igx-icon, :host.black-theme ::ng-deep .igx-icon--inactive {
+      :host.black-theme ::ng-deep .igx-icon, :host.black-theme ::ng-deep .igx-icon--inactive, :host.black-theme ::ng-deep .igx-icon--success, :host.black-theme ::ng-deep .igx-icon--error {
         width: var(--igx-icon-size);
         height: var(--igx-icon-size);
         font-size: var(--igx-icon-size);
         color: var(--igx-icon-color); }
-        :host.black-theme ::ng-deep .igx-icon svg, :host.black-theme ::ng-deep .igx-icon--inactive svg {
+        :host.black-theme ::ng-deep .igx-icon svg, :host.black-theme ::ng-deep .igx-icon--inactive svg, :host.black-theme ::ng-deep .igx-icon--success svg, :host.black-theme ::ng-deep .igx-icon--error svg {
           width: inherit;
           height: inherit;
           fill: currentColor; }
-          :host.black-theme ::ng-deep .igx-icon svg use, :host.black-theme ::ng-deep .igx-icon--inactive svg use {
+          :host.black-theme ::ng-deep .igx-icon svg use, :host.black-theme ::ng-deep .igx-icon--inactive svg use, :host.black-theme ::ng-deep .igx-icon--success svg use, :host.black-theme ::ng-deep .igx-icon--error svg use {
             pointer-events: none; }
+      :host.black-theme ::ng-deep .igx-icon--success {
+        color: #4eb862; }
+      :host.black-theme ::ng-deep .igx-icon--error {
+        color: #ff134a; }
       :host.black-theme ::ng-deep .igx-icon--inactive {
         color: var(--igx-icon-disabled-color) !important;
         opacity: .54; }
