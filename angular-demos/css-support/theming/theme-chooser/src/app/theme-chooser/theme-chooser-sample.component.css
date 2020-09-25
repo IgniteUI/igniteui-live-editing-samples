@@ -1399,6 +1399,11 @@
       :host.light-theme ::ng-deep .igx-grid__row-editing-outlet {
         z-index: 10000;
         position: absolute; }
+      :host.light-theme ::ng-deep .igx-grid__addrow-snackbar {
+        position: absolute;
+        z-index: 5;
+        left: 35%;
+        bottom: 25%; }
       :host.light-theme ::ng-deep .igx-grid__filtering-cell, :host.light-theme ::ng-deep .igx-grid__filtering-cell--selected {
         display: -ms-flexbox;
         display: flex;
@@ -5941,6 +5946,11 @@
       :host.dark-theme ::ng-deep .igx-grid__row-editing-outlet {
         z-index: 10000;
         position: absolute; }
+      :host.dark-theme ::ng-deep .igx-grid__addrow-snackbar {
+        position: absolute;
+        z-index: 5;
+        left: 35%;
+        bottom: 25%; }
       :host.dark-theme ::ng-deep .igx-grid__filtering-cell, :host.dark-theme ::ng-deep .igx-grid__filtering-cell--selected {
         display: -ms-flexbox;
         display: flex;
@@ -10483,6 +10493,11 @@
       :host.black-theme ::ng-deep .igx-grid__row-editing-outlet {
         z-index: 10000;
         position: absolute; }
+      :host.black-theme ::ng-deep .igx-grid__addrow-snackbar {
+        position: absolute;
+        z-index: 5;
+        left: 35%;
+        bottom: 25%; }
       :host.black-theme ::ng-deep .igx-grid__filtering-cell, :host.black-theme ::ng-deep .igx-grid__filtering-cell--selected {
         display: -ms-flexbox;
         display: flex;

@@ -1753,6 +1753,12 @@
     /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
     position: absolute; }
 
+.igx-grid__addrow-snackbar {
+  position: absolute;
+  z-index: 5;
+  left: 35%;
+  bottom: 25%; }
+
 .igx-grid__filtering-cell, .igx-grid__filtering-cell--selected {
   display: -ms-flexbox;
   display: flex;

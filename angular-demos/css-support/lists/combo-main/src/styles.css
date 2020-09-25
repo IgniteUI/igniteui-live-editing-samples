@@ -5911,6 +5911,12 @@ igx-date-range-end,
     /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
     position: absolute; }
 
+.igx-grid__addrow-snackbar {
+  position: absolute;
+  z-index: 5;
+  left: 35%;
+  bottom: 25%; }
+
 .igx-grid__filtering-cell, .igx-grid__filtering-cell--selected {
   display: -ms-flexbox;
   display: flex;
@@ -15087,6 +15093,11 @@ body {
     .fin-dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper, .fin-dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper--modal, .fin-dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex, .fin-dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex-container {
       /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
       position: absolute; }
+  .fin-dark-theme .igx-grid__addrow-snackbar {
+    position: absolute;
+    z-index: 5;
+    left: 35%;
+    bottom: 25%; }
   .fin-dark-theme .igx-grid__filtering-cell, .fin-dark-theme .igx-grid__filtering-cell--selected {
     display: -ms-flexbox;
     display: flex;
@@ -23411,6 +23422,11 @@ body {
     .dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper, .dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper--modal, .dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex, .dark-theme .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex-container {
       /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
       position: absolute; }
+  .dark-theme .igx-grid__addrow-snackbar {
+    position: absolute;
+    z-index: 5;
+    left: 35%;
+    bottom: 25%; }
   .dark-theme .igx-grid__filtering-cell, .dark-theme .igx-grid__filtering-cell--selected {
     display: -ms-flexbox;
     display: flex;
@@ -32312,6 +32328,11 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper--modal, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex-container {
         /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
         position: absolute; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__addrow-snackbar {
+      position: absolute;
+      z-index: 5;
+      left: 35%;
+      bottom: 25%; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell--selected {
       display: -ms-flexbox;
       display: flex;
