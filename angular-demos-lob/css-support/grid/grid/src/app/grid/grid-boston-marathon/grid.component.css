@@ -1449,6 +1449,11 @@
     ::ng-deep .default-theme .grid__wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper, ::ng-deep .default-theme .grid__wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper--modal, ::ng-deep .default-theme .grid__wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex, ::ng-deep .default-theme .grid__wrapper .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex-container {
       /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
       position: absolute; }
+  ::ng-deep .default-theme .grid__wrapper .igx-grid__addrow-snackbar {
+    position: absolute;
+    z-index: 5;
+    left: 35%;
+    bottom: 25%; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__filtering-cell, ::ng-deep .default-theme .grid__wrapper .igx-grid__filtering-cell--selected {
     display: -ms-flexbox;
     display: flex;
