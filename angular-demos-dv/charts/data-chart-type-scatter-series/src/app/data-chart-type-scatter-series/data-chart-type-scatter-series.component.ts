@@ -1,27 +1,27 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 
 // types of axis:
-import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxNumericXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
 // types of scatter series:
-import { IgxBubbleSeriesComponent } from "igniteui-angular-charts/ES5/igx-bubble-series-component";
-import { IgxScatterLineSeriesComponent } from "igniteui-angular-charts/ES5/igx-scatter-line-series-component";
-import { IgxScatterSeriesComponent } from "igniteui-angular-charts/ES5/igx-scatter-series-component";
-import { IgxScatterSplineSeriesComponent } from "igniteui-angular-charts/ES5/igx-scatter-spline-series-component";
+import { IgxBubbleSeriesComponent } from "igniteui-angular-charts";
+import { IgxScatterLineSeriesComponent } from "igniteui-angular-charts";
+import { IgxScatterSeriesComponent } from "igniteui-angular-charts";
+import { IgxScatterSplineSeriesComponent } from "igniteui-angular-charts";
 
 // elements of scatter series:
-import { BrushSelectionMode } from "igniteui-angular-charts/ES5/BrushSelectionMode";
+import { BrushSelectionMode } from "igniteui-angular-charts";
 import {
     IgxCustomPaletteBrushScaleComponent
-} from "igniteui-angular-charts/ES5/igx-custom-palette-brush-scale-component";
-import { IgxSizeScaleComponent } from "igniteui-angular-charts/ES5/igx-size-scale-component";
-import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
+} from "igniteui-angular-charts";
+import { IgxSizeScaleComponent } from "igniteui-angular-charts";
+import { IgxValueBrushScaleComponent } from "igniteui-angular-charts";
 
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { MarkerType } from "igniteui-angular-charts";
 
-import { IgxLegendComponent } from "igniteui-angular-charts/ES5/igx-legend-component";
+import { IgxLegendComponent } from "igniteui-angular-charts";
 
 import { SampleScatterStats } from "../SampleScatterStats";
 

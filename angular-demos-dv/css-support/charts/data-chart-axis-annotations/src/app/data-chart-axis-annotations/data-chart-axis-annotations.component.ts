@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 
-import { IgxCrosshairLayerComponent } from "igniteui-angular-charts/ES5/igx-crosshair-layer-component";
-import { IgxFinalValueLayerComponent } from "igniteui-angular-charts/ES5/igx-final-value-layer-component";
-import { IgxSeriesComponent } from "igniteui-angular-charts/ES5/igx-series-component";
-import { IgxValueOverlayComponent } from "igniteui-angular-charts/ES5/igx-value-overlay-component";
+import { IgxCrosshairLayerComponent } from "igniteui-angular-charts";
+import { IgxFinalValueLayerComponent } from "igniteui-angular-charts";
+import { IgxSeriesComponent } from "igniteui-angular-charts";
+import { IgxValueOverlayComponent } from "igniteui-angular-charts";
 
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-data-chart-axis-annotations",
@@ -18,6 +18,9 @@ export class DataChartAxisAnnotationsComponent implements OnInit {
 
     public data: any[];
 
+    public finalValuesVisible: boolean;
+    public crosshairsVisible: boolean;
+
     @ViewChild("chart", { static: true })
     public chart: IgxDataChartComponent;
 
@@ -26,25 +29,27 @@ export class DataChartAxisAnnotationsComponent implements OnInit {
 
     public crosshairLayer: IgxCrosshairLayerComponent;
     public finalValueLayer: IgxFinalValueLayerComponent;
-    public valueOverlay: IgxValueOverlayComponent;
-
+    
     constructor() {
         this.initData();
-
-        this.valueOverlay = new IgxValueOverlayComponent();
-        this.valueOverlay.thickness = 3;
-        this.valueOverlay.value = 85;
-        this.valueOverlay.brush = "Green";
-        this.valueOverlay.isAxisAnnotationEnabled = true;
+        this.finalValuesVisible = true;
+        this.crosshairsVisible = true; 
 
         this.crosshairLayer = new IgxCrosshairLayerComponent();
         this.crosshairLayer.isAxisAnnotationEnabled = true;
+        this.crosshairLayer.brush = "#9FB328";
+        this.crosshairLayer.outline = "Black";
 
-        this.finalValueLayer = new IgxFinalValueLayerComponent();
+        this.finalValueLayer = new IgxFinalValueLayerComponent(); 
+        this.finalValueLayer.axisAnnotationBackground = "#9FB328";
+        this.finalValueLayer.axisAnnotationOutline = "#9FB328";
+        this.finalValueLayer.axisAnnotationTextColor = "White";
+        
     }
 
     public ngOnInit() {
-        this.valueOverlay.axis = this.yAxis;
+        this.toggleFinalValues(true);
+        this.toggleCrosshairs(true);
     }
 
     public initData() {
@@ -107,11 +112,6 @@ export class DataChartAxisAnnotationsComponent implements OnInit {
         this.toggleFinalValues(isChecked);
     }
 
-    public onValueOverlayChange = (e: any) => {
-        const isChecked: boolean = e.target.checked;
-        this.toggleCallouts(isChecked);
-    }
-
     public onCrosshairChange = (e: any) => {
         const isChecked: boolean = e.target.checked;
         this.toggleCrosshairs(isChecked);
@@ -123,10 +123,6 @@ export class DataChartAxisAnnotationsComponent implements OnInit {
 
     public toggleFinalValues(isChecked: boolean) {
         this.toggleSeries(this.finalValueLayer, isChecked);
-    }
-
-    public toggleCallouts(isChecked: boolean) {
-        this.toggleSeries(this.valueOverlay, isChecked);
     }
 
     public toggleSeries(series: IgxSeriesComponent, isChecked: boolean) {

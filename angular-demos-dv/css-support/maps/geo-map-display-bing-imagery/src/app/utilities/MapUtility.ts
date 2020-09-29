@@ -1,3 +1,5 @@
+import { IgxGeographicMapComponent } from 'igniteui-angular-maps';
+
 export enum MapRegion {
     Caribbean = "Caribbean",
     UnitedStates = "United States",
@@ -13,6 +15,13 @@ export enum MapRegion {
 }
 
 export class MapUtility {
+
+    public static navigateTo(geoMap: IgxGeographicMapComponent, name: MapRegion) {
+
+        const geoRect = this.getRegions()[name];
+        // console.log("MapUtils " + name) ;
+        geoMap.zoomToGeographic(geoRect);
+    }
 
     public static toPixel(num: number): string {
         const s = Math.abs(num).toFixed(0);

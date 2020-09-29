@@ -1,6 +1,6 @@
-import { Component, ViewChild } from "@angular/core";
-import { IgxSparklineComponent } from "igniteui-angular-charts/ES5/igx-sparkline-component";
-import { Visibility } from "igniteui-angular-core/ES5/Visibility";
+import { Component, ViewChild, AfterViewInit } from "@angular/core";
+import { IgxSparklineComponent } from "igniteui-angular-charts";
+import { Visibility } from "igniteui-angular-core";
 
 import { SharedData } from "../SharedData";
 
@@ -9,7 +9,7 @@ import { SharedData } from "../SharedData";
     styleUrls: ["./sparkline-normal-range.component.css"],
     templateUrl: "./sparkline-normal-range.component.html"
 })
-export class SparklineNormalRangeComponent {
+export class SparklineNormalRangeComponent implements AfterViewInit {
 
     public data: any[];
 
@@ -35,5 +35,9 @@ export class SparklineNormalRangeComponent {
 
     public onMaxSliderChanged(e: any) {
         this.sparkline.normalRangeMaximum = e.target.value;
+    }
+
+    public ngAfterViewInit(): void {
+        this.sparkline.normalRangeVisibility = Visibility.Visible;
     }
 }

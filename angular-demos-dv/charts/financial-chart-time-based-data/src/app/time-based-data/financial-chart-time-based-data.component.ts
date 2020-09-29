@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, ViewChild } from "@angular/core";
-import { IgxFinancialChartComponent } from "igniteui-angular-charts/ES5/igx-financial-chart-component";
+import { IgxFinancialChartComponent } from "igniteui-angular-charts";
 import { FinancialDataService } from "../services/financial-data.service";
 
 @Component({

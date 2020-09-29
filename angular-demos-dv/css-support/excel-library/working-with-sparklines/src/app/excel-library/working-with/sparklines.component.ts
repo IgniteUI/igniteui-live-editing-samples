@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from "@angular/core";
 // importing IG components:
 import { IgxGridComponent } from "igniteui-angular";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/excel.core";
-import { SparklineType } from "igniteui-angular-excel/ES5/SparklineType";
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { SparklineType } from "igniteui-angular-excel";
+import { Workbook } from "igniteui-angular-excel";
 import {
     WorkbookExportService
 } from "../../utilities/excel-exporter";

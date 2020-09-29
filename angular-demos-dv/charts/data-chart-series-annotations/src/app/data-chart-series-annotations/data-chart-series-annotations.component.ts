@@ -1,14 +1,14 @@
 import { Component, ViewChild } from "@angular/core";
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
-import { IgxCalloutLayerComponent} from "igniteui-angular-charts/ES5/igx-callout-layer-component";
-import { IgxCrosshairLayerComponent} from "igniteui-angular-charts/ES5/igx-crosshair-layer-component";
-import { IgxFinalValueLayerComponent} from "igniteui-angular-charts/ES5/igx-final-value-layer-component";
-import { IgxSeriesComponent } from "igniteui-angular-charts/ES5/igx-series-component";
+import { IgxCalloutLayerComponent} from "igniteui-angular-charts";
+import { IgxCrosshairLayerComponent} from "igniteui-angular-charts";
+import { IgxFinalValueLayerComponent} from "igniteui-angular-charts";
+import { IgxSeriesComponent } from "igniteui-angular-charts";
 
-import { FinalValueSelectionMode } from "igniteui-angular-charts/ES5/FinalValueSelectionMode";
+import { FinalValueSelectionMode } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-data-chart-series-annotations",

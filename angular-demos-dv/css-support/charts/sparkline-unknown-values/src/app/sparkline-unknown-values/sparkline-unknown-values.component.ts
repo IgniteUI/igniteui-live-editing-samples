@@ -1,6 +1,6 @@
-import { Component, ViewChild } from "@angular/core";
-import { IgxSparklineComponent } from "igniteui-angular-charts/ES5/igx-sparkline-component";
-import { UnknownValuePlotting } from "igniteui-angular-core/ES5/UnknownValuePlotting";
+import { Component, ViewChild, AfterViewInit } from "@angular/core";
+import { IgxSparklineComponent } from "igniteui-angular-charts";
+import { UnknownValuePlotting } from "igniteui-angular-core";
 
 import { SharedData } from "../SharedData";
 
@@ -9,7 +9,7 @@ import { SharedData } from "../SharedData";
     styleUrls: ["./sparkline-unknown-values.component.css"],
     templateUrl: "./sparkline-unknown-values.component.html"
 })
-export class SparklineUnknownValuesComponent {
+export class SparklineUnknownValuesComponent implements AfterViewInit {
 
     @ViewChild("sparkline", { static: true })
     public sparkline: IgxSparklineComponent;
@@ -28,5 +28,9 @@ export class SparklineUnknownValuesComponent {
         } else {
             this.sparkline.unknownValuePlotting = UnknownValuePlotting.DontPlot;
         }
+    }
+
+    public ngAfterViewInit(): void {
+        this.sparkline.unknownValuePlotting = UnknownValuePlotting.LinearInterpolate;
     }
 }

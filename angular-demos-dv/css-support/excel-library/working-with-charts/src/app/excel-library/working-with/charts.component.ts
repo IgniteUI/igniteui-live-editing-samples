@@ -1,8 +1,9 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component} from "@angular/core";
-import { ChartType } from "igniteui-angular-excel/ES5/ChartType";
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { WorksheetRegion } from "igniteui-angular-excel/ES5/WorksheetRegion";
+import { AxisType } from "igniteui-angular-excel";
+import { ChartType } from "igniteui-angular-excel";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { WorksheetRegion } from "igniteui-angular-excel";
 import { ExcelUtility } from "../../utilities/excel-utility";
 
 @Component({
@@ -104,6 +105,8 @@ export class ExcelLibraryWorkingWithChartsComponent implements AfterViewInit {
           ws.rows(0).cells(0), { x: 0, y: 0 },
           ws.rows(0).cells(headers.length - 1), { x: 100, y: 100 });
         chart.setSourceData(table.wholeTableRegion.toString(), true);
+
+        chart.axisCollection(AxisType.Category).axisBetweenCategories = true;
 
         ExcelUtility.save(wb, "chartSample");
     }

@@ -32,10 +32,12 @@ igx-financial-chart {
   margin-bottom: 15px;
   margin-right: 0px;
   margin-left: 0px;
+  display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background: white; }
 
 .legend {

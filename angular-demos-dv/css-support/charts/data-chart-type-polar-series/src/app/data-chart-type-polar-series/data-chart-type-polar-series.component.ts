@@ -1,20 +1,20 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 
 // types of axis:
-import { IgxNumericAngleAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-angle-axis-component";
-import { IgxNumericRadiusAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis-component";
+import { IgxNumericAngleAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericRadiusAxisComponent } from "igniteui-angular-charts";
 
 // types of polar series:
-import { IgxPolarAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-polar-area-series-component";
-import { IgxPolarLineSeriesComponent } from "igniteui-angular-charts/ES5/igx-polar-line-series-component";
-import { IgxPolarScatterSeriesComponent } from "igniteui-angular-charts/ES5/igx-polar-scatter-series-component";
-import { IgxPolarSplineAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-polar-spline-area-series-component";
-import { IgxPolarSplineSeriesComponent } from "igniteui-angular-charts/ES5/igx-polar-spline-series-component";
+import { IgxPolarAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxPolarLineSeriesComponent } from "igniteui-angular-charts";
+import { IgxPolarScatterSeriesComponent } from "igniteui-angular-charts";
+import { IgxPolarSplineAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxPolarSplineSeriesComponent } from "igniteui-angular-charts";
 
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { MarkerType } from "igniteui-angular-charts";
 
-import { IgxLegendComponent } from "igniteui-angular-charts/ES5/igx-legend-component";
+import { IgxLegendComponent } from "igniteui-angular-charts";
 
 import { SamplePolarData } from "../SamplePolarData";
 

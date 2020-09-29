@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { MarkerType } from "igniteui-angular-charts";
+import { IgxShapeDataSource } from "igniteui-angular-core";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicSymbolSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+} from "igniteui-angular-maps";
 
 @Component({
   selector: "app-map-binding-shp-points",
@@ -20,14 +20,14 @@ export class MapBindingShapefilePointsComponent implements AfterViewInit {
     constructor() { }
 
     public ngAfterViewInit() {
-        const sds = new ShapeDataSource();
-        sds.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCities.shp";
-        sds.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCities.dbf";
-        sds.dataBind();
+        const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+        sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCities.shp";
+        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldCities.dbf";
+        sds.dataBind();
     }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
         console.log("loaded /Shapes/WorldCities.shp " + shapeRecords.length);
 
@@ -35,16 +35,14 @@ export class MapBindingShapefilePointsComponent implements AfterViewInit {
         // parsing shapefile data and creating geo-locations
         for (const record of shapeRecords) {
             const pop = record.fieldValues.POPULATION;
-            if (pop > 0) {
-                // each shapefile record has just one point
-                const location = {
-                    city: record.fieldValues.NAME,
-                    latitude: record.points[0][0].y,
-                    longitude: record.points[0][0].x,
-                    population: pop
-                };
-                geoLocations.push(location);
-            }
+            // each shapefile record has just one point
+            const location = {
+                city: record.fieldValues.NAME,
+                latitude: record.points[0][0].y,
+                longitude: record.points[0][0].x,
+                population: pop
+            };
+            geoLocations.push(location);
         }
 
         const geoSeries = new IgxGeographicSymbolSeriesComponent();

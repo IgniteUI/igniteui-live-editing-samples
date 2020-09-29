@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { BingMapsImageryStyle } from "igniteui-angular-maps/ES5/BingMapsImageryStyle";
-import { BingMapsMapImagery } from "igniteui-angular-maps/ES5/igx-bing-maps-map-imagery";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { BingMapsImageryStyle } from "igniteui-angular-maps";
+import { IgxBingMapsMapImagery } from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 
 import { MapUtility } from "../../utilities/MapUtility";
 
@@ -20,7 +20,7 @@ export class MapDisplayImageryBingTiles implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        const tileSource = new BingMapsMapImagery();
+        const tileSource = new IgxBingMapsMapImagery();
         tileSource.apiKey = MapUtility.getBingKey();
         tileSource.imageryStyle = BingMapsImageryStyle.AerialWithLabels;
         let tileUri = tileSource.actualBingImageryRestUri;

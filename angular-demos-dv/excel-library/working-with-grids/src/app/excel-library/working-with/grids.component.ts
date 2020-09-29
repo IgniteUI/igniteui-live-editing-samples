@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 // importing IG components:
 import { DefaultSortingStrategy, IgxGridComponent, SortingDirection } from "igniteui-angular";
-import { FormatConditionIconSet } from "igniteui-angular-excel/ES5/FormatConditionIconSet";
+import { FormatConditionIconSet } from "igniteui-angular-excel";
 // importing IG utilities:
 import {
     IWorkbookExportEndedEventArgs,

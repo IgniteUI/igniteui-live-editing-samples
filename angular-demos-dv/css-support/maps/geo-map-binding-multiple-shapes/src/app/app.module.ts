@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { MapBindingMultipleShapesComponent } from "./maps/geo-map-binding-multiple-shapes/map-binding-multiple-shapes.component";
-import { IgxGeographicMapModule } from "igniteui-angular-maps/ES5/igx-geographic-map-module";
+import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
 @NgModule({
   bootstrap: [AppComponent],

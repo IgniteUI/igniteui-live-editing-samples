@@ -1,5 +1,5 @@
 import { Component, ViewChild } from "@angular/core";
-import { IgxSparklineComponent } from "igniteui-angular-charts/ES5/igx-sparkline-component";
+import { IgxSparklineComponent } from "igniteui-angular-charts";
 
 import { SharedData } from "../SharedData";
 

@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
 import { IgxGeographicHighDensityScatterSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-high-density-scatter-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+} from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 
 @Component({
   selector: "app-map-binding-data-csv",
@@ -24,7 +24,7 @@ export class MapBindingDataCsvComponent implements AfterViewInit {
 
     public componentDidMount() {
         // fetching JSON data with geographic locations from public folder
-        fetch("https://www.infragistics.com/angular-demos-dv/assets/Data/UsaCities.csv")
+        fetch("https://static.infragistics.com/xplatform/data/UsaCitiesPopulation.csv")
             .then((response) => response.text())
             .then((data) => this.onDataLoaded(data));
     }

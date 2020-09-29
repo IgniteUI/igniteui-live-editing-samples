@@ -1,10 +1,10 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxShapeDataSource } from "igniteui-angular-core";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicPolylineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
-import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
-import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-symbol-series-component";
+} from "igniteui-angular-maps";
+import { IgxGeographicShapeSeriesComponent } from "igniteui-angular-maps";
+import { IgxGeographicSymbolSeriesComponent } from "igniteui-angular-maps";
 
 @Component({
   selector: "app-map-binding-multiple-shapes",
@@ -44,26 +44,26 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         this.map.backgroundContent = null;
 
         // loading a shapefile with geographic polygons
-        const sdsPolygons = new ShapeDataSource();
+        const sdsPolygons = new IgxShapeDataSource();
         sdsPolygons.importCompleted.subscribe(() => this.onPolygonsLoaded(sdsPolygons, ""));
         sdsPolygons.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCountries.shp";
         sdsPolygons.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCountries.dbf";
         sdsPolygons.dataBind();
         // loading a shapefile with geographic polylines at runtime.
-        const sdsPolylines = new ShapeDataSource();
+        const sdsPolylines = new IgxShapeDataSource();
         sdsPolylines.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCableRoutes.shp";
         sdsPolylines.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCableRoutes.dbf";
         sdsPolylines.dataBind();
         sdsPolylines.importCompleted.subscribe(() => this.onPolylinesLoaded(sdsPolylines, ""));
         // loading a shapefile with geographic points
-        const sdsPoints = new ShapeDataSource();
+        const sdsPoints = new IgxShapeDataSource();
         sdsPoints.importCompleted.subscribe(() => this.onPointsLoaded(sdsPoints, ""));
         sdsPoints.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCities.shp";
         sdsPoints.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCities.dbf";
         sdsPoints.dataBind();
     }
 
-    public onPointsLoaded(sds: ShapeDataSource, e: any) {
+    public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
         console.log("onPoints");
 
         const geoLocations: any[] = [];
@@ -87,7 +87,7 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         this.symbolSeries.tooltipTemplate = this.pointTooltip;
     }
 
-    public onPolylinesLoaded(sds: ShapeDataSource, e: any) {
+    public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
         console.log("onPolylines");
 
         const geoPolylines: any[] = [];
@@ -97,11 +97,8 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
             const route = {
                 capacity: record.fieldValues.CapacityG,
                 distance: record.fieldValues.DistanceKM,
-                isActive: record.fieldValues.NotLive !== 0,
-                isOverLand: record.fieldValues.OverLand === 0,
                 name: record.fieldValues.Name,
-                points: record.points,
-                service: record.fieldValues.InService
+                points: record.points
             };
             geoPolylines.push(route);
         }
@@ -113,7 +110,7 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         this.polylineSeries.dataSource = geoPolylines;
     }
 
-    public onPolygonsLoaded(sds: ShapeDataSource, e: any) {
+    public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
         console.log("onPolygons ");
 
         const geoPolygons: any[] = [];

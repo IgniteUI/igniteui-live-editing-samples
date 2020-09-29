@@ -1,4 +1,4 @@
-import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/ES5/HeatTileGeneratorWebWorker";
+import { HeatTileGeneratorWebWorker } from "igniteui-angular-core/esm5/lib/HeatTileGeneratorWebWorker";
 
 const worker: Worker = self as any;
 

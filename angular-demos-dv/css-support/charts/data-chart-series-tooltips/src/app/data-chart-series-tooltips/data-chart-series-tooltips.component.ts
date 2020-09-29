@@ -1,11 +1,11 @@
 import { Component, ViewChild } from "@angular/core";
 
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
-import { IgxCategoryToolTipLayerComponent } from "igniteui-angular-charts/ES5/igx-category-tool-tip-layer-component";
-import { IgxItemToolTipLayerComponent } from "igniteui-angular-charts/ES5/igx-item-tool-tip-layer-component";
+import { IgxCategoryToolTipLayerComponent } from "igniteui-angular-charts";
+import { IgxItemToolTipLayerComponent } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-data-chart-series-tooltips",

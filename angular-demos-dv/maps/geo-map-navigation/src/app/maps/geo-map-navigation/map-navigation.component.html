@@ -1,0 +1,104 @@
+
+  <div class="igFlex"    >
+
+    <div class="igControl" id="map" >
+        <igx-geographic-map #map
+            width="100%"
+            height="100%"
+            zoomable="true">
+        </igx-geographic-map>
+        </div>
+<div class="igOverlay-top-left" >
+    <label class="mapPanelItem">Select Map Region</label>
+    <select [(ngModel)]="regionType" (change)="onSelectionChanged($event)">
+        <option>Australia</option>
+        <option>Caribbean</option>
+        <option>Egypt</option>
+        <option>European</option>
+        <option>Japan</option>
+        <option>Hawaii</option>
+        <option>Poland</option>
+        <option>South Africa</option>
+        <option>United States</option>
+        <option>United Kingdom</option>
+        <option>Uruaguay</option>
+    </select>
+    <label class="mapPanelItem">Map Geographic Rect</label>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Top:</label>
+            <label #top class="mapPanelValue">{{geoTop}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Left:</label>
+            <label class="mapPanelValue">{{geoLeft}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Height:</label>
+            <label class="mapPanelValue">{{geoHeight}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Width:</label>
+            <label class="mapPanelValue">{{geoWidth}}</label>
+        </div>
+
+        <label class="mapPanelItem">Map Window Rect</label>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Top:</label>
+            <label class="mapPanelValue">{{winTop}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Left:</label>
+            <label class="mapPanelValue">{{winLeft}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Height:</label>
+            <label class="mapPanelValue">{{winHeight}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Width:</label>
+            <label class="mapPanelValue">{{winWidth}}</label>
+        </div>
+
+        <label class="mapPanelItem">Map Window Position</label>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Horizontal:</label>
+            <label class="mapPanelValue">{{posHorizontal}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Vertical:</label>
+            <label class="mapPanelValue">{{posVertical}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Scale:</label>
+            <label class="mapPanelValue">{{scale}}</label>
+        </div>
+
+        <label class="mapPanelItem">Map Hover Coordinates</label>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Longitude:</label>
+            <label class="mapPanelValue">{{mapHoverLongitude}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Latitude:</label>
+            <label class="mapPanelValue">{{mapHoverLatitude}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Window X:</label>
+            <label class="mapPanelValue">{{mapHoverX}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Window Y:</label>
+            <label class="mapPanelValue">{{mapHoverY}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Pixel X:</label>
+            <label class="mapPanelValue">{{mapHoverPixelX}}</label>
+        </div>
+        <div class="mapPanelLine">
+            <label class="mapPanelField">Pixel Y:</label>
+            <label class="mapPanelValue">{{mapHoverPixelY}}</label>
+        </div>       
+             
+</div>
+<div class="igOverlay-bottom-right">Imagery Tiles: @ESRI/ArcGIS</div>
+</div>

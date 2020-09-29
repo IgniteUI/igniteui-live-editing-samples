@@ -7,8 +7,8 @@ import {
     OnDestroy,
     ViewChild
 } from "@angular/core";
-import { IgxFinancialChartComponent } from "igniteui-angular-charts/ES5/igx-financial-chart-component";
-import { IgxLegendComponent } from "igniteui-angular-charts/ES5/igx-legend-component";
+import { IgxFinancialChartComponent } from "igniteui-angular-charts";
+import { IgxLegendComponent } from "igniteui-angular-charts";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -30,7 +30,7 @@ export class FinancialChartMultipleFeedsComponent implements AfterViewInit, OnDe
     public fpsSpan: ElementRef;
     @ViewChild("feedStatus", { static: true })
     public feedStatus: ElementRef;
-    @ViewChild("legendBadgeTemplate", { static: false })
+    @ViewChild("legendBadgeTemplate")
     public legendBadgeTemplate: ElementRef;
 
     public dataFeeds: any[];

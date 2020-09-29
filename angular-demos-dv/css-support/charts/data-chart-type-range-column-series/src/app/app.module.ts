@@ -4,10 +4,12 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { DataChartTypeRangeColumnSeriesComponent } from "./data-chart-type-range-column-series/data-chart-type-range-column-series.component";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxLegendModule } from "igniteui-angular-charts/ES5/igx-legend-module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category-module";
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { 
+	IgxDataChartCoreModule,
+	IgxLegendModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartInteractivityModule
+ } from "igniteui-angular-charts";
 import { SampleRangeData } from "./SampleRangeData";
 
 @NgModule({

@@ -3,7 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxRadialGaugeModule } from "igniteui-angular-gauges/ES5/igx-radial-gauge-module";
+import { IgxRadialGaugeModule } from "igniteui-angular-gauges";
 import { RadialGaugeAnimationComponent } from "./radial-gauge-animation/radial-gauge-animation.component";
 import { IgxButtonModule } from "igniteui-angular";
 

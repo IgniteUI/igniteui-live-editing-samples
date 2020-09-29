@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import {
     FinancialChartCustomIndicatorArgs
-} from "igniteui-angular-charts/ES5/igx-financial-chart-custom-indicator-args";
-import { FinancialEventArgs } from "igniteui-angular-charts/ES5/igx-financial-event-args";
+} from "igniteui-angular-charts";
+import { IgxFinancialEventArgs } from "igniteui-angular-charts";
 import { FinancialDataService } from "../services/financial-data.service";
 
 @Component({
@@ -21,7 +21,7 @@ export class FinancialChartCustomIndicatorsComponent {
 
     public applyCustomIndicators(event: { sender: any, args: FinancialChartCustomIndicatorArgs }) {
         if (event.args.index === 0) {
-            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
 
             if (info != null) {
                 const ds = info.dataSource;
@@ -31,7 +31,7 @@ export class FinancialChartCustomIndicatorsComponent {
                 }
             }
         } else {
-            const info: FinancialEventArgs = event.args.indicatorInfo;
+            const info: IgxFinancialEventArgs = event.args.indicatorInfo;
 
             if (info != null) {
                 const ds = info.dataSource;

@@ -1,11 +1,11 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
 
-import { HeatTileGenerator } from "igniteui-angular-core/ES5/igx-heat-tile-generator";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxHeatTileGenerator } from "igniteui-angular-core";
+import { IgxShapeDataSource } from "igniteui-angular-core";
 
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { IgxGeographicTileSeriesComponent } from "igniteui-angular-maps/ES5/igx-geographic-tile-series-component";
-import { TileGeneratorMapImagery } from "igniteui-angular-maps/ES5/igx-tile-generator-map-imagery";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
+import { IgxGeographicTileSeriesComponent } from "igniteui-angular-maps";
+import { IgxTileGeneratorMapImagery } from "igniteui-angular-maps";
 
 @Component({
     selector: "app-map-display-imagery-heat-tiles",
@@ -16,12 +16,12 @@ export class MapDisplayImageryHeatTilesComponent implements AfterViewInit {
 
     @ViewChild("map", { static: true })
     public map: IgxGeographicMapComponent;
-    public tileImagery: TileGeneratorMapImagery;
+    public tileImagery: IgxTileGeneratorMapImagery;
 
     constructor() {
-        this.tileImagery = new TileGeneratorMapImagery();
+        this.tileImagery = new IgxTileGeneratorMapImagery();
 
-        const sds: ShapeDataSource = new ShapeDataSource();
+        const sds: IgxShapeDataSource = new IgxShapeDataSource();
         sds.importCompleted.subscribe((s, e) => {
             const data = sds.getPointData();
             const lat: number[] = [];
@@ -46,7 +46,7 @@ export class MapDisplayImageryHeatTilesComponent implements AfterViewInit {
             }
 
             // generating heat map imagery tiles
-            const gen = new HeatTileGenerator();
+            const gen = new IgxHeatTileGenerator();
             gen.xValues = lon;
             gen.yValues = lat;
             gen.values = val;
@@ -78,8 +78,8 @@ export class MapDisplayImageryHeatTilesComponent implements AfterViewInit {
             this.map.series.add(series);
         });
 
-        sds.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/AmericanCities.shp";
-        sds.databaseSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/AmericanCities.dbf";
+        sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/AmericanCities.shp";
+        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/AmericanCities.dbf";
         sds.dataBind();
     }
 

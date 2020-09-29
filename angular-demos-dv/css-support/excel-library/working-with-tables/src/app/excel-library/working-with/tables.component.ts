@@ -2,9 +2,9 @@ import {
     AfterViewInit, ChangeDetectionStrategy, Component, ViewChild, ViewContainerRef
 } from "@angular/core";
 import { CustomFilterCondition, ExcelComparisonOperator, OrderedSortCondition, SortDirection
-} from "igniteui-angular-excel/ES5/excel.core";
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+} from "igniteui-angular-excel";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
 
 import { ExcelUtility } from "../../utilities/excel-utility";
 

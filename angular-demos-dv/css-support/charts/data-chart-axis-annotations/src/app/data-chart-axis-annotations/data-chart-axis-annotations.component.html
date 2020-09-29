@@ -1,9 +1,8 @@
 <div class="sample">
     <div class="options">
         <span class="optionItem">Axis Annotations: </span>
-        <label class="optionItem"><input type="checkbox" (change)="onValueOverlayChange($event)" /> Value Overlay </label>
-        <label class="optionItem"><input type="checkbox" (change)="onFinalValueChange($event)"/> Final Value </label>
-        <label class="optionItem"><input type="checkbox" (change)="onCrosshairChange($event)" /> Crosshairs </label>
+        <label class="optionItem"><input type="checkbox" (change)="onFinalValueChange($event)" [(ngModel)]="finalValuesVisible"/> Final Value </label>
+        <label class="optionItem"><input type="checkbox" (change)="onCrosshairChange($event)" [(ngModel)]="crosshairsVisible"/> Crosshairs </label>
     </div>
     <div class="chart">
         <igx-data-chart #chart [dataSource]="data" width="100%" height="calc(100% - 30px)">

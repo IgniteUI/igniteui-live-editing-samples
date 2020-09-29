@@ -1,25 +1,25 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxCategoryYAxisComponent } from "igniteui-angular-charts/ES5/igx-category-y-axis-component";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxCategoryYAxisComponent } from "igniteui-angular-charts";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
-import { IgxStacked100AreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-100-area-series-component";
-import { IgxStacked100BarSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-100-bar-series-component";
+import { IgxStacked100AreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxStacked100BarSeriesComponent } from "igniteui-angular-charts";
 import {
     IgxStacked100ColumnSeriesComponent
-} from "igniteui-angular-charts/ES5/igx-stacked-100-column-series-component";
-import { IgxStacked100LineSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-100-line-series-component";
+} from "igniteui-angular-charts";
+import { IgxStacked100LineSeriesComponent } from "igniteui-angular-charts";
 import {
     IgxStacked100SplineSeriesComponent
-} from "igniteui-angular-charts/ES5/igx-stacked-100-spline-series-component";
-import { IgxStackedAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-area-series-component";
-import { IgxStackedBarSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-bar-series-component";
-import { IgxStackedColumnSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-column-series-component";
-import { IgxStackedFragmentSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-fragment-series-component";
-import { IgxStackedLineSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-line-series-component";
-import { IgxStackedSplineSeriesComponent } from "igniteui-angular-charts/ES5/igx-stacked-spline-series-component";
+} from "igniteui-angular-charts";
+import { IgxStackedAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxStackedBarSeriesComponent } from "igniteui-angular-charts";
+import { IgxStackedColumnSeriesComponent } from "igniteui-angular-charts";
+import { IgxStackedFragmentSeriesComponent } from "igniteui-angular-charts";
+import { IgxStackedLineSeriesComponent } from "igniteui-angular-charts";
+import { IgxStackedSplineSeriesComponent } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-data-chart-type-stacked-series",

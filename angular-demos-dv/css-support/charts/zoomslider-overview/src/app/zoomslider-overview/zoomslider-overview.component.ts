@@ -1,17 +1,17 @@
 // tslint:disable:max-line-length
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
 
-import { IgxBubbleSeriesComponent } from "igniteui-angular-charts/ES5/igx-bubble-series-component";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
-import { IgxSizeScaleComponent } from "igniteui-angular-charts/ES5/igx-size-scale-component";
-import { IgxZoomSliderComponent } from "igniteui-angular-charts/ES5/igx-zoom-slider-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
-import { IgRect } from "igniteui-angular-core/ES5/IgRect";
-import { RectChangedEventArgs } from "igniteui-angular-core/ES5/igx-rect-changed-event-args";
+import { IgxBubbleSeriesComponent } from "igniteui-angular-charts";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
+import { IgxSizeScaleComponent } from "igniteui-angular-charts";
+import { IgxZoomSliderComponent } from "igniteui-angular-charts";
+import { MarkerType } from "igniteui-angular-charts";
+import { IgRect } from "igniteui-angular-core";
+import { IgxRectChangedEventArgs } from "igniteui-angular-core";
 
-import { SampleScatterStats } from "../../data-chart/SampleScatterStats";
+import { SampleScatterStats } from "../SampleScatterStats";
 
 @Component({
     providers: [ SampleScatterStats ],
@@ -69,7 +69,7 @@ export class ZoomSliderOverviewComponent implements AfterViewInit {
 
             this.createSeries(this.mainChart);
 
-            this.mainChart.actualWindowRectChanged.subscribe((e: RectChangedEventArgs) =>
+            this.mainChart.actualWindowRectChanged.subscribe((e: IgxRectChangedEventArgs) =>
                 this.onActualWindowRectChanged(this.mainChart, e)
             );
             this.charts.push(this.mainChart);
@@ -82,10 +82,10 @@ export class ZoomSliderOverviewComponent implements AfterViewInit {
 
         if (this.zoomSlider !== undefined) {
             console.log("ngAfterViewInit zoomSlider");
-            this.zoomSlider.windowRectChanged.subscribe((e: RectChangedEventArgs) =>
+            this.zoomSlider.windowRectChanged.subscribe((e: IgxRectChangedEventArgs) =>
                 this.onZoomSliderWindowChanged(this.zoomSlider, e)
             );
-            this.zoomSlider.resolvingAxisValue.subscribe((e: RectChangedEventArgs) =>
+            this.zoomSlider.resolvingAxisValue.subscribe((e: IgxRectChangedEventArgs) =>
                 this.onZoomSliderResolveAxisValue(this.zoomSlider, e)
             );
         }
@@ -95,20 +95,20 @@ export class ZoomSliderOverviewComponent implements AfterViewInit {
             this.zoomChart !== undefined ||
             this.zoomSlider !== undefined) {
 
-            this.mainChart.gridAreaRectChanged.subscribe((e: RectChangedEventArgs) =>
+            this.mainChart.gridAreaRectChanged.subscribe((e: IgxRectChangedEventArgs) =>
                 this.onGridAreaRectChanged(this.mainChart, e)
             );
         }
     }
 
-    public onActualWindowRectChanged(chart: IgxDataChartComponent, args: RectChangedEventArgs) {
+    public onActualWindowRectChanged(chart: IgxDataChartComponent, args: IgxRectChangedEventArgs) {
 
         if (!this.isSynchronizingZoom) {
             this.syncZooms(chart);
         }
     }
 
-    public onZoomSliderWindowChanged(slider: IgxZoomSliderComponent, args: RectChangedEventArgs) {
+    public onZoomSliderWindowChanged(slider: IgxZoomSliderComponent, args: IgxRectChangedEventArgs) {
         if (!this.isSynchronizingZoom) {
             this.syncZooms(slider);
         }

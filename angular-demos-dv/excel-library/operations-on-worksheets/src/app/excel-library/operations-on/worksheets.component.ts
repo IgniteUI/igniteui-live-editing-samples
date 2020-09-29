@@ -1,7 +1,7 @@
 import {
     AfterViewInit, ChangeDetectionStrategy, Component
 } from "@angular/core";
-import { Color } from "igniteui-angular-core/ES5/Color";
+import { Color } from "igniteui-angular-core";
 
 import {
     CustomFilterCondition,
@@ -11,10 +11,10 @@ import {
     RelativeIndex,
     SortDirection,
     WorkbookColorInfo
-} from "igniteui-angular-excel/ES5/excel.core";
+} from "igniteui-angular-excel";
 
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
 import { ExcelUtility } from "../../utilities/excel-utility";
 
 @Component({

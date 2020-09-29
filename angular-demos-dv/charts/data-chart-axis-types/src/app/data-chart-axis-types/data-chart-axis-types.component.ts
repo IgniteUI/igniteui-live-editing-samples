@@ -1,17 +1,17 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
 
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxCategoryYAxisComponent } from "igniteui-angular-charts/ES5/igx-category-y-axis-component";
-import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
-import { IgxTimeXAxisComponent } from "igniteui-angular-charts/ES5/igx-time-x-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxCategoryYAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
+import { IgxTimeXAxisComponent } from "igniteui-angular-charts";
 
-import { IgxBarSeriesComponent } from "igniteui-angular-charts/ES5/igx-bar-series-component";
-import { IgxColumnSeriesComponent } from "igniteui-angular-charts/ES5/igx-column-series-component";
-import { IgxFinancialPriceSeriesComponent } from "igniteui-angular-charts/ES5/igx-financial-price-series-component";
-import { IgxScatterSeriesComponent } from "igniteui-angular-charts/ES5/igx-scatter-series-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
+import { IgxBarSeriesComponent } from "igniteui-angular-charts";
+import { IgxColumnSeriesComponent } from "igniteui-angular-charts";
+import { IgxFinancialPriceSeriesComponent } from "igniteui-angular-charts";
+import { IgxScatterSeriesComponent } from "igniteui-angular-charts";
+import { MarkerType } from "igniteui-angular-charts";
 
 import { SampleCategoryData } from "../SampleCategoryData";
 import { SampleFinancialData } from "../SampleFinancialData";

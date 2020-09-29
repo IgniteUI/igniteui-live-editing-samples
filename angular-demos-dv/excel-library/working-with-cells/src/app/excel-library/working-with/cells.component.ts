@@ -2,14 +2,14 @@ import {
     Component, ComponentFactoryResolver,
     Injector, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
 // importing IG components:
-import { CellReferenceMode } from "igniteui-angular-excel/ES5/CellReferenceMode";
-import { WorksheetMergedCellsRegion} from "igniteui-angular-excel/ES5/excel.core";
-import { FormattedString } from "igniteui-angular-excel/ES5/FormattedString";
-import { Formula } from "igniteui-angular-excel/ES5/Formula";
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetCellComment } from "igniteui-angular-excel/ES5/WorksheetCellComment";
+import { CellReferenceMode } from "igniteui-angular-excel";
+import { WorksheetMergedCellsRegion} from "igniteui-angular-excel";
+import { FormattedString } from "igniteui-angular-excel";
+import { Formula } from "igniteui-angular-excel";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { Worksheet } from "igniteui-angular-excel";
+import { WorksheetCellComment } from "igniteui-angular-excel";
 import {
     WorkbookExportService
 } from "../../utilities/excel-exporter";
@@ -23,7 +23,7 @@ import { ExcelUtility } from "../../utilities/excel-utility";
 })
 export class ExcelLibraryWorkingWithCellsComponent implements OnInit {
 
-    @ViewChild("gridContainer", { read: ViewContainerRef, static: false })
+    @ViewChild("gridContainer", { read: ViewContainerRef })
     public gridContainerRef: ViewContainerRef;
     public canSave = false;
     public wb: Workbook;

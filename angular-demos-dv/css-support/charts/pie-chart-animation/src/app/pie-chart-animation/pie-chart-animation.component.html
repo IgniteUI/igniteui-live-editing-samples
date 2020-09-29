@@ -1,0 +1,21 @@
+<div class="container">
+    <div>         
+        <button class="button" (click)="onClicked()" >
+            <label>{{animateChart}}</label>
+        </button>  
+    </div>
+
+    <div class="chart">
+        <igx-pie-chart #chart height="100%" 
+        width="100%" 
+        [dataSource]="data" 
+        valueMemberPath="Value" 
+        labelMemberPath="Label" 
+        labelsPosition="InsideEnd"       
+        startAngle = 0 
+        labelExtent = 0.7 
+        radiusFactor = 0.1>
+        </igx-pie-chart>
+
+    </div>
+</div>

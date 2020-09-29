@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
 
-import { IgxBulletGraphComponent } from "igniteui-angular-gauges/ES5/igx-bullet-graph-component";
-import { IgxLinearGraphRangeComponent } from "igniteui-angular-gauges/ES5/igx-linear-graph-range-component";
+import { IgxBulletGraphComponent } from "igniteui-angular-gauges";
+import { IgxLinearGraphRangeComponent } from "igniteui-angular-gauges";
 
 @Component({
   selector: "app-bullet-graph-animation",

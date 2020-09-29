@@ -4,11 +4,13 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { DataChartTypeScatterShapeSeriesComponent } from "./data-chart-type-scatter-shape-series/data-chart-type-scatter-shape-series.component";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartShapeModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-module";
-import { IgxDataChartShapeCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-shape-core-module";
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
-import { IgxDataChartScatterModule } from "igniteui-angular-charts/ES5/igx-data-chart-scatter-module";
+import { 
+	IgxDataChartCoreModule,
+	IgxDataChartShapeModule,
+	IgxDataChartShapeCoreModule,
+	IgxDataChartScatterModule
+ } from "igniteui-angular-charts";
+import { DataChartTypeScatterPolylineSeriesComponent } from "./data-chart-type-scatter-polyline-series/data-chart-type-scatter-polyline-series.component";
 import { SampleShapeData } from "./SampleShapeData";
 
 @NgModule({
@@ -24,7 +26,7 @@ import { SampleShapeData } from "./SampleShapeData";
 		IgxDataChartCoreModule,
 		IgxDataChartShapeModule,
 		IgxDataChartShapeCoreModule,
-		IgxDataChartInteractivityModule,
+		DataChartTypeScatterPolylineSeriesComponent,
 		IgxDataChartScatterModule
   ],
   providers: [SampleShapeData],

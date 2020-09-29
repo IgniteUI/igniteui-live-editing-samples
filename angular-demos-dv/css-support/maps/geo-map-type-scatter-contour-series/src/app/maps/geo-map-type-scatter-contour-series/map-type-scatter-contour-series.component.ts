@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { IgxValueBrushScaleComponent } from "igniteui-angular-charts/ES5/igx-value-brush-scale-component";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxValueBrushScaleComponent } from "igniteui-angular-charts";
+import { IgxShapeDataSource } from "igniteui-angular-core";
 import { IgxGeographicContourLineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-contour-line-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+} from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 
 @Component({
   selector: "app-map-type-scatter-contour-series",
@@ -22,14 +22,14 @@ export class MapTypeScatterContourSeriesComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        const sds = new ShapeDataSource();
-        sds.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldTemperatures.shp";
-        sds.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldTemperatures.dbf";
-        sds.dataBind();
+        const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+        sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldTemperatures.shp";
+        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldTemperatures.dbf";
+        sds.dataBind();
     }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
         console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
 

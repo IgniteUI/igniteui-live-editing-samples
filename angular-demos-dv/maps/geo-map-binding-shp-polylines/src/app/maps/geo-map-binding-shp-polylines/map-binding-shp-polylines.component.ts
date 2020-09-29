@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxShapeDataSource } from "igniteui-angular-core";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicPolylineSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-polyline-series-component";
+} from "igniteui-angular-maps";
 
 @Component({
   selector: "app-map-binding-shp-polylines",
@@ -21,14 +21,14 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
 
     public ngAfterViewInit() {
         // loading a shapefile with geographic polygons
-        const sds = new ShapeDataSource();
+        const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
-        sds.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCableRoutes.shp";
-        sds.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCableRoutes.dbf";
+        sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCableRoutes.shp";
+        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldCableRoutes.dbf";
         sds.dataBind();
     }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
         console.log("loaded /Shapes/WorldCableRoutes.shp " + shapeRecords.length);
 
@@ -39,11 +39,8 @@ export class MapBindingShapefilePolylinesComponent implements AfterViewInit {
             const route = {
                 capacity: record.fieldValues.CapacityG,
                 distance: record.fieldValues.DistanceKM,
-                isActive: record.fieldValues.NotLive !== 0,
-                isOverLand: record.fieldValues.OverLand === 0,
                 name: record.fieldValues.Name,
-                points: record.points,
-                service: record.fieldValues.InService
+                points: record.points
             };
             geoPolylines.push(route);
         }

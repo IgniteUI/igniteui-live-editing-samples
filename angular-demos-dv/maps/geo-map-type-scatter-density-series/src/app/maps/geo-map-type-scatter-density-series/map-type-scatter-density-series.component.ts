@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
+import { IgxShapeDataSource } from "igniteui-angular-core";
 import { IgxGeographicHighDensityScatterSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-high-density-scatter-series-component";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+} from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { WorldUtility } from "../../utilities/WorldUtility";
 
 @Component({
@@ -29,7 +29,7 @@ export class MapTypeScatterDensitySeriesComponent implements AfterViewInit {
          .then((data) => this.onDataLoaded(data, ""));
       }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         this.geoLocations = sds;
         // creating HD series with loaded data
         const geoSeries = new IgxGeographicHighDensityScatterSeriesComponent();

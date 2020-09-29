@@ -3,10 +3,10 @@ import {
     Injector, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
 // importing IG components:
 import { IgxGridComponent } from "igniteui-angular";
-import { TextFormatMode } from "igniteui-angular-excel/ES5/TextFormatMode";
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
+import { TextFormatMode } from "igniteui-angular-excel";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { WorksheetTable } from "igniteui-angular-excel";
 // importing IG utilities:
 import {
     WorkbookExportService

@@ -4,8 +4,8 @@ import {
     Component,
     ViewChild
 } from "@angular/core";
-import { IgxCategoryChartComponent } from "igniteui-angular-charts/ES5/igx-category-chart-component";
-import { ToolTipType } from "igniteui-angular-charts/ES5/ToolTipType";
+import { IgxCategoryChartComponent } from "igniteui-angular-charts";
+import { ToolTipType } from "igniteui-angular-charts";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

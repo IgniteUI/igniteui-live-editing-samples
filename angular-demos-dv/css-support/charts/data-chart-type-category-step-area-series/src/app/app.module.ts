@@ -4,10 +4,12 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { DataChartTypeCategoryStepAreaSeriesComponent } from "./data-chart-type-category-step-area-series/data-chart-type-category-step-area-series.component";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category-module";
-import { IgxLegendModule } from "igniteui-angular-charts/ES5/igx-legend-module";
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { 
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxDataChartInteractivityModule
+ } from "igniteui-angular-charts";
 import { SampleCategoryData } from "./SampleCategoryData";
 
 @NgModule({

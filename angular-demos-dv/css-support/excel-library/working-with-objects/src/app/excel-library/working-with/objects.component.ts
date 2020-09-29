@@ -4,15 +4,15 @@ import {
 
 // NOTE if needed, import either CategoryChart, DataChart, or Grid component:
 // import { IgxGridComponent } from "igniteui-angular";
-import { IgxCategoryChartComponent } from "igniteui-angular-charts/ES5/igx-category-chart-component";
-// import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
+import { IgxCategoryChartComponent } from "igniteui-angular-charts";
+// import { IgxDataChartComponent } from "igniteui-angular-charts";
 
 // TODO import Excel components that the sample will be showcasing:
-import { TextFormatMode } from "igniteui-angular-excel/ES5/TextFormatMode";
-import { Workbook } from "igniteui-angular-excel/ES5/Workbook";
-import { WorkbookFormat } from "igniteui-angular-excel/ES5/WorkbookFormat";
-import { Worksheet } from "igniteui-angular-excel/ES5/Worksheet";
-import { WorksheetTable } from "igniteui-angular-excel/ES5/WorksheetTable";
+import { TextFormatMode } from "igniteui-angular-excel";
+import { Workbook } from "igniteui-angular-excel";
+import { WorkbookFormat } from "igniteui-angular-excel";
+import { Worksheet } from "igniteui-angular-excel";
+import { WorksheetTable } from "igniteui-angular-excel";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

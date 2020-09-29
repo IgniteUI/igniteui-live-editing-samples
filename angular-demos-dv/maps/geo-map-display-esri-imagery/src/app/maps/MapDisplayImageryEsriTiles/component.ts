@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { ArcGISOnlineMapImagery } from "igniteui-angular-maps/ES5/igx-arc-gis-online-map-imagery";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxArcGISOnlineMapImagery } from "igniteui-angular-maps";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 
 import { EsriStyle, EsriUtility } from "../../utilities/EsriUtility";
 
@@ -19,7 +19,7 @@ export class MapDisplayImageryEsriTiles implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        const tileSource = new ArcGISOnlineMapImagery();
+        const tileSource = new IgxArcGISOnlineMapImagery();
         tileSource.mapServerUri = EsriUtility.getUri(EsriStyle.WorldOceansMap);
         // or
         // tileSource.mapServerUri = "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer";

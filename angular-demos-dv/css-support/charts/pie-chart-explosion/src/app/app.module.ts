@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { PieChartExplosionComponent } from "./pie-chart-explosion/pie-chart-explosion.component";
-import { IgxPieChartModule } from "igniteui-angular-charts/ES5/igx-pie-chart-module";
+import { IgxPieChartModule } from "igniteui-angular-charts";
 
 @NgModule({
   bootstrap: [AppComponent],

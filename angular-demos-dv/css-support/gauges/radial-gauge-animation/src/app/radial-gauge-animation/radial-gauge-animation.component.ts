@@ -1,12 +1,12 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
 // radial gauge imports
-import { SweepDirection } from "igniteui-angular-core/ES5/SweepDirection";
-import { IgxRadialGaugeComponent } from "igniteui-angular-gauges/ES5/igx-radial-gauge-component";
-import { IgxRadialGaugeRangeComponent } from "igniteui-angular-gauges/ES5/igx-radial-gauge-range-component";
-import { RadialGaugeBackingShape } from "igniteui-angular-gauges/ES5/RadialGaugeBackingShape";
-import { RadialGaugeNeedleShape } from "igniteui-angular-gauges/ES5/RadialGaugeNeedleShape";
-import { RadialGaugePivotShape } from "igniteui-angular-gauges/ES5/RadialGaugePivotShape";
-import { RadialGaugeScaleOversweepShape } from "igniteui-angular-gauges/ES5/RadialGaugeScaleOversweepShape";
+import { SweepDirection } from "igniteui-angular-core";
+import { IgxRadialGaugeComponent } from "igniteui-angular-gauges";
+import { IgxRadialGaugeRangeComponent } from "igniteui-angular-gauges";
+import { RadialGaugeBackingShape } from "igniteui-angular-gauges";
+import { RadialGaugeNeedleShape } from "igniteui-angular-gauges";
+import { RadialGaugePivotShape } from "igniteui-angular-gauges";
+import { RadialGaugeScaleOversweepShape } from "igniteui-angular-gauges";
 
 @Component({
   selector: "app-radial-gauge-animation",

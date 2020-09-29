@@ -3,8 +3,8 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { CategoryChartOverviewComponent } from "./overview/category-chart-overview-sample.component";
-import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
+import { CategoryChartOverviewComponent } from "./overview/category-chart-overview.component";
+import { IgxCategoryChartModule } from "igniteui-angular-charts";
 
 @NgModule({
   bootstrap: [AppComponent],

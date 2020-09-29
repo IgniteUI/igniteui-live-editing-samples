@@ -1,10 +1,10 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericXAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
-import { IgxScatterPolygonSeriesComponent } from "igniteui-angular-charts/ES5/igx-scatter-polygon-series-component";
-import { IgxScatterPolylineSeriesComponent } from "igniteui-angular-charts/ES5/igx-scatter-polyline-series-component";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
+import { IgxScatterPolygonSeriesComponent } from "igniteui-angular-charts";
+import { IgxScatterPolylineSeriesComponent } from "igniteui-angular-charts";
 import { SampleShapeData } from "../SampleShapeData";
 
 @Component({

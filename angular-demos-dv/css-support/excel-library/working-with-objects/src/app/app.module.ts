@@ -7,8 +7,8 @@ import {
 	IgxButtonModule,
 	IgxGridModule
  } from "igniteui-angular";
-import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
+import { IgxCategoryChartModule } from "igniteui-angular-charts";
+import { IgxExcelModule } from "igniteui-angular-excel";
 import { ExcelUtility } from "./utilities/excel-utility";
 import { ExcelLibraryWorkingWithObjectsComponent } from "./excel-library/working-with/objects.component";
 

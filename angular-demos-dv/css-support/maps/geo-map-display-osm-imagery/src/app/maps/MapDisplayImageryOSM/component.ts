@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
-import { OpenStreetMapImagery } from "igniteui-angular-maps/ES5/igx-open-street-map-imagery";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
+import { IgxOpenStreetMapImagery } from "igniteui-angular-maps";
 
 @Component({
   selector: "app-MapDisplayImageryOSM",
@@ -17,7 +17,7 @@ export class MapDisplayImageryOSM implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        const tileSource = new OpenStreetMapImagery();
+        const tileSource = new IgxOpenStreetMapImagery();
         this.map.backgroundContent = tileSource;
 
         this.map.windowRect = { left: 0.2, top: 0.1, width: 0.7, height: 0.7 };

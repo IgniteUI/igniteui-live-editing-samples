@@ -7,11 +7,13 @@ import {
 	IgxButtonModule,
 	IgxGridModule
  } from "igniteui-angular";
-import { IgxCategoryChartModule } from "igniteui-angular-charts/ES5/igx-category-chart-module";
-import { IgxExcelModule } from "igniteui-angular-excel/ES5/igx-excel-module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category-module";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartInteractivityModule } from "igniteui-angular-charts/ES5/igx-data-chart-interactivity-module";
+import { 
+	IgxCategoryChartModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartCoreModule,
+	IgxDataChartInteractivityModule
+ } from "igniteui-angular-charts";
+import { IgxExcelModule } from "igniteui-angular-excel";
 import { ExcelUtility } from "./utilities/excel-utility";
 import { ExcelLibraryWorkingWithSparklinesComponent } from "./excel-library/working-with/sparklines.component";
 

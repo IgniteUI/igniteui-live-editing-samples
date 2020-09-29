@@ -8,7 +8,7 @@ import {
     OnDestroy,
     ViewChild
 } from "@angular/core";
-import { IgxFinancialChartComponent } from "igniteui-angular-charts/ES5/igx-financial-chart-component";
+import { IgxFinancialChartComponent } from "igniteui-angular-charts";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

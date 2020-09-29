@@ -4,8 +4,15 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { DataChartAxisAnnotationsComponent } from "./data-chart-axis-annotations/data-chart-axis-annotations.component";
-import { IgxDataChartCoreModule } from "igniteui-angular-charts/ES5/igx-data-chart-core-module";
-import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data-chart-category-module";
+import { 
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartInteractivityModule,
+	IgxDataChartAnnotationModule,
+	IgxCalloutLayerModule,
+	IgxFinalValueLayerModule,
+	IgxCrosshairLayerModule
+ } from "igniteui-angular-charts";
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -18,7 +25,12 @@ import { IgxDataChartCategoryModule } from "igniteui-angular-charts/ES5/igx-data
     BrowserAnimationsModule,
     FormsModule,
 		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule
+		IgxDataChartCategoryModule,
+		IgxDataChartInteractivityModule,
+		IgxDataChartAnnotationModule,
+		IgxCalloutLayerModule,
+		IgxFinalValueLayerModule,
+		IgxCrosshairLayerModule
   ],
   providers: [],
   entryComponents: []

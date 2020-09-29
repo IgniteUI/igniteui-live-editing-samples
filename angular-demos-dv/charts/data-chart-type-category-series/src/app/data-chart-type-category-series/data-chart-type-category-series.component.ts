@@ -1,25 +1,25 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 
 // types of axis:
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
 // types of column series:
-import { IgxAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-area-series-component";
-import { IgxColumnSeriesComponent } from "igniteui-angular-charts/ES5/igx-column-series-component";
-import { IgxLineSeriesComponent } from "igniteui-angular-charts/ES5/igx-line-series-component";
-import { IgxPointSeriesComponent } from "igniteui-angular-charts/ES5/igx-point-series-component";
-import { IgxSplineAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-spline-area-series-component";
-import { IgxSplineSeriesComponent } from "igniteui-angular-charts/ES5/igx-spline-series-component";
-import { IgxStepAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-step-area-series-component";
-import { IgxStepLineSeriesComponent } from "igniteui-angular-charts/ES5/igx-step-line-series-component";
-import { IgxWaterfallSeriesComponent } from "igniteui-angular-charts/ES5/igx-waterfall-series-component";
+import { IgxAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxColumnSeriesComponent } from "igniteui-angular-charts";
+import { IgxLineSeriesComponent } from "igniteui-angular-charts";
+import { IgxPointSeriesComponent } from "igniteui-angular-charts";
+import { IgxSplineAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxSplineSeriesComponent } from "igniteui-angular-charts";
+import { IgxStepAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxStepLineSeriesComponent } from "igniteui-angular-charts";
+import { IgxWaterfallSeriesComponent } from "igniteui-angular-charts";
 
 // importing data datachart's modules:
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { MarkerType } from "igniteui-angular-charts/ES5/MarkerType";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { MarkerType } from "igniteui-angular-charts";
 
-import { IgxLegendComponent } from "igniteui-angular-charts/ES5/igx-legend-component";
+import { IgxLegendComponent } from "igniteui-angular-charts";
 
 @Component({
   selector: "app-data-chart-type-category-series",

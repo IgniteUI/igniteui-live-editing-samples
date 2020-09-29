@@ -1,13 +1,13 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { SampleRangeData } from "../SampleRangeData";
 
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
 
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
-import { IgxRangeAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-range-area-series-component";
-import { IgxRangeColumnSeriesComponent } from "igniteui-angular-charts/ES5/igx-range-column-series-component";
+import { IgxRangeAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxRangeColumnSeriesComponent } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-data-chart-type-range-series",

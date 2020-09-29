@@ -8,14 +8,14 @@ import {
     OnDestroy,
     ViewChild
 } from "@angular/core";
-import { FinancialChartType } from "igniteui-angular-charts/ES5/FinancialChartType";
-import { FinancialChartVolumeType } from "igniteui-angular-charts/ES5/FinancialChartVolumeType";
-import { FinancialChartZoomSliderType } from "igniteui-angular-charts/ES5/FinancialChartZoomSliderType";
-import { FinancialIndicatorType } from "igniteui-angular-charts/ES5/FinancialIndicatorType";
-import { FinancialOverlayType } from "igniteui-angular-charts/ES5/FinancialOverlayType";
-import { IgxFinancialChartComponent } from "igniteui-angular-charts/ES5/igx-financial-chart-component";
-import { FinancialIndicatorTypeCollection } from "igniteui-angular-charts/ES5/igx-financial-indicator-type-collection";
-import { FinancialOverlayTypeCollection } from "igniteui-angular-charts/ES5/igx-financial-overlay-type-collection";
+import { FinancialChartType } from "igniteui-angular-charts";
+import { FinancialChartVolumeType } from "igniteui-angular-charts";
+import { FinancialChartZoomSliderType } from "igniteui-angular-charts";
+import { FinancialIndicatorType } from "igniteui-angular-charts";
+import { FinancialOverlayType } from "igniteui-angular-charts";
+import { IgxFinancialChartComponent } from "igniteui-angular-charts";
+import { IgxFinancialIndicatorTypeCollection } from "igniteui-angular-charts";
+import { IgxFinancialOverlayTypeCollection } from "igniteui-angular-charts";
 import { StockDataService } from "../services/stock-data.service";
 
 @Component({

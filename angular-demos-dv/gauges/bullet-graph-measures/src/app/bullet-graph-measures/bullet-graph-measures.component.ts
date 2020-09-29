@@ -1,6 +1,6 @@
 import { Component, ViewChild } from "@angular/core";
 
-import { IgxBulletGraphComponent } from "igniteui-angular-gauges/ES5/igx-bullet-graph-component";
+import { IgxBulletGraphComponent } from "igniteui-angular-gauges";
 
 @Component({
   selector: "app-bullet-graph-measures",

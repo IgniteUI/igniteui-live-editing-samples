@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { IgxPieChartComponent } from "igniteui-angular-charts/ES5/igx-pie-chart-component";
+import { IgxPieChartComponent } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-pie-chart-selection",

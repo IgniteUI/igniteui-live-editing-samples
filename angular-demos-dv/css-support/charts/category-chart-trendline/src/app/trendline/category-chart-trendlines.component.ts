@@ -4,7 +4,7 @@ import {
     Component,
     ViewChild
 } from "@angular/core";
-import { IgxCategoryChartComponent } from "igniteui-angular-charts/ES5/igx-category-chart-component";
+import { IgxCategoryChartComponent } from "igniteui-angular-charts";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

@@ -1,8 +1,8 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
-import { ShapeDataSource } from "igniteui-angular-core/ES5/igx-shape-data-source";
-import { IgxGeographicMapComponent } from "igniteui-angular-maps/ES5/igx-geographic-map-component";
+import { IgxShapeDataSource } from "igniteui-angular-core";
+import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { IgxGeographicShapeSeriesComponent
-} from "igniteui-angular-maps/ES5/igx-geographic-shape-series-component";
+} from "igniteui-angular-maps";
 
 @Component({
   selector: "app-map-binding-shp-polygons",
@@ -22,14 +22,14 @@ export class MapBindingShapefilePolygonsComponent implements AfterViewInit {
     }
 
     public ngAfterViewInit(): void {
-        const sds = new ShapeDataSource();
-        sds.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCountries.shp";
-        sds.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCountries.dbf";
-        sds.dataBind();
+        const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
+        sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCountries.shp";
+        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldCountries.dbf";
+        sds.dataBind();
     }
 
-    public onDataLoaded(sds: ShapeDataSource, e: any) {
+    public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
         console.log("loaded /Shapes/WorldCountries.shp " + shapeRecords.length);
 

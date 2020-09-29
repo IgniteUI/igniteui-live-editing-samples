@@ -1,0 +1,13 @@
+<div class="sample">
+    <div class="chart">
+        <igx-data-chart isHorizontalZoomEnabled=true isVerticalZoomEnabled=true width="100%"
+            height="100%" [dataSource]="data" chartTitle="House Floor Plan">
+
+            <igx-numeric-x-axis #xAxis minimumValue=-1 maximumValue=11 interval=1></igx-numeric-x-axis>
+            <igx-numeric-y-axis #yAxis minimumValue=-1 maximumValue=11 interval=1></igx-numeric-y-axis>
+
+            <igx-scatter-polygon-series name="series1" [xAxis]="xAxis" [yAxis]="yAxis" shapeMemberPath="Points"
+                title="House Outline" brush="LightBlue" outline="Black"></igx-scatter-polygon-series>
+        </igx-data-chart>
+    </div>
+</div>

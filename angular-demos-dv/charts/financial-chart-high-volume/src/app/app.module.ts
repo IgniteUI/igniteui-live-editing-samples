@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { FinancialChartHighVolumeComponent } from "./high-volume/financial-chart-high-volume.component";
-import { IgxFinancialChartModule } from "igniteui-angular-charts/ES5/igx-financial-chart-module";
+import { IgxFinancialChartModule } from "igniteui-angular-charts";
 import { GenerateHourlyPricesService } from "./services/generate-hourly-prices.service";
 
 @NgModule({

@@ -1,16 +1,16 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxLegendComponent } from "igniteui-angular-charts/ES5/igx-legend-component";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxLegendComponent } from "igniteui-angular-charts";
 
 // axis components
-import { IgxCategoryAngleAxisComponent } from "igniteui-angular-charts/ES5/igx-category-angle-axis-component";
-import { IgxNumericRadiusAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-radius-axis-component";
+import { IgxCategoryAngleAxisComponent } from "igniteui-angular-charts";
+import { IgxNumericRadiusAxisComponent } from "igniteui-angular-charts";
 
 // series components:
-import { IgxRadialAreaSeriesComponent } from "igniteui-angular-charts/ES5/igx-radial-area-series-component";
-import { IgxRadialColumnSeriesComponent } from "igniteui-angular-charts/ES5/igx-radial-column-series-component";
-import { IgxRadialLineSeriesComponent } from "igniteui-angular-charts/ES5/igx-radial-line-series-component";
-import { IgxRadialPieSeriesComponent } from "igniteui-angular-charts/ES5/igx-radial-pie-series-component";
+import { IgxRadialAreaSeriesComponent } from "igniteui-angular-charts";
+import { IgxRadialColumnSeriesComponent } from "igniteui-angular-charts";
+import { IgxRadialLineSeriesComponent } from "igniteui-angular-charts";
+import { IgxRadialPieSeriesComponent } from "igniteui-angular-charts";
 
 import { SampleRadialData } from "../SampleRadialData";
 

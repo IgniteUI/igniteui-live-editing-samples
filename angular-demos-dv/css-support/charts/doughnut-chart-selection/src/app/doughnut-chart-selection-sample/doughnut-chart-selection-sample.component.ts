@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ViewChild } from "@angular/core";
-import { IgxDoughnutChartComponent } from "igniteui-angular-charts/ES5/igx-doughnut-chart-component";
-import { IgxRingSeriesComponent } from "igniteui-angular-charts/ES5/igx-ring-series-component";
+import { IgxDoughnutChartComponent } from "igniteui-angular-charts";
+import { IgxRingSeriesComponent } from "igniteui-angular-charts";
 
 @Component({
     selector: "app-doughnut-chart-selection-sample",

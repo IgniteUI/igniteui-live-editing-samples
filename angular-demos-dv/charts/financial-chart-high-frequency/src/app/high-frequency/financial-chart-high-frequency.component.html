@@ -7,7 +7,7 @@
             [minValue]="5"
             [maxValue]="1000"
             [value]="refreshInterval"
-            [isContinuous]=true
+            [continuous]=true            
             (onValueChange)="onRefreshFrequencyChanged($event.value)"></igx-slider>
         </div>
         <div class="sample-vertical-box">
@@ -16,7 +16,7 @@
             [minValue]="250"
             [maxValue]="100000"
             [value]="maxPoints"
-            [isContinuous]=true
+            [continuous]=true
             (onValueChange)="onMaxPointsChanged($event.value)"></igx-slider>
         </div>
         <button igxButton="raised"

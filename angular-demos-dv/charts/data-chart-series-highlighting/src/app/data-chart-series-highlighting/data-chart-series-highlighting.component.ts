@@ -1,14 +1,14 @@
 import { Component, ViewChild } from "@angular/core";
-import { IgxCategoryXAxisComponent } from "igniteui-angular-charts/ES5/igx-category-x-axis-component";
-import { IgxDataChartComponent } from "igniteui-angular-charts/ES5/igx-data-chart-component";
-import { IgxNumericYAxisComponent } from "igniteui-angular-charts/ES5/igx-numeric-y-axis-component";
+import { IgxCategoryXAxisComponent } from "igniteui-angular-charts";
+import { IgxDataChartComponent } from "igniteui-angular-charts";
+import { IgxNumericYAxisComponent } from "igniteui-angular-charts";
 
 import {
     IgxCategoryHighlightLayerComponent
-} from "igniteui-angular-charts/ES5/igx-category-highlight-layer-component";
+} from "igniteui-angular-charts";
 import {
     IgxCategoryItemHighlightLayerComponent
-} from "igniteui-angular-charts/ES5/igx-category-item-highlight-layer-component";
+} from "igniteui-angular-charts";
 
 @Component({
     selector: "app-data-chart-series-highlighting",
