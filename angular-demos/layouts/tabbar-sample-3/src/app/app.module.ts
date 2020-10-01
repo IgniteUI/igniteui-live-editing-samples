@@ -25,7 +25,6 @@ import { TabbarView3Component } from "./views/view3/view3.component";
     FormsModule,
 		IgxBottomNavModule,
 		TabbarSample3Module,
-		RouterModule,
 		RouterModule.forRoot([
                         { path: "tabbar-view1", component: TabbarView1Component },
                         { path: "tabbar-view2", component: TabbarView2Component },
