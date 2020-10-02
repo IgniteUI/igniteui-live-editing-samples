@@ -106,13 +106,34 @@
   .my-action-strip .igx-action-strip--compact {
     padding: 0 0.75rem; }
   .my-action-strip .igx-action-strip__editing-actions,
-  .my-action-strip .igx-action-strip__pining-actions {
+  .my-action-strip .igx-action-strip__pinning-actions {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
     -ms-flex-pack: center;
         justify-content: center; }
+  .my-action-strip .igx-action-strip__menu-item [igxLabel], .my-action-strip .igx-action-strip__menu-item--danger [igxLabel] {
+    cursor: pointer; }
+  .my-action-strip .igx-action-strip__menu-item igx-icon, .my-action-strip .igx-action-strip__menu-item--danger igx-icon {
+    font-size: 1.125rem;
+    width: 1.125rem;
+    height: 1.125rem; }
+  .my-action-strip .igx-action-strip__menu-item igx-icon + [igxLabel], .my-action-strip .igx-action-strip__menu-item--danger igx-icon + [igxLabel] {
+    margin-left: 0.75rem; }
+  .my-action-strip .igx-action-strip__menu-item.igx-drop-down__item--cosy igx-icon + [igxLabel], .my-action-strip .igx-action-strip__menu-item--danger.igx-drop-down__item--cosy igx-icon + [igxLabel] {
+    margin-left: 0.625rem; }
+  .my-action-strip .igx-action-strip__menu-item.igx-drop-down__item--compact igx-icon + [igxLabel], .my-action-strip .igx-action-strip__menu-item--danger.igx-drop-down__item--compact igx-icon + [igxLabel] {
+    margin-left: 0.5rem; }
+  .my-action-strip .igx-action-strip__menu-item--danger {
+    color: #ff134a; }
+    .my-action-strip .igx-action-strip__menu-item--danger:hover {
+      color: #ff134a; }
+  .my-action-strip .igx-action-strip__menu-button {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center; }
   .my-action-strip .igx-action-strip__actions {
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -130,11 +151,6 @@
       margin-right: 0; }
     .my-action-strip .igx-action-strip__actions igx-icon {
       color: var(--igx-action-strip-color); }
-  
-  .my-action-strip .igx-action-strip__pining-actions {
-    margin-right: 0.25rem; }
-    .my-action-strip .igx-action-strip__pining-actions:last-child {
-      margin-right: 0; }
   .my-action-strip .igx-action-strip__editing-actions > [igxButton] {
     margin-left: 0.25rem; }
     .my-action-strip .igx-action-strip__editing-actions > [igxButton]:first-of-type {

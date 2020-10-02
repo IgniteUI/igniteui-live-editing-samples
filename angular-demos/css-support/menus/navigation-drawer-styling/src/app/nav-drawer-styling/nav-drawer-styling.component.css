@@ -85,7 +85,9 @@ main {
     transition: flex-basis;
     transition: flex-basis, -ms-flex-preferred-size;
     transition-duration: .3s;
-    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
   :host ::ng-deep .igx-nav-drawer__aside {
     position: fixed;
     height: 100%;

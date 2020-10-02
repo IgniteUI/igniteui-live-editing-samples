@@ -99,6 +99,7 @@
     --igx-grid-cell-editing-background: #fff;
     --igx-grid-edit-mode-color: #e41c77;
     --igx-grid-edited-row-indicator: rgba(0, 0, 0, 0.26);
+    --igx-grid-cell-new-color: rgba(0, 0, 0, 0.38);
     --igx-grid-cell-edited-value-color: rgba(0, 0, 0, 0.54);
     --igx-grid-cell-disabled-color: rgba(0, 0, 0, 0.38);
     --igx-grid-resize-line-color: #e41c77;
@@ -565,6 +566,8 @@
   :host ::ng-deep .igx-grid__td--selected.igx-grid__td--column-selected {
     color: var(--igx-grid-row-selected-text-color);
     background: var(--igx-grid-row-selected-cell-background); }
+  :host ::ng-deep .igx-grid__td--new .igx-grid__td-text {
+    color: var(--igx-grid-cell-new-color); }
   :host ::ng-deep .igx-grid__td--edited .igx-grid__td-text {
     font-style: italic;
     color: var(--igx-grid-cell-edited-value-color);
@@ -1455,8 +1458,10 @@
   :host ::ng-deep .igx-grid__addrow-snackbar {
     position: absolute;
     z-index: 5;
-    left: 35%;
-    bottom: 25%; }
+    bottom: 1.5rem;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%); }
   :host ::ng-deep .igx-grid__filtering-cell, :host ::ng-deep .igx-grid__filtering-cell--selected {
     display: -ms-flexbox;
     display: flex;
@@ -1510,6 +1515,12 @@
       right: 0; }
   :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden {
     visibility: hidden; }
+  :host ::ng-deep .igx-grid__filtering-cell--cosy {
+    height: 2.5rem;
+    padding: 0 1.5rem; }
+  :host ::ng-deep .igx-grid__filtering-cell--compact {
+    height: 2rem;
+    padding: 0 1.5rem; }
   :host ::ng-deep .igx-grid__filtering-row {
     position: absolute;
     display: -ms-flexbox;
@@ -1538,6 +1549,7 @@
       box-shadow: 0 1px 0 var(--igx-grid-filtering-row-background), 0 4px 10px rgba(0, 0, 0, 0.12);
       z-index: -1; }
     :host ::ng-deep .igx-grid__filtering-row igx-input-group {
+      --igx-input-group-variant: fluent;
       width: 100%;
       max-width: 12.5rem;
       min-width: 8.75rem; }
