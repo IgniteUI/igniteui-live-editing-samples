@@ -246,3 +246,5 @@ main {
     box-shadow: none;
     transition: none;
     visibility: hidden; }
+  :host ::ng-deep .igx-nav-drawer--disable-animation {
+    transition-duration: 0s; }
