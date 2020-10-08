@@ -8974,6 +8974,9 @@ igx-excel-style-filter-operations,
   transition: none;
   visibility: hidden; }
 
+.igx-nav-drawer--disable-animation {
+  transition-duration: 0s; }
+
 :root {
   --igx-overlay-background-color: rgba(0, 0, 0, 0.38); }
 
@@ -17736,6 +17739,8 @@ body {
     box-shadow: none;
     transition: none;
     visibility: hidden; }
+  .fin-dark-theme .igx-nav-drawer--disable-animation {
+    transition-duration: 0s; }
   .fin-dark-theme {
     --igx-overlay-background-color: rgba(255, 255, 255, 0.38); }
   .fin-dark-theme .igx-overlay {
@@ -26056,6 +26061,8 @@ body {
     box-shadow: none;
     transition: none;
     visibility: hidden; }
+  .dark-theme .igx-nav-drawer--disable-animation {
+    transition-duration: 0s; }
   .dark-theme {
     --igx-overlay-background-color: rgba(255, 255, 255, 0.38); }
   .dark-theme .igx-overlay {
@@ -34988,6 +34995,8 @@ body {
       box-shadow: none;
       transition: none;
       visibility: hidden; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-nav-drawer--disable-animation {
+      transition-duration: 0s; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-overlay-background-color: rgba(0, 0, 0, 0.4); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-overlay {

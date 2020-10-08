@@ -6727,6 +6727,8 @@
     box-shadow: none;
     transition: none;
     visibility: hidden; }
+  :host ::ng-deep .igx-nav-drawer--disable-animation {
+    transition-duration: 0s; }
   :host ::ng-deep {
     --igx-overlay-background-color: rgba(0, 0, 0, 0.38); }
   :host ::ng-deep .igx-overlay {
