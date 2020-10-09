@@ -12580,14 +12580,16 @@
         align-self: center;
     -ms-flex-pack: end;
         justify-content: flex-end;
-    width: 500px; }
+    max-width: 500px;
+    width: 50%; }
   :host ::ng-deep .crm-sample-toolbar__title {
     margin-right: 1rem;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    justify-self: flex-start; }
+    justify-self: flex-start;
+    width: 50%; }
   :host ::ng-deep .crm-sample-toolbar__ellipsis {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -12846,9 +12848,11 @@
   :host ::ng-deep .igx-grid-toolbar__actions .igx-button--outlined {
     margin-left: 0.5rem;
     border: none; }
+  :host ::ng-deep .igx-input-group--search {
+    width: 100%; }
   :host ::ng-deep .igx-input-group--search .igx-input-group__bundle {
     height: 2.25rem;
-    width: 500px;
+    width: 100%;
     overflow: hidden;
     background-color: #0072be; }
     :host ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-input-group__bundle-main {
