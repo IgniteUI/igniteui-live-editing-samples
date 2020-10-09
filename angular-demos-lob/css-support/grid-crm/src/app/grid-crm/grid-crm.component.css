@@ -558,8 +558,7 @@
             user-select: none;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
-    -webkit-filter: blur(0);
-            filter: blur(0); }
+    filter: blur(0); }
   :host ::ng-deep .igx-button--fab {
     padding: 0.5rem 1rem;
     min-width: 3rem;
@@ -1998,8 +1997,7 @@
     border-radius: var(--igx-checkbox-border-radius-ripple);
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
     :host ::ng-deep .igx-checkbox__ripple {
       --igx-ripple-variant: material;
       --igx-ripple-color: var(--igx-checkbox-fill-color); }
@@ -2281,8 +2279,7 @@
             user-select: none;
     overflow: hidden;
     cursor: pointer;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
   :host ::ng-deep .igx-chip:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item, :host ::ng-deep .igx-chip--cosy:hover .igx-chip__item, :host ::ng-deep .igx-chip--compact:hover .igx-chip__item {
     color: var(--igx-chip-hover-text-color);
     background: var(--igx-chip-hover-background);
@@ -5815,11 +5812,6 @@
       opacity: 1;
       line-height: normal;
       /* Fix placeholder position in Safari */ }
-    :host ::ng-deep .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-input-group__textarea::-ms-input-placeholder {
-      color: var(--igx-input-group-placeholder-color);
-      opacity: 1;
-      line-height: normal;
-      /* Fix placeholder position in Safari */ }
     :host ::ng-deep .igx-input-group__input::placeholder, :host ::ng-deep .igx-input-group__textarea::placeholder {
       color: var(--igx-input-group-placeholder-color);
       opacity: 1;
@@ -5847,8 +5839,6 @@
     :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::-moz-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input:-ms-input-placeholder {
-      color: var(--igx-input-group-disabled-placeholder-color); }
-    :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::-ms-input-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
@@ -7126,8 +7116,7 @@
     border-radius: 1.5em;
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
     :host ::ng-deep .igx-radio__ripple {
       --igx-ripple-variant: material;
       --igx-ripple-color: var(--igx-radio-fill-color); }
@@ -7644,8 +7633,7 @@
     height: 3em;
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1);
+    filter: opacity(1);
     border-radius: var(--igx-switch-border-radius-ripple); }
     :host ::ng-deep .igx-switch__ripple {
       --igx-ripple-variant: material;
@@ -11133,11 +11121,6 @@
       opacity: 1;
       line-height: normal;
       /* Fix placeholder position in Safari */ }
-    :host ::ng-deep .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-input-group__textarea::-ms-input-placeholder {
-      color: var(--igx-input-group-placeholder-color);
-      opacity: 1;
-      line-height: normal;
-      /* Fix placeholder position in Safari */ }
     :host ::ng-deep .igx-input-group__input::placeholder, :host ::ng-deep .igx-input-group__textarea::placeholder {
       color: var(--igx-input-group-placeholder-color);
       opacity: 1;
@@ -11165,8 +11148,6 @@
     :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::-moz-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input:-ms-input-placeholder {
-      color: var(--igx-input-group-disabled-placeholder-color); }
-    :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::-ms-input-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
@@ -12180,11 +12161,6 @@
       opacity: 1;
       line-height: normal;
       /* Fix placeholder position in Safari */ }
-    :host ::ng-deep .igx-drop-down__list .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-drop-down__list .igx-input-group__textarea::-ms-input-placeholder {
-      color: var(--igx-input-group-placeholder-color);
-      opacity: 1;
-      line-height: normal;
-      /* Fix placeholder position in Safari */ }
     :host ::ng-deep .igx-drop-down__list .igx-input-group__input::placeholder, :host ::ng-deep .igx-drop-down__list .igx-input-group__textarea::placeholder {
       color: var(--igx-input-group-placeholder-color);
       opacity: 1;
@@ -12212,8 +12188,6 @@
     :host ::ng-deep .igx-drop-down__list .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-drop-down__list .igx-input-group__input::-moz-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-drop-down__list .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-drop-down__list .igx-input-group__input:-ms-input-placeholder {
-      color: var(--igx-input-group-disabled-placeholder-color); }
-    :host ::ng-deep .igx-drop-down__list .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-drop-down__list .igx-input-group__input::-ms-input-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-drop-down__list .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep .igx-drop-down__list .igx-input-group__input::placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
@@ -12919,8 +12893,7 @@
             user-select: none;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
-    -webkit-filter: blur(0);
-            filter: blur(0); }
+    filter: blur(0); }
   :host ::ng-deep .igx-grid-toolbar__actions .igx-button--fab {
     padding: 0.5rem 1rem;
     min-width: 3rem;
@@ -13175,8 +13148,7 @@
               user-select: none;
       -webkit-tap-highlight-color: transparent;
       overflow: hidden;
-      -webkit-filter: blur(0);
-              filter: blur(0); }
+      filter: blur(0); }
     :host ::ng-deep .igx-input-group--search .igx-input-group__bundle .igx-button--fab {
       padding: 0.5rem 1rem;
       min-width: 3rem;
@@ -13274,9 +13246,6 @@
   :host ::ng-deep .sample-flex-container .igx-input-group__input:-ms-input-placeholder {
     color: white;
     opacity: 1; }
-  :host ::ng-deep .sample-flex-container .igx-input-group__input::-ms-input-placeholder {
-    color: white;
-    opacity: 1; }
   :host ::ng-deep .sample-flex-container .igx-input-group__input::placeholder {
     color: white;
     opacity: 1; }
@@ -13289,9 +13258,6 @@
     color: rgba(0, 0, 0, 0.54);
     opacity: 1; }
   :host ::ng-deep .sample-flex-container .igx-input-group:hover .igx-input-group__input:-ms-input-placeholder, :host ::ng-deep .sample-flex-container .igx-input-group:focus .igx-input-group__input:-ms-input-placeholder, :host ::ng-deep .sample-flex-container .igx-input-group.igx-input-group--focused .igx-input-group__input:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.54);
-    opacity: 1; }
-  :host ::ng-deep .sample-flex-container .igx-input-group:hover .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .sample-flex-container .igx-input-group:focus .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .sample-flex-container .igx-input-group.igx-input-group--focused .igx-input-group__input::-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.54);
     opacity: 1; }
   :host ::ng-deep .sample-flex-container .igx-input-group:hover .igx-input-group__input::placeholder, :host ::ng-deep .sample-flex-container .igx-input-group:focus .igx-input-group__input::placeholder, :host ::ng-deep .sample-flex-container .igx-input-group.igx-input-group--focused .igx-input-group__input::placeholder {
@@ -13500,8 +13466,7 @@
       border-radius: var(--igx-checkbox-border-radius-ripple);
       overflow: hidden;
       pointer-events: none;
-      -webkit-filter: opacity(1);
-              filter: opacity(1); }
+      filter: opacity(1); }
       :host ::ng-deep .dd-list__item ::ng-deep .igx-checkbox__ripple {
         --igx-ripple-variant: material;
         --igx-ripple-color: var(--igx-checkbox-fill-color); }
