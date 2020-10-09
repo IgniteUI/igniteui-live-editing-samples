@@ -192,8 +192,7 @@ igx-radio + igx-radio {
     border-radius: 1.5em;
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
     :host ::ng-deep .igx-radio__ripple {
       --igx-ripple-variant: material;
       --igx-ripple-color: var(--igx-radio-fill-color); }

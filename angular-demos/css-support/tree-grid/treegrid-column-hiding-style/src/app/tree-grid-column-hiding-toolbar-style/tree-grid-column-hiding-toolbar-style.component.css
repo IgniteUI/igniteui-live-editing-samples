@@ -273,8 +273,7 @@
           user-select: none;
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
-  -webkit-filter: blur(0);
-          filter: blur(0); }
+  filter: blur(0); }
 
 :host ::ng-deep .igx-column-actions .igx-button--fab {
   padding: 0.5rem 1rem;

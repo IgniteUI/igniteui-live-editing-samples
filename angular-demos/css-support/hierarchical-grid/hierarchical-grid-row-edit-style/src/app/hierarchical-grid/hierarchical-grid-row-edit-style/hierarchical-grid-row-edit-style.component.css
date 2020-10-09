@@ -235,8 +235,7 @@
           user-select: none;
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
-  -webkit-filter: blur(0);
-          filter: blur(0); }
+  filter: blur(0); }
 
 .custom-buttons .igx-button--fab {
   padding: 0.5rem 1rem;
@@ -496,8 +495,7 @@
     border-radius: var(--igx-checkbox-border-radius-ripple);
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
     :host ::ng-deep .igx-checkbox__ripple {
       --igx-ripple-variant: material;
       --igx-ripple-color: var(--igx-checkbox-fill-color); }

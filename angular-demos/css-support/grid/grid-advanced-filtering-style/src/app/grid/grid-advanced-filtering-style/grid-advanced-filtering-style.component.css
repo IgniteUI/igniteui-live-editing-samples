@@ -2563,8 +2563,7 @@
             user-select: none;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
-    -webkit-filter: blur(0);
-            filter: blur(0); }
+    filter: blur(0); }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-button--fab {
     padding: 0.5rem 1rem;
     min-width: 3rem;
@@ -3187,11 +3186,6 @@
       opacity: 1;
       line-height: normal;
       /* Fix placeholder position in Safari */ }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__textarea::-ms-input-placeholder {
-      color: var(--igx-input-group-placeholder-color);
-      opacity: 1;
-      line-height: normal;
-      /* Fix placeholder position in Safari */ }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::placeholder, :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__textarea::placeholder {
       color: var(--igx-input-group-placeholder-color);
       opacity: 1;
@@ -3219,8 +3213,6 @@
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::-moz-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input:-ms-input-placeholder {
-      color: var(--igx-input-group-disabled-placeholder-color); }
-    :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::-ms-input-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
@@ -3848,8 +3840,7 @@
             user-select: none;
     overflow: hidden;
     cursor: pointer;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-chip:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--cosy:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip__ghost--compact:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--cosy:hover .igx-chip__item, :host ::ng-deep igx-advanced-filtering-dialog .igx-chip--compact:hover .igx-chip__item {
     color: var(--igx-chip-hover-text-color);
     background: var(--igx-chip-hover-background);
@@ -4008,8 +3999,6 @@
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::-moz-placeholder {
     color: gray; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input:-ms-input-placeholder {
-    color: gray; }
-  :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::-ms-input-placeholder {
     color: gray; }
   :host ::ng-deep igx-advanced-filtering-dialog .igx-input-group__input::placeholder {
     color: gray; }

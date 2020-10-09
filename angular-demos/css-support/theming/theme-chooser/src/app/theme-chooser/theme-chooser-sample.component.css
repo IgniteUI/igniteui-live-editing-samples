@@ -2815,11 +2815,6 @@
           opacity: 1;
           line-height: normal;
           /* Fix placeholder position in Safari */ }
-        :host.light-theme ::ng-deep .igx-input-group__input::-ms-input-placeholder, :host.light-theme ::ng-deep .igx-input-group__textarea::-ms-input-placeholder {
-          color: var(--igx-input-group-placeholder-color);
-          opacity: 1;
-          line-height: normal;
-          /* Fix placeholder position in Safari */ }
         :host.light-theme ::ng-deep .igx-input-group__input::placeholder, :host.light-theme ::ng-deep .igx-input-group__textarea::placeholder {
           color: var(--igx-input-group-placeholder-color);
           opacity: 1;
@@ -2847,8 +2842,6 @@
         :host.light-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host.light-theme ::ng-deep .igx-input-group__input::-moz-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.light-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host.light-theme ::ng-deep .igx-input-group__input:-ms-input-placeholder {
-          color: var(--igx-input-group-disabled-placeholder-color); }
-        :host.light-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host.light-theme ::ng-deep .igx-input-group__input::-ms-input-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.light-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host.light-theme ::ng-deep .igx-input-group__input::placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
@@ -3483,8 +3476,7 @@
                 user-select: none;
         -webkit-tap-highlight-color: transparent;
         overflow: hidden;
-        -webkit-filter: blur(0);
-                filter: blur(0); }
+        filter: blur(0); }
       :host.light-theme ::ng-deep .igx-button--fab {
         padding: 0.5rem 1rem;
         min-width: 3rem;
@@ -4362,8 +4354,7 @@
                 user-select: none;
         overflow: hidden;
         cursor: pointer;
-        -webkit-filter: opacity(1);
-                filter: opacity(1); }
+        filter: opacity(1); }
       :host.light-theme ::ng-deep .igx-chip:hover .igx-chip__item, :host.light-theme ::ng-deep .igx-chip__ghost:hover .igx-chip__item, :host.light-theme ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item, :host.light-theme ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item, :host.light-theme ::ng-deep .igx-chip--cosy:hover .igx-chip__item, :host.light-theme ::ng-deep .igx-chip--compact:hover .igx-chip__item {
         color: var(--igx-chip-hover-text-color);
         background: var(--igx-chip-hover-background);
@@ -7376,11 +7367,6 @@
           opacity: 1;
           line-height: normal;
           /* Fix placeholder position in Safari */ }
-        :host.dark-theme ::ng-deep .igx-input-group__input::-ms-input-placeholder, :host.dark-theme ::ng-deep .igx-input-group__textarea::-ms-input-placeholder {
-          color: var(--igx-input-group-placeholder-color);
-          opacity: 1;
-          line-height: normal;
-          /* Fix placeholder position in Safari */ }
         :host.dark-theme ::ng-deep .igx-input-group__input::placeholder, :host.dark-theme ::ng-deep .igx-input-group__textarea::placeholder {
           color: var(--igx-input-group-placeholder-color);
           opacity: 1;
@@ -7408,8 +7394,6 @@
         :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input::-moz-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input:-ms-input-placeholder {
-          color: var(--igx-input-group-disabled-placeholder-color); }
-        :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input::-ms-input-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.dark-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host.dark-theme ::ng-deep .igx-input-group__input::placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
@@ -8044,8 +8028,7 @@
                 user-select: none;
         -webkit-tap-highlight-color: transparent;
         overflow: hidden;
-        -webkit-filter: blur(0);
-                filter: blur(0); }
+        filter: blur(0); }
       :host.dark-theme ::ng-deep .igx-button--fab {
         padding: 0.5rem 1rem;
         min-width: 3rem;
@@ -8923,8 +8906,7 @@
                 user-select: none;
         overflow: hidden;
         cursor: pointer;
-        -webkit-filter: opacity(1);
-                filter: opacity(1); }
+        filter: opacity(1); }
       :host.dark-theme ::ng-deep .igx-chip:hover .igx-chip__item, :host.dark-theme ::ng-deep .igx-chip__ghost:hover .igx-chip__item, :host.dark-theme ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item, :host.dark-theme ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item, :host.dark-theme ::ng-deep .igx-chip--cosy:hover .igx-chip__item, :host.dark-theme ::ng-deep .igx-chip--compact:hover .igx-chip__item {
         color: var(--igx-chip-hover-text-color);
         background: var(--igx-chip-hover-background);
@@ -11937,11 +11919,6 @@
           opacity: 1;
           line-height: normal;
           /* Fix placeholder position in Safari */ }
-        :host.black-theme ::ng-deep .igx-input-group__input::-ms-input-placeholder, :host.black-theme ::ng-deep .igx-input-group__textarea::-ms-input-placeholder {
-          color: var(--igx-input-group-placeholder-color);
-          opacity: 1;
-          line-height: normal;
-          /* Fix placeholder position in Safari */ }
         :host.black-theme ::ng-deep .igx-input-group__input::placeholder, :host.black-theme ::ng-deep .igx-input-group__textarea::placeholder {
           color: var(--igx-input-group-placeholder-color);
           opacity: 1;
@@ -11969,8 +11946,6 @@
         :host.black-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host.black-theme ::ng-deep .igx-input-group__input::-moz-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.black-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host.black-theme ::ng-deep .igx-input-group__input:-ms-input-placeholder {
-          color: var(--igx-input-group-disabled-placeholder-color); }
-        :host.black-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host.black-theme ::ng-deep .igx-input-group__input::-ms-input-placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
         :host.black-theme ::ng-deep .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host.black-theme ::ng-deep .igx-input-group__input::placeholder {
           color: var(--igx-input-group-disabled-placeholder-color); }
@@ -12605,8 +12580,7 @@
                 user-select: none;
         -webkit-tap-highlight-color: transparent;
         overflow: hidden;
-        -webkit-filter: blur(0);
-                filter: blur(0); }
+        filter: blur(0); }
       :host.black-theme ::ng-deep .igx-button--fab {
         padding: 0.5rem 1rem;
         min-width: 3rem;
@@ -13484,8 +13458,7 @@
                 user-select: none;
         overflow: hidden;
         cursor: pointer;
-        -webkit-filter: opacity(1);
-                filter: opacity(1); }
+        filter: opacity(1); }
       :host.black-theme ::ng-deep .igx-chip:hover .igx-chip__item, :host.black-theme ::ng-deep .igx-chip__ghost:hover .igx-chip__item, :host.black-theme ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item, :host.black-theme ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item, :host.black-theme ::ng-deep .igx-chip--cosy:hover .igx-chip__item, :host.black-theme ::ng-deep .igx-chip--compact:hover .igx-chip__item {
         color: var(--igx-chip-hover-text-color);
         background: var(--igx-chip-hover-background);

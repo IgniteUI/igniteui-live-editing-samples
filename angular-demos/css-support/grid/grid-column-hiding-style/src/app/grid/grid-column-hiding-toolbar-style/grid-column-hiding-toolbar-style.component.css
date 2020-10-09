@@ -287,8 +287,7 @@
   border-radius: var(--igx-checkbox-border-radius-ripple);
   overflow: hidden;
   pointer-events: none;
-  -webkit-filter: opacity(1);
-          filter: opacity(1); }
+  filter: opacity(1); }
   :host ::ng-deep igx-column-actions .igx-checkbox__ripple, :host ::ng-deep igx-grid-toolbar .igx-checkbox__ripple {
     --igx-ripple-variant: material;
     --igx-ripple-color: var(--igx-checkbox-fill-color); }
@@ -898,11 +897,6 @@
     opacity: 1;
     line-height: normal;
     /* Fix placeholder position in Safari */ }
-  :host ::ng-deep igx-column-actions .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep igx-column-actions .igx-input-group__textarea::-ms-input-placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group__textarea::-ms-input-placeholder {
-    color: var(--igx-input-group-placeholder-color);
-    opacity: 1;
-    line-height: normal;
-    /* Fix placeholder position in Safari */ }
   :host ::ng-deep igx-column-actions .igx-input-group__input::placeholder, :host ::ng-deep igx-column-actions .igx-input-group__textarea::placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group__input::placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group__textarea::placeholder {
     color: var(--igx-input-group-placeholder-color);
     opacity: 1;
@@ -938,8 +932,6 @@
   :host ::ng-deep igx-column-actions .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep igx-column-actions .igx-input-group__input::-moz-placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep igx-grid-toolbar .igx-input-group__input::-moz-placeholder {
     color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep igx-column-actions .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep igx-column-actions .igx-input-group__input:-ms-input-placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep igx-grid-toolbar .igx-input-group__input:-ms-input-placeholder {
-    color: var(--igx-input-group-disabled-placeholder-color); }
-  :host ::ng-deep igx-column-actions .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep igx-column-actions .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep igx-grid-toolbar .igx-input-group__input::-ms-input-placeholder {
     color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep igx-column-actions .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep igx-column-actions .igx-input-group__input::placeholder, :host ::ng-deep igx-grid-toolbar .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep igx-grid-toolbar .igx-input-group__input::placeholder {
     color: var(--igx-input-group-disabled-placeholder-color); }
@@ -1814,8 +1806,7 @@
           user-select: none;
   -webkit-tap-highlight-color: transparent;
   overflow: hidden;
-  -webkit-filter: blur(0);
-          filter: blur(0); }
+  filter: blur(0); }
 
 :host ::ng-deep igx-column-actions .igx-button--fab, :host ::ng-deep igx-grid-toolbar .igx-button--fab {
   padding: 0.5rem 1rem;

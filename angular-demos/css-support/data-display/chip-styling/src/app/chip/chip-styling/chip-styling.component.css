@@ -301,8 +301,7 @@ igx-chip {
           user-select: none;
   overflow: hidden;
   cursor: pointer;
-  -webkit-filter: opacity(1);
-          filter: opacity(1); }
+  filter: opacity(1); }
 
 :host ::ng-deep .igx-chip:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost--cosy:hover .igx-chip__item, :host ::ng-deep .igx-chip__ghost--compact:hover .igx-chip__item, :host ::ng-deep .igx-chip--cosy:hover .igx-chip__item, :host ::ng-deep .igx-chip--compact:hover .igx-chip__item {
   color: var(--igx-chip-hover-text-color);
