@@ -792,7 +792,9 @@
     -ms-flex-align: center;
         align-items: center;
     height: 100%;
-    color: var(--igx-grid-content-text-color); }
+    color: var(--igx-grid-content-text-color);
+    -ms-flex-direction: column;
+        flex-direction: column; }
   :host ::ng-deep .igx-grid__loading {
     display: -ms-flexbox;
     display: flex;

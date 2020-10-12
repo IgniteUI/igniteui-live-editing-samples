@@ -269,7 +269,9 @@
         -ms-flex-align: center;
             align-items: center;
         height: 100%;
-        color: var(--igx-grid-content-text-color); }
+        color: var(--igx-grid-content-text-color);
+        -ms-flex-direction: column;
+            flex-direction: column; }
       :host.light-theme ::ng-deep .igx-grid__loading {
         display: -ms-flexbox;
         display: flex;
@@ -4821,7 +4823,9 @@
         -ms-flex-align: center;
             align-items: center;
         height: 100%;
-        color: var(--igx-grid-content-text-color); }
+        color: var(--igx-grid-content-text-color);
+        -ms-flex-direction: column;
+            flex-direction: column; }
       :host.dark-theme ::ng-deep .igx-grid__loading {
         display: -ms-flexbox;
         display: flex;
@@ -9373,7 +9377,9 @@
         -ms-flex-align: center;
             align-items: center;
         height: 100%;
-        color: var(--igx-grid-content-text-color); }
+        color: var(--igx-grid-content-text-color);
+        -ms-flex-direction: column;
+            flex-direction: column; }
       :host.black-theme ::ng-deep .igx-grid__loading {
         display: -ms-flexbox;
         display: flex;
