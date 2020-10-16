@@ -145,6 +145,22 @@
     --igx-grid-row-selected-cell-background: #d1c6c6;
     --igx-grid-grid-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
     --igx-grid-drag-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 5px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 14px 0 rgba(0, 0, 0, 0.08); }
+
+@-webkit-keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
+
+@keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
   :host ::ng-deep .grid__wrapper .igx-grid__thead-wrapper:focus, :host ::ng-deep .grid__wrapper .igx-grid__tbody-content:focus, :host ::ng-deep .grid__wrapper .igx-grid__tfoot:focus {
     outline: 0; }
   :host ::ng-deep .grid__wrapper .igx-grid, :host ::ng-deep .grid__wrapper .igx-grid--cosy, :host ::ng-deep .grid__wrapper .igx-grid--compact {
@@ -470,6 +486,12 @@
         caret-color: var(--igx-grid-edit-mode-color) !important; }
       :host ::ng-deep .grid__wrapper .igx-grid__tr--edit .igx-grid__td--editing .igx-input-group__border {
         background: var(--igx-grid-edit-mode-color) !important; }
+  :host ::ng-deep .grid__wrapper .igx-grid__tr--inner {
+    display: -ms-flexbox;
+    display: flex; }
+  :host ::ng-deep .grid__wrapper .igx-grid__tr--add-animate {
+    -webkit-animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   :host ::ng-deep .grid__wrapper .igx-grid__tr--mrl.igx-grid__tr--edit:first-of-type::after {
     top: 0;
     z-index: 5; }
