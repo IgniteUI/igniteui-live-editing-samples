@@ -24,7 +24,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 		IgxPreventDocumentScrollModule,
 		IgxHierarchicalGridModule,
 		HttpClientModule,
-		RouterModule.forRoot([{component: HGridAboutComponent, path: 'hGrid-state-about'},{component: HGridSaveStateComponent, path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])]
+		RouterModule.forRoot([{component: 'HGridAboutComponent', path: 'hGrid-state-about'},{component: 'HGridSaveStateComponent', path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])]
   ],
   providers: [],
   entryComponents: [],

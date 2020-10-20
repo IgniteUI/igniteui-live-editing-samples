@@ -71,16 +71,13 @@
   --igx-toast-text-color: #151515;
   --igx-toast-shadow: none; }
 
-:host ::ng-deep .igx-toast, :host ::ng-deep .igx-toast--top, :host ::ng-deep .igx-toast--middle, :host ::ng-deep .igx-toast--bottom {
-  position: fixed;
-  display: -ms-flexbox;
-  display: flex;
+:host ::ng-deep .igx-toast {
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  left: 50%;
-  transform: translate3d(-50%, 0, 0);
   margin: 2.625rem auto;
   padding: 1rem 1.5rem;
   min-width: 52px;
@@ -90,18 +87,4 @@
   border-radius: var(--igx-toast-border-radius);
   box-shadow: none;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  opacity: 0;
-  z-index: 999999; }
-
-:host ::ng-deep .igx-toast--top {
-  top: 0;
-  margin-top: 16px; }
-
-:host ::ng-deep .igx-toast--middle {
-  top: 50%;
-  transform: translate3d(-50%, -50%, 0); }
-
-:host ::ng-deep .igx-toast--bottom {
-  bottom: 0;
-  margin-bottom: 16px; }
+          backdrop-filter: blur(10px); }

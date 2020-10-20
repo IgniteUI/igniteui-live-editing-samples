@@ -94,6 +94,7 @@
   --igx-grid-cell-editing-background: #fff;
   --igx-grid-edit-mode-color: #e41c77;
   --igx-grid-edited-row-indicator: rgba(0, 0, 0, 0.26);
+  --igx-grid-cell-new-color: rgba(0, 0, 0, 0.38);
   --igx-grid-cell-edited-value-color: rgba(0, 0, 0, 0.54);
   --igx-grid-cell-disabled-color: rgba(0, 0, 0, 0.38);
   --igx-grid-resize-line-color: #e41c77;
@@ -133,6 +134,25 @@
   --igx-grid-row-selected-cell-background: #f99ec8;
   --igx-grid-grid-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
   --igx-grid-drag-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 5px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 14px 0 rgba(0, 0, 0, 0.08); }
+
+@-webkit-keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
+
+@keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
+
+.igx-grid__thead-wrapper:focus, .igx-grid__tbody-content:focus, .igx-grid__tfoot:focus {
+  outline: 0; }
 
 .igx-grid, .igx-grid--cosy, .igx-grid--compact {
   position: relative;
@@ -325,7 +345,9 @@
   -ms-flex-align: center;
       align-items: center;
   height: 100%;
-  color: var(--igx-grid-content-text-color); }
+  color: var(--igx-grid-content-text-color);
+  -ms-flex-direction: column;
+      flex-direction: column; }
 
 .igx-grid__loading {
   display: -ms-flexbox;
@@ -413,7 +435,7 @@
   background: inherit;
   z-index: 4;
   cursor: move; }
-  .igx-grid__drag-indicator .igx-icon, .igx-grid__drag-indicator .igx-icon--inactive {
+  .igx-grid__drag-indicator .igx-icon, .igx-grid__drag-indicator .igx-icon--inactive, .igx-grid__drag-indicator .igx-icon--success, .igx-grid__drag-indicator .igx-icon--error {
     width: 1.5rem;
     height: 1.5rem;
     font-size: 1.5rem; }
@@ -485,13 +507,14 @@
 .igx-grid__td--bool {
   -ms-flex-pack: center;
       justify-content: center; }
-  .igx-grid__td--bool igx-icon {
+  .igx-grid__td--bool .igx-icon, .igx-grid__td--bool .igx-icon--inactive, .igx-grid__td--bool .igx-icon--success, .igx-grid__td--bool .igx-icon--error {
     height: 1.125rem;
     width: 1.125rem;
-    font-size: 1.125rem;
+    font-size: 1.125rem; }
+  .igx-grid__td--bool .igx-icon--error {
     color: rgba(0, 0, 0, 0.38); }
 
-.igx-grid__td--bool-true igx-icon {
+.igx-grid__td--bool-true .igx-icon--success {
   color: rgba(0, 0, 0, 0.62); }
 
 .igx-grid__tr--edit {
@@ -513,6 +536,14 @@
       caret-color: var(--igx-grid-edit-mode-color) !important; }
     .igx-grid__tr--edit .igx-grid__td--editing .igx-input-group__border {
       background: var(--igx-grid-edit-mode-color) !important; }
+
+.igx-grid__tr--inner {
+  display: -ms-flexbox;
+  display: flex; }
+
+.igx-grid__tr--add-animate {
+  -webkit-animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
 .igx-grid__tr--mrl.igx-grid__tr--edit:first-of-type::after {
   top: 0;
@@ -640,6 +671,9 @@
 .igx-grid__td--selected.igx-grid__td--column-selected {
   color: var(--igx-grid-row-selected-text-color);
   background: var(--igx-grid-row-selected-cell-background); }
+
+.igx-grid__td--new .igx-grid__td-text {
+  color: var(--igx-grid-cell-new-color); }
 
 .igx-grid__td--edited .igx-grid__td-text {
   font-style: italic;
@@ -1104,7 +1138,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .igx-group-label__icon.igx-icon, .igx-group-label__icon.igx-icon--inactive {
+  .igx-group-label__icon.igx-icon, .igx-group-label__icon.igx-icon--inactive, .igx-group-label__icon.igx-icon--success, .igx-group-label__icon.igx-icon--error {
     color: var(--igx-grid-group-label-icon);
     width: 1rem;
     height: 1rem;
@@ -1753,6 +1787,14 @@
     /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
     position: absolute; }
 
+.igx-grid__addrow-snackbar {
+  position: absolute;
+  z-index: 5;
+  bottom: 1.5rem;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+      transform: translateX(-50%); }
+
 .igx-grid__filtering-cell, .igx-grid__filtering-cell--selected {
   display: -ms-flexbox;
   display: flex;
@@ -1810,6 +1852,14 @@
 .igx-grid__filtering-cell-indicator--hidden {
   visibility: hidden; }
 
+.igx-grid__filtering-cell--cosy {
+  height: 2.5rem;
+  padding: 0 1.5rem; }
+
+.igx-grid__filtering-cell--compact {
+  height: 2rem;
+  padding: 0 1.5rem; }
+
 .igx-grid__filtering-row {
   position: absolute;
   display: -ms-flexbox;
@@ -1838,6 +1888,7 @@
     box-shadow: 0 1px 0 var(--igx-grid-filtering-row-background), 0 4px 10px rgba(0, 0, 0, 0.12);
     z-index: -1; }
   .igx-grid__filtering-row igx-input-group {
+    --igx-input-group-variant: fluent;
     width: 100%;
     max-width: 12.5rem;
     min-width: 8.75rem; }
@@ -2122,7 +2173,7 @@
     transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
     .igx-excel-filter__menu .igx-button--flat.igx-button-group__item, .igx-excel-filter__menu .igx-button--flat.igx-button-group__item--selected {
       border-radius: 0; }
-    .igx-excel-filter__menu .igx-button-group__item .igx-icon, .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive {
+    .igx-excel-filter__menu .igx-button-group__item .igx-icon, .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item .igx-icon--success, .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--success, .igx-excel-filter__menu .igx-button-group__item .igx-icon--error, .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--error {
       color: currentColor; }
     .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)), .igx-excel-filter__menu .igx-button-group__item--selected:not(:nth-child(0)) {
       margin-left: -1px; }
@@ -2140,7 +2191,7 @@
       color: var(--igx-button-group-item-hover-text-color);
       background: var(--igx-button-group-item-hover-background);
       z-index: 1; }
-      .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive {
+      .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--success, .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--success, .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--error, .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--error, .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive, .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--success, .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--success, .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--error, .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--error {
         color: currentColor; }
   .igx-excel-filter__menu .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)) {
     margin-top: -1px;

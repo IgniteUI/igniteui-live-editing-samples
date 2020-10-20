@@ -210,6 +210,7 @@
     --igx-grid-cell-editing-background: #fff;
     --igx-grid-edit-mode-color: #e41c77;
     --igx-grid-edited-row-indicator: rgba(0, 0, 0, 0.26);
+    --igx-grid-cell-new-color: rgba(0, 0, 0, 0.38);
     --igx-grid-cell-edited-value-color: rgba(0, 0, 0, 0.54);
     --igx-grid-cell-disabled-color: rgba(0, 0, 0, 0.38);
     --igx-grid-resize-line-color: #e41c77;
@@ -249,6 +250,24 @@
     --igx-grid-row-selected-cell-background: #f99ec8;
     --igx-grid-grid-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
     --igx-grid-drag-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 5px 8px 0 rgba(0, 0, 0, 0.12), 0 1px 14px 0 rgba(0, 0, 0, 0.08); }
+
+@-webkit-keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
+
+@keyframes scale-in-ver-center {
+  0% {
+    transform: scaleY(0);
+    opacity: 1; }
+  100% {
+    transform: scaleY(1);
+    opacity: 1; } }
+  :host ::ng-deep .igx-grid__thead-wrapper:focus, :host ::ng-deep .igx-grid__tbody-content:focus, :host ::ng-deep .igx-grid__tfoot:focus {
+    outline: 0; }
   :host ::ng-deep .igx-grid, :host ::ng-deep .igx-grid--cosy, :host ::ng-deep .igx-grid--compact {
     position: relative;
     display: grid;
@@ -410,7 +429,9 @@
     -ms-flex-align: center;
         align-items: center;
     height: 100%;
-    color: var(--igx-grid-content-text-color); }
+    color: var(--igx-grid-content-text-color);
+    -ms-flex-direction: column;
+        flex-direction: column; }
   :host ::ng-deep .igx-grid__loading {
     display: -ms-flexbox;
     display: flex;
@@ -485,7 +506,7 @@
     background: inherit;
     z-index: 4;
     cursor: move; }
-    :host ::ng-deep .igx-grid__drag-indicator .igx-icon, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive {
+    :host ::ng-deep .igx-grid__drag-indicator .igx-icon, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1.5rem; }
@@ -543,12 +564,13 @@
   :host ::ng-deep .igx-grid__td--bool {
     -ms-flex-pack: center;
         justify-content: center; }
-    :host ::ng-deep .igx-grid__td--bool igx-icon {
+    :host ::ng-deep .igx-grid__td--bool .igx-icon, :host ::ng-deep .igx-grid__td--bool .igx-icon--inactive, :host ::ng-deep .igx-grid__td--bool .igx-icon--success, :host ::ng-deep .igx-grid__td--bool .igx-icon--error {
       height: 1.125rem;
       width: 1.125rem;
-      font-size: 1.125rem;
+      font-size: 1.125rem; }
+    :host ::ng-deep .igx-grid__td--bool .igx-icon--error {
       color: rgba(0, 0, 0, 0.38); }
-  :host ::ng-deep .igx-grid__td--bool-true igx-icon {
+  :host ::ng-deep .igx-grid__td--bool-true .igx-icon--success {
     color: rgba(0, 0, 0, 0.62); }
   :host ::ng-deep .igx-grid__tr--edit {
     border-bottom: 1px solid var(--igx-grid-edit-mode-color);
@@ -569,6 +591,12 @@
         caret-color: var(--igx-grid-edit-mode-color) !important; }
       :host ::ng-deep .igx-grid__tr--edit .igx-grid__td--editing .igx-input-group__border {
         background: var(--igx-grid-edit-mode-color) !important; }
+  :host ::ng-deep .igx-grid__tr--inner {
+    display: -ms-flexbox;
+    display: flex; }
+  :host ::ng-deep .igx-grid__tr--add-animate {
+    -webkit-animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            animation: scale-in-ver-center 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
   :host ::ng-deep .igx-grid__tr--mrl.igx-grid__tr--edit:first-of-type::after {
     top: 0;
     z-index: 5; }
@@ -673,6 +701,8 @@
   :host ::ng-deep .igx-grid__td--selected.igx-grid__td--column-selected {
     color: var(--igx-grid-row-selected-text-color);
     background: var(--igx-grid-row-selected-cell-background); }
+  :host ::ng-deep .igx-grid__td--new .igx-grid__td-text {
+    color: var(--igx-grid-cell-new-color); }
   :host ::ng-deep .igx-grid__td--edited .igx-grid__td-text {
     font-style: italic;
     color: var(--igx-grid-cell-edited-value-color);
@@ -1071,7 +1101,7 @@
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
-    :host ::ng-deep .igx-group-label__icon.igx-icon, :host ::ng-deep .igx-group-label__icon.igx-icon--inactive {
+    :host ::ng-deep .igx-group-label__icon.igx-icon, :host ::ng-deep .igx-group-label__icon.igx-icon--inactive, :host ::ng-deep .igx-group-label__icon.igx-icon--success, :host ::ng-deep .igx-group-label__icon.igx-icon--error {
       color: var(--igx-grid-group-label-icon);
       width: 1rem;
       height: 1rem;
@@ -1560,6 +1590,13 @@
     :host ::ng-deep .igx-grid__row-editing-outlet .igx-overlay__wrapper, :host ::ng-deep .igx-grid__row-editing-outlet .igx-overlay__wrapper--modal, :host ::ng-deep .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex, :host ::ng-deep .igx-grid__row-editing-outlet .igx-overlay__wrapper--flex-container {
       /* Change wrapper position from 'fixed' to 'absolute' so that it is hidden when scrolled below the parent grid body content. */
       position: absolute; }
+  :host ::ng-deep .igx-grid__addrow-snackbar {
+    position: absolute;
+    z-index: 5;
+    bottom: 1.5rem;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+        transform: translateX(-50%); }
   :host ::ng-deep .igx-grid__filtering-cell, :host ::ng-deep .igx-grid__filtering-cell--selected {
     display: -ms-flexbox;
     display: flex;
@@ -1613,6 +1650,12 @@
       right: 0; }
   :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden {
     visibility: hidden; }
+  :host ::ng-deep .igx-grid__filtering-cell--cosy {
+    height: 2.5rem;
+    padding: 0 1.5rem; }
+  :host ::ng-deep .igx-grid__filtering-cell--compact {
+    height: 2rem;
+    padding: 0 1.5rem; }
   :host ::ng-deep .igx-grid__filtering-row {
     position: absolute;
     display: -ms-flexbox;
@@ -1641,6 +1684,7 @@
       box-shadow: 0 1px 0 var(--igx-grid-filtering-row-background), 0 4px 10px rgba(0, 0, 0, 0.12);
       z-index: -1; }
     :host ::ng-deep .igx-grid__filtering-row igx-input-group {
+      --igx-input-group-variant: fluent;
       width: 100%;
       max-width: 12.5rem;
       min-width: 8.75rem; }
@@ -1898,7 +1942,7 @@
       transition: all 140ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
       :host ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item, :host ::ng-deep .igx-excel-filter__menu .igx-button--flat.igx-button-group__item--selected {
         border-radius: 0; }
-      :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--success, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--success, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item .igx-icon--error, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected .igx-icon--error {
         color: currentColor; }
       :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)), :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:not(:nth-child(0)) {
         margin-left: -1px; }
@@ -1916,7 +1960,7 @@
         color: var(--igx-button-group-item-hover-text-color);
         background: var(--igx-button-group-item-hover-background);
         z-index: 1; }
-        :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive {
+        :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:hover .igx-icon--error, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:hover .igx-icon--error, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected:focus .igx-icon--error {
           color: currentColor; }
     :host ::ng-deep .igx-excel-filter__menu .igx-button-group--vertical .igx-button-group__item:not(:nth-child(0)), .igx-button-group--vertical :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item:not(:nth-child(0)) {
       margin-top: -1px;
@@ -2568,7 +2612,7 @@
     white-space: nowrap;
     transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
     font-family: inherit; }
-    :host ::ng-deep .igx-excel-filter .igx-button .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-button .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--error {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
@@ -2582,17 +2626,17 @@
     background: var(--igx-button-flat-background);
     color: var(--igx-button-flat-text-color);
     border-radius: var(--igx-button-flat-border-radius); }
-    :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--flat .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat .igx-icon--error {
       color: var(--igx-button-flat-icon-color); }
     :host ::ng-deep .igx-excel-filter .igx-button--flat:hover, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover {
       background: var(--igx-button-flat-hover-background);
       color: var(--igx-button-flat-hover-text-color); }
-      :host ::ng-deep .igx-excel-filter .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--flat:hover .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:hover .igx-icon--error {
         color: var(--igx-button-flat-hover-icon-color); }
     :host ::ng-deep .igx-excel-filter .igx-button--flat:focus, :host ::ng-deep .igx-excel-filter .igx-button--flat:active, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active {
       background: var(--igx-button-flat-focus-background);
       color: var(--igx-button-flat-focus-text-color); }
-      :host ::ng-deep .igx-excel-filter .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--flat:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--flat:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--flat:active .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--flat:active .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--flat:active .igx-icon--error {
         color: var(--igx-button-flat-focus-icon-color); }
   :host ::ng-deep .igx-excel-filter .igx-button--outlined, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined {
     background: var(--igx-button-outlined-background);
@@ -2600,36 +2644,36 @@
     border-radius: var(--igx-button-outlined-border-radius);
     border: 1px solid transparent;
     border-color: var(--igx-button-outlined-outline-color); }
-    :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--outlined .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined .igx-icon--error {
       color: var(--igx-button-outlined-icon-color); }
     :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover {
       background: var(--igx-button-outlined-hover-background);
       color: var(--igx-button-outlined-hover-text-color); }
-      :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--outlined:hover .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:hover .igx-icon--error {
         color: var(--igx-button-outlined-hover-icon-color); }
     :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active {
       background: var(--igx-button-outlined-focus-background);
       color: var(--igx-button-outlined-focus-text-color); }
-      :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--outlined:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--outlined:active .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--outlined:active .igx-icon--error {
         color: var(--igx-button-outlined-focus-icon-color); }
   :host ::ng-deep .igx-excel-filter .igx-button--raised, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised {
     color: var(--igx-button-raised-text-color);
     background: var(--igx-button-raised-background);
     box-shadow: var(--igx-button-raised-resting-shadow);
     border-radius: var(--igx-button-raised-border-radius); }
-    :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--raised .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised .igx-icon--error {
       color: var(--igx-button-raised-icon-color); }
     :host ::ng-deep .igx-excel-filter .igx-button--raised:hover, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover {
       color: var(--igx-button-raised-hover-text-color);
       background: var(--igx-button-raised-hover-background);
       box-shadow: var(--igx-button-raised-hover-shadow); }
-      :host ::ng-deep .igx-excel-filter .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--raised:hover .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:hover .igx-icon--error {
         color: var(--igx-button-raised-hover-icon-color); }
     :host ::ng-deep .igx-excel-filter .igx-button--raised:focus, :host ::ng-deep .igx-excel-filter .igx-button--raised:active, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active {
       color: var(--igx-button-raised-focus-text-color);
       background: var(--igx-button-raised-focus-background);
       box-shadow: var(--igx-button-raised-focus-shadow); }
-      :host ::ng-deep .igx-excel-filter .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--raised:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-excel-filter .igx-button--raised:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-button--raised:active .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-button--raised:active .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:focus .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-button--raised:active .igx-icon--error {
         color: var(--igx-button-raised-focus-icon-color); }
   :host ::ng-deep .igx-excel-filter .igx-button--fab, :host ::ng-deep .igx-excel-filter .igx-button--icon, :host ::ng-deep .igx-excel-filter__secondary .igx-button--fab, :host ::ng-deep .igx-excel-filter__secondary .igx-button--icon {
     display: -ms-inline-flexbox;
@@ -2652,8 +2696,7 @@
             user-select: none;
     -webkit-tap-highlight-color: transparent;
     overflow: hidden;
-    -webkit-filter: blur(0);
-            filter: blur(0); }
+    filter: blur(0); }
   :host ::ng-deep .igx-excel-filter .igx-button--fab, :host ::ng-deep .igx-excel-filter__secondary .igx-button--fab {
     padding: 0.5rem 1rem;
     min-width: 3rem;
@@ -3187,11 +3230,6 @@
       opacity: 1;
       line-height: normal;
       /* Fix placeholder position in Safari */ }
-    :host ::ng-deep .igx-excel-filter .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-excel-filter .igx-input-group__textarea::-ms-input-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__textarea::-ms-input-placeholder {
-      color: var(--igx-input-group-placeholder-color);
-      opacity: 1;
-      line-height: normal;
-      /* Fix placeholder position in Safari */ }
     :host ::ng-deep .igx-excel-filter .igx-input-group__input::placeholder, :host ::ng-deep .igx-excel-filter .igx-input-group__textarea::placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__textarea::placeholder {
       color: var(--igx-input-group-placeholder-color);
       opacity: 1;
@@ -3219,8 +3257,6 @@
     :host ::ng-deep .igx-excel-filter .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter .igx-input-group__input::-moz-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::-moz-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-excel-filter .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter .igx-input-group__input:-ms-input-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input:-ms-input-placeholder {
-      color: var(--igx-input-group-disabled-placeholder-color); }
-    :host ::ng-deep .igx-excel-filter .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::-ms-input-placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
     :host ::ng-deep .igx-excel-filter .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter .igx-input-group__input::placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::placeholder {
       color: var(--igx-input-group-disabled-placeholder-color); }
@@ -3405,7 +3441,7 @@
     height: auto;
     padding: 0.5rem;
     line-height: normal; }
-    :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter igx-suffix .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter [igxSuffix] .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter igx-suffix .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent .igx-excel-filter [igxSuffix] .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary igx-suffix .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary [igxSuffix] .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary igx-suffix .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-input-group--search.igx-input-group--fluent .igx-excel-filter__secondary [igxSuffix] .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--error {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
@@ -4023,8 +4059,7 @@
     border-radius: var(--igx-checkbox-border-radius-ripple);
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1); }
+    filter: opacity(1); }
     :host ::ng-deep .igx-excel-filter .igx-checkbox__ripple, :host ::ng-deep .igx-excel-filter__secondary .igx-checkbox__ripple {
       --igx-ripple-variant: material;
       --igx-ripple-color: var(--igx-checkbox-fill-color); }
@@ -4169,11 +4204,11 @@
         color: var(--igx-list-item-subtitle-color-hover); }
       :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions {
         color: var(--igx-list-item-action-color-hover); }
-        :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions .igx-icon--inactive {
+        :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-actions .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-actions .igx-icon--error {
           color: var(--igx-list-item-action-color-hover); }
       :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail {
         color: var(--igx-list-item-thumbnail-color-hover); }
-        :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--inactive {
+        :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-base:hover .igx-list__item-thumbnail .igx-icon--error {
           color: var(--igx-list-item-thumbnail-color-hover); }
   :host ::ng-deep .igx-excel-filter .igx-list__item-right, :host ::ng-deep .igx-excel-filter .igx-list__item-left, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-right, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-left {
     position: absolute;
@@ -4208,7 +4243,7 @@
       margin-left: 0.5rem; }
     :host ::ng-deep .igx-excel-filter .igx-list__item-actions:empty, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions:empty {
       display: none; }
-    :host ::ng-deep .igx-excel-filter .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-actions .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-actions .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions .igx-icon--error {
       color: var(--igx-list-item-action-color); }
   :host ::ng-deep .igx-excel-filter .igx-list__item-content, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content {
     display: -ms-flexbox;
@@ -4235,9 +4270,9 @@
         align-self: flex-start;
     padding: 0;
     color: var(--igx-list-item-thumbnail-color); }
-    :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--error {
       margin: 0.5rem 1rem 0.5rem 0; }
-    :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--inactive {
+    :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar > .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar > .igx-icon--error, :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar > .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar > .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-avatar--rounded > .igx-icon--error {
       margin: 0; }
     :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail:empty, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail:empty {
       display: none; }
@@ -4247,9 +4282,9 @@
     margin: 0 0 0 0.75rem; }
   :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail:not(:empty) + .igx-list__item-lines, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail:not(:empty) + .igx-list__item-lines, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail:not(:empty) + .igx-list__item-lines, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail:not(:empty) + .igx-list__item-lines {
     margin: 0 0 0 0.5rem; }
-  :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-thumbnail > .igx-icon, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-thumbnail > .igx-icon, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--inactive {
+  :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-thumbnail > .igx-icon, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--success, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--error, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-thumbnail > .igx-icon, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--success, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-thumbnail > .igx-icon--error, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--error {
     margin: 0.375rem 0.5rem 0.375rem 0; }
-  :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail > .igx-icon, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail > .igx-icon, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--inactive {
+  :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail > .igx-icon, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail > .igx-icon--success, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list--compact .igx-list__item-thumbnail > .igx-icon--error, .igx-list--compact :host ::ng-deep .igx-excel-filter .igx-list__item-thumbnail > .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail > .igx-icon, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail > .igx-icon--inactive, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail > .igx-icon--success, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list--compact .igx-list__item-thumbnail > .igx-icon--error, .igx-list--compact :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-thumbnail > .igx-icon--error {
     margin: 0.25rem 0.25rem 0.25rem 0; }
   :host ::ng-deep .igx-excel-filter .igx-list--cosy .igx-list__item-actions > *, .igx-list--cosy :host ::ng-deep .igx-excel-filter .igx-list__item-actions > *, :host ::ng-deep .igx-excel-filter__secondary .igx-list--cosy .igx-list__item-actions > *, .igx-list--cosy :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-actions > * {
     margin-left: 0.375rem; }
@@ -4267,19 +4302,17 @@
       color: var(--igx-list-item-subtitle-color-active); }
     :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions {
       color: var(--igx-list-item-action-color-active); }
-      :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-actions .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-actions .igx-icon--error {
         color: var(--igx-list-item-action-color-active); }
     :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail {
       color: var(--igx-list-item-thumbnail-color-active); }
-      :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--inactive {
+      :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--inactive, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--success, :host ::ng-deep .igx-excel-filter .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--error, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--inactive, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--success, :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:active .igx-list__item-thumbnail .igx-icon--error {
         color: var(--igx-list-item-thumbnail-color-active); }
   :host ::ng-deep .igx-excel-filter .igx-list__item-content:not(:active), :host ::ng-deep .igx-excel-filter__secondary .igx-list__item-content:not(:active) {
     transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   :host ::ng-deep .igx-excel-filter .igx-input-group__input::-moz-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::-moz-placeholder {
     color: #FFCD0F; }
   :host ::ng-deep .igx-excel-filter .igx-input-group__input:-ms-input-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input:-ms-input-placeholder {
-    color: #FFCD0F; }
-  :host ::ng-deep .igx-excel-filter .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::-ms-input-placeholder {
     color: #FFCD0F; }
   :host ::ng-deep .igx-excel-filter .igx-input-group__input::placeholder, :host ::ng-deep .igx-excel-filter__secondary .igx-input-group__input::placeholder {
     color: #FFCD0F; }

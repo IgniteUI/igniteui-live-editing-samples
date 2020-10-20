@@ -569,11 +569,6 @@
     opacity: 1;
     line-height: normal;
     /* Fix placeholder position in Safari */ }
-  :host ::ng-deep .igx-input-group__input::-ms-input-placeholder, :host ::ng-deep .igx-input-group__textarea::-ms-input-placeholder {
-    color: var(--igx-input-group-placeholder-color);
-    opacity: 1;
-    line-height: normal;
-    /* Fix placeholder position in Safari */ }
   :host ::ng-deep .igx-input-group__input::placeholder, :host ::ng-deep .igx-input-group__textarea::placeholder {
     color: var(--igx-input-group-placeholder-color);
     opacity: 1;
@@ -609,8 +604,6 @@
   :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::-moz-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::-moz-placeholder {
     color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep .igx-input-group--disabled .igx-input-group__input:-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input:-ms-input-placeholder {
-    color: var(--igx-input-group-disabled-placeholder-color); }
-  :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::-ms-input-placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::-ms-input-placeholder {
     color: var(--igx-input-group-disabled-placeholder-color); }
   :host ::ng-deep .igx-input-group--disabled .igx-input-group__input::placeholder, .igx-input-group--disabled :host ::ng-deep .igx-input-group__input::placeholder {
     color: var(--igx-input-group-disabled-placeholder-color); }
@@ -751,7 +744,7 @@
   height: auto;
   padding: 0.5rem;
   line-height: normal; }
-  :host ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive {
+  :host ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--inactive, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--inactive, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--success, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--success, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent igx-suffix .igx-icon--error, :host ::ng-deep .igx-input-group--search.igx-input-group--fluent [igxSuffix] .igx-icon--error {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }

@@ -182,8 +182,7 @@ igx-switch {
     height: 3em;
     overflow: hidden;
     pointer-events: none;
-    -webkit-filter: opacity(1);
-            filter: opacity(1);
+    filter: opacity(1);
     border-radius: var(--igx-switch-border-radius-ripple); }
     :host ::ng-deep .igx-switch__ripple {
       --igx-ripple-variant: material;

@@ -32,7 +32,6 @@ import { RouterModule } from "@angular/router";
 		IgxNavigationDrawerModule,
 		IgxRippleModule,
 		IgxToggleModule,
-		RouterModule,
 		RouterModule.forRoot([
                         {path: "avatar", component: NavDrawerRoutingComponent},
                         {path: "badge", component: NavDrawerRoutingComponent},

@@ -75,7 +75,9 @@
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   box-shadow: var(--igx-snackbar-shadow);
-  border-radius: var(--igx-snackbar-border-radius); }
+  border-radius: var(--igx-snackbar-border-radius);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px); }
 
 :host ::ng-deep .igx-snackbar__button {
   background: transparent;
