@@ -2670,12 +2670,12 @@
     --igx-input-group-input-prefix-background: transparent;
     --igx-input-group-input-suffix-color: rgba(0, 0, 0, 0.54);
     --igx-input-group-input-suffix-background: transparent;
-    --igx-input-group-idle-text-color: #FFCD0F;
+    --igx-input-group-idle-text-color: #292826;
     --igx-input-group-border-color: rgba(0, 0, 0, 0.54);
     --igx-input-group-hover-border-color: rgba(0, 0, 0, 0.87);
     --igx-input-group-focused-border-color: #09f;
-    --igx-input-group-filled-text-color: #FFCD0F;
-    --igx-input-group-focused-text-color: #FFCD0F;
+    --igx-input-group-filled-text-color: #292826;
+    --igx-input-group-focused-text-color: #292826;
     --igx-input-group-disabled-text-color: rgba(0, 0, 0, 0.38);
     --igx-input-group-idle-secondary-color: rgba(0, 0, 0, 0.54);
     --igx-input-group-filled-secondary-color: rgba(0, 0, 0, 0.54);
@@ -2686,7 +2686,7 @@
     --igx-input-group-interim-bottom-line-color: rgba(0, 153, 255, 0.12);
     --igx-input-group-disabled-bottom-line-color: rgba(0, 0, 0, 0.38);
     --igx-input-group-disabled-border-color: rgba(0, 0, 0, 0.12);
-    --igx-input-group-box-background: #292826;
+    --igx-input-group-box-background: #FFCD0F;
     --igx-input-group-box-disabled-background: rgba(0, 0, 0, 0.04);
     --igx-input-group-border-background: transparent;
     --igx-input-group-border-disabled-background: transparent;
@@ -2697,7 +2697,7 @@
     --igx-input-group-success-secondary-color: #4eb862;
     --igx-input-group-warning-secondary-color: #fbb13c;
     --igx-input-group-error-secondary-color: #ff134a;
-    --igx-input-group-placeholder-color: white;
+    --igx-input-group-placeholder-color: black;
     --igx-input-group-disabled-placeholder-color: rgba(0, 0, 0, 0.26);
     --igx-input-group-search-resting-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08);
     --igx-input-group-search-hover-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
@@ -3513,11 +3513,11 @@
     font-size: 0.875rem;
     padding: 0.25rem 0.5rem; }
   :host ::ng-deep .igx-grid__filtering-row .igx-input-group__input::-moz-placeholder {
-    color: #FFCD0F; }
+    color: #292826; }
   :host ::ng-deep .igx-grid__filtering-row .igx-input-group__input:-ms-input-placeholder {
-    color: #FFCD0F; }
+    color: #292826; }
   :host ::ng-deep .igx-grid__filtering-row .igx-input-group__input::placeholder {
-    color: #FFCD0F; }
+    color: #292826; }
 
 .wrapper {
   margin: 15px; }
