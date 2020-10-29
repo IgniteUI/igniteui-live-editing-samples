@@ -3963,6 +3963,7 @@ igx-date-range-end,
   --igc-border-color: #f6fbfe;
   --igc-button-text: rgba(0, 0, 0, 0.74);
   --igc-context-menu-color-active: black;
+  --igc-drop-shadow-background: rgba(0, 153, 255, 0.2);
   --igc-floating-pane-border-color: #fff;
   --igc-flyout-shadow-color: rgba(0, 0, 0, 0.08);
   --igc-joystick-border-color: rgba(0, 0, 0, 0.12);
@@ -13521,6 +13522,7 @@ body {
     --igc-border-color: #333;
     --igc-button-text: white;
     --igc-context-menu-color-active: white;
+    --igc-drop-shadow-background: rgba(0, 153, 255, 0.2);
     --igc-floating-pane-border-color: #0a0a0a;
     --igc-flyout-shadow-color: rgba(0, 0, 0, 0.38);
     --igc-joystick-border-color: #424242;
@@ -21866,6 +21868,7 @@ body {
     --igc-border-color: #333;
     --igc-button-text: white;
     --igc-context-menu-color-active: white;
+    --igc-drop-shadow-background: rgba(0, 153, 255, 0.2);
     --igc-floating-pane-border-color: #0a0a0a;
     --igc-flyout-shadow-color: rgba(0, 0, 0, 0.38);
     --igc-joystick-border-color: #424242;
@@ -30776,6 +30779,7 @@ body {
       --igc-border-color: #222;
       --igc-button-text: white;
       --igc-context-menu-color-active: white;
+      --igc-drop-shadow-background: rgba(33, 115, 70, 0.2);
       --igc-floating-pane-border-color: transparent;
       --igc-flyout-shadow-color: rgba(0, 0, 0, 0.08);
       --igc-joystick-border-color: transparent;
