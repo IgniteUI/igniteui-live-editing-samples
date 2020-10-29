@@ -2598,6 +2598,7 @@
     --igc-border-color: #f6fbfe;
     --igc-button-text: rgba(0, 0, 0, 0.74);
     --igc-context-menu-color-active: black;
+    --igc-drop-shadow-background: rgba(0, 153, 255, 0.2);
     --igc-floating-pane-border-color: #fff;
     --igc-flyout-shadow-color: rgba(0, 0, 0, 0.08);
     --igc-joystick-border-color: rgba(0, 0, 0, 0.12);
