@@ -1,5 +1,5 @@
 // tslint:disable:max-line-length
-import { AfterViewInit, Component, TemplateRef, ViewChild } from "@angular/core";
+import { AfterViewInit, Component, ViewChild } from "@angular/core";
 import { IgxTreemapComponent } from "igniteui-angular-charts";
 import { TreemapFillScaleMode } from "igniteui-angular-charts";
 import { TreemapLayoutType } from "igniteui-angular-charts";
@@ -16,19 +16,14 @@ export class TreeMapOverviewComponent implements AfterViewInit {
 
     @ViewChild("treeMap", { static: true })
     public treeMap: IgxTreemapComponent = null;
-
-    public data: any[];
-
+    
     public ngAfterViewInit(): void {
-        this.data = WorldHierarchicalData.getPopulation();
+        this.treeMap.dataSource = WorldHierarchicalData.getPopulation();
         this.treeMap.fillScaleMode = TreemapFillScaleMode.Value;
-        this.treeMap.fillScaleMinimumValue = 0;
-        this.treeMap.fillScaleMaximumValue = 500000;
         this.treeMap.fillScaleMinimumValue = 0;
         this.treeMap.fillScaleMaximumValue = 1500000000; // 1.5B
         this.treeMap.fillBrushes = "#4e62cf #8a58d6" as any;
         this.treeMap.isFillScaleLogarithmic = false;
-        this.treeMap.dataSource = this.data;
         this.onClickSquared();
     }
 

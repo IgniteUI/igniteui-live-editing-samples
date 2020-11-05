@@ -32,7 +32,7 @@ export class DataChartTypeFinancialOverlaysComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.bollinger = new IgxBollingerBandsOverlayComponent;
+        this.bollinger = new IgxBollingerBandsOverlayComponent();
         this.bollinger.xAxis = this.xAxis;
         this.bollinger.yAxis = this.yAxis;
         this.bollinger.highMemberPath = "High";
@@ -41,7 +41,7 @@ export class DataChartTypeFinancialOverlaysComponent implements OnInit {
         this.bollinger.openMemberPath = "Open";
         this.bollinger.volumeMemberPath = "Volume";
 
-        this.priceChannel = new IgxPriceChannelOverlayComponent;
+        this.priceChannel = new IgxPriceChannelOverlayComponent();
         this.priceChannel.xAxis = this.xAxis;
         this.priceChannel.yAxis = this.yAxis;
         this.priceChannel.highMemberPath = "High";

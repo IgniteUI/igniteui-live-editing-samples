@@ -16,7 +16,7 @@ export class DataChartTypeScatterPointSeriesComponent implements OnInit {
         this.data2 = SampleScatterStats.getCountriesWithLowIncome();
     }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }

@@ -40,7 +40,7 @@ export class MapMarkerTemplateComponent implements AfterViewInit {
         const size = 12;
         const radius = size / 2;
         return {
-            measure:  function(measureInfo: DataTemplateMeasureInfo) {
+            measure(measureInfo: DataTemplateMeasureInfo) {
                 const data = measureInfo.data;
                 const context = measureInfo.context;
                 let value = "0.00";
@@ -53,7 +53,7 @@ export class MapMarkerTemplateComponent implements AfterViewInit {
                 measureInfo.width = width;
                 measureInfo.height = height + size;
             },
-            render: function(renderInfo: DataTemplateRenderInfo) {
+            render(renderInfo: DataTemplateRenderInfo) {
                 const item = renderInfo.data.item as any;
                 const value = item.pop.toString().toUpperCase();
 
