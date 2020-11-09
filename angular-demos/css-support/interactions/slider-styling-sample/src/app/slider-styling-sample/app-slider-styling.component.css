@@ -7,7 +7,9 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0; }
+      flex-shrink: 0;
+  -ms-flex-order: 3;
+      order: 3; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -313,7 +315,6 @@
   background: var(--igx-slider-label-background-color);
   opacity: 0;
   border-color: var(--igx-slider-label-background-color) transparent transparent;
-  transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: -1; }
   :host ::ng-deep .igx-slider__label-from .label::after, .igx-slider__label-from :host ::ng-deep .label::after, :host ::ng-deep .igx-slider__label-to .label::after, .igx-slider__label-to :host ::ng-deep .label::after {
     content: '';
@@ -400,5 +401,5 @@
 :host ::ng-deep .igx-slider__label-from--active .label, .igx-slider__label-from--active :host ::ng-deep .label, :host ::ng-deep .igx-slider__label-to--active .label, .igx-slider__label-to--active :host ::ng-deep .label {
   opacity: 1; }
 
-:host ::ng-deep .igx-slider__thumb-from--active, :host ::ng-deep .igx-slider__label-from--active, :host ::ng-deep .igx-slider__thumb-to--active, :host ::ng-deep .igx-slider__label-to--active {
+:host ::ng-deep .igx-slider__label--pressed {
   z-index: 1; }

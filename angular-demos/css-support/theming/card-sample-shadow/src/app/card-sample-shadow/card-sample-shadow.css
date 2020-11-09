@@ -10,7 +10,9 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0; }
+      flex-shrink: 0;
+  -ms-flex-order: 3;
+      order: 3; }
 
 .igx-display-container--inactive {
   width: 100%; }

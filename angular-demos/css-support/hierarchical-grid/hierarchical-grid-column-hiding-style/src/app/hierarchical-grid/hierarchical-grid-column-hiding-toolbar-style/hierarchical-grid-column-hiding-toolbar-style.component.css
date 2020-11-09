@@ -7,7 +7,9 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0; }
+      flex-shrink: 0;
+  -ms-flex-order: 3;
+      order: 3; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -59,6 +61,7 @@
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
   background: var(--igx-column-actions-background-color);
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
   width: 100%;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;

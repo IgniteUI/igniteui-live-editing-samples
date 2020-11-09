@@ -7,7 +7,9 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0; }
+      flex-shrink: 0;
+  -ms-flex-order: 3;
+      order: 3; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -76,7 +78,7 @@
   --igx-badge-border-width: 1px;
   --igx-badge-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.4); }
 
-:host ::ng-deep .igx-badge, :host ::ng-deep .igx-badge__circle, :host ::ng-deep .igx-badge__circle--info, :host ::ng-deep .igx-badge__circle--success, :host ::ng-deep .igx-badge__circle--warning, :host ::ng-deep .igx-badge__circle--error {
+:host ::ng-deep .igx-badge {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -88,8 +90,15 @@
   font-size: 0.6875rem;
   font-weight: normal;
   color: var(--igx-badge-text-color);
-  line-height: 1; }
-  :host ::ng-deep .igx-badge igx-icon, :host ::ng-deep .igx-badge__circle igx-icon, :host ::ng-deep .igx-badge__circle--info igx-icon, :host ::ng-deep .igx-badge__circle--success igx-icon, :host ::ng-deep .igx-badge__circle--warning igx-icon, :host ::ng-deep .igx-badge__circle--error igx-icon {
+  line-height: 1;
+  background: var(--igx-badge-background-color);
+  border-radius: var(--igx-badge-border-radius);
+  box-shadow: var(--igx-badge-shadow);
+  border-width: var(--igx-badge-border-width);
+  border-color: var(--igx-badge-border-color);
+  border-style: solid;
+  overflow: hidden; }
+  :host ::ng-deep .igx-badge igx-icon {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-pack: center;
@@ -102,31 +111,20 @@
     font-weight: normal;
     color: var(--igx-badge-icon-color); }
 
-:host ::ng-deep .igx-badge__circle-value {
+:host ::ng-deep .igx-badge__value {
   white-space: nowrap;
   padding: 0.25rem; }
 
-:host ::ng-deep .igx-badge__circle {
-  border-radius: var(--igx-badge-border-radius);
-  box-shadow: var(--igx-badge-shadow);
-  border-width: var(--igx-badge-border-width);
-  border-color: var(--igx-badge-border-color);
-  border-style: solid;
-  overflow: hidden; }
-
-:host ::ng-deep .igx-badge__circle--default {
-  background: var(--igx-badge-background-color); }
-
-:host ::ng-deep .igx-badge__circle--success {
+:host ::ng-deep .igx-badge--success {
   background: #4eb862; }
 
-:host ::ng-deep .igx-badge__circle--info {
+:host ::ng-deep .igx-badge--info {
   background: #1377d5; }
 
-:host ::ng-deep .igx-badge__circle--warning {
+:host ::ng-deep .igx-badge--warning {
   background: #fbb13c; }
 
-:host ::ng-deep .igx-badge__circle--error {
+:host ::ng-deep .igx-badge--error {
   background: #ff134a; }
 
 :host ::ng-deep .igx-badge--hidden {
