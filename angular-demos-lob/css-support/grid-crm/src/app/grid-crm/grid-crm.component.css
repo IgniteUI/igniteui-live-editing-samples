@@ -10,7 +10,9 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0; }
+      flex-shrink: 0;
+  -ms-flex-order: 3;
+      order: 3; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -243,7 +245,7 @@
     --igx-badge-background-color: #09f;
     --igx-badge-border-width: 0;
     --igx-badge-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08); }
-  :host ::ng-deep .igx-badge, :host ::ng-deep .igx-badge__circle, :host ::ng-deep .igx-badge__circle--info, :host ::ng-deep .igx-badge__circle--success, :host ::ng-deep .igx-badge__circle--warning, :host ::ng-deep .igx-badge__circle--error {
+  :host ::ng-deep .igx-badge {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -255,8 +257,15 @@
     font-size: 0.6875rem;
     font-weight: normal;
     color: var(--igx-badge-text-color);
-    line-height: 1; }
-    :host ::ng-deep .igx-badge igx-icon, :host ::ng-deep .igx-badge__circle igx-icon, :host ::ng-deep .igx-badge__circle--info igx-icon, :host ::ng-deep .igx-badge__circle--success igx-icon, :host ::ng-deep .igx-badge__circle--warning igx-icon, :host ::ng-deep .igx-badge__circle--error igx-icon {
+    line-height: 1;
+    background: var(--igx-badge-background-color);
+    border-radius: var(--igx-badge-border-radius);
+    box-shadow: var(--igx-badge-shadow);
+    border-width: var(--igx-badge-border-width);
+    border-color: var(--igx-badge-border-color);
+    border-style: solid;
+    overflow: hidden; }
+    :host ::ng-deep .igx-badge igx-icon {
       display: -ms-inline-flexbox;
       display: inline-flex;
       -ms-flex-pack: center;
@@ -268,25 +277,16 @@
       font-size: 0.75rem;
       font-weight: normal;
       color: var(--igx-badge-icon-color); }
-  :host ::ng-deep .igx-badge__circle-value {
+  :host ::ng-deep .igx-badge__value {
     white-space: nowrap;
     padding: 0.25rem; }
-  :host ::ng-deep .igx-badge__circle {
-    border-radius: var(--igx-badge-border-radius);
-    box-shadow: var(--igx-badge-shadow);
-    border-width: var(--igx-badge-border-width);
-    border-color: var(--igx-badge-border-color);
-    border-style: solid;
-    overflow: hidden; }
-  :host ::ng-deep .igx-badge__circle--default {
-    background: var(--igx-badge-background-color); }
-  :host ::ng-deep .igx-badge__circle--success {
+  :host ::ng-deep .igx-badge--success {
     background: #4eb862; }
-  :host ::ng-deep .igx-badge__circle--info {
+  :host ::ng-deep .igx-badge--info {
     background: #1377d5; }
-  :host ::ng-deep .igx-badge__circle--warning {
+  :host ::ng-deep .igx-badge--warning {
     background: #fbb13c; }
-  :host ::ng-deep .igx-badge__circle--error {
+  :host ::ng-deep .igx-badge--error {
     background: #ff134a; }
   :host ::ng-deep .igx-badge--hidden {
     visibility: hidden; }
@@ -1744,14 +1744,14 @@
   :host ::ng-deep {
     --data-chart-title-text-color: rgba(0, 0, 0, 0.87);
     --data-chart-subtitle-text-color: rgba(0, 0, 0, 0.54);
-    --data-chart-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-marker-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-marker-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --data-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --data-chart-plot-area-background: #fff; }
   :host ::ng-deep {
-    --ring-series-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --ring-series-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --ring-series-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --ring-series-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   :host ::ng-deep {
     --linear-gauge-backing-brush: #f2f2f2;
     --linear-gauge-backing-outline: #ebebeb;
@@ -1759,8 +1759,8 @@
     --linear-gauge-minor-tick-brush: rgba(0, 0, 0, 0.62);
     --linear-gauge-needle-brush: #09f;
     --linear-gauge-needle-outline: #fff;
-    --linear-gauge-range-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --linear-gauge-range-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --linear-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --linear-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --linear-gauge-scale-brush: #ebebeb;
     --linear-gauge-tick-brush: rgba(0, 0, 0, 0.62);
     --linear-gauge-scale-outline: #ebebeb; }
@@ -1771,49 +1771,49 @@
     --radial-gauge-minor-tick-brush: rgba(0, 0, 0, 0.62);
     --radial-gauge-needle-brush: #09f;
     --radial-gauge-needle-outline: #fff;
-    --radial-gauge-range-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --radial-gauge-range-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --radial-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --radial-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --radial-gauge-scale-brush: #ebebeb;
     --radial-gauge-tick-brush: rgba(0, 0, 0, 0.62);
     --radial-gauge-needle-pivot-brush: #09f;
     --radial-gauge-needle-pivot-outline: #fff; }
   :host ::ng-deep {
-    --financial-chart-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-marker-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-marker-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-indicator-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-indicator-negative-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-negative-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-negative-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-thickness: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-trend-line-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-volume-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-volume-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --financial-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-indicator-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-indicator-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-thickness: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-volume-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-volume-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   :host ::ng-deep {
     --bullet-graph-backing-brush: #f2f2f2;
     --bullet-graph-backing-outline: #ebebeb;
     --bullet-graph-font-brush: rgba(0, 0, 0, 0.62);
     --bullet-graph-minor-tick-brush: rgba(0, 0, 0, 0.62);
-    --bullet-graph-range-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --bullet-graph-range-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --bullet-graph-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --bullet-graph-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --bullet-graph-scale-background-brush: #09f;
     --bullet-graph-scale-background-outline: #fff;
     --bullet-graph-target-value-brush: rgba(0, 0, 0, 0.74);
     --bullet-graph-tick-brush: rgba(0, 0, 0, 0.62);
     --bullet-graph-value-brush: rgba(0, 0, 0, 0.74); }
   :host ::ng-deep {
-    --category-chart-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-marker-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-negative-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-marker-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-negative-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --category-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --category-chart-title-text-color: #606060;
     --category-chart-subtitle-text-color: #606060;
-    --category-chart-trend-line-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --category-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --category-chart-x-axis-label-text-color: #606060;
     --category-chart-x-axis-tick-stroke: #606060;
     --category-chart-x-axis-title-text-color: #606060;
@@ -1823,21 +1823,21 @@
   :host ::ng-deep {
     --geo-map-plot-area-background: #fff; }
   :host ::ng-deep {
-    --pie-chart-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --pie-chart-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --pie-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --pie-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   :host ::ng-deep {
     --sparkline-brush: #09f; }
   :host ::ng-deep {
-    --funnel-chart-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --funnel-chart-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --funnel-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --funnel-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   :host ::ng-deep {
     --shape-chart-title-text-color: rgba(0, 0, 0, 0.87);
     --shape-chart-subtitle-text-color: rgba(0, 0, 0, 0.54);
-    --shape-chart-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-marker-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-marker-outlines: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-trend-line-brushes: #09f, #ffbf00, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --shape-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   :host ::ng-deep {
     --igx-checkbox-border-radius: 2px;
     --igx-checkbox-border-radius-ripple: 24px;
@@ -2327,7 +2327,7 @@
     :host ::ng-deep .igx-chip__ghost--compact .igx-chip__content {
       padding: 0 0.125rem; }
   :host ::ng-deep {
-    --igx-column-actions-background-color: transparent;
+    --igx-column-actions-background-color: #fff;
     --igx-column-actions-title-color: #09f; }
   :host ::ng-deep .igx-column-actions {
     display: -ms-flexbox;
@@ -2335,6 +2335,7 @@
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
     background: var(--igx-column-actions-background-color);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     width: 100%;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -3134,28 +3135,26 @@
     -ms-flex-pack: center;
         justify-content: center;
     padding: 0 1.5rem;
-    padding-right: 0;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
     min-width: calc(1.5rem + 1.5rem);
     background: inherit;
     z-index: 4;
-    cursor: move; }
+    cursor: move;
+    -ms-flex-order: -1;
+        order: -1; }
     :host ::ng-deep .igx-grid__drag-indicator .igx-icon, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__drag-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__drag-indicator {
     padding: 0 1rem;
-    min-width: calc(1.5rem + 1rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 1rem); }
   :host ::ng-deep .igx-grid--compact .igx-grid__drag-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__drag-indicator {
     padding: 0 0.75rem;
-    min-width: calc(1.5rem + 0.75rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 0.75rem); }
   :host ::ng-deep .igx-grid__drag-indicator--header {
     border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
-  :host ::ng-deep .igx-grid__hierarchical-expander + .igx-grid__drag-indicator, :host ::ng-deep .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-    padding-left: 0;
-    min-width: 1.5rem; }
   :host ::ng-deep .igx-grid__drag-indicator--off {
     color: var(--igx-grid-row-drag-color); }
   :host ::ng-deep .igx-grid__tr--drag {
@@ -3707,10 +3706,19 @@
     outline-style: none;
     border-bottom: 1px solid var(--igx-grid-row-border-color);
     min-height: 3.125rem; }
+    :host ::ng-deep .igx-grid__group-row .igx-grid__drag-indicator {
+      cursor: default;
+      -ms-flex-positive: 0;
+          flex-grow: 0; }
   :host ::ng-deep .igx-grid__group-row--active {
     background: var(--igx-grid-group-row-selected-background); }
     :host ::ng-deep .igx-grid__group-row--active .igx-grid__grouping-indicator {
       color: var(--igx-grid-expand-icon-color); }
+    :host ::ng-deep .igx-grid__group-row--active .igx-grid__drag-indicator {
+      border: 1px solid var(--igx-grid-cell-active-border-color);
+      border-left-width: 0;
+      border-right-width: 0;
+      box-shadow: inset 1px 0 0 0 var(--igx-grid-cell-active-border-color); }
     :host ::ng-deep .igx-grid__group-row--active:hover {
       background: var(--igx-grid-group-row-selected-background); }
   :host ::ng-deep .igx-grid--cosy .igx-grid__group-row, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row {
@@ -3780,18 +3788,18 @@
     padding-left: 0.75rem;
     min-height: 2rem; }
   :host ::ng-deep .igx-grid__row-indentation {
-    background: transparent;
-    z-index: 1;
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    position: relative;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    border-right: 1px solid transparent; }
+    border-right: 1px solid var(--igx-grid-header-border-color);
+    background: inherit;
+    z-index: 1; }
     :host ::ng-deep .igx-grid__row-indentation::after {
       content: '';
       position: absolute;
@@ -3900,8 +3908,8 @@
         align-items: center;
     z-index: 1;
     cursor: pointer;
-    padding-left: 1.5rem;
     padding-right: 0.75rem;
+    margin-left: 1.5rem;
     min-height: 3.125rem; }
     :host ::ng-deep .igx-grid__grouping-indicator igx-icon {
       color: var(--igx-grid-expand-icon-color);
@@ -3911,11 +3919,11 @@
       :host ::ng-deep .igx-grid__grouping-indicator:hover igx-icon, :host ::ng-deep .igx-grid__grouping-indicator:focus igx-icon {
         color: var(--igx-grid-expand-icon-hover-color); }
   :host ::ng-deep .igx-grid--cosy .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__grouping-indicator {
-    padding-left: 1rem;
-    min-height: 2.5rem; }
+    min-height: 2.5rem;
+    margin-left: 1rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__grouping-indicator {
-    padding-left: 0.75rem;
-    min-height: 2rem; }
+    min-height: 2rem;
+    margin-left: 0.75rem; }
   :host ::ng-deep .igx-grid__header-indentation {
     position: relative;
     padding-right: 1.5rem;
@@ -3948,114 +3956,124 @@
     :host ::ng-deep .igx-grid--compact .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn, .igx-grid--compact :host ::ng-deep .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn {
       top: 0.25rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-1 {
-    background: inherit;
     padding-left: calc(1.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-1 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-1, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-1 {
     padding-left: calc(1rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+    padding-left: 1rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-1, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-1 {
     padding-left: calc(0.75rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-1, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-1 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 0.75rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-2 {
-    background: inherit;
     padding-left: calc(3rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-2 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-2, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-2 {
     padding-left: calc(2rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+    padding-left: 2rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-2, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-2 {
     padding-left: calc(1.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-2, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-2 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-3 {
-    background: inherit;
     padding-left: calc(4.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-3 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-3, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-3 {
     padding-left: calc(3rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+    padding-left: 3rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-3, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-3 {
     padding-left: calc(2.25rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-3, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-3 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 2.25rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-4 {
-    background: inherit;
     padding-left: calc(6rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-4 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-4, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-4 {
     padding-left: calc(4rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+    padding-left: 4rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-4, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-4 {
     padding-left: calc(3rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-4, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-4 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-5 {
-    background: inherit;
     padding-left: calc(7.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-5 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-5, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-5 {
     padding-left: calc(5rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+    padding-left: 5rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-5, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-5 {
     padding-left: calc(3.75rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-5, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-5 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 3.75rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-6 {
-    background: inherit;
     padding-left: calc(9rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-6 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 9rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-6, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-6 {
     padding-left: calc(6rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+    padding-left: 6rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-6, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-6 {
     padding-left: calc(4.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-6, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-6 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-7 {
-    background: inherit;
     padding-left: calc(10.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-7 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 10.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-7, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-7 {
     padding-left: calc(7rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+    padding-left: 7rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-7, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-7 {
     padding-left: calc(5.25rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-7, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-7 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 5.25rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-8 {
-    background: inherit;
     padding-left: calc(12rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-8 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 12rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-8, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-8 {
     padding-left: calc(8rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+    padding-left: 8rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-8, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-8 {
     padding-left: calc(6rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-8, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-8 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-9 {
-    background: inherit;
     padding-left: calc(13.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-9 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 13.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-9, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-9 {
     padding-left: calc(9rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+    padding-left: 9rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-9, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-9 {
     padding-left: calc(6.75rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-9, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-9 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 6.75rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-10 {
-    background: inherit;
     padding-left: calc(15rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-10 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 15rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-10, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-10 {
     padding-left: calc(10rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+    padding-left: 10rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-10, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-10 {
     padding-left: calc(7.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-10, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-10 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   :host ::ng-deep .igx-grid__tree-cell--padding-level-1 {
     padding-left: 1.5rem; }
@@ -4268,7 +4286,7 @@
       width: 18px;
       height: 18px;
       font-size: 18px; }
-    :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--info, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--success, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--error, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+    :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge {
       /* start of IE vertical alignment fix */
       top: 50%;
       -ms-transform: translateY(-50%);
@@ -4425,7 +4443,9 @@
     cursor: pointer;
     z-index: 3;
     color: var(--igx-grid-expand-icon-color);
-    border-right: 1px solid transparent; }
+    border-right: 1px solid var(--igx-grid-header-border-color);
+    -ms-flex-order: 2;
+        order: 2; }
     :host ::ng-deep .igx-grid__hierarchical-expander:focus, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus {
       outline: none; }
       :host ::ng-deep .igx-grid__hierarchical-expander:focus igx-icon, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -4464,7 +4484,6 @@
     min-height: 2.5rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon, .igx-grid--compact :host ::ng-deep .igx-grid__hierarchical-expander--push igx-icon {
     min-height: 2rem; }
-  :host ::ng-deep .igx-grid__hierarchical-expander--no-border,
   :host ::ng-deep .igx-grid__header-indentation--no-border {
     border-right: 1px solid transparent; }
   :host ::ng-deep .igx-grid__hierarchical-indent {
@@ -4508,12 +4527,14 @@
     -ms-flex-align: center;
         align-items: center; }
   :host ::ng-deep .igx-excel-filter__icon, :host ::ng-deep .igx-excel-filter__icon--filtered {
+    display: -ms-flexbox;
+    display: flex;
     cursor: pointer; }
-    :host ::ng-deep .igx-icon.igx-excel-filter__icon, :host ::ng-deep .igx-icon.igx-excel-filter__icon--filtered {
+    :host ::ng-deep .igx-excel-filter__icon igx-icon, :host ::ng-deep .igx-excel-filter__icon--filtered igx-icon {
       width: 0.9375rem;
       height: 0.9375rem;
       font-size: 0.9375rem; }
-  :host ::ng-deep .igx-icon.igx-excel-filter__icon--filtered {
+  :host ::ng-deep .igx-excel-filter__icon--filtered igx-icon {
     color: #ffbf00; }
   :host ::ng-deep .igx-excel-filter__menu {
     display: -ms-flexbox;
@@ -5249,13 +5270,14 @@
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     grid-row: 1;
     font-size: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     background: var(--igx-grid-toolbar-background-color);
-    height: 3.625rem;
+    height: auto;
+    min-height: 3.625rem;
     position: relative;
     padding: 0 1rem 0 1.5rem; }
     :host ::ng-deep .igx-grid-toolbar .igx-button--outlined, :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--outlined, :host ::ng-deep .igx-grid-toolbar--compact .igx-button--outlined,
@@ -5268,7 +5290,7 @@
     :host ::ng-deep .igx-grid-toolbar .igx-button--icon,
     :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--icon,
     :host ::ng-deep .igx-grid-toolbar--compact .igx-button--icon {
-      margin-left: 0.5rem; }
+      margin-left: 1rem; }
     :host ::ng-deep .igx-grid-toolbar .igx-grid-toolbar__button-space, :host ::ng-deep .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, :host ::ng-deep .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
       display: -ms-flexbox;
       display: flex;
@@ -5304,23 +5326,29 @@
         :host ::ng-deep .igx-grid-toolbar[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, :host ::ng-deep .igx-grid-toolbar--cosy[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, :host ::ng-deep .igx-grid-toolbar--compact[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child {
           margin-left: 0; }
   :host ::ng-deep .igx-grid-toolbar--cosy {
-    height: 3.25rem;
+    min-height: 3.25rem;
     padding: 0 0.75rem 0 1rem; }
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--outlined,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--raised,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--flat,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--icon {
+      margin-left: 0.75rem; }
   :host ::ng-deep .igx-grid-toolbar--compact {
-    height: 2.75rem;
+    min-height: 2.75rem;
     padding: 0 0.5rem 0 0.75rem; }
-  :host ::ng-deep .igx-grid__caption {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--outlined,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--raised,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--flat,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--icon {
+      margin-left: 0.5rem; }
   :host ::ng-deep .igx-grid-toolbar__title {
     color: var(--igx-grid-toolbar-title-text-color);
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 40ch; }
   :host ::ng-deep .igx-grid-toolbar__custom-content {
     display: -ms-flexbox;
     display: flex;
@@ -5331,15 +5359,8 @@
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    :host ::ng-deep .igx-grid-toolbar__actions > div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   :host ::ng-deep .igx-grid-toolbar__progress-bar {
     position: absolute;
     width: 100%;
@@ -5351,6 +5372,8 @@
     background: var(--igx-grid-toolbar-background-color); }
     :host ::ng-deep .igx-grid-toolbar__progress-bar igx-linear-bar > * {
       border-radius: 0; }
+      :host ::ng-deep .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+        background: #ffbf00; }
   :host ::ng-deep .igx-grid-toolbar__adv-filter--filtered {
     border-color: #ffbf00 !important; }
   :host ::ng-deep .igx-grid-toolbar__dropdown {
@@ -5359,7 +5382,8 @@
     list-style: none;
     background: var(--igx-grid-toolbar-dropdown-background);
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   :host ::ng-deep .igx-grid-toolbar__dd-list-items {
     cursor: pointer;
     position: relative;
@@ -7419,7 +7443,6 @@
     background: var(--igx-slider-label-background-color);
     opacity: 0;
     border-color: var(--igx-slider-label-background-color) transparent transparent;
-    transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: -1; }
     :host ::ng-deep .igx-slider__label-from .label::after, .igx-slider__label-from :host ::ng-deep .label::after, :host ::ng-deep .igx-slider__label-to .label::after, .igx-slider__label-to :host ::ng-deep .label::after {
       content: '';
@@ -7500,7 +7523,7 @@
         transform: scale(1.2) !important; }
   :host ::ng-deep .igx-slider__label-from--active .label, .igx-slider__label-from--active :host ::ng-deep .label, :host ::ng-deep .igx-slider__label-to--active .label, .igx-slider__label-to--active :host ::ng-deep .label {
     opacity: 1; }
-  :host ::ng-deep .igx-slider__thumb-from--active, :host ::ng-deep .igx-slider__label-from--active, :host ::ng-deep .igx-slider__thumb-to--active, :host ::ng-deep .igx-slider__label-to--active {
+  :host ::ng-deep .igx-slider__label--pressed {
     z-index: 1; }
   :host ::ng-deep {
     --igx-snackbar-border-radius: 4px;
@@ -8180,13 +8203,14 @@
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     grid-row: 1;
     font-size: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     background: var(--igx-grid-toolbar-background-color);
-    height: 3.625rem;
+    height: auto;
+    min-height: 3.625rem;
     position: relative;
     padding: 0 1rem 0 1.5rem; }
     :host ::ng-deep .igx-grid-toolbar .igx-button--outlined, :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--outlined, :host ::ng-deep .igx-grid-toolbar--compact .igx-button--outlined,
@@ -8199,7 +8223,7 @@
     :host ::ng-deep .igx-grid-toolbar .igx-button--icon,
     :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--icon,
     :host ::ng-deep .igx-grid-toolbar--compact .igx-button--icon {
-      margin-left: 0.5rem; }
+      margin-left: 1rem; }
     :host ::ng-deep .igx-grid-toolbar .igx-grid-toolbar__button-space, :host ::ng-deep .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, :host ::ng-deep .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
       display: -ms-flexbox;
       display: flex;
@@ -8235,23 +8259,29 @@
         :host ::ng-deep .igx-grid-toolbar[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, :host ::ng-deep .igx-grid-toolbar--cosy[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, :host ::ng-deep .igx-grid-toolbar--compact[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child {
           margin-left: 0; }
   :host ::ng-deep .igx-grid-toolbar--cosy {
-    height: 3.25rem;
+    min-height: 3.25rem;
     padding: 0 0.75rem 0 1rem; }
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--outlined,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--raised,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--flat,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--icon {
+      margin-left: 0.75rem; }
   :host ::ng-deep .igx-grid-toolbar--compact {
-    height: 2.75rem;
+    min-height: 2.75rem;
     padding: 0 0.5rem 0 0.75rem; }
-  :host ::ng-deep .igx-grid__caption {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--outlined,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--raised,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--flat,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--icon {
+      margin-left: 0.5rem; }
   :host ::ng-deep .igx-grid-toolbar__title {
     color: var(--igx-grid-toolbar-title-text-color);
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 40ch; }
   :host ::ng-deep .igx-grid-toolbar__custom-content {
     display: -ms-flexbox;
     display: flex;
@@ -8262,15 +8292,8 @@
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    :host ::ng-deep .igx-grid-toolbar__actions > div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   :host ::ng-deep .igx-grid-toolbar__progress-bar {
     position: absolute;
     width: 100%;
@@ -8282,6 +8305,8 @@
     background: var(--igx-grid-toolbar-background-color); }
     :host ::ng-deep .igx-grid-toolbar__progress-bar igx-linear-bar > * {
       border-radius: 0; }
+      :host ::ng-deep .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+        background: #ffbf00; }
   :host ::ng-deep .igx-grid-toolbar__adv-filter--filtered {
     border-color: #ffbf00 !important; }
   :host ::ng-deep .igx-grid-toolbar__dropdown {
@@ -8290,7 +8315,8 @@
     list-style: none;
     background: var(--igx-grid-toolbar-dropdown-background);
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   :host ::ng-deep .igx-grid-toolbar__dd-list-items {
     cursor: pointer;
     position: relative;
@@ -8622,28 +8648,26 @@
     -ms-flex-pack: center;
         justify-content: center;
     padding: 0 1.5rem;
-    padding-right: 0;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
     min-width: calc(1.5rem + 1.5rem);
     background: inherit;
     z-index: 4;
-    cursor: move; }
+    cursor: move;
+    -ms-flex-order: -1;
+        order: -1; }
     :host ::ng-deep .igx-grid__drag-indicator .igx-icon, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__drag-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__drag-indicator {
     padding: 0 1rem;
-    min-width: calc(1.5rem + 1rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 1rem); }
   :host ::ng-deep .igx-grid--compact .igx-grid__drag-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__drag-indicator {
     padding: 0 0.75rem;
-    min-width: calc(1.5rem + 0.75rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 0.75rem); }
   :host ::ng-deep .igx-grid__drag-indicator--header {
     border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
-  :host ::ng-deep .igx-grid__hierarchical-expander + .igx-grid__drag-indicator, :host ::ng-deep .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-    padding-left: 0;
-    min-width: 1.5rem; }
   :host ::ng-deep .igx-grid__drag-indicator--off {
     color: var(--igx-grid-row-drag-color); }
   :host ::ng-deep .igx-grid__tr--drag {
@@ -9195,10 +9219,19 @@
     outline-style: none;
     border-bottom: 1px solid var(--igx-grid-row-border-color);
     min-height: 3.125rem; }
+    :host ::ng-deep .igx-grid__group-row .igx-grid__drag-indicator {
+      cursor: default;
+      -ms-flex-positive: 0;
+          flex-grow: 0; }
   :host ::ng-deep .igx-grid__group-row--active {
     background: var(--igx-grid-group-row-selected-background); }
     :host ::ng-deep .igx-grid__group-row--active .igx-grid__grouping-indicator {
       color: var(--igx-grid-expand-icon-color); }
+    :host ::ng-deep .igx-grid__group-row--active .igx-grid__drag-indicator {
+      border: 1px solid var(--igx-grid-cell-active-border-color);
+      border-left-width: 0;
+      border-right-width: 0;
+      box-shadow: inset 1px 0 0 0 var(--igx-grid-cell-active-border-color); }
     :host ::ng-deep .igx-grid__group-row--active:hover {
       background: var(--igx-grid-group-row-selected-background); }
   :host ::ng-deep .igx-grid--cosy .igx-grid__group-row, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row {
@@ -9268,18 +9301,18 @@
     padding-left: 0.75rem;
     min-height: 2rem; }
   :host ::ng-deep .igx-grid__row-indentation {
-    background: transparent;
-    z-index: 1;
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    position: relative;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    border-right: 1px solid transparent; }
+    border-right: 1px solid var(--igx-grid-header-border-color);
+    background: inherit;
+    z-index: 1; }
     :host ::ng-deep .igx-grid__row-indentation::after {
       content: '';
       position: absolute;
@@ -9388,8 +9421,8 @@
         align-items: center;
     z-index: 1;
     cursor: pointer;
-    padding-left: 1.5rem;
     padding-right: 0.75rem;
+    margin-left: 1.5rem;
     min-height: 3.125rem; }
     :host ::ng-deep .igx-grid__grouping-indicator igx-icon {
       color: var(--igx-grid-expand-icon-color);
@@ -9399,11 +9432,11 @@
       :host ::ng-deep .igx-grid__grouping-indicator:hover igx-icon, :host ::ng-deep .igx-grid__grouping-indicator:focus igx-icon {
         color: var(--igx-grid-expand-icon-hover-color); }
   :host ::ng-deep .igx-grid--cosy .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__grouping-indicator {
-    padding-left: 1rem;
-    min-height: 2.5rem; }
+    min-height: 2.5rem;
+    margin-left: 1rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__grouping-indicator {
-    padding-left: 0.75rem;
-    min-height: 2rem; }
+    min-height: 2rem;
+    margin-left: 0.75rem; }
   :host ::ng-deep .igx-grid__header-indentation {
     position: relative;
     padding-right: 1.5rem;
@@ -9436,114 +9469,124 @@
     :host ::ng-deep .igx-grid--compact .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn, .igx-grid--compact :host ::ng-deep .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn {
       top: 0.25rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-1 {
-    background: inherit;
     padding-left: calc(1.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-1 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-1, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-1 {
     padding-left: calc(1rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+    padding-left: 1rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-1, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-1 {
     padding-left: calc(0.75rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-1, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-1 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 0.75rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-2 {
-    background: inherit;
     padding-left: calc(3rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-2 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-2, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-2 {
     padding-left: calc(2rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+    padding-left: 2rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-2, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-2 {
     padding-left: calc(1.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-2, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-2 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-3 {
-    background: inherit;
     padding-left: calc(4.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-3 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-3, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-3 {
     padding-left: calc(3rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+    padding-left: 3rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-3, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-3 {
     padding-left: calc(2.25rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-3, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-3 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 2.25rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-4 {
-    background: inherit;
     padding-left: calc(6rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-4 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-4, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-4 {
     padding-left: calc(4rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+    padding-left: 4rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-4, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-4 {
     padding-left: calc(3rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-4, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-4 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-5 {
-    background: inherit;
     padding-left: calc(7.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-5 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-5, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-5 {
     padding-left: calc(5rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+    padding-left: 5rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-5, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-5 {
     padding-left: calc(3.75rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-5, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-5 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 3.75rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-6 {
-    background: inherit;
     padding-left: calc(9rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-6 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 9rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-6, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-6 {
     padding-left: calc(6rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+    padding-left: 6rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-6, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-6 {
     padding-left: calc(4.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-6, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-6 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-7 {
-    background: inherit;
     padding-left: calc(10.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-7 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 10.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-7, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-7 {
     padding-left: calc(7rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+    padding-left: 7rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-7, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-7 {
     padding-left: calc(5.25rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-7, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-7 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 5.25rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-8 {
-    background: inherit;
     padding-left: calc(12rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-8 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 12rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-8, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-8 {
     padding-left: calc(8rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+    padding-left: 8rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-8, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-8 {
     padding-left: calc(6rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-8, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-8 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-9 {
-    background: inherit;
     padding-left: calc(13.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-9 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 13.5rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-9, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-9 {
     padding-left: calc(9rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+    padding-left: 9rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-9, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-9 {
     padding-left: calc(6.75rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-9, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-9 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 6.75rem; }
   :host ::ng-deep .igx-grid__row-indentation--level-10 {
-    background: inherit;
     padding-left: calc(15rem + 1.5rem); }
-  :host ::ng-deep .igx-grid__group-row--padding-level-10 {
+  :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 15rem; }
   :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-10, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-10 {
     padding-left: calc(10rem + 1.5rem); }
+  :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+    padding-left: 10rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-10, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-10 {
     padding-left: calc(7.5rem + 1.5rem); }
-  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-10, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-10 {
+  :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   :host ::ng-deep .igx-grid__tree-cell--padding-level-1 {
     padding-left: 1.5rem; }
@@ -9756,7 +9799,7 @@
       width: 18px;
       height: 18px;
       font-size: 18px; }
-    :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--info, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--success, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--error, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+    :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge {
       /* start of IE vertical alignment fix */
       top: 50%;
       -ms-transform: translateY(-50%);
@@ -9913,7 +9956,9 @@
     cursor: pointer;
     z-index: 3;
     color: var(--igx-grid-expand-icon-color);
-    border-right: 1px solid transparent; }
+    border-right: 1px solid var(--igx-grid-header-border-color);
+    -ms-flex-order: 2;
+        order: 2; }
     :host ::ng-deep .igx-grid__hierarchical-expander:focus, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus {
       outline: none; }
       :host ::ng-deep .igx-grid__hierarchical-expander:focus igx-icon, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -9952,7 +9997,6 @@
     min-height: 2.5rem; }
   :host ::ng-deep .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon, .igx-grid--compact :host ::ng-deep .igx-grid__hierarchical-expander--push igx-icon {
     min-height: 2rem; }
-  :host ::ng-deep .igx-grid__hierarchical-expander--no-border,
   :host ::ng-deep .igx-grid__header-indentation--no-border {
     border-right: 1px solid transparent; }
   :host ::ng-deep .igx-grid__hierarchical-indent {
@@ -9996,12 +10040,14 @@
     -ms-flex-align: center;
         align-items: center; }
   :host ::ng-deep .igx-excel-filter__icon, :host ::ng-deep .igx-excel-filter__icon--filtered {
+    display: -ms-flexbox;
+    display: flex;
     cursor: pointer; }
-    :host ::ng-deep .igx-icon.igx-excel-filter__icon, :host ::ng-deep .igx-icon.igx-excel-filter__icon--filtered {
+    :host ::ng-deep .igx-excel-filter__icon igx-icon, :host ::ng-deep .igx-excel-filter__icon--filtered igx-icon {
       width: 0.9375rem;
       height: 0.9375rem;
       font-size: 0.9375rem; }
-  :host ::ng-deep .igx-icon.igx-excel-filter__icon--filtered {
+  :host ::ng-deep .igx-excel-filter__icon--filtered igx-icon {
     color: #ffbf00; }
   :host ::ng-deep .igx-excel-filter__menu {
     display: -ms-flexbox;
@@ -11639,13 +11685,14 @@
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     grid-row: 1;
     font-size: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.12);
     background: var(--igx-grid-toolbar-background-color);
-    height: 3.625rem;
+    height: auto;
+    min-height: 3.625rem;
     position: relative;
     padding: 0 1rem 0 1.5rem; }
     :host ::ng-deep .igx-grid-toolbar .igx-button--outlined, :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--outlined, :host ::ng-deep .igx-grid-toolbar--compact .igx-button--outlined,
@@ -11658,7 +11705,7 @@
     :host ::ng-deep .igx-grid-toolbar .igx-button--icon,
     :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--icon,
     :host ::ng-deep .igx-grid-toolbar--compact .igx-button--icon {
-      margin-left: 0.5rem; }
+      margin-left: 1rem; }
     :host ::ng-deep .igx-grid-toolbar .igx-grid-toolbar__button-space, :host ::ng-deep .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, :host ::ng-deep .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
       display: -ms-flexbox;
       display: flex;
@@ -11694,23 +11741,29 @@
         :host ::ng-deep .igx-grid-toolbar[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, :host ::ng-deep .igx-grid-toolbar--cosy[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, :host ::ng-deep .igx-grid-toolbar--compact[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child {
           margin-left: 0; }
   :host ::ng-deep .igx-grid-toolbar--cosy {
-    height: 3.25rem;
+    min-height: 3.25rem;
     padding: 0 0.75rem 0 1rem; }
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--outlined,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--raised,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--flat,
+    :host ::ng-deep .igx-grid-toolbar--cosy .igx-button--icon {
+      margin-left: 0.75rem; }
   :host ::ng-deep .igx-grid-toolbar--compact {
-    height: 2.75rem;
+    min-height: 2.75rem;
     padding: 0 0.5rem 0 0.75rem; }
-  :host ::ng-deep .igx-grid__caption {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--outlined,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--raised,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--flat,
+    :host ::ng-deep .igx-grid-toolbar--compact .igx-button--icon {
+      margin-left: 0.5rem; }
   :host ::ng-deep .igx-grid-toolbar__title {
     color: var(--igx-grid-toolbar-title-text-color);
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 40ch; }
   :host ::ng-deep .igx-grid-toolbar__custom-content {
     display: -ms-flexbox;
     display: flex;
@@ -11721,15 +11774,8 @@
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    :host ::ng-deep .igx-grid-toolbar__actions > div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   :host ::ng-deep .igx-grid-toolbar__progress-bar {
     position: absolute;
     width: 100%;
@@ -11741,6 +11787,8 @@
     background: var(--igx-grid-toolbar-background-color); }
     :host ::ng-deep .igx-grid-toolbar__progress-bar igx-linear-bar > * {
       border-radius: 0; }
+      :host ::ng-deep .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+        background: #ffbf00; }
   :host ::ng-deep .igx-grid-toolbar__adv-filter--filtered {
     border-color: #ffbf00 !important; }
   :host ::ng-deep .igx-grid-toolbar__dropdown {
@@ -11749,7 +11797,8 @@
     list-style: none;
     background: var(--igx-grid-toolbar-dropdown-background);
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   :host ::ng-deep .igx-grid-toolbar__dd-list-items {
     cursor: pointer;
     position: relative;
