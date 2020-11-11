@@ -1870,6 +1870,8 @@
   position: relative; }
   .igx-calendar-picker div {
     text-align: center; }
+  .igx-calendar-picker:focus {
+    outline: none; }
 
 .igx-calendar-picker__dates {
   display: -ms-flexbox;
@@ -2031,9 +2033,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.igx-calendar__body-column .igx-calendar__year, .igx-calendar__body-column .igx-calendar__year--current {
-  -ms-flex: 1 0 0px;
-      flex: 1 0 0; }
+.igx-calendar__body-column {
+  padding: 0;
+  margin: 0; }
+  .igx-calendar__body-column .igx-calendar__year, .igx-calendar__body-column .igx-calendar__year--current {
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0; }
 
 .igx-calendar__label, .igx-calendar__date, .igx-calendar__date--inactive, .igx-calendar__date--selected, .igx-calendar__date--current, .igx-calendar__date--weekend, .igx-calendar__date--special, .igx-calendar__date--disabled, .igx-calendar__date--disabled.igx-calendar__date--inactive, .igx-calendar__year, .igx-calendar__year--current, .igx-calendar__month, .igx-calendar__month--current {
   position: relative;
@@ -2044,7 +2049,6 @@
   -ms-flex-align: center;
       align-items: center;
   color: rgba(0, 0, 0, 0.87);
-  cursor: pointer;
   outline: none; }
 
 .igx-calendar__date:hover .igx-calendar__date-content::after, .igx-calendar__date:focus .igx-calendar__date-content::after {
@@ -2240,6 +2244,24 @@
 
 .igx-calendar__date--hidden .igx-calendar__date-content {
   visibility: hidden; }
+
+.igx-calendar__aria-off-screen {
+  position: absolute !important;
+  border: none !important;
+  height: 1px !important;
+  width: 1px !important;
+  left: 0 !important;
+  top: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none; }
+  .igx-calendar__aria-off-screen:focus {
+    outline: none; }
 
 :root {
   --igx-card-border-radius: 4px;
@@ -11616,6 +11638,8 @@ body {
     position: relative; }
     .fin-dark-theme .igx-calendar-picker div {
       text-align: center; }
+    .fin-dark-theme .igx-calendar-picker:focus {
+      outline: none; }
   .fin-dark-theme .igx-calendar-picker__dates {
     display: -ms-flexbox;
     display: flex;
@@ -11768,9 +11792,12 @@ body {
   .fin-dark-theme .igx-calendar__body-row--wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .fin-dark-theme .igx-calendar__body-column .igx-calendar__year, .fin-dark-theme .igx-calendar__body-column .igx-calendar__year--current {
-    -ms-flex: 1 0 0px;
-        flex: 1 0 0; }
+  .fin-dark-theme .igx-calendar__body-column {
+    padding: 0;
+    margin: 0; }
+    .fin-dark-theme .igx-calendar__body-column .igx-calendar__year, .fin-dark-theme .igx-calendar__body-column .igx-calendar__year--current {
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
   .fin-dark-theme .igx-calendar__label, .fin-dark-theme .igx-calendar__date, .fin-dark-theme .igx-calendar__date--inactive, .fin-dark-theme .igx-calendar__date--selected, .fin-dark-theme .igx-calendar__date--current, .fin-dark-theme .igx-calendar__date--weekend, .fin-dark-theme .igx-calendar__date--special, .fin-dark-theme .igx-calendar__date--disabled, .fin-dark-theme .igx-calendar__year, .fin-dark-theme .igx-calendar__year--current, .fin-dark-theme .igx-calendar__month, .fin-dark-theme .igx-calendar__month--current {
     position: relative;
     display: -ms-flexbox;
@@ -11780,7 +11807,6 @@ body {
     -ms-flex-align: center;
         align-items: center;
     color: var(--igx-calendar-content-text-color);
-    cursor: pointer;
     outline: none; }
   .fin-dark-theme .igx-calendar__date:hover .igx-calendar__date-content::after, .fin-dark-theme .igx-calendar__date:focus .igx-calendar__date-content::after {
     background: var(--igx-calendar-date-hover-background); }
@@ -11947,6 +11973,23 @@ body {
       z-index: -1; }
   .fin-dark-theme .igx-calendar__date--hidden .igx-calendar__date-content {
     visibility: hidden; }
+  .fin-dark-theme .igx-calendar__aria-off-screen {
+    position: absolute !important;
+    border: none !important;
+    height: 1px !important;
+    width: 1px !important;
+    left: 0 !important;
+    top: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none; }
+    .fin-dark-theme .igx-calendar__aria-off-screen:focus {
+      outline: none; }
   .fin-dark-theme {
     --igx-card-border-radius: 4px;
     --igx-card-resting-elevation: 2;
@@ -20031,6 +20074,8 @@ body {
     position: relative; }
     .dark-theme .igx-calendar-picker div {
       text-align: center; }
+    .dark-theme .igx-calendar-picker:focus {
+      outline: none; }
   .dark-theme .igx-calendar-picker__dates {
     display: -ms-flexbox;
     display: flex;
@@ -20183,9 +20228,12 @@ body {
   .dark-theme .igx-calendar__body-row--wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .dark-theme .igx-calendar__body-column .igx-calendar__year, .dark-theme .igx-calendar__body-column .igx-calendar__year--current {
-    -ms-flex: 1 0 0px;
-        flex: 1 0 0; }
+  .dark-theme .igx-calendar__body-column {
+    padding: 0;
+    margin: 0; }
+    .dark-theme .igx-calendar__body-column .igx-calendar__year, .dark-theme .igx-calendar__body-column .igx-calendar__year--current {
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
   .dark-theme .igx-calendar__label, .dark-theme .igx-calendar__date, .dark-theme .igx-calendar__date--inactive, .dark-theme .igx-calendar__date--selected, .dark-theme .igx-calendar__date--current, .dark-theme .igx-calendar__date--weekend, .dark-theme .igx-calendar__date--special, .dark-theme .igx-calendar__date--disabled, .dark-theme .igx-calendar__year, .dark-theme .igx-calendar__year--current, .dark-theme .igx-calendar__month, .dark-theme .igx-calendar__month--current {
     position: relative;
     display: -ms-flexbox;
@@ -20195,7 +20243,6 @@ body {
     -ms-flex-align: center;
         align-items: center;
     color: rgba(255, 255, 255, 0.87);
-    cursor: pointer;
     outline: none; }
   .dark-theme .igx-calendar__date:hover .igx-calendar__date-content::after, .dark-theme .igx-calendar__date:focus .igx-calendar__date-content::after {
     background: rgba(255, 255, 255, 0.08); }
@@ -20362,6 +20409,23 @@ body {
       z-index: -1; }
   .dark-theme .igx-calendar__date--hidden .igx-calendar__date-content {
     visibility: hidden; }
+  .dark-theme .igx-calendar__aria-off-screen {
+    position: absolute !important;
+    border: none !important;
+    height: 1px !important;
+    width: 1px !important;
+    left: 0 !important;
+    top: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none; }
+    .dark-theme .igx-calendar__aria-off-screen:focus {
+      outline: none; }
   .dark-theme {
     --igx-card-border-radius: 4px;
     --igx-card-resting-elevation: 2;
@@ -28907,6 +28971,8 @@ body {
       position: relative; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar-picker div {
         text-align: center; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar-picker:focus {
+        outline: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar-picker__dates {
       display: -ms-flexbox;
       display: flex;
@@ -29059,9 +29125,12 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-row--wrap {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year--current {
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column {
+      padding: 0;
+      margin: 0; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year--current {
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__label, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--current, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--weekend, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--special, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--disabled, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__year--current, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__month, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__month--current {
       position: relative;
       display: -ms-flexbox;
@@ -29071,7 +29140,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
       color: var(--igx-calendar-content-text-color);
-      cursor: pointer;
       outline: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date:hover .igx-calendar__date-content::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date:focus .igx-calendar__date-content::after {
       background: var(--igx-calendar-date-hover-background); }
@@ -29238,6 +29306,23 @@ body {
         z-index: -1; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--hidden .igx-calendar__date-content {
       visibility: hidden; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__aria-off-screen {
+      position: absolute !important;
+      border: none !important;
+      height: 1px !important;
+      width: 1px !important;
+      left: 0 !important;
+      top: 0 !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      pointer-events: none; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__aria-off-screen:focus {
+        outline: none; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-card-border-radius: 2px;
       --igx-card-resting-elevation: 0;

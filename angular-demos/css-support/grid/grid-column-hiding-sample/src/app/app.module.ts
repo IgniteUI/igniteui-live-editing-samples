@@ -6,8 +6,7 @@ import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { 
 	IgxGridModule,
-	IgxRadioModule,
-	IgxColumnHidingModule
+	IgxRadioModule
  } from "igniteui-angular";
 import { GridColumnHidingSampleComponent } from "./grid/grid-column-hiding-sample/grid-column-hiding-sample.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -27,7 +26,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 		IgxPreventDocumentScrollModule,
 		IgxGridModule,
 		IgxRadioModule,
-		IgxColumnHidingModule,
 		HttpClientModule
   ],
   providers: [],
