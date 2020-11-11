@@ -7,6 +7,7 @@ import { GridToolbarSample2Component } from "./grid/grid-toolbar-sample/grid-too
 import { 
 	IgxAvatarModule,
 	IgxGridModule,
+	IgxSwitchModule,
 	IgxExcelExporterService,
 	IgxCsvExporterService
  } from "igniteui-angular";
@@ -26,7 +27,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
     FormsModule,
 		IgxPreventDocumentScrollModule,
 		IgxAvatarModule,
-		IgxGridModule
+		IgxGridModule,
+		IgxSwitchModule
   ],
   providers: [
 		IgxExcelExporterService,
