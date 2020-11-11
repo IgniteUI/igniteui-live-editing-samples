@@ -900,6 +900,8 @@
     position: relative; }
     :host ::ng-deep .igx-calendar-picker div {
       text-align: center; }
+    :host ::ng-deep .igx-calendar-picker:focus {
+      outline: none; }
   :host ::ng-deep .igx-calendar-picker__dates {
     display: -ms-flexbox;
     display: flex;
@@ -1052,9 +1054,12 @@
   :host ::ng-deep .igx-calendar__body-row--wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  :host ::ng-deep .igx-calendar__body-column .igx-calendar__year, :host ::ng-deep .igx-calendar__body-column .igx-calendar__year--current {
-    -ms-flex: 1 0 0px;
-        flex: 1 0 0; }
+  :host ::ng-deep .igx-calendar__body-column {
+    padding: 0;
+    margin: 0; }
+    :host ::ng-deep .igx-calendar__body-column .igx-calendar__year, :host ::ng-deep .igx-calendar__body-column .igx-calendar__year--current {
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
   :host ::ng-deep .igx-calendar__label, :host ::ng-deep .igx-calendar__date, :host ::ng-deep .igx-calendar__date--inactive, :host ::ng-deep .igx-calendar__date--selected, :host ::ng-deep .igx-calendar__date--current, :host ::ng-deep .igx-calendar__date--weekend, :host ::ng-deep .igx-calendar__date--special, :host ::ng-deep .igx-calendar__date--disabled, :host ::ng-deep .igx-calendar__year, :host ::ng-deep .igx-calendar__year--current, :host ::ng-deep .igx-calendar__month, :host ::ng-deep .igx-calendar__month--current {
     position: relative;
     display: -ms-flexbox;
@@ -1064,7 +1069,6 @@
     -ms-flex-align: center;
         align-items: center;
     color: var(--igx-calendar-content-text-color);
-    cursor: pointer;
     outline: none; }
   :host ::ng-deep .igx-calendar__date:hover .igx-calendar__date-content::after, :host ::ng-deep .igx-calendar__date:focus .igx-calendar__date-content::after {
     background: var(--igx-calendar-date-hover-background); }
@@ -1231,6 +1235,23 @@
       z-index: -1; }
   :host ::ng-deep .igx-calendar__date--hidden .igx-calendar__date-content {
     visibility: hidden; }
+  :host ::ng-deep .igx-calendar__aria-off-screen {
+    position: absolute !important;
+    border: none !important;
+    height: 1px !important;
+    width: 1px !important;
+    left: 0 !important;
+    top: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none; }
+    :host ::ng-deep .igx-calendar__aria-off-screen:focus {
+      outline: none; }
   :host ::ng-deep {
     --igx-card-border-radius: 4px;
     --igx-card-resting-elevation: 2;
