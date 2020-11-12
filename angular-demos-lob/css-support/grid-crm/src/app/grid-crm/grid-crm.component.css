@@ -12806,7 +12806,7 @@
     -ms-flex-pack: end;
         justify-content: flex-end;
     max-width: 500px;
-    width: 50%; }
+    width: 70%; }
   :host ::ng-deep .crm-sample-toolbar__title {
     margin-right: 1rem;
     display: -ms-flexbox;
@@ -12814,7 +12814,7 @@
     -ms-flex-align: center;
         align-items: center;
     justify-self: flex-start;
-    width: 50%; }
+    width: 30%; }
   :host ::ng-deep .crm-sample-toolbar__ellipsis {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -13635,6 +13635,8 @@
         justify-content: center;
     width: 1rem;
     height: 1rem; }
+  :host ::ng-deep .igx-grid-toolbar__title {
+    max-width: 68ch; }
 
 .animated-fan {
   width: 28px;
