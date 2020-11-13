@@ -7,9 +7,7 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-order: 3;
-      order: 3; }
+      flex-shrink: 0; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -434,8 +432,7 @@
   background: inherit;
   z-index: 4;
   cursor: move;
-  -ms-flex-order: -1;
-      order: -1; }
+  border-right: 1px solid transparent; }
   .igx-grid__drag-indicator .igx-icon, .igx-grid__drag-indicator .igx-icon--inactive, .igx-grid__drag-indicator .igx-icon--success, .igx-grid__drag-indicator .igx-icon--error {
     width: 1.5rem;
     height: 1.5rem;
@@ -918,7 +915,6 @@
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
   background: inherit;
   z-index: 4; }
 
@@ -2030,10 +2026,7 @@
       justify-content: center;
   cursor: pointer;
   z-index: 3;
-  color: var(--igx-grid-expand-icon-color);
-  border-right: 1px solid var(--igx-grid-header-border-color);
-  -ms-flex-order: 2;
-      order: 2; }
+  color: var(--igx-grid-expand-icon-color); }
   .igx-grid__hierarchical-expander:focus, .igx-grid__hierarchical-expander--empty:focus {
     outline: none; }
     .igx-grid__hierarchical-expander:focus igx-icon, .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -2873,3 +2866,6 @@ igx-excel-style-filter-operations,
 
 .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
   color: var(--igx-grid-sorted-header-icon-color); }
+
+.igx-grid__tr-action:last-of-type {
+  border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }

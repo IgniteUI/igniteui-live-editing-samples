@@ -7,9 +7,7 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-order: 3;
-      order: 3; }
+      flex-shrink: 0; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -400,8 +398,7 @@
     background: inherit;
     z-index: 4;
     cursor: move;
-    -ms-flex-order: -1;
-        order: -1; }
+    border-right: 1px solid transparent; }
     :host ::ng-deep .igx-grid__drag-indicator .igx-icon, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
@@ -808,7 +805,6 @@
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
     background: inherit;
     z-index: 4; }
   :host ::ng-deep .igx-grid__cbx-padding {
@@ -1701,10 +1697,7 @@
         justify-content: center;
     cursor: pointer;
     z-index: 3;
-    color: var(--igx-grid-expand-icon-color);
-    border-right: 1px solid var(--igx-grid-header-border-color);
-    -ms-flex-order: 2;
-        order: 2; }
+    color: var(--igx-grid-expand-icon-color); }
     :host ::ng-deep .igx-grid__hierarchical-expander:focus, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus {
       outline: none; }
       :host ::ng-deep .igx-grid__hierarchical-expander:focus igx-icon, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -2436,6 +2429,8 @@
     margin-right: 0.5rem; }
   :host ::ng-deep .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
     color: var(--igx-grid-sorted-header-icon-color); }
+  :host ::ng-deep .igx-grid__tr-action:last-of-type {
+    border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
   :host ::ng-deep igx-advanced-filtering-dialog {
     --igx-button-flat-border-radius: 4px;
     --igx-button-raised-border-radius: 4px;
