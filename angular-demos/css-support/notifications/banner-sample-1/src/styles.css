@@ -1143,7 +1143,7 @@
   --igx-badge-border-width: 0;
   --igx-badge-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08); }
 
-.igx-badge, .igx-badge__circle, .igx-badge__circle--info, .igx-badge__circle--success, .igx-badge__circle--warning, .igx-badge__circle--error {
+.igx-badge {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1155,8 +1155,15 @@
   font-size: 0.6875rem;
   font-weight: normal;
   color: black;
-  line-height: 1; }
-  .igx-badge igx-icon, .igx-badge__circle igx-icon, .igx-badge__circle--info igx-icon, .igx-badge__circle--success igx-icon, .igx-badge__circle--warning igx-icon, .igx-badge__circle--error igx-icon {
+  line-height: 1;
+  background: #09f;
+  border-radius: 11px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08);
+  border-width: 0;
+  border-color: #fff;
+  border-style: solid;
+  overflow: hidden; }
+  .igx-badge igx-icon {
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-pack: center;
@@ -1169,31 +1176,20 @@
     font-weight: normal;
     color: black; }
 
-.igx-badge__circle-value {
+.igx-badge__value {
   white-space: nowrap;
   padding: 0.25rem; }
 
-.igx-badge__circle {
-  border-radius: 11px;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08);
-  border-width: 0;
-  border-color: #fff;
-  border-style: solid;
-  overflow: hidden; }
-
-.igx-badge__circle--default {
-  background: #09f; }
-
-.igx-badge__circle--success {
+.igx-badge--success {
   background: #4eb862; }
 
-.igx-badge__circle--info {
+.igx-badge--info {
   background: #1377d5; }
 
-.igx-badge__circle--warning {
+.igx-badge--warning {
   background: #fbb13c; }
 
-.igx-badge__circle--error {
+.igx-badge--error {
   background: #ff134a; }
 
 .igx-badge--hidden {
@@ -1872,6 +1868,8 @@
   position: relative; }
   .igx-calendar-picker div {
     text-align: center; }
+  .igx-calendar-picker:focus {
+    outline: none; }
 
 .igx-calendar-picker__dates {
   display: -ms-flexbox;
@@ -2033,9 +2031,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap; }
 
-.igx-calendar__body-column .igx-calendar__year, .igx-calendar__body-column .igx-calendar__year--current {
-  -ms-flex: 1 0 0px;
-      flex: 1 0 0; }
+.igx-calendar__body-column {
+  padding: 0;
+  margin: 0; }
+  .igx-calendar__body-column .igx-calendar__year, .igx-calendar__body-column .igx-calendar__year--current {
+    -ms-flex: 1 0 0px;
+        flex: 1 0 0; }
 
 .igx-calendar__label, .igx-calendar__date, .igx-calendar__date--inactive, .igx-calendar__date--selected, .igx-calendar__date--current, .igx-calendar__date--weekend, .igx-calendar__date--special, .igx-calendar__date--disabled, .igx-calendar__date--disabled.igx-calendar__date--inactive, .igx-calendar__year, .igx-calendar__year--current, .igx-calendar__month, .igx-calendar__month--current {
   position: relative;
@@ -2046,7 +2047,6 @@
   -ms-flex-align: center;
       align-items: center;
   color: rgba(0, 0, 0, 0.87);
-  cursor: pointer;
   outline: none; }
 
 .igx-calendar__date:hover .igx-calendar__date-content::after, .igx-calendar__date:focus .igx-calendar__date-content::after {
@@ -2242,6 +2242,24 @@
 
 .igx-calendar__date--hidden .igx-calendar__date-content {
   visibility: hidden; }
+
+.igx-calendar__aria-off-screen {
+  position: absolute !important;
+  border: none !important;
+  height: 1px !important;
+  width: 1px !important;
+  left: 0 !important;
+  top: 0 !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none; }
+  .igx-calendar__aria-off-screen:focus {
+    outline: none; }
 
 :root {
   --igx-card-border-radius: 4px;
@@ -2817,15 +2835,15 @@
 :root {
   --data-chart-title-text-color: rgba(0, 0, 0, 0.87);
   --data-chart-subtitle-text-color: rgba(0, 0, 0, 0.54);
-  --data-chart-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --data-chart-marker-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --data-chart-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --data-chart-marker-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+  --data-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --data-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --data-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --data-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
   --data-chart-plot-area-background: #fff; }
 
 :root {
-  --ring-series-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --ring-series-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+  --ring-series-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --ring-series-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
 
 :root {
   --linear-gauge-backing-brush: #f2f2f2;
@@ -2834,8 +2852,8 @@
   --linear-gauge-minor-tick-brush: rgba(0, 0, 0, 0.62);
   --linear-gauge-needle-brush: #09f;
   --linear-gauge-needle-outline: #fff;
-  --linear-gauge-range-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --linear-gauge-range-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+  --linear-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --linear-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
   --linear-gauge-scale-brush: #ebebeb;
   --linear-gauge-tick-brush: rgba(0, 0, 0, 0.62);
   --linear-gauge-scale-outline: #ebebeb; }
@@ -2847,36 +2865,36 @@
   --radial-gauge-minor-tick-brush: rgba(0, 0, 0, 0.62);
   --radial-gauge-needle-brush: #09f;
   --radial-gauge-needle-outline: #fff;
-  --radial-gauge-range-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --radial-gauge-range-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+  --radial-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --radial-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
   --radial-gauge-scale-brush: #ebebeb;
   --radial-gauge-tick-brush: rgba(0, 0, 0, 0.62);
   --radial-gauge-needle-pivot-brush: #09f;
   --radial-gauge-needle-pivot-outline: #fff; }
 
 :root {
-  --financial-chart-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-marker-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-marker-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-indicator-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-indicator-negative-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-negative-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-negative-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-overlay-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-overlay-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-overlay-thickness: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-trend-line-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-volume-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --financial-chart-volume-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+  --financial-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-indicator-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-indicator-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-overlay-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-overlay-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-overlay-thickness: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-volume-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --financial-chart-volume-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
 
 :root {
   --bullet-graph-backing-brush: #f2f2f2;
   --bullet-graph-backing-outline: #ebebeb;
   --bullet-graph-font-brush: rgba(0, 0, 0, 0.62);
   --bullet-graph-minor-tick-brush: rgba(0, 0, 0, 0.62);
-  --bullet-graph-range-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --bullet-graph-range-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+  --bullet-graph-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --bullet-graph-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
   --bullet-graph-scale-background-brush: #09f;
   --bullet-graph-scale-background-outline: #fff;
   --bullet-graph-target-value-brush: rgba(0, 0, 0, 0.74);
@@ -2884,15 +2902,15 @@
   --bullet-graph-value-brush: rgba(0, 0, 0, 0.74); }
 
 :root {
-  --category-chart-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --category-chart-marker-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --category-chart-negative-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --category-chart-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --category-chart-marker-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --category-chart-negative-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+  --category-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --category-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --category-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --category-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --category-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --category-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
   --category-chart-title-text-color: #606060;
   --category-chart-subtitle-text-color: #606060;
-  --category-chart-trend-line-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+  --category-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
   --category-chart-x-axis-label-text-color: #606060;
   --category-chart-x-axis-tick-stroke: #606060;
   --category-chart-x-axis-title-text-color: #606060;
@@ -2904,24 +2922,24 @@
   --geo-map-plot-area-background: #fff; }
 
 :root {
-  --pie-chart-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --pie-chart-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+  --pie-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --pie-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
 
 :root {
   --sparkline-brush: #09f; }
 
 :root {
-  --funnel-chart-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --funnel-chart-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+  --funnel-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --funnel-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
 
 :root {
   --shape-chart-title-text-color: rgba(0, 0, 0, 0.87);
   --shape-chart-subtitle-text-color: rgba(0, 0, 0, 0.54);
-  --shape-chart-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --shape-chart-marker-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --shape-chart-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --shape-chart-marker-outlines: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-  --shape-chart-trend-line-brushes: #09f, #e41c77, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+  --shape-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --shape-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --shape-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --shape-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+  --shape-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
 
 :root {
   --igx-checkbox-border-radius: 2px;
@@ -3652,7 +3670,7 @@
     padding: 0 0.125rem; }
 
 :root {
-  --igx-column-actions-background-color: transparent;
+  --igx-column-actions-background-color: #fff;
   --igx-column-actions-title-color: #09f; }
 
 .igx-column-actions {
@@ -3660,7 +3678,8 @@
   display: flex;
   -ms-flex-flow: column nowrap;
       flex-flow: column nowrap;
-  background: transparent;
+  background: #fff;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
   width: 100%;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
@@ -4590,11 +4609,13 @@ igx-date-range-end,
   -ms-flex-pack: center;
       justify-content: center;
   padding: 0 1.5rem;
-  padding-right: 0;
+  -ms-flex: 1 0 auto;
+      flex: 1 0 auto;
   min-width: calc(1.5rem + 1.5rem);
   background: inherit;
   z-index: 4;
-  cursor: move; }
+  cursor: move;
+  border-right: 1px solid transparent; }
   .igx-grid__drag-indicator .igx-icon, .igx-grid__drag-indicator .igx-icon--inactive, .igx-grid__drag-indicator .igx-icon--success, .igx-grid__drag-indicator .igx-icon--error {
     width: 1.5rem;
     height: 1.5rem;
@@ -4602,20 +4623,14 @@ igx-date-range-end,
 
 .igx-grid--cosy .igx-grid__drag-indicator {
   padding: 0 1rem;
-  min-width: calc(1.5rem + 1rem);
-  padding-right: 0; }
+  min-width: calc(1.5rem + 1rem); }
 
 .igx-grid--compact .igx-grid__drag-indicator {
   padding: 0 0.75rem;
-  min-width: calc(1.5rem + 0.75rem);
-  padding-right: 0; }
+  min-width: calc(1.5rem + 0.75rem); }
 
 .igx-grid__drag-indicator--header {
   border-right: 1px solid rgba(0, 0, 0, 0.08); }
-
-.igx-grid__hierarchical-expander + .igx-grid__drag-indicator, .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-  padding-left: 0;
-  min-width: 1.5rem; }
 
 .igx-grid__drag-indicator--off {
   color: rgba(0, 0, 0, 0.08); }
@@ -5084,7 +5099,6 @@ igx-date-range-end,
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
   background: inherit;
   z-index: 4; }
 
@@ -5267,11 +5281,20 @@ igx-date-range-end,
   outline-style: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   min-height: 3.125rem; }
+  .igx-grid__group-row .igx-grid__drag-indicator {
+    cursor: default;
+    -ms-flex-positive: 0;
+        flex-grow: 0; }
 
 .igx-grid__group-row--active {
   background: #eaeaea; }
   .igx-grid__group-row--active .igx-grid__grouping-indicator {
     color: rgba(0, 0, 0, 0.54); }
+  .igx-grid__group-row--active .igx-grid__drag-indicator {
+    border: 1px solid #e41c77;
+    border-left-width: 0;
+    border-right-width: 0;
+    box-shadow: inset 1px 0 0 0 #e41c77; }
   .igx-grid__group-row--active:hover {
     background: #eaeaea; }
 
@@ -5356,18 +5379,18 @@ igx-date-range-end,
   min-height: 2rem; }
 
 .igx-grid__row-indentation {
-  background: transparent;
-  z-index: 1;
+  position: relative;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  position: relative;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  border-right: 1px solid transparent; }
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  background: inherit;
+  z-index: 1; }
   .igx-grid__row-indentation::after {
     content: '';
     position: absolute;
@@ -5489,8 +5512,8 @@ igx-date-range-end,
       align-items: center;
   z-index: 1;
   cursor: pointer;
-  padding-left: 1.5rem;
   padding-right: 0.75rem;
+  margin-left: 1.5rem;
   min-height: 3.125rem; }
   .igx-grid__grouping-indicator igx-icon {
     color: rgba(0, 0, 0, 0.54);
@@ -5501,12 +5524,12 @@ igx-date-range-end,
       color: #09f; }
 
 .igx-grid--cosy .igx-grid__grouping-indicator {
-  padding-left: 1rem;
-  min-height: 2.5rem; }
+  min-height: 2.5rem;
+  margin-left: 1rem; }
 
 .igx-grid--compact .igx-grid__grouping-indicator {
-  padding-left: 0.75rem;
-  min-height: 2rem; }
+  min-height: 2rem;
+  margin-left: 0.75rem; }
 
 .igx-grid__header-indentation {
   position: relative;
@@ -5546,163 +5569,183 @@ igx-date-range-end,
     top: 0.25rem; }
 
 .igx-grid__row-indentation--level-1 {
-  background: inherit;
   padding-left: calc(1.5rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-1 {
+.igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
   padding-left: 1.5rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-1 {
   padding-left: calc(1rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+  padding-left: 1rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-1 {
   padding-left: calc(0.75rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-1 {
+.igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
   padding-left: 0.75rem; }
 
 .igx-grid__row-indentation--level-2 {
-  background: inherit;
   padding-left: calc(3rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-2 {
+.igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
   padding-left: 3rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-2 {
   padding-left: calc(2rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+  padding-left: 2rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-2 {
   padding-left: calc(1.5rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-2 {
+.igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
   padding-left: 1.5rem; }
 
 .igx-grid__row-indentation--level-3 {
-  background: inherit;
   padding-left: calc(4.5rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-3 {
+.igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
   padding-left: 4.5rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-3 {
   padding-left: calc(3rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+  padding-left: 3rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-3 {
   padding-left: calc(2.25rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-3 {
+.igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
   padding-left: 2.25rem; }
 
 .igx-grid__row-indentation--level-4 {
-  background: inherit;
   padding-left: calc(6rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-4 {
+.igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
   padding-left: 6rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-4 {
   padding-left: calc(4rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+  padding-left: 4rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-4 {
   padding-left: calc(3rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-4 {
+.igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
   padding-left: 3rem; }
 
 .igx-grid__row-indentation--level-5 {
-  background: inherit;
   padding-left: calc(7.5rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-5 {
+.igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
   padding-left: 7.5rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-5 {
   padding-left: calc(5rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+  padding-left: 5rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-5 {
   padding-left: calc(3.75rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-5 {
+.igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
   padding-left: 3.75rem; }
 
 .igx-grid__row-indentation--level-6 {
-  background: inherit;
   padding-left: calc(9rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-6 {
+.igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
   padding-left: 9rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-6 {
   padding-left: calc(6rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+  padding-left: 6rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-6 {
   padding-left: calc(4.5rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-6 {
+.igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
   padding-left: 4.5rem; }
 
 .igx-grid__row-indentation--level-7 {
-  background: inherit;
   padding-left: calc(10.5rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-7 {
+.igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
   padding-left: 10.5rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-7 {
   padding-left: calc(7rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+  padding-left: 7rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-7 {
   padding-left: calc(5.25rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-7 {
+.igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
   padding-left: 5.25rem; }
 
 .igx-grid__row-indentation--level-8 {
-  background: inherit;
   padding-left: calc(12rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-8 {
+.igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
   padding-left: 12rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-8 {
   padding-left: calc(8rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+  padding-left: 8rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-8 {
   padding-left: calc(6rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-8 {
+.igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
   padding-left: 6rem; }
 
 .igx-grid__row-indentation--level-9 {
-  background: inherit;
   padding-left: calc(13.5rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-9 {
+.igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
   padding-left: 13.5rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-9 {
   padding-left: calc(9rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+  padding-left: 9rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-9 {
   padding-left: calc(6.75rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-9 {
+.igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
   padding-left: 6.75rem; }
 
 .igx-grid__row-indentation--level-10 {
-  background: inherit;
   padding-left: calc(15rem + 1.5rem); }
 
-.igx-grid__group-row--padding-level-10 {
+.igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
   padding-left: 15rem; }
 
 .igx-grid--cosy .igx-grid__row-indentation--level-10 {
   padding-left: calc(10rem + 1.5rem); }
 
+.igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+  padding-left: 10rem; }
+
 .igx-grid--compact .igx-grid__row-indentation--level-10 {
   padding-left: calc(7.5rem + 1.5rem); }
 
-.igx-grid--compact .igx-grid__group-row--padding-level-10 {
+.igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
   padding-left: 7.5rem; }
 
 .igx-grid__tree-cell--padding-level-1 {
@@ -5997,7 +6040,7 @@ igx-date-range-end,
     width: 18px;
     height: 18px;
     font-size: 18px; }
-  .igx-grid__filtering-cell-indicator .igx-badge, .igx-grid__filtering-cell-indicator--hidden .igx-badge, .igx-grid__filtering-cell-indicator .igx-badge__circle, .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, .igx-grid__filtering-cell-indicator .igx-badge__circle--info, .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, .igx-grid__filtering-cell-indicator .igx-badge__circle--success, .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, .igx-grid__filtering-cell-indicator .igx-badge__circle--error, .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+  .igx-grid__filtering-cell-indicator .igx-badge, .igx-grid__filtering-cell-indicator--hidden .igx-badge {
     /* start of IE vertical alignment fix */
     top: 50%;
     -ms-transform: translateY(-50%);
@@ -6168,8 +6211,7 @@ igx-date-range-end,
       justify-content: center;
   cursor: pointer;
   z-index: 3;
-  color: rgba(0, 0, 0, 0.54);
-  border-right: 1px solid transparent; }
+  color: rgba(0, 0, 0, 0.54); }
   .igx-grid__hierarchical-expander:focus, .igx-grid__hierarchical-expander--empty:focus {
     outline: none; }
     .igx-grid__hierarchical-expander:focus igx-icon, .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -6215,7 +6257,6 @@ igx-date-range-end,
 .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon {
   min-height: 2rem; }
 
-.igx-grid__hierarchical-expander--no-border,
 .igx-grid__header-indentation--no-border {
   border-right: 1px solid transparent; }
 
@@ -6266,13 +6307,15 @@ igx-date-range-end,
       align-items: center; }
 
 .igx-excel-filter__icon, .igx-excel-filter__icon--filtered {
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer; }
-  .igx-icon.igx-excel-filter__icon, .igx-icon.igx-excel-filter__icon--filtered {
+  .igx-excel-filter__icon igx-icon, .igx-excel-filter__icon--filtered igx-icon {
     width: 0.9375rem;
     height: 0.9375rem;
     font-size: 0.9375rem; }
 
-.igx-icon.igx-excel-filter__icon--filtered {
+.igx-excel-filter__icon--filtered igx-icon {
   color: #e41c77; }
 
 .igx-excel-filter__menu {
@@ -7009,6 +7052,9 @@ igx-excel-style-filter-operations,
 .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
   color: #e41c77; }
 
+.igx-grid__tr-action:last-of-type {
+  border-right: 1px solid rgba(0, 0, 0, 0.08); }
+
 :root {
   --igx-grid-summary-background-color: inherit;
   --igx-grid-summary-focus-background-color: rgba(0, 0, 0, 0.04);
@@ -7117,14 +7163,15 @@ igx-excel-style-filter-operations,
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
   -ms-grid-row: 1;
   grid-row: 1;
   font-size: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
   background: rgba(0, 0, 0, 0.02);
-  height: 3.625rem;
+  height: auto;
+  min-height: 3.625rem;
   position: relative;
   padding: 0 1rem 0 1.5rem; }
   .igx-grid-toolbar .igx-button--outlined, .igx-grid-toolbar--cosy .igx-button--outlined, .igx-grid-toolbar--compact .igx-button--outlined,
@@ -7137,7 +7184,7 @@ igx-excel-style-filter-operations,
   .igx-grid-toolbar .igx-button--icon,
   .igx-grid-toolbar--cosy .igx-button--icon,
   .igx-grid-toolbar--compact .igx-button--icon {
-    margin-left: 0.5rem; }
+    margin-left: 1rem; }
   .igx-grid-toolbar .igx-grid-toolbar__button-space, .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
     display: -ms-flexbox;
     display: flex;
@@ -7174,18 +7221,22 @@ igx-excel-style-filter-operations,
         margin-left: 0; }
 
 .igx-grid-toolbar--cosy {
-  height: 3.25rem;
+  min-height: 3.25rem;
   padding: 0 0.75rem 0 1rem; }
+  .igx-grid-toolbar--cosy .igx-button--outlined,
+  .igx-grid-toolbar--cosy .igx-button--raised,
+  .igx-grid-toolbar--cosy .igx-button--flat,
+  .igx-grid-toolbar--cosy .igx-button--icon {
+    margin-left: 0.75rem; }
 
 .igx-grid-toolbar--compact {
-  height: 2.75rem;
+  min-height: 2.75rem;
   padding: 0 0.5rem 0 0.75rem; }
-
-.igx-grid__caption {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center; }
+  .igx-grid-toolbar--compact .igx-button--outlined,
+  .igx-grid-toolbar--compact .igx-button--raised,
+  .igx-grid-toolbar--compact .igx-button--flat,
+  .igx-grid-toolbar--compact .igx-button--icon {
+    margin-left: 0.5rem; }
 
 .igx-grid-toolbar__title {
   color: rgba(0, 0, 0, 0.54);
@@ -7193,7 +7244,8 @@ igx-excel-style-filter-operations,
       flex: 1 1 auto;
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden; }
+  overflow: hidden;
+  max-width: 40ch; }
 
 .igx-grid-toolbar__custom-content {
   display: -ms-flexbox;
@@ -7206,15 +7258,8 @@ igx-excel-style-filter-operations,
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
-  .igx-grid-toolbar__actions > div {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap; }
 
 .igx-grid-toolbar__progress-bar {
   position: absolute;
@@ -7227,6 +7272,8 @@ igx-excel-style-filter-operations,
   background: rgba(0, 0, 0, 0.02); }
   .igx-grid-toolbar__progress-bar igx-linear-bar > * {
     border-radius: 0; }
+    .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+      background: #e41c77; }
 
 .igx-grid-toolbar__adv-filter--filtered {
   border-color: #e41c77 !important; }
@@ -7238,7 +7285,8 @@ igx-excel-style-filter-operations,
   list-style: none;
   background: #fff;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
 
 .igx-grid-toolbar__dd-list-items {
   cursor: pointer;
@@ -9783,7 +9831,6 @@ igx-excel-style-filter-operations,
   background: #e41c77;
   opacity: 0;
   border-color: #e41c77 transparent transparent;
-  transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: -1; }
   .igx-slider__label-from .label::after, .igx-slider__label-to .label::after {
     content: '';
@@ -9870,7 +9917,7 @@ igx-excel-style-filter-operations,
 .igx-slider__label-from--active .label, .igx-slider__label-to--active .label {
   opacity: 1; }
 
-.igx-slider__thumb-from--active, .igx-slider__label-from--active, .igx-slider__thumb-to--active, .igx-slider__label-to--active {
+.igx-slider__label--pressed {
   z-index: 1; }
 
 :root {
@@ -10932,7 +10979,7 @@ body {
     --igx-badge-background-color: #09f;
     --igx-badge-border-width: 0;
     --igx-badge-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08); }
-  .fin-dark-theme .igx-badge, .fin-dark-theme .igx-badge__circle, .fin-dark-theme .igx-badge__circle--info, .fin-dark-theme .igx-badge__circle--success, .fin-dark-theme .igx-badge__circle--warning, .fin-dark-theme .igx-badge__circle--error {
+  .fin-dark-theme .igx-badge {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -10944,8 +10991,15 @@ body {
     font-size: 0.6875rem;
     font-weight: normal;
     color: var(--igx-badge-text-color);
-    line-height: 1; }
-    .fin-dark-theme .igx-badge igx-icon, .fin-dark-theme .igx-badge__circle igx-icon, .fin-dark-theme .igx-badge__circle--info igx-icon, .fin-dark-theme .igx-badge__circle--success igx-icon, .fin-dark-theme .igx-badge__circle--warning igx-icon, .fin-dark-theme .igx-badge__circle--error igx-icon {
+    line-height: 1;
+    background: var(--igx-badge-background-color);
+    border-radius: var(--igx-badge-border-radius);
+    box-shadow: var(--igx-badge-shadow);
+    border-width: var(--igx-badge-border-width);
+    border-color: var(--igx-badge-border-color);
+    border-style: solid;
+    overflow: hidden; }
+    .fin-dark-theme .igx-badge igx-icon {
       display: -ms-inline-flexbox;
       display: inline-flex;
       -ms-flex-pack: center;
@@ -10957,25 +11011,16 @@ body {
       font-size: 0.75rem;
       font-weight: normal;
       color: var(--igx-badge-icon-color); }
-  .fin-dark-theme .igx-badge__circle-value {
+  .fin-dark-theme .igx-badge__value {
     white-space: nowrap;
     padding: 0.25rem; }
-  .fin-dark-theme .igx-badge__circle {
-    border-radius: var(--igx-badge-border-radius);
-    box-shadow: var(--igx-badge-shadow);
-    border-width: var(--igx-badge-border-width);
-    border-color: var(--igx-badge-border-color);
-    border-style: solid;
-    overflow: hidden; }
-  .fin-dark-theme .igx-badge__circle--default {
-    background: var(--igx-badge-background-color); }
-  .fin-dark-theme .igx-badge__circle--success {
+  .fin-dark-theme .igx-badge--success {
     background: #4eb862; }
-  .fin-dark-theme .igx-badge__circle--info {
+  .fin-dark-theme .igx-badge--info {
     background: #1377d5; }
-  .fin-dark-theme .igx-badge__circle--warning {
+  .fin-dark-theme .igx-badge--warning {
     background: #fbb13c; }
-  .fin-dark-theme .igx-badge__circle--error {
+  .fin-dark-theme .igx-badge--error {
     background: #ff134a; }
   .fin-dark-theme .igx-badge--hidden {
     visibility: hidden; }
@@ -11589,6 +11634,8 @@ body {
     position: relative; }
     .fin-dark-theme .igx-calendar-picker div {
       text-align: center; }
+    .fin-dark-theme .igx-calendar-picker:focus {
+      outline: none; }
   .fin-dark-theme .igx-calendar-picker__dates {
     display: -ms-flexbox;
     display: flex;
@@ -11741,9 +11788,12 @@ body {
   .fin-dark-theme .igx-calendar__body-row--wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .fin-dark-theme .igx-calendar__body-column .igx-calendar__year, .fin-dark-theme .igx-calendar__body-column .igx-calendar__year--current {
-    -ms-flex: 1 0 0px;
-        flex: 1 0 0; }
+  .fin-dark-theme .igx-calendar__body-column {
+    padding: 0;
+    margin: 0; }
+    .fin-dark-theme .igx-calendar__body-column .igx-calendar__year, .fin-dark-theme .igx-calendar__body-column .igx-calendar__year--current {
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
   .fin-dark-theme .igx-calendar__label, .fin-dark-theme .igx-calendar__date, .fin-dark-theme .igx-calendar__date--inactive, .fin-dark-theme .igx-calendar__date--selected, .fin-dark-theme .igx-calendar__date--current, .fin-dark-theme .igx-calendar__date--weekend, .fin-dark-theme .igx-calendar__date--special, .fin-dark-theme .igx-calendar__date--disabled, .fin-dark-theme .igx-calendar__year, .fin-dark-theme .igx-calendar__year--current, .fin-dark-theme .igx-calendar__month, .fin-dark-theme .igx-calendar__month--current {
     position: relative;
     display: -ms-flexbox;
@@ -11753,7 +11803,6 @@ body {
     -ms-flex-align: center;
         align-items: center;
     color: var(--igx-calendar-content-text-color);
-    cursor: pointer;
     outline: none; }
   .fin-dark-theme .igx-calendar__date:hover .igx-calendar__date-content::after, .fin-dark-theme .igx-calendar__date:focus .igx-calendar__date-content::after {
     background: var(--igx-calendar-date-hover-background); }
@@ -11920,6 +11969,23 @@ body {
       z-index: -1; }
   .fin-dark-theme .igx-calendar__date--hidden .igx-calendar__date-content {
     visibility: hidden; }
+  .fin-dark-theme .igx-calendar__aria-off-screen {
+    position: absolute !important;
+    border: none !important;
+    height: 1px !important;
+    width: 1px !important;
+    left: 0 !important;
+    top: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none; }
+    .fin-dark-theme .igx-calendar__aria-off-screen:focus {
+      outline: none; }
   .fin-dark-theme {
     --igx-card-border-radius: 4px;
     --igx-card-resting-elevation: 2;
@@ -12402,14 +12468,14 @@ body {
   .fin-dark-theme {
     --data-chart-title-text-color: rgba(255, 255, 255, 0.87);
     --data-chart-subtitle-text-color: rgba(255, 255, 255, 0.54);
-    --data-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --data-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --data-chart-plot-area-background: #333; }
   .fin-dark-theme {
-    --ring-series-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --ring-series-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --ring-series-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --ring-series-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .fin-dark-theme {
     --linear-gauge-backing-brush: #262626;
     --linear-gauge-backing-outline: #1f1f1f;
@@ -12417,8 +12483,8 @@ body {
     --linear-gauge-minor-tick-brush: rgba(255, 255, 255, 0.62);
     --linear-gauge-needle-brush: #09f;
     --linear-gauge-needle-outline: #333;
-    --linear-gauge-range-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --linear-gauge-range-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --linear-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --linear-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --linear-gauge-scale-brush: #1f1f1f;
     --linear-gauge-tick-brush: rgba(255, 255, 255, 0.62);
     --linear-gauge-scale-outline: #1f1f1f; }
@@ -12429,49 +12495,49 @@ body {
     --radial-gauge-minor-tick-brush: rgba(255, 255, 255, 0.62);
     --radial-gauge-needle-brush: #09f;
     --radial-gauge-needle-outline: #333;
-    --radial-gauge-range-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --radial-gauge-range-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --radial-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --radial-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --radial-gauge-scale-brush: #1f1f1f;
     --radial-gauge-tick-brush: rgba(255, 255, 255, 0.62);
     --radial-gauge-needle-pivot-brush: #09f;
     --radial-gauge-needle-pivot-outline: #333; }
   .fin-dark-theme {
-    --financial-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-indicator-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-indicator-negative-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-negative-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-negative-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-thickness: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-trend-line-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-volume-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-volume-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --financial-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-indicator-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-indicator-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-thickness: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-volume-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-volume-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .fin-dark-theme {
     --bullet-graph-backing-brush: #262626;
     --bullet-graph-backing-outline: #1f1f1f;
     --bullet-graph-font-brush: rgba(255, 255, 255, 0.62);
     --bullet-graph-minor-tick-brush: rgba(255, 255, 255, 0.62);
-    --bullet-graph-range-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --bullet-graph-range-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --bullet-graph-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --bullet-graph-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --bullet-graph-scale-background-brush: #09f;
     --bullet-graph-scale-background-outline: #333;
     --bullet-graph-target-value-brush: rgba(255, 255, 255, 0.74);
     --bullet-graph-tick-brush: rgba(255, 255, 255, 0.62);
     --bullet-graph-value-brush: rgba(255, 255, 255, 0.74); }
   .fin-dark-theme {
-    --category-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-negative-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-negative-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --category-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --category-chart-title-text-color: white;
     --category-chart-subtitle-text-color: white;
-    --category-chart-trend-line-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --category-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --category-chart-x-axis-label-text-color: white;
     --category-chart-x-axis-tick-stroke: white;
     --category-chart-x-axis-title-text-color: white;
@@ -12481,21 +12547,21 @@ body {
   .fin-dark-theme {
     --geo-map-plot-area-background: #333; }
   .fin-dark-theme {
-    --pie-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --pie-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --pie-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --pie-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .fin-dark-theme {
     --sparkline-brush: #09f; }
   .fin-dark-theme {
-    --funnel-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --funnel-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --funnel-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --funnel-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .fin-dark-theme {
     --shape-chart-title-text-color: rgba(255, 255, 255, 0.87);
     --shape-chart-subtitle-text-color: rgba(255, 255, 255, 0.54);
-    --shape-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-trend-line-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --shape-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .fin-dark-theme {
     --igx-checkbox-border-radius: 2px;
     --igx-checkbox-border-radius-ripple: 24px;
@@ -13251,7 +13317,7 @@ body {
     .fin-dark-theme .igx-chip__ghost--compact .igx-chip__content {
       padding: 0 0.125rem; }
   .fin-dark-theme {
-    --igx-column-actions-background-color: transparent;
+    --igx-column-actions-background-color: #222;
     --igx-column-actions-title-color: #09f; }
   .fin-dark-theme .igx-column-actions {
     display: -ms-flexbox;
@@ -13259,6 +13325,7 @@ body {
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
     background: var(--igx-column-actions-background-color);
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     width: 100%;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -14055,28 +14122,25 @@ body {
     -ms-flex-pack: center;
         justify-content: center;
     padding: 0 1.5rem;
-    padding-right: 0;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
     min-width: calc(1.5rem + 1.5rem);
     background: inherit;
     z-index: 4;
-    cursor: move; }
+    cursor: move;
+    border-right: 1px solid transparent; }
     .fin-dark-theme .igx-grid__drag-indicator .igx-icon, .fin-dark-theme .igx-grid__drag-indicator .igx-icon--inactive, .fin-dark-theme .igx-grid__drag-indicator .igx-icon--success, .fin-dark-theme .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1.5rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__drag-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__drag-indicator {
     padding: 0 1rem;
-    min-width: calc(1.5rem + 1rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 1rem); }
   .fin-dark-theme .igx-grid--compact .igx-grid__drag-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__drag-indicator {
     padding: 0 0.75rem;
-    min-width: calc(1.5rem + 0.75rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 0.75rem); }
   .fin-dark-theme .igx-grid__drag-indicator--header {
     border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
-  .fin-dark-theme .igx-grid__hierarchical-expander + .igx-grid__drag-indicator, .fin-dark-theme .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-    padding-left: 0;
-    min-width: 1.5rem; }
   .fin-dark-theme .igx-grid__drag-indicator--off {
     color: var(--igx-grid-row-drag-color); }
   .fin-dark-theme .igx-grid__tr--drag {
@@ -14471,7 +14535,6 @@ body {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
     background: inherit;
     z-index: 4; }
   .fin-dark-theme .igx-grid__cbx-padding {
@@ -14628,10 +14691,19 @@ body {
     outline-style: none;
     border-bottom: 1px solid var(--igx-grid-row-border-color);
     min-height: 3.125rem; }
+    .fin-dark-theme .igx-grid__group-row .igx-grid__drag-indicator {
+      cursor: default;
+      -ms-flex-positive: 0;
+          flex-grow: 0; }
   .fin-dark-theme .igx-grid__group-row--active {
     background: var(--igx-grid-group-row-selected-background); }
     .fin-dark-theme .igx-grid__group-row--active .igx-grid__grouping-indicator {
       color: var(--igx-grid-expand-icon-color); }
+    .fin-dark-theme .igx-grid__group-row--active .igx-grid__drag-indicator {
+      border: 1px solid var(--igx-grid-cell-active-border-color);
+      border-left-width: 0;
+      border-right-width: 0;
+      box-shadow: inset 1px 0 0 0 var(--igx-grid-cell-active-border-color); }
     .fin-dark-theme .igx-grid__group-row--active:hover {
       background: var(--igx-grid-group-row-selected-background); }
   .fin-dark-theme .igx-grid--cosy .igx-grid__group-row, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row {
@@ -14701,18 +14773,18 @@ body {
     padding-left: 0.75rem;
     min-height: 2rem; }
   .fin-dark-theme .igx-grid__row-indentation {
-    background: transparent;
-    z-index: 1;
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    position: relative;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    border-right: 1px solid transparent; }
+    border-right: 1px solid var(--igx-grid-header-border-color);
+    background: inherit;
+    z-index: 1; }
     .fin-dark-theme .igx-grid__row-indentation::after {
       content: '';
       position: absolute;
@@ -14822,8 +14894,8 @@ body {
         align-items: center;
     z-index: 1;
     cursor: pointer;
-    padding-left: 1.5rem;
     padding-right: 0.75rem;
+    margin-left: 1.5rem;
     min-height: 3.125rem; }
     .fin-dark-theme .igx-grid__grouping-indicator igx-icon {
       color: var(--igx-grid-expand-icon-color);
@@ -14833,11 +14905,11 @@ body {
       .fin-dark-theme .igx-grid__grouping-indicator:hover igx-icon, .fin-dark-theme .igx-grid__grouping-indicator:focus igx-icon {
         color: var(--igx-grid-expand-icon-hover-color); }
   .fin-dark-theme .igx-grid--cosy .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__grouping-indicator {
-    padding-left: 1rem;
-    min-height: 2.5rem; }
+    min-height: 2.5rem;
+    margin-left: 1rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__grouping-indicator {
-    padding-left: 0.75rem;
-    min-height: 2rem; }
+    min-height: 2rem;
+    margin-left: 0.75rem; }
   .fin-dark-theme .igx-grid__header-indentation {
     position: relative;
     padding-right: 1.5rem;
@@ -14870,114 +14942,124 @@ body {
     .fin-dark-theme .igx-grid--compact .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn, .igx-grid--compact .fin-dark-theme .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn {
       top: 0.25rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-1 {
-    background: inherit;
     padding-left: calc(1.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-1 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-1, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-1 {
     padding-left: calc(1rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+    padding-left: 1rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-1, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-1 {
     padding-left: calc(0.75rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-1, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-1 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 0.75rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-2 {
-    background: inherit;
     padding-left: calc(3rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-2 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-2, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-2 {
     padding-left: calc(2rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+    padding-left: 2rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-2, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-2 {
     padding-left: calc(1.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-2, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-2 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-3 {
-    background: inherit;
     padding-left: calc(4.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-3 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-3, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-3 {
     padding-left: calc(3rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+    padding-left: 3rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-3, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-3 {
     padding-left: calc(2.25rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-3, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-3 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 2.25rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-4 {
-    background: inherit;
     padding-left: calc(6rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-4 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-4, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-4 {
     padding-left: calc(4rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+    padding-left: 4rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-4, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-4 {
     padding-left: calc(3rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-4, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-4 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-5 {
-    background: inherit;
     padding-left: calc(7.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-5 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-5, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-5 {
     padding-left: calc(5rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+    padding-left: 5rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-5, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-5 {
     padding-left: calc(3.75rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-5, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-5 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 3.75rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-6 {
-    background: inherit;
     padding-left: calc(9rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-6 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 9rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-6, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-6 {
     padding-left: calc(6rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+    padding-left: 6rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-6, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-6 {
     padding-left: calc(4.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-6, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-6 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-7 {
-    background: inherit;
     padding-left: calc(10.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-7 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 10.5rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-7, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-7 {
     padding-left: calc(7rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+    padding-left: 7rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-7, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-7 {
     padding-left: calc(5.25rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-7, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-7 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 5.25rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-8 {
-    background: inherit;
     padding-left: calc(12rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-8 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 12rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-8, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-8 {
     padding-left: calc(8rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+    padding-left: 8rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-8, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-8 {
     padding-left: calc(6rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-8, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-8 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-9 {
-    background: inherit;
     padding-left: calc(13.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-9 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 13.5rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-9, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-9 {
     padding-left: calc(9rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+    padding-left: 9rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-9, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-9 {
     padding-left: calc(6.75rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-9, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-9 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 6.75rem; }
   .fin-dark-theme .igx-grid__row-indentation--level-10 {
-    background: inherit;
     padding-left: calc(15rem + 1.5rem); }
-  .fin-dark-theme .igx-grid__group-row--padding-level-10 {
+  .fin-dark-theme .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 15rem; }
   .fin-dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-10, .igx-grid--cosy .fin-dark-theme .igx-grid__row-indentation--level-10 {
     padding-left: calc(10rem + 1.5rem); }
+  .fin-dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--cosy .fin-dark-theme .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+    padding-left: 10rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__row-indentation--level-10, .igx-grid--compact .fin-dark-theme .igx-grid__row-indentation--level-10 {
     padding-left: calc(7.5rem + 1.5rem); }
-  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-10, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-10 {
+  .fin-dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--compact .fin-dark-theme .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   .fin-dark-theme .igx-grid__tree-cell--padding-level-1 {
     padding-left: 1.5rem; }
@@ -15190,7 +15272,7 @@ body {
       width: 18px;
       height: 18px;
       font-size: 18px; }
-    .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge, .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--info, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--success, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--error, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+    .fin-dark-theme .igx-grid__filtering-cell-indicator .igx-badge, .fin-dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge {
       /* start of IE vertical alignment fix */
       top: 50%;
       -ms-transform: translateY(-50%);
@@ -15346,8 +15428,7 @@ body {
         justify-content: center;
     cursor: pointer;
     z-index: 3;
-    color: var(--igx-grid-expand-icon-color);
-    border-right: 1px solid transparent; }
+    color: var(--igx-grid-expand-icon-color); }
     .fin-dark-theme .igx-grid__hierarchical-expander:focus, .fin-dark-theme .igx-grid__hierarchical-expander--empty:focus {
       outline: none; }
       .fin-dark-theme .igx-grid__hierarchical-expander:focus igx-icon, .fin-dark-theme .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -15386,7 +15467,6 @@ body {
     min-height: 2.5rem; }
   .fin-dark-theme .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon, .igx-grid--compact .fin-dark-theme .igx-grid__hierarchical-expander--push igx-icon {
     min-height: 2rem; }
-  .fin-dark-theme .igx-grid__hierarchical-expander--no-border,
   .fin-dark-theme .igx-grid__header-indentation--no-border {
     border-right: 1px solid transparent; }
   .fin-dark-theme .igx-grid__hierarchical-indent {
@@ -15430,12 +15510,14 @@ body {
     -ms-flex-align: center;
         align-items: center; }
   .fin-dark-theme .igx-excel-filter__icon, .fin-dark-theme .igx-excel-filter__icon--filtered {
+    display: -ms-flexbox;
+    display: flex;
     cursor: pointer; }
-    .fin-dark-theme .igx-icon.igx-excel-filter__icon, .fin-dark-theme .igx-icon.igx-excel-filter__icon--filtered {
+    .fin-dark-theme .igx-excel-filter__icon igx-icon, .fin-dark-theme .igx-excel-filter__icon--filtered igx-icon {
       width: 0.9375rem;
       height: 0.9375rem;
       font-size: 0.9375rem; }
-  .fin-dark-theme .igx-icon.igx-excel-filter__icon--filtered {
+  .fin-dark-theme .igx-excel-filter__icon--filtered igx-icon {
     color: #72da67; }
   .fin-dark-theme .igx-excel-filter__menu {
     display: -ms-flexbox;
@@ -16078,6 +16160,8 @@ body {
     margin-right: 0.5rem; }
   .fin-dark-theme .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
     color: var(--igx-grid-sorted-header-icon-color); }
+  .fin-dark-theme .igx-grid__tr-action:last-of-type {
+    border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
   .fin-dark-theme {
     --igx-grid-summary-background-color: inherit;
     --igx-grid-summary-focus-background-color: rgba(255, 255, 255, 0.04);
@@ -16171,14 +16255,15 @@ body {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-grid-row: 1;
     grid-row: 1;
     font-size: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     background: var(--igx-grid-toolbar-background-color);
-    height: 3.625rem;
+    height: auto;
+    min-height: 3.625rem;
     position: relative;
     padding: 0 1rem 0 1.5rem; }
     .fin-dark-theme .igx-grid-toolbar .igx-button--outlined, .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--outlined, .fin-dark-theme .igx-grid-toolbar--compact .igx-button--outlined,
@@ -16191,7 +16276,7 @@ body {
     .fin-dark-theme .igx-grid-toolbar .igx-button--icon,
     .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--icon,
     .fin-dark-theme .igx-grid-toolbar--compact .igx-button--icon {
-      margin-left: 0.5rem; }
+      margin-left: 1rem; }
     .fin-dark-theme .igx-grid-toolbar .igx-grid-toolbar__button-space, .fin-dark-theme .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, .fin-dark-theme .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
       display: -ms-flexbox;
       display: flex;
@@ -16227,23 +16312,29 @@ body {
         .fin-dark-theme .igx-grid-toolbar[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, .fin-dark-theme .igx-grid-toolbar--cosy[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, .fin-dark-theme .igx-grid-toolbar--compact[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child {
           margin-left: 0; }
   .fin-dark-theme .igx-grid-toolbar--cosy {
-    height: 3.25rem;
+    min-height: 3.25rem;
     padding: 0 0.75rem 0 1rem; }
+    .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--outlined,
+    .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--raised,
+    .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--flat,
+    .fin-dark-theme .igx-grid-toolbar--cosy .igx-button--icon {
+      margin-left: 0.75rem; }
   .fin-dark-theme .igx-grid-toolbar--compact {
-    height: 2.75rem;
+    min-height: 2.75rem;
     padding: 0 0.5rem 0 0.75rem; }
-  .fin-dark-theme .igx-grid__caption {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
+    .fin-dark-theme .igx-grid-toolbar--compact .igx-button--outlined,
+    .fin-dark-theme .igx-grid-toolbar--compact .igx-button--raised,
+    .fin-dark-theme .igx-grid-toolbar--compact .igx-button--flat,
+    .fin-dark-theme .igx-grid-toolbar--compact .igx-button--icon {
+      margin-left: 0.5rem; }
   .fin-dark-theme .igx-grid-toolbar__title {
     color: var(--igx-grid-toolbar-title-text-color);
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 40ch; }
   .fin-dark-theme .igx-grid-toolbar__custom-content {
     display: -ms-flexbox;
     display: flex;
@@ -16254,15 +16345,8 @@ body {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    .fin-dark-theme .igx-grid-toolbar__actions > div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   .fin-dark-theme .igx-grid-toolbar__progress-bar {
     position: absolute;
     width: 100%;
@@ -16274,6 +16358,8 @@ body {
     background: var(--igx-grid-toolbar-background-color); }
     .fin-dark-theme .igx-grid-toolbar__progress-bar igx-linear-bar > * {
       border-radius: 0; }
+      .fin-dark-theme .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+        background: #72da67; }
   .fin-dark-theme .igx-grid-toolbar__adv-filter--filtered {
     border-color: #72da67 !important; }
   .fin-dark-theme .igx-grid-toolbar__dropdown {
@@ -16282,7 +16368,8 @@ body {
     list-style: none;
     background: var(--igx-grid-toolbar-dropdown-background);
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   .fin-dark-theme .igx-grid-toolbar__dd-list-items {
     cursor: pointer;
     position: relative;
@@ -18386,7 +18473,6 @@ body {
     background: var(--igx-slider-label-background-color);
     opacity: 0;
     border-color: var(--igx-slider-label-background-color) transparent transparent;
-    transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: -1; }
     .fin-dark-theme .igx-slider__label-from .label::after, .igx-slider__label-from .fin-dark-theme .label::after, .fin-dark-theme .igx-slider__label-to .label::after, .igx-slider__label-to .fin-dark-theme .label::after {
       content: '';
@@ -18467,7 +18553,7 @@ body {
         transform: scale(1.2) !important; }
   .fin-dark-theme .igx-slider__label-from--active .label, .igx-slider__label-from--active .fin-dark-theme .label, .fin-dark-theme .igx-slider__label-to--active .label, .igx-slider__label-to--active .fin-dark-theme .label {
     opacity: 1; }
-  .fin-dark-theme .igx-slider__thumb-from--active, .fin-dark-theme .igx-slider__label-from--active, .fin-dark-theme .igx-slider__thumb-to--active, .fin-dark-theme .igx-slider__label-to--active {
+  .fin-dark-theme .igx-slider__label--pressed {
     z-index: 1; }
   .fin-dark-theme {
     --igx-snackbar-border-radius: 4px;
@@ -19326,7 +19412,7 @@ body {
     --igx-badge-background-color: #09f;
     --igx-badge-border-width: 0;
     --igx-badge-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08); }
-  .dark-theme .igx-badge, .dark-theme .igx-badge__circle, .dark-theme .igx-badge__circle--info, .dark-theme .igx-badge__circle--success, .dark-theme .igx-badge__circle--warning, .dark-theme .igx-badge__circle--error {
+  .dark-theme .igx-badge {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
@@ -19338,8 +19424,15 @@ body {
     font-size: 0.6875rem;
     font-weight: normal;
     color: black;
-    line-height: 1; }
-    .dark-theme .igx-badge igx-icon, .dark-theme .igx-badge__circle igx-icon, .dark-theme .igx-badge__circle--info igx-icon, .dark-theme .igx-badge__circle--success igx-icon, .dark-theme .igx-badge__circle--warning igx-icon, .dark-theme .igx-badge__circle--error igx-icon {
+    line-height: 1;
+    background: #09f;
+    border-radius: 11px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08);
+    border-width: 0;
+    border-color: #fff;
+    border-style: solid;
+    overflow: hidden; }
+    .dark-theme .igx-badge igx-icon {
       display: -ms-inline-flexbox;
       display: inline-flex;
       -ms-flex-pack: center;
@@ -19351,25 +19444,16 @@ body {
       font-size: 0.75rem;
       font-weight: normal;
       color: black; }
-  .dark-theme .igx-badge__circle-value {
+  .dark-theme .igx-badge__value {
     white-space: nowrap;
     padding: 0.25rem; }
-  .dark-theme .igx-badge__circle {
-    border-radius: 11px;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08);
-    border-width: 0;
-    border-color: #fff;
-    border-style: solid;
-    overflow: hidden; }
-  .dark-theme .igx-badge__circle--default {
-    background: #09f; }
-  .dark-theme .igx-badge__circle--success {
+  .dark-theme .igx-badge--success {
     background: #4eb862; }
-  .dark-theme .igx-badge__circle--info {
+  .dark-theme .igx-badge--info {
     background: #1377d5; }
-  .dark-theme .igx-badge__circle--warning {
+  .dark-theme .igx-badge--warning {
     background: #fbb13c; }
-  .dark-theme .igx-badge__circle--error {
+  .dark-theme .igx-badge--error {
     background: #ff134a; }
   .dark-theme .igx-badge--hidden {
     visibility: hidden; }
@@ -19983,6 +20067,8 @@ body {
     position: relative; }
     .dark-theme .igx-calendar-picker div {
       text-align: center; }
+    .dark-theme .igx-calendar-picker:focus {
+      outline: none; }
   .dark-theme .igx-calendar-picker__dates {
     display: -ms-flexbox;
     display: flex;
@@ -20135,9 +20221,12 @@ body {
   .dark-theme .igx-calendar__body-row--wrap {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-  .dark-theme .igx-calendar__body-column .igx-calendar__year, .dark-theme .igx-calendar__body-column .igx-calendar__year--current {
-    -ms-flex: 1 0 0px;
-        flex: 1 0 0; }
+  .dark-theme .igx-calendar__body-column {
+    padding: 0;
+    margin: 0; }
+    .dark-theme .igx-calendar__body-column .igx-calendar__year, .dark-theme .igx-calendar__body-column .igx-calendar__year--current {
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0; }
   .dark-theme .igx-calendar__label, .dark-theme .igx-calendar__date, .dark-theme .igx-calendar__date--inactive, .dark-theme .igx-calendar__date--selected, .dark-theme .igx-calendar__date--current, .dark-theme .igx-calendar__date--weekend, .dark-theme .igx-calendar__date--special, .dark-theme .igx-calendar__date--disabled, .dark-theme .igx-calendar__year, .dark-theme .igx-calendar__year--current, .dark-theme .igx-calendar__month, .dark-theme .igx-calendar__month--current {
     position: relative;
     display: -ms-flexbox;
@@ -20147,7 +20236,6 @@ body {
     -ms-flex-align: center;
         align-items: center;
     color: rgba(255, 255, 255, 0.87);
-    cursor: pointer;
     outline: none; }
   .dark-theme .igx-calendar__date:hover .igx-calendar__date-content::after, .dark-theme .igx-calendar__date:focus .igx-calendar__date-content::after {
     background: rgba(255, 255, 255, 0.08); }
@@ -20314,6 +20402,23 @@ body {
       z-index: -1; }
   .dark-theme .igx-calendar__date--hidden .igx-calendar__date-content {
     visibility: hidden; }
+  .dark-theme .igx-calendar__aria-off-screen {
+    position: absolute !important;
+    border: none !important;
+    height: 1px !important;
+    width: 1px !important;
+    left: 0 !important;
+    top: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    pointer-events: none; }
+    .dark-theme .igx-calendar__aria-off-screen:focus {
+      outline: none; }
   .dark-theme {
     --igx-card-border-radius: 4px;
     --igx-card-resting-elevation: 2;
@@ -20796,14 +20901,14 @@ body {
   .dark-theme {
     --data-chart-title-text-color: rgba(255, 255, 255, 0.87);
     --data-chart-subtitle-text-color: rgba(255, 255, 255, 0.54);
-    --data-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --data-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --data-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --data-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --data-chart-plot-area-background: #333; }
   .dark-theme {
-    --ring-series-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --ring-series-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --ring-series-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --ring-series-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .dark-theme {
     --linear-gauge-backing-brush: #262626;
     --linear-gauge-backing-outline: #1f1f1f;
@@ -20811,8 +20916,8 @@ body {
     --linear-gauge-minor-tick-brush: rgba(255, 255, 255, 0.62);
     --linear-gauge-needle-brush: #09f;
     --linear-gauge-needle-outline: #333;
-    --linear-gauge-range-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --linear-gauge-range-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --linear-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --linear-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --linear-gauge-scale-brush: #1f1f1f;
     --linear-gauge-tick-brush: rgba(255, 255, 255, 0.62);
     --linear-gauge-scale-outline: #1f1f1f; }
@@ -20823,49 +20928,49 @@ body {
     --radial-gauge-minor-tick-brush: rgba(255, 255, 255, 0.62);
     --radial-gauge-needle-brush: #09f;
     --radial-gauge-needle-outline: #333;
-    --radial-gauge-range-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --radial-gauge-range-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --radial-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --radial-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --radial-gauge-scale-brush: #1f1f1f;
     --radial-gauge-tick-brush: rgba(255, 255, 255, 0.62);
     --radial-gauge-needle-pivot-brush: #09f;
     --radial-gauge-needle-pivot-outline: #333; }
   .dark-theme {
-    --financial-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-indicator-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-indicator-negative-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-negative-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-negative-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-overlay-thickness: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-trend-line-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-volume-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --financial-chart-volume-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --financial-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-indicator-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-indicator-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-overlay-thickness: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-volume-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --financial-chart-volume-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .dark-theme {
     --bullet-graph-backing-brush: #262626;
     --bullet-graph-backing-outline: #1f1f1f;
     --bullet-graph-font-brush: rgba(255, 255, 255, 0.62);
     --bullet-graph-minor-tick-brush: rgba(255, 255, 255, 0.62);
-    --bullet-graph-range-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --bullet-graph-range-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --bullet-graph-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --bullet-graph-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --bullet-graph-scale-background-brush: #09f;
     --bullet-graph-scale-background-outline: #333;
     --bullet-graph-target-value-brush: rgba(255, 255, 255, 0.74);
     --bullet-graph-tick-brush: rgba(255, 255, 255, 0.62);
     --bullet-graph-value-brush: rgba(255, 255, 255, 0.74); }
   .dark-theme {
-    --category-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-negative-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --category-chart-negative-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --category-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --category-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --category-chart-title-text-color: white;
     --category-chart-subtitle-text-color: white;
-    --category-chart-trend-line-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+    --category-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
     --category-chart-x-axis-label-text-color: white;
     --category-chart-x-axis-tick-stroke: white;
     --category-chart-x-axis-title-text-color: white;
@@ -20875,21 +20980,21 @@ body {
   .dark-theme {
     --geo-map-plot-area-background: #333; }
   .dark-theme {
-    --pie-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --pie-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --pie-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --pie-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .dark-theme {
     --sparkline-brush: #09f; }
   .dark-theme {
-    --funnel-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --funnel-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --funnel-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --funnel-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .dark-theme {
     --shape-chart-title-text-color: rgba(255, 255, 255, 0.87);
     --shape-chart-subtitle-text-color: rgba(255, 255, 255, 0.54);
-    --shape-chart-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-marker-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-marker-outlines: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-    --shape-chart-trend-line-brushes: #09f, #72da67, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+    --shape-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+    --shape-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
   .dark-theme {
     --igx-checkbox-border-radius: 2px;
     --igx-checkbox-border-radius-ripple: 24px;
@@ -21597,14 +21702,15 @@ body {
     .dark-theme .igx-chip__ghost--compact .igx-chip__content {
       padding: 0 0.125rem; }
   .dark-theme {
-    --igx-column-actions-background-color: transparent;
+    --igx-column-actions-background-color: #222;
     --igx-column-actions-title-color: #09f; }
   .dark-theme .igx-column-actions {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: column nowrap;
         flex-flow: column nowrap;
-    background: transparent;
+    background: #222;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     width: 100%;
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
@@ -22401,28 +22507,25 @@ body {
     -ms-flex-pack: center;
         justify-content: center;
     padding: 0 1.5rem;
-    padding-right: 0;
+    -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
     min-width: calc(1.5rem + 1.5rem);
     background: inherit;
     z-index: 4;
-    cursor: move; }
+    cursor: move;
+    border-right: 1px solid transparent; }
     .dark-theme .igx-grid__drag-indicator .igx-icon, .dark-theme .igx-grid__drag-indicator .igx-icon--inactive, .dark-theme .igx-grid__drag-indicator .igx-icon--success, .dark-theme .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
       font-size: 1.5rem; }
   .dark-theme .igx-grid--cosy .igx-grid__drag-indicator, .igx-grid--cosy .dark-theme .igx-grid__drag-indicator {
     padding: 0 1rem;
-    min-width: calc(1.5rem + 1rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 1rem); }
   .dark-theme .igx-grid--compact .igx-grid__drag-indicator, .igx-grid--compact .dark-theme .igx-grid__drag-indicator {
     padding: 0 0.75rem;
-    min-width: calc(1.5rem + 0.75rem);
-    padding-right: 0; }
+    min-width: calc(1.5rem + 0.75rem); }
   .dark-theme .igx-grid__drag-indicator--header {
     border-right: 1px solid rgba(255, 255, 255, 0.08); }
-  .dark-theme .igx-grid__hierarchical-expander + .igx-grid__drag-indicator, .dark-theme .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-    padding-left: 0;
-    min-width: 1.5rem; }
   .dark-theme .igx-grid__drag-indicator--off {
     color: rgba(255, 255, 255, 0.08); }
   .dark-theme .igx-grid__tr--drag {
@@ -22817,7 +22920,6 @@ body {
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    border-right: 1px solid rgba(255, 255, 255, 0.08);
     background: inherit;
     z-index: 4; }
   .dark-theme .igx-grid__cbx-padding {
@@ -22974,10 +23076,19 @@ body {
     outline-style: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     min-height: 3.125rem; }
+    .dark-theme .igx-grid__group-row .igx-grid__drag-indicator {
+      cursor: default;
+      -ms-flex-positive: 0;
+          flex-grow: 0; }
   .dark-theme .igx-grid__group-row--active {
     background: #333333; }
     .dark-theme .igx-grid__group-row--active .igx-grid__grouping-indicator {
       color: rgba(255, 255, 255, 0.54); }
+    .dark-theme .igx-grid__group-row--active .igx-grid__drag-indicator {
+      border: 1px solid #72da67;
+      border-left-width: 0;
+      border-right-width: 0;
+      box-shadow: inset 1px 0 0 0 #72da67; }
     .dark-theme .igx-grid__group-row--active:hover {
       background: #333333; }
   .dark-theme .igx-grid--cosy .igx-grid__group-row, .igx-grid--cosy .dark-theme .igx-grid__group-row {
@@ -23047,18 +23158,18 @@ body {
     padding-left: 0.75rem;
     min-height: 2rem; }
   .dark-theme .igx-grid__row-indentation {
-    background: transparent;
-    z-index: 1;
+    position: relative;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    position: relative;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-    border-right: 1px solid transparent; }
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    background: inherit;
+    z-index: 1; }
     .dark-theme .igx-grid__row-indentation::after {
       content: '';
       position: absolute;
@@ -23168,8 +23279,8 @@ body {
         align-items: center;
     z-index: 1;
     cursor: pointer;
-    padding-left: 1.5rem;
     padding-right: 0.75rem;
+    margin-left: 1.5rem;
     min-height: 3.125rem; }
     .dark-theme .igx-grid__grouping-indicator igx-icon {
       color: rgba(255, 255, 255, 0.54);
@@ -23179,11 +23290,11 @@ body {
       .dark-theme .igx-grid__grouping-indicator:hover igx-icon, .dark-theme .igx-grid__grouping-indicator:focus igx-icon {
         color: #09f; }
   .dark-theme .igx-grid--cosy .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__grouping-indicator {
-    padding-left: 1rem;
-    min-height: 2.5rem; }
+    min-height: 2.5rem;
+    margin-left: 1rem; }
   .dark-theme .igx-grid--compact .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__grouping-indicator {
-    padding-left: 0.75rem;
-    min-height: 2rem; }
+    min-height: 2rem;
+    margin-left: 0.75rem; }
   .dark-theme .igx-grid__header-indentation {
     position: relative;
     padding-right: 1.5rem;
@@ -23216,114 +23327,124 @@ body {
     .dark-theme .igx-grid--compact .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn, .igx-grid--compact .dark-theme .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn {
       top: 0.25rem; }
   .dark-theme .igx-grid__row-indentation--level-1 {
-    background: inherit;
     padding-left: calc(1.5rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-1 {
+  .dark-theme .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-1, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-1 {
     padding-left: calc(1rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+    padding-left: 1rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-1, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-1 {
     padding-left: calc(0.75rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-1, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-1 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
     padding-left: 0.75rem; }
   .dark-theme .igx-grid__row-indentation--level-2 {
-    background: inherit;
     padding-left: calc(3rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-2 {
+  .dark-theme .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-2, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-2 {
     padding-left: calc(2rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+    padding-left: 2rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-2, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-2 {
     padding-left: calc(1.5rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-2, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-2 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
     padding-left: 1.5rem; }
   .dark-theme .igx-grid__row-indentation--level-3 {
-    background: inherit;
     padding-left: calc(4.5rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-3 {
+  .dark-theme .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-3, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-3 {
     padding-left: calc(3rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+    padding-left: 3rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-3, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-3 {
     padding-left: calc(2.25rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-3, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-3 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
     padding-left: 2.25rem; }
   .dark-theme .igx-grid__row-indentation--level-4 {
-    background: inherit;
     padding-left: calc(6rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-4 {
+  .dark-theme .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-4, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-4 {
     padding-left: calc(4rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+    padding-left: 4rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-4, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-4 {
     padding-left: calc(3rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-4, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-4 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
     padding-left: 3rem; }
   .dark-theme .igx-grid__row-indentation--level-5 {
-    background: inherit;
     padding-left: calc(7.5rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-5 {
+  .dark-theme .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-5, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-5 {
     padding-left: calc(5rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+    padding-left: 5rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-5, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-5 {
     padding-left: calc(3.75rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-5, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-5 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
     padding-left: 3.75rem; }
   .dark-theme .igx-grid__row-indentation--level-6 {
-    background: inherit;
     padding-left: calc(9rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-6 {
+  .dark-theme .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 9rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-6, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-6 {
     padding-left: calc(6rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+    padding-left: 6rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-6, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-6 {
     padding-left: calc(4.5rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-6, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-6 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
     padding-left: 4.5rem; }
   .dark-theme .igx-grid__row-indentation--level-7 {
-    background: inherit;
     padding-left: calc(10.5rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-7 {
+  .dark-theme .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 10.5rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-7, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-7 {
     padding-left: calc(7rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+    padding-left: 7rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-7, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-7 {
     padding-left: calc(5.25rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-7, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-7 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
     padding-left: 5.25rem; }
   .dark-theme .igx-grid__row-indentation--level-8 {
-    background: inherit;
     padding-left: calc(12rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-8 {
+  .dark-theme .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 12rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-8, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-8 {
     padding-left: calc(8rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+    padding-left: 8rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-8, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-8 {
     padding-left: calc(6rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-8, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-8 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
     padding-left: 6rem; }
   .dark-theme .igx-grid__row-indentation--level-9 {
-    background: inherit;
     padding-left: calc(13.5rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-9 {
+  .dark-theme .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 13.5rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-9, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-9 {
     padding-left: calc(9rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+    padding-left: 9rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-9, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-9 {
     padding-left: calc(6.75rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-9, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-9 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
     padding-left: 6.75rem; }
   .dark-theme .igx-grid__row-indentation--level-10 {
-    background: inherit;
     padding-left: calc(15rem + 1.5rem); }
-  .dark-theme .igx-grid__group-row--padding-level-10 {
+  .dark-theme .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 15rem; }
   .dark-theme .igx-grid--cosy .igx-grid__row-indentation--level-10, .igx-grid--cosy .dark-theme .igx-grid__row-indentation--level-10 {
     padding-left: calc(10rem + 1.5rem); }
+  .dark-theme .igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+    padding-left: 10rem; }
   .dark-theme .igx-grid--compact .igx-grid__row-indentation--level-10, .igx-grid--compact .dark-theme .igx-grid__row-indentation--level-10 {
     padding-left: calc(7.5rem + 1.5rem); }
-  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-10, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-10 {
+  .dark-theme .igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
     padding-left: 7.5rem; }
   .dark-theme .igx-grid__tree-cell--padding-level-1 {
     padding-left: 1.5rem; }
@@ -23536,7 +23657,7 @@ body {
       width: 18px;
       height: 18px;
       font-size: 18px; }
-    .dark-theme .igx-grid__filtering-cell-indicator .igx-badge, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge, .dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, .dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--info, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, .dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--success, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, .dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, .dark-theme .igx-grid__filtering-cell-indicator .igx-badge__circle--error, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+    .dark-theme .igx-grid__filtering-cell-indicator .igx-badge, .dark-theme .igx-grid__filtering-cell-indicator--hidden .igx-badge {
       /* start of IE vertical alignment fix */
       top: 50%;
       -ms-transform: translateY(-50%);
@@ -23692,8 +23813,7 @@ body {
         justify-content: center;
     cursor: pointer;
     z-index: 3;
-    color: rgba(255, 255, 255, 0.54);
-    border-right: 1px solid transparent; }
+    color: rgba(255, 255, 255, 0.54); }
     .dark-theme .igx-grid__hierarchical-expander:focus, .dark-theme .igx-grid__hierarchical-expander--empty:focus {
       outline: none; }
       .dark-theme .igx-grid__hierarchical-expander:focus igx-icon, .dark-theme .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -23732,7 +23852,6 @@ body {
     min-height: 2.5rem; }
   .dark-theme .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon, .igx-grid--compact .dark-theme .igx-grid__hierarchical-expander--push igx-icon {
     min-height: 2rem; }
-  .dark-theme .igx-grid__hierarchical-expander--no-border,
   .dark-theme .igx-grid__header-indentation--no-border {
     border-right: 1px solid transparent; }
   .dark-theme .igx-grid__hierarchical-indent {
@@ -23776,12 +23895,14 @@ body {
     -ms-flex-align: center;
         align-items: center; }
   .dark-theme .igx-excel-filter__icon, .dark-theme .igx-excel-filter__icon--filtered {
+    display: -ms-flexbox;
+    display: flex;
     cursor: pointer; }
-    .dark-theme .igx-icon.igx-excel-filter__icon, .dark-theme .igx-icon.igx-excel-filter__icon--filtered {
+    .dark-theme .igx-excel-filter__icon igx-icon, .dark-theme .igx-excel-filter__icon--filtered igx-icon {
       width: 0.9375rem;
       height: 0.9375rem;
       font-size: 0.9375rem; }
-  .dark-theme .igx-icon.igx-excel-filter__icon--filtered {
+  .dark-theme .igx-excel-filter__icon--filtered igx-icon {
     color: #72da67; }
   .dark-theme .igx-excel-filter__menu {
     display: -ms-flexbox;
@@ -24424,6 +24545,8 @@ body {
     margin-right: 0.5rem; }
   .dark-theme .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
     color: #72da67; }
+  .dark-theme .igx-grid__tr-action:last-of-type {
+    border-right: 1px solid rgba(255, 255, 255, 0.08); }
   .dark-theme {
     --igx-grid-summary-background-color: inherit;
     --igx-grid-summary-focus-background-color: rgba(255, 255, 255, 0.04);
@@ -24517,14 +24640,15 @@ body {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
     -ms-grid-row: 1;
     grid-row: 1;
     font-size: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     background: #222;
-    height: 3.625rem;
+    height: auto;
+    min-height: 3.625rem;
     position: relative;
     padding: 0 1rem 0 1.5rem; }
     .dark-theme .igx-grid-toolbar .igx-button--outlined, .dark-theme .igx-grid-toolbar--cosy .igx-button--outlined, .dark-theme .igx-grid-toolbar--compact .igx-button--outlined,
@@ -24537,7 +24661,7 @@ body {
     .dark-theme .igx-grid-toolbar .igx-button--icon,
     .dark-theme .igx-grid-toolbar--cosy .igx-button--icon,
     .dark-theme .igx-grid-toolbar--compact .igx-button--icon {
-      margin-left: 0.5rem; }
+      margin-left: 1rem; }
     .dark-theme .igx-grid-toolbar .igx-grid-toolbar__button-space, .dark-theme .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, .dark-theme .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
       display: -ms-flexbox;
       display: flex;
@@ -24573,23 +24697,29 @@ body {
         .dark-theme .igx-grid-toolbar[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, .dark-theme .igx-grid-toolbar--cosy[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, .dark-theme .igx-grid-toolbar--compact[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child {
           margin-left: 0; }
   .dark-theme .igx-grid-toolbar--cosy {
-    height: 3.25rem;
+    min-height: 3.25rem;
     padding: 0 0.75rem 0 1rem; }
+    .dark-theme .igx-grid-toolbar--cosy .igx-button--outlined,
+    .dark-theme .igx-grid-toolbar--cosy .igx-button--raised,
+    .dark-theme .igx-grid-toolbar--cosy .igx-button--flat,
+    .dark-theme .igx-grid-toolbar--cosy .igx-button--icon {
+      margin-left: 0.75rem; }
   .dark-theme .igx-grid-toolbar--compact {
-    height: 2.75rem;
+    min-height: 2.75rem;
     padding: 0 0.5rem 0 0.75rem; }
-  .dark-theme .igx-grid__caption {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-align: center;
-        align-items: center; }
+    .dark-theme .igx-grid-toolbar--compact .igx-button--outlined,
+    .dark-theme .igx-grid-toolbar--compact .igx-button--raised,
+    .dark-theme .igx-grid-toolbar--compact .igx-button--flat,
+    .dark-theme .igx-grid-toolbar--compact .igx-button--icon {
+      margin-left: 0.5rem; }
   .dark-theme .igx-grid-toolbar__title {
     color: rgba(255, 255, 255, 0.54);
     -ms-flex: 1 1 auto;
         flex: 1 1 auto;
     white-space: nowrap;
     text-overflow: ellipsis;
-    overflow: hidden; }
+    overflow: hidden;
+    max-width: 40ch; }
   .dark-theme .igx-grid-toolbar__custom-content {
     display: -ms-flexbox;
     display: flex;
@@ -24600,15 +24730,8 @@ body {
     display: flex;
     -ms-flex-align: center;
         align-items: center;
-    -ms-flex-pack: justify;
-        justify-content: space-between; }
-    .dark-theme .igx-grid-toolbar__actions > div {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+    -ms-flex-flow: row wrap;
+        flex-flow: row wrap; }
   .dark-theme .igx-grid-toolbar__progress-bar {
     position: absolute;
     width: 100%;
@@ -24620,6 +24743,8 @@ body {
     background: #222; }
     .dark-theme .igx-grid-toolbar__progress-bar igx-linear-bar > * {
       border-radius: 0; }
+      .dark-theme .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+        background: #72da67; }
   .dark-theme .igx-grid-toolbar__adv-filter--filtered {
     border-color: #72da67 !important; }
   .dark-theme .igx-grid-toolbar__dropdown {
@@ -24628,7 +24753,8 @@ body {
     list-style: none;
     background: #222;
     margin: 0;
-    padding: 0; }
+    padding: 0;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   .dark-theme .igx-grid-toolbar__dd-list-items {
     cursor: pointer;
     position: relative;
@@ -26706,7 +26832,6 @@ body {
     background: #72da67;
     opacity: 0;
     border-color: #72da67 transparent transparent;
-    transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: -1; }
     .dark-theme .igx-slider__label-from .label::after, .igx-slider__label-from .dark-theme .label::after, .dark-theme .igx-slider__label-to .label::after, .igx-slider__label-to .dark-theme .label::after {
       content: '';
@@ -26787,7 +26912,7 @@ body {
         transform: scale(1.2) !important; }
   .dark-theme .igx-slider__label-from--active .label, .igx-slider__label-from--active .dark-theme .label, .dark-theme .igx-slider__label-to--active .label, .igx-slider__label-to--active .dark-theme .label {
     opacity: 1; }
-  .dark-theme .igx-slider__thumb-from--active, .dark-theme .igx-slider__label-from--active, .dark-theme .igx-slider__thumb-to--active, .dark-theme .igx-slider__label-to--active {
+  .dark-theme .igx-slider__label--pressed {
     z-index: 1; }
   .dark-theme {
     --igx-snackbar-border-radius: 4px;
@@ -28088,7 +28213,7 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-action-strip-actions-border-radius: 24px;
       --igx-action-strip-variant: fluent;
-      --igx-action-strip-actions-background: rgba(255, 255, 255, 0.9);
+      --igx-action-strip-actions-background: rgba(51, 51, 51, 0.8);
       --igx-action-strip-background: rgba(255, 255, 255, 0.04);
       --igx-action-strip-color: 'currentColor';
       --igx-action-strip-delete-action: #ff134a; }
@@ -28181,7 +28306,7 @@ body {
       --igx-badge-background-color: #217346;
       --igx-badge-border-width: 0;
       --igx-badge-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--info, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--warning, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--error {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge {
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -28193,8 +28318,15 @@ body {
       font-size: 0.6875rem;
       font-weight: normal;
       color: var(--igx-badge-text-color);
-      line-height: 1; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-badge igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--info igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--success igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--warning igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--error igx-icon {
+      line-height: 1;
+      background: var(--igx-badge-background-color);
+      border-radius: var(--igx-badge-border-radius);
+      box-shadow: var(--igx-badge-shadow);
+      border-width: var(--igx-badge-border-width);
+      border-color: var(--igx-badge-border-color);
+      border-style: solid;
+      overflow: hidden; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-badge igx-icon {
         display: -ms-inline-flexbox;
         display: inline-flex;
         -ms-flex-pack: center;
@@ -28206,25 +28338,16 @@ body {
         font-size: 0.75rem;
         font-weight: normal;
         color: var(--igx-badge-icon-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle-value {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__value {
       white-space: nowrap;
       padding: 0.25rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle {
-      border-radius: var(--igx-badge-border-radius);
-      box-shadow: var(--igx-badge-shadow);
-      border-width: var(--igx-badge-border-width);
-      border-color: var(--igx-badge-border-color);
-      border-style: solid;
-      overflow: hidden; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--default {
-      background: var(--igx-badge-background-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--success {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge--success {
       background: #4eb862; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--info {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge--info {
       background: #1377d5; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--warning {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge--warning {
       background: #fbb13c; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge__circle--error {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-badge--error {
       background: #ff134a; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-badge--hidden {
       visibility: hidden; }
@@ -28838,6 +28961,8 @@ body {
       position: relative; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar-picker div {
         text-align: center; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar-picker:focus {
+        outline: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar-picker__dates {
       display: -ms-flexbox;
       display: flex;
@@ -28990,9 +29115,12 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-row--wrap {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year--current {
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column {
+      padding: 0;
+      margin: 0; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__body-column .igx-calendar__year--current {
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__label, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--selected, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--current, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--weekend, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--special, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--disabled, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__year, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__year--current, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__month, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__month--current {
       position: relative;
       display: -ms-flexbox;
@@ -29002,7 +29130,6 @@ body {
       -ms-flex-align: center;
           align-items: center;
       color: var(--igx-calendar-content-text-color);
-      cursor: pointer;
       outline: none; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date:hover .igx-calendar__date-content::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date:focus .igx-calendar__date-content::after {
       background: var(--igx-calendar-date-hover-background); }
@@ -29169,6 +29296,23 @@ body {
         z-index: -1; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__date--hidden .igx-calendar__date-content {
       visibility: hidden; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__aria-off-screen {
+      position: absolute !important;
+      border: none !important;
+      height: 1px !important;
+      width: 1px !important;
+      left: 0 !important;
+      top: 0 !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      pointer-events: none; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-calendar__aria-off-screen:focus {
+        outline: none; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-card-border-radius: 2px;
       --igx-card-resting-elevation: 0;
@@ -29652,14 +29796,14 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper {
       --data-chart-title-text-color: rgba(255, 255, 255, 0.87);
       --data-chart-subtitle-text-color: rgba(255, 255, 255, 0.54);
-      --data-chart-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --data-chart-marker-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --data-chart-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --data-chart-marker-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+      --data-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --data-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --data-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --data-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
       --data-chart-plot-area-background: #222; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --ring-series-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --ring-series-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+      --ring-series-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --ring-series-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --linear-gauge-backing-brush: #151515;
       --linear-gauge-backing-outline: #0e0e0e;
@@ -29667,8 +29811,8 @@ body {
       --linear-gauge-minor-tick-brush: rgba(255, 255, 255, 0.62);
       --linear-gauge-needle-brush: #217346;
       --linear-gauge-needle-outline: #222;
-      --linear-gauge-range-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --linear-gauge-range-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+      --linear-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --linear-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
       --linear-gauge-scale-brush: #0e0e0e;
       --linear-gauge-tick-brush: rgba(255, 255, 255, 0.62);
       --linear-gauge-scale-outline: #0e0e0e; }
@@ -29679,49 +29823,49 @@ body {
       --radial-gauge-minor-tick-brush: rgba(255, 255, 255, 0.62);
       --radial-gauge-needle-brush: #217346;
       --radial-gauge-needle-outline: #222;
-      --radial-gauge-range-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --radial-gauge-range-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+      --radial-gauge-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --radial-gauge-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
       --radial-gauge-scale-brush: #0e0e0e;
       --radial-gauge-tick-brush: rgba(255, 255, 255, 0.62);
       --radial-gauge-needle-pivot-brush: #217346;
       --radial-gauge-needle-pivot-outline: #222; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --financial-chart-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-marker-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-marker-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-indicator-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-indicator-negative-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-negative-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-negative-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-overlay-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-overlay-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-overlay-thickness: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-trend-line-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-volume-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --financial-chart-volume-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+      --financial-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-indicator-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-indicator-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-overlay-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-overlay-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-overlay-thickness: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-volume-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --financial-chart-volume-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --bullet-graph-backing-brush: #151515;
       --bullet-graph-backing-outline: #0e0e0e;
       --bullet-graph-font-brush: rgba(255, 255, 255, 0.62);
       --bullet-graph-minor-tick-brush: rgba(255, 255, 255, 0.62);
-      --bullet-graph-range-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --bullet-graph-range-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+      --bullet-graph-range-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --bullet-graph-range-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
       --bullet-graph-scale-background-brush: #217346;
       --bullet-graph-scale-background-outline: #222;
       --bullet-graph-target-value-brush: rgba(255, 255, 255, 0.74);
       --bullet-graph-tick-brush: rgba(255, 255, 255, 0.62);
       --bullet-graph-value-brush: rgba(255, 255, 255, 0.74); }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --category-chart-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --category-chart-marker-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --category-chart-negative-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --category-chart-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --category-chart-marker-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --category-chart-negative-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+      --category-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --category-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --category-chart-negative-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --category-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --category-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --category-chart-negative-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
       --category-chart-title-text-color: white;
       --category-chart-subtitle-text-color: white;
-      --category-chart-trend-line-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
+      --category-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
       --category-chart-x-axis-label-text-color: white;
       --category-chart-x-axis-tick-stroke: white;
       --category-chart-x-axis-title-text-color: white;
@@ -29731,21 +29875,21 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper {
       --geo-map-plot-area-background: #222; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --pie-chart-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --pie-chart-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+      --pie-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --pie-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --sparkline-brush: #217346; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --funnel-chart-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --funnel-chart-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+      --funnel-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --funnel-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --shape-chart-title-text-color: rgba(255, 255, 255, 0.87);
       --shape-chart-subtitle-text-color: rgba(255, 255, 255, 0.54);
-      --shape-chart-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --shape-chart-marker-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --shape-chart-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --shape-chart-marker-outlines: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a;
-      --shape-chart-trend-line-brushes: #217346, #217346, #f96232, #3cbdc9, #dc3f76, #ff9800, #4e62cf, #54c25a, #795548, #9a9a9a; }
+      --shape-chart-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --shape-chart-marker-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --shape-chart-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --shape-chart-marker-outlines: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f;
+      --shape-chart-trend-line-brushes: #9de772, #8b5bb1, #6db1ff, #9af2e4, #ee5879, #735656, #f7d262, #a8a8b7, #e051a9, #f8a15f; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-checkbox-border-radius: 2px;
       --igx-checkbox-border-radius-ripple: 2px;
@@ -30508,7 +30652,7 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact .igx-chip__content {
         padding: 0 0.125rem; }
     .dark-theme .grid-chart-contextmenu-wrapper {
-      --igx-column-actions-background-color: transparent;
+      --igx-column-actions-background-color: #222;
       --igx-column-actions-title-color: #217346; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-column-actions {
       display: -ms-flexbox;
@@ -30516,6 +30660,7 @@ body {
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
       background: var(--igx-column-actions-background-color);
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
       width: 100%;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
@@ -31324,28 +31469,25 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
       padding: 0 1.5rem;
-      padding-right: 0;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
       min-width: calc(1.5rem + 1.5rem);
       background: inherit;
       z-index: 4;
-      cursor: move; }
+      cursor: move;
+      border-right: 1px solid transparent; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator .igx-icon--error {
         width: 1.5rem;
         height: 1.5rem;
         font-size: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__drag-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator {
       padding: 0 1rem;
-      min-width: calc(1.5rem + 1rem);
-      padding-right: 0; }
+      min-width: calc(1.5rem + 1rem); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__drag-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator {
       padding: 0 0.75rem;
-      min-width: calc(1.5rem + 0.75rem);
-      padding-right: 0; }
+      min-width: calc(1.5rem + 0.75rem); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator--header {
       border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander + .igx-grid__drag-indicator, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-      padding-left: 0;
-      min-width: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__drag-indicator--off {
       color: var(--igx-grid-row-drag-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__tr--drag {
@@ -31740,7 +31882,6 @@ body {
           justify-content: center;
       -ms-flex-align: center;
           align-items: center;
-      border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
       background: inherit;
       z-index: 4; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__cbx-padding {
@@ -31897,10 +32038,19 @@ body {
       outline-style: none;
       border-bottom: 1px solid var(--igx-grid-row-border-color);
       min-height: 3.125rem; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row .igx-grid__drag-indicator {
+        cursor: default;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--active {
       background: var(--igx-grid-group-row-selected-background); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--active .igx-grid__grouping-indicator {
         color: var(--igx-grid-expand-icon-color); }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--active .igx-grid__drag-indicator {
+        border: 1px solid var(--igx-grid-cell-active-border-color);
+        border-left-width: 0;
+        border-right-width: 0;
+        box-shadow: inset 1px 0 0 0 var(--igx-grid-cell-active-border-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--active:hover {
         background: var(--igx-grid-group-row-selected-background); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row {
@@ -31970,18 +32120,18 @@ body {
       padding-left: 0.75rem;
       min-height: 2rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation {
-      background: transparent;
-      z-index: 1;
+      position: relative;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
           justify-content: center;
       -ms-flex-align: center;
           align-items: center;
-      position: relative;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
-      border-right: 1px solid transparent; }
+      border-right: 1px solid var(--igx-grid-header-border-color);
+      background: inherit;
+      z-index: 1; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation::after {
         content: '';
         position: absolute;
@@ -32091,8 +32241,8 @@ body {
           align-items: center;
       z-index: 1;
       cursor: pointer;
-      padding-left: 1.5rem;
       padding-right: 0.75rem;
+      margin-left: 1.5rem;
       min-height: 3.125rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__grouping-indicator igx-icon {
         color: var(--igx-grid-expand-icon-color);
@@ -32102,11 +32252,11 @@ body {
         .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__grouping-indicator:hover igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__grouping-indicator:focus igx-icon {
           color: var(--igx-grid-expand-icon-hover-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__grouping-indicator {
-      padding-left: 1rem;
-      min-height: 2.5rem; }
+      min-height: 2.5rem;
+      margin-left: 1rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__grouping-indicator {
-      padding-left: 0.75rem;
-      min-height: 2rem; }
+      min-height: 2rem;
+      margin-left: 0.75rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__header-indentation {
       position: relative;
       padding-right: 1.5rem;
@@ -32139,114 +32289,124 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn {
         top: 0.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-1 {
-      background: inherit;
       padding-left: calc(1.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-1 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
       padding-left: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-1, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-1 {
       padding-left: calc(1rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+      padding-left: 1rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-1, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-1 {
       padding-left: calc(0.75rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-1, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-1 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
       padding-left: 0.75rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-2 {
-      background: inherit;
       padding-left: calc(3rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-2 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
       padding-left: 3rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-2, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-2 {
       padding-left: calc(2rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+      padding-left: 2rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-2, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-2 {
       padding-left: calc(1.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-2, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-2 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
       padding-left: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-3 {
-      background: inherit;
       padding-left: calc(4.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-3 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
       padding-left: 4.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-3, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-3 {
       padding-left: calc(3rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+      padding-left: 3rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-3, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-3 {
       padding-left: calc(2.25rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-3, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-3 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
       padding-left: 2.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-4 {
-      background: inherit;
       padding-left: calc(6rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-4 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
       padding-left: 6rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-4, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-4 {
       padding-left: calc(4rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+      padding-left: 4rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-4, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-4 {
       padding-left: calc(3rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-4, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-4 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
       padding-left: 3rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-5 {
-      background: inherit;
       padding-left: calc(7.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-5 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
       padding-left: 7.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-5, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-5 {
       padding-left: calc(5rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+      padding-left: 5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-5, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-5 {
       padding-left: calc(3.75rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-5, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-5 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
       padding-left: 3.75rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-6 {
-      background: inherit;
       padding-left: calc(9rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-6 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
       padding-left: 9rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-6, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-6 {
       padding-left: calc(6rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+      padding-left: 6rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-6, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-6 {
       padding-left: calc(4.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-6, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-6 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
       padding-left: 4.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-7 {
-      background: inherit;
       padding-left: calc(10.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-7 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
       padding-left: 10.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-7, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-7 {
       padding-left: calc(7rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+      padding-left: 7rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-7, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-7 {
       padding-left: calc(5.25rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-7, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-7 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
       padding-left: 5.25rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-8 {
-      background: inherit;
       padding-left: calc(12rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-8 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
       padding-left: 12rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-8, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-8 {
       padding-left: calc(8rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+      padding-left: 8rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-8, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-8 {
       padding-left: calc(6rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-8, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-8 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
       padding-left: 6rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-9 {
-      background: inherit;
       padding-left: calc(13.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-9 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
       padding-left: 13.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-9, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-9 {
       padding-left: calc(9rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+      padding-left: 9rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-9, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-9 {
       padding-left: calc(6.75rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-9, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-9 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
       padding-left: 6.75rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-10 {
-      background: inherit;
       padding-left: calc(15rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-10 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
       padding-left: 15rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__row-indentation--level-10, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-10 {
       padding-left: calc(10rem + 1.5rem); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--cosy .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+      padding-left: 10rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__row-indentation--level-10, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__row-indentation--level-10 {
       padding-left: calc(7.5rem + 1.5rem); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-10, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-10 {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
       padding-left: 7.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__tree-cell--padding-level-1 {
       padding-left: 1.5rem; }
@@ -32459,7 +32619,7 @@ body {
         width: 18px;
         height: 18px;
         font-size: 18px; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge__circle, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge__circle--info, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge__circle--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge__circle--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator .igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-cell-indicator--hidden .igx-badge {
         /* start of IE vertical alignment fix */
         top: 50%;
         -ms-transform: translateY(-50%);
@@ -32615,8 +32775,7 @@ body {
           justify-content: center;
       cursor: pointer;
       z-index: 3;
-      color: var(--igx-grid-expand-icon-color);
-      border-right: 1px solid transparent; }
+      color: var(--igx-grid-expand-icon-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander--empty:focus {
         outline: none; }
         .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander:focus igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -32655,7 +32814,6 @@ body {
       min-height: 2.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon, .igx-grid--compact .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander--push igx-icon {
       min-height: 2rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-expander--no-border,
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__header-indentation--no-border {
       border-right: 1px solid transparent; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__hierarchical-indent {
@@ -32699,12 +32857,14 @@ body {
       -ms-flex-align: center;
           align-items: center; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__icon--filtered {
+      display: -ms-flexbox;
+      display: flex;
       cursor: pointer; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-icon.igx-excel-filter__icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-icon.igx-excel-filter__icon--filtered {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__icon igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__icon--filtered igx-icon {
         width: 0.9375rem;
         height: 0.9375rem;
         font-size: 0.9375rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-icon.igx-excel-filter__icon--filtered {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__icon--filtered igx-icon {
       color: #217346; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu {
       display: -ms-flexbox;
@@ -33348,6 +33508,8 @@ body {
       margin-right: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
       color: var(--igx-grid-sorted-header-icon-color); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__tr-action:last-of-type {
+      border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-grid-summary-background-color: #222;
       --igx-grid-summary-focus-background-color: rgba(255, 255, 255, 0.04);
@@ -33441,14 +33603,15 @@ body {
       display: flex;
       -ms-flex-align: center;
           align-items: center;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
       -ms-grid-row: 1;
       grid-row: 1;
       font-size: 1rem;
       border-bottom: 1px solid rgba(255, 255, 255, 0.12);
       background: var(--igx-grid-toolbar-background-color);
-      height: 3.625rem;
+      height: auto;
+      min-height: 3.625rem;
       position: relative;
       padding: 0 1rem 0 1.5rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar .igx-button--outlined, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--outlined, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--outlined,
@@ -33461,7 +33624,7 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar .igx-button--icon,
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--icon,
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--icon {
-        margin-left: 0.5rem; }
+        margin-left: 1rem; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar .igx-grid-toolbar__button-space, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-grid-toolbar__button-space, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-grid-toolbar__button-space {
         display: -ms-flexbox;
         display: flex;
@@ -33497,23 +33660,29 @@ body {
           .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child, .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact[dir='rtl'] .igx-grid-toolbar__button-space > *:last-child {
             margin-left: 0; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy {
-      height: 3.25rem;
+      min-height: 3.25rem;
       padding: 0 0.75rem 0 1rem; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--outlined,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--raised,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--flat,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--cosy .igx-button--icon {
+        margin-left: 0.75rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact {
-      height: 2.75rem;
+      min-height: 2.75rem;
       padding: 0 0.5rem 0 0.75rem; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__caption {
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-align: center;
-          align-items: center; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--outlined,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--raised,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--flat,
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar--compact .igx-button--icon {
+        margin-left: 0.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__title {
       color: var(--igx-grid-toolbar-title-text-color);
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
       white-space: nowrap;
       text-overflow: ellipsis;
-      overflow: hidden; }
+      overflow: hidden;
+      max-width: 40ch; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__custom-content {
       display: -ms-flexbox;
       display: flex;
@@ -33524,15 +33693,8 @@ body {
       display: flex;
       -ms-flex-align: center;
           align-items: center;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__actions > div {
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-align: center;
-            align-items: center;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__progress-bar {
       position: absolute;
       width: 100%;
@@ -33544,6 +33706,8 @@ body {
       background: var(--igx-grid-toolbar-background-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__progress-bar igx-linear-bar > * {
         border-radius: 0; }
+        .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__progress-bar igx-linear-bar > *:first-child > div {
+          background: #217346; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__adv-filter--filtered {
       border-color: #217346 !important; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__dropdown {
@@ -33552,7 +33716,8 @@ body {
       list-style: none;
       background: var(--igx-grid-toolbar-dropdown-background);
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid-toolbar__dd-list-items {
       cursor: pointer;
       position: relative;
@@ -35641,7 +35806,6 @@ body {
       background: var(--igx-slider-label-background-color);
       opacity: 0;
       border-color: var(--igx-slider-label-background-color) transparent transparent;
-      transition: opacity 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       z-index: -1; }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label-from .label::after, .igx-slider__label-from .dark-theme .grid-chart-contextmenu-wrapper .label::after, .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label-to .label::after, .igx-slider__label-to .dark-theme .grid-chart-contextmenu-wrapper .label::after {
         content: '';
@@ -35722,7 +35886,7 @@ body {
           transform: scale(1.2) !important; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label-from--active .label, .igx-slider__label-from--active .dark-theme .grid-chart-contextmenu-wrapper .label, .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label-to--active .label, .igx-slider__label-to--active .dark-theme .grid-chart-contextmenu-wrapper .label {
       opacity: 1; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__thumb-from--active, .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label-from--active, .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__thumb-to--active, .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label-to--active {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-slider__label--pressed {
       z-index: 1; }
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-snackbar-border-radius: 2px;

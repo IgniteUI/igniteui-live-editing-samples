@@ -7,6 +7,10 @@ import { IgxHierarchicalGridModule } from "igniteui-angular";
 import { HGridSaveStateComponent } from "./hierarchical-grid/hierarchical-grid-save-state/hGrid-state.component";
 import { HGridAboutComponent } from "./hierarchical-grid/hierarchical-grid-save-state/about.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
+import { 
+	Router,
+	RouterModule
+ } from "@angular/router";
 
 
 
@@ -23,8 +27,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
     FormsModule,
 		IgxPreventDocumentScrollModule,
 		IgxHierarchicalGridModule,
-		HttpClientModule,
-		RouterModule.forRoot([{component: 'HGridAboutComponent', path: 'hGrid-state-about'},{component: 'HGridSaveStateComponent', path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])]
+		RouterModule.forRoot([{component: HGridAboutComponent, path: 'hGrid-state-about'},{component: HGridSaveStateComponent, path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])
   ],
   providers: [],
   entryComponents: [],

@@ -1216,6 +1216,8 @@
       position: relative; }
       :host ::ng-deep .igx-calendar-picker div {
         text-align: center; }
+      :host ::ng-deep .igx-calendar-picker:focus {
+        outline: none; }
     :host ::ng-deep .igx-calendar-picker__dates {
       display: -ms-flexbox;
       display: flex;
@@ -1368,9 +1370,12 @@
     :host ::ng-deep .igx-calendar__body-row--wrap {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-    :host ::ng-deep .igx-calendar__body-column .igx-calendar__year, :host ::ng-deep .igx-calendar__body-column .igx-calendar__year--current {
-      -ms-flex: 1 0 0px;
-          flex: 1 0 0; }
+    :host ::ng-deep .igx-calendar__body-column {
+      padding: 0;
+      margin: 0; }
+      :host ::ng-deep .igx-calendar__body-column .igx-calendar__year, :host ::ng-deep .igx-calendar__body-column .igx-calendar__year--current {
+        -ms-flex: 1 0 0px;
+            flex: 1 0 0; }
     :host ::ng-deep .igx-calendar__label, :host ::ng-deep .igx-calendar__date, :host ::ng-deep .igx-calendar__date--inactive, :host ::ng-deep .igx-calendar__date--selected, :host ::ng-deep .igx-calendar__date--current, :host ::ng-deep .igx-calendar__date--weekend, :host ::ng-deep .igx-calendar__date--special, :host ::ng-deep .igx-calendar__date--disabled, :host ::ng-deep .igx-calendar__year, :host ::ng-deep .igx-calendar__year--current, :host ::ng-deep .igx-calendar__month, :host ::ng-deep .igx-calendar__month--current {
       position: relative;
       display: -ms-flexbox;
@@ -1380,7 +1385,6 @@
       -ms-flex-align: center;
           align-items: center;
       color: var(--igx-calendar-content-text-color);
-      cursor: pointer;
       outline: none; }
     :host ::ng-deep .igx-calendar__date:hover .igx-calendar__date-content::after, :host ::ng-deep .igx-calendar__date:focus .igx-calendar__date-content::after {
       background: var(--igx-calendar-date-hover-background); }
@@ -1547,6 +1551,23 @@
         z-index: -1; }
     :host ::ng-deep .igx-calendar__date--hidden .igx-calendar__date-content {
       visibility: hidden; }
+    :host ::ng-deep .igx-calendar__aria-off-screen {
+      position: absolute !important;
+      border: none !important;
+      height: 1px !important;
+      width: 1px !important;
+      left: 0 !important;
+      top: 0 !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      pointer-events: none; }
+      :host ::ng-deep .igx-calendar__aria-off-screen:focus {
+        outline: none; }
     :host ::ng-deep {
       --igx-grid-drop-area-border-radius: 16px;
       --igx-grid-grid-elevation: 2;
@@ -1882,28 +1903,25 @@
       -ms-flex-pack: center;
           justify-content: center;
       padding: 0 1.5rem;
-      padding-right: 0;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
       min-width: calc(1.5rem + 1.5rem);
       background: inherit;
       z-index: 4;
-      cursor: move; }
+      cursor: move;
+      border-right: 1px solid transparent; }
       :host ::ng-deep .igx-grid__drag-indicator .igx-icon, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--inactive, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--success, :host ::ng-deep .igx-grid__drag-indicator .igx-icon--error {
         width: 1.5rem;
         height: 1.5rem;
         font-size: 1.5rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__drag-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__drag-indicator {
       padding: 0 1rem;
-      min-width: calc(1.5rem + 1rem);
-      padding-right: 0; }
+      min-width: calc(1.5rem + 1rem); }
     :host ::ng-deep .igx-grid--compact .igx-grid__drag-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__drag-indicator {
       padding: 0 0.75rem;
-      min-width: calc(1.5rem + 0.75rem);
-      padding-right: 0; }
+      min-width: calc(1.5rem + 0.75rem); }
     :host ::ng-deep .igx-grid__drag-indicator--header {
       border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
-    :host ::ng-deep .igx-grid__hierarchical-expander + .igx-grid__drag-indicator, :host ::ng-deep .igx-grid__hierarchical-expander--empty + .igx-grid__drag-indicator {
-      padding-left: 0;
-      min-width: 1.5rem; }
     :host ::ng-deep .igx-grid__drag-indicator--off {
       color: var(--igx-grid-row-drag-color); }
     :host ::ng-deep .igx-grid__tr--drag {
@@ -2298,7 +2316,6 @@
           justify-content: center;
       -ms-flex-align: center;
           align-items: center;
-      border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
       background: inherit;
       z-index: 4; }
     :host ::ng-deep .igx-grid__cbx-padding {
@@ -2455,10 +2472,19 @@
       outline-style: none;
       border-bottom: 1px solid var(--igx-grid-row-border-color);
       min-height: 3.125rem; }
+      :host ::ng-deep .igx-grid__group-row .igx-grid__drag-indicator {
+        cursor: default;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
     :host ::ng-deep .igx-grid__group-row--active {
       background: var(--igx-grid-group-row-selected-background); }
       :host ::ng-deep .igx-grid__group-row--active .igx-grid__grouping-indicator {
         color: var(--igx-grid-expand-icon-color); }
+      :host ::ng-deep .igx-grid__group-row--active .igx-grid__drag-indicator {
+        border: 1px solid var(--igx-grid-cell-active-border-color);
+        border-left-width: 0;
+        border-right-width: 0;
+        box-shadow: inset 1px 0 0 0 var(--igx-grid-cell-active-border-color); }
       :host ::ng-deep .igx-grid__group-row--active:hover {
         background: var(--igx-grid-group-row-selected-background); }
     :host ::ng-deep .igx-grid--cosy .igx-grid__group-row, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row {
@@ -2528,18 +2554,18 @@
       padding-left: 0.75rem;
       min-height: 2rem; }
     :host ::ng-deep .igx-grid__row-indentation {
-      background: transparent;
-      z-index: 1;
+      position: relative;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
           justify-content: center;
       -ms-flex-align: center;
           align-items: center;
-      position: relative;
       padding-left: 1.5rem;
       padding-right: 1.5rem;
-      border-right: 1px solid transparent; }
+      border-right: 1px solid var(--igx-grid-header-border-color);
+      background: inherit;
+      z-index: 1; }
       :host ::ng-deep .igx-grid__row-indentation::after {
         content: '';
         position: absolute;
@@ -2648,8 +2674,8 @@
           align-items: center;
       z-index: 1;
       cursor: pointer;
-      padding-left: 1.5rem;
       padding-right: 0.75rem;
+      margin-left: 1.5rem;
       min-height: 3.125rem; }
       :host ::ng-deep .igx-grid__grouping-indicator igx-icon {
         color: var(--igx-grid-expand-icon-color);
@@ -2659,11 +2685,11 @@
         :host ::ng-deep .igx-grid__grouping-indicator:hover igx-icon, :host ::ng-deep .igx-grid__grouping-indicator:focus igx-icon {
           color: var(--igx-grid-expand-icon-hover-color); }
     :host ::ng-deep .igx-grid--cosy .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__grouping-indicator {
-      padding-left: 1rem;
-      min-height: 2.5rem; }
+      min-height: 2.5rem;
+      margin-left: 1rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__grouping-indicator {
-      padding-left: 0.75rem;
-      min-height: 2rem; }
+      min-height: 2rem;
+      margin-left: 0.75rem; }
     :host ::ng-deep .igx-grid__header-indentation {
       position: relative;
       padding-right: 1.5rem;
@@ -2696,114 +2722,124 @@
       :host ::ng-deep .igx-grid--compact .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn, .igx-grid--compact :host ::ng-deep .igx-grid__group-expand-btn--push.igx-grid__group-expand-btn {
         top: 0.25rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-1 {
-      background: inherit;
       padding-left: calc(1.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-1 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
       padding-left: 1.5rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-1, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-1 {
       padding-left: calc(1rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
+      padding-left: 1rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-1, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-1 {
       padding-left: calc(0.75rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-1, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-1 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-1 .igx-grid__grouping-indicator {
       padding-left: 0.75rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-2 {
-      background: inherit;
       padding-left: calc(3rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-2 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
       padding-left: 3rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-2, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-2 {
       padding-left: calc(2rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
+      padding-left: 2rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-2, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-2 {
       padding-left: calc(1.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-2, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-2 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-2 .igx-grid__grouping-indicator {
       padding-left: 1.5rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-3 {
-      background: inherit;
       padding-left: calc(4.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-3 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
       padding-left: 4.5rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-3, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-3 {
       padding-left: calc(3rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
+      padding-left: 3rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-3, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-3 {
       padding-left: calc(2.25rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-3, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-3 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-3 .igx-grid__grouping-indicator {
       padding-left: 2.25rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-4 {
-      background: inherit;
       padding-left: calc(6rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-4 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
       padding-left: 6rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-4, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-4 {
       padding-left: calc(4rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
+      padding-left: 4rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-4, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-4 {
       padding-left: calc(3rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-4, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-4 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-4 .igx-grid__grouping-indicator {
       padding-left: 3rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-5 {
-      background: inherit;
       padding-left: calc(7.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-5 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
       padding-left: 7.5rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-5, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-5 {
       padding-left: calc(5rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
+      padding-left: 5rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-5, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-5 {
       padding-left: calc(3.75rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-5, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-5 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-5 .igx-grid__grouping-indicator {
       padding-left: 3.75rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-6 {
-      background: inherit;
       padding-left: calc(9rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-6 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
       padding-left: 9rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-6, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-6 {
       padding-left: calc(6rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
+      padding-left: 6rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-6, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-6 {
       padding-left: calc(4.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-6, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-6 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-6 .igx-grid__grouping-indicator {
       padding-left: 4.5rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-7 {
-      background: inherit;
       padding-left: calc(10.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-7 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
       padding-left: 10.5rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-7, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-7 {
       padding-left: calc(7rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
+      padding-left: 7rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-7, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-7 {
       padding-left: calc(5.25rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-7, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-7 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-7 .igx-grid__grouping-indicator {
       padding-left: 5.25rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-8 {
-      background: inherit;
       padding-left: calc(12rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-8 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
       padding-left: 12rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-8, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-8 {
       padding-left: calc(8rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
+      padding-left: 8rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-8, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-8 {
       padding-left: calc(6rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-8, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-8 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-8 .igx-grid__grouping-indicator {
       padding-left: 6rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-9 {
-      background: inherit;
       padding-left: calc(13.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-9 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
       padding-left: 13.5rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-9, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-9 {
       padding-left: calc(9rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
+      padding-left: 9rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-9, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-9 {
       padding-left: calc(6.75rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-9, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-9 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-9 .igx-grid__grouping-indicator {
       padding-left: 6.75rem; }
     :host ::ng-deep .igx-grid__row-indentation--level-10 {
-      background: inherit;
       padding-left: calc(15rem + 1.5rem); }
-    :host ::ng-deep .igx-grid__group-row--padding-level-10 {
+    :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
       padding-left: 15rem; }
     :host ::ng-deep .igx-grid--cosy .igx-grid__row-indentation--level-10, .igx-grid--cosy :host ::ng-deep .igx-grid__row-indentation--level-10 {
       padding-left: calc(10rem + 1.5rem); }
+    :host ::ng-deep .igx-grid--cosy .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--cosy :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
+      padding-left: 10rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__row-indentation--level-10, .igx-grid--compact :host ::ng-deep .igx-grid__row-indentation--level-10 {
       padding-left: calc(7.5rem + 1.5rem); }
-    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-10, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-10 {
+    :host ::ng-deep .igx-grid--compact .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator, .igx-grid--compact :host ::ng-deep .igx-grid__group-row--padding-level-10 .igx-grid__grouping-indicator {
       padding-left: 7.5rem; }
     :host ::ng-deep .igx-grid__tree-cell--padding-level-1 {
       padding-left: 1.5rem; }
@@ -3016,7 +3052,7 @@
         width: 18px;
         height: 18px;
         font-size: 18px; }
-      :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--info, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--info, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--success, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--success, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--warning, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--warning, :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge__circle--error, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge__circle--error {
+      :host ::ng-deep .igx-grid__filtering-cell-indicator .igx-badge, :host ::ng-deep .igx-grid__filtering-cell-indicator--hidden .igx-badge {
         /* start of IE vertical alignment fix */
         top: 50%;
         -ms-transform: translateY(-50%);
@@ -3172,8 +3208,7 @@
           justify-content: center;
       cursor: pointer;
       z-index: 3;
-      color: var(--igx-grid-expand-icon-color);
-      border-right: 1px solid transparent; }
+      color: var(--igx-grid-expand-icon-color); }
       :host ::ng-deep .igx-grid__hierarchical-expander:focus, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus {
         outline: none; }
         :host ::ng-deep .igx-grid__hierarchical-expander:focus igx-icon, :host ::ng-deep .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -3212,7 +3247,6 @@
       min-height: 2.5rem; }
     :host ::ng-deep .igx-grid--compact .igx-grid__hierarchical-expander--push igx-icon, .igx-grid--compact :host ::ng-deep .igx-grid__hierarchical-expander--push igx-icon {
       min-height: 2rem; }
-    :host ::ng-deep .igx-grid__hierarchical-expander--no-border,
     :host ::ng-deep .igx-grid__header-indentation--no-border {
       border-right: 1px solid transparent; }
     :host ::ng-deep .igx-grid__hierarchical-indent {
@@ -3256,12 +3290,14 @@
       -ms-flex-align: center;
           align-items: center; }
     :host ::ng-deep .igx-excel-filter__icon, :host ::ng-deep .igx-excel-filter__icon--filtered {
+      display: -ms-flexbox;
+      display: flex;
       cursor: pointer; }
-      :host ::ng-deep .igx-icon.igx-excel-filter__icon, :host ::ng-deep .igx-icon.igx-excel-filter__icon--filtered {
+      :host ::ng-deep .igx-excel-filter__icon igx-icon, :host ::ng-deep .igx-excel-filter__icon--filtered igx-icon {
         width: 0.9375rem;
         height: 0.9375rem;
         font-size: 0.9375rem; }
-    :host ::ng-deep .igx-icon.igx-excel-filter__icon--filtered {
+    :host ::ng-deep .igx-excel-filter__icon--filtered igx-icon {
       color: #e41c77; }
     :host ::ng-deep .igx-excel-filter__menu {
       display: -ms-flexbox;
@@ -3904,6 +3940,8 @@
       margin-right: 0.5rem; }
     :host ::ng-deep .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
       color: var(--igx-grid-sorted-header-icon-color); }
+    :host ::ng-deep .igx-grid__tr-action:last-of-type {
+      border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
 
 .igx-hierarchical-grid {
   margin-top: 10px; }

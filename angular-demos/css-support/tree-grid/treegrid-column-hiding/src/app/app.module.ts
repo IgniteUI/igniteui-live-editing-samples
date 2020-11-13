@@ -6,8 +6,7 @@ import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { 
 	IgxTreeGridModule,
-	IgxRadioModule,
-	IgxColumnHidingModule
+	IgxRadioModule
  } from "igniteui-angular";
 import { TreeGridColumnHidingSampleComponent } from "./tree-grid-column-hiding-sample/tree-grid-column-hiding-sample.component";
 
@@ -25,8 +24,7 @@ import { TreeGridColumnHidingSampleComponent } from "./tree-grid-column-hiding-s
     FormsModule,
 		IgxPreventDocumentScrollModule,
 		IgxTreeGridModule,
-		IgxRadioModule,
-		IgxColumnHidingModule
+		IgxRadioModule
   ],
   providers: [],
   entryComponents: [],
