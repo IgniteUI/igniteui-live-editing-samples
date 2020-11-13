@@ -7,9 +7,7 @@
   width: 100%;
   overflow: hidden;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-order: 3;
-      order: 3; }
+      flex-shrink: 0; }
 
 .igx-display-container--inactive {
   width: 100%; }
@@ -395,8 +393,7 @@
     background: inherit;
     z-index: 4;
     cursor: move;
-    -ms-flex-order: -1;
-        order: -1; }
+    border-right: 1px solid transparent; }
     ::ng-deep .default-theme .grid__wrapper .igx-grid__drag-indicator .igx-icon, ::ng-deep .default-theme .grid__wrapper .igx-grid__drag-indicator .igx-icon--inactive, ::ng-deep .default-theme .grid__wrapper .igx-grid__drag-indicator .igx-icon--success, ::ng-deep .default-theme .grid__wrapper .igx-grid__drag-indicator .igx-icon--error {
       width: 1.5rem;
       height: 1.5rem;
@@ -803,7 +800,6 @@
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
-    border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color);
     background: inherit;
     z-index: 4; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__cbx-padding {
@@ -1696,10 +1692,7 @@
         justify-content: center;
     cursor: pointer;
     z-index: 3;
-    color: var(--igx-grid-expand-icon-color);
-    border-right: 1px solid var(--igx-grid-header-border-color);
-    -ms-flex-order: 2;
-        order: 2; }
+    color: var(--igx-grid-expand-icon-color); }
     ::ng-deep .default-theme .grid__wrapper .igx-grid__hierarchical-expander:focus, ::ng-deep .default-theme .grid__wrapper .igx-grid__hierarchical-expander--empty:focus {
       outline: none; }
       ::ng-deep .default-theme .grid__wrapper .igx-grid__hierarchical-expander:focus igx-icon, ::ng-deep .default-theme .grid__wrapper .igx-grid__hierarchical-expander--empty:focus igx-icon {
@@ -2431,6 +2424,8 @@
     margin-right: 0.5rem; }
   ::ng-deep .default-theme .grid__wrapper .igx-grid__filtering-row-editing-buttons--small button:not([disabled]) igx-icon {
     color: var(--igx-grid-sorted-header-icon-color); }
+  ::ng-deep .default-theme .grid__wrapper .igx-grid__tr-action:last-of-type {
+    border-right: var(--igx-grid-header-border-width) var(--igx-grid-header-border-style) var(--igx-grid-header-border-color); }
   ::ng-deep .default-theme .grid__wrapper {
     --igx-linear-bar-track-border-radius: 0px;
     --igx-linear-bar-variant: material;
