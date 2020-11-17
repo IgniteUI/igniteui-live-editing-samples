@@ -28,6 +28,9 @@ export class MapMarkerTemplateComponent implements AfterViewInit {
         this.symbolSeries.markerOutline = "DodgerBlue";
         this.symbolSeries.markerTemplate = this.getMarker();
         this.map.series.add(this.symbolSeries);
+
+        const geoRect = { left: -150.0, top: -60.0, width: 315.0, height: 140.0 };
+        this.map.zoomToGeographic(geoRect);
     }
 
     public onMarkerSelectionChanged = (e: any) => {
