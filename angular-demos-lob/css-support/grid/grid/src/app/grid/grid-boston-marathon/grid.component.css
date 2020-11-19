@@ -2527,6 +2527,14 @@
     transform: scaleX(0) translateX(200%);
     transform-origin: right; } }
 
+:host ::ng-deep .s-overlay__inner, :host ::ng-deep .s-overlay__heading, :host ::ng-deep .s-overlay__players, :host ::ng-deep .s-overlay__player {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
 :host ::ng-deep .igx-paginator > * {
   margin: 0 auto;
   display: -ms-flexbox;
@@ -2534,9 +2542,100 @@
   -ms-flex-align: center;
       align-items: center; }
 
-:host ::ng-deep igx-sparkline {
+:host ::ng-deep .igx-sparkline {
   margin-top: 20px;
   margin-bottom: -10px; }
+
+:host ::ng-deep .s-overlay {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  z-index: 10002; }
+  :host ::ng-deep .s-overlay__inner {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    border-radius: 1rem;
+    min-width: 21.25rem;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.16); }
+  :host ::ng-deep .s-overlay__heading {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+    font-size: 1.75rem;
+    height: 4.375rem;
+    padding: 0 1.5rem;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #ddd; }
+    :host ::ng-deep .s-overlay__heading--finish {
+      border-bottom: none;
+      margin-top: 0;
+      font-style: italic;
+      background-color: white;
+      background-image: linear-gradient(45deg, #222 25%, transparent 25%), linear-gradient(-45deg, #222 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #222 75%), linear-gradient(-45deg, transparent 75%, #222 75%);
+      background-size: 20px 20px;
+      background-position: 0 0, 0 10px, 10px -10px, -10px 0px; }
+    :host ::ng-deep .s-overlay__heading > span {
+      padding: 0.5rem;
+      background: #fff;
+      margin: 0 0.5rem; }
+      :host ::ng-deep .s-overlay__heading > span > span {
+        margin: 0 0.5rem; }
+  :host ::ng-deep .s-overlay__trophy {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+    position: relative;
+    margin-bottom: 1rem; }
+    :host ::ng-deep .s-overlay__trophy img {
+      width: 40px; }
+    :host ::ng-deep .s-overlay__trophy span {
+      position: absolute;
+      top: 2px;
+      color: #fff;
+      text-shadow: 0 0 8px #444;
+      font-weight: bold; }
+  :host ::ng-deep .s-overlay__players {
+    padding: 1.5rem; }
+  :host ::ng-deep .s-overlay__player {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin: 0 2rem;
+    width: 120px; }
+    :host ::ng-deep .s-overlay__player igx-avatar {
+      margin-bottom: 1rem; }
+    :host ::ng-deep .s-overlay__player--winner {
+      -ms-flex-order: 2;
+          order: 2; }
+      :host ::ng-deep .s-overlay__player--winner igx-avatar {
+        border: 4px solid #fbb13c; }
+    :host ::ng-deep .s-overlay__player--second {
+      -ms-flex-order: 1;
+          order: 1; }
+      :host ::ng-deep .s-overlay__player--second igx-avatar {
+        border: 4px solid #bdbdbd; }
+    :host ::ng-deep .s-overlay__player--third {
+      -ms-flex-order: 3;
+          order: 3; }
+      :host ::ng-deep .s-overlay__player--third igx-avatar {
+        border: 4px solid #b47845; }
+  :host ::ng-deep .s-overlay__player-name {
+    color: #0072be;
+    font-size: 18px;
+    margin: 0;
+    white-space: nowrap; }
+
+:host ::ng-deep .s-overlay__player.s-overlay__player--winner {
+  margin-bottom: 3rem; }
 
 .grid__wrapper {
   width: 1000px;
@@ -2554,9 +2653,6 @@
     width: 720px !important;
     margin: 0 3px;
     padding-right: 5px; } }
-
-.sample-column {
-  margin: 0 !important; }
 
 .switch-sample__title {
   margin: 0 1.25rem 0 0; }
@@ -2594,7 +2690,6 @@
   text-overflow: ellipsis;
   overflow: hidden; }
 
-.badge_wrap,
 .cell__inner,
 .cell__inner_2 {
   display: -ms-flexbox;
@@ -2603,8 +2698,7 @@
       align-items: center;
   height: 100%; }
 
-.cell__inner,
-.badge_wrap {
+.cell__inner {
   position: relative;
   -ms-flex-pack: justify;
       justify-content: space-between; }
@@ -2617,9 +2711,6 @@
 
 .cup {
   padding-left: 20px; }
-
-.rowIndex {
-  margin-left: 3.5625rem; }
 
 @media (max-width: 60rem) {
   .grid__wrapper {
