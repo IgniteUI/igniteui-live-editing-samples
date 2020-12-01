@@ -154,7 +154,7 @@
     display: block;
     position: absolute;
     border-radius: 50%;
-    background: var(--igx-ripple-color);
+    background: var(--igx-tabs-tab-ripple-color);
     pointer-events: none;
     -ms-transform-origin: center;
         transform-origin: center;
@@ -248,7 +248,7 @@
     display: block;
     position: absolute;
     border-radius: 50%;
-    background: var(--igx-ripple-color);
+    background: var(--igx-tabs-button-ripple-color);
     pointer-events: none;
     -ms-transform-origin: center;
         transform-origin: center;

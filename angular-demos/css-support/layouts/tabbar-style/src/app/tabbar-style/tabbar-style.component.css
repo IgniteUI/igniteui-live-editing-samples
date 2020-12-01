@@ -135,7 +135,7 @@ igx-tab-panel {
   color: var(--igx-bottom-nav-active-item-color);
   transition: color 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
-:host ::ng-deep .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item :host ::ng-deep .tab-label, :host ::ng-deep .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected :host ::ng-deep .tab-label {
+:host ::ng-deep .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item :host ::ng-deep .tab-label, :host ::ng-deep .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected :host ::ng-deep .tab-label, :host ::ng-deep .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled :host ::ng-deep .tab-label {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -146,7 +146,7 @@ igx-tab-panel {
   transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   z-index: 1; }
 
-:host ::ng-deep .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item :host ::ng-deep .tab-icon, :host ::ng-deep .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected :host ::ng-deep .tab-icon {
+:host ::ng-deep .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item :host ::ng-deep .tab-icon, :host ::ng-deep .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected :host ::ng-deep .tab-icon, :host ::ng-deep .igx-bottom-nav__menu-item--disabled .tab-icon, .igx-bottom-nav__menu-item--disabled :host ::ng-deep .tab-icon {
   display: -ms-flexbox;
   display: flex;
   position: relative;
@@ -157,7 +157,7 @@ igx-tab-panel {
   transform: translateZ(0);
   transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   z-index: 1; }
-  :host ::ng-deep .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item :host ::ng-deep .tab-icon igx-badge, :host ::ng-deep .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected :host ::ng-deep .tab-icon igx-badge {
+  :host ::ng-deep .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item :host ::ng-deep .tab-icon igx-badge, :host ::ng-deep .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected :host ::ng-deep .tab-icon igx-badge, :host ::ng-deep .igx-bottom-nav__menu-item--disabled .tab-icon igx-badge, .igx-bottom-nav__menu-item--disabled :host ::ng-deep .tab-icon igx-badge {
     position: absolute;
     top: -6px;
     right: -6px;

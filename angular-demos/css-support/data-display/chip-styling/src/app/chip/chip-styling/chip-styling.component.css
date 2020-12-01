@@ -58,6 +58,8 @@ igx-chip {
   --igx-chip-ghost-elevation: 8;
   --igx-chip-variant: material;
   --igx-chip-remove-icon-color: 'currentColor';
+  --igx-chip-focus-outline-color: transparent;
+  --igx-chip-focus-selected-outline-color: transparent;
   --igx-chip-remove-icon-color-focus: #da0000;
   --igx-chip-text-color: #FEFEFE;
   --igx-chip-background: #011627;
@@ -345,6 +347,7 @@ igx-chip {
   z-index: 10;
   box-shadow: var(--igx-chip-ghost-shadow);
   overflow: hidden;
+  color: var(--igx-chip-focus-text-color);
   background: var(--igx-chip-ghost-background); }
   :host ::ng-deep .igx-chip__ghost:hover, :host ::ng-deep .igx-chip__ghost--cosy:hover, :host ::ng-deep .igx-chip__ghost--compact:hover, :host ::ng-deep .igx-chip__ghost:focus, :host ::ng-deep .igx-chip__ghost--cosy:focus, :host ::ng-deep .igx-chip__ghost--compact:focus {
     background: var(--igx-chip-ghost-background); }

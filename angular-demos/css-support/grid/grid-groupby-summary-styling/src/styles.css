@@ -130,14 +130,14 @@
     line-height: 1.25rem;
     margin-top: 0;
     margin-bottom: 0; }
-  .igx-typography .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .igx-typography .tab-label, .igx-typography .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .igx-typography .tab-label {
+  .igx-typography .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .igx-typography .tab-label, .igx-typography .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .igx-typography .tab-label, .igx-typography .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled .igx-typography .tab-label {
     font-weight: 400;
     font-size: 0.75rem;
     letter-spacing: 0.025rem;
     text-transform: none;
     line-height: 1rem;
     margin: 0; }
-  .igx-typography .igx-button, .igx-typography .igx-button--flat, .igx-typography .igx-button--outlined, .igx-typography .igx-button--raised {
+  .igx-typography .igx-button, .igx-typography .igx-button--flat, .igx-typography .igx-button--raised, .igx-typography .igx-button--outlined {
     font-weight: 600;
     font-size: 0.875rem;
     letter-spacing: 0.04688rem;
@@ -1267,7 +1267,7 @@
   color: #09f;
   transition: color 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
 
-.igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item--selected .tab-label {
+.igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--disabled .tab-label {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -1278,7 +1278,7 @@
   transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   z-index: 1; }
 
-.igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item--selected .tab-icon {
+.igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--disabled .tab-icon {
   display: -ms-flexbox;
   display: flex;
   position: relative;
@@ -1289,7 +1289,7 @@
   transform: translateZ(0);
   transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   z-index: 1; }
-  .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .tab-icon igx-badge {
+  .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--disabled .tab-icon igx-badge {
     position: absolute;
     top: -6px;
     right: -6px;
@@ -1327,6 +1327,11 @@
   --igx-button-outlined-icon-color: 'currentColor';
   --igx-button-outlined-hover-icon-color: 'currentColor';
   --igx-button-outlined-focus-icon-color: 'currentColor';
+  --igx-button-flat-shadow-color: transparent;
+  --igx-button-raised-shadow-color: transparent;
+  --igx-button-outlined-shadow-color: transparent;
+  --igx-button-icon-shadow-color: transparent;
+  --igx-button-fab-shadow-color: transparent;
   --igx-button-flat-hover-background: rgba(228, 28, 119, 0.05);
   --igx-button-flat-hover-text-color: #e41c77;
   --igx-button-flat-focus-background: rgba(223, 54, 131, 0.12);
@@ -1364,13 +1369,9 @@
   --igx-button-raised-focus-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
   --igx-button-fab-resting-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 6px 10px 0 rgba(0, 0, 0, 0.12), 0 1px 18px 0 rgba(0, 0, 0, 0.08);
   --igx-button-fab-hover-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-  --igx-button-fab-focus-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-  --igx-button-raised-shadow-color: transparent;
-  --igx-button-outlined-shadow-color: transparent;
-  --igx-button-icon-shadow-color: transparent;
-  --igx-button-fab-shadow-color: transparent; }
+  --igx-button-fab-focus-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
 
-.igx-button, .igx-button--flat, .igx-button--outlined, .igx-button--raised {
+.igx-button, .igx-button--flat, .igx-button--raised, .igx-button--outlined {
   position: relative;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1393,7 +1394,7 @@
   white-space: nowrap;
   transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
   font-family: inherit; }
-  .igx-button .igx-icon, .igx-button--flat .igx-icon, .igx-button--outlined .igx-icon, .igx-button--raised .igx-icon, .igx-button .igx-icon--inactive, .igx-button--flat .igx-icon--inactive, .igx-button--outlined .igx-icon--inactive, .igx-button--raised .igx-icon--inactive, .igx-button .igx-icon--success, .igx-button--flat .igx-icon--success, .igx-button--outlined .igx-icon--success, .igx-button--raised .igx-icon--success, .igx-button .igx-icon--error, .igx-button--flat .igx-icon--error, .igx-button--outlined .igx-icon--error, .igx-button--raised .igx-icon--error {
+  .igx-button .igx-icon, .igx-button--flat .igx-icon, .igx-button--raised .igx-icon, .igx-button--outlined .igx-icon, .igx-button .igx-icon--inactive, .igx-button--flat .igx-icon--inactive, .igx-button--raised .igx-icon--inactive, .igx-button--outlined .igx-icon--inactive, .igx-button .igx-icon--success, .igx-button--flat .igx-icon--success, .igx-button--raised .igx-icon--success, .igx-button--outlined .igx-icon--success, .igx-button .igx-icon--error, .igx-button--flat .igx-icon--error, .igx-button--raised .igx-icon--error, .igx-button--outlined .igx-icon--error {
     width: 1.125rem;
     height: 1.125rem;
     font-size: 1.125rem; }
@@ -1420,7 +1421,8 @@
       color: "'currentColor'"; }
   .igx-button--flat:focus, .igx-button--flat:active {
     background: rgba(223, 54, 131, 0.12);
-    color: #e41c77; }
+    color: #e41c77;
+    box-shadow: 0 0 0 0.1875rem transparent; }
     .igx-button--flat:focus .igx-icon, .igx-button--flat:focus .igx-icon--inactive, .igx-button--flat:focus .igx-icon--success, .igx-button--flat:focus .igx-icon--error, .igx-button--flat:active .igx-icon, .igx-button--flat:active .igx-icon--inactive, .igx-button--flat:active .igx-icon--success, .igx-button--flat:active .igx-icon--error {
       color: "'currentColor'"; }
 
@@ -1428,6 +1430,7 @@
   background: transparent;
   color: #e41c77;
   border-radius: 4px;
+  padding: 0.4375rem 0.875rem;
   border: 1px solid transparent;
   border-color: rgba(0, 0, 0, 0.12); }
   .igx-button--outlined .igx-icon, .igx-button--outlined .igx-icon--inactive, .igx-button--outlined .igx-icon--success, .igx-button--outlined .igx-icon--error {
@@ -1439,9 +1442,18 @@
       color: "'currentColor'"; }
   .igx-button--outlined:focus, .igx-button--outlined:active {
     background: rgba(223, 54, 131, 0.12);
-    color: #e41c77; }
+    color: #e41c77;
+    box-shadow: 0 0 0 0.1875rem transparent; }
     .igx-button--outlined:focus .igx-icon, .igx-button--outlined:focus .igx-icon--inactive, .igx-button--outlined:focus .igx-icon--success, .igx-button--outlined:focus .igx-icon--error, .igx-button--outlined:active .igx-icon, .igx-button--outlined:active .igx-icon--inactive, .igx-button--outlined:active .igx-icon--success, .igx-button--outlined:active .igx-icon--error {
       color: "'currentColor'"; }
+
+.igx-button--outlined-cosy.igx-button--outlined {
+  padding: 0.25rem 0.875rem;
+  min-height: 1.875rem; }
+
+.igx-button--outlined-compact.igx-button--outlined {
+  padding: 0.0625rem 0.875rem;
+  min-height: 1.5rem; }
 
 
 .igx-button--raised {
@@ -1460,7 +1472,7 @@
   .igx-button--raised:focus, .igx-button--raised:active {
     color: black;
     background: #dc5391;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
+    box-shadow: 0 0 0 0.1875rem transparent, 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
     .igx-button--raised:focus .igx-icon, .igx-button--raised:focus .igx-icon--inactive, .igx-button--raised:focus .igx-icon--success, .igx-button--raised:focus .igx-icon--error, .igx-button--raised:active .igx-icon, .igx-button--raised:active .igx-icon--inactive, .igx-button--raised:active .igx-icon--success, .igx-button--raised:active .igx-icon--error {
       color: "'currentColor'"; }
 
@@ -1505,7 +1517,7 @@
   .igx-button--fab:focus, .igx-button--fab:active {
     color: black;
     background: #dc5391;
-    box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
+    box-shadow: 0 0 0 0.1875rem transparent, 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
   .igx-button--fab igx-icon {
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -1546,7 +1558,7 @@
   .igx-button--icon:focus, .igx-button--icon:active {
     color: rgba(0, 0, 0, 0.74);
     background: rgba(0, 0, 0, 0.26);
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
+    box-shadow: 0 0 0 0.1875rem transparent, 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
 
 
 .igx-button--disabled {
@@ -3182,6 +3194,8 @@
   --igx-chip-ghost-elevation: 8;
   --igx-chip-variant: material;
   --igx-chip-remove-icon-color: 'currentColor';
+  --igx-chip-focus-outline-color: transparent;
+  --igx-chip-focus-selected-outline-color: transparent;
   --igx-chip-remove-icon-color-focus: #ff134a;
   --igx-chip-text-color: rgba(0, 0, 0, 0.62);
   --igx-chip-background: rgba(0, 0, 0, 0.08);
@@ -3655,6 +3669,7 @@
   z-index: 10;
   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
   overflow: hidden;
+  color: rgba(0, 0, 0, 0.62);
   background: #bcbcbc; }
   .igx-chip__ghost:hover, .igx-chip__ghost--cosy:hover, .igx-chip__ghost--compact:hover, .igx-chip__ghost:focus, .igx-chip__ghost--cosy:focus, .igx-chip__ghost--compact:focus {
     background: #bcbcbc; }
@@ -4524,7 +4539,8 @@ igx-date-range-end,
   height: 100%;
   color: rgba(0, 0, 0, 0.74);
   -ms-flex-direction: column;
-      flex-direction: column; }
+      flex-direction: column;
+  padding: 1.5rem; }
 
 .igx-grid__loading {
   display: -ms-flexbox;
@@ -9060,7 +9076,7 @@ igx-excel-style-filter-operations,
   background: transparent;
   transition: background 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   pointer-events: none;
-  z-index: 10;
+  z-index: 10005;
   box-sizing: content-box; }
 
 .igx-overlay__wrapper--modal {
@@ -9578,10 +9594,12 @@ igx-excel-style-filter-operations,
 :root {
   --igx-slider-variant: material;
   --igx-slider-tick-color: rgba(0, 0, 0, 0.38);
+  --igx-slider-thumb-focus-color: transparent;
   --igx-slider-tick-color-tall: rgba(0, 0, 0, 0.38);
   --igx-slider-tick-label-color: rgba(0, 0, 0, 0.38);
   --igx-slider-tick-label-color-tall: rgba(0, 0, 0, 0.87);
   --igx-slider-track-color: #e41c77;
+  --igx-slider-track-step-color: #fff;
   --igx-slider-thumb-color: #e41c77;
   --igx-slider-thumb-border-color: #e41c77;
   --igx-slider-label-background-color: #e41c77;
@@ -9723,6 +9741,7 @@ igx-excel-style-filter-operations,
   width: 100%;
   height: 0.125rem;
   background-size: 100% 0.125em;
+  background-color: #fff;
   opacity: .85;
   transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 1; }
@@ -11087,7 +11106,7 @@ body {
   .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-icon, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-label {
     color: var(--igx-bottom-nav-active-item-color);
     transition: color 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  .fin-dark-theme .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .fin-dark-theme .tab-label, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-label {
+  .fin-dark-theme .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .fin-dark-theme .tab-label, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-label, .fin-dark-theme .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled .fin-dark-theme .tab-label {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -11097,7 +11116,7 @@ body {
     transform: translateZ(0);
     transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     z-index: 1; }
-  .fin-dark-theme .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item .fin-dark-theme .tab-icon, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-icon {
+  .fin-dark-theme .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item .fin-dark-theme .tab-icon, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-icon, .fin-dark-theme .igx-bottom-nav__menu-item--disabled .tab-icon, .igx-bottom-nav__menu-item--disabled .fin-dark-theme .tab-icon {
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -11108,7 +11127,7 @@ body {
     transform: translateZ(0);
     transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     z-index: 1; }
-    .fin-dark-theme .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item .fin-dark-theme .tab-icon igx-badge, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-icon igx-badge {
+    .fin-dark-theme .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item .fin-dark-theme .tab-icon igx-badge, .fin-dark-theme .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .fin-dark-theme .tab-icon igx-badge, .fin-dark-theme .igx-bottom-nav__menu-item--disabled .tab-icon igx-badge, .igx-bottom-nav__menu-item--disabled .fin-dark-theme .tab-icon igx-badge {
       position: absolute;
       top: -6px;
       right: -6px;
@@ -11143,6 +11162,11 @@ body {
     --igx-button-outlined-icon-color: 'currentColor';
     --igx-button-outlined-hover-icon-color: 'currentColor';
     --igx-button-outlined-focus-icon-color: 'currentColor';
+    --igx-button-flat-shadow-color: transparent;
+    --igx-button-raised-shadow-color: transparent;
+    --igx-button-outlined-shadow-color: transparent;
+    --igx-button-icon-shadow-color: transparent;
+    --igx-button-fab-shadow-color: transparent;
     --igx-button-flat-hover-background: rgba(114, 218, 103, 0.12);
     --igx-button-flat-hover-text-color: #72da67;
     --igx-button-flat-focus-background: rgba(134, 217, 125, 0.24);
@@ -11180,12 +11204,8 @@ body {
     --igx-button-raised-focus-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     --igx-button-fab-resting-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 6px 10px 0 rgba(0, 0, 0, 0.12), 0 1px 18px 0 rgba(0, 0, 0, 0.08);
     --igx-button-fab-hover-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-    --igx-button-fab-focus-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-    --igx-button-raised-shadow-color: transparent;
-    --igx-button-outlined-shadow-color: transparent;
-    --igx-button-icon-shadow-color: transparent;
-    --igx-button-fab-shadow-color: transparent; }
-  .fin-dark-theme .igx-button, .fin-dark-theme .igx-button--flat, .fin-dark-theme .igx-button--outlined, .fin-dark-theme .igx-button--raised {
+    --igx-button-fab-focus-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
+  .fin-dark-theme .igx-button, .fin-dark-theme .igx-button--flat, .fin-dark-theme .igx-button--raised, .fin-dark-theme .igx-button--outlined {
     position: relative;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -11208,7 +11228,7 @@ body {
     white-space: nowrap;
     transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
     font-family: inherit; }
-    .fin-dark-theme .igx-button .igx-icon, .fin-dark-theme .igx-button--flat .igx-icon, .fin-dark-theme .igx-button--outlined .igx-icon, .fin-dark-theme .igx-button--raised .igx-icon, .fin-dark-theme .igx-button .igx-icon--inactive, .fin-dark-theme .igx-button--flat .igx-icon--inactive, .fin-dark-theme .igx-button--outlined .igx-icon--inactive, .fin-dark-theme .igx-button--raised .igx-icon--inactive, .fin-dark-theme .igx-button .igx-icon--success, .fin-dark-theme .igx-button--flat .igx-icon--success, .fin-dark-theme .igx-button--outlined .igx-icon--success, .fin-dark-theme .igx-button--raised .igx-icon--success, .fin-dark-theme .igx-button .igx-icon--error, .fin-dark-theme .igx-button--flat .igx-icon--error, .fin-dark-theme .igx-button--outlined .igx-icon--error, .fin-dark-theme .igx-button--raised .igx-icon--error {
+    .fin-dark-theme .igx-button .igx-icon, .fin-dark-theme .igx-button--flat .igx-icon, .fin-dark-theme .igx-button--raised .igx-icon, .fin-dark-theme .igx-button--outlined .igx-icon, .fin-dark-theme .igx-button .igx-icon--inactive, .fin-dark-theme .igx-button--flat .igx-icon--inactive, .fin-dark-theme .igx-button--raised .igx-icon--inactive, .fin-dark-theme .igx-button--outlined .igx-icon--inactive, .fin-dark-theme .igx-button .igx-icon--success, .fin-dark-theme .igx-button--flat .igx-icon--success, .fin-dark-theme .igx-button--raised .igx-icon--success, .fin-dark-theme .igx-button--outlined .igx-icon--success, .fin-dark-theme .igx-button .igx-icon--error, .fin-dark-theme .igx-button--flat .igx-icon--error, .fin-dark-theme .igx-button--raised .igx-icon--error, .fin-dark-theme .igx-button--outlined .igx-icon--error {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
@@ -11231,13 +11251,15 @@ body {
         color: var(--igx-button-flat-hover-icon-color); }
     .fin-dark-theme .igx-button--flat:focus, .fin-dark-theme .igx-button--flat:active {
       background: var(--igx-button-flat-focus-background);
-      color: var(--igx-button-flat-focus-text-color); }
+      color: var(--igx-button-flat-focus-text-color);
+      box-shadow: 0 0 0 0.1875rem var(--igx-button-flat-shadow-color); }
       .fin-dark-theme .igx-button--flat:focus .igx-icon, .fin-dark-theme .igx-button--flat:focus .igx-icon--inactive, .fin-dark-theme .igx-button--flat:focus .igx-icon--success, .fin-dark-theme .igx-button--flat:focus .igx-icon--error, .fin-dark-theme .igx-button--flat:active .igx-icon, .fin-dark-theme .igx-button--flat:active .igx-icon--inactive, .fin-dark-theme .igx-button--flat:active .igx-icon--success, .fin-dark-theme .igx-button--flat:active .igx-icon--error {
         color: var(--igx-button-flat-focus-icon-color); }
   .fin-dark-theme .igx-button--outlined {
     background: var(--igx-button-outlined-background);
     color: var(--igx-button-outlined-text-color);
     border-radius: var(--igx-button-outlined-border-radius);
+    padding: 0.4375rem 0.875rem;
     border: 1px solid transparent;
     border-color: var(--igx-button-outlined-outline-color); }
     .fin-dark-theme .igx-button--outlined .igx-icon, .fin-dark-theme .igx-button--outlined .igx-icon--inactive, .fin-dark-theme .igx-button--outlined .igx-icon--success, .fin-dark-theme .igx-button--outlined .igx-icon--error {
@@ -11249,9 +11271,16 @@ body {
         color: var(--igx-button-outlined-hover-icon-color); }
     .fin-dark-theme .igx-button--outlined:focus, .fin-dark-theme .igx-button--outlined:active {
       background: var(--igx-button-outlined-focus-background);
-      color: var(--igx-button-outlined-focus-text-color); }
+      color: var(--igx-button-outlined-focus-text-color);
+      box-shadow: 0 0 0 0.1875rem var(--igx-button-outlined-shadow-color); }
       .fin-dark-theme .igx-button--outlined:focus .igx-icon, .fin-dark-theme .igx-button--outlined:focus .igx-icon--inactive, .fin-dark-theme .igx-button--outlined:focus .igx-icon--success, .fin-dark-theme .igx-button--outlined:focus .igx-icon--error, .fin-dark-theme .igx-button--outlined:active .igx-icon, .fin-dark-theme .igx-button--outlined:active .igx-icon--inactive, .fin-dark-theme .igx-button--outlined:active .igx-icon--success, .fin-dark-theme .igx-button--outlined:active .igx-icon--error {
         color: var(--igx-button-outlined-focus-icon-color); }
+  .fin-dark-theme .igx-button--outlined-cosy.igx-button--outlined {
+    padding: 0.25rem 0.875rem;
+    min-height: 1.875rem; }
+  .fin-dark-theme .igx-button--outlined-compact.igx-button--outlined {
+    padding: 0.0625rem 0.875rem;
+    min-height: 1.5rem; }
   .fin-dark-theme .igx-button--raised {
     color: var(--igx-button-raised-text-color);
     background: var(--igx-button-raised-background);
@@ -11268,7 +11297,7 @@ body {
     .fin-dark-theme .igx-button--raised:focus, .fin-dark-theme .igx-button--raised:active {
       color: var(--igx-button-raised-focus-text-color);
       background: var(--igx-button-raised-focus-background);
-      box-shadow: var(--igx-button-raised-focus-shadow); }
+      box-shadow: 0 0 0 0.1875rem var(--igx-button-raised-shadow-color), var(--igx-button-raised-focus-shadow); }
       .fin-dark-theme .igx-button--raised:focus .igx-icon, .fin-dark-theme .igx-button--raised:focus .igx-icon--inactive, .fin-dark-theme .igx-button--raised:focus .igx-icon--success, .fin-dark-theme .igx-button--raised:focus .igx-icon--error, .fin-dark-theme .igx-button--raised:active .igx-icon, .fin-dark-theme .igx-button--raised:active .igx-icon--inactive, .fin-dark-theme .igx-button--raised:active .igx-icon--success, .fin-dark-theme .igx-button--raised:active .igx-icon--error {
         color: var(--igx-button-raised-focus-icon-color); }
   .fin-dark-theme .igx-button--fab, .fin-dark-theme .igx-button--icon {
@@ -11310,7 +11339,7 @@ body {
     .fin-dark-theme .igx-button--fab:focus, .fin-dark-theme .igx-button--fab:active {
       color: var(--igx-button-fab-focus-text-color);
       background: var(--igx-button-fab-focus-background);
-      box-shadow: var(--igx-button-fab-focus-shadow); }
+      box-shadow: 0 0 0 0.1875rem var(--igx-button-fab-shadow-color), var(--igx-button-fab-focus-shadow); }
     .fin-dark-theme .igx-button--fab igx-icon {
       display: -ms-inline-flexbox;
       display: inline-flex;
@@ -11347,7 +11376,7 @@ body {
     .fin-dark-theme .igx-button--icon:focus, .fin-dark-theme .igx-button--icon:active {
       color: var(--igx-button-icon-focus-color);
       background: var(--igx-button-icon-focus-background);
-      box-shadow: var(--igx-button-raised-focus-shadow); }
+      box-shadow: 0 0 0 0.1875rem var(--igx-button-icon-shadow-color), var(--igx-button-raised-focus-shadow); }
   .fin-dark-theme .igx-button--disabled {
     pointer-events: none;
     box-shadow: none; }
@@ -12713,7 +12742,7 @@ body {
       display: block;
       position: absolute;
       border-radius: 50%;
-      background: var(--igx-ripple-color);
+      background: var(--igx-checkbox-fill-color);
       pointer-events: none;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -12760,6 +12789,8 @@ body {
     --igx-chip-ghost-elevation: 8;
     --igx-chip-variant: material;
     --igx-chip-remove-icon-color: 'currentColor';
+    --igx-chip-focus-outline-color: transparent;
+    --igx-chip-focus-selected-outline-color: transparent;
     --igx-chip-remove-icon-color-focus: #ff134a;
     --igx-chip-text-color: rgba(255, 255, 255, 0.62);
     --igx-chip-background: rgba(255, 255, 255, 0.08);
@@ -13305,6 +13336,7 @@ body {
     z-index: 10;
     box-shadow: var(--igx-chip-ghost-shadow);
     overflow: hidden;
+    color: var(--igx-chip-focus-text-color);
     background: var(--igx-chip-ghost-background); }
     .fin-dark-theme .igx-chip__ghost:hover, .fin-dark-theme .igx-chip__ghost--cosy:hover, .fin-dark-theme .igx-chip__ghost--compact:hover, .fin-dark-theme .igx-chip__ghost:focus, .fin-dark-theme .igx-chip__ghost--cosy:focus, .fin-dark-theme .igx-chip__ghost--compact:focus {
       background: var(--igx-chip-ghost-background); }
@@ -14051,7 +14083,8 @@ body {
     height: 100%;
     color: var(--igx-grid-content-text-color);
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    padding: 1.5rem; }
   .fin-dark-theme .igx-grid__loading {
     display: -ms-flexbox;
     display: flex;
@@ -15558,7 +15591,7 @@ body {
     .fin-dark-theme .igx-excel-filter__menu .igx-button-group__item, .fin-dark-theme .igx-excel-filter__menu .igx-button-group__item--selected {
       border: 1px solid var(--igx-button-group-item-border-color);
       color: var(--igx-button-group-item-text-color);
-      background: var(--igx-button-group-item-background);
+      background: var(--igx-grid-filtering-row-background);
       min-width: 24px;
       display: -ms-flexbox;
       display: flex;
@@ -17859,7 +17892,7 @@ body {
     background: transparent;
     transition: background 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     pointer-events: none;
-    z-index: 10;
+    z-index: 10005;
     box-sizing: content-box; }
   .fin-dark-theme .igx-overlay__wrapper--modal {
     background: var(--igx-overlay-background-color);
@@ -18203,7 +18236,7 @@ body {
       display: block;
       position: absolute;
       border-radius: 50%;
-      background: var(--igx-ripple-color);
+      background: var(--igx-radio-fill-color);
       pointer-events: none;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -18255,10 +18288,12 @@ body {
   .fin-dark-theme {
     --igx-slider-variant: material;
     --igx-slider-tick-color: rgba(255, 255, 255, 0.38);
+    --igx-slider-thumb-focus-color: transparent;
     --igx-slider-tick-color-tall: rgba(255, 255, 255, 0.38);
     --igx-slider-tick-label-color: rgba(255, 255, 255, 0.38);
     --igx-slider-tick-label-color-tall: rgba(255, 255, 255, 0.87);
     --igx-slider-track-color: #72da67;
+    --igx-slider-track-step-color: #333;
     --igx-slider-thumb-color: #72da67;
     --igx-slider-thumb-border-color: #72da67;
     --igx-slider-label-background-color: #72da67;
@@ -18379,6 +18414,7 @@ body {
     width: 100%;
     height: 0.125rem;
     background-size: 100% 0.125em;
+    background-color: var(--igx-slider-track-step-color);
     opacity: .85;
     transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 1; }
@@ -18720,7 +18756,7 @@ body {
       display: block;
       position: absolute;
       border-radius: 50%;
-      background: var(--igx-ripple-color);
+      background: var(--igx-switch-thumb-on-color);
       pointer-events: none;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -18878,7 +18914,7 @@ body {
       display: block;
       position: absolute;
       border-radius: 50%;
-      background: var(--igx-ripple-color);
+      background: var(--igx-tabs-tab-ripple-color);
       pointer-events: none;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -18967,7 +19003,7 @@ body {
       display: block;
       position: absolute;
       border-radius: 50%;
-      background: var(--igx-ripple-color);
+      background: var(--igx-tabs-button-ripple-color);
       pointer-events: none;
       -ms-transform-origin: center;
           transform-origin: center;
@@ -19520,7 +19556,7 @@ body {
   .dark-theme .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .dark-theme .tab-icon, .dark-theme .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .tab-label {
     color: #09f;
     transition: color 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-  .dark-theme .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .dark-theme .tab-label, .dark-theme .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .tab-label {
+  .dark-theme .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .dark-theme .tab-label, .dark-theme .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .tab-label, .dark-theme .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled .dark-theme .tab-label {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -19530,7 +19566,7 @@ body {
     transform: translateZ(0);
     transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     z-index: 1; }
-  .dark-theme .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item .dark-theme .tab-icon, .dark-theme .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .dark-theme .tab-icon {
+  .dark-theme .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item .dark-theme .tab-icon, .dark-theme .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .dark-theme .tab-icon, .dark-theme .igx-bottom-nav__menu-item--disabled .tab-icon, .igx-bottom-nav__menu-item--disabled .dark-theme .tab-icon {
     display: -ms-flexbox;
     display: flex;
     position: relative;
@@ -19541,7 +19577,7 @@ body {
     transform: translateZ(0);
     transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     z-index: 1; }
-    .dark-theme .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item .dark-theme .tab-icon igx-badge, .dark-theme .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .dark-theme .tab-icon igx-badge {
+    .dark-theme .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item .dark-theme .tab-icon igx-badge, .dark-theme .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .dark-theme .tab-icon igx-badge, .dark-theme .igx-bottom-nav__menu-item--disabled .tab-icon igx-badge, .igx-bottom-nav__menu-item--disabled .dark-theme .tab-icon igx-badge {
       position: absolute;
       top: -6px;
       right: -6px;
@@ -19576,6 +19612,11 @@ body {
     --igx-button-outlined-icon-color: 'currentColor';
     --igx-button-outlined-hover-icon-color: 'currentColor';
     --igx-button-outlined-focus-icon-color: 'currentColor';
+    --igx-button-flat-shadow-color: transparent;
+    --igx-button-raised-shadow-color: transparent;
+    --igx-button-outlined-shadow-color: transparent;
+    --igx-button-icon-shadow-color: transparent;
+    --igx-button-fab-shadow-color: transparent;
     --igx-button-flat-hover-background: rgba(114, 218, 103, 0.12);
     --igx-button-flat-hover-text-color: #72da67;
     --igx-button-flat-focus-background: rgba(134, 217, 125, 0.24);
@@ -19613,12 +19654,8 @@ body {
     --igx-button-raised-focus-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     --igx-button-fab-resting-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.26), 0 6px 10px 0 rgba(0, 0, 0, 0.12), 0 1px 18px 0 rgba(0, 0, 0, 0.08);
     --igx-button-fab-hover-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-    --igx-button-fab-focus-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08);
-    --igx-button-raised-shadow-color: transparent;
-    --igx-button-outlined-shadow-color: transparent;
-    --igx-button-icon-shadow-color: transparent;
-    --igx-button-fab-shadow-color: transparent; }
-  .dark-theme .igx-button, .dark-theme .igx-button--flat, .dark-theme .igx-button--outlined, .dark-theme .igx-button--raised {
+    --igx-button-fab-focus-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
+  .dark-theme .igx-button, .dark-theme .igx-button--flat, .dark-theme .igx-button--raised, .dark-theme .igx-button--outlined {
     position: relative;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -19641,7 +19678,7 @@ body {
     white-space: nowrap;
     transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
     font-family: inherit; }
-    .dark-theme .igx-button .igx-icon, .dark-theme .igx-button--flat .igx-icon, .dark-theme .igx-button--outlined .igx-icon, .dark-theme .igx-button--raised .igx-icon, .dark-theme .igx-button .igx-icon--inactive, .dark-theme .igx-button--flat .igx-icon--inactive, .dark-theme .igx-button--outlined .igx-icon--inactive, .dark-theme .igx-button--raised .igx-icon--inactive, .dark-theme .igx-button .igx-icon--success, .dark-theme .igx-button--flat .igx-icon--success, .dark-theme .igx-button--outlined .igx-icon--success, .dark-theme .igx-button--raised .igx-icon--success, .dark-theme .igx-button .igx-icon--error, .dark-theme .igx-button--flat .igx-icon--error, .dark-theme .igx-button--outlined .igx-icon--error, .dark-theme .igx-button--raised .igx-icon--error {
+    .dark-theme .igx-button .igx-icon, .dark-theme .igx-button--flat .igx-icon, .dark-theme .igx-button--raised .igx-icon, .dark-theme .igx-button--outlined .igx-icon, .dark-theme .igx-button .igx-icon--inactive, .dark-theme .igx-button--flat .igx-icon--inactive, .dark-theme .igx-button--raised .igx-icon--inactive, .dark-theme .igx-button--outlined .igx-icon--inactive, .dark-theme .igx-button .igx-icon--success, .dark-theme .igx-button--flat .igx-icon--success, .dark-theme .igx-button--raised .igx-icon--success, .dark-theme .igx-button--outlined .igx-icon--success, .dark-theme .igx-button .igx-icon--error, .dark-theme .igx-button--flat .igx-icon--error, .dark-theme .igx-button--raised .igx-icon--error, .dark-theme .igx-button--outlined .igx-icon--error {
       width: 1.125rem;
       height: 1.125rem;
       font-size: 1.125rem; }
@@ -19664,13 +19701,15 @@ body {
         color: "'currentColor'"; }
     .dark-theme .igx-button--flat:focus, .dark-theme .igx-button--flat:active {
       background: rgba(134, 217, 125, 0.24);
-      color: #72da67; }
+      color: #72da67;
+      box-shadow: 0 0 0 0.1875rem transparent; }
       .dark-theme .igx-button--flat:focus .igx-icon, .dark-theme .igx-button--flat:focus .igx-icon--inactive, .dark-theme .igx-button--flat:focus .igx-icon--success, .dark-theme .igx-button--flat:focus .igx-icon--error, .dark-theme .igx-button--flat:active .igx-icon, .dark-theme .igx-button--flat:active .igx-icon--inactive, .dark-theme .igx-button--flat:active .igx-icon--success, .dark-theme .igx-button--flat:active .igx-icon--error {
         color: "'currentColor'"; }
   .dark-theme .igx-button--outlined {
     background: transparent;
     color: #72da67;
     border-radius: 4px;
+    padding: 0.4375rem 0.875rem;
     border: 1px solid transparent;
     border-color: rgba(255, 255, 255, 0.12); }
     .dark-theme .igx-button--outlined .igx-icon, .dark-theme .igx-button--outlined .igx-icon--inactive, .dark-theme .igx-button--outlined .igx-icon--success, .dark-theme .igx-button--outlined .igx-icon--error {
@@ -19682,9 +19721,16 @@ body {
         color: "'currentColor'"; }
     .dark-theme .igx-button--outlined:focus, .dark-theme .igx-button--outlined:active {
       background: rgba(134, 217, 125, 0.12);
-      color: #72da67; }
+      color: #72da67;
+      box-shadow: 0 0 0 0.1875rem transparent; }
       .dark-theme .igx-button--outlined:focus .igx-icon, .dark-theme .igx-button--outlined:focus .igx-icon--inactive, .dark-theme .igx-button--outlined:focus .igx-icon--success, .dark-theme .igx-button--outlined:focus .igx-icon--error, .dark-theme .igx-button--outlined:active .igx-icon, .dark-theme .igx-button--outlined:active .igx-icon--inactive, .dark-theme .igx-button--outlined:active .igx-icon--success, .dark-theme .igx-button--outlined:active .igx-icon--error {
         color: "'currentColor'"; }
+  .dark-theme .igx-button--outlined-cosy.igx-button--outlined {
+    padding: 0.25rem 0.875rem;
+    min-height: 1.875rem; }
+  .dark-theme .igx-button--outlined-compact.igx-button--outlined {
+    padding: 0.0625rem 0.875rem;
+    min-height: 1.5rem; }
   .dark-theme .igx-button--raised {
     color: black;
     background: #72da67;
@@ -19701,7 +19747,7 @@ body {
     .dark-theme .igx-button--raised:focus, .dark-theme .igx-button--raised:active {
       color: black;
       background: #9cda96;
-      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
+      box-shadow: 0 0 0 0.1875rem transparent, 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
       .dark-theme .igx-button--raised:focus .igx-icon, .dark-theme .igx-button--raised:focus .igx-icon--inactive, .dark-theme .igx-button--raised:focus .igx-icon--success, .dark-theme .igx-button--raised:focus .igx-icon--error, .dark-theme .igx-button--raised:active .igx-icon, .dark-theme .igx-button--raised:active .igx-icon--inactive, .dark-theme .igx-button--raised:active .igx-icon--success, .dark-theme .igx-button--raised:active .igx-icon--error {
         color: "'currentColor'"; }
   .dark-theme .igx-button--fab, .dark-theme .igx-button--icon {
@@ -19743,7 +19789,7 @@ body {
     .dark-theme .igx-button--fab:focus, .dark-theme .igx-button--fab:active {
       color: black;
       background: #9cda96;
-      box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
+      box-shadow: 0 0 0 0.1875rem transparent, 0 7px 8px -4px rgba(0, 0, 0, 0.26), 0 12px 17px 2px rgba(0, 0, 0, 0.12), 0 5px 22px 4px rgba(0, 0, 0, 0.08); }
     .dark-theme .igx-button--fab igx-icon {
       display: -ms-inline-flexbox;
       display: inline-flex;
@@ -19780,7 +19826,7 @@ body {
     .dark-theme .igx-button--icon:focus, .dark-theme .igx-button--icon:active {
       color: rgba(255, 255, 255, 0.74);
       background: rgba(255, 255, 255, 0.26);
-      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
+      box-shadow: 0 0 0 0.1875rem transparent, 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08); }
   .dark-theme .igx-button--disabled {
     pointer-events: none;
     box-shadow: none; }
@@ -21193,6 +21239,8 @@ body {
     --igx-chip-ghost-elevation: 8;
     --igx-chip-variant: material;
     --igx-chip-remove-icon-color: 'currentColor';
+    --igx-chip-focus-outline-color: transparent;
+    --igx-chip-focus-selected-outline-color: transparent;
     --igx-chip-remove-icon-color-focus: #ff134a;
     --igx-chip-text-color: rgba(255, 255, 255, 0.62);
     --igx-chip-background: rgba(255, 255, 255, 0.08);
@@ -21690,6 +21738,7 @@ body {
     z-index: 10;
     box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.26), 0 8px 10px 1px rgba(0, 0, 0, 0.12), 0 3px 14px 2px rgba(0, 0, 0, 0.08);
     overflow: hidden;
+    color: rgba(255, 255, 255, 0.62);
     background: #424242; }
     .dark-theme .igx-chip__ghost:hover, .dark-theme .igx-chip__ghost--cosy:hover, .dark-theme .igx-chip__ghost--compact:hover, .dark-theme .igx-chip__ghost:focus, .dark-theme .igx-chip__ghost--cosy:focus, .dark-theme .igx-chip__ghost--compact:focus {
       background: #424242; }
@@ -22436,7 +22485,8 @@ body {
     height: 100%;
     color: rgba(255, 255, 255, 0.74);
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    padding: 1.5rem; }
   .dark-theme .igx-grid__loading {
     display: -ms-flexbox;
     display: flex;
@@ -26218,7 +26268,7 @@ body {
     background: transparent;
     transition: background 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     pointer-events: none;
-    z-index: 10;
+    z-index: 10005;
     box-sizing: content-box; }
   .dark-theme .igx-overlay__wrapper--modal {
     background: rgba(255, 255, 255, 0.38);
@@ -26614,10 +26664,12 @@ body {
   .dark-theme {
     --igx-slider-variant: material;
     --igx-slider-tick-color: rgba(255, 255, 255, 0.38);
+    --igx-slider-thumb-focus-color: transparent;
     --igx-slider-tick-color-tall: rgba(255, 255, 255, 0.38);
     --igx-slider-tick-label-color: rgba(255, 255, 255, 0.38);
     --igx-slider-tick-label-color-tall: rgba(255, 255, 255, 0.87);
     --igx-slider-track-color: #72da67;
+    --igx-slider-track-step-color: #333;
     --igx-slider-thumb-color: #72da67;
     --igx-slider-thumb-border-color: #72da67;
     --igx-slider-label-background-color: #72da67;
@@ -26738,6 +26790,7 @@ body {
     width: 100%;
     height: 0.125rem;
     background-size: 100% 0.125em;
+    background-color: #333;
     opacity: .85;
     transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 1; }
@@ -27682,14 +27735,14 @@ body {
       margin-bottom: 0;
       margin-top: 0;
       margin-bottom: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-label {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled .dark-theme .grid-chart-contextmenu-wrapper .tab-label {
       font-weight: 400;
       font-size: 0.75rem;
       letter-spacing: 0.025rem;
       text-transform: none;
       line-height: 1rem;
       margin: 0; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-button, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-button, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined {
       font-weight: 600;
       font-size: 0.875rem;
       letter-spacing: 0.04688rem;
@@ -28414,7 +28467,7 @@ body {
     .dark-theme .igx-bottom-nav__menu-item--selected .grid-chart-contextmenu-wrapper .tab-icon, .dark-theme .igx-bottom-nav__menu-item--selected .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-label {
       color: var(--igx-bottom-nav-active-item-color);
       transition: color 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955), opacity 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955); }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-label {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-label, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-label, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-label, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--disabled .tab-label, .igx-bottom-nav__menu-item--disabled .dark-theme .grid-chart-contextmenu-wrapper .tab-label {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -28424,7 +28477,7 @@ body {
       transform: translateZ(0);
       transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       z-index: 1; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-icon {
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-icon, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-icon, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--disabled .tab-icon, .igx-bottom-nav__menu-item--disabled .dark-theme .grid-chart-contextmenu-wrapper .tab-icon {
       display: -ms-flexbox;
       display: flex;
       position: relative;
@@ -28435,7 +28488,7 @@ body {
       transform: translateZ(0);
       transition: transform 0.15s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       z-index: 1; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-icon igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-icon igx-badge {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item .tab-icon igx-badge, .igx-bottom-nav__menu-item .dark-theme .grid-chart-contextmenu-wrapper .tab-icon igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--selected .tab-icon igx-badge, .igx-bottom-nav__menu-item--selected .dark-theme .grid-chart-contextmenu-wrapper .tab-icon igx-badge, .dark-theme .grid-chart-contextmenu-wrapper .igx-bottom-nav__menu-item--disabled .tab-icon igx-badge, .igx-bottom-nav__menu-item--disabled .dark-theme .grid-chart-contextmenu-wrapper .tab-icon igx-badge {
         position: absolute;
         top: -6px;
         right: -6px;
@@ -28470,6 +28523,11 @@ body {
       --igx-button-outlined-icon-color: 'currentColor';
       --igx-button-outlined-hover-icon-color: 'currentColor';
       --igx-button-outlined-focus-icon-color: 'currentColor';
+      --igx-button-flat-shadow-color: transparent;
+      --igx-button-raised-shadow-color: transparent;
+      --igx-button-outlined-shadow-color: transparent;
+      --igx-button-icon-shadow-color: transparent;
+      --igx-button-fab-shadow-color: transparent;
       --igx-button-flat-hover-background: transparent;
       --igx-button-flat-hover-text-color: #4ba875;
       --igx-button-flat-focus-background: rgba(255, 255, 255, 0.04);
@@ -28507,12 +28565,8 @@ body {
       --igx-button-raised-focus-shadow: none;
       --igx-button-fab-resting-shadow: none;
       --igx-button-fab-hover-shadow: none;
-      --igx-button-fab-focus-shadow: none;
-      --igx-button-raised-shadow-color: transparent;
-      --igx-button-outlined-shadow-color: transparent;
-      --igx-button-icon-shadow-color: transparent;
-      --igx-button-fab-shadow-color: transparent; }
-    .dark-theme .grid-chart-contextmenu-wrapper .igx-button, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised {
+      --igx-button-fab-focus-shadow: none; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-button, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined {
       position: relative;
       display: -ms-inline-flexbox;
       display: inline-flex;
@@ -28535,7 +28589,7 @@ body {
       white-space: nowrap;
       transition: color 1ms ease-in-out, background-color 1ms ease-in-out, border-color 1ms ease-in-out, box-shadow 1ms ease-in-out;
       font-family: inherit; }
-      .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon--error {
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--error {
         width: 1.125rem;
         height: 1.125rem;
         font-size: 1.125rem; }
@@ -28558,13 +28612,15 @@ body {
           color: var(--igx-button-flat-hover-icon-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:active {
         background: var(--igx-button-flat-focus-background);
-        color: var(--igx-button-flat-focus-text-color); }
+        color: var(--igx-button-flat-focus-text-color);
+        box-shadow: 0 0 0 0.1875rem var(--igx-button-flat-shadow-color); }
         .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:focus .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:focus .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:focus .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:focus .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:active .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:active .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:active .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--flat:active .igx-icon--error {
           color: var(--igx-button-flat-focus-icon-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined {
       background: var(--igx-button-outlined-background);
       color: var(--igx-button-outlined-text-color);
       border-radius: var(--igx-button-outlined-border-radius);
+      padding: 0 1rem;
       border: 1px solid transparent;
       border-color: var(--igx-button-outlined-outline-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined .igx-icon--error {
@@ -28576,9 +28632,16 @@ body {
           color: var(--igx-button-outlined-hover-icon-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:active {
         background: var(--igx-button-outlined-focus-background);
-        color: var(--igx-button-outlined-focus-text-color); }
+        color: var(--igx-button-outlined-focus-text-color);
+        box-shadow: 0 0 0 0.1875rem var(--igx-button-outlined-shadow-color); }
         .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:focus .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:focus .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:focus .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:focus .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:active .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:active .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:active .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined:active .igx-icon--error {
           color: var(--igx-button-outlined-focus-icon-color); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined-cosy.igx-button--outlined {
+      padding: 0 1rem;
+      min-height: 1.75rem; }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-button--outlined-compact.igx-button--outlined {
+      padding: 0 1rem;
+      min-height: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised {
       color: var(--igx-button-raised-text-color);
       background: var(--igx-button-raised-background);
@@ -28595,7 +28658,7 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:active {
         color: var(--igx-button-raised-focus-text-color);
         background: var(--igx-button-raised-focus-background);
-        box-shadow: var(--igx-button-raised-focus-shadow); }
+        box-shadow: 0 0 0 0.1875rem var(--igx-button-raised-shadow-color), 0 0 0 0.1875rem var(--igx-button-raised-shadow-color); }
         .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:focus .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:focus .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:focus .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:focus .igx-icon--error, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:active .igx-icon, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:active .igx-icon--inactive, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:active .igx-icon--success, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--raised:active .igx-icon--error {
           color: var(--igx-button-raised-focus-icon-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-button--fab, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--icon {
@@ -28637,7 +28700,7 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--fab:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--fab:active {
         color: var(--igx-button-fab-focus-text-color);
         background: var(--igx-button-fab-focus-background);
-        box-shadow: var(--igx-button-fab-focus-shadow); }
+        box-shadow: 0 0 0 0.1875rem var(--igx-button-fab-shadow-color), 0 0 0 0.1875rem var(--igx-button-fab-shadow-color); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--fab igx-icon {
         display: -ms-inline-flexbox;
         display: inline-flex;
@@ -28674,7 +28737,7 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-button--icon:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-button--icon:active {
         color: var(--igx-button-icon-focus-color);
         background: var(--igx-button-icon-focus-background);
-        box-shadow: var(--igx-button-raised-focus-shadow); }
+        box-shadow: 0 0 0 0.1875rem var(--igx-button-icon-shadow-color), 0 0 0 0.1875rem var(--igx-button-icon-shadow-color); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-button--disabled {
       pointer-events: none;
       box-shadow: none; }
@@ -29899,7 +29962,8 @@ body {
       --igx-checkbox-empty-color: rgba(255, 255, 255, 0.87);
       --igx-checkbox-fill-color: #217346;
       --igx-checkbox-disabled-color: rgba(255, 255, 255, 0.12);
-      --igx-checkbox-disabled-color-label: rgba(255, 255, 255, 0.26); }
+      --igx-checkbox-disabled-color-label: rgba(255, 255, 255, 0.26);
+      --igx-checkbox-focus-outline-color: rgba(255, 255, 255, 0.74); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox {
       position: relative;
       display: -ms-inline-flexbox;
@@ -30041,7 +30105,7 @@ body {
         display: block;
         position: absolute;
         border-radius: 50%;
-        background: var(--igx-ripple-color);
+        background: var(--igx-checkbox-fill-color);
         pointer-events: none;
         -ms-transform-origin: center;
             transform-origin: center;
@@ -30055,6 +30119,16 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox__ripple {
         --igx-ripple-variant: material;
         --igx-ripple-color: var(--igx-checkbox-fill-color); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox--focused {
+      position: relative; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox--focused::after {
+        content: '';
+        position: absolute;
+        top: -0.125rem;
+        left: -0.125rem;
+        box-shadow: 0 0 0 1px var(--igx-checkbox-focus-outline-color);
+        width: calc(100% + (0.125rem * 2));
+        height: calc(100% + (0.125rem * 2)); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox--focused .igx-checkbox__ripple, .igx-checkbox--focused .dark-theme .grid-chart-contextmenu-wrapper .igx-checkbox__ripple {
       -webkit-animation: "scale-in-out" 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
               animation: "scale-in-out" 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
@@ -30088,6 +30162,8 @@ body {
       --igx-chip-ghost-elevation: 2;
       --igx-chip-variant: fluent;
       --igx-chip-remove-icon-color: 'currentColor';
+      --igx-chip-focus-outline-color: transparent;
+      --igx-chip-focus-selected-outline-color: transparent;
       --igx-chip-remove-icon-color-focus: #ff134a;
       --igx-chip-text-color: rgba(255, 255, 255, 0.62);
       --igx-chip-background: rgba(255, 255, 255, 0.04);
@@ -30639,6 +30715,7 @@ body {
       z-index: 10;
       box-shadow: var(--igx-chip-ghost-shadow);
       overflow: hidden;
+      color: var(--igx-chip-focus-text-color);
       background: var(--igx-chip-ghost-background); }
       .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:hover, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:hover, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:hover, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--cosy:focus, .dark-theme .grid-chart-contextmenu-wrapper .igx-chip__ghost--compact:focus {
         background: var(--igx-chip-ghost-background); }
@@ -31398,7 +31475,8 @@ body {
       height: 100%;
       color: var(--igx-grid-content-text-color);
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+      padding: 1.5rem; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-grid__loading {
       display: -ms-flexbox;
       display: flex;
@@ -32905,7 +32983,7 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu .igx-button-group__item, .dark-theme .grid-chart-contextmenu-wrapper .igx-excel-filter__menu .igx-button-group__item--selected {
         border: 1px solid var(--igx-button-group-item-border-color);
         color: var(--igx-button-group-item-text-color);
-        background: var(--igx-button-group-item-background);
+        background: var(--igx-grid-filtering-row-background);
         min-width: 24px;
         display: -ms-flexbox;
         display: flex;
@@ -35189,7 +35267,7 @@ body {
       background: transparent;
       transition: background 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
       pointer-events: none;
-      z-index: 10;
+      z-index: 10005;
       box-sizing: content-box; }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-overlay__wrapper--modal {
       background: var(--igx-overlay-background-color);
@@ -35415,7 +35493,8 @@ body {
       --igx-radio-empty-color: rgba(255, 255, 255, 0.74);
       --igx-radio-fill-color: #388b5d;
       --igx-radio-fill-color-hover: #388b5d;
-      --igx-radio-disabled-color: rgba(255, 255, 255, 0.26); }
+      --igx-radio-disabled-color: rgba(255, 255, 255, 0.26);
+      --igx-radio-focus-outline-color: rgba(255, 255, 255, 0.74); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-radio {
       position: relative;
       display: -ms-inline-flexbox;
@@ -35535,7 +35614,7 @@ body {
         display: block;
         position: absolute;
         border-radius: 50%;
-        background: var(--igx-ripple-color);
+        background: var(--igx-radio-fill-color);
         pointer-events: none;
         -ms-transform-origin: center;
             transform-origin: center;
@@ -35549,6 +35628,16 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-radio__ripple {
         --igx-ripple-variant: material;
         --igx-ripple-color: var(--igx-radio-fill-color); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-radio--focused {
+      position: relative; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-radio--focused::after {
+        content: '';
+        position: absolute;
+        top: -0.125rem;
+        left: -0.125rem;
+        box-shadow: 0 0 0 1px var(--igx-radio-focus-outline-color);
+        width: calc(100% + (0.125rem * 2));
+        height: calc(100% + (0.125rem * 2)); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-radio--focused .igx-radio__ripple, .igx-radio--focused .dark-theme .grid-chart-contextmenu-wrapper .igx-radio__ripple {
       -webkit-animation: "scale-in-out" 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
               animation: "scale-in-out" 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
@@ -35588,10 +35677,12 @@ body {
     .dark-theme .grid-chart-contextmenu-wrapper {
       --igx-slider-variant: fluent;
       --igx-slider-tick-color: rgba(255, 255, 255, 0.38);
+      --igx-slider-thumb-focus-color: transparent;
       --igx-slider-tick-color-tall: rgba(255, 255, 255, 0.38);
       --igx-slider-tick-label-color: rgba(255, 255, 255, 0.38);
       --igx-slider-tick-label-color-tall: rgba(255, 255, 255, 0.87);
       --igx-slider-track-color: #ababab;
+      --igx-slider-track-step-color: #222;
       --igx-slider-thumb-color: #222;
       --igx-slider-thumb-border-color: rgba(255, 255, 255, 0.62);
       --igx-slider-label-background-color: #217346;
@@ -35712,6 +35803,7 @@ body {
       width: 100%;
       height: 0.25rem;
       background-size: 100% 0.25em;
+      background-color: var(--igx-slider-track-step-color);
       opacity: .85;
       transition: opacity 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       z-index: 1; }
@@ -35957,6 +36049,7 @@ body {
       --igx-switch-thumb-disabled-color: #424242;
       --igx-switch-label-color: rgba(255, 255, 255, 0.87);
       --igx-switch-label-disabled-color: rgba(255, 255, 255, 0.26);
+      --igx-switch-focus-outline-color: rgba(255, 255, 255, 0.74);
       --igx-switch-resting-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.26), 0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.08);
       --igx-switch-hover-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.26), 0 3px 4px 0 rgba(0, 0, 0, 0.12), 0 3px 3px -2px rgba(0, 0, 0, 0.08);
       --igx-switch-disabled-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.26), 0 1px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 1px -1px rgba(0, 0, 0, 0.08); }
@@ -36053,7 +36146,7 @@ body {
         display: block;
         position: absolute;
         border-radius: 50%;
-        background: var(--igx-ripple-color);
+        background: var(--igx-switch-thumb-on-color);
         pointer-events: none;
         -ms-transform-origin: center;
             transform-origin: center;
@@ -36067,6 +36160,16 @@ body {
       .dark-theme .grid-chart-contextmenu-wrapper .igx-switch__ripple {
         --igx-ripple-variant: material;
         --igx-ripple-color: var(--igx-switch-thumb-on-color); }
+    .dark-theme .grid-chart-contextmenu-wrapper .igx-switch--focused {
+      position: relative; }
+      .dark-theme .grid-chart-contextmenu-wrapper .igx-switch--focused::after {
+        content: '';
+        position: absolute;
+        top: -0.125rem;
+        left: -0.125rem;
+        box-shadow: 0 0 0 1px var(--igx-switch-focus-outline-color);
+        width: calc(100% + (0.125rem * 2));
+        height: calc(100% + (0.125rem * 2)); }
     .dark-theme .grid-chart-contextmenu-wrapper .igx-switch--focused .igx-switch__ripple, .igx-switch--focused .dark-theme .grid-chart-contextmenu-wrapper .igx-switch__ripple {
       -webkit-animation: "scale-in-out" 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
               animation: "scale-in-out" 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
@@ -36211,7 +36314,7 @@ body {
         display: block;
         position: absolute;
         border-radius: 50%;
-        background: var(--igx-ripple-color);
+        background: var(--igx-tabs-tab-ripple-color);
         pointer-events: none;
         -ms-transform-origin: center;
             transform-origin: center;
@@ -36300,7 +36403,7 @@ body {
         display: block;
         position: absolute;
         border-radius: 50%;
-        background: var(--igx-ripple-color);
+        background: var(--igx-tabs-button-ripple-color);
         pointer-events: none;
         -ms-transform-origin: center;
             transform-origin: center;

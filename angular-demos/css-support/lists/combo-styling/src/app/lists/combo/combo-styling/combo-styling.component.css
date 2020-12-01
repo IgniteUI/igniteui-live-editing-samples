@@ -443,7 +443,7 @@
     display: block;
     position: absolute;
     border-radius: 50%;
-    background: var(--igx-ripple-color);
+    background: var(--igx-checkbox-fill-color);
     pointer-events: none;
     -ms-transform-origin: center;
         transform-origin: center;

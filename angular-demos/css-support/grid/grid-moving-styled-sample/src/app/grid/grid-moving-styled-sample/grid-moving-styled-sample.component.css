@@ -326,7 +326,8 @@
     height: 100%;
     color: var(--igx-grid-content-text-color);
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    padding: 1.5rem; }
   :host ::ng-deep .grid__wrapper .igx-grid__loading {
     display: -ms-flexbox;
     display: flex;
@@ -1831,7 +1832,7 @@
     :host ::ng-deep .grid__wrapper .igx-excel-filter__menu .igx-button-group__item, :host ::ng-deep .grid__wrapper .igx-excel-filter__menu .igx-button-group__item--selected {
       border: 1px solid var(--igx-button-group-item-border-color);
       color: var(--igx-button-group-item-text-color);
-      background: var(--igx-button-group-item-background);
+      background: var(--igx-grid-filtering-row-background);
       min-width: 24px;
       display: -ms-flexbox;
       display: flex;
