@@ -320,7 +320,8 @@
     height: 100%;
     color: var(--igx-grid-content-text-color);
     -ms-flex-direction: column;
-        flex-direction: column; }
+        flex-direction: column;
+    padding: 1.5rem; }
   :host ::ng-deep .igx-grid__loading {
     display: -ms-flexbox;
     display: flex;
@@ -1825,7 +1826,7 @@
     :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item, :host ::ng-deep .igx-excel-filter__menu .igx-button-group__item--selected {
       border: 1px solid var(--igx-button-group-item-border-color);
       color: var(--igx-button-group-item-text-color);
-      background: var(--igx-button-group-item-background);
+      background: var(--igx-grid-filtering-row-background);
       min-width: 24px;
       display: -ms-flexbox;
       display: flex;
@@ -2434,6 +2435,8 @@
     --igx-chip-ghost-elevation: 8;
     --igx-chip-variant: material;
     --igx-chip-remove-icon-color: 'currentColor';
+    --igx-chip-focus-outline-color: transparent;
+    --igx-chip-focus-selected-outline-color: transparent;
     --igx-chip-remove-icon-color-focus: #ff134a;
     --igx-chip-text-color: #f8f8f8;
     --igx-chip-background: #494949;
@@ -2697,6 +2700,7 @@
     z-index: 10;
     box-shadow: var(--igx-chip-ghost-shadow);
     overflow: hidden;
+    color: var(--igx-chip-focus-text-color);
     background: var(--igx-chip-ghost-background); }
     :host ::ng-deep .igx-chip__ghost:hover, :host ::ng-deep .igx-chip__ghost--cosy:hover, :host ::ng-deep .igx-chip__ghost--compact:hover, :host ::ng-deep .igx-chip__ghost:focus, :host ::ng-deep .igx-chip__ghost--cosy:focus, :host ::ng-deep .igx-chip__ghost--compact:focus {
       background: var(--igx-chip-ghost-background); }

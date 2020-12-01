@@ -191,7 +191,7 @@ igx-switch {
       display: block;
       position: absolute;
       border-radius: 50%;
-      background: var(--igx-ripple-color);
+      background: var(--igx-switch-thumb-on-color);
       pointer-events: none;
       -ms-transform-origin: center;
           transform-origin: center;

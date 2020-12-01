@@ -176,7 +176,7 @@
     background: transparent;
     transition: background 0.25s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     pointer-events: none;
-    z-index: 10;
+    z-index: 10005;
     box-sizing: content-box; }
   :host ::ng-deep .igx-overlay__wrapper--modal {
     background: var(--igx-overlay-background-color);
