@@ -60,7 +60,7 @@ export class MapMarkerLayoutsComponent implements AfterViewInit {
                 let value = "0.00";
                 const item = data.item as any;
                 if (item != null) {
-                    value = item.country.toString().toUpperCase();
+                    value = item.country.toString();
                 }
                 const height = context.measureText("M").width;
                 const width = context.measureText(value).width;
@@ -69,7 +69,7 @@ export class MapMarkerLayoutsComponent implements AfterViewInit {
             },
             render(renderInfo: DataTemplateRenderInfo) {
                 const item = renderInfo.data.item as any;
-                const value = item.country.toString().toUpperCase();
+                const value = item.country.toString();
 
                 const ctx = renderInfo.context as CanvasRenderingContext2D;
                 let x = renderInfo.xPosition;
