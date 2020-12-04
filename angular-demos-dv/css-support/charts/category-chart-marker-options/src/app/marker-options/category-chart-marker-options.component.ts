@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
-    selector: "app-category-chart-config-options",
-    styleUrls: ["./category-chart-config-options.component.scss"],
-    templateUrl: "./category-chart-config-options.component.html"
+    selector: "app-category-chart-marker-options",
+    styleUrls: ["./category-chart-marker-options.component.css"],
+    templateUrl: "./category-chart-marker-options.component.html"
 })
-export class CategoryChartConfigOptionsComponent {
+export class CategoryChartMarkerOptionsComponent {
 
     public chartType: string = "Auto";
     public data: any;

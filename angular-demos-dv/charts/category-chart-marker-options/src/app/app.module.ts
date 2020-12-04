@@ -3,14 +3,14 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { CategoryChartConfigOptionsComponent } from "./config-options/category-chart-config-options.component";
+import { CategoryChartMarkerOptionsComponent } from "./marker-options/category-chart-marker-options.component";
 import { IgxCategoryChartModule } from "igniteui-angular-charts";
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
     AppComponent,
-		CategoryChartConfigOptionsComponent
+		CategoryChartMarkerOptionsComponent
   ],
   imports: [
     BrowserModule,
