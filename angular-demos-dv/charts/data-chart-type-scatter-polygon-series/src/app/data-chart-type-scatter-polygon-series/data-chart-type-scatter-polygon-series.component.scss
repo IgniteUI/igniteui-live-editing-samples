@@ -85,58 +85,30 @@ select {
     display: inline-block;
 }
 
-
 .legend {
-    width: 100%;
-    font-size: 11pt;
-    /* font-family: Arial, Verdana, Helvetica, "Times New Roman", Times, serif; */
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 15px;
-    display: inline-block;
-    vertical-align: top;
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.5rem;
+    justify-content: center;
 }
 
-.legendCenter {
-    width: auto;
-    margin-top: 8px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding: 0px;
-    display: inline-block;
-    vertical-align: center;
+.legend span {
+  height: 0.75rem;
+  width: 0.75rem;
+  border-color: black;
+  border-width: thin;
+  border-style: solid;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  margin-left: 1.0rem;
 }
 
-.legendInline {
-    width: auto;
-    /* font-size: 11pt; */
-    /* font-family: Arial, Verdana, Helvetica, "Times New Roman", Times, serif; */
-    margin-top: 8px;
-    margin-bottom: 5px;
-    margin-left: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding: 0px;
-    display: inline-block;
-    vertical-align: top;
-    /* vertical-align: center; */
-    /* background: red; */
+.legend div {
+  display: flex;
+  flex-direction: row;
 }
 
-.legendTitle {
-    margin-top: 13px;
-    margin-left: 20px;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding: 0px;
-    /* font-size: 11pt; */
-    /* font-family: Arial, Verdana, Helvetica, "Times New Roman", Times, serif; */
-    /* vertical-align: top; */
-    vertical-align: center;
-    display: inline-block;
-    /* background: orange; */
+.legend label {
+  white-space: nowrap;
+  font-size: 8pt;
 }
