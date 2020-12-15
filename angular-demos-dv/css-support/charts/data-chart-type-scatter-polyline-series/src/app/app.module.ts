@@ -11,7 +11,6 @@ import {
 	IgxDataChartInteractivityModule,
 	IgxDataChartScatterModule
  } from "igniteui-angular-charts";
-import { SampleShapeData } from "./SampleShapeData";
 
 @NgModule({
   bootstrap: [AppComponent],
@@ -29,7 +28,7 @@ import { SampleShapeData } from "./SampleShapeData";
 		IgxDataChartInteractivityModule,
 		IgxDataChartScatterModule
   ],
-  providers: [SampleShapeData],
+  providers: [],
   entryComponents: []
 })
 export class AppModule {}
