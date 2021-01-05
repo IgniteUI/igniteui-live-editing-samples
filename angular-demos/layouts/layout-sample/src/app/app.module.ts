@@ -11,15 +11,15 @@ import { LayoutSampleComponent } from "./layout/layout-sample/layout-sample.comp
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutSampleComponent
-  ],
+	AppComponent,
+	LayoutSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

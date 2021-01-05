@@ -16,18 +16,18 @@ import { ButtonGroupSample1Component } from "./button-group-sample-1/button-grou
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ButtonGroupSample1Component
-  ],
+	AppComponent,
+	ButtonGroupSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonGroupModule,
-		IgxRippleModule,
-		IgxIconModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonGroupModule,
+	IgxRippleModule,
+	IgxIconModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -18,20 +18,20 @@ import { SelectHeaderFooterComponent } from "./select-header-footer/select-heade
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SelectHeaderFooterComponent
-  ],
+	AppComponent,
+	SelectHeaderFooterComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSelectModule,
-		IgxInputGroupModule,
-		IgxDropDownModule,
-		IgxIconModule,
-		IgxButtonGroupModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSelectModule,
+	IgxInputGroupModule,
+	IgxDropDownModule,
+	IgxIconModule,
+	IgxButtonGroupModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

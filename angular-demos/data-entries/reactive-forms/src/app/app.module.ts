@@ -25,25 +25,25 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ReactiveFormsSampleComponent
-  ],
+	AppComponent,
+	ReactiveFormsSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxDatePickerModule,
-		IgxTimePickerModule,
-		IgxComboModule,
-		FormsModule,
-		ReactiveFormsModule,
-		IgxDropDownModule,
-		IgxSelectModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxDatePickerModule,
+	IgxTimePickerModule,
+	IgxComboModule,
+	FormsModule,
+	ReactiveFormsModule,
+	IgxDropDownModule,
+	IgxSelectModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

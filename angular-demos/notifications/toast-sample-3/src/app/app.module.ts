@@ -16,18 +16,18 @@ import { ToastSample3Component } from "./toast-sample-3/toast-sample-3.component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ToastSample3Component
-  ],
+	AppComponent,
+	ToastSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxToastModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxToastModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

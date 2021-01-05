@@ -17,19 +17,19 @@ import { DialogStylingSample } from "./dialog/dialog-styling-sample/dialog-styli
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DialogStylingSample
-  ],
+	AppComponent,
+	DialogStylingSample
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxDialogModule,
-		IgxRippleModule,
-		IgxIconModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxDialogModule,
+	IgxRippleModule,
+	IgxIconModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

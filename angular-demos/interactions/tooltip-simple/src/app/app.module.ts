@@ -14,16 +14,16 @@ import { TooltipSimpleComponent } from "./tooltip-simple/tooltip-simple.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TooltipSimpleComponent
-  ],
+	AppComponent,
+	TooltipSimpleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxTooltipModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxTooltipModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

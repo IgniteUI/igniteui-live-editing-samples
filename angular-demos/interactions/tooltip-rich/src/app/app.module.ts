@@ -15,17 +15,17 @@ import { TooltipRichComponent } from "./tooltip-rich/tooltip-rich.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TooltipRichComponent
-  ],
+	AppComponent,
+	TooltipRichComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxTooltipModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxTooltipModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

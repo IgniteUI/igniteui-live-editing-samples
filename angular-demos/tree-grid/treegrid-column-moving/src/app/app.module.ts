@@ -15,17 +15,17 @@ import { TreeGridColumnMovingSampleComponent } from "./tree-grid-column-moving-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridColumnMovingSampleComponent
-  ],
+	AppComponent,
+	TreeGridColumnMovingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

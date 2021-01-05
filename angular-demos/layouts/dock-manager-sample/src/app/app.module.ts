@@ -13,15 +13,14 @@ defineCustomElements();
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DockManagerComponent
-  ],
+	AppComponent,
+	DockManagerComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule
+],
   providers: [],
   entryComponents: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

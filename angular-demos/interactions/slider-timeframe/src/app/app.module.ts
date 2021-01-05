@@ -11,15 +11,15 @@ import { SliderTimeframeComponent } from "./slider-timeframe/slider-timeframe.co
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderTimeframeComponent
-  ],
+	AppComponent,
+	SliderTimeframeComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

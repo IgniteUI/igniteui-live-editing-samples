@@ -14,16 +14,16 @@ import { CalendarYearsViewComponent } from "./calendar-years-view/calendar-years
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarYearsViewComponent
-  ],
+	AppComponent,
+	CalendarYearsViewComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule,
+	IgxCardModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

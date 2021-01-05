@@ -16,18 +16,18 @@ import { ActionStripParagraphMenuComponent } from "./action-strip-paragraph-menu
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ActionStripParagraphMenuComponent
-  ],
+	AppComponent,
+	ActionStripParagraphMenuComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxActionStripModule,
-		IgxRippleModule,
-		IgxButtonModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxActionStripModule,
+	IgxRippleModule,
+	IgxButtonModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

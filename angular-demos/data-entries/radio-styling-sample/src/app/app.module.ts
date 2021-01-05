@@ -11,15 +11,15 @@ import { RadioStylingSampleComponent } from "./radio-styling-sample/radio-stylin
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RadioStylingSampleComponent
-  ],
+	AppComponent,
+	RadioStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxRadioModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxRadioModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

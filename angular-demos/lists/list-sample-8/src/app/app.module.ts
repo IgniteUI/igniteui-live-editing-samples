@@ -16,18 +16,18 @@ import { ListSample8Component } from "./list-sample-8/list-sample-8.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListSample8Component
-  ],
+	AppComponent,
+	ListSample8Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxToastModule,
-		IgxListModule,
-		IgxIconModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxToastModule,
+	IgxListModule,
+	IgxIconModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

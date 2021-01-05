@@ -12,16 +12,16 @@ import { TreeGridColumnHidingToolbarStyleComponent } from "./tree-grid-column-hi
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridColumnHidingToolbarStyleComponent
-  ],
+	AppComponent,
+	TreeGridColumnHidingToolbarStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

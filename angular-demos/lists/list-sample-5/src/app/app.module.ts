@@ -11,15 +11,15 @@ import { ListSample5Component } from "./list-sample-5/list-sample-5.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListSample5Component
-  ],
+	AppComponent,
+	ListSample5Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxListModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

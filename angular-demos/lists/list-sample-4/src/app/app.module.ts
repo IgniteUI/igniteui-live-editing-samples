@@ -18,20 +18,20 @@ import { ListSample4Component } from "./list-sample-4/list-sample-4.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListSample4Component
-  ],
+	AppComponent,
+	ListSample4Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxFilterModule,
-		IgxIconModule,
-		IgxListModule,
-		IgxInputGroupModule,
-		IgxButtonGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxFilterModule,
+	IgxIconModule,
+	IgxListModule,
+	IgxInputGroupModule,
+	IgxButtonGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

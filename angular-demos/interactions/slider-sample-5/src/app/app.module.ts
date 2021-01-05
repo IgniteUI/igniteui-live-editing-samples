@@ -11,15 +11,15 @@ import { SliderSample5Component } from "./slider-sample-5/slider-sample-5.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderSample5Component
-  ],
+	AppComponent,
+	SliderSample5Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

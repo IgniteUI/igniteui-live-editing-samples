@@ -15,17 +15,17 @@ import { TreeGridColumnHidingSampleComponent } from "./tree-grid-column-hiding-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridColumnHidingSampleComponent
-  ],
+	AppComponent,
+	TreeGridColumnHidingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxRadioModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxRadioModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

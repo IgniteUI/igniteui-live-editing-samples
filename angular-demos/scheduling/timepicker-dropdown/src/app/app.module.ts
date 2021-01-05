@@ -15,17 +15,17 @@ import { TimepickerDropdownComponent } from "./timepicker-dropdown/timepicker-dr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TimepickerDropdownComponent
-  ],
+	AppComponent,
+	TimepickerDropdownComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTimePickerModule,
-		IgxInputGroupModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTimePickerModule,
+	IgxInputGroupModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

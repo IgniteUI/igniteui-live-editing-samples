@@ -11,15 +11,15 @@ import { SliderPrimaryTicksTopComponent } from "./slider-primary-ticks-top/slide
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderPrimaryTicksTopComponent
-  ],
+	AppComponent,
+	SliderPrimaryTicksTopComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

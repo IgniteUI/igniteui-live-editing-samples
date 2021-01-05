@@ -15,16 +15,16 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TGridKeyboardnavGuide
-  ],
+	AppComponent,
+	TGridKeyboardnavGuide
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTreeGridModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTreeGridModule,
+	IgxListModule
+],
   providers: [IgxOverlayService],
   entryComponents: [],
   schemas: []

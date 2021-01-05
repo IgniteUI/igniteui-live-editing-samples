@@ -16,17 +16,17 @@ import { MyDynamicCardComponent } from "./overlay-dynamic-card/overlay-dynamic-c
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		OverlayScrollSample2Component,
-		MyDynamicCardComponent
-  ],
+	AppComponent,
+	OverlayScrollSample2Component,
+	MyDynamicCardComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxCardModule
+],
   providers: [IgxOverlayService],
   entryComponents: [MyDynamicCardComponent],
   schemas: []

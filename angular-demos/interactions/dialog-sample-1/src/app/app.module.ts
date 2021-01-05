@@ -15,17 +15,17 @@ import { DialogSample1Component } from "./dialog-sample-1/dialog-sample-1.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DialogSample1Component
-  ],
+	AppComponent,
+	DialogSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxDialogModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxDialogModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

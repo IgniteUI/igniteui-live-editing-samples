@@ -17,17 +17,17 @@ import { ListReorderSampleComponent } from "./drag-drop/list-reorder-sample/list
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListReorderSampleComponent
-  ],
+	AppComponent,
+	ListReorderSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxListModule,
-		IgxDragDropModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxListModule,
+	IgxDragDropModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

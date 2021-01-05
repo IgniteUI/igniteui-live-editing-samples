@@ -11,15 +11,15 @@ import { SplitterNestedSampleComponent } from "./splitter-nested-sample/splitter
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SplitterNestedSampleComponent
-  ],
+	AppComponent,
+	SplitterNestedSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSplitterModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSplitterModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

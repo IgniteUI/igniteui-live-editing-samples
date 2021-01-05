@@ -15,16 +15,16 @@ import { ExcelExportSample1Component } from "./services/excel-export-sample-1/ex
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ExcelExportSample1Component
-  ],
+	AppComponent,
+	ExcelExportSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGridModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGridModule,
+	IgxButtonModule
+],
   providers: [IgxExcelExporterService],
   entryComponents: [],
   schemas: []

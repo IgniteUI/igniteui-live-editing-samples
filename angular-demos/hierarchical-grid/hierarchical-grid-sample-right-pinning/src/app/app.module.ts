@@ -15,17 +15,17 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		HierarchicalGridRightPinningSampleComponent
-  ],
+	AppComponent,
+	HierarchicalGridRightPinningSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxHierarchicalGridModule,
-		IgxAvatarModule,
-		IgxTooltipModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxHierarchicalGridModule,
+	IgxAvatarModule,
+	IgxTooltipModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

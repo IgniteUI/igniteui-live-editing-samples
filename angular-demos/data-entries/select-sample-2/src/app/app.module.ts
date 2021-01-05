@@ -16,18 +16,18 @@ import { SelectSample2Component } from "./select-sample-2/select-sample-2.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SelectSample2Component
-  ],
+	AppComponent,
+	SelectSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSelectModule,
-		IgxInputGroupModule,
-		IgxDropDownModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSelectModule,
+	IgxInputGroupModule,
+	IgxDropDownModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

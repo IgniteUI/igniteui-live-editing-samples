@@ -11,15 +11,15 @@ import { TimePickerStylingComponent } from "./timepicker-styling/timepicker-styl
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TimePickerStylingComponent
-  ],
+	AppComponent,
+	TimePickerStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTimePickerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTimePickerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

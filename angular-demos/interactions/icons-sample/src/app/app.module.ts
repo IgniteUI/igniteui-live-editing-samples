@@ -16,16 +16,16 @@ import { IconsSampleComponent } from "./drag-drop/icons-sample/icons-sample.comp
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		IconsSampleComponent
-  ],
+	AppComponent,
+	IconsSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDragDropModule,
-		IgxDialogModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDragDropModule,
+	IgxDialogModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

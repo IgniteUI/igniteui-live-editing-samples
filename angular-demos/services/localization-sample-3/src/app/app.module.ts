@@ -15,17 +15,17 @@ import { LocalizationSample3Component } from "./services/localization-sample-3/l
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LocalizationSample3Component
-  ],
+	AppComponent,
+	LocalizationSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxGridModule,
-		IgxGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxGridModule,
+	IgxGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

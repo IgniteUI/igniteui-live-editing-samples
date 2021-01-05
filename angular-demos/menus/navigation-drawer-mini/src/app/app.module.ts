@@ -18,20 +18,20 @@ import { NavDrawerMiniComponent } from "./nav-drawer-mini/nav-drawer-mini.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		NavDrawerMiniComponent
-  ],
+	AppComponent,
+	NavDrawerMiniComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxLayoutModule,
-		IgxNavigationDrawerModule,
-		IgxRippleModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxLayoutModule,
+	IgxNavigationDrawerModule,
+	IgxRippleModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

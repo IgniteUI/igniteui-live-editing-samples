@@ -14,16 +14,16 @@ import { CalendarMonthsViewComponent } from "./calendar-months-view/calendar-mon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarMonthsViewComponent
-  ],
+	AppComponent,
+	CalendarMonthsViewComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule,
+	IgxCardModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

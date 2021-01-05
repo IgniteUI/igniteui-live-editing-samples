@@ -11,15 +11,15 @@ import { MonthpickerStylingComponent } from "./monthpicker-styling/monthpicker-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MonthpickerStylingComponent
-  ],
+	AppComponent,
+	MonthpickerStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

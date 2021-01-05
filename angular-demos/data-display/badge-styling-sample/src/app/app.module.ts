@@ -15,17 +15,17 @@ import { BadgeStylingSampleComponent } from "./badge-styling-sample/badge-stylin
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BadgeStylingSampleComponent
-  ],
+	AppComponent,
+	BadgeStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBadgeModule,
-		IgxListModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBadgeModule,
+	IgxListModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

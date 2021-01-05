@@ -18,19 +18,19 @@ import { TransactionBasePipe } from "./services/transaction/pipes/transaction-ba
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TransactionBaseComponent,
-		TransactionBasePipe
-  ],
+	AppComponent,
+	TransactionBaseComponent,
+	TransactionBasePipe
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxListModule,
-		IgxCardModule,
-		IgxButtonModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxListModule,
+	IgxCardModule,
+	IgxButtonModule,
+	IgxIconModule
+],
   providers: [IgxTransactionService],
   entryComponents: [],
   schemas: []

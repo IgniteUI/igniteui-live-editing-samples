@@ -14,15 +14,15 @@ import { TreeGridCsvExportSample1Component } from "./services/csv-export-tree-gr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridCsvExportSample1Component
-  ],
+	AppComponent,
+	TreeGridCsvExportSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTreeGridModule
+],
   providers: [IgxCsvExporterService],
   entryComponents: [],
   schemas: []

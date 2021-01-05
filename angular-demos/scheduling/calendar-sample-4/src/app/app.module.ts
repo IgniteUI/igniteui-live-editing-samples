@@ -11,15 +11,15 @@ import { CalendarSample4Component } from "./scheduling/calendar/calendar-sample-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarSample4Component
-  ],
+	AppComponent,
+	CalendarSample4Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -14,16 +14,16 @@ import { CarouselComponent } from "./carousel/carousel.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CarouselComponent
-  ],
+	AppComponent,
+	CarouselComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCarouselModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCarouselModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -15,17 +15,17 @@ import { MovieComponent } from "./data-entries/autocomplete/movie/movie.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MovieComponent
-  ],
+	AppComponent,
+	MovieComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAutocompleteModule,
-		IgxDropDownModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAutocompleteModule,
+	IgxDropDownModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

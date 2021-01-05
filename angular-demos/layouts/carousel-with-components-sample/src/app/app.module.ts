@@ -17,19 +17,19 @@ import { CarouselWithComponentsSampleComponent } from "./carousel-with-component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CarouselWithComponentsSampleComponent
-  ],
+	AppComponent,
+	CarouselWithComponentsSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCarouselModule,
-		IgxListModule,
-		IgxInputGroupModule,
-		IgxIconModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCarouselModule,
+	IgxListModule,
+	IgxInputGroupModule,
+	IgxIconModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

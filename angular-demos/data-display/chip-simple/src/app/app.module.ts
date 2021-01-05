@@ -14,16 +14,16 @@ import { ChipSimpleComponent } from "./chip/chip-simple/chip-simple.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ChipSimpleComponent
-  ],
+	AppComponent,
+	ChipSimpleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxChipsModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxChipsModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

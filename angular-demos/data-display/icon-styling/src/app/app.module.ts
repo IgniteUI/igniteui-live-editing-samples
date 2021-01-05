@@ -11,15 +11,15 @@ import { IconStylingSample } from "./icon-styling-sample/icon-styling-sample.com
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		IconStylingSample
-  ],
+	AppComponent,
+	IconStylingSample
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

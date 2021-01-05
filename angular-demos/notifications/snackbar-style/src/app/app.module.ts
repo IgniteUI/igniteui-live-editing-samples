@@ -14,16 +14,16 @@ import { SnackbarStyleComponent } from "./snackbar-style/snackbar-style.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SnackbarStyleComponent
-  ],
+	AppComponent,
+	SnackbarStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxSnackbarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxSnackbarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

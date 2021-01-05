@@ -14,16 +14,16 @@ import { MonthpickerSample1Component } from "./monthpicker-sample-1/monthpicker-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MonthpickerSample1Component
-  ],
+	AppComponent,
+	MonthpickerSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule,
+	IgxCardModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

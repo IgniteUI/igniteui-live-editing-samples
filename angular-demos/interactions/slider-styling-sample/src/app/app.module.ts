@@ -11,15 +11,15 @@ import { AppSliderStylingComponent } from "./slider-styling-sample/app-slider-st
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		AppSliderStylingComponent
-  ],
+	AppComponent,
+	AppSliderStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

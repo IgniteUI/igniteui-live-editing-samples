@@ -16,18 +16,18 @@ import { CardComponent } from "./card.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CardComponent
-  ],
+	AppComponent,
+	CardComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxCardModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxCardModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

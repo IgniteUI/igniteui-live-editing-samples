@@ -11,15 +11,15 @@ import { TabsSample1Component } from "./tabs-sample-1/tabs-sample-1.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TabsSample1Component
-  ],
+	AppComponent,
+	TabsSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTabsModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTabsModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

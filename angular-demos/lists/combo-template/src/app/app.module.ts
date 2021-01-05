@@ -15,17 +15,17 @@ import { ComboTemplateComponent } from "./combo-template/combo-template.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboTemplateComponent
-  ],
+	AppComponent,
+	ComboTemplateComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule,
-		IgxIconModule,
-		IgxPrefixModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule,
+	IgxIconModule,
+	IgxPrefixModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

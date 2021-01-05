@@ -18,20 +18,20 @@ import { TreeGridSummary2SampleComponent } from "./tree-grid-summary2-sample/tre
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridSummary2SampleComponent
-  ],
+	AppComponent,
+	TreeGridSummary2SampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxButtonModule,
-		IgxButtonGroupModule,
-		IgxTreeGridModule,
-		IgxIconModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxButtonModule,
+	IgxButtonGroupModule,
+	IgxTreeGridModule,
+	IgxIconModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

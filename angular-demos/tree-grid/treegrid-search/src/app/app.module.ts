@@ -19,21 +19,21 @@ import { TreeGridSearchSampleComponent } from "./tree-grid-search-sample/tree-gr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridSearchSampleComponent
-  ],
+	AppComponent,
+	TreeGridSearchSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxRippleModule,
-		IgxChipsModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxRippleModule,
+	IgxChipsModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

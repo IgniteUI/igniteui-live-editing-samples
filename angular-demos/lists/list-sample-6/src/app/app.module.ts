@@ -14,16 +14,16 @@ import { ListSample6Component } from "./list-sample-6/list-sample-6.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListSample6Component
-  ],
+	AppComponent,
+	ListSample6Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxListModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

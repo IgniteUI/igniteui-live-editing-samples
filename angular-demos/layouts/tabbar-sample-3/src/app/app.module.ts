@@ -16,21 +16,21 @@ import { TabbarView3Component } from "./views/view3/view3.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TabbarSample3Component
-  ],
+	AppComponent,
+	TabbarSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBottomNavModule,
-		TabbarSample3Module,
-		RouterModule.forRoot([
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBottomNavModule,
+	TabbarSample3Module,
+	RouterModule.forRoot([
                         { path: "tabbar-view1", component: TabbarView1Component },
                         { path: "tabbar-view2", component: TabbarView2Component },
                         { path: "tabbar-view3", component: TabbarView3Component }
                     ])
-  ],
+],
   providers: [],
   entryComponents: [],
   schemas: []

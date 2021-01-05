@@ -15,17 +15,17 @@ import { DateTimeAdvancedComponent } from "./datetime-advanced/datetime-advanced
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DateTimeAdvancedComponent
-  ],
+	AppComponent,
+	DateTimeAdvancedComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxDateTimeEditorModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxDateTimeEditorModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

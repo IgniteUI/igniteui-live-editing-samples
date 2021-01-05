@@ -12,16 +12,16 @@ import { TreeGridAdvancedFilteringStyleComponent } from "./tree-grid/tree-grid-a
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridAdvancedFilteringStyleComponent
-  ],
+	AppComponent,
+	TreeGridAdvancedFilteringStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

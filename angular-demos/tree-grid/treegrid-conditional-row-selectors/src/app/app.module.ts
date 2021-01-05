@@ -15,17 +15,17 @@ import { TreeGridConditionalRowSelectorsSampleComponent } from "./tree-grid/tree
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridConditionalRowSelectorsSampleComponent
-  ],
+	AppComponent,
+	TreeGridConditionalRowSelectorsSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxCheckboxModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxCheckboxModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

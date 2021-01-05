@@ -11,15 +11,15 @@ import { DividerInsetComponent } from "./inset/divider-inset.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DividerInsetComponent
-  ],
+	AppComponent,
+	DividerInsetComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDividerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDividerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

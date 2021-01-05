@@ -15,17 +15,17 @@ import { TooltipStyleComponent } from "./tooltip-style/tooltip-style.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TooltipStyleComponent
-  ],
+	AppComponent,
+	TooltipStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxTooltipModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxTooltipModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

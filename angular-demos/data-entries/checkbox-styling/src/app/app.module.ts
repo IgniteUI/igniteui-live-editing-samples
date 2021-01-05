@@ -11,15 +11,15 @@ import { CheckboxStylingComponent } from "./checkbox-styling/checkbox-styling.co
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CheckboxStylingComponent
-  ],
+	AppComponent,
+	CheckboxStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCheckboxModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCheckboxModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

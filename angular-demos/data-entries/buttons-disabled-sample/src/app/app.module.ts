@@ -15,17 +15,17 @@ import { ButtonsDisabledComponent } from "./buttons-disabled-sample/buttons-disa
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ButtonsDisabledComponent
-  ],
+	AppComponent,
+	ButtonsDisabledComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

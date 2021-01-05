@@ -15,17 +15,17 @@ import { SnackbarSample1Component } from "./snackbar-sample-1/snackbar-sample-1.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SnackbarSample1Component
-  ],
+	AppComponent,
+	SnackbarSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxSnackbarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxSnackbarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

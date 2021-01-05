@@ -15,17 +15,17 @@ import { DatepickerSample6Component } from "./scheduling/datepicker/datepicker-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DatepickerSample6Component
-  ],
+	AppComponent,
+	DatepickerSample6Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDatePickerModule,
-		IgxIconModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDatePickerModule,
+	IgxIconModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

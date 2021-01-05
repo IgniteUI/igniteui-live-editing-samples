@@ -16,17 +16,17 @@ import { OverlayScrollSample1Component } from "./overlay-scroll-1/overlay-scroll
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		OverlayScrollSample1Component
-  ],
+	AppComponent,
+	OverlayScrollSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxSwitchModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxSwitchModule,
+	IgxCardModule
+],
   providers: [IgxOverlayService],
   entryComponents: [],
   schemas: []

@@ -14,16 +14,16 @@ import { SliderSample3Component } from "./slider-sample-3/slider-sample-3.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderSample3Component
-  ],
+	AppComponent,
+	SliderSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -15,17 +15,17 @@ import { SliderSecondaryTicksMirrorComponent } from "./slider-secondary-ticks-mi
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderSecondaryTicksMirrorComponent
-  ],
+	AppComponent,
+	SliderSecondaryTicksMirrorComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

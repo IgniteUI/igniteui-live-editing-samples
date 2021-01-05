@@ -18,21 +18,21 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridCellSelectionComponent,
-		IgxGridModule,
-		IgxIconModule,
-		IgxSwitchModule,
-		IgxButtonGroupModule,
-		IgxAvatarModule
-  ],
+	AppComponent,
+	TreeGridCellSelectionComponent,
+	IgxGridModule,
+	IgxIconModule,
+	IgxSwitchModule,
+	IgxButtonGroupModule,
+	IgxAvatarModule
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

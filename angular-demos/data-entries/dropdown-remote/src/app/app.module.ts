@@ -19,20 +19,20 @@ import { RemoteService } from "./grid/services/remote.service";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DropDownRemoteComponent
-  ],
+	AppComponent,
+	DropDownRemoteComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxButtonModule,
-		IgxToastModule,
-		IgxToggleModule,
-		IgxForOfModule,
-		HttpClientModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxButtonModule,
+	IgxToastModule,
+	IgxToggleModule,
+	IgxForOfModule,
+	HttpClientModule
+],
   providers: [RemoteService],
   entryComponents: [],
   schemas: []

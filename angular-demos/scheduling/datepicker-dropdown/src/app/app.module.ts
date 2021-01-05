@@ -15,17 +15,17 @@ import { DatepickerDropdownComponent } from "./scheduling/datepicker/datepicker-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DatepickerDropdownComponent
-  ],
+	AppComponent,
+	DatepickerDropdownComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDatePickerModule,
-		IgxIconModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDatePickerModule,
+	IgxIconModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

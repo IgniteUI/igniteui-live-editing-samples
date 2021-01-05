@@ -11,15 +11,15 @@ import { InputGroupSample1Component } from "./input-group-sample-1/input-group-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		InputGroupSample1Component
-  ],
+	AppComponent,
+	InputGroupSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

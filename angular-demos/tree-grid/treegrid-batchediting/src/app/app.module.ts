@@ -18,20 +18,20 @@ import { TreeGridWithTransactionsComponent } from "./tree-grid/tree-grid-batch-e
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridBatchEditingSampleComponent,
-		TreeGridWithTransactionsComponent
-  ],
+	AppComponent,
+	TreeGridBatchEditingSampleComponent,
+	TreeGridWithTransactionsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxDialogModule,
-		IgxGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxDialogModule,
+	IgxGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

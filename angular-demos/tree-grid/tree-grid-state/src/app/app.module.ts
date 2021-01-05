@@ -13,18 +13,18 @@ import { TGridAboutComponent } from "./tree-grid-save-state/about.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TGridSaveStateComponent,
-		TGridAboutComponent
-  ],
+	AppComponent,
+	TGridSaveStateComponent,
+	TGridAboutComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		RouterModule.forRoot([{component: 'TGridAboutComponent', path: 'tree-grid-about'},{component: 'TGridSaveStateComponent', path: 'tree-grid-state'},{ path: '', redirectTo: '/tree-grid-state', pathMatch: 'full' }])]
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	RouterModule.forRoot([{component: 'TGridAboutComponent', path: 'tree-grid-about'},{component: 'TGridSaveStateComponent', path: 'tree-grid-state'},{ path: '', redirectTo: '/tree-grid-state', pathMatch: 'full' }])]
+],
   providers: [],
   entryComponents: [],
   schemas: []

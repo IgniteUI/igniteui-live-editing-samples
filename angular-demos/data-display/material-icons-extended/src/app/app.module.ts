@@ -20,20 +20,20 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MaterialIconsExtendedComponent,
-		CategoriesFilterPipe,
-		FilterByName
-  ],
+	AppComponent,
+	MaterialIconsExtendedComponent,
+	CategoriesFilterPipe,
+	FilterByName
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxButtonModule,
-		IgxSelectModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxButtonModule,
+	IgxSelectModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

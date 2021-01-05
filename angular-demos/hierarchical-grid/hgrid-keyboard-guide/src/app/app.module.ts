@@ -15,16 +15,16 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		HGridKeyboardnavGuide
-  ],
+	AppComponent,
+	HGridKeyboardnavGuide
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxHierarchicalGridModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxHierarchicalGridModule,
+	IgxListModule
+],
   providers: [IgxOverlayService],
   entryComponents: [],
   schemas: []

@@ -16,21 +16,21 @@ import { View3Component } from "./views/view3/view3.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TabsSample4Component
-  ],
+	AppComponent,
+	TabsSample4Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTabsModule,
-		TabsSample4Module,
-		RouterModule.forRoot([
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTabsModule,
+	TabsSample4Module,
+	RouterModule.forRoot([
                         { path: "view1", component: View1Component },
                         { path: "view2", component: View2Component },
                         { path: "view3", component: View3Component }
                     ])
-  ],
+],
   providers: [],
   entryComponents: [],
   schemas: []

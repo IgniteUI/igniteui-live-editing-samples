@@ -12,16 +12,16 @@ import { TreeGridMultiColumnHeaderTemplateSampleComponent } from "./tree-grid-mu
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridMultiColumnHeaderTemplateSampleComponent
-  ],
+	AppComponent,
+	TreeGridMultiColumnHeaderTemplateSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

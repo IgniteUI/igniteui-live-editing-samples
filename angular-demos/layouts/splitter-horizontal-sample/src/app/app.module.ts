@@ -11,15 +11,15 @@ import { SplitterHorizontalSampleComponent } from "./splitter-horizontal-sample/
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SplitterHorizontalSampleComponent
-  ],
+	AppComponent,
+	SplitterHorizontalSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSplitterModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSplitterModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

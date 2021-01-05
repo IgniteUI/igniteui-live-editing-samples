@@ -19,19 +19,19 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FlightBookingComponent,
-		PipeWithoutTownFrom
-  ],
+	AppComponent,
+	FlightBookingComponent,
+	PipeWithoutTownFrom
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDateRangePickerModule,
-		IgxSelectModule,
-		IgxInputGroupModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDateRangePickerModule,
+	IgxSelectModule,
+	IgxInputGroupModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -16,18 +16,18 @@ import { ActionStripStylingComponent } from "./action-strip-paragraph-styling/ac
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ActionStripStylingComponent
-  ],
+	AppComponent,
+	ActionStripStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxActionStripModule,
-		IgxRippleModule,
-		IgxButtonModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxActionStripModule,
+	IgxRippleModule,
+	IgxButtonModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

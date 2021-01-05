@@ -14,16 +14,16 @@ import { BasicDateRangePickerComponent } from "./daterangepicker-basic/daterange
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BasicDateRangePickerComponent
-  ],
+	AppComponent,
+	BasicDateRangePickerComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDateRangePickerModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDateRangePickerModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

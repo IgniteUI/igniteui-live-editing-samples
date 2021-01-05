@@ -11,15 +11,15 @@ import { DividerVerticalComponent } from "./vertical/divider-vertical.component"
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DividerVerticalComponent
-  ],
+	AppComponent,
+	DividerVerticalComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDividerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDividerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -16,18 +16,18 @@ import { MaskSample1Component } from "./mask-sample-1/mask-sample-1.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MaskSample1Component
-  ],
+	AppComponent,
+	MaskSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSnackbarModule,
-		IgxMaskModule,
-		IgxInputGroupModule,
-		IgxTextSelectionModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSnackbarModule,
+	IgxMaskModule,
+	IgxInputGroupModule,
+	IgxTextSelectionModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

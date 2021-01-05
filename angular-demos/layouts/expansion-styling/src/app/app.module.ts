@@ -16,18 +16,18 @@ import { ExpansionPanelStylingComponent } from "./expansion-styling/expansion-st
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ExpansionPanelStylingComponent
-  ],
+	AppComponent,
+	ExpansionPanelStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxButtonModule,
-		IgxExpansionPanelModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxButtonModule,
+	IgxExpansionPanelModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

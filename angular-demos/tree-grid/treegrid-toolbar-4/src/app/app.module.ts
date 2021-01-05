@@ -15,17 +15,17 @@ import { TreeGridToolbarSample4Component } from "./tree-grid-toolbar-sample-4/tr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridToolbarSample4Component
-  ],
+	AppComponent,
+	TreeGridToolbarSample4Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

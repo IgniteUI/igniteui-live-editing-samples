@@ -14,16 +14,16 @@ import { CarouselNoNavigationSampleComponent } from "./carousel-no-navigation-sa
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CarouselNoNavigationSampleComponent
-  ],
+	AppComponent,
+	CarouselNoNavigationSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCarouselModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCarouselModule,
+	IgxListModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

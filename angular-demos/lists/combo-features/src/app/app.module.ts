@@ -14,16 +14,16 @@ import { ComboFeatures } from "./combo-features/combo-features.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboFeatures
-  ],
+	AppComponent,
+	ComboFeatures
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

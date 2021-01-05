@@ -11,15 +11,15 @@ import { DatepickerSample3Component } from "./datepicker-sample-3/datepicker-sam
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DatepickerSample3Component
-  ],
+	AppComponent,
+	DatepickerSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDatePickerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDatePickerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

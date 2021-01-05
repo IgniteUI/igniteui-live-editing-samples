@@ -24,27 +24,27 @@ import { DefaultThemeSampleComponent } from "./default-theme-sample/default-them
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DefaultThemeSampleComponent
-  ],
+	AppComponent,
+	DefaultThemeSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxDialogModule,
-		IgxSnackbarModule,
-		IgxLayoutModule,
-		IgxToggleModule,
-		IgxIconModule,
-		IgxRippleModule,
-		IgxButtonModule,
-		IgxCalendarModule,
-		IgxInputGroupModule,
-		IgxDatePickerModule,
-		IgxGridModule,
-		IgxLayoutModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxDialogModule,
+	IgxSnackbarModule,
+	IgxLayoutModule,
+	IgxToggleModule,
+	IgxIconModule,
+	IgxRippleModule,
+	IgxButtonModule,
+	IgxCalendarModule,
+	IgxInputGroupModule,
+	IgxDatePickerModule,
+	IgxGridModule,
+	IgxLayoutModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

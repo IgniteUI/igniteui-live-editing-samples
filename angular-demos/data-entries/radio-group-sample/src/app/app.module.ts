@@ -16,18 +16,18 @@ import { ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RadioGroupSampleComponent
-  ],
+	AppComponent,
+	RadioGroupSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxRadioModule,
-		IgxInputGroupModule,
-		ReactiveFormsModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxRadioModule,
+	IgxInputGroupModule,
+	ReactiveFormsModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

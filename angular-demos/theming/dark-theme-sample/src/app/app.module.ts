@@ -24,27 +24,27 @@ import { DarkThemeSampleComponent } from "./dark-theme-sample/dark-theme-sample.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DarkThemeSampleComponent
-  ],
+	AppComponent,
+	DarkThemeSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxDialogModule,
-		IgxSnackbarModule,
-		IgxLayoutModule,
-		IgxToggleModule,
-		IgxIconModule,
-		IgxRippleModule,
-		IgxButtonModule,
-		IgxCalendarModule,
-		IgxInputGroupModule,
-		IgxDatePickerModule,
-		IgxGridModule,
-		IgxLayoutModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxDialogModule,
+	IgxSnackbarModule,
+	IgxLayoutModule,
+	IgxToggleModule,
+	IgxIconModule,
+	IgxRippleModule,
+	IgxButtonModule,
+	IgxCalendarModule,
+	IgxInputGroupModule,
+	IgxDatePickerModule,
+	IgxGridModule,
+	IgxLayoutModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

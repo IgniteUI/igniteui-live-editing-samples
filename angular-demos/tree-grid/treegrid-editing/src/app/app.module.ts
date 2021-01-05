@@ -19,21 +19,21 @@ import { TreeGridEditingSampleComponent } from "./tree-grid-editing-sample/tree-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridEditingSampleComponent
-  ],
+	AppComponent,
+	TreeGridEditingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxDialogModule,
-		IgxInputGroupModule,
-		IgxCheckboxModule,
-		IgxDatePickerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxDialogModule,
+	IgxInputGroupModule,
+	IgxCheckboxModule,
+	IgxDatePickerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

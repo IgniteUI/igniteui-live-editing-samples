@@ -11,15 +11,15 @@ import { LinearProgressbarSample2Component } from "./linear-progressbar-sample-2
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LinearProgressbarSample2Component
-  ],
+	AppComponent,
+	LinearProgressbarSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxProgressBarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxProgressBarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -16,18 +16,18 @@ import { RippleStylingSampleComponent } from "./ripple-stying/ripple-styling-sam
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RippleStylingSampleComponent
-  ],
+	AppComponent,
+	RippleStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxRippleModule,
-		IgxAvatarModule,
-		IgxIconModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxRippleModule,
+	IgxAvatarModule,
+	IgxIconModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

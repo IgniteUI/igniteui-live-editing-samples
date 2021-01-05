@@ -15,17 +15,17 @@ import { TreeGridFilteringSampleComponent } from "./tree-grid-filtering-sample/t
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridFilteringSampleComponent
-  ],
+	AppComponent,
+	TreeGridFilteringSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

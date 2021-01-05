@@ -19,25 +19,25 @@ import { RouterModule } from "@angular/router";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		NavDrawerRoutingComponent
-  ],
+	AppComponent,
+	NavDrawerRoutingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxLayoutModule,
-		IgxNavigationDrawerModule,
-		IgxRippleModule,
-		IgxToggleModule,
-		RouterModule.forRoot([
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxLayoutModule,
+	IgxNavigationDrawerModule,
+	IgxRippleModule,
+	IgxToggleModule,
+	RouterModule.forRoot([
                         {path: "avatar", component: NavDrawerRoutingComponent},
                         {path: "badge", component: NavDrawerRoutingComponent},
                         {path: "button-group", component: NavDrawerRoutingComponent}
                     ])
-  ],
+],
   providers: [],
   entryComponents: [],
   schemas: []

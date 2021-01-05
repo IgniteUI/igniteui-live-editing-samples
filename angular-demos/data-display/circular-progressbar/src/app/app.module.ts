@@ -11,15 +11,15 @@ import { CircularProgressbarComponent } from "./circular-progressbar/circular-pr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CircularProgressbarComponent
-  ],
+	AppComponent,
+	CircularProgressbarComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxProgressBarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxProgressBarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

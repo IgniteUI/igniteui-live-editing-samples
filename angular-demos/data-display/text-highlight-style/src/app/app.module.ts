@@ -17,19 +17,19 @@ import { TextHighlightStyleComponent } from "./text-highlight-style/text-highlig
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TextHighlightStyleComponent
-  ],
+	AppComponent,
+	TextHighlightStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxRippleModule,
-		IgxTextHighlightModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxRippleModule,
+	IgxTextHighlightModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

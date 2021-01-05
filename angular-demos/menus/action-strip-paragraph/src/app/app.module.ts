@@ -17,19 +17,19 @@ import { ActionStripParagraphComponent } from "./action-strip-paragraph/action-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ActionStripParagraphComponent
-  ],
+	AppComponent,
+	ActionStripParagraphComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxActionStripModule,
-		IgxRippleModule,
-		IgxButtonGroupModule,
-		IgxButtonModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxActionStripModule,
+	IgxRippleModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

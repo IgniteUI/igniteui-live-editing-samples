@@ -18,20 +18,20 @@ import { IgxForHorizontalComponent } from "./igxFor/igxFor-horizontal-sample/igx
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		IgxForHorizontalComponent
-  ],
+	AppComponent,
+	IgxForHorizontalComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxFilterModule,
-		IgxListModule,
-		IgxIconModule,
-		IgxForOfModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxFilterModule,
+	IgxListModule,
+	IgxIconModule,
+	IgxForOfModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

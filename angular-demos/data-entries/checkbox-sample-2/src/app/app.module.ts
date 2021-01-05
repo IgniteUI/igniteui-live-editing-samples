@@ -11,15 +11,15 @@ import { CheckboxSample2Component } from "./checkbox-sample-2/checkbox-sample-2.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CheckboxSample2Component
-  ],
+	AppComponent,
+	CheckboxSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCheckboxModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCheckboxModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

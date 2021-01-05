@@ -15,17 +15,17 @@ import { DateTimeBasicComponent } from "./datetime-basic/datetime-basic.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DateTimeBasicComponent
-  ],
+	AppComponent,
+	DateTimeBasicComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxDateTimeEditorModule,
-		IgxTextSelectionModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxDateTimeEditorModule,
+	IgxTextSelectionModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

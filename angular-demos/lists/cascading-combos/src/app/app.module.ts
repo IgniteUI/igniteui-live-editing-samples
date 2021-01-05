@@ -14,16 +14,16 @@ import { CascadingCombos } from "./cascading-combos/cascading-combos.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CascadingCombos
-  ],
+	AppComponent,
+	CascadingCombos
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule,
-		IgxSelectModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule,
+	IgxSelectModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

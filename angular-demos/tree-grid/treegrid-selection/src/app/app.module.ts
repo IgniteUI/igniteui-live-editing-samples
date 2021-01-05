@@ -17,19 +17,19 @@ import { TreeGridSelectionSampleComponent } from "./tree-grid-selection-sample/t
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridSelectionSampleComponent
-  ],
+	AppComponent,
+	TreeGridSelectionSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxSwitchModule,
-		IgxSnackbarModule,
-		IgxButtonGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxSwitchModule,
+	IgxSnackbarModule,
+	IgxButtonGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

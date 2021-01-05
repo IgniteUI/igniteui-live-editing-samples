@@ -17,19 +17,19 @@ import { TextHighlightSample1Component } from "./text-highlight-sample-1/text-hi
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TextHighlightSample1Component
-  ],
+	AppComponent,
+	TextHighlightSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxRippleModule,
-		IgxTextHighlightModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxRippleModule,
+	IgxTextHighlightModule
+],
   providers: [],
   entryComponents: [],
   schemas: []
