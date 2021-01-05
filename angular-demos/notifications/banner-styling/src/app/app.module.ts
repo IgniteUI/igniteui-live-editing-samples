@@ -21,23 +21,23 @@ import { BannerStylingComponent } from "./banner-styling/banner-styling.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BannerStylingComponent
-  ],
+	AppComponent,
+	BannerStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBannerModule,
-		IgxCardModule,
-		IgxToastModule,
-		IgxNavbarModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxIconModule,
-		IgxButtonModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBannerModule,
+	IgxCardModule,
+	IgxToastModule,
+	IgxNavbarModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxIconModule,
+	IgxButtonModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

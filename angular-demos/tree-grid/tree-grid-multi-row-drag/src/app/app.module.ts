@@ -18,20 +18,20 @@ import { TreeGridMultiRowDrag } from "./tree-grid-multi-row-drag/tree-grid-multi
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridMultiRowDrag
-  ],
+	AppComponent,
+	TreeGridMultiRowDrag
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxInputGroupModule,
-		IgxIconModule,
-		IgxDragDropModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxInputGroupModule,
+	IgxIconModule,
+	IgxDragDropModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

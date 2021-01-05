@@ -15,17 +15,17 @@ import { TreeGridStyleComponent } from "./tree-grid-style/tree-grid-style.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridStyleComponent
-  ],
+	AppComponent,
+	TreeGridStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

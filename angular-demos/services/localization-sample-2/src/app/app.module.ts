@@ -16,18 +16,18 @@ import { LocalizationSample2Component } from "./services/localization-sample-2/l
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LocalizationSample2Component
-  ],
+	AppComponent,
+	LocalizationSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxIconModule,
-		IgxTimePickerModule,
-		IgxGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxIconModule,
+	IgxTimePickerModule,
+	IgxGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

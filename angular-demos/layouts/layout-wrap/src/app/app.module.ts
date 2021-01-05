@@ -11,15 +11,15 @@ import { LayoutWrapComponent } from "./layout/layout-wrap/layout-wrap.component"
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutWrapComponent
-  ],
+	AppComponent,
+	LayoutWrapComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

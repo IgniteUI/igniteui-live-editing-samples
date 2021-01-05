@@ -15,17 +15,17 @@ import { ToastSample5Component } from "./toast-sample-5/toast-sample-5.component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ToastSample5Component
-  ],
+	AppComponent,
+	ToastSample5Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxToastModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxToastModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

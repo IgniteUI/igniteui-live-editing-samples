@@ -16,18 +16,18 @@ import { LayoutDirectionRowComponent } from "./layout/layout-direction-row/layou
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutDirectionRowComponent
-  ],
+	AppComponent,
+	LayoutDirectionRowComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule,
-		IgxButtonGroupModule,
-		IgxButtonModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -14,16 +14,16 @@ import { ExpansionPanelSample1Component } from "./expansion-sample-1/expansion-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ExpansionPanelSample1Component
-  ],
+	AppComponent,
+	ExpansionPanelSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxExpansionPanelModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxExpansionPanelModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

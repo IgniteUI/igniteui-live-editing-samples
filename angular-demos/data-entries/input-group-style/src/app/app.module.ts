@@ -14,16 +14,16 @@ import { InputGroupStyleComponent } from "./input-group/input-group-styling/inpu
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		InputGroupStyleComponent
-  ],
+	AppComponent,
+	InputGroupStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

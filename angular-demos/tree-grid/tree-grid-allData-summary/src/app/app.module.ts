@@ -12,16 +12,16 @@ import { TreeGridAllDataSummaryComponent } from "./tree-grid/treegrid-allData-su
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridAllDataSummaryComponent
-  ],
+	AppComponent,
+	TreeGridAllDataSummaryComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

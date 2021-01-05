@@ -15,17 +15,17 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TGridEditingLifecycleComponent
-  ],
+	AppComponent,
+	TGridEditingLifecycleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

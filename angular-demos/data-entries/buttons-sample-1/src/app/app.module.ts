@@ -15,17 +15,17 @@ import { ButtonsSample1Component } from "./buttons-sample-1/buttons-sample-1.com
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ButtonsSample1Component
-  ],
+	AppComponent,
+	ButtonsSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

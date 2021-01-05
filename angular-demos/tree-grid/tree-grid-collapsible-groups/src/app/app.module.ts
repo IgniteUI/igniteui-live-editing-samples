@@ -15,17 +15,17 @@ import { TreeGridMultiCollapsibleColumnGroupsComponent } from "./tree-grid/tree-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridMultiCollapsibleColumnGroupsComponent
-  ],
+	AppComponent,
+	TreeGridMultiCollapsibleColumnGroupsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxTooltipModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxTooltipModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

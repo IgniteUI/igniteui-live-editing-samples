@@ -16,18 +16,18 @@ import { LayoutJustifyContentComponent } from "./layout/layout-justify-content/l
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutJustifyContentComponent
-  ],
+	AppComponent,
+	LayoutJustifyContentComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule,
-		IgxButtonGroupModule,
-		IgxButtonModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

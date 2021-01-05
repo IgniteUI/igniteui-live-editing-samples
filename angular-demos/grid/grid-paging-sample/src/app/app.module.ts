@@ -23,25 +23,25 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		PagingSampleComponent
-  ],
+	AppComponent,
+	PagingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxAvatarModule,
-		IgxBadgeModule,
-		IgxButtonModule,
-		IgxGridModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxProgressBarModule,
-		IgxRippleModule,
-		IgxSwitchModule,
-		HttpClientModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxAvatarModule,
+	IgxBadgeModule,
+	IgxButtonModule,
+	IgxGridModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxProgressBarModule,
+	IgxRippleModule,
+	IgxSwitchModule,
+	HttpClientModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

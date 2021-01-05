@@ -17,19 +17,19 @@ import { TreeGridRowDragBase } from "./tree-grid-row-drag-base/tree-grid-row-dra
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridRowDragBase
-  ],
+	AppComponent,
+	TreeGridRowDragBase
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxInputGroupModule,
-		IgxDragDropModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxInputGroupModule,
+	IgxDragDropModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -11,15 +11,15 @@ import { IconSample1Component } from "./icon-sample-1/icon-sample-1.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		IconSample1Component
-  ],
+	AppComponent,
+	IconSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

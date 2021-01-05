@@ -11,15 +11,15 @@ import { CalendarStylingSample } from "./calendar-styling-sample/calendar-stylin
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarStylingSample
-  ],
+	AppComponent,
+	CalendarStylingSample
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

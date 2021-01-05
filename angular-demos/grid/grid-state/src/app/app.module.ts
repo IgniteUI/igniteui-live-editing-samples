@@ -22,21 +22,21 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		GridSaveStateComponent,
-		AboutComponent
-  ],
+	AppComponent,
+	GridSaveStateComponent,
+	AboutComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxGridModule,
-		IgxTooltipModule,
-		RouterModule.forRoot([{component: 'AboutComponent', path: 'grid-about'},{component: 'GridSaveStateComponent', path: 'grid-state'},{ path: '', redirectTo: '/grid-state', pathMatch: 'full' }]),
-		IgxToastModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxGridModule,
+	IgxTooltipModule,
+	RouterModule.forRoot([{component: 'AboutComponent', path: 'grid-about'},{component: 'GridSaveStateComponent', path: 'grid-state'},{ path: '', redirectTo: '/grid-state', pathMatch: 'full' }]),
+	IgxToastModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -19,21 +19,21 @@ import { DropDownSample3Component } from "./dropdown-sample-3/dropdown-sample-3.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DropDownSample3Component
-  ],
+	AppComponent,
+	DropDownSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxButtonModule,
-		IgxToggleModule,
-		IgxPrefixModule,
-		IgxSuffixModule,
-		IgxIconModule,
-		IgxDividerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxButtonModule,
+	IgxToggleModule,
+	IgxPrefixModule,
+	IgxSuffixModule,
+	IgxIconModule,
+	IgxDividerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

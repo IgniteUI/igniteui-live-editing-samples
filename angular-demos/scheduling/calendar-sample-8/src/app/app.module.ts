@@ -14,16 +14,16 @@ import { CalendarSample8Component } from "./calendar-sample-8/calendar-sample-8.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarSample8Component
-  ],
+	AppComponent,
+	CalendarSample8Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule,
-		IgxSnackbarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule,
+	IgxSnackbarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

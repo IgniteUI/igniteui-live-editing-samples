@@ -11,15 +11,15 @@ import { SplitterStylingSampleComponent } from "./splitter-styling-sample/splitt
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SplitterStylingSampleComponent
-  ],
+	AppComponent,
+	SplitterStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSplitterModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSplitterModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

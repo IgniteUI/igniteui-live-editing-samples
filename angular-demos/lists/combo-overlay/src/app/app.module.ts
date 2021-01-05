@@ -11,15 +11,15 @@ import { ComboOverlayComponent } from "./lists/combo/combo-overlay/combo-overlay
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboOverlayComponent
-  ],
+	AppComponent,
+	ComboOverlayComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

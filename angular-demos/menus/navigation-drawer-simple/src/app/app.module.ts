@@ -17,19 +17,19 @@ import { NavDrawerSimpleComponent } from "./nav-drawer-simple/nav-drawer-simple.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		NavDrawerSimpleComponent
-  ],
+	AppComponent,
+	NavDrawerSimpleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxNavigationDrawerModule,
-		IgxRippleModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxNavigationDrawerModule,
+	IgxRippleModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

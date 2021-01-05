@@ -15,16 +15,16 @@ import { TreeGridExcelExportSample1Component } from "./services/export-excel/exc
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExcelExportSample1Component
-  ],
+	AppComponent,
+	TreeGridExcelExportSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTreeGridModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTreeGridModule,
+	IgxButtonModule
+],
   providers: [IgxExcelExporterService],
   entryComponents: [],
   schemas: []

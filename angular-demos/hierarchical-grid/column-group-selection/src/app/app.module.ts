@@ -11,15 +11,15 @@ import { IgxHierarchicalGridModule } from "igniteui-angular";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		HierarchicalGridColumnGroupSelectionComponent
-  ],
+	AppComponent,
+	HierarchicalGridColumnGroupSelectionComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxHierarchicalGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxHierarchicalGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

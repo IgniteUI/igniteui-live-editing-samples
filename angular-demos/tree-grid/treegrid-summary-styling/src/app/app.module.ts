@@ -15,17 +15,17 @@ import { TreeGridSummaryStylingComponent } from "./tree-grid-summary-styling/tre
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridSummaryStylingComponent
-  ],
+	AppComponent,
+	TreeGridSummaryStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

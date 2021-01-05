@@ -15,17 +15,17 @@ import { TreeGridExternalOutletComponent } from "./tree-grid-external-outlet/tre
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExternalOutletComponent
-  ],
+	AppComponent,
+	TreeGridExternalOutletComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

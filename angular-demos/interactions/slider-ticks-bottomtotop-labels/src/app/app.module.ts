@@ -14,16 +14,16 @@ import { SliderTicksBottomtotopLabelsComponent } from "./slider-ticks-bottomtoto
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderTicksBottomtotopLabelsComponent
-  ],
+	AppComponent,
+	SliderTicksBottomtotopLabelsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

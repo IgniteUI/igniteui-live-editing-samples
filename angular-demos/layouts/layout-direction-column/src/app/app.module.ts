@@ -16,18 +16,18 @@ import { LayoutDirectionColumnComponent } from "./layout/layout-direction-column
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutDirectionColumnComponent
-  ],
+	AppComponent,
+	LayoutDirectionColumnComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule,
-		IgxButtonGroupModule,
-		IgxButtonModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

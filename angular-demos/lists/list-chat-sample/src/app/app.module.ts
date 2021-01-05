@@ -16,18 +16,18 @@ import { ListChatSampleComponent } from "./list-chat-sample/list-chat-sample.com
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListChatSampleComponent
-  ],
+	AppComponent,
+	ListChatSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxIconModule,
-		IgxListModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxIconModule,
+	IgxListModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

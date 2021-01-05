@@ -16,18 +16,18 @@ import { MonthpickerSample3Component } from "./monthpicker-sample-3/monthpicker-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MonthpickerSample3Component
-  ],
+	AppComponent,
+	MonthpickerSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCalendarModule,
-		IgxSelectModule,
-		IgxCardModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCalendarModule,
+	IgxSelectModule,
+	IgxCardModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -11,15 +11,14 @@ import { ExcelExportComponent } from "./services/export-excel/excel-export.compo
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ExcelExportComponent
-  ],
+	AppComponent,
+	ExcelExportComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule
+],
   providers: [IgxExcelExporterService],
   entryComponents: [],
   schemas: []

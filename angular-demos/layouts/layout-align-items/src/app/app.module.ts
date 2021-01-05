@@ -16,18 +16,18 @@ import { LayoutAlignItemsComponent } from "./layout/layout-align-items/layout-al
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutAlignItemsComponent
-  ],
+	AppComponent,
+	LayoutAlignItemsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule,
-		IgxButtonGroupModule,
-		IgxButtonModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

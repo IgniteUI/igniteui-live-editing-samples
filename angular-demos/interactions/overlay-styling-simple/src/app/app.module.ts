@@ -15,16 +15,16 @@ import { OverlayStylingComponent } from "./overlay-styling/overlay-styling.compo
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		OverlayStylingComponent
-  ],
+	AppComponent,
+	OverlayStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxToggleModule,
-		IgxComboModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxToggleModule,
+	IgxComboModule
+],
   providers: [IgxOverlayService],
   entryComponents: [],
   schemas: []

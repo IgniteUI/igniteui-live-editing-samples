@@ -16,18 +16,18 @@ import { CardStylingSampleComponent } from "./card-styling-sample/card-styling-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CardStylingSampleComponent
-  ],
+	AppComponent,
+	CardStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxCardModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxCardModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

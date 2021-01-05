@@ -11,15 +11,15 @@ import { AvatarStylingSampleComponent } from "./avatar-styling/avatar-styling.co
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		AvatarStylingSampleComponent
-  ],
+	AppComponent,
+	AvatarStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -15,17 +15,17 @@ import { DateRangePickerStartEndComponent } from "./daterangepicker-start-end/da
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DateRangePickerStartEndComponent
-  ],
+	AppComponent,
+	DateRangePickerStartEndComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDateRangePickerModule,
-		IgxInputGroupModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDateRangePickerModule,
+	IgxInputGroupModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

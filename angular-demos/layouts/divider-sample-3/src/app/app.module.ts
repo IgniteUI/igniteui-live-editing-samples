@@ -11,15 +11,15 @@ import { DividerDashedComponent } from "./dashed/divider-dashed.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DividerDashedComponent
-  ],
+	AppComponent,
+	DividerDashedComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDividerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDividerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

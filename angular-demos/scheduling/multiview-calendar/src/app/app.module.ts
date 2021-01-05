@@ -15,17 +15,17 @@ import { CalendarMultiViewComponent } from "./multiview/multiview.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarMultiViewComponent
-  ],
+	AppComponent,
+	CalendarMultiViewComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxCalendarModule,
-		IgxDialogModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxCalendarModule,
+	IgxDialogModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -18,19 +18,19 @@ import { ListComponent } from "./list/list.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListComponent
-  ],
+	AppComponent,
+	ListComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxFilterModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxFilterModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxListModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

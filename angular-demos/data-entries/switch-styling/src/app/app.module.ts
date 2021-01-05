@@ -11,15 +11,15 @@ import { SwitchStylingComponent } from "./switch-styling/switch-styling.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SwitchStylingComponent
-  ],
+	AppComponent,
+	SwitchStylingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

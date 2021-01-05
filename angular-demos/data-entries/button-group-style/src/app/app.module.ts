@@ -16,18 +16,18 @@ import { ButtonGroupStyleComponent } from "./button-group-style/button-group-sty
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ButtonGroupStyleComponent
-  ],
+	AppComponent,
+	ButtonGroupStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonGroupModule,
-		IgxRippleModule,
-		IgxIconModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonGroupModule,
+	IgxRippleModule,
+	IgxIconModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -18,18 +18,18 @@ import { PasteHandler } from "./grid/paste-handler.directive";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		GridPasteSampleComponent,
-		PasteHandler
-  ],
+	AppComponent,
+	GridPasteSampleComponent,
+	PasteHandler
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGridModule,
-		IgxDropDownModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGridModule,
+	IgxDropDownModule,
+	IgxButtonModule
+],
   providers: [IgxExcelExporterService],
   entryComponents: [],
   schemas: []

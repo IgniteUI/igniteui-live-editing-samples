@@ -15,17 +15,17 @@ import { TreeGridVirtualizationSampleComponent } from "./tree-grid-virtualizatio
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridVirtualizationSampleComponent
-  ],
+	AppComponent,
+	TreeGridVirtualizationSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxBadgeModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxBadgeModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

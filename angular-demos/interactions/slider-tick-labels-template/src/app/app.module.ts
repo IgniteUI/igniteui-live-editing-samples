@@ -11,15 +11,15 @@ import { TickLabelsTemplateComponent } from "./slider-tick-labels-template/tick-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TickLabelsTemplateComponent
-  ],
+	AppComponent,
+	TickLabelsTemplateComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -15,17 +15,17 @@ import { TreeGridClipboardSampleComponent } from "./tree-grid-clipboard-operatio
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridClipboardSampleComponent
-  ],
+	AppComponent,
+	TreeGridClipboardSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

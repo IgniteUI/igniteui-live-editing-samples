@@ -14,16 +14,16 @@ import { ComboStyling } from "./lists/combo/combo-styling/combo-styling.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboStyling
-  ],
+	AppComponent,
+	ComboStyling
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule,
-		IgxToastModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule,
+	IgxToastModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

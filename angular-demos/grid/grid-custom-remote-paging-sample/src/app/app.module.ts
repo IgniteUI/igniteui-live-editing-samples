@@ -18,19 +18,19 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CustomRemotePagingGridSample
-  ],
+	AppComponent,
+	CustomRemotePagingGridSample
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		RouterModule.forRoot([]),
-		IgxGridModule,
-		HttpClientModule,
-		IgxSelectModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	RouterModule.forRoot([]),
+	IgxGridModule,
+	HttpClientModule,
+	IgxSelectModule
+],
   providers: [RemotePagingService],
   entryComponents: [],
   schemas: []

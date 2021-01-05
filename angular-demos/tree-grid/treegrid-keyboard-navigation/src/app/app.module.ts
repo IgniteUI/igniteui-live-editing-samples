@@ -12,16 +12,16 @@ import { TreeGridKBNavigationComponent } from "./tree-grid-keyboard-navigation/t
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridKBNavigationComponent
-  ],
+	AppComponent,
+	TreeGridKBNavigationComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

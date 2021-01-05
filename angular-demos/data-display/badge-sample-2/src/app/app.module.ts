@@ -14,16 +14,16 @@ import { BadgeSample2Component } from "./badge-sample-2/badge-sample-2.component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BadgeSample2Component
-  ],
+	AppComponent,
+	BadgeSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBadgeModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBadgeModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -12,16 +12,16 @@ import { TreeGridEditingStyleComponent } from "./tree-grid-editing-style/tree-gr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridEditingStyleComponent
-  ],
+	AppComponent,
+	TreeGridEditingStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

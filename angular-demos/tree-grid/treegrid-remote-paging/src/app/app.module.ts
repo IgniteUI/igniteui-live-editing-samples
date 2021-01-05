@@ -15,17 +15,17 @@ import { TreeGridRemotePagingSampleComponent } from "./tree-grid-remote-paging-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridRemotePagingSampleComponent
-  ],
+	AppComponent,
+	TreeGridRemotePagingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxSelectModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxSelectModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

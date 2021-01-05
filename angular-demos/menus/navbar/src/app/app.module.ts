@@ -14,16 +14,16 @@ import { NavbarComponent } from "./navbar/navbar.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		NavbarComponent
-  ],
+	AppComponent,
+	NavbarComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxNavbarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxNavbarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

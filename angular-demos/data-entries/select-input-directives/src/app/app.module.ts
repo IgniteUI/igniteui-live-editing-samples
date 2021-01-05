@@ -15,17 +15,17 @@ import { SelectInputDirectivesComponent } from "./data-entries/select/select-inp
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SelectInputDirectivesComponent
-  ],
+	AppComponent,
+	SelectInputDirectivesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSelectModule,
-		IgxInputGroupModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSelectModule,
+	IgxInputGroupModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

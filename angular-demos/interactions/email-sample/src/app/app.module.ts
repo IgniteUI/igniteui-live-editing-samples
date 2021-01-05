@@ -18,18 +18,18 @@ import { EmailSampleComponent } from "./drag-drop/email-sample/email-sample.comp
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		EmailSampleComponent
-  ],
+	AppComponent,
+	EmailSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDragDropModule,
-		IgxIconModule,
-		IgxCheckboxModule,
-		IgxListModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDragDropModule,
+	IgxIconModule,
+	IgxCheckboxModule,
+	IgxListModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

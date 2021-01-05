@@ -18,20 +18,20 @@ import { NavDrawerPinComponent } from "./nav-drawer-pin/nav-drawer-pin.component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		NavDrawerPinComponent
-  ],
+	AppComponent,
+	NavDrawerPinComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxLayoutModule,
-		IgxNavigationDrawerModule,
-		IgxRippleModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxLayoutModule,
+	IgxNavigationDrawerModule,
+	IgxRippleModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

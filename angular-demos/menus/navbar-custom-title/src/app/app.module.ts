@@ -14,16 +14,16 @@ import { NavbarCustomTitleComponent } from "./navbar-custom-title/navbar-custom-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		NavbarCustomTitleComponent
-  ],
+	AppComponent,
+	NavbarCustomTitleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxNavbarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxNavbarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

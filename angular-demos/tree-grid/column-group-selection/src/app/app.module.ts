@@ -11,15 +11,15 @@ import { IgxTreeGridModule } from "igniteui-angular";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridColumnGroupSelectionComponent
-  ],
+	AppComponent,
+	TreeGridColumnGroupSelectionComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

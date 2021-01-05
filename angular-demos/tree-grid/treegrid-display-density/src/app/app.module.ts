@@ -15,17 +15,17 @@ import { TreeGridDisplaydensitySampleComponent } from "./tree-grid-displaydensit
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridDisplaydensitySampleComponent
-  ],
+	AppComponent,
+	TreeGridDisplaydensitySampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

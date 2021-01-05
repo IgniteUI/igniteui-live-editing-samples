@@ -16,18 +16,18 @@ import { TreeGridFilteringTemplateSampleComponent } from "./tree-grid-filtering-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridFilteringTemplateSampleComponent
-  ],
+	AppComponent,
+	TreeGridFilteringTemplateSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxInputGroupModule,
-		IgxDatePickerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxInputGroupModule,
+	IgxDatePickerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

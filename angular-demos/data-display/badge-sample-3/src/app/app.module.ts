@@ -15,17 +15,17 @@ import { BadgeSample3Component } from "./badge-sample-3/badge-sample-3.component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BadgeSample3Component
-  ],
+	AppComponent,
+	BadgeSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBadgeModule,
-		IgxListModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBadgeModule,
+	IgxListModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -17,19 +17,19 @@ import { TreeGridPagingSampleComponent } from "./tree-grid-paging-sample/tree-gr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridPagingSampleComponent
-  ],
+	AppComponent,
+	TreeGridPagingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

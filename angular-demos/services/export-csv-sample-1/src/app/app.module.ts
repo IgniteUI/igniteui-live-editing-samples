@@ -14,15 +14,15 @@ import { CsvExportSample1Component } from "./services/csv-export-sample-1/csv-ex
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CsvExportSample1Component
-  ],
+	AppComponent,
+	CsvExportSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGridModule
+],
   providers: [IgxCsvExporterService],
   entryComponents: [],
   schemas: []

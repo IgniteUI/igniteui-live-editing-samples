@@ -15,17 +15,17 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CardSampleShadowComponent
-  ],
+	AppComponent,
+	CardSampleShadowComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCardModule,
-		IgxIconModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCardModule,
+	IgxIconModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -12,16 +12,16 @@ import { TreeGridConditionalCellStyleComponent } from "./tree-grid-conditional-c
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridConditionalCellStyleComponent
-  ],
+	AppComponent,
+	TreeGridConditionalCellStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

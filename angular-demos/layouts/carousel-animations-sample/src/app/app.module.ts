@@ -17,19 +17,19 @@ import { CarouselAnimationsSampleComponent } from "./carousel-animations-sample/
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CarouselAnimationsSampleComponent
-  ],
+	AppComponent,
+	CarouselAnimationsSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCarouselModule,
-		IgxIconModule,
-		IgxSelectModule,
-		IgxButtonModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCarouselModule,
+	IgxIconModule,
+	IgxSelectModule,
+	IgxButtonModule,
+	IgxCardModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

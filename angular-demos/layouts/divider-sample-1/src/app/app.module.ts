@@ -11,15 +11,15 @@ import { DividerDefaultComponent } from "./default/divider-default.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DividerDefaultComponent
-  ],
+	AppComponent,
+	DividerDefaultComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDividerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDividerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

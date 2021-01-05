@@ -10,15 +10,14 @@ import { ShadowsSampleComponent } from "./shadows-sample-1/shadows-sample.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ShadowsSampleComponent
-  ],
+	AppComponent,
+	ShadowsSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -18,22 +18,22 @@ import { TreeGridToolbarSample1Component } from "./tree-grid-toolbar-sample-1/tr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridToolbarSample1Component
-  ],
+	AppComponent,
+	TreeGridToolbarSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxAvatarModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxAvatarModule,
+	IgxSwitchModule
+],
   providers: [
-		IgxExcelExporterService,
-		IgxCsvExporterService
-	],
+	IgxExcelExporterService,
+	IgxCsvExporterService
+],
   entryComponents: [],
   schemas: []
 })

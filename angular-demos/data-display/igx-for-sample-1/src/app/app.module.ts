@@ -19,21 +19,21 @@ import { IgxForComponent } from "./igxFor/igxFor.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		IgxForComponent
-  ],
+	AppComponent,
+	IgxForComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxFilterModule,
-		IgxListModule,
-		IgxIconModule,
-		IgxRippleModule,
-		IgxForOfModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxFilterModule,
+	IgxListModule,
+	IgxIconModule,
+	IgxRippleModule,
+	IgxForOfModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

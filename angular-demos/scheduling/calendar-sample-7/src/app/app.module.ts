@@ -15,17 +15,17 @@ import { CalendarSample7Component } from "./calendar-sample-7/calendar-sample-7.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CalendarSample7Component
-  ],
+	AppComponent,
+	CalendarSample7Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxCalendarModule,
-		IgxDialogModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxCalendarModule,
+	IgxDialogModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

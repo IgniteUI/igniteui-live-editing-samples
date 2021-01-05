@@ -17,19 +17,19 @@ import { DropdownMenuComponent } from "./dropdown-menu/dropdown-menu.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DropdownMenuComponent
-  ],
+	AppComponent,
+	DropdownMenuComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxIconModule,
-		IgxNavbarModule,
-		IgxButtonModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxIconModule,
+	IgxNavbarModule,
+	IgxButtonModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

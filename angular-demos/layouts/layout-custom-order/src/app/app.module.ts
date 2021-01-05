@@ -11,15 +11,15 @@ import { LayoutCustomOrderComponent } from "./layout/layout-custom-order/layout-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LayoutCustomOrderComponent
-  ],
+	AppComponent,
+	LayoutCustomOrderComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLayoutModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLayoutModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -11,15 +11,15 @@ import { SliderDiscreteTicksBottomComponent } from "./discrete-slider-ticks-bott
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SliderDiscreteTicksBottomComponent
-  ],
+	AppComponent,
+	SliderDiscreteTicksBottomComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

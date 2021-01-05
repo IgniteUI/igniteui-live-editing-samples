@@ -16,18 +16,18 @@ import { CircularDynamicSampleComponent } from "./circular-progressbar/circular-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CircularDynamicSampleComponent
-  ],
+	AppComponent,
+	CircularDynamicSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxProgressBarModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxProgressBarModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

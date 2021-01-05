@@ -15,17 +15,17 @@ import { TabsSample2Component } from "./tabs-sample-2/tabs-sample-2.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TabsSample2Component
-  ],
+	AppComponent,
+	TabsSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTabsModule,
-		IgxNavbarModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTabsModule,
+	IgxNavbarModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

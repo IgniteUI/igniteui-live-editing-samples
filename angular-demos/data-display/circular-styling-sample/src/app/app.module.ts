@@ -11,15 +11,15 @@ import { CircularStylingSampleComponent } from "./circular-styling-sample/circul
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CircularStylingSampleComponent
-  ],
+	AppComponent,
+	CircularStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxProgressBarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxProgressBarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

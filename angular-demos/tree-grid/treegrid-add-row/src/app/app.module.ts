@@ -20,22 +20,22 @@ import { TreeGridAddRowSampleComponent } from "./tree-grid-add-row-sample/tree-g
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridAddRowSampleComponent
-  ],
+	AppComponent,
+	TreeGridAddRowSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonModule,
-		IgxDialogModule,
-		IgxInputGroupModule,
-		IgxCheckboxModule,
-		IgxDatePickerModule,
-		IgxActionStripModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonModule,
+	IgxDialogModule,
+	IgxInputGroupModule,
+	IgxCheckboxModule,
+	IgxDatePickerModule,
+	IgxActionStripModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

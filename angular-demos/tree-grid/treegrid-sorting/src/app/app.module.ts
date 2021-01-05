@@ -16,18 +16,18 @@ import { TreeGridContextmenuComponent } from "./tree-grid-sorting-sample/tree-gr
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridSortingSampleComponent,
-		TreeGridContextmenuComponent
-  ],
+	AppComponent,
+	TreeGridSortingSampleComponent,
+	TreeGridContextmenuComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

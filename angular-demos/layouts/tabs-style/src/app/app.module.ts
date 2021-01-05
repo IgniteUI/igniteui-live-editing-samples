@@ -17,19 +17,19 @@ import { TabsStyleComponent } from "./tabs-style/tabs-style.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TabsStyleComponent
-  ],
+	AppComponent,
+	TabsStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTabsModule,
-		IgxCardModule,
-		IgxAvatarModule,
-		IgxButtonModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTabsModule,
+	IgxCardModule,
+	IgxAvatarModule,
+	IgxButtonModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

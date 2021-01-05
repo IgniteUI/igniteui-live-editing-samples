@@ -15,17 +15,17 @@ import { ToastStyleComponent } from "./toast-style/toast-style.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ToastStyleComponent
-  ],
+	AppComponent,
+	ToastStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxToastModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxToastModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

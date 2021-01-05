@@ -15,17 +15,17 @@ import { ChipAreaSampleComponent } from "./chip/chip-area-sample/chip-area-sampl
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ChipAreaSampleComponent
-  ],
+	AppComponent,
+	ChipAreaSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxChipsModule,
-		IgxIconModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxChipsModule,
+	IgxIconModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

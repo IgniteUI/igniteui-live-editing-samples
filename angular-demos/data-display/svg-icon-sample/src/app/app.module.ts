@@ -11,15 +11,15 @@ import { SvgIconSampleComponent } from "./svg-icon-sample/svg-icon-sample.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SvgIconSampleComponent
-  ],
+	AppComponent,
+	SvgIconSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

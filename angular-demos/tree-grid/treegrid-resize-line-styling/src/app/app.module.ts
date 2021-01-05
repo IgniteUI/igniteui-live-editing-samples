@@ -12,16 +12,16 @@ import { TreeGridResizeLineStylingSampleComponent } from "./tree-grid-resize-lin
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridResizeLineStylingSampleComponent
-  ],
+	AppComponent,
+	TreeGridResizeLineStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

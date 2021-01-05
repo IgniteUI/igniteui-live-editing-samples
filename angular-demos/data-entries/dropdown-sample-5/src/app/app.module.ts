@@ -16,18 +16,18 @@ import { DropDownSample5Component } from "./dropdown-sample-5/dropdown-sample-5.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DropDownSample5Component
-  ],
+	AppComponent,
+	DropDownSample5Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxButtonModule,
-		IgxSwitchModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxButtonModule,
+	IgxSwitchModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

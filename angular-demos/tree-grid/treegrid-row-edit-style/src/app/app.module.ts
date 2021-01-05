@@ -15,17 +15,17 @@ import { TreeGridRowEditStyleComponent } from "./tree-grid-row-edit-style/tree-g
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridRowEditStyleComponent
-  ],
+	AppComponent,
+	TreeGridRowEditStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

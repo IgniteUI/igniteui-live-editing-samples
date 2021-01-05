@@ -15,17 +15,17 @@ import { TreeGridExcelStyleFilteringSample3Component } from "./tree-grid-excel-s
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExcelStyleFilteringSample3Component
-  ],
+	AppComponent,
+	TreeGridExcelStyleFilteringSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

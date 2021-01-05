@@ -15,17 +15,17 @@ import { InputTextSelectionComponent } from "./input-group/input-text-selection/
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		InputTextSelectionComponent
-  ],
+	AppComponent,
+	InputTextSelectionComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxInputGroupModule,
-		IgxTextSelectionModule,
-		IgxFocusModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxInputGroupModule,
+	IgxTextSelectionModule,
+	IgxFocusModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

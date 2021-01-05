@@ -16,18 +16,18 @@ import { DropDownVirtualComponent } from "./drop-down-virtual/drop-down-virtual.
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DropDownVirtualComponent
-  ],
+	AppComponent,
+	DropDownVirtualComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDropDownModule,
-		IgxButtonModule,
-		IgxToggleModule,
-		IgxForOfModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDropDownModule,
+	IgxButtonModule,
+	IgxToggleModule,
+	IgxForOfModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

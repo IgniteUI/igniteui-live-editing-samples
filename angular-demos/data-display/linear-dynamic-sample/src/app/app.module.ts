@@ -16,18 +16,18 @@ import { LinearDynamicSampleComponent } from "./linear-dynamic-sample/linear-dyn
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LinearDynamicSampleComponent
-  ],
+	AppComponent,
+	LinearDynamicSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxProgressBarModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxProgressBarModule,
+	IgxRippleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

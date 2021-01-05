@@ -14,16 +14,16 @@ import { ToggleComponent } from "./toggle/toggle.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ToggleComponent
-  ],
+	AppComponent,
+	ToggleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

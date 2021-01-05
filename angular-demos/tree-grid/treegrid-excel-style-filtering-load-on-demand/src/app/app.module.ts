@@ -16,17 +16,17 @@ import { RemoteValuesService } from "./tree-grid/tree-grid-excel-style-filtering
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExcelStyleFilteringLoadOnDemandComponent
-  ],
+	AppComponent,
+	TreeGridExcelStyleFilteringLoadOnDemandComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule
+],
   providers: [RemoteValuesService],
   entryComponents: [],
   schemas: []

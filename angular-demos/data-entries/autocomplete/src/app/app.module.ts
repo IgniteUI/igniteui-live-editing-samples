@@ -18,18 +18,18 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		AutocompleteBasic,
-		AutocompletePipeStartsWith
-  ],
+	AppComponent,
+	AutocompleteBasic,
+	AutocompletePipeStartsWith
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAutocompleteModule,
-		IgxDropDownModule,
-		IgxInputGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAutocompleteModule,
+	IgxDropDownModule,
+	IgxInputGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

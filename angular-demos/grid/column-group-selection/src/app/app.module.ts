@@ -11,15 +11,15 @@ import { IgxGridModule } from "igniteui-angular";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		GridColumnGroupSelectionComponent
-  ],
+	AppComponent,
+	GridColumnGroupSelectionComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

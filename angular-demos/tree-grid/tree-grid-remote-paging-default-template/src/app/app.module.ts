@@ -12,16 +12,16 @@ import { TreeGridRemotePagingDefaultTemplateComponent } from "./tree-grid-remote
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridRemotePagingDefaultTemplateComponent
-  ],
+	AppComponent,
+	TreeGridRemotePagingDefaultTemplateComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

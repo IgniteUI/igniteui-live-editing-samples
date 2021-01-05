@@ -20,19 +20,19 @@ import { CardSample1Component } from "./layouts/card/card-sample-1/card-sample-1
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		OverlaySampleMain2Component,
-		CardSample1Component
-  ],
+	AppComponent,
+	OverlaySampleMain2Component,
+	CardSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxIconModule,
-		IgxCardModule,
-		IgxDividerModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxIconModule,
+	IgxCardModule,
+	IgxDividerModule,
+	IgxButtonModule
+],
   providers: [IgxOverlayService],
   entryComponents: [CardSample1Component],
   schemas: []

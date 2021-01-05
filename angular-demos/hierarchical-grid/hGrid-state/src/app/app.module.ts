@@ -17,18 +17,18 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		HGridSaveStateComponent,
-		HGridAboutComponent
-  ],
+	AppComponent,
+	HGridSaveStateComponent,
+	HGridAboutComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxHierarchicalGridModule,
-		RouterModule.forRoot([{component: HGridAboutComponent, path: 'hGrid-state-about'},{component: HGridSaveStateComponent, path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxHierarchicalGridModule,
+	RouterModule.forRoot([{component: HGridAboutComponent, path: 'hGrid-state-about'},{component: HGridSaveStateComponent, path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])
+],
   providers: [],
   entryComponents: [],
   schemas: []

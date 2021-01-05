@@ -12,16 +12,16 @@ import { TreeGridLoadOnDemandSampleComponent } from "./tree-grid/tree-grid-load-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridLoadOnDemandSampleComponent
-  ],
+	AppComponent,
+	TreeGridLoadOnDemandSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

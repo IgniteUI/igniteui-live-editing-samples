@@ -15,17 +15,17 @@ import { HGridEditingLifecycleComponent } from "./hierarchical-grid/hgrid-editin
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		HGridEditingLifecycleComponent
-  ],
+	AppComponent,
+	HGridEditingLifecycleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxHierarchicalGridModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxHierarchicalGridModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

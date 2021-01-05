@@ -11,15 +11,15 @@ import { CircularIndeterminateProgressbarComponent } from "./circular-indetermin
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CircularIndeterminateProgressbarComponent
-  ],
+	AppComponent,
+	CircularIndeterminateProgressbarComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxProgressBarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxProgressBarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

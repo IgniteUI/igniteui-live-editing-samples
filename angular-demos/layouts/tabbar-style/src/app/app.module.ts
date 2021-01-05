@@ -11,15 +11,15 @@ import { TabbarStyleComponent } from "./tabbar-style/tabbar-style.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TabbarStyleComponent
-  ],
+	AppComponent,
+	TabbarStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBottomNavModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBottomNavModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

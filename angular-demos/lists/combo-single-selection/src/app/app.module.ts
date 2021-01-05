@@ -11,15 +11,15 @@ import { ComboSingleSelectionComponent } from "./combo-single-selection/combo-si
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboSingleSelectionComponent
-  ],
+	AppComponent,
+	ComboSingleSelectionComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

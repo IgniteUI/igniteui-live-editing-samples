@@ -11,15 +11,15 @@ import { AvatarSample3Component } from "./avatar-sample-3/avatar-sample-3.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		AvatarSample3Component
-  ],
+	AppComponent,
+	AvatarSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -14,16 +14,16 @@ import { ComboValueKeyComponent } from "./combo-valuekey/combo-valuekey.componen
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboValueKeyComponent
-  ],
+	AppComponent,
+	ComboValueKeyComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

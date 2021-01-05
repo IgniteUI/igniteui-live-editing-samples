@@ -22,24 +22,24 @@ import { CardSample4Component } from "./card-sample-4/card-sample-4.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CardSample4Component
-  ],
+	AppComponent,
+	CardSample4Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxButtonModule,
-		IgxIconModule,
-		IgxCardModule,
-		IgxDividerModule,
-		IgxRippleModule,
-		IgxChipsModule,
-		IgxListModule,
-		IgxExpansionPanelModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxButtonModule,
+	IgxIconModule,
+	IgxCardModule,
+	IgxDividerModule,
+	IgxRippleModule,
+	IgxChipsModule,
+	IgxListModule,
+	IgxExpansionPanelModule,
+	IgxSliderModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

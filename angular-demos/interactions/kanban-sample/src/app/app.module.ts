@@ -18,17 +18,17 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		KanbanSampleComponent
-  ],
+	AppComponent,
+	KanbanSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDragDropModule,
-		IgxCardModule,
-		IgxChipsModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDragDropModule,
+	IgxCardModule,
+	IgxChipsModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

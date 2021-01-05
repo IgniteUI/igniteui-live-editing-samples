@@ -15,17 +15,17 @@ import { TreeGridRowReorderComponent } from "./tree-grid-row-reorder/tree-grid-r
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridRowReorderComponent
-  ],
+	AppComponent,
+	TreeGridRowReorderComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxDragDropModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxDragDropModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

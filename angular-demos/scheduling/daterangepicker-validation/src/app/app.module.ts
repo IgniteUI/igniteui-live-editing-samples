@@ -15,17 +15,17 @@ import { DateRangePickerValidationComponent } from "./daterangepicker-validation
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DateRangePickerValidationComponent
-  ],
+	AppComponent,
+	DateRangePickerValidationComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDateRangePickerModule,
-		IgxInputGroupModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDateRangePickerModule,
+	IgxInputGroupModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -20,19 +20,19 @@ import { DragDialogSampleComponent } from "./drag-drop/dialog-sample/drag-dialog
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DragDialogSampleComponent
-  ],
+	AppComponent,
+	DragDialogSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDragDropModule,
-		IgxDialogModule,
-		IgxIconModule,
-		IgxButtonModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDragDropModule,
+	IgxDialogModule,
+	IgxIconModule,
+	IgxButtonModule,
+	IgxToggleModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

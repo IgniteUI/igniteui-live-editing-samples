@@ -14,16 +14,16 @@ import { DatepickerStylingSample } from "./scheduling/datepicker/datepicker-styl
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DatepickerStylingSample
-  ],
+	AppComponent,
+	DatepickerStylingSample
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDatePickerModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDatePickerModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

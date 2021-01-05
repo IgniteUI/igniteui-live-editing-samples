@@ -14,16 +14,16 @@ import { ChipStylingSampleComponent } from "./chip/chip-styling/chip-styling.com
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ChipStylingSampleComponent
-  ],
+	AppComponent,
+	ChipStylingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxChipsModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxChipsModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

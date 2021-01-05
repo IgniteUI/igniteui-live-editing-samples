@@ -11,15 +11,15 @@ import { SwitchSample2Component } from "./switch-sample-2/switch-sample-2.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SwitchSample2Component
-  ],
+	AppComponent,
+	SwitchSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSwitchModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSwitchModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

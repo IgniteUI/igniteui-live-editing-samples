@@ -18,20 +18,20 @@ import { ListSample7Component } from "./list-sample-7/list-sample-7.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ListSample7Component
-  ],
+	AppComponent,
+	ListSample7Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxAvatarModule,
-		IgxIconModule,
-		IgxListModule,
-		IgxSliderModule,
-		IgxToastModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxAvatarModule,
+	IgxIconModule,
+	IgxListModule,
+	IgxSliderModule,
+	IgxToastModule,
+	IgxButtonModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -11,15 +11,15 @@ import { RadioSample2Component } from "./radio-sample-2/radio-sample-2.component
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RadioSample2Component
-  ],
+	AppComponent,
+	RadioSample2Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxRadioModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxRadioModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

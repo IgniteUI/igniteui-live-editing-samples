@@ -16,18 +16,18 @@ import { TreeGridRemoteFilteringSampleComponent } from "./tree-grid-remote-filte
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridRemoteFilteringSampleComponent
-  ],
+	AppComponent,
+	TreeGridRemoteFilteringSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule,
-		IgxToastModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule,
+	IgxToastModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

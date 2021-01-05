@@ -15,17 +15,17 @@ import { TreeGridColumnPinningSampleComponent } from "./tree-grid-column-pinning
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridColumnPinningSampleComponent
-  ],
+	AppComponent,
+	TreeGridColumnPinningSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

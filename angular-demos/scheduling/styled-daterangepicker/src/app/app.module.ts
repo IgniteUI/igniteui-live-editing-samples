@@ -15,17 +15,17 @@ import { StyledDateRangePickerComponent } from "./daterangepicker-styling/datera
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		StyledDateRangePickerComponent
-  ],
+	AppComponent,
+	StyledDateRangePickerComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDateRangePickerModule,
-		IgxInputGroupModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDateRangePickerModule,
+	IgxInputGroupModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

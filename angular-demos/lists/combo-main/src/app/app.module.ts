@@ -11,15 +11,15 @@ import { ComboMainComponent } from "./combo-main/combo-main.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboMainComponent
-  ],
+	AppComponent,
+	ComboMainComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

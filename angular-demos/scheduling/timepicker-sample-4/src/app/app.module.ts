@@ -14,16 +14,16 @@ import { TimePickerSample4Component } from "./timepicker-sample-4/timepicker-sam
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TimePickerSample4Component
-  ],
+	AppComponent,
+	TimePickerSample4Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTimePickerModule,
-		IgxToastModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTimePickerModule,
+	IgxToastModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

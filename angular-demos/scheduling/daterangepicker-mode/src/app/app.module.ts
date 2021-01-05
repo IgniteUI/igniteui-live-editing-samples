@@ -11,15 +11,15 @@ import { DateRangePickerModeComponent } from "./daterangepicker-mode/daterangepi
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DateRangePickerModeComponent
-  ],
+	AppComponent,
+	DateRangePickerModeComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDateRangePickerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDateRangePickerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

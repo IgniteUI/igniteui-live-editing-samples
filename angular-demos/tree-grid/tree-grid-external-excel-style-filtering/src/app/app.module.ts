@@ -12,16 +12,16 @@ import { TreeGridExternalExcelStyleFilteringComponent } from "./tree-grid-extern
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExternalExcelStyleFilteringComponent
-  ],
+	AppComponent,
+	TreeGridExternalExcelStyleFilteringComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

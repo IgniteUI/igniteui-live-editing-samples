@@ -12,16 +12,16 @@ import { TreeGridExcelStyleFilteringStyleComponent } from "./tree-grid-excel-sty
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExcelStyleFilteringStyleComponent
-  ],
+	AppComponent,
+	TreeGridExcelStyleFilteringStyleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

@@ -17,21 +17,21 @@ import { TreeGridExportVisualizationComponent } from "./tree-grid-export-visuali
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridExportVisualizationComponent
-  ],
+	AppComponent,
+	TreeGridExportVisualizationComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxToggleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxToggleModule
+],
   providers: [
-		IgxExcelExporterService,
-		IgxCsvExporterService
-	],
+	IgxExcelExporterService,
+	IgxCsvExporterService
+],
   entryComponents: [],
   schemas: []
 })

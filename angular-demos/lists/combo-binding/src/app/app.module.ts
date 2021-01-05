@@ -15,17 +15,17 @@ import { ComboBindingComponent } from "./combo-binding/combo-binding.component";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ComboBindingComponent
-  ],
+	AppComponent,
+	ComboBindingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxComboModule,
-		IgxButtonModule,
-		IgxCardModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxComboModule,
+	IgxButtonModule,
+	IgxCardModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

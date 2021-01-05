@@ -11,15 +11,15 @@ import { ButtonGroupSample5Component } from "./button-group-sample-5/button-grou
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ButtonGroupSample5Component
-  ],
+	AppComponent,
+	ButtonGroupSample5Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxButtonGroupModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxButtonGroupModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

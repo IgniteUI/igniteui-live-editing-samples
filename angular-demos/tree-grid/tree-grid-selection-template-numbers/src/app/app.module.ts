@@ -15,17 +15,17 @@ import { TreeGridSelectionTemplateNumbersSampleComponent } from "./tree-grid-sel
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridSelectionTemplateNumbersSampleComponent
-  ],
+	AppComponent,
+	TreeGridSelectionTemplateNumbersSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxCheckboxModule,
-		IgxTreeGridModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxCheckboxModule,
+	IgxTreeGridModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

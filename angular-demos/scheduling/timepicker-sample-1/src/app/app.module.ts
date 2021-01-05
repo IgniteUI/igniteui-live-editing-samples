@@ -11,15 +11,15 @@ import { TimePickerSample1Component } from "./timepicker-sample-1/timepicker-sam
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TimePickerSample1Component
-  ],
+	AppComponent,
+	TimePickerSample1Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTimePickerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTimePickerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

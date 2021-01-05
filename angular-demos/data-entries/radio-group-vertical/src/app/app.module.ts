@@ -11,15 +11,15 @@ import { RadioGroupVerticalComponent } from "./radio-group-vertical/radio-group-
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RadioGroupSampleComponent
-  ],
+	AppComponent,
+	RadioGroupSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxRadioModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxRadioModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

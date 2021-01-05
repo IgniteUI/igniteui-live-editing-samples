@@ -19,21 +19,21 @@ import { BannerSample3Component } from "./banner-sample-3/banner-sample-3.compon
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BannerSample3Component
-  ],
+	AppComponent,
+	BannerSample3Component
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBannerModule,
-		IgxCardModule,
-		IgxToastModule,
-		IgxNavbarModule,
-		IgxButtonModule,
-		IgxRippleModule,
-		IgxIconModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBannerModule,
+	IgxCardModule,
+	IgxToastModule,
+	IgxNavbarModule,
+	IgxButtonModule,
+	IgxRippleModule,
+	IgxIconModule
+],
   providers: [],
   entryComponents: [],
   schemas: []
