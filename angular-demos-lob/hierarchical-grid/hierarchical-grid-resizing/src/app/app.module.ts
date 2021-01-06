@@ -16,18 +16,18 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		HGridColumnResizingSampleComponent
-  ],
+	AppComponent,
+	HGridColumnResizingSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxHierarchicalGridModule,
-		IgxSparklineCoreModule,
-		IgxSparklineModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxHierarchicalGridModule,
+	IgxSparklineCoreModule,
+	IgxSparklineModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

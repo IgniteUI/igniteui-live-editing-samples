@@ -20,22 +20,22 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridChilddatakeySampleComponent
-  ],
+	AppComponent,
+	TreeGridChilddatakeySampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxSparklineCoreModule,
-		IgxSparklineModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxSparklineCoreModule,
+	IgxSparklineModule
+],
   providers: [
-		IgxExcelExporterService,
-		IgxCsvExporterService
-	],
+	IgxExcelExporterService,
+	IgxCsvExporterService
+],
   entryComponents: [],
   schemas: []
 })

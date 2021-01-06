@@ -27,27 +27,27 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		GridComponent
-  ],
+	AppComponent,
+	GridComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxAvatarModule,
-		IgxBadgeModule,
-		IgxButtonModule,
-		IgxGridModule,
-		IgxIconModule,
-		IgxInputGroupModule,
-		IgxProgressBarModule,
-		IgxRippleModule,
-		IgxSwitchModule,
-		HttpClientModule,
-		IgxSparklineCoreModule,
-		IgxSparklineModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxAvatarModule,
+	IgxBadgeModule,
+	IgxButtonModule,
+	IgxGridModule,
+	IgxIconModule,
+	IgxInputGroupModule,
+	IgxProgressBarModule,
+	IgxRippleModule,
+	IgxSwitchModule,
+	HttpClientModule,
+	IgxSparklineCoreModule,
+	IgxSparklineModule
+],
   providers: [],
   entryComponents: [],
   schemas: []
