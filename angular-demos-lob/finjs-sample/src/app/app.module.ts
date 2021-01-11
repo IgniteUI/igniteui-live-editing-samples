@@ -18,7 +18,7 @@ import {
 	IgxRippleModule,
 	IgxDialogModule
  } from "igniteui-angular";
-import { FinJSDemoComponent } from "./grid-finjs/grid-finjs-demo.component";
+import { FinJSDemoComponent } from "./grid-finjs/main.component";
 import { LocalDataService } from "./grid-finjs/localData.service";
 
 
@@ -26,30 +26,30 @@ import { LocalDataService } from "./grid-finjs/localData.service";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinJSDemoComponent
-  ],
+	AppComponent,
+	FinJSDemoComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxGridModule,
-		IgxButtonGroupModule,
-		IgxIconModule,
-		IgxSliderModule,
-		IgxToggleModule,
-		IgxButtonModule,
-		IgxSwitchModule,
-		IgxRippleModule,
-		IgxCategoryChartModule,
-		IgxDialogModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxGridModule,
+	IgxButtonGroupModule,
+	IgxIconModule,
+	IgxSliderModule,
+	IgxToggleModule,
+	IgxButtonModule,
+	IgxSwitchModule,
+	IgxRippleModule,
+	IgxCategoryChartModule,
+	IgxDialogModule
+],
   providers: [
-		LocalDataService,
-		IgxExcelExporterService,
-		IgxCsvExporterService
-	],
+	LocalDataService,
+	IgxExcelExporterService,
+	IgxCsvExporterService
+],
   entryComponents: [],
   schemas: []
 })

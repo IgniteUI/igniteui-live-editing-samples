@@ -24,28 +24,28 @@ import { TreeGridGroupingPipe } from "./treegrid-finjs/tree-grid-grouping.pipe";
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridFinJSComponent,
-		TreeGridGroupingPipe
-  ],
+	AppComponent,
+	TreeGridFinJSComponent,
+	TreeGridGroupingPipe
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxButtonGroupModule,
-		IgxIconModule,
-		IgxSliderModule,
-		IgxToggleModule,
-		IgxButtonModule,
-		IgxSwitchModule,
-		IgxRippleModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxButtonGroupModule,
+	IgxIconModule,
+	IgxSliderModule,
+	IgxToggleModule,
+	IgxButtonModule,
+	IgxSwitchModule,
+	IgxRippleModule
+],
   providers: [
-		LocalDataService,
-		IgxExcelExporterService
-	],
+	LocalDataService,
+	IgxExcelExporterService
+],
   entryComponents: [],
   schemas: []
 })

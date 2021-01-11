@@ -16,18 +16,18 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeGridPrimaryforeignkeySampleComponent
-  ],
+	AppComponent,
+	TreeGridPrimaryforeignkeySampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxTreeGridModule,
-		IgxSparklineCoreModule,
-		IgxSparklineModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxTreeGridModule,
+	IgxSparklineCoreModule,
+	IgxSparklineModule
+],
   providers: [],
   entryComponents: [],
   schemas: []

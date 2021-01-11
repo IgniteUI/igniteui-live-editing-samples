@@ -23,23 +23,23 @@ import {
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		GridMasterDetailSampleComponent
-  ],
+	AppComponent,
+	GridMasterDetailSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPreventDocumentScrollModule,
-		IgxGridModule,
-		IgxCategoryChartModule,
-		IgxPieChartModule,
-		IgxLegendModule,
-		IgxAvatarModule,
-		IgxTabsModule,
-		IgxIconModule,
-		IgxDividerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPreventDocumentScrollModule,
+	IgxGridModule,
+	IgxCategoryChartModule,
+	IgxPieChartModule,
+	IgxLegendModule,
+	IgxAvatarModule,
+	IgxTabsModule,
+	IgxIconModule,
+	IgxDividerModule
+],
   providers: [],
   entryComponents: [],
   schemas: []
