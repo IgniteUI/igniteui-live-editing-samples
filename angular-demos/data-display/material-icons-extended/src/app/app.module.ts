@@ -9,8 +9,8 @@ import {
 	IgxButtonModule,
 	IgxSelectModule
  } from "igniteui-angular";
+import { MaterialIconsExtendedComponent } from "./material-icons-extended/material-icons-extended.component";
 import { 
-	MaterialIconsExtendedComponent,
 	CategoriesFilterPipe,
 	FilterByName
  } from "./material-icons-extended/material-icons-extended.component";

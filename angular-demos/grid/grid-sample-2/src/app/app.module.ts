@@ -15,10 +15,8 @@ import {
 	IgxRippleModule,
 	IgxSwitchModule
  } from "igniteui-angular";
-import { 
-	FinancialSampleComponent,
-	LocalService
- } from "./grid/grid-sample-2/grid-sample-2.component";
+import { FinancialSampleComponent } from "./grid/grid-sample-2/grid-sample-2.component";
+import { LocalService } from "./grid/grid-sample-2/grid-sample-2.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 

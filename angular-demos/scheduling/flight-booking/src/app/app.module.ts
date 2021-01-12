@@ -9,10 +9,8 @@ import {
 	IgxInputGroupModule,
 	IgxIconModule
  } from "igniteui-angular";
-import { 
-	FlightBookingComponent,
-	PipeWithoutTownFrom
- } from "./daterangepicker-flight-booking/daterangepicker-flight-booking";
+import { FlightBookingComponent } from "./daterangepicker-flight-booking/daterangepicker-flight-booking";
+import { PipeWithoutTownFrom } from "./daterangepicker-flight-booking/daterangepicker-flight-booking";
 
 
 
