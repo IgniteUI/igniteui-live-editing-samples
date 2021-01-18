@@ -9,8 +9,8 @@ import {
 	IgxIconModule,
 	IgxTextSelectionModule
  } from "igniteui-angular";
+import { MaskSample4Component } from "./mask-sample-4/mask-sample-4.component";
 import { 
-	MaskSample4Component,
 	DisplayFormatPipe,
 	InputFormatPipe
  } from "./mask-sample-4/mask-sample-4.component";
