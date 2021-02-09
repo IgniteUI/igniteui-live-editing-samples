@@ -1,4 +1,4 @@
-/* tslint:disable */
+
 export const INVOICE_DATA = [{
     ShipAddress: "Obere Str. 57",
     ShipCity: "Berlin",
@@ -8049,4 +8049,3 @@ export const INVOICE_DATA = [{
     ExtendedPrice: 337.5000,
     Freight: 46.6200
 }];
-/* tslint:enable */
