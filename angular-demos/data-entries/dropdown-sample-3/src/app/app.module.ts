@@ -6,7 +6,11 @@ import { AppComponent } from "./app.component";
 import { 
 	IgxDropDownModule,
 	IgxButtonModule,
-	IgxToggleModule
+	IgxToggleModule,
+	IgxPrefixModule,
+	IgxSuffixModule,
+	IgxIconModule,
+	IgxDividerModule
  } from "igniteui-angular";
 import { DropDownSample3Component } from "./dropdown-sample-3/dropdown-sample-3.component";
 
@@ -24,7 +28,11 @@ import { DropDownSample3Component } from "./dropdown-sample-3/dropdown-sample-3.
 	FormsModule,
 	IgxDropDownModule,
 	IgxButtonModule,
-	IgxToggleModule
+	IgxToggleModule,
+	IgxPrefixModule,
+	IgxSuffixModule,
+	IgxIconModule,
+	IgxDividerModule
 ],
   providers: [],
   entryComponents: [],
