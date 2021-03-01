@@ -10,7 +10,8 @@ import {
 	IgxSwitchModule,
 	IgxIconModule,
 	IgxButtonGroupModule,
-	IgxAvatarModule
+	IgxAvatarModule,
+	IgxTreeGridModule
  } from "igniteui-angular";
 
 
@@ -19,19 +20,19 @@ import {
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridCellSelectionComponent,
-	IgxGridModule,
-	IgxIconModule,
-	IgxSwitchModule,
-	IgxButtonGroupModule,
-	IgxAvatarModule
+	TreeGridCellSelectionComponent
 ],
   imports: [
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxIconModule,
+	IgxSwitchModule,
+	IgxButtonGroupModule,
+	IgxAvatarModule,
+	IgxTreeGridModule
 ],
   providers: [],
   entryComponents: [],
