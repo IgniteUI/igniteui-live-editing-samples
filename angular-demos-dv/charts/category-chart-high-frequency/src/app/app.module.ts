@@ -7,20 +7,23 @@ import { CategoryChartHighFrequencyComponent } from "./high-frequency/category-c
 import { IgxCategoryChartModule } from "igniteui-angular-charts";
 import { IgxSliderModule } from "igniteui-angular";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CategoryChartHighFrequencyComponent
-  ],
+	AppComponent,
+	CategoryChartHighFrequencyComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCategoryChartModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCategoryChartModule,
+	IgxSliderModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { IgxRadialGaugeModule } from "igniteui-angular-gauges";
 import { RadialGaugeScaleComponent } from "./radial-gauge-scale/radial-gauge-scale.component";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RadialGaugeScaleComponent
-  ],
+	AppComponent,
+	RadialGaugeScaleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxRadialGaugeModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxRadialGaugeModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { CategoryChartOverlapColumnsComponent } from "./overlap-columns/category-chart-overlap-columns.component";
 import { IgxCategoryChartModule } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CategoryChartOverlapColumnsComponent
-  ],
+	AppComponent,
+	CategoryChartOverlapColumnsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCategoryChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCategoryChartModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

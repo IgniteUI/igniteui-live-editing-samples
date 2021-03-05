@@ -7,20 +7,23 @@ import { IgxLinearGaugeModule } from "igniteui-angular-gauges";
 import { LinearGaugeAnimationComponent } from "./linear-gauge-animation/linear-gauge-animation.component";
 import { IgxButtonModule } from "igniteui-angular";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LinearGaugeAnimationComponent
-  ],
+	AppComponent,
+	LinearGaugeAnimationComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLinearGaugeModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLinearGaugeModule,
+	IgxButtonModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

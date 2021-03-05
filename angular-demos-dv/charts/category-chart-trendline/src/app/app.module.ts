@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { CategoryChartTrendlinesComponent } from "./trendline/category-chart-trendlines.component";
 import { IgxCategoryChartModule } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CategoryChartTrendlinesComponent
-  ],
+	AppComponent,
+	CategoryChartTrendlinesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCategoryChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCategoryChartModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

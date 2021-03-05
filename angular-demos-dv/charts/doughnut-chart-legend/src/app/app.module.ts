@@ -11,22 +11,25 @@ import {
 	IgxItemLegendModule
  } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DoughnutChartLegendComponent
-  ],
+	AppComponent,
+	DoughnutChartLegendComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDoughnutChartModule,
-		IgxRingSeriesModule,
-		IgxLegendModule,
-		IgxItemLegendModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDoughnutChartModule,
+	IgxRingSeriesModule,
+	IgxLegendModule,
+	IgxItemLegendModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

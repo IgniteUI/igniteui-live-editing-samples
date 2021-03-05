@@ -7,19 +7,22 @@ import { FinancialChartHighVolumeComponent } from "./high-volume/financial-chart
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
 import { GenerateHourlyPricesService } from "./services/generate-hourly-prices.service";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinancialChartHighVolumeComponent
-  ],
+	AppComponent,
+	FinancialChartHighVolumeComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxFinancialChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxFinancialChartModule
+],
   providers: [GenerateHourlyPricesService],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

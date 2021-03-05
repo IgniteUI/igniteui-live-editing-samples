@@ -10,21 +10,24 @@ import {
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartSeriesMarkerTemplateComponent
-  ],
+	AppComponent,
+	DataChartSeriesMarkerTemplateComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartInteractivityModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

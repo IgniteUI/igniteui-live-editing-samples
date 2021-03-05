@@ -10,21 +10,24 @@ import {
 	IgxLegendModule
  } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartAxisLocationsComponent
-  ],
+	AppComponent,
+	DataChartAxisLocationsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxLegendModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

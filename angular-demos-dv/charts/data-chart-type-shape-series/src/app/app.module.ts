@@ -13,23 +13,26 @@ import {
 import { DataChartTypeScatterPolylineSeriesComponent } from "./data-chart-type-scatter-polyline-series/data-chart-type-scatter-polyline-series.component";
 import { SampleShapeData } from "./SampleShapeData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeScatterShapeSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeScatterShapeSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartShapeModule,
-		IgxDataChartShapeCoreModule,
-		DataChartTypeScatterPolylineSeriesComponent,
-		IgxDataChartScatterModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartShapeModule,
+	IgxDataChartShapeCoreModule,
+	DataChartTypeScatterPolylineSeriesComponent,
+	IgxDataChartScatterModule
+],
   providers: [SampleShapeData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

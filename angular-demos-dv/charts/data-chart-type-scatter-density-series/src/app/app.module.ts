@@ -12,22 +12,25 @@ import {
  } from "igniteui-angular-charts";
 import { SampleDensityData } from "./SampleDensityData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeScatterDensitySeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeScatterDensitySeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartScatterModule,
-		IgxDataChartScatterCoreModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartScatterModule,
+	IgxDataChartScatterCoreModule,
+	IgxDataChartInteractivityModule
+],
   providers: [SampleDensityData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

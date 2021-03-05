@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { MapDisplayImageryHeatTilesComponent } from "./maps/geo-map-display-imagery-heat-tiles/map-display-imagery-heat-tiles.component";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MapDisplayImageryHeatTilesComponent
-  ],
+	AppComponent,
+	MapDisplayImageryHeatTilesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGeographicMapModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGeographicMapModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

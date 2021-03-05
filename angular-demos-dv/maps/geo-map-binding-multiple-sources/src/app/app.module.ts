@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { MapBindingMultipleSourcesComponent } from "./maps/geo-map-binding-multiple-sources/map-binding-multiple-sources.component";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MapBindingMultipleSourcesComponent
-  ],
+	AppComponent,
+	MapBindingMultipleSourcesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGeographicMapModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGeographicMapModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

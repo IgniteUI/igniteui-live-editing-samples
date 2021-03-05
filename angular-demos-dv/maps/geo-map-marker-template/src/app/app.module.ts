@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { MapMarkerTemplateComponent } from "./maps/geo-map-marker-template/map-marker-template.component";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MapMarkerTemplateComponent
-  ],
+	AppComponent,
+	MapMarkerTemplateComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGeographicMapModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGeographicMapModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

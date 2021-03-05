@@ -13,23 +13,26 @@ import {
  } from "igniteui-angular-charts";
 import { SampleRadialData } from "./SampleRadialData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeRadialSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeRadialSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxLegendModule,
-		IgxDataChartRadialModule,
-		IgxDataChartRadialCoreModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxLegendModule,
+	IgxDataChartRadialModule,
+	IgxDataChartRadialCoreModule,
+	IgxDataChartInteractivityModule
+],
   providers: [SampleRadialData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { SparklineUnknownValuesComponent } from "./sparkline-unknown-values/sparkline-unknown-values.component";
 import { IgxSparklineModule } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SparklineUnknownValuesComponent
-  ],
+	AppComponent,
+	SparklineUnknownValuesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSparklineModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSparklineModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

@@ -9,20 +9,23 @@ import {
 	IgxRingSeriesModule
  } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DoughnutChartRingsComponent
-  ],
+	AppComponent,
+	DoughnutChartRingsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDoughnutChartModule,
-		IgxRingSeriesModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDoughnutChartModule,
+	IgxRingSeriesModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

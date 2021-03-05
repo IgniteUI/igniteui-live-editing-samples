@@ -12,22 +12,25 @@ import {
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartLegendsComponent
-  ],
+	AppComponent,
+	DataChartLegendsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxLegendModule,
-		IgxNumberAbbreviatorModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxNumberAbbreviatorModule
+],
   providers: [SharedData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

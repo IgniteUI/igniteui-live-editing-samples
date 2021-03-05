@@ -7,19 +7,22 @@ import { FinancialChartPanesComponent } from "./panes/financial-chart-panes.comp
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
 import { StockDataService } from "./services/stock-data.service";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinancialChartPanesComponent
-  ],
+	AppComponent,
+	FinancialChartPanesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxFinancialChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxFinancialChartModule
+],
   providers: [StockDataService],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

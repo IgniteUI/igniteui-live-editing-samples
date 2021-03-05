@@ -12,22 +12,25 @@ import {
  } from "igniteui-angular-charts";
 import { SampleCategoryData } from "./SampleCategoryData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeCategorySplineAreaSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeCategorySplineAreaSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxLegendModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxDataChartInteractivityModule
+],
   providers: [SampleCategoryData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

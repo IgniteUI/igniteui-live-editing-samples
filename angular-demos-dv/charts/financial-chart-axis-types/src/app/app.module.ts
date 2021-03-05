@@ -5,21 +5,24 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { FinancialChartAxisTypesComponent } from "./axis-types/financial-chart-axis-types.component";
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
-import { FinancialDataService } from "./services/financial-data.service";
+import { FinancialDataService } from "./services/generate-hourly-prices.service";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinancialChartAxisTypesComponent
-  ],
+	AppComponent,
+	FinancialChartAxisTypesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxFinancialChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxFinancialChartModule
+],
   providers: [FinancialDataService],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

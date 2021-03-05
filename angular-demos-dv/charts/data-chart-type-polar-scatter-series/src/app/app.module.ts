@@ -13,23 +13,26 @@ import {
  } from "igniteui-angular-charts";
 import { SamplePolarData } from "./SamplePolarData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypePolarScatterSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypePolarScatterSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxLegendModule,
-		IgxDataChartPolarModule,
-		IgxDataChartPolarCoreModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxLegendModule,
+	IgxDataChartPolarModule,
+	IgxDataChartPolarCoreModule,
+	IgxDataChartInteractivityModule
+],
   providers: [SamplePolarData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

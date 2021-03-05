@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { MapBindingDataJsonPointsComponent } from "./maps/geo-map-binding-data-json-points/map-binding-data-json-points.component";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MapBindingDataJsonPointsComponent
-  ],
+	AppComponent,
+	MapBindingDataJsonPointsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGeographicMapModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGeographicMapModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

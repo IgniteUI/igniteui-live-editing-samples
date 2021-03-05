@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { CategoryChartTooltipTypesComponent } from "./tooltip-types/category-chart-tooltip-types.component";
 import { IgxCategoryChartModule } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CategoryChartTooltipTypesComponent
-  ],
+	AppComponent,
+	CategoryChartTooltipTypesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCategoryChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCategoryChartModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

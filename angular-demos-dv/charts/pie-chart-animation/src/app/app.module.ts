@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { PieChartAnimationComponent } from "./pie-chart-animation/pie-chart-animation.component";
 import { IgxPieChartModule } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		PieChartAnimationComponent
-  ],
+	AppComponent,
+	PieChartAnimationComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPieChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPieChartModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

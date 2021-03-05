@@ -8,20 +8,23 @@ import { IgxTreemapModule } from "igniteui-angular-charts";
 import { IgxButtonModule } from "igniteui-angular";
 import { WorldHierarchicalData } from "./charts/tree-map/WorldHierarchicalData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		TreeMapOverviewComponent
-  ],
+	AppComponent,
+	TreeMapOverviewComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxTreemapModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxTreemapModule,
+	IgxButtonModule
+],
   providers: [WorldHierarchicalData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

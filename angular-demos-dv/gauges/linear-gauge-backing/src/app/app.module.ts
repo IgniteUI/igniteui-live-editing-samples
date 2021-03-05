@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { IgxLinearGaugeModule } from "igniteui-angular-gauges";
 import { LinearGaugeBackingComponent } from "./linear-gauge-backing/linear-gauge-backing.component";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		LinearGaugeBackingComponent
-  ],
+	AppComponent,
+	LinearGaugeBackingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxLinearGaugeModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxLinearGaugeModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

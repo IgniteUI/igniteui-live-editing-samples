@@ -7,19 +7,22 @@ import { FinancialChartPerformanceComponent } from "./performance/financial-char
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
 import { GenerateOhlcPricesService } from "./services/generate-ohlc-prices.service";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinancialChartPerformanceComponent
-  ],
+	AppComponent,
+	FinancialChartPerformanceComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxFinancialChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxFinancialChartModule
+],
   providers: [GenerateOhlcPricesService],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

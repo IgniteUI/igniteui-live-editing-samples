@@ -36,7 +36,7 @@ export class CategoryChartAnnotationsComponent {
     }
 
     public formatDateLabel(item: any): string {
-        return item.date.toLocaleDateString(undefined, {month: "long"});
+        return item.date.toLocaleDateString(undefined, {month: "short"}).toUpperCase();
     }
 }
 

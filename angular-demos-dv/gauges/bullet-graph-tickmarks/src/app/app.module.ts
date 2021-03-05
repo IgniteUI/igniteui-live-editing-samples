@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { IgxBulletGraphModule } from "igniteui-angular-gauges";
 import { BulletGraphTickmarksComponent } from "./bullet-graph-tickmarks/bullet-graph-tickmarks.component";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BulletGraphTickmarksComponent
-  ],
+	AppComponent,
+	BulletGraphTickmarksComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBulletGraphModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBulletGraphModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}
