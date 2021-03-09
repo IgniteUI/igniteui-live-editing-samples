@@ -8,7 +8,9 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
 	IgxDataChartInteractivityModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxDataChartStackedModule,
+	IgxStackedFragmentSeriesModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
 
@@ -27,7 +29,9 @@ import { SharedData } from "./SharedData";
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
 	IgxDataChartInteractivityModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxDataChartStackedModule,
+	IgxStackedFragmentSeriesModule
 ],
   providers: [SharedData],
   entryComponents: [],

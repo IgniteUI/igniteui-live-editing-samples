@@ -1,0 +1,21 @@
+<div class="sample-wrapper container">
+    <div class="options">
+        <span class="igLegend-title">Renewable Electricity Generated: </span>
+        <div class="legendInline">
+            <igx-legend #legend orientation="horizontal"></igx-legend>
+        </div>
+    </div>
+    <div class="chart">
+        <igx-category-chart height="calc(100% - 60px)" width="100%"
+            [dataSource]="data"
+            [legend]="legend"
+            chartType="SplineArea"
+            yYAxisTitle="TWh"
+            toolTipType="Category"
+            markerTypes = "Triangle"
+            markerBrushes =  "White"
+            markerOutlines =  "rgb(140, 231, 217) rgb(238, 88, 121) rgb(115, 86, 86)"
+            brushes  = "rgb(140, 231, 217) rgb(238, 88, 121) rgb(115, 86, 86)">
+        </igx-category-chart>
+    </div>
+</div>

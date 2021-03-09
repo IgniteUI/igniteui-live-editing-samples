@@ -1,0 +1,15 @@
+<div class="sample-wrapper container">
+    <div>
+        <span>Renewable Electricity Generated</span>
+        <igx-legend #legend orientation="horizontal"></igx-legend>
+    </div>
+    <div class="chart">
+        <igx-category-chart height="100%" width="100%"
+            [dataSource]="data"
+            chartType="area"
+            [legend]="legend"
+            yAxisTitle="TWh"
+            yAxisTitleLeftMargin="5">
+        </igx-category-chart>
+    </div>
+</div>

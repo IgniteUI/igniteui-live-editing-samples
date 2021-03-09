@@ -10,16 +10,12 @@ export class PieChartOthersComponent {
     public data: any;
 
     constructor() {
-        this.data = [
-            { Label: "IBM", Value: 7 },
-            { Label: "SONY", Value: 5 },
-            { Label: "DELL", Value: 3 },
-            { Label: "Apple", Value: 4 },
-            { Label: "Hitachi", Value: 1 },
-            { Label: "Acer", Value: 1 },
-            { Label: "HP", Value: 2 },
-            { Label: "Asus", Value: 2 },
-            { Label: "Gateway", Value: 1 }
+        this.data = [           
+            { Value: 37, Label: "Space Cooling", Summary: "Space Cooling 37%" },
+            { Value: 25, Label: "Residential Appliance", Summary: "Residential Appliance 25%"  },
+            { Value: 12, Label: "Heating", Summary: "Heating 12%" },
+            { Value: 8, Label: "Lighting", Summary: "Lighting 8%" },                
+            { Value: 18, Label: "Other Services", Summary: "Other Services 18%" }
         ];
       }
 }

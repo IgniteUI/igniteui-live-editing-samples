@@ -26,7 +26,7 @@ export class MapTriangulatingDataComponent implements AfterViewInit {
             "red"
         ];
 
-        let colorScale: IgxCustomPaletteColorScaleComponent = new IgxCustomPaletteColorScaleComponent();
+        const colorScale: IgxCustomPaletteColorScaleComponent = new IgxCustomPaletteColorScaleComponent();
         colorScale.palette = brushes;
         colorScale.minimumValue = 0.05;
         colorScale.interpolationMode = ColorScaleInterpolationMode.InterpolateRGB;

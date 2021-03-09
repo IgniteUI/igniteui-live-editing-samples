@@ -11,13 +11,16 @@ export class DoughnutChartLegendComponent {
 
     constructor() {
         this.data = [
-            { Label: "Administration", Value: 2 },
-            { Label: "Sales", Value: 8 },
-            { Label: "IT", Value: 3 },
-            { Label: "Marketing", Value: 8 },
-            { Label: "Development", Value: 4 },
-            { Label: "Customer Support", Value: 6 }
+            { Value: 37, Label: "Space Cooling", Summary: "Space Cooling 37%" },
+            { Value: 25, Label: "Residential Appliance", Summary: "Residential Appliance 25%"  },
+            { Value: 12, Label: "Heating", Summary: "Heating 12%" },
+            { Value: 8, Label: "Lighting", Summary: "Lighting 8%" },                
+            { Value: 18, Label: "Other Services", Summary: "Other Services 18%" }
         ];
+    }
+
+    public chartSliceClickEvent(e: any): void {
+        e.args.isExploded = !e.args.isExploded;
     }
 
 }

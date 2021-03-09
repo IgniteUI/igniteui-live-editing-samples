@@ -1,0 +1,17 @@
+<div class="sample-wrapper container">
+    <div class="options">
+        <span class="igLegend-title">Renewable Electricity Generated: </span>
+        <div class="legendInline">
+            <igx-legend #legend orientation="horizontal"></igx-legend>
+        </div>
+    </div>
+    <div class="chart">
+        <igx-category-chart height="calc(100% - 60px)" width="100%"
+            [dataSource]="data"
+            [legend]="legend"
+            chartType="Spline"
+            yYAxisTitle="TWh"
+            toolTipType="Category">
+        </igx-category-chart>
+    </div>
+</div>

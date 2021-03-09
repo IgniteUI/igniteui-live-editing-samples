@@ -1,5 +1,15 @@
+<div class="container">
+    <div class="legend">
+        <span>Global Electricity Demand by Energy Use</span>
+        <igx-item-legend #legend123 height="100px" width="100px">
+        </igx-item-legend>
+    </div>    
 <div class="chart">
-    <igx-pie-chart #chart height="100%" width="100%" [dataSource]="data" valueMemberPath="Value" labelMemberPath="Label"
-                (sliceClick)="pieSliceClickEvent($event)" labelsPosition="bestFit">
+    <igx-pie-chart #chart height="100%" width="80%" [dataSource]="data" 
+                valueMemberPath="Value" labelMemberPath="Summary"
+                (sliceClick)="pieSliceClickEvent($event)" 
+                labelsPosition="OutsideEnd" labelExtent="30" 
+                [legend]="legend123"
+        legendLabelMemberPath="Summary">
     </igx-pie-chart>
 </div>

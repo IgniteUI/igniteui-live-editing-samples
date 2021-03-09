@@ -1,23 +1,27 @@
-<div class="container">
-    <div>
-        <span>Selection Type: </span>
-        <select [(ngModel)]="selectionType">
-            <option>Single</option>
-            <option>Multiple</option>
-        </select>
+<div class="container">    
+    <div class="legend">
+        <span>Global Electricity Demand by Energy Use</span>    
+        <igx-item-legend #legend123 height="100px" width="100px">
+        </igx-item-legend>
     </div>
+
     <div class="chart">
         <igx-pie-chart #chart height="100%" 
-        width="100%" 
+        width="80%" 
         [dataSource]="data" 
         valueMemberPath="Value" 
-        labelMemberPath="Label" 
+        labelMemberPath="Summary" 
         labelsPosition="bestFit" 
         [selectionMode]="selectionType"
         selectedSliceStroke = "white"
         selectedSliceFill= "rgb(143,143,143)"
         selectedSliceOpacity =1.0
-        selectedSliceStrokeThickness=2>
+        selectedSliceStrokeThickness=2
+        labelsPosition="OutsideEnd" 
+        labelExtent="30"
+        [legend]="legend123"
+        legendLabelMemberPath="Summary"
+        >
         </igx-pie-chart>
 
     </div>

@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild, ChangeDetectorRef } from "@angular/core";
-import { IgxGeographicHighDensityScatterSeriesComponent, ArcGISOnlineMapImagery, IgxArcGISOnlineMapImagery
-} from "igniteui-angular-maps";
+import { IgxArcGISOnlineMapImagery  } from "igniteui-angular-maps";
 import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { EsriUtility, EsriStyle } from "../../utilities/EsriUtility";
 import { MapUtility, MapRegion } from "../../utilities/MapUtility";

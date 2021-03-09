@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { FinancialDataService } from "../services/financial-data.service";
+import { ToolTipType } from "igniteui-angular-charts";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -81,8 +82,8 @@ class SampleOptions {
     public crosshairDisplay: string = "Both";
     public crosshairSnap: boolean = true;
     public crosshairAnnotations: boolean = true;
-
-    public finalValueAnnotations: boolean = false;
-
+    public finalValueAnnotations: boolean = true;
     public calloutsVisible: boolean = true;
+    public itemToolTip: string = "Item";
+    public markerTypes: string = "None";
 }

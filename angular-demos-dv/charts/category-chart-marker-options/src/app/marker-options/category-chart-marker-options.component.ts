@@ -12,15 +12,15 @@ export class CategoryChartMarkerOptionsComponent {
     public data: any;
 
     constructor() {
-        const usaMedals: any = [
-            { Year: "1996", UnitedStates: 148 },
-            { Year: "2000", UnitedStates: 142 },
-            { Year: "2004", UnitedStates: 134 },
-            { Year: "2008", UnitedStates: 131 },
-            { Year: "2012", UnitedStates: 135 },
-            { Year: "2016", UnitedStates: 146 }
+        const dataUSA: any = [
+            { Year: "1996", USA: 148 },
+            { Year: "2000", USA: 142 },
+            { Year: "2004", USA: 134 },
+            { Year: "2008", USA: 131 },
+            { Year: "2012", USA: 135 },
+            { Year: "2016", USA: 146 }
         ];
-        const chinaMedals: any = [
+        const dataChina: any = [
             { Year: "1996", China: 110 },
             { Year: "2000", China: 115 },
             { Year: "2004", China: 121 },
@@ -28,14 +28,14 @@ export class CategoryChartMarkerOptionsComponent {
             { Year: "2012", China: 115 },
             { Year: "2016", China: 112 }
         ];
-        const russiaMedals: any = [
-            { Year: "1996", Russia: 95 },
-            { Year: "2000", Russia: 91 },
-            { Year: "2004", Russia: 86 },
-            { Year: "2008", Russia: 65 },
-            { Year: "2012", Russia: 77 },
-            { Year: "2016", Russia: 88 }
+        const dataEurope: any = [
+            { Year: "1996", Europe: 95 },
+            { Year: "2000", Europe: 91 },
+            { Year: "2004", Europe: 86 },
+            { Year: "2008", Europe: 65 },
+            { Year: "2012", Europe: 77 },
+            { Year: "2016", Europe: 88 }
         ];
-        this.data = [ usaMedals, chinaMedals, russiaMedals ];
+        this.data = [ dataEurope, dataChina, dataUSA ];
     }
 }

@@ -24,7 +24,7 @@ export class MapTypeScatterDensitySeriesComponent implements AfterViewInit {
 
     public ngAfterViewInit(): void {
          // fetching geographic locations from public JSON folder
-         fetch("https://staging.infragistics.com/angular-demos-dv/assets/Data/AusPlaces.json")
+         fetch("https://static.infragistics.com/xplatform/data/AusPlaces.json")
          .then((response) => response.json())
          .then((data) => this.onDataLoaded(data, ""));
       }

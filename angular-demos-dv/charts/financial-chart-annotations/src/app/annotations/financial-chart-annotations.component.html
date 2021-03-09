@@ -12,6 +12,12 @@
 
             <label class="optionItem"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
             <label class="optionItem"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value Annotations</label>
+            <label class="optionItem">Item Tooltip</label>
+            <select class="select" [(ngModel)]="options.itemToolTip">
+                <option>None</option>
+                <option>Category</option>
+                <option>Item</option>
+            </select>
         </div>
         <div>
             <label class="optionLabel">Crosshairs: </label>
@@ -25,6 +31,21 @@
 
             <label class="optionItem"><input [(ngModel)]="options.crosshairSnap" type="checkbox" />Snap to Data</label>
             <label class="optionItem"><input [(ngModel)]="options.crosshairAnnotations" type="checkbox" />Crosshairs Annotations</label>
+            <label class="optionItem">Item Tooltip</label>
+            <select class="select" [(ngModel)]="options.markerTypes">
+                <option>Automatic</option>
+                <option>Circle</option>
+                <option>Triangle</option>
+                <option>Pyramid</option>
+                <option>Square</option>
+                <option>Diamond</option>
+                <option>Pentagon</option>
+                <option>Hexagon</option>
+                <option>Tetragram</option>
+                <option>Pentagram</option>
+                <option>Hexagram</option>
+                <option>None</option>
+            </select>
         </div>
     </div>
 
@@ -44,15 +65,16 @@
             [crosshairsAnnotationEnabled]="options.crosshairAnnotations"
 
             [finalValueAnnotationsVisible]="options.finalValueAnnotations"
-
+            [markerTypes]="options.markerTypes"
+            isMarkersVisible = "true"
             [calloutsVisible]="options.calloutsVisible"
             [calloutsDataSource]="calloutsData"
             calloutsXMemberPath="index"
             calloutsYMemberPath="value"
             calloutsLabelMemberPath="label"
+            [toolTipType]="options.itemToolTip"
             xAxisExtent="50"
-            thickness="1"
-            >
+            thickness="1">
         </igx-financial-chart>
 
     </div>
