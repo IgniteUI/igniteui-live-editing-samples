@@ -6,9 +6,10 @@ import { AppComponent } from "./app.component";
 import { 
 	IgxInputGroupModule,
 	IgxGridModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxSelectModule
  } from "igniteui-angular";
-import { LocalizationSample3Component } from "./services/localization-sample-3/localization-sample-3.component";
+import { LocalizationAllResourcesComponent } from "./services/localization-all-resources/localization-all-resources.component";
 
 
 
@@ -16,7 +17,7 @@ import { LocalizationSample3Component } from "./services/localization-sample-3/l
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	LocalizationSample3Component
+	LocalizationAllResourcesComponent
 ],
   imports: [
 	BrowserModule,
@@ -24,7 +25,8 @@ import { LocalizationSample3Component } from "./services/localization-sample-3/l
 	FormsModule,
 	IgxInputGroupModule,
 	IgxGridModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxSelectModule
 ],
   providers: [],
   entryComponents: [],
