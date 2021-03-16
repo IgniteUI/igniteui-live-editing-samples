@@ -1,0 +1,184 @@
+import { ElementRef, Inject, Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { IgxGridComponent, SortingDirection, DefaultSortingStrategy, IgxGridCellComponent, IGridKeydownEventArgs, IRowSelectionEventArgs, OverlaySettings, IgxOverlayOutletDirective } from 'igniteui-angular';
+import { Subject } from 'rxjs';
+import { SignalRService } from './signal-r.service';
+
+@Component({
+  providers: [SignalRService ],
+  selector: 'app-finjs-grid',
+  templateUrl: './grid-finjs.component.html',
+  styleUrls: ['./grid-finjs.component.scss']
+})
+export class GridFinJSComponent implements OnInit {
+    public selectionMode = "multiple";
+    public volume = 1000;
+    public frequency = 500;
+    public data$: any;
+    public columnFormat = { digitsInfo: '1.3-3'}
+    public showToolbar = true;
+    protected destroy$ = new Subject<any>();
+    public overlaySettings: OverlaySettings = {
+        modal: false
+    };
+
+    @ViewChild('grid1', { static: true }) public grid: IgxGridComponent;
+    @ViewChild(IgxOverlayOutletDirective, { static: true }) public outlet: IgxOverlayOutletDirective;
+
+    @Output() public selectedDataChanged = new EventEmitter<any>();
+    @Output() public keyDown = new EventEmitter<any>();
+    @Output() public chartColumnKeyDown = new EventEmitter<any>();
+
+    constructor(private el: ElementRef, @Inject(DOCUMENT) private document: Document, public dataService: SignalRService) { }
+
+    public ngOnInit() {
+        this.dataService.startConnection();
+        this.overlaySettings.outlet = this.outlet;
+        this.data$ = this.dataService.data;
+
+        this.grid.groupingExpressions = [{
+            dir: SortingDirection.Desc,
+            fieldName: 'category',
+            ignoreCase: false,
+            strategy: DefaultSortingStrategy.instance()
+        },
+        {
+            dir: SortingDirection.Desc,
+            fieldName: 'type',
+            ignoreCase: false,
+            strategy: DefaultSortingStrategy.instance()
+        },
+        {
+            dir: SortingDirection.Desc,
+            fieldName: 'settlement',
+            ignoreCase: false,
+            strategy: DefaultSortingStrategy.instance()
+        }
+        ];
+    }
+
+    /** Event Handlers and Methods */
+    public onChange() {
+        if (this.grid.groupingExpressions.length > 0) {
+            this.grid.groupingExpressions = [];
+        } else {
+            this.grid.groupingExpressions = [{
+                dir: SortingDirection.Desc,
+                fieldName: 'category',
+                ignoreCase: false,
+                strategy: DefaultSortingStrategy.instance()
+            },
+            {
+                dir: SortingDirection.Desc,
+                fieldName: 'type',
+                ignoreCase: false,
+                strategy: DefaultSortingStrategy.instance()
+            },
+            {
+                dir: SortingDirection.Desc,
+                fieldName: 'contract',
+                ignoreCase: false,
+                strategy: DefaultSortingStrategy.instance()
+            }
+            ];
+        }
+    }
+
+    public rowSelectionChanged(args: IRowSelectionEventArgs) {
+        this.grid.clearCellSelection();
+        this.selectedDataChanged.emit(args.newSelection);
+    }
+
+    public toggleGrouping() {
+        if (this.grid.groupingExpressions.length > 0) {
+            this.grid.groupingExpressions = [];
+        } else {
+            this.grid.groupingExpressions = [{
+                dir: SortingDirection.Desc,
+                fieldName: 'category',
+                ignoreCase: false,
+                strategy: DefaultSortingStrategy.instance()
+            },
+            {
+                dir: SortingDirection.Desc,
+                fieldName: 'type',
+                ignoreCase: false,
+                strategy: DefaultSortingStrategy.instance()
+            },
+            {
+                dir: SortingDirection.Desc,
+                fieldName: 'contract',
+                ignoreCase: false,
+                strategy: DefaultSortingStrategy.instance()
+            }
+            ];
+        }
+    }
+
+    public gridKeydown(evt) {
+        if (this.grid.selectedRows.length > 0 &&
+            evt.shiftKey === true && evt.ctrlKey === true && evt.key.toLowerCase() === "d") {
+            evt.preventDefault();
+            this.keyDown.emit();
+        }
+    }
+
+    public customKeydown(args: IGridKeydownEventArgs) {
+        const target: IgxGridCellComponent = args.target as IgxGridCellComponent;
+        const evt: KeyboardEvent = args.event as KeyboardEvent;
+        const type = args.targetType;
+
+        if (type === "dataCell" && target.column.field === "Chart" && evt.key.toLowerCase() === "enter") {
+            this.grid.selectRows([target.row.rowID], true);
+            this.chartColumnAction(target);
+        }
+    }
+
+    public chartColumnAction(target) {
+        this.chartColumnKeyDown.emit(target.rowData);
+    }
+
+    get gridWrapper(): HTMLElement {
+        return this.el.nativeElement.querySelector(".grid__wrapper") as HTMLElement;
+    }
+
+    get controlsWrapper(): HTMLElement {
+        return this.document.body.querySelector(".controls-wrapper") as HTMLElement;
+    }
+
+    /** Grid CellStyles and CellClasses */
+    private negative = (rowData: any): boolean => {
+        return rowData["changeP"] < 0;
+    }
+    private positive = (rowData: any): boolean => {
+        return rowData["changeP"] > 0;
+    }
+    private changeNegative = (rowData: any): boolean => {
+        return rowData["changeP"] < 0 && rowData["changeP"] > -1;
+    }
+    private changePositive = (rowData: any): boolean => {
+        return rowData["changeP"] > 0 && rowData["changeP"] < 1;
+    }
+    private strongPositive = (rowData: any): boolean => {
+        return rowData["changeP"] >= 1;
+    }
+    private strongNegative = (rowData: any, key: string): boolean => {
+        return rowData["changeP"] <= -1;
+    }
+
+    public trends = {
+        changeNeg: this.changeNegative,
+        changePos: this.changePositive,
+        negative: this.negative,
+        positive: this.positive,
+        strongNegative: this.strongNegative,
+        strongPositive: this.strongPositive
+    };
+
+    public trendsChange = {
+        changeNeg2: this.changeNegative,
+        changePos2: this.changePositive,
+        strongNegative2: this.strongNegative,
+        strongPositive2: this.strongPositive
+    };
+}
