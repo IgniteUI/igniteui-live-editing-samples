@@ -20,6 +20,8 @@ import {
  } from "igniteui-angular";
 import { FinJSDemoComponent } from "./grid-finjs/main.component";
 import { LocalDataService } from "./grid-finjs/localData.service";
+import { ControllerComponent } from "./grid-finjs/controllers.component";
+import { GridFinJSComponent } from "./grid-finjs/grid-finjs.component";
 
 
 
@@ -27,7 +29,9 @@ import { LocalDataService } from "./grid-finjs/localData.service";
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	FinJSDemoComponent
+	FinJSDemoComponent,
+	ControllerComponent,
+	GridFinJSComponent
 ],
   imports: [
 	BrowserModule,
