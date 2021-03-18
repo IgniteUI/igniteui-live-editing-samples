@@ -18,6 +18,8 @@ import {
 import { TreeGridFinJSComponent } from "./treegrid-finjs/tree-grid-finjs-sample.component";
 import { LocalDataService } from "./grid-finjs/localData.service";
 import { TreeGridGroupingPipe } from "./treegrid-finjs/tree-grid-grouping.pipe";
+import { HttpClientModule } from "@angular/common/http";
+import { SignalRService } from "./services/signal-r.service";
 
 
 
@@ -40,11 +42,13 @@ import { TreeGridGroupingPipe } from "./treegrid-finjs/tree-grid-grouping.pipe";
 	IgxToggleModule,
 	IgxButtonModule,
 	IgxSwitchModule,
-	IgxRippleModule
+	IgxRippleModule,
+	HttpClientModule
 ],
   providers: [
 	LocalDataService,
-	IgxExcelExporterService
+	IgxExcelExporterService,
+	SignalRService
 ],
   entryComponents: [],
   schemas: []
