@@ -1,0 +1,25 @@
+<div class="sample">
+
+<div class="chart">
+    <igx-data-chart #chart
+    [dataSource]="data"
+    height="calc(100% - 60px)"
+    width="100%"
+    chartTitle="Monthly Temperature Range in Los Angeles for 2020 (in Celsius)"
+    isHorizontalZoomEnabled=true
+    isVerticalZoomEnabled=true
+    titleHorizontalAlignment="left">
+        <igx-category-x-axis #xAxis label="Month" name="xAxis" ></igx-category-x-axis>
+        <igx-numeric-y-axis #yAxis name="yAxis" maximumValue="50" minValue=0 title="Temperature (in Celsius)"></igx-numeric-y-axis>
+
+        <igx-range-area-series name="series1" 
+                [xAxis]="xAxis" 
+                [yAxis]="yAxis" 
+                highMemberPath="LA_High" 
+                lowMemberPath="LA_Low">
+
+        </igx-range-area-series>
+
+    </igx-data-chart>
+    </div>
+</div>
