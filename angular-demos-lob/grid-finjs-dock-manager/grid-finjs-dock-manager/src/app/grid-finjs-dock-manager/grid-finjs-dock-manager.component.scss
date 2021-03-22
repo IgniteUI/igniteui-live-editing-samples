@@ -1,15 +1,5 @@
-.grid__wrapper {
-    position: relative;
-    width: 100%;
-    height: 98%;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    app-finjs-grid {
-        height: 100%;
-    }
+.actionItem {
+    margin-bottom: 20px;
 }
 
 :host ::ng-deep {
@@ -23,10 +13,7 @@
             margin-left: 4px;
         }
     }
-    .igx-grid__grouparea {
-        max-height: 100%;
-        height: auto;
-    }
+
     .changePos,
     .changeNeg,
     .strongPositive,
@@ -85,6 +72,7 @@
             padding-right: 9px;
         }
     }
+
     // selected
     .igx-grid__td--selected.changePos1,
     .igx-grid__td--selected.changePos2,
@@ -157,18 +145,4 @@
             color: #fff;
         }
     }
-    .igx-grid__outlet span,
-    .igx-excel-filter span,
-    .igx-excel-filter header,
-    .igx-excel-filter input {
-        font-size: 0.8125rem;
-    }
-    .igx-button--icon {
-        width: 2rem;
-        height: 2rem;
-    }
-}
-
-igx-grid {
-    flex: 1 0 0%;
 }

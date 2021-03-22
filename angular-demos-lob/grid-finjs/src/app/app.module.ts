@@ -16,12 +16,15 @@ import {
 	IgxCsvExporterService,
 	IgxSwitchModule,
 	IgxRippleModule,
-	IgxDialogModule
+	IgxDialogModule,
+	IgxToastModule
  } from "igniteui-angular";
 import { FinJSDemoComponent } from "./grid-finjs/main.component";
 import { LocalDataService } from "./grid-finjs/localData.service";
 import { ControllerComponent } from "./grid-finjs/controllers.component";
 import { GridFinJSComponent } from "./grid-finjs/grid-finjs.component";
+import { HttpClientModule } from "@angular/common/http";
+import { SignalRService } from "./services/signal-r.service";
 
 
 
@@ -47,12 +50,15 @@ import { GridFinJSComponent } from "./grid-finjs/grid-finjs.component";
 	IgxSwitchModule,
 	IgxRippleModule,
 	IgxCategoryChartModule,
-	IgxDialogModule
+	IgxDialogModule,
+	IgxToastModule,
+	HttpClientModule
 ],
   providers: [
 	LocalDataService,
 	IgxExcelExporterService,
-	IgxCsvExporterService
+	IgxCsvExporterService,
+	SignalRService
 ],
   entryComponents: [],
   schemas: []

@@ -4,38 +4,42 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
+import { IgxCategoryChartModule } from "igniteui-angular-charts";
 import { 
-	IgxTreeGridModule,
+	IgxGridModule,
 	IgxButtonGroupModule,
 	IgxIconModule,
 	IgxSliderModule,
 	IgxToggleModule,
 	IgxButtonModule,
 	IgxExcelExporterService,
+	IgxCsvExporterService,
 	IgxSwitchModule,
-	IgxRippleModule
+	IgxRippleModule,
+	IgxDialogModule,
+	IgxToastModule
  } from "igniteui-angular";
-import { TreeGridFinJSComponent } from "./treegrid-finjs/tree-grid-finjs-sample.component";
-import { LocalDataService } from "./grid-finjs/localData.service";
-import { TreeGridGroupingPipe } from "./treegrid-finjs/tree-grid-grouping.pipe";
+import { GridFinJSDockManagerComponent } from "./grid-finjs-dock-manager/grid-finjs-dock-manager.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SignalRService } from "./services/signal-r.service";
+import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 
+import { defineCustomElements } from 'igniteui-dockmanager/loader';
+defineCustomElements();
 
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridFinJSComponent,
-	TreeGridGroupingPipe
+	GridFinJSDockManagerComponent
 ],
   imports: [
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxTreeGridModule,
+	IgxGridModule,
 	IgxButtonGroupModule,
 	IgxIconModule,
 	IgxSliderModule,
@@ -43,14 +47,17 @@ import { SignalRService } from "./services/signal-r.service";
 	IgxButtonModule,
 	IgxSwitchModule,
 	IgxRippleModule,
+	IgxCategoryChartModule,
+	IgxDialogModule,
+	IgxToastModule,
 	HttpClientModule
 ],
   providers: [
-	LocalDataService,
 	IgxExcelExporterService,
+	IgxCsvExporterService,
 	SignalRService
 ],
   entryComponents: [],
-  schemas: []
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
