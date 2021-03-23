@@ -23,6 +23,8 @@ import { GridFinJSDockManagerComponent } from "./grid-finjs-dock-manager/grid-fi
 import { HttpClientModule } from "@angular/common/http";
 import { SignalRService } from "./services/signal-r.service";
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { FloatingPanesService } from "./services/floating-panes.service";
+import { DockSlotComponent } from "./grid-finjs-dock-manager/dock-slot.component";
 
 import { defineCustomElements } from 'igniteui-dockmanager/loader';
 defineCustomElements();
@@ -32,7 +34,8 @@ defineCustomElements();
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	GridFinJSDockManagerComponent
+	GridFinJSDockManagerComponent,
+	DockSlotComponent
 ],
   imports: [
 	BrowserModule,
@@ -55,7 +58,8 @@ defineCustomElements();
   providers: [
 	IgxExcelExporterService,
 	IgxCsvExporterService,
-	SignalRService
+	SignalRService,
+	FloatingPanesService
 ],
   entryComponents: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
