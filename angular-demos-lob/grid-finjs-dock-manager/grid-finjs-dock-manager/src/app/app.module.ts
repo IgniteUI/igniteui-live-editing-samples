@@ -17,14 +17,18 @@ import {
 	IgxSwitchModule,
 	IgxRippleModule,
 	IgxDialogModule,
-	IgxToastModule
+	IgxToastModule,
+	IgxGridComponent
  } from "igniteui-angular";
 import { GridFinJSDockManagerComponent } from "./grid-finjs-dock-manager/grid-finjs-dock-manager.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SignalRService } from "./services/signal-r.service";
 import { CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { FloatingPanesService } from "./services/floating-panes.service";
-import { DockSlotComponent } from "./grid-finjs-dock-manager/dock-slot.component";
+import { 
+	DockSlotComponent,
+	GridHostDirective
+ } from "./grid-finjs-dock-manager/dock-slot.component";
 
 import { defineCustomElements } from 'igniteui-dockmanager/loader';
 defineCustomElements();
@@ -35,7 +39,8 @@ defineCustomElements();
   declarations: [
 	AppComponent,
 	GridFinJSDockManagerComponent,
-	DockSlotComponent
+	DockSlotComponent,
+	GridHostDirective
 ],
   imports: [
 	BrowserModule,
@@ -61,7 +66,10 @@ defineCustomElements();
 	SignalRService,
 	FloatingPanesService
 ],
-  entryComponents: [],
+  entryComponents: [
+	IgxGridComponent,
+	DockSlotComponent
+],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
