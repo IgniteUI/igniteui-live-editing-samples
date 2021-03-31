@@ -1,4 +1,4 @@
-<div class="sample-container">
+<div class="container vertical">
 
     <igx-financial-chart height="100%" width="100%"
         #chart
@@ -16,20 +16,21 @@
         chartTitleTopMargin="10px">
     </igx-financial-chart>
 
-    <div class="legendContainer">
+    <div class="options horizontal">
         <igx-legend #legend
             class="legend"
             orientation="horizontal" >
         </igx-legend>
     </div>
 
-    <div class="sample-controls">
+    <div class="container vertical">
         <button
         igxButton="raised"
         igxRipple="white"
-        (click)="onFeedToggleClicked()"
-        ><span #feedStatus class="feedStatusLabel">Turn Off Live Data</span></button>
-        <span #fpsSpan class="fpsLabel"></span>
+        (click)="onFeedToggleClicked()">
+            <span #feedStatus class="options-label">Turn Off Live Data</span>
+        </button>
+        <span #fpsSpan class="options-label"></span>
     </div>
 
     <ng-template let-series="series" let-item="item" #stockTooltip>
@@ -37,14 +38,14 @@
             <div>
                 <div class="tooltipTitle" [style.color]="series.actualBrush">{{series.title}}</div>
             </div>
-            <div class="tooltipGrid">
+            <div class="tooltipTable">
                 <div class="tooltipRow" >
-                    <div class="tooltipProps" style="color: rgb(92, 92, 92);">Date:</div>
-                    <div class="tooltipValue">{{item.date | date: "MMM dd, yyyy"}}</div>
+                    <div class="tooltipLbl" style="color: rgb(92, 92, 92);">Date:</div>
+                    <div class="tooltipVal">{{item.date | date: "MMM dd, yyyy"}}</div>
                 </div>
                 <div class="tooltipRow" >
-                    <div class="tooltipProps" [style.color]="series.actualBrush">Value:</div>
-                    <div class="tooltipValue" [style.color]="series.actualBrush">{{item.close | number:0}}</div>
+                    <div class="tooltipLbl" [style.color]="series.actualBrush">Value:</div>
+                    <div class="tooltipVal" [style.color]="series.actualBrush">{{item.close | number:0}}</div>
                 </div>
             </div>
         </div>

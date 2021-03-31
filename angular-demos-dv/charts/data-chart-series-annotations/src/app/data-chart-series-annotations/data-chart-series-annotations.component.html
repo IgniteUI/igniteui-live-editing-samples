@@ -1,14 +1,14 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionItem">Annotations: </span>
-        <label class="optionItem"><input type="checkbox" [(ngModel)]="calloutsVisible"
+<div class="container">
+    <div class="options horizontal">
+        <span class="options-item">Annotations: </span>
+        <label class="options-item"><input type="checkbox" [(ngModel)]="calloutsVisible"
             (change)="onCalloutChange($event)" /> Callouts </label>
-        <label class="optionItem"><input type="checkbox" [(ngModel)]="finalValuesVisible"
+        <label class="options-item"><input type="checkbox" [(ngModel)]="finalValuesVisible"
             (change)="onFinalValueChange($event)"/> Final Value </label>
-        <label class="optionItem"><input type="checkbox" [(ngModel)]="crosshairsVisible"
+        <label class="options-item"><input type="checkbox" [(ngModel)]="crosshairsVisible"
             (change)="onCrosshairChange($event)" /> Crosshairs </label>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-data-chart #chart [dataSource]="data" width="100%" height="calc(100% - 60px)">
             <igx-category-x-axis #xAxis interval=1 label="month">
 

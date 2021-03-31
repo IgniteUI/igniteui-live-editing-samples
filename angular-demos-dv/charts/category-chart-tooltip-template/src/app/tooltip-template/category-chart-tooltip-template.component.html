@@ -1,5 +1,5 @@
-<div class="sample-wrapper container">
-    <div>
+<div class="container vertical">
+    <div class="options horizontal">
         <span>Chart Type: </span>
         <select [(ngModel)]="chartType">
             <option>Auto</option>
@@ -14,7 +14,7 @@
             <option>Waterfall</option>
         </select>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-category-chart height="calc(100% - 60px)" width="100%"
             [dataSource]="data"
             chartTitle="Energy Production by Country"

@@ -1,15 +1,15 @@
-<div class="sample">
-    <div class="options">
-        <label class="optionLabel">Thickness: </label>
+<div class="container vertical">
+    <div class="options horizontal">
+        <label class="options-label">Thickness: </label>
         <label class="optionValue">{{seriesThickness}}</label>
         <input class="slider" type="range" min="1" max="10" step="1" [(ngModel)]="seriesThickness" />
 
-        <label class="optionLabel">Contours: </label>
+        <label class="options-label">Contours: </label>
         <label class="optionValue">{{seriesContours}}</label>
         <input class="slider" type="range" min="1" max="15" step="1" [(ngModel)]="seriesContours"
             (input)="onSeriesContoursChanged($event)"/>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-data-chart #chart
         isHorizontalZoomEnabled=true
         isVerticalZoomEnabled=true

@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="container">
+        <igx-data-chart #chart isHorizontalZoomEnabled="false" isVerticalZoomEnabled="false" width="100%"
+            height="calc(100% - 60px)" [dataSource]="data"
+            chartTitle="Where Online Shoppers Start Their Search"
+                    titleHorizontalAlignment="Left"
+                    titleLeftMargin="25"
+                    titleTopMargin="10"
+                    titleBottomMargin="10"
+                   >
+            <igx-numeric-x-axis #xAxis labelFormat="{0}%">
+            </igx-numeric-x-axis>
+            <igx-category-y-axis #yAxis label="Shop" [dataSource]="data" isInverted="true" gap="0.75">
+            </igx-category-y-axis>
+
+            <igx-bar-series [dataSource]="data" valueMemberPath="Percent" [xAxis]="xAxis" [yAxis]="yAxis" showDefaultTooltip="true"
+            isTransitionInEnabled="true"
+            isHighlightingEnabled="true">
+            </igx-bar-series>
+        </igx-data-chart>
+    </div>
+</div>

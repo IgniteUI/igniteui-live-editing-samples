@@ -24,7 +24,7 @@ export class MapTypeScatterAreaSeriesComponent implements AfterViewInit {
         const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
         sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldTemperatures.shp";
-        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldTemperatures.dbf";
+        sds.databaseSource  = "https://static.infragistics.com/xplatform/shapes/WorldTemperatures.dbf";
         sds.dataBind();
     }
 

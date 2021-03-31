@@ -1,5 +1,5 @@
-<div class="sample-wrapper container">
-    <div class="options">
+<div class="container vertical">
+    <div class="options horizontal">
         <span>Tooltips Type:</span>
         <select [(ngModel)]="sampleOptions.tooltipType">
             <option>Category</option>
@@ -7,7 +7,7 @@
         </select>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-financial-chart height="calc(100% - 60px)" width="100%"
             [dataSource]="financialData"
             chartType="Candle"

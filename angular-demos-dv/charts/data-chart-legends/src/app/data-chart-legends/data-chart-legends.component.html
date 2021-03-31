@@ -1,12 +1,12 @@
-<div class="sample">
-    <div class="options">
-        <span class="legendTitle">Energy Source: </span>
-        <div class="legendInline">
+<div class="container">
+    <div class="options horizontal">
+        <span class="legend-title">Energy Source: </span>
+        <div class="legend">
             <igx-legend #legend orientation="horizontal"></igx-legend>
         </div>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-data-chart height="calc(100% - 60px)" width="100%" [dataSource]="data" [legend]="legend">
 
             <igx-category-x-axis #xAxis name="xAxis" label="Country"></igx-category-x-axis>

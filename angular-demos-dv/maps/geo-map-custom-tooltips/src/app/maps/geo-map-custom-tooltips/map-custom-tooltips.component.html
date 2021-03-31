@@ -6,16 +6,8 @@
 
 <ng-template let-series="series" let-item="item" #template>
     <div>
-        <span [style.color]="series.markerOutline">
-            City: {{item.name}}
-        </span>
-        <br />
-        <span>
-            Longitude: {{item.lon}}
-        </span>
-        <br />
-        <span>
-            Latitude: {{item.lat}}
-        </span>
+        <span [style.color]="series.markerOutline">City: {{item.name}}</span><br />
+        <span>Longitude: {{item.lon}}</span><br />
+        <span>Latitude: {{item.lat}}</span>
     </div>
 </ng-template>

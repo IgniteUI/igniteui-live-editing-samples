@@ -1,8 +1,8 @@
-<div class="sample-wrapper container">
-    <div class="options">
-        <div>
-            <label width="130px" class="optionLabel" >Chart Type: </label>
-            <select class="optionSelector" [(ngModel)]="sampleOptions.chartType">
+<div class="container vertical">
+    <div class="options vertical">
+        <div class="options horizontal" >
+            <label width="130px" class="options-label" >Chart Type: </label>
+            <select class="options-select" [(ngModel)]="sampleOptions.chartType">
                 <option>Column</option>
                 <option>Area</option>
                 <option>Line</option>
@@ -13,12 +13,12 @@
                 <option>StepLine</option>
             </select>
 
-            <label class="optionItem"><input [(ngModel)]="sampleOptions.calloutsVisible" type="checkbox" />Enable Callouts</label>
-            <label class="optionItem"><input [(ngModel)]="sampleOptions.finalValuesVisible" type="checkbox" />Enable Final Value Annotations</label>
+            <label class="options-item"><input [(ngModel)]="sampleOptions.calloutsVisible" type="checkbox" />Enable Callouts</label>
+            <label class="options-item"><input [(ngModel)]="sampleOptions.finalValuesVisible" type="checkbox" />Enable Final Value Annotations</label>
         </div>
-        <div>
-            <label width="130px" class="optionLabel">Crosshairs: </label>
-            <select class="optionSelector" [(ngModel)]="sampleOptions.crosshairsDisplay">
+        <div class="options horizontal" >
+            <label width="130px" class="options-label">Crosshairs: </label>
+            <select class="options-select" [(ngModel)]="sampleOptions.crosshairsDisplay">
                 <option>Default</option>
                 <option>None</option>
                 <option>Horizontal</option>
@@ -26,12 +26,12 @@
                 <option>Both</option>
             </select>
 
-            <label class="optionItem"><input [(ngModel)]="sampleOptions.snapCrosshairs" type="checkbox" />Snap Crosshairs to Data</label>
-            <label class="optionItem"><input [(ngModel)]="sampleOptions.crosshairAnnotations" type="checkbox" />Enable Crosshairs Annotations</label>
+            <label class="options-item"><input [(ngModel)]="sampleOptions.snapCrosshairs" type="checkbox" />Snap Crosshairs to Data</label>
+            <label class="options-item"><input [(ngModel)]="sampleOptions.crosshairAnnotations" type="checkbox" />Enable Crosshairs Annotations</label>
         </div>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-category-chart height="calc(100% - 60px)" width="100%"
             [dataSource]="categoryData"
             [chartType]="sampleOptions.chartType"

@@ -1,12 +1,12 @@
-<div class="sample">
-    <div class="options">
-        <label class="optionItem">Enable Highlighting: </label>
-        <label class="optionItem"> Series  <input type="checkbox" [(ngModel)]="enableSeriesHighlight" /></label>
-        <label class="optionItem"> Item  <input type="checkbox" [(ngModel)]="enableItemHighlight" (change)="enableItemHighlightChanged($event)"/></label>
-        <label class="optionItem"> Category  <input type="checkbox" [(ngModel)]="enableCategoryHighlight" (change)="enableCategoryHighlightChanged($event)"/></label>
+<div class="container">
+    <div class="options horizontal">
+        <label class="options-item">Enable Highlighting: </label>
+        <label class="options-item"> Series  <input type="checkbox" [(ngModel)]="enableSeriesHighlight" /></label>
+        <label class="options-item"> Item  <input type="checkbox" [(ngModel)]="enableItemHighlight" (change)="enableItemHighlightChanged($event)"/></label>
+        <label class="options-item"> Category  <input type="checkbox" [(ngModel)]="enableCategoryHighlight" (change)="enableCategoryHighlightChanged($event)"/></label>
       </div>
 
-    <div class="chart">
+    <div class="container">
       <igx-data-chart #chart height="calc(100% - 60px)" width="100%" [dataSource]="data">
 
         <igx-category-x-axis #xAxis name="xAxis" label="Country"></igx-category-x-axis>

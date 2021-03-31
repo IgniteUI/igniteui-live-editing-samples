@@ -1,4 +1,4 @@
-
+<div class="container vertical">
     <span>Marker Type: </span>
     <select [(ngModel)]="markerType" (change)="onMarkerSelectionChanged($event)">
         <option>Circle</option>
@@ -8,7 +8,7 @@
         <option>Hidden</option>
         <option>Pentagon</option>
         <option>Pentagram</option>
-        <option>Pyaramid</option>
+        <option>Pyramid</option>
         <option>Square</option>
         <option>Tetragram</option>
         <option>Triangle</option>
@@ -31,10 +31,10 @@
         <option>Gray</option>
         <option>DodgerBlue</option>
     </select>
-  
+
     <igx-geographic-map #map
         width="100%"
         height="calc(100% - 60px)"
-        zoomable="true"
-        >
+        zoomable="true">
     </igx-geographic-map>
+</div>

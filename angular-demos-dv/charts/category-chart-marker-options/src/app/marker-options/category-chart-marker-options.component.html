@@ -1,5 +1,5 @@
-<div class="sample-wrapper container">
-    <div class="options">
+<div class="container vertical">
+    <div class="options horizontal">
         <span>Chart Type: </span>
         <select [(ngModel)]="chartType">
             <option>Auto</option>
@@ -14,14 +14,14 @@
             <option>Waterfall</option>
         </select>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-category-chart height="calc(100% - 60px)" width="98%"
             [dataSource]="data"
             [chartType]="chartType"
             yAxisMinimumValue="50"
             yAxisMaximumValue="150"
             yAxisTitle="TWh"
-            xAxisOverlap="0"            
+            xAxisOverlap="0"
             negativeBrushes="Red"
             negativeOutlines="Red"
             brushes="#4286f4, #e8b220, #11c111"

@@ -1,13 +1,13 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionLabel">Scale Mode: </span>
+<div class="container vertical">
+    <div class="options horizontal">
+        <span class="options-label">Scale Mode: </span>
         <select value={{seriesScaleMode}}
             (change)="this.seriesScaleModeChanged($event)">
             <option>Select</option>
             <option>InterpolateRGB</option>
             <option>InterpolateHSV</option>
         </select>
-        <label class="optionLabel">Minimum: </label>
+        <label class="options-label">Minimum: </label>
         <label class="optionValue" >
             {{seriesScaleMin}}
         </label>
@@ -15,7 +15,7 @@
             value={{seriesScaleMin}}
             (change)="this.seriesScaleMinChanged($event)"/>
 
-        <label class="optionLabel">Maximum: </label>
+        <label class="options-label">Maximum: </label>
         <label class="optionValue" >
             {{seriesScaleMax}}
         </label>
@@ -24,7 +24,8 @@
             (change)="this.seriesScaleMaxChanged($event)"/>
 
     </div>
-    <div class="chart">
+
+    <div class="container">
         <igx-data-chart #chart
             isHorizontalZoomEnabled="true"
             isVerticalZoomEnabled="true"

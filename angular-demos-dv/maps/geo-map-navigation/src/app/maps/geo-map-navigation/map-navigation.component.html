@@ -1,5 +1,4 @@
-
-  <div class="igFlex"    >
+<div class="container vertical"    >
 
     <div class="igControl" id="map" >
         <igx-geographic-map #map
@@ -7,23 +6,24 @@
             height="100%"
             zoomable="true">
         </igx-geographic-map>
-        </div>
-<div class="igOverlay-top-left" >
-    <label class="mapPanelItem">Select Map Region</label>
-    <select [(ngModel)]="regionType" (change)="onSelectionChanged($event)">
-        <option>Australia</option>
-        <option>Caribbean</option>
-        <option>Egypt</option>
-        <option>European</option>
-        <option>Japan</option>
-        <option>Hawaii</option>
-        <option>Poland</option>
-        <option>South Africa</option>
-        <option>United States</option>
-        <option>United Kingdom</option>
-        <option>Uruaguay</option>
-    </select>
-    <label class="mapPanelItem">Map Geographic Rect</label>
+    </div>
+
+    <div class="overlay-top-left" >
+        <label class="mapPanelItem">Select Map Region</label>
+        <select [(ngModel)]="regionType" (change)="onSelectionChanged($event)">
+            <option>Australia</option>
+            <option>Caribbean</option>
+            <option>Egypt</option>
+            <option>European</option>
+            <option>Japan</option>
+            <option>Hawaii</option>
+            <option>Poland</option>
+            <option>South Africa</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Uruguay</option>
+        </select>
+        <label class="mapPanelItem">Map Geographic Rect</label>
         <div class="mapPanelLine">
             <label class="mapPanelField">Top:</label>
             <label #top class="mapPanelValue">{{geoTop}}</label>
@@ -97,8 +97,9 @@
         <div class="mapPanelLine">
             <label class="mapPanelField">Pixel Y:</label>
             <label class="mapPanelValue">{{mapHoverPixelY}}</label>
-        </div>       
-             
-</div>
-<div class="igOverlay-bottom-right">Imagery Tiles: @ESRI/ArcGIS</div>
+        </div>
+    </div>
+
+    <div class="overlay-bottom-right">Imagery Tiles: @ESRI/ArcGIS</div>
+
 </div>

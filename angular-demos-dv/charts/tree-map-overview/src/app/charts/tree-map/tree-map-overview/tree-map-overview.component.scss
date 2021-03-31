@@ -1,24 +1,421 @@
-.container {
-    display: block;
+
+/* auto-generated from ./templates/*.css files */ 
+ 
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+/* ============ container styles  ============ */
+
+.container
+{
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-self: stretch;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    min-width: 200px;
     height: 100%;
+    width: 100%;
+    padding: 0rem;
+    margin: 0rem;
 }
 
-.sample-container {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+
+/* used to layout a component in center of its parent */
+.container-center {
+    background: white;
+    height: calc(100% - 1rem);
+    width: calc(100% - 1rem);
+    padding: 0.5rem;
+    margin: 0rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* used to overlay multiple components on top of each other */
+.container-relative {
+    background: white;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    padding: 0.5rem;
+    margin: 0rem;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+
+.container-overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.vertical {
+    display: flex;
+    flex-flow: column;
+    /*align-items: stretch;*/
+}
+
+.horizontal {
+    display: flex;
+    flex-flow: row;
+   /* align-items: center;*/
+}
+
+/* ============ option styles ============ */
+
+.options
+{
+    margin: 0rem;
+    padding: 0rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    color: #494949;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+
+}
+
+.options-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.options > label,
+.options-label {
+    font-size: 0.875rem;
+    padding: 0rem;
+    margin-top: 0rem;
+    margin-left: 0.5rem;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+    white-space: nowrap;
+    align-self: center;
+}
+
+.options-value {
+    font-size: 0.875rem;
+    padding: 0rem;
+    margin-top: 0rem;
+    margin-left: 0.0rem;
+    margin-right: 0.1rem;
+    vertical-align: middle;
+    width: 3rem;
+    text-align: center;
+    align-self: center;
+}
+
+.options > input[type=range],
+.options > slider,
+.options-slider {
+    margin-left: 0.25rem;
+    margin-right: 1rem;
+    padding: 0rem;
+    min-width: 6rem;
+}
+
+.options > input[type=button],
+.options > button,
+.options-button {
+    margin: 0.25rem;
+    margin-left: 0.5rem;
+    color: #fff;
+    background: #1a70c7;
+    border: 0px solid #1b6ec2;
+    border-radius: 0.35rem;
+    padding: 0.25rem 1.2rem;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    font-size: 0.875rem;
+}
+
+.options > input[type=button]:hover,
+.options > button:hover,
+.options-button:hover {
+    background: #2a78c7;
+}
+.options > input[type=button]:active,
+.options > button:active,
+.options-button:active {
+    background: #4c8fd4;
+}
+.options > input[type=button]:focus,
+.options > button:focus,
+.options-button:focus {
+    outline: none;
+}
+
+.options-radio,
+.options-checkbox,
+.options > label > input[type=radio],
+.options > label > input[type=checkbox],
+.options > input {
+    margin-top: 0.35rem;
+    margin-bottom: 0.35rem;
+    margin-left: 0.35rem;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    padding: 0rem;
+    align-items: center;
+    align-self: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.options > label > input[type=color],
+.options > input[type=color],
+.options-color {
+    align-self: stretch;
+}
+
+.options > input[type=text],
+.options > text,
+.options-text {
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+    min-width: 4rem;
+    vertical-align: middle;
+}
+
+.options > select,
+.options-select {
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    font-size: 0.875rem;
+    margin-top: 0rem;
+    margin-bottom: 0.25rem;
+    margin-top: 0.25rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    vertical-align: middle;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    border-radius: 0.2rem;
+    outline: none;
+    cursor: pointer;
+}
+.options > select:focus,
+.options-select {
+    outline: none;
+}
+
+
+/* ============ overlay styles  ============ */
+
+.overlay-border  {
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 0.5rem;
+    background: rgba(148, 148, 148, 0.5);
+}
+
+.overlay-top-left,
+.overlay-top-right,
+.overlay-top-center,
+.overlay-center,
+.overlay-bottom-left,
+.overlay-bottom-center,
+.overlay-bottom-right {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8rem;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.overlay-top-left {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    align-items: flex-start;
+}
+
+.overlay-top-right {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    align-items: flex-end;
+}
+
+.overlay-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay-center-label {
     display: block;
+    font-size: 3rem;
 }
 
-.sample-control {
+.overlay-top-center {
+    position: absolute;
+    top: 0.25rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.overlay-bottom-center {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.overlay-bottom-left {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 0.25rem;
+    align-items: flex-start;
+}
+
+.overlay-bottom-right {
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0.25rem;
+    align-items: flex-end;
+}
+
+.overlay-row {
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.overlay-label {
     display: block;
-    margin: 0 auto;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    font-weight: 600;
 }
 
-.sample-button {
-    margin-bottom: 5px;
-    margin-right: 10px;
-    height: 30px;
-    font: "12px 'Titillium Web', sans-serif"
+.overlay-field {
+    text-align: left;
+    width: 5rem;
 }
+
+.overlay-value {
+    text-align: end;
+}
+
+.overlay-title {
+    color: black;
+    display: block;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+}
+
+
+
+/* ============ legend styles ============ */
+.legend {
+    --legend-item-overflow: hidden;
+    width: 100%;
+}
+
+.legend-title {
+    width: 100%;
+    margin: 0rem;
+    padding: 0rem;
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.ig-chart-legend-item-badge > canvas {
+    vertical-align: middle;
+    margin-bottom: 0.2rem;
+}
+
+/* ============ tooltip styles  ============ */
+
+.tooltipBox {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: Black;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+}
+
+.tooltipTitle {
+    display: block;
+    color: Black;
+    font-weight: bold;
+    font-size: 0.75rem;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    margin-left: 0rem;
+}
+
+.tooltipTable {
+    display: table;
+    margin: 0rem;
+    width: 100%;
+    height: 100%;
+    border-spacing: 5px;
+    font-size: 0.75rem;
+}
+
+.tooltipHorizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.tooltipVertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.tooltipRow {
+    display: table-row;
+}
+
+.tooltipVal {
+    display: table-cell;
+    text-align: "right";
+    font-weight: bold;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+    padding-left: 5px;
+}
+
+.tooltipLbl {
+    display: table-cell;
+    text-align: "left";
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
+}
+
+.tooltipFlagImage {
+    display: inline-block;
+    object-fit: fill;
+    height: 50px;
+    width: 70px;
+    margin-right: 5px;
+}
+
+.tooltipFlagBoarder {
+    display: inline-block;
+    padding: 0rem;
+    border-width: thin;
+    border-color: rgb(177, 177, 177);
+    border-style: solid;
+    height: 50px;
+    width: 70px;
+}
+

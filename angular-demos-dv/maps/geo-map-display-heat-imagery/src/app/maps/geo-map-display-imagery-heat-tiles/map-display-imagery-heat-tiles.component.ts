@@ -79,7 +79,7 @@ export class MapDisplayImageryHeatTilesComponent implements AfterViewInit {
         });
 
         sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/AmericanCities.shp";
-        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/AmericanCities.dbf";
+        sds.databaseSource  = "https://static.infragistics.com/xplatform/shapes/AmericanCities.dbf";
         sds.dataBind();
     }
 

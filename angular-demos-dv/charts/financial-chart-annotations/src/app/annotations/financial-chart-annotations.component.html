@@ -1,8 +1,8 @@
-<div class="sample-wrapper container">
-    <div class="options">
-        <div>
-            <label class="optionLabel">Chart Type: </label>
-            <select class="select" [(ngModel)]="options.chartType">
+<div class="container vertical">
+    <div class="options vertical">
+        <div class="options horizontal">
+            <label class="options-label">Chart Type: </label>
+            <select class="options-select" [(ngModel)]="options.chartType">
                 <option>Auto</option>
                 <option>Bar</option>
                 <option>Candle</option>
@@ -10,18 +10,18 @@
                 <option>Line</option>
             </select>
 
-            <label class="optionItem"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
-            <label class="optionItem"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value Annotations</label>
-            <label class="optionItem">Item Tooltip</label>
-            <select class="select" [(ngModel)]="options.itemToolTip">
+            <label class="options-item"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
+            <label class="options-item"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value Annotations</label>
+            <label class="options-item">Item Tooltip</label>
+            <select class="options-select" [(ngModel)]="options.itemToolTip">
                 <option>None</option>
                 <option>Category</option>
                 <option>Item</option>
             </select>
         </div>
-        <div>
-            <label class="optionLabel">Crosshairs: </label>
-            <select class="select" [(ngModel)]="options.crosshairDisplay">
+        <div class="options horizontal">
+            <label class="options-label">Crosshairs: </label>
+            <select class="options-select" [(ngModel)]="options.crosshairDisplay">
                 <option>Default</option>
                 <option>None</option>
                 <option>Horizontal</option>
@@ -29,10 +29,10 @@
                 <option>Both</option>
             </select>
 
-            <label class="optionItem"><input [(ngModel)]="options.crosshairSnap" type="checkbox" />Snap to Data</label>
-            <label class="optionItem"><input [(ngModel)]="options.crosshairAnnotations" type="checkbox" />Crosshairs Annotations</label>
-            <label class="optionItem">Item Tooltip</label>
-            <select class="select" [(ngModel)]="options.markerTypes">
+            <label class="options-item"><input [(ngModel)]="options.crosshairSnap" type="checkbox" />Snap to Data</label>
+            <label class="options-item"><input [(ngModel)]="options.crosshairAnnotations" type="checkbox" />Crosshairs Annotations</label>
+            <label class="options-item">Item Tooltip</label>
+            <select class="options-select" [(ngModel)]="options.markerTypes">
                 <option>Automatic</option>
                 <option>Circle</option>
                 <option>Triangle</option>
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-financial-chart height="calc(100% - 60px)" width="100%"
             [dataSource]="stocksData"
             [chartType]="options.chartType"
@@ -71,7 +71,7 @@
             [calloutsDataSource]="calloutsData"
             calloutsXMemberPath="index"
             calloutsYMemberPath="value"
-            calloutsLabelMemberPath="label"
+            calloutsLabelMemberPath="options-label"
             [toolTipType]="options.itemToolTip"
             xAxisExtent="50"
             thickness="1">

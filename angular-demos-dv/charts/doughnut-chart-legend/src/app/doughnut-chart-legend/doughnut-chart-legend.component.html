@@ -1,11 +1,11 @@
-<div class="container"> 
-    <div class="legend">
+<div class="container">
+    <div class="options horizontal">
         <span>Global Electricity Demand by Energy Use</span>
         <igx-item-legend #legend height="100px" width="100px">
         </igx-item-legend>
     </div>
-    <div class="chart">
-        <igx-doughnut-chart #chart height="100%" width="80%" 
+    <div class="container">
+        <igx-doughnut-chart #chart height="100%" width="80%"
         (sliceClick)="chartSliceClickEvent($event)">
             <igx-ring-series
             [dataSource] = "data"
@@ -14,7 +14,7 @@
             valueMemberPath="Value"
             labelMemberPath="Summary"
             allowSliceSelection="false"
-            labelsPosition="OutsideEnd" 
+            labelsPosition="OutsideEnd"
             labelExtent="30"
             radiusFactor="0.7" >
             </igx-ring-series>

@@ -1,8 +1,8 @@
-<!-- class="sample-wrapper container" -->
+<!-- class="container vertical" -->
 
 <div class="container">
-    <div class="options">
-        <label class="optionLabel">Chart Type: </label>
+    <div class="options horizontal">
+        <label class="options-label">Chart Type: </label>
         <select [(ngModel)]="chartType">
             <option>Column</option>
             <option>Area</option>
@@ -14,13 +14,13 @@
             <option>StepLine</option>
         </select>
 
-        <label class="optionLabel">Enable Highlighting:</label>
-        <label class="optionItem"><input [(ngModel)]="isSeriesHighlightingEnabled" type="checkbox" /> Series </label>
-        <label class="optionItem"><input [(ngModel)]="isItemHighlightingEnabled" type="checkbox" />Item </label>
-        <label class="optionItem"><input [(ngModel)]="isCategoryHighlightingEnabled" type="checkbox" />Category </label>
+        <label class="options-label">Enable Highlighting:</label>
+        <label class="options-item"><input [(ngModel)]="isSeriesHighlightingEnabled" type="checkbox" /> Series </label>
+        <label class="options-item"><input [(ngModel)]="isItemHighlightingEnabled" type="checkbox" />Item </label>
+        <label class="options-item"><input [(ngModel)]="isCategoryHighlightingEnabled" type="checkbox" />Category </label>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-category-chart
             #chart
             height="calc(100% - 60px)" width="100%"

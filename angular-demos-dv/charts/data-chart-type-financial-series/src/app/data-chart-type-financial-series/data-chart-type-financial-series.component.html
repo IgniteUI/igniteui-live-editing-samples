@@ -1,13 +1,11 @@
-<!-- class="sample-wrapper container" -->
-
-<div class="sample">
-    <div class="options">
-        <span class="optionLabel"> Series Display Type: </span>
+<div class="container vertical">
+    <div class="options horizontal">
+        <span class="options-label"> Series Display Type: </span>
         <select [(ngModel)]="displayTypeSeries">
             <option>Candlestick</option>
             <option>OHLC</option>
         </select>
-        <span class="optionLabel"> Indicator Display Type: </span>
+        <span class="options-label"> Indicator Display Type: </span>
         <select [(ngModel)]="displayTypeIndicator">
             <option>Line</option>
             <option>Area</option>
@@ -15,7 +13,7 @@
         </select>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-data-chart
             width="100%"
             height="calc(100% - 60px)"

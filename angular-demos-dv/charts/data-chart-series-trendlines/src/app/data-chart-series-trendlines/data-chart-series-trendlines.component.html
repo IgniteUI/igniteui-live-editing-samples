@@ -1,6 +1,6 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionItem">Trendline Type:</span>
+<div class="container">
+    <div class="options horizontal">
+        <span class="options-item">Trendline Type:</span>
         <select [(ngModel)]="trendlineType">
             <option>None</option>
             <option>CubicFit</option>
@@ -18,7 +18,7 @@
             <option>WeightedAverage</option>
         </select>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-data-chart height="calc(100% - 60px)" width="100%" [dataSource]="data">
 
             <igx-category-x-axis #xAxis name="xAxis" label="Date"></igx-category-x-axis>

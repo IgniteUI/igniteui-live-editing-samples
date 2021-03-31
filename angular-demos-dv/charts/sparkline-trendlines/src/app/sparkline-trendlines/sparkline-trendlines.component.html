@@ -1,6 +1,6 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionItem">Trendline Type: </span>
+<div class="container vertical">
+    <div class="options horizontal">
+        <span class="options-item">Trendline Type: </span>
         <select (change)="onTrendlineChanged($event)">
             <option>CubicFit</option>
             <option>CumulativeAverage</option>
@@ -18,11 +18,11 @@
             <option>WeightedAverage</option>
         </select>
     </div>
-    <div class="chart">
-        <igx-sparkline #sparkline height="calc(100% - 30px)" width="100%"            
+    <div class="container">
+        <igx-sparkline #sparkline height="calc(100% - 30px)" width="100%"
             [dataSource]="data"
             valueMemberPath="Value"
-            displayType="Area"                        
-            trendLineThickness=1 ></igx-sparkline>        
+            displayType="Area"
+            trendLineThickness=1 ></igx-sparkline>
     </div>
 </div >

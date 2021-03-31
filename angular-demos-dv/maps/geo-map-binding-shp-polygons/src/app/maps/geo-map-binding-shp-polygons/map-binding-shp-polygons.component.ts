@@ -25,7 +25,7 @@ export class MapBindingShapefilePolygonsComponent implements AfterViewInit {
         const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
         sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCountries.shp";
-        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldCountries.dbf";
+        sds.databaseSource  = "https://static.infragistics.com/xplatform/shapes/WorldCountries.dbf";
         sds.dataBind();
     }
 
