@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxCalendarModule } from "igniteui-angular";
-import { CalendarStylingSample } from "./calendar-styling-sample/calendar-styling-sample.component";
+import { CalendarStylingSampleComponent } from "./calendar-styling-sample/calendar-styling-sample.component";
 
 
 
@@ -12,7 +12,7 @@ import { CalendarStylingSample } from "./calendar-styling-sample/calendar-stylin
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	CalendarStylingSample
+	CalendarStylingSampleComponent
 ],
   imports: [
 	BrowserModule,

@@ -3,7 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { GridEditingStyleSample } from "./grid/grid-editing-style-sample/grid-editing-style-sample.component";
+import { GridEditingStyleSampleComponent } from "./grid/grid-editing-style-sample/grid-editing-style-sample.component";
 import { 
 	IgxGridModule,
 	IgxDatePickerModule
@@ -16,7 +16,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	GridEditingStyleSample
+	GridEditingStyleSampleComponent
 ],
   imports: [
 	BrowserModule,

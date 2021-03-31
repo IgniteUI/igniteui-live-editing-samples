@@ -1,10 +1,10 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { IgxSnackbarComponent } from "igniteui-angular";
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IgxSnackbarComponent } from 'igniteui-angular';
 
 @Component({
-  selector: "app-snackbar-sample-4",
-  styleUrls: ["./snackbar-sample-4.component.scss"],
-  templateUrl: "./snackbar-sample-4.component.html"
+  selector: 'app-snackbar-sample-4',
+  styleUrls: ['./snackbar-sample-4.component.scss'],
+  templateUrl: './snackbar-sample-4.component.html'
 })
 export class SnackbarSample4Component implements OnInit {
   @ViewChild(IgxSnackbarComponent, { static: true })
@@ -16,19 +16,19 @@ export class SnackbarSample4Component implements OnInit {
 
   public ngOnInit() {
     this.navItems = [{
-      avatar: "https://staging.infragistics.com/angular-demos/assets/images/avatar/2.jpg",
-      text: "Richard Mahoney"
+      avatar: 'https://staging.infragistics.com/angular-demos/assets/images/avatar/2.jpg',
+      text: 'Richard Mahoney'
     },
     {
-      avatar: "https://staging.infragistics.com/angular-demos/assets/images/avatar/4.jpg",
-      text: "Lisa Landers"
+      avatar: 'https://staging.infragistics.com/angular-demos/assets/images/avatar/4.jpg',
+      text: 'Lisa Landers'
     },
     {
-      avatar: "https://staging.infragistics.com/angular-demos/assets/images/avatar/14.jpg",
-      text: "Marianne Taylor"
+      avatar: 'https://staging.infragistics.com/angular-demos/assets/images/avatar/14.jpg',
+      text: 'Marianne Taylor'
     }, {
-      avatar: "https://staging.infragistics.com/angular-demos/assets/images/avatar/17.jpg",
-      text: "Ward Riley"
+      avatar: 'https://staging.infragistics.com/angular-demos/assets/images/avatar/17.jpg',
+      text: 'Ward Riley'
     }];
   }
 

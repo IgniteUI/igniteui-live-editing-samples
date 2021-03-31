@@ -10,7 +10,7 @@ import {
 	IgxInputGroupModule,
 	IgxDragDropModule
  } from "igniteui-angular";
-import { TreeGridRowDragBase } from "./tree-grid-row-drag-base/tree-grid-row-drag-base.component";
+import { TreeGridRowDragBaseComponent } from "./tree-grid-row-drag-base/tree-grid-row-drag-base.component";
 
 
 
@@ -18,7 +18,7 @@ import { TreeGridRowDragBase } from "./tree-grid-row-drag-base/tree-grid-row-dra
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridRowDragBase
+	TreeGridRowDragBaseComponent
 ],
   imports: [
 	BrowserModule,
