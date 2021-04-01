@@ -1,9 +1,10 @@
-<div>
-    <label><input type="checkbox" (change)="syncHorizontalChanged($event)">Sync Horizontally</label>
-    <label><input type="checkbox" (change)="syncVerticalChanged($event)">Sync Vertically</label>
-  </div>
+<div class="container vertical">
+    <div class="options horizontal" >
+        <label><input type="checkbox" (change)="syncHorizontalChanged($event)">Sync Horizontally</label>
+        <label><input type="checkbox" (change)="syncVerticalChanged($event)">Sync Vertically</label>
+    </div>
 
-  <div class="container">
+    <div class="container">
       <igx-data-chart
         width="100%" syncChannel="ChannelA" synchronizeHorizontally=false synchronizeVertically=false
         height="calc(50% - 20px)" #chart1 isHorizontalZoomEnabled=true isVerticalZoomEnabled=true
@@ -25,4 +26,5 @@
 
         <igx-line-series name="series2" [xAxis]="xAxis2" [yAxis]="yAxis2" valueMemberPath="Coal"></igx-line-series>
       </igx-data-chart>
-  </div>
+    </div>
+</div>

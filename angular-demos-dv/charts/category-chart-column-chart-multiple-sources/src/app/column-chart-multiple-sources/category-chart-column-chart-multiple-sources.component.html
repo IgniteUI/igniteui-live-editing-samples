@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="options vertical">
+        <span class="legend-title">Highest Grossing Film Franchises and Series Worldwide as of April 2020</span>
+        <igx-legend #legend orientation="Horizontal"></igx-legend>
+    </div>
+    <div class="container">
+        <igx-category-chart height="calc(100% - 60px)" width="100%"
+                    [legend]="legend"
+                    [dataSource]="data"
+                    chartType="Column"
+                    xAxisInterval="1"
+                    yAxisTitle="Billions of U.S. Dollars"
+                    yAxisTitleLeftMargin="10"
+                    yAxisTitleRightMargin="5"
+                    yAxisLabelLeftMargin="0"
+                    isHorizontalZoomEnabled="false"
+                    isVerticalZoomEnabled="false">
+        </igx-category-chart>
+    </div>
+</div>

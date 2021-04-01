@@ -1,0 +1,10 @@
+<div class="container">
+    <igx-data-chart height="calc(100% - 60px)" width="100%" subtitle="Renewable Energy Generated">
+        <igx-category-x-axis #xAxis [dataSource]="data" label="Year"></igx-category-x-axis>
+        <igx-numeric-y-axis #yAxis title="TWh" labelLocation="OutsideRight"></igx-numeric-y-axis>
+
+        <igx-line-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="data" valueMemberPath="USA"></igx-line-series>
+
+        <igx-crosshair-layer horizontalLineVisibility="Collapsed" brush="DodgerBlue"></igx-crosshair-layer>
+    </igx-data-chart>
+</div>

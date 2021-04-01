@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="options horizontal">
+        <span>Monthly Temperature Range in LA and NYC for 2020 (in Celsius)</span>
+        <igx-legend #legend orientation="Horizontal"></igx-legend>
+    </div>
+    <div class="container">
+        <igx-data-chart height="calc(100% - 60px)" width="100%" [legend]="legend" isHorizontalZoomEnabled="false"
+            isVerticalZoomEnabled="false">
+
+            <igx-category-x-axis #xAxis label="Month" interval="1" [dataSource]="data"></igx-category-x-axis>
+            <igx-numeric-y-axis #yAxis title="Temperature (in Celsius)" titleLeftMargin="10"></igx-numeric-y-axis>
+
+            <igx-range-column-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="data" title="Los Angeles"
+                lowMemberPath="LA_Low" highMemberPath="LA_High">
+            </igx-range-column-series>
+
+            <igx-range-column-series [xAxis]="xAxis" [yAxis]="yAxis" title="New York City" [dataSource]="data"
+                lowMemberPath="NY_Low" highMemberPath="NY_High">
+            </igx-range-column-series>
+        </igx-data-chart>
+    </div>
+</div>

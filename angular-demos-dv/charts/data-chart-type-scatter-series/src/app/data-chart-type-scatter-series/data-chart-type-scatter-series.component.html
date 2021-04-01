@@ -1,47 +1,45 @@
-<!-- class="container vertical" -->
-
 <div class="container">
-        <div class="options horizontal">
-            <span class="options-label">Type of Scatter Series: </span>
-            <select (change)="onSeriesTypeChanged($event)" >
-                <option>Bubble</option>
-                <option>Point</option>
-                <option>Line</option>
-                <option>Spline</option>
-            </select>
-            <label class="legend-title">Legend: </label>
-            <igx-legend #legend orientation="horizontal"></igx-legend>
-        </div>
-
-        <div class="container">
-            <igx-data-chart #chart
-                isHorizontalZoomEnabled="true"
-                isVerticalZoomEnabled="true"
-                width="100%"
-                height="calc(100% - 60px)"
-                chartTitle="GDP vs Population">
-
-                <igx-numeric-x-axis #xAxis name="xAxis"
-                    isLogarithmic="true"
-                    abbreviateLargeNumbers="true"
-                    title="Population"></igx-numeric-x-axis>
-                <igx-numeric-y-axis #yAxis name="yAxis"
-                    isLogarithmic="true"
-                    abbreviateLargeNumbers="true"
-                    title="Total GDP ($)"></igx-numeric-y-axis>
-
-                    <!-- series are created in the setSeries function
-                        alternatively, you can create series using this code: -->
-                    <!--
-                    <igx-bubble-series
-                        name="series1"
-                        [dataSource]="data"
-                        [xAxis]="xAxis"
-                        [yAxis]="yAxis"
-                        xMemberPath="Population"
-                        yMemberPath="GdpTotal"
-                        radiusMemberPath="GdpPerCapita"  /> -->
-            </igx-data-chart>
-
-        </div>
+    <div class="options horizontal">
+        <span class="options-label">Type of Scatter Series: </span>
+        <select (change)="onSeriesTypeChanged($event)" >
+            <option>Bubble</option>
+            <option>Point</option>
+            <option>Line</option>
+            <option>Spline</option>
+        </select>
+        <label class="legend-title">Legend: </label>
+        <igx-legend #legend orientation="horizontal"></igx-legend>
     </div>
+
+    <div class="container">
+        <igx-data-chart #chart
+            isHorizontalZoomEnabled="true"
+            isVerticalZoomEnabled="true"
+            width="100%"
+            height="calc(100% - 60px)"
+            chartTitle="GDP vs Population">
+
+            <igx-numeric-x-axis #xAxis name="xAxis"
+                isLogarithmic="true"
+                abbreviateLargeNumbers="true"
+                title="Population"></igx-numeric-x-axis>
+            <igx-numeric-y-axis #yAxis name="yAxis"
+                isLogarithmic="true"
+                abbreviateLargeNumbers="true"
+                title="Total GDP ($)"></igx-numeric-y-axis>
+
+                <!-- series are created in the setSeries function
+                    alternatively, you can create series using this code: -->
+                <!--
+                <igx-bubble-series
+                    name="series1"
+                    [dataSource]="data"
+                    [xAxis]="xAxis"
+                    [yAxis]="yAxis"
+                    xMemberPath="Population"
+                    yMemberPath="GdpTotal"
+                    radiusMemberPath="GdpPerCapita"  /> -->
+        </igx-data-chart>
+
+    </div>
+</div>
