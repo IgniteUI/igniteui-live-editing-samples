@@ -20,16 +20,10 @@
     padding: 0rem;
     margin: 0rem;
     position: relative;
-}
-
-.vertical {
-    display: flex;
-    flex-flow: column;
-}
-
-.horizontal {
-    display: flex;
-    flex-flow: row;
+    max-width: none;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
 }
 
 /* used to layout a component in center of its parent */
@@ -70,6 +64,7 @@
 
 .options
 {
+    font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
     position: relative;
     margin: 0rem;
     padding: 0rem;
@@ -136,11 +131,13 @@
     background: #1a70c7;
     border: 0px solid #1b6ec2;
     border-radius: 0.35rem;
-    padding: 0.25rem 1.2rem;
+    padding: 0.25rem 0rem;
     vertical-align: middle;
     cursor: pointer;
     font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
     font-size: 0.875rem;
+    min-width: 6rem;
+    white-space: nowrap;
 }
 
 .options > input[type=button]:hover,
@@ -167,6 +164,7 @@
     margin-top: 0.35rem;
     margin-bottom: 0.35rem;
     margin-left: 0.35rem;
+    margin-right: 0.35rem;
     font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
     padding: 0rem;
     align-items: center;
@@ -276,6 +274,20 @@
     font-family: 'Titillium Web', Verdana, Tahoma, sans-serif;
     font-weight: 600;
     padding-bottom: 0.5rem;
+}
+
+.vertical {
+    display: flex;
+    flex-flow: column;
+}
+
+.horizontal {
+    display: flex;
+    flex-flow: row;
+}
+
+table {
+    border-collapse: inherit;
 }
 
 
