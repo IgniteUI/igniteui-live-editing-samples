@@ -26,10 +26,7 @@ export class DoughnutChartSelectionSampleComponent implements AfterViewInit {
 
         this.selectionType = "Single";
     }
-
-    public chartSliceClickEvent(e: any): void {
-        e.args.isExploded = !e.args.isExploded;
-    }
+   
     public ngAfterViewInit(): void {
         let series: IgxRingSeriesComponent;
         series = this.chart.actualSeries[0] as IgxRingSeriesComponent;

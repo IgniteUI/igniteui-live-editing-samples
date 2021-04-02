@@ -5,11 +5,11 @@
     </div>
 
     <div class="container">
-        <igx-doughnut-chart #chart height="100%" width="80%" (sliceClick)="chartSliceClickEvent($event)">
+        <igx-doughnut-chart #chart height="100%" width="80%">
             <igx-ring-series
             [dataSource]="data"
             valueMemberPath="Value"
-            labelMemberPath="Summary"
+            labelMemberPath="Label"
             legendMemberPath="Label"
             [legend]="legend"
             selectedSliceStroke = "white"
