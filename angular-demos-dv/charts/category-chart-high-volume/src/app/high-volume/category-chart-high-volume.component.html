@@ -1,27 +1,18 @@
 <div class="container vertical">
-        <igx-category-chart
-          yAxisLabelExtent="40"
-          #chart>
-        </igx-category-chart>
+    <div class="options horizontal">
+        <label #loadTimeSpan class="options-label">Load Time: </label>
+        <button igxButton="raised" style="margin-right: 10px;" igxRipple="white"
+            (click)="onGenerateDataClicked()">Generate Data</button>
+        <button igxButton="raised" style="margin-right: 10px;" igxRipple="white" (click)="onAssignDataClicked()">Assign
+            Data</button>
 
-        <div class="container horizontal">
-          <label #loadTimeSpan class="options-label">Load Time: </label>
-          <button igxButton="raised" style="margin-right: 10px;"
-            igxRipple="white"
-            (click)="onGenerateDataClicked()"
-          >Generate Data</button>
-          <button igxButton="raised" style="margin-right: 10px;"
-            igxRipple="white"
-            (click)="onAssignDataClicked()"
-          >Assign Data</button>
-
-          <label class="options-label">Data amount: {{ maxPointsText }}</label>
-          <igx-slider id="slider"
-              minValue="5000"
-              maxValue="2000000"
-              [value]="maxPoints"
-              [continuous]=true
-              (onValueChange)="onMaxPointsChanged($event.value)">
-          </igx-slider>
-        </div>
+        <label class="options-label">Data amount: {{ maxPointsText }}</label>
+        <igx-slider id="slider" minValue="5000" maxValue="2000000" [value]="maxPoints" [continuous]=true
+            (onValueChange)="onMaxPointsChanged($event.value)">
+        </igx-slider>
     </div>
+    <div class="container">
+        <igx-category-chart height="calc(100% - 60px)" yAxisLabelExtent="40" #chart>
+        </igx-category-chart>
+    </div>
+</div>

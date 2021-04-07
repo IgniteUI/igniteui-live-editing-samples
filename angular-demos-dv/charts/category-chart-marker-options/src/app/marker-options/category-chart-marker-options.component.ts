@@ -8,34 +8,23 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 })
 export class CategoryChartMarkerOptionsComponent {
 
-    public chartType: string = "Auto";
-    public data: any;
+    public chartType: string = "Line";
+    public markerType: string = "Circle";
+    public data: any[];
 
     constructor() {
-        const dataUSA: any = [
-            { Year: "1996", USA: 148 },
-            { Year: "2000", USA: 142 },
-            { Year: "2004", USA: 134 },
-            { Year: "2008", USA: 131 },
-            { Year: "2012", USA: 135 },
-            { Year: "2016", USA: 146 }
+        this.data = [
+            { Year: "2009", Europe: 31, China: 21, USA: 19 },
+            { Year: "2010", Europe: 43, China: 26, USA: 24 },
+            { Year: "2011", Europe: 66, China: 29, USA: 28 },
+            { Year: "2012", Europe: 69, China: 32, USA: 26 },
+            { Year: "2013", Europe: 58, China: 47, USA: 38 },
+            { Year: "2014", Europe: 40, China: 46, USA: 31 },
+            { Year: "2015", Europe: 78, China: 50, USA: 19 },
+            { Year: "2016", Europe: 13, China: 90, USA: 52 },
+            { Year: "2017", Europe: 78, China: 132, USA: 50 },
+            { Year: "2018", Europe: 40, China: 134, USA: 34 },
+            { Year: "2019", Europe: 80, China: 96, USA: 38 },
         ];
-        const dataChina: any = [
-            { Year: "1996", China: 110 },
-            { Year: "2000", China: 115 },
-            { Year: "2004", China: 121 },
-            { Year: "2008", China: 129 },
-            { Year: "2012", China: 115 },
-            { Year: "2016", China: 112 }
-        ];
-        const dataEurope: any = [
-            { Year: "1996", Europe: 95 },
-            { Year: "2000", Europe: 91 },
-            { Year: "2004", Europe: 86 },
-            { Year: "2008", Europe: 65 },
-            { Year: "2012", Europe: 77 },
-            { Year: "2016", Europe: 88 }
-        ];
-        this.data = [ dataEurope, dataChina, dataUSA ];
     }
 }

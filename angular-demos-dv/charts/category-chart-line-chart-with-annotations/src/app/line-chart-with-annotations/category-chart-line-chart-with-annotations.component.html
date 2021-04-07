@@ -1,0 +1,37 @@
+<div class="container vertical">
+    <div class="options vertical">
+        <div class="options horizontal" >
+            <label class="options-label">Annotations: </label>                  
+            <label class="options-item"><input [(ngModel)]="sampleOptions.calloutsVisible" type="checkbox" />Callouts</label>
+            <label class="options-item"><input [(ngModel)]="sampleOptions.finalValuesVisible" type="checkbox" />Final Value</label>
+            <label class="options-item"><input [(ngModel)]="sampleOptions.crosshairAnnotations" type="checkbox" />Crosshairs:</label>
+            <select class="options-select" [(ngModel)]="sampleOptions.crosshairsDisplay">
+                <option>None</option>
+                <option>Both</option>
+            </select>      
+        </div>
+    </div>
+
+    <div class="container">
+        <igx-category-chart height="calc(100% - 60px)" width="100%"
+            [dataSource]="data"
+            chartType="line"
+            yAxisTitle="TWh"
+            yAxisTitleLeftMargin="5"
+            yAxisLabelLocation="OutsideRight"
+            subtitle="Renewable Electricity Generated"
+            thickness="2"            
+            crosshairsSnapToData="false"
+            [includedProperties]="include"
+            [crosshairsDisplayMode]="sampleOptions.crosshairsDisplay"
+            [crosshairsAnnotationEnabled]="sampleOptions.crosshairAnnotations"
+            [finalValueAnnotationsVisible]="sampleOptions.finalValuesVisible"
+            [calloutsVisible]="sampleOptions.calloutsVisible"
+            [calloutsDataSource]="calloutData"
+            calloutsXMemberPath="index"
+            calloutsYMemberPath="value"
+            calloutsLabelMemberPath="label">
+        </igx-category-chart>
+
+    </div>
+</div>

@@ -1,12 +1,12 @@
 <div class="container vertical">
 
-    <div class="container horizontal">
+    <div class="options horizontal">
         <div class="vertical">
             <span class="options-label">Refresh Interval: {{ refreshIntervalText }} </span>
             <igx-slider class="slider"
             [minValue]="5"
             [maxValue]="1000"
-            [value]="refreshInterval"
+            [(ngModel)]="refreshInterval"
             [continuous]=true
             (onValueChange)="onRefreshFrequencyChanged($event.value)"></igx-slider>
         </div>
@@ -15,7 +15,7 @@
             <igx-slider class="slider"
             [minValue]="1000"
             [maxValue]="1000000"
-            [value]="maxPoints"
+            [(ngModel)]="maxPoints"
             [continuous]=true
             (onValueChange)="onMaxPointsChanged($event.value)"></igx-slider>
         </div>
@@ -35,11 +35,11 @@
     </div>
 
     <div class="container">
-            <igx-category-chart height="calc(100% - 60px)"
-                [dataSource]="data"
-                [pixelScalingRatio]="scalingRatio"
-                yAxisLabelExtent="40"
-                #chart>
-            </igx-category-chart>
+        <igx-category-chart height="calc(100% - 60px)"
+            [dataSource]="data"
+            [pixelScalingRatio]="scalingRatio"
+            yAxisLabelExtent="40"
+            #chart>
+        </igx-category-chart>
     </div>
 </div>
