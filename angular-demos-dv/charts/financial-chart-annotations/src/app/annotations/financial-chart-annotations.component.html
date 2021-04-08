@@ -1,24 +1,23 @@
 <div class="container vertical">
     <div class="options horizontal">
-        <div>
-            <label class="optionItem"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
-            <label class="optionItem"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value</label>
-            <label class="optionItem">Crosshairs</label>
-            <select class="select" [(ngModel)]="options.crosshairAnnotations">
-                <option>None</option>
-                <option>Both</option>
-            </select>
-            <label class="optionItem">Item Tooltip</label>
-            <select class="select" [(ngModel)]="options.itemToolTip">
-                <option>None</option>
-                <option>Item</option>
-            </select>
-            <label class="optionItem">Markers</label>
-            <select class="select" [(ngModel)]="options.markerTypes">
-                <option>None</option>
-                <option>Circle</option>
-            </select>
-        </div>
+        <label class="options-label">Annotations: </label>
+        <label class="options-item"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
+        <label class="option-item"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value</label>
+        <label class="options-item">Crosshairs</label>
+        <select class="select" [(ngModel)]="options.crosshairAnnotations">
+            <option>None</option>
+            <option>Both</option>
+        </select>
+        <label class="optionItem">Item Tooltip</label>
+        <select class="select" [(ngModel)]="options.itemToolTip">
+            <option>None</option>
+            <option>Item</option>
+        </select>
+        <label class="optionItem">Markers</label>
+        <select class="select" [(ngModel)]="options.markerTypes">
+            <option>None</option>
+            <option>Circle</option>
+        </select>
     </div>
     <div class="container">
         <igx-financial-chart #financialChart height="calc(100% - 60px)" width="100%"

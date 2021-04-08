@@ -1,16 +1,14 @@
 <div class="container">
     <div class="options vertical">
-        <span class="legend-title">Total Population (Gapminder, HYDE & UN): 1k - 181M  </span>
+        <span class="legend-title">Total Population for Selected Continents</span>
         <igx-legend #legend orientation="Horizontal"></igx-legend>
     </div>
     <div class="container">
         <igx-data-chart height="calc(100% - 60px)" width="100%" [legend]="legend" isHorizontalZoomEnabled="true"
             isVerticalZoomEnabled="true">
 
-            <igx-numeric-x-axis #xAxis title="Death Rate, crude (per 1,000 people)" minimumValue="2" maximumValue="16"
-                interval="1"></igx-numeric-x-axis>
-            <igx-numeric-y-axis #yAxis title="Birth Rate, crude (per 1,000 people)" minimumValue="0" maximumValue="60"
-                interval="20"></igx-numeric-y-axis>
+            <igx-numeric-x-axis #xAxis title="Death Rate (per 1,000 people)" interval="1" minimumValue="4" maximumValue="16"></igx-numeric-x-axis>
+            <igx-numeric-y-axis #yAxis title="Birth Rate (per 1,000 people)" interval=10 minimumValue="0" maximumValue="60"></igx-numeric-y-axis>
 
             <igx-bubble-series #series1 [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="africaDataSource" xMemberPath="DeathRate"
                 yMemberPath="BirthRate" radiusMemberPath="TotalPopulation" markerType="Circle" title="Africa">

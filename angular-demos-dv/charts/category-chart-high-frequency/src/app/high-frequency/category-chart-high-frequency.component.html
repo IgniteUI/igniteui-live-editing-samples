@@ -1,43 +1,20 @@
 <div class="container vertical">
-
     <div class="options horizontal">
-        <div class="vertical">
-            <span class="options-label">Refresh Interval: {{ refreshIntervalText }} </span>
-            <igx-slider class="slider"
-            [minValue]="5"
-            [maxValue]="1000"
-            [(ngModel)]="refreshInterval"
-            [continuous]=true
-            (onValueChange)="onRefreshFrequencyChanged($event.value)"></igx-slider>
-        </div>
-        <div class="vertical">
-            <span class="options-label">Data Points: {{ maxPointsText }}</span>
-            <igx-slider class="slider"
-            [minValue]="1000"
-            [maxValue]="1000000"
-            [(ngModel)]="maxPoints"
-            [continuous]=true
-            (onValueChange)="onMaxPointsChanged($event.value)"></igx-slider>
-        </div>
-        <button igxButton="raised"
-        igxRipple="white"
-        (click)="onChangeAmountClicked()"
-        >Assign Data</button>
-
-        <div class="vertical">
-            <span class="options-label">FPS: </span>
-            <span #fpsSpan class="options-label"> 60</span>
-        </div>
-        <div class="horizontal">
-            <span class="options-label">Optimize Scaling: </span>
-            <input class="options-checkbox" type="checkbox" (change)="onOptimizeScalingChanged($event.target.checked)"/>
-        </div>
+        <button style="width: 5rem" (click)="onTimerStartStopClick()">{{timerStatusText}}</button>
+        <label class="options-label">Refresh: </label>
+        <label class="options-value">{{ refreshIntervalText }}</label>
+        <input class="options-slider" type="range" min="10" max="1000" step="10" [value]="refreshInterval" (change)="onRefreshFrequencyChanged($event.target.value)"/>
+    </div>
+    <div class="options horizontal">
+        <button (click)="onChangeAmountClicked()">Generate</button>
+        <label class="options-label">Points: </label>
+        <label class="options-value">{{maxPointsText}}</label>
+        <input class="options-slider" type="range" min="1000" max="50000" step="100" [value]="maxPoints" (change)="onMaxPointsChanged($event.target.value)" />
     </div>
 
     <div class="container">
         <igx-category-chart height="calc(100% - 60px)"
             [dataSource]="data"
-            [pixelScalingRatio]="scalingRatio"
             yAxisLabelExtent="40"
             #chart>
         </igx-category-chart>

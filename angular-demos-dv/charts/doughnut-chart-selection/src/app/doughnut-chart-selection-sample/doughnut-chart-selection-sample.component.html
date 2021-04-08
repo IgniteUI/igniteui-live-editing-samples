@@ -3,36 +3,37 @@
         <div class="options vertical">
             <span class="legend-title">Global Electricity Demand by Energy Use</span>
             <div class="legend">
-                <igx-item-legend #legend height="100px" width="100px"></igx-item-legend>
+                <igx-item-legend #legend height="100px" width="100px" orientation="horizontal"></igx-item-legend>
             </div>
-        </div>    
+        </div>
     </div>
 
     <div class="container relative">
         <div class="container-overlay">
             <igx-doughnut-chart #chart height="100%" width="100%"
-                allowSliceSelection="true" innerExtent="0.6"           
+                allowSliceSelection="true" innerExtent="0.6"
                 (sliceClick)="OnSliceClick($event)"
                 selectedSliceStroke="White"
                 selectedSliceFill="Gray"
                 selectedSliceStrokeThickness="1"
                 selectedSliceOpacity="0.75">
-            <igx-ring-series
-                [dataSource]="data"
-                valueMemberPath="Value"
-                labelMemberPath="Label"
-                legendMemberPath="Label"
-                [legend]="legend"
-                selectedSliceStroke = "white"
-                selectedSliceFill= "rgb(143,143,143)"
-                selectedSliceOpacity =1.0
-                selectedSliceStrokeThickness=2
-                labelsPosition="OutsideEnd"
-                labelExtent="30"
-                radiusFactor="0.6" >
-            </igx-ring-series>
+                <igx-ring-series
+                    [dataSource]="data"
+                    valueMemberPath="Value"
+                    labelMemberPath="Summary"
+                    legendLabelMemberPath="Label"
+                    [legend]="legend"
+                    selectedSliceStroke = "white"
+                    selectedSliceFill= "rgb(143,143,143)"
+                    selectedSliceOpacity =1.0
+                    selectedSliceStrokeThickness=2
+                    startAngle=260
+                    labelsPosition="OutsideEnd"
+                    labelExtent="30"
+                    radiusFactor="0.6" >
+                </igx-ring-series>
             </igx-doughnut-chart>
-        
+
         <div class="overlay-center" style="line-height: 1.1">
             <label class="options-label" style="font-size: 1.2rem;"><span [textContent]="SelectedSliceLabel"></span></label>
             <label class="options-value" style="font-size: 2.2rem;"><span [textContent]="SelectedSliceValue"></span></label>

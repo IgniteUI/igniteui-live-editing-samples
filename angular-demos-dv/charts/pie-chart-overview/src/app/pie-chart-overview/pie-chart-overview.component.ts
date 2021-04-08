@@ -1,21 +1,21 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: "app-pie-chart-overview",
-  styleUrls: ["./pie-chart-overview.component.scss"],
-  templateUrl: "./pie-chart-overview.component.html"
+    selector: "app-pie-chart-overview",
+    styleUrls: ["./pie-chart-overview.component.scss"],
+    templateUrl: "./pie-chart-overview.component.html"
 })
 export class PieChartDataSampleComponent {
 
-public data: any;
+    public data: any;
 
-constructor() {
-    this.data = [
-            { Value: 37, Label: "Space Cooling", },
-            { Value: 25, Label: "Residential Appliance", },
-            { Value: 12, Label: "Heating", },
-            { Value: 8, Label: "Lighting", },                
-            { Value: 18, Label: "Other Services", }
-         ];
-  }
+    constructor() {
+        this.data = [
+            { MarketShare: 25, Company: "Residential Appliance", },
+            { MarketShare: 12, Company: "Heating", },
+            { MarketShare: 8, Company: "Lighting", },
+            { MarketShare: 18, Company: "Other Services", },
+            { MarketShare: 37, Company: "Space Cooling", }
+        ];
+    }
 }

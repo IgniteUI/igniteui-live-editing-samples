@@ -5,40 +5,39 @@
     </div>
 
     <div class="container">
-        <igx-data-chart #chart isHorizontalZoomEnabled="true" 
+        <igx-data-chart #chart isHorizontalZoomEnabled="true"
                 isVerticalZoomEnabled="true" width="100%"
-                height="calc(100% - 60px)" 
-                [dataSource]="data" 
+                height="calc(100% - 60px)"
+                [dataSource]="data"
                 [legend]="legend"
                 chartTitle="Facebook's Consolidated Statements of Income for 2018"
                 titleHorizontalAlignment="Left"
                 titleLeftMargin="25"
                 titleTopMargin="10"
                 titleBottomMargin="10">
-        <igx-numeric-y-axis title="Millions of Dollars"
-                titleLeftMargin="10" 
-                minimumValue="0" 
-                maximumValue="60"
-         #yAxis>
-        </igx-numeric-y-axis>
-        <igx-category-x-axis label="Category" overlap="1" #xAxis>
-        </igx-category-x-axis>
+            <igx-category-x-axis label="Category" overlap="1" #xAxis></igx-category-x-axis>
+            <igx-numeric-y-axis #yAxis
+                    title="Millions of Dollars"
+                    titleLeftMargin="10"
+                    minimumValue="0"
+                    maximumValue="60">
+            </igx-numeric-y-axis>
 
-        <igx-waterfall-series valueMemberPath="Value" 
-                [xAxis]="xAxis" 
-                [yAxis]="yAxis"
-                showDefaultTooltip="true"
-                isTransitionInEnabled="true">
-        </igx-waterfall-series>
+            <igx-waterfall-series valueMemberPath="Value"
+                    [xAxis]="xAxis"
+                    [yAxis]="yAxis"
+                    showDefaultTooltip="true"
+                    isTransitionInEnabled="true">
+            </igx-waterfall-series>
 
-        <igx-waterfall-series valueMemberPath="NetIncomeValue"
-                [xAxis]="xAxis" 
-                [yAxis]="yAxis"
-                Brush="#7446B9"
-                Outline="#7446B9"
-                showDefaultTooltip="true"
-                isTransitionInEnabled="true">
-        </igx-waterfall-series>
+            <igx-waterfall-series valueMemberPath="NetIncomeValue"
+                    [xAxis]="xAxis"
+                    [yAxis]="yAxis"
+                    Brush="#7446B9"
+                    Outline="#7446B9"
+                    showDefaultTooltip="true"
+                    isTransitionInEnabled="true">
+            </igx-waterfall-series>
         </igx-data-chart>
     </div>
 </div>

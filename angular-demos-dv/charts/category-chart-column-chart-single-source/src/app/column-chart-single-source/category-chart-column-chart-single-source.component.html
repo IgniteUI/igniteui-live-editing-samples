@@ -2,15 +2,17 @@
     <div class="options vertical">
         <span class="legend-title">NYC Average Temperature</span>
     </div>
-    <igx-category-chart height="calc(100% - 60px)" width="100%"
-            [dataSource]="data"
-            chartType="Column"
-            xAxisInterval="1"
-            yAxisTitle="Temperature in Degrees Celsius"
-            yAxisTitleLeftMargin="10"
-            yAxisTitleRightMargin="5"
-            yAxisLabelLeftMargin="0"
-            isHorizontalZoomEnabled="false"
-            isVerticalZoomEnabled="false">
-    </igx-category-chart>
+    <div class="container">
+        <igx-category-chart height="calc(100% - 60px)" width="100%"
+                [dataSource]="data"
+                chartType="Column"
+                xAxisInterval="1"
+                yAxisTitle="Temperature in Degrees Celsius"
+                yAxisTitleLeftMargin="10"
+                yAxisTitleRightMargin="5"
+                yAxisLabelLeftMargin="0"
+                isHorizontalZoomEnabled="false"
+                isVerticalZoomEnabled="false">
+        </igx-category-chart>
+    </div>
 </div>
