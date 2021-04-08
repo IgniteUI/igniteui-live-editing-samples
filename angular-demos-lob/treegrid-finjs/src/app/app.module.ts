@@ -20,6 +20,7 @@ import { LocalDataService } from "./grid-finjs/localData.service";
 import { TreeGridGroupingPipe } from "./treegrid-finjs/tree-grid-grouping.pipe";
 import { HttpClientModule } from "@angular/common/http";
 import { SignalRService } from "./services/signal-r.service";
+import { IgxTreeGridGroupAreaComponent } from "./treegrid-finjs/tree-grid-group-area.component";
 
 
 
@@ -28,7 +29,8 @@ import { SignalRService } from "./services/signal-r.service";
   declarations: [
 	AppComponent,
 	TreeGridFinJSComponent,
-	TreeGridGroupingPipe
+	TreeGridGroupingPipe,
+	IgxTreeGridGroupAreaComponent
 ],
   imports: [
 	BrowserModule,
