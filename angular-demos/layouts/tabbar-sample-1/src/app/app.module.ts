@@ -3,7 +3,10 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxBottomNavModule } from "igniteui-angular";
+import { 
+	IgxBottomNavModule,
+	IgxIconModule
+ } from "igniteui-angular";
 import { TabbarSample1Component } from "./tabbar-sample-1/tabbar-sample-1.component";
 
 
@@ -18,7 +21,8 @@ import { TabbarSample1Component } from "./tabbar-sample-1/tabbar-sample-1.compon
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxBottomNavModule
+	IgxBottomNavModule,
+	IgxIconModule
 ],
   providers: [],
   entryComponents: [],

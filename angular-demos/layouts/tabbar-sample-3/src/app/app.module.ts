@@ -5,7 +5,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { TabbarSample3Module } from "./tabbar-sample-3/tabbar-sample-3.module";
 import { TabbarSample3Component } from "./tabbar-sample-3/components/tabbar-sample-3.component";
-import { IgxBottomNavModule } from "igniteui-angular";
+import { 
+	IgxBottomNavModule,
+	IgxIconModule
+ } from "igniteui-angular";
 import { RouterModule } from "@angular/router";
 import { TabbarView1Component } from "./views/view1/view1.component";
 import { TabbarView2Component } from "./views/view2/view2.component";
@@ -24,6 +27,7 @@ import { TabbarView3Component } from "./views/view3/view3.component";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxBottomNavModule,
+	IgxIconModule,
 	TabbarSample3Module,
 	RouterModule.forRoot([
                         { path: "tabbar-view1", component: TabbarView1Component },
