@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { SampleScatterStats } from "../SampleScatterStats";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-data-chart-axis-crossing',
   templateUrl: './data-chart-axis-crossing.component.html',
   styleUrls: ['./data-chart-axis-crossing.component.scss']
 })
-export class DataChartAxisCrossingComponent implements OnInit {   
+export class DataChartAxisCrossingComponent {
 
     public SinData: any[];
     public CosData: any[];
@@ -14,11 +13,11 @@ export class DataChartAxisCrossingComponent implements OnInit {
     public YAxisCrossingValue : number = 0;
     public XAxisCrossingValue : number = 0;
 
-    constructor() {       
+    constructor() {
 
       this.SinData= [];
       this.CosData= [];
-      
+
         for (let i = -360; i <= 360; i+=10)
         {
             const radians = (i * Math.PI) / 180;
@@ -30,15 +29,11 @@ export class DataChartAxisCrossingComponent implements OnInit {
         }
     }
 
-    public OnXAxisCrossingValueChanged(e : any) {        
+    public OnXAxisCrossingValueChanged(e : any) {
         this.XAxisCrossingValue = e.target.value;
-    } 
+    }
 
-    public OnYAxisCrossingValueChanged(e : any) {        
+    public OnYAxisCrossingValueChanged(e : any) {
         this.YAxisCrossingValue = e.target.value;
     }
-
-    ngOnInit() {
-    }
-
 }

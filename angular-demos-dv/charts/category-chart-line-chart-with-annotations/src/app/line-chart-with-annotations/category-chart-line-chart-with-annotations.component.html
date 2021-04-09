@@ -1,15 +1,18 @@
 <div class="container vertical">
-    <div class="options vertical">
-        <div class="options horizontal" >
-            <label class="options-label">Annotations: </label>                  
-            <label class="options-item"><input [(ngModel)]="sampleOptions.calloutsVisible" type="checkbox" />Callouts</label>
-            <label class="options-item"><input [(ngModel)]="sampleOptions.finalValuesVisible" type="checkbox" />Final Value</label>
-            <label class="options-item"><input [(ngModel)]="sampleOptions.crosshairAnnotations" type="checkbox" />Crosshairs:</label>
-            <select class="options-select" [(ngModel)]="sampleOptions.crosshairsDisplay">
-                <option>None</option>
-                <option>Both</option>
-            </select>      
-        </div>
+    <div class="options horizontal">
+        <label class="options-label">Annotations: </label>
+        <label class="options-item">
+            <input type="checkbox" checked=true (change)="OnCrosshairVisibilityChanged($event)" /> Crosshair
+        </label>
+        <label class="options-item">
+            <input type="checkbox" checked=true (change)="OnCalloutsVisibilityChanged($event)" /> Callouts
+        </label>
+        <label class="options-item">
+            <input type="checkbox" checked=true (change)="OnFinalValueVisibilityChanged($event)" /> Final Values
+        </label>
+        <label class="options-item">
+            <input type="checkbox" checked=true (change)="OnMarkersVisibilityChanged($event)" /> Markers
+        </label>
     </div>
 
     <div class="container">
@@ -20,18 +23,17 @@
             yAxisTitleLeftMargin="5"
             yAxisLabelLocation="OutsideRight"
             subtitle="Renewable Electricity Generated"
-            thickness="2"            
+            thickness="2"
             crosshairsSnapToData="false"
-            [includedProperties]="include"
-            [crosshairsDisplayMode]="sampleOptions.crosshairsDisplay"
-            [crosshairsAnnotationEnabled]="sampleOptions.crosshairAnnotations"
-            [finalValueAnnotationsVisible]="sampleOptions.finalValuesVisible"
-            [calloutsVisible]="sampleOptions.calloutsVisible"
+            [crosshairsDisplayMode]="crosshairsDisplay"
+            [crosshairsAnnotationEnabled]="crosshairAnnotations"
+            [finalValueAnnotationsVisible]="finalValuesVisible"
+            [calloutsVisible]="calloutsVisible"
             [calloutsDataSource]="calloutData"
+            [markerTypes]="markerType"
             calloutsXMemberPath="index"
             calloutsYMemberPath="value"
             calloutsLabelMemberPath="label">
         </igx-category-chart>
-
     </div>
 </div>

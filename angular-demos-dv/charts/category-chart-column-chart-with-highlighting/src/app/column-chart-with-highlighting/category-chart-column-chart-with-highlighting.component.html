@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="options vertical">
+        <span class="legend-title">Temperatures in LA and NYC</span>
+        <div class="overlay-right" >
+            <div class="options horizontal" >
+                <label class="options-label">Enable Highlighting:</label>
+                <label class="options-item"><input [(ngModel)]="isSeriesHighlightingEnabled" type="checkbox" />Series </label>
+                <label class="options-item"><input [(ngModel)]="isItemHighlightingEnabled" type="checkbox" />Item </label>
+                <label class="options-item"><input [(ngModel)]="isCategoryHighlightingEnabled" type="checkbox" />Category </label>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <igx-category-chart #chart height="calc(100% - 60px)" width="100%"
+            [dataSource]="data"
+            chartType="Column"
+            [isCategoryHighlightingEnabled]="isCategoryHighlightingEnabled"
+            [isItemHighlightingEnabled]="isItemHighlightingEnabled"
+            [isSeriesHighlightingEnabled]="isSeriesHighlightingEnabled"
+            yAxisTitle="Temperatures in Celsius"
+            yAxisMinimumValue="0"
+            xAxisInterval="1">
+        </igx-category-chart>
+    </div>
+</div>

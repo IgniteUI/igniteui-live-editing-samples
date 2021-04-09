@@ -9,7 +9,6 @@ import {
     ViewChild
 } from "@angular/core";
 import { IgxCategoryChartComponent } from "igniteui-angular-charts";
-import { ENGINE_METHOD_CIPHERS } from "node:constants";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,

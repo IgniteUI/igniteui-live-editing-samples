@@ -1,15 +1,40 @@
-<igx-financial-chart height="calc(100% - 60px)" width="100%"
-    [dataSource]="data"
-    isHorizontalZoomEnabled="true"
-    isVerticalZoomEnabled="false"
-    isLegendVisible="true"
+<div class="container vertical">
+    <div class="options horizontal">
+        <label class="options-label">Annotations: </label>
+        <label class="options-item">
+            <select (change)="OnTrendlineTypeChanged($event)">
+                <option>CubicFit</option>
+                <option>LinearFit</option>
+                <option>QuinticFit</option>
+                <option>QuarticFit</option>
+                <option>ExponentialFit</option>
+                <option>PowerLawFit</option>
+                <option>LogarithmicFit</option>
+                <option>CumulativeAverage</option>
+                <option>ExponentialAverage</option>
+                <option>SimpleAverage</option>
+                <option>ModifiedAverage</option>
+                <option>WeightedAverage</option>
+                <option>None</option>
+            </select>
+        </label>
+    </div>
 
-    trendLineType="QuinticFit"
-    trendLineThickness="2"
-    trendLineBrushes="Green, Blue"
-
-    brushes="Green, Blue"
-    negativeBrushes="Red"
-    zoomSliderType="none"
-    chartType="line">
-</igx-financial-chart>
+    <div class="container vertical">
+        <igx-financial-chart width="100%"
+            height="calc(100% - 60px)"
+            chartType=Bar
+            thickness=2
+            [dataSource]="data"
+            [trendLineType]="trendlineType"
+            trendLineThickness=2
+            trendLinePeriod=10
+            trendLineBrushes="rgba(0, 101, 209, 1)"
+            chartTitle="Microsoft Trend"
+            subtitle="Between 2013 and 2017"
+            zoomSliderType="None"
+            isHorizontalZoomEnabled="false"
+            isVerticalZoomEnabled="false">
+        </igx-financial-chart>
+    </div>
+</div>
