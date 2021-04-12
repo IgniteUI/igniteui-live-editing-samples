@@ -5,9 +5,12 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxIconModule,
-	IgxTabsModule
+	IgxTabsModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxRippleModule
  } from "igniteui-angular";
-import { TabsSample3Component } from "./tabs-sample-3/tabs-sample-3.component";
+import { TabsHeaderPrefixSuffixComponent } from "./tabs-header-prefix-suffix/tabs-header-prefix-suffix";
 
 
 
@@ -15,14 +18,17 @@ import { TabsSample3Component } from "./tabs-sample-3/tabs-sample-3.component";
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TabsSample3Component
+	TabsHeaderPrefixSuffixComponent
 ],
   imports: [
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxIconModule,
-	IgxTabsModule
+	IgxTabsModule,
+	IgxButtonGroupModule,
+	IgxButtonModule,
+	IgxRippleModule
 ],
   providers: [],
   entryComponents: [],
