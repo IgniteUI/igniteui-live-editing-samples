@@ -1,37 +1,28 @@
 <div class="container vertical">
-    <div class="options horizontal">
-        <span>Chart Type: </span>
-        <select [(ngModel)]="chartType">
-            <option>Auto</option>
-            <option>Area</option>
-            <option>Line</option>
-            <option>Column</option>
-            <option>Point</option>
-            <option>Spline</option>
-            <option>SplineArea</option>
-            <option>StepArea</option>
-            <option>StepLine</option>
-            <option>Waterfall</option>
-        </select>
-    </div>
-    <div class="container">
-        <igx-category-chart height="calc(100% - 60px)" width="100%"
-            [dataSource]="data"
-            chartTitle="Energy Production by Country"
-            yAxisMinimumValue="0"
-            [tooltipTemplate]="valueTooltip"
-            [chartType]="chartType">
-        </igx-category-chart>
-    </div>
-
-    <ng-template let-series="series" let-item="item" #valueTooltip>
-        <div>
-            <span [style.color]="series.actualBrush">Production of {{item.Country}}<br/></span>
-            <span> Coal: {{item.Coal | number}}<br/></span>
-            <span> Oil: {{item.Oil | number}}<br/></span>
-            <span> Gas: {{item.Gas | number}}<br/></span>
-            <span> Nuclear: {{item.Nuclear | number}}<br/></span>
-            <span> Hyrdo: {{item.Hydro | number}}<br/></span>
+    <div class="options vertical">
+        <span class="legend-title">Highest Grossing Movie Franchises</span>
+        <div class="legend">
+            <igx-legend #legend orientation="horizontal"></igx-legend>
         </div>
-    </ng-template>
+    </div>
+    <div class="container vertical">
+        <igx-category-chart height="calc(100% - 60px)" width="100%"
+                       [dataSource]="data"
+                       isTransitionInEnabled="true"
+                       xAxisInterval="1"
+                       chartType="Column"
+                       toolTipType="None"
+                       (seriesAdded)="onSeriesAdded($event)"
+                       >
+        </igx-category-chart>
+
+
+        <ng-template let-series="series" let-item="item" #valueTooltip>
+            <div class="tooltipVertical">
+                <span class="tooltipTitle">Franchise: {{item.Franchise}}<br/></span>
+                <span class="tooltipLbl">Revenue of All Movies: {{item.TotalRevenue}}<br/></span>
+                <span class="tooltipLbl">Highest Grossing Movie: $ {{item.HighestGrossing}}<br/></span>
+            </div>
+        </ng-template>
+    </div>
 </div>

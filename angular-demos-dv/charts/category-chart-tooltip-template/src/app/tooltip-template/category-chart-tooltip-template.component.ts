@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { ChangeDetectionStrategy, Component, ViewChild, TemplateRef } from "@angular/core";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -8,17 +8,24 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 })
 export class CategoryChartTooltipTemplateComponent {
 
-    public chartType: string = "Auto";
-    public data: any;
+    public data = [
+        { Franchise: "Marvel Universe All Films", TotalRevenue: 22.55, HighestGrossing: 2.8 },
+        { Franchise: "Star Wars", TotalRevenue: 10.32, HighestGrossing: 2.07 },
+        { Franchise: "Harry Potter", TotalRevenue: 9.19, HighestGrossing: 1.34 },
+        { Franchise: "Avengers", TotalRevenue: 7.76, HighestGrossing: 2.8 },
+        { Franchise: "Spider Man", TotalRevenue: 7.22, HighestGrossing: 1.28 },
+        { Franchise: "James Bond", TotalRevenue: 7.12, HighestGrossing: 1.11 }
+    ];
+
+    @ViewChild('valueTooltip', { static: true })
+    public valueTooltip: TemplateRef<object>;
 
     constructor() {
-        this.data = [
-            { Country: "Canada", Coal: 400, Oil: 100, Gas: 175, Nuclear: 225, Hydro: 350 },
-            { Country: "China", Coal: 925, Oil: 200, Gas: 350, Nuclear: 400, Hydro: 625 },
-            { Country: "Russia", Coal: 550, Oil: 200, Gas: 250, Nuclear: 475, Hydro: 425 },
-            { Country: "Australia", Coal: 450, Oil: 100, Gas: 150, Nuclear: 175, Hydro: 350 },
-            { Country: "United States", Coal: 800, Oil: 250, Gas: 475, Nuclear: 575, Hydro: 750 },
-            { Country: "France", Coal: 375, Oil: 150, Gas: 350, Nuclear: 275, Hydro: 325 }
-        ];
+    }
+
+    public onSeriesAdded(e: any) {
+        if (e.args.series) {
+            e.args.series.tooltipTemplate = this.valueTooltip;
+        }
     }
 }
