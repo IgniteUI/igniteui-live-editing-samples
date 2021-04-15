@@ -4,6 +4,27 @@
 @include igx-core();
 @include igx-theme($default-palette);
 
+// excluding styling of DV controls:
+@include igx-typography();
+@include igx-theme(
+    $palette: $light-material-palette,
+    $schema: $light-material-schema,
+    $exclude: (
+        'bullet-graph',
+        'linear-gauge',
+        'radial-gauge',
+        'category-chart',
+        'data-chart',
+        'doughnut-chart',
+        'financial-chart',
+        'funnel-chart',
+        'geo-map',
+        'pie-chart',
+        'shape-chart',
+        'sparkline',
+    )
+);
+
 /* autoprefixer grid: on */
 html,
 body {
@@ -92,7 +113,7 @@ body {
     }
 }
 
-.headerAlignSyle {
+.headerAlignStyle {
     text-align: right !important;
 }
 
