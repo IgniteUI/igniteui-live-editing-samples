@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container sample">
     <div class="options horizontal">
         <span class="options-item">Default Drag Option:</span>
         <select [(ngModel)]="defaultInteraction">
@@ -36,7 +36,7 @@
     <div class="container">
         <igx-data-chart #chart [dataSource]="data"
             width="100%"
-            height="calc(100% - 85px)"
+            height="100%"
             [defaultInteraction]="defaultInteraction"
             [dragModifier]="zoomModifier"
             [panModifier]="panModifier"

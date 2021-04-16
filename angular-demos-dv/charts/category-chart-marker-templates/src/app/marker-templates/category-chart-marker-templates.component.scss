@@ -1,6 +1,6 @@
 
-/* auto-generated from ./templates/*.css files */
-
+/* auto-generated from ./templates/*.css files */ 
+ 
 @import url('https://fonts.googleapis.com/css?family=Titillium+Web');
 
 /* ============ container styles  ============ */
@@ -58,6 +58,15 @@
     top: 0;
     left: 0;
     position: absolute;
+}
+
+.sample {
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+    width: 100%;
+    height: 100%;
 }
 
 /* ============ option styles ============ */

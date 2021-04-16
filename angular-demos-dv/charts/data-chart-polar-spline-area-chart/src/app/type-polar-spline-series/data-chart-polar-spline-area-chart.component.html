@@ -1,4 +1,4 @@
-<div class="container vertical">
+<div class="container sample">
     <div class="options vertical">
         <span class="legend-title">Wind Speed</span>
         <igx-legend #legend orientation="Horizontal"></igx-legend>
@@ -8,7 +8,7 @@
         <igx-data-chart #chart
             isHorizontalZoomEnabled="true"
             isVerticalZoomEnabled="true"
-            width="100%" height="calc(100% - 60px)"
+            width="100%" height="100%"
             [dataSource]="data"
             [legend]="legend">
         <igx-numeric-angle-axis #angleAxis name="angleAxis"

@@ -1,4 +1,4 @@
-<div class="container vertical">
+<div class="container sample">
     <div class="options horizontal">
         <label >yAxis Mode: </label>
         <select [(ngModel)]="yAxisMode">
@@ -12,7 +12,7 @@
         </select>
     </div>
     <div class="container">
-        <igx-financial-chart height="calc(100% - 60px)" width="100%"
+        <igx-financial-chart height="100%" width="100%"
             [dataSource]="data"
             [yAxisMode]="yAxisMode"
             [xAxisMode]="xAxisMode"
@@ -30,11 +30,11 @@
             xAxisLabelTextStyle="8pt Verdana"
             xAxisLabelTextColor="Gray"
             xAxisLabelTopMargin="5"
-            xAxisLabeleAngle="0"
+            xAxisLabelAngle="0"
             yAxisLabelTextStyle="8pt Verdana"
             yAxisLabelTextColor="Gray"
             yAxisLabelLeftMargin="5"
-            yAxisLabeleAngle="0"
+            yAxisLabelAngle="0"
 
             yAxisTitle="Stock Prices ($)"
             yAxisTitleTextStyle="15pt Times New Roman|Georgia|Serif"

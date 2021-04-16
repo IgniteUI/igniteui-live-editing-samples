@@ -1,4 +1,4 @@
-<div class="container vertical">
+<div class="container sample">
     <div class="options horizontal">
         <span class="options-label">Type of Polar Series: </span>
         <select (change)="onSeriesTypeChanged($event)">
@@ -20,7 +20,7 @@
             chartTitle="SAIL CHART"
             subtitle="Wind Speed vs. Boat Speed"
             width="100%"
-            height="calc(100% - 60px)"
+            height="100%"
             [dataSource]="data">
             <igx-numeric-angle-axis #angleAxis name="angleAxis"
                 startAngleOffset="-90"
@@ -42,7 +42,7 @@
                     angleMemberPath="Direction"
                     radiusMemberPath="WindSpeed"
                     radiusAxisName="radiusAxis"
-                    angleAxisName="angleAxis"></igx-polat-area-series> -->
+                    angleAxisName="angleAxis"></igx-polar-area-series> -->
         </igx-data-chart>
 
     </div>

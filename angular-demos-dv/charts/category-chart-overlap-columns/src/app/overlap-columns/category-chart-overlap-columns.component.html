@@ -1,4 +1,7 @@
-<div class="container vertical">
+<div class="container sample">
+    <div class="options vertical" >
+        <igx-legend #legend class="legend" orientation="horizontal" ></igx-legend>
+    </div>
     <div class="container">
         <igx-category-chart
             #chart
@@ -46,9 +49,7 @@
             xAxisOverlap="1">
         </igx-category-chart>
     </div>
-    <div class="options vertical" >
-        <igx-legend #legend class="legend" orientation="horizontal" ></igx-legend>
-    </div>
+
     <ng-template let-series="series" let-item="item" #stackedTooltip>
         <div class="tooltipTable">
             <div class="tooltipRow">

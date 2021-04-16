@@ -1,4 +1,4 @@
-<div class="container vertical">
+<div class="container sample">
     <div class="options horizontal">
         <span>Chart Type: </span>
         <select [(ngModel)]="chartType">
@@ -15,7 +15,7 @@
         </select>
     </div>
     <div class="container">
-        <igx-category-chart height="calc(100% - 60px)" width="98%"
+        <igx-category-chart height="100%" width="98%"
             [dataSource]="data"
             [chartType]="chartType"
             chartTitle="Olympic Medals By Country"

@@ -1,4 +1,4 @@
-<div class="container vertical">
+<div class="container sample">
     <div class="options horizontal">
         <label class="options-label">Annotations: </label>
         <label class="options-item"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
@@ -20,7 +20,7 @@
         </select>
     </div>
     <div class="container">
-        <igx-financial-chart #financialChart height="calc(100% - 60px)" width="100%"
+        <igx-financial-chart #financialChart height="100%" width="100%"
             [dataSource]="stocksData"
             chartType="Line"
             [crosshairsDisplayMode]="options.crosshairAnnotations"

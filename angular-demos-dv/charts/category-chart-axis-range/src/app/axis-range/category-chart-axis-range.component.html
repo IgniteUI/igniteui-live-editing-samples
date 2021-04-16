@@ -1,7 +1,7 @@
-<div class="container vertical">
+<div class="container sample">
     <div class="options vertical">
         <span class="legend-title">Renewable Electricity Generated</span>
-        <div class="legend">            
+        <div class="legend">
             <igx-legend #Legend orientation="horizontal"></igx-legend>
         </div>
 
@@ -20,12 +20,12 @@
         </div>
     </div>
     <div class="container">
-        <igx-category-chart height="calc(100% - 60px)" width="98%"
+        <igx-category-chart height="100%" width="98%"
             [dataSource]="data"
             chartType="Line"
             [legend]="Legend"
             isHorizontalZoomEnabled="false"
-            isVerticalZoomEnabled="false"            
+            isVerticalZoomEnabled="false"
             [yAxisMinimumValue]="YAxisMinValue"
             [yAxisMaximumValue]="YAxisMaxValue">
         </igx-category-chart>

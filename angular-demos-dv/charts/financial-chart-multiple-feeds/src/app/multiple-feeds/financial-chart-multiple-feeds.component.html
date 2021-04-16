@@ -1,6 +1,6 @@
-<div class="container vertical">
+<div class="container sample">
 
-    <div class="options vertical">
+    <div class="options horizontal">
         <button
         igxButton="raised"
         igxRipple="white"
@@ -14,7 +14,7 @@
         <label class="legend-title">Multiple Stock Data Feed from NYSE</label>
         <igx-legend #legend class="legend" orientation="horizontal" ></igx-legend>
     </div>
-    <igx-financial-chart height="calc(100% - 2rem)" width="100%"
+    <igx-financial-chart height="100%" width="100%"
         #chart
         [dataSource]="dataFeeds"
         [tooltipTemplate]="stockTooltip"
