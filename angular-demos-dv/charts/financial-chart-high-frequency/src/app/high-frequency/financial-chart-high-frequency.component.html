@@ -19,10 +19,7 @@
             [continuous]=true
             (onValueChange)="onMaxPointsChanged($event.value)"></igx-slider>
         </div>
-        <button igxButton="raised"
-        igxRipple="white"
-        (click)="onChangeAmountClicked()"
-        >Assign Data</button>
+        <button (click)="onChangeAmountClicked()">Assign Data</button>
 
         <div class="vertical">
             <span class="options-label">FPS: </span>

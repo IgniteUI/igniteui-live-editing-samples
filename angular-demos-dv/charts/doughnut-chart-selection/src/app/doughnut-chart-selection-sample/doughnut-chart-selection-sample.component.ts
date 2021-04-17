@@ -11,40 +11,40 @@ import { IgxSliceClickEventArgs } from "igniteui-angular-charts";
 export class DoughnutChartSelectionSampleComponent implements AfterViewInit {
 
     public data: any;
-    public SelectedSliceLabel : string = "No Selection";
-    public SelectedSliceValue : string = "0%";
+    public selectedSliceLabel : string = "No Selection";
+    public selectedSliceValue : string = "0%";
 
     @ViewChild("chart", { static: true })
     public chart: IgxDoughnutChartComponent;
 
     constructor() {
         this.data = [
-            { Value: 37, Label: "Space Cooling", Summary: "Space Cooling 37%" },
-            { Value: 25, Label: "Residential Appliance", Summary: "Residential Appliance 25%"  },
+            { Value: 37, Label: "Cooling", Summary: "Cooling 37%" },
+            { Value: 25, Label: "Residential", Summary: "Residential 25%"  },
             { Value: 12, Label: "Heating", Summary: "Heating 12%" },
-            { Value: 8,  Label: "Lighting", Summary: "Lighting 8%" },                
-            { Value: 18, Label: "Other Services", Summary: "Other Services 18%" }
+            { Value: 11, Label: "Lighting", Summary: "Lighting 11%" },
+            { Value: 18, Label: "Other", Summary: "Other 18%" }
         ];
-       
+
     }
-  
-    
-    public OnSliceClick(e: any ) {        
-      
+
+
+    public OnSliceClick(e: any) {
+
         if (e.args.isSelected)
-        {          
-            this.SelectedSliceLabel = this.data[e.args.index].Label;
-            this.SelectedSliceValue = this.data[e.args.index].Value + "%";
+        {
+            this.selectedSliceLabel = this.data[e.args.index].Label;
+            this.selectedSliceValue = this.data[e.args.index].Value + "%";
         }
         else
         {
-            this.SelectedSliceLabel = "No Selection";
-            this.SelectedSliceValue = "0%";
+            this.selectedSliceLabel = "No Selection";
+            this.selectedSliceValue = "0%";
         }
     }
+
     public ngAfterViewInit(): void {
-      
     }
 
-     
+
 }

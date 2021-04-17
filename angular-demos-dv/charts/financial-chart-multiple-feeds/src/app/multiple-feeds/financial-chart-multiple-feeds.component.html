@@ -1,17 +1,14 @@
 <div class="container sample">
 
     <div class="options horizontal">
-        <button
-        igxButton="raised"
-        igxRipple="white"
-        (click)="onFeedToggleClicked()">
+        <button (click)="onFeedToggleClicked()">
             <span #feedStatus class="options-label">Turn Off Live Data</span>
         </button>
         <span #fpsSpan class="options-label"></span>
     </div>
 
     <div class="options vertical">
-        <label class="legend-title">Multiple Stock Data Feed from NYSE</label>
+        <label id="legendTitle">Multiple Stock Data Feed from NYSE</label>
         <igx-legend #legend class="legend" orientation="horizontal" ></igx-legend>
     </div>
     <igx-financial-chart height="100%" width="100%"

@@ -13,18 +13,18 @@ export class CategoryChartColumnChartSingleSourceComponent implements OnInit {
 
     ngOnInit(): void {
         this.data = [
-            { Month: "January", Temperature: 3 },
-            { Month: "February", Temperature: 4 },
-            { Month: "March", Temperature: 9 },
-            { Month: "April", Temperature: 15 },
-            { Month: "May", Temperature: 21 },
-            { Month: "June", Temperature: 26 },
-            { Month: "July", Temperature: 29 },
-            { Month: "August", Temperature: 28 },
-            { Month: "September", Temperature: 24 },
-            { Month: "October", Temperature: 18 },
-            { Month: "November", Temperature: 11 },
-            { Month: "December", Temperature: 5 }
+            { Month: "JAN", Temperature: 3 },
+            { Month: "FEB", Temperature: 4 },
+            { Month: "MAR", Temperature: 9 },
+            { Month: "APR", Temperature: 15 },
+            { Month: "MAY", Temperature: 21 },
+            { Month: "JUN", Temperature: 26 },
+            { Month: "JUL", Temperature: 29 },
+            { Month: "AUG", Temperature: 28 },
+            { Month: "SEP", Temperature: 24 },
+            { Month: "OCT", Temperature: 18 },
+            { Month: "NOV", Temperature: 11 },
+            { Month: "DEC", Temperature: 5 }
         ];
     }
 }

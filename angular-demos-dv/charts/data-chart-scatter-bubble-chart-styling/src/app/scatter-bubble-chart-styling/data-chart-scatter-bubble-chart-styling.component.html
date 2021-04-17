@@ -1,6 +1,6 @@
 <div class="container sample">
     <div class="options vertical">
-        <span class="legend-title">Annual working hours vs. GDP per capita, 2015: </span>
+        <span id="legendTitle">Annual Working Hours vs. GDP per capita, 2015: </span>
         <igx-legend #legend orientation="Horizontal"></igx-legend>
     </div>
     <div class="container">
@@ -16,10 +16,11 @@
                 title="Africa"
                 xMemberPath="GDPPerCapita"
                 yMemberPath="AverageHoursWorked"
-                markerType="circle"
+                markerType="Circle"
                 markerOutline="rgb(186,231,114)"
+                markerOutline="rgb(186,231,114)"
+                markerBrush="rgba(186,231,114, 0.5)"
                 radiusMemberPath="TotalPopulation"
-                fillMemberPath="TotalPopulation"
                 showDefaultTooltip="true">
             </igx-bubble-series>
 
@@ -29,10 +30,11 @@
                 title="Europe"
                 xMemberPath="GDPPerCapita"
                 yMemberPath="AverageHoursWorked"
-                markerType="circle"
+                markerType="Circle"
                 markerOutline="rgb(248,174,95)"
+                markerBrush="rgba(248,174,95, 0.5)"
+                brush="rgb(248,174,95)"
                 radiusMemberPath="TotalPopulation"
-                fillMemberPath="TotalPopulation"
                 showDefaultTooltip="true">
             </igx-bubble-series>
 
@@ -42,10 +44,11 @@
                 title="Asia"
                 xMemberPath="GDPPerCapita"
                 yMemberPath="AverageHoursWorked"
-                markerType="circle"
+                markerType="Circle"
                 markerOutline="rgb(197, 173, 216)"
+                markerBrush="rgba(197, 173, 216, 0.5)"
+                brush="rgb(197, 173, 216)"
                 radiusMemberPath="TotalPopulation"
-                fillMemberPath="TotalPopulation"
                 showDefaultTooltip="true">
             </igx-bubble-series>
 
@@ -55,10 +58,11 @@
                 title="North America"
                 xMemberPath="GDPPerCapita"
                 yMemberPath="AverageHoursWorked"
-                markerType="circle"
+                markerType="Circle"
                 markerOutline="rgb(224, 81, 169)"
+                markerBrush="rgba(224, 81, 169, 0.5)"
+                brush="rgb(224, 81, 169)"
                 radiusMemberPath="TotalPopulation"
-                fillMemberPath="TotalPopulation"
                 showDefaultTooltip="true">
             </igx-bubble-series>
 
@@ -68,10 +72,11 @@
                 title="Oceania"
                 xMemberPath="GDPPerCapita"
                 yMemberPath="AverageHoursWorked"
-                markerType="circle"
+                markerType="Circle"
                 markerOutline="rgb(109, 177, 255)"
+                markerBrush="rgba(109, 177, 255, 0.5)"
+                brush="rgb(109, 177, 255)"
                 radiusMemberPath="TotalPopulation"
-                fillMemberPath="TotalPopulation"
                 showDefaultTooltip="true">
             </igx-bubble-series>
 
@@ -81,10 +86,11 @@
                 title="South America"
                 xMemberPath="GDPPerCapita"
                 yMemberPath="AverageHoursWorked"
-                markerType="circle"
+                markerType="Circle"
                 markerOutline="rgb(115, 86, 86)"
+                markerBrush="rgba(115, 86, 86, 0.5)"
+                brush="rgb(115, 86, 86)"
                 radiusMemberPath="TotalPopulation"
-                fillMemberPath="TotalPopulation"
                 showDefaultTooltip="true">
             </igx-bubble-series>
         </igx-data-chart>

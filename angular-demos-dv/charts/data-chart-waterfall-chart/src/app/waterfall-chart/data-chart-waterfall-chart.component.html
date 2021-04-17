@@ -1,6 +1,6 @@
 <div class="container sample">
     <div class="options vertical">
-        <label class="legend-title"> </label>
+        <label id="legendTitle" >Facebook's Financial Report </label>
         <igx-legend #legend orientation="horizontal"></igx-legend>
     </div>
 
@@ -9,12 +9,7 @@
                 isVerticalZoomEnabled="true" width="100%"
                 height="100%"
                 [dataSource]="data"
-                [legend]="legend"
-                chartTitle="Facebook's Consolidated Statements of Income for 2018"
-                titleHorizontalAlignment="Left"
-                titleLeftMargin="25"
-                titleTopMargin="10"
-                titleBottomMargin="10">
+                [legend]="legend">
             <igx-category-x-axis label="Category" overlap="1" #xAxis></igx-category-x-axis>
             <igx-numeric-y-axis #yAxis
                     title="Millions of Dollars"
@@ -24,17 +19,17 @@
             </igx-numeric-y-axis>
 
             <igx-waterfall-series valueMemberPath="Value"
-                    [xAxis]="xAxis"
+                    [xAxis]="xAxis" title="Revenue & Costs"
                     [yAxis]="yAxis"
+                    thickness="0"
                     showDefaultTooltip="true"
                     isTransitionInEnabled="true">
             </igx-waterfall-series>
 
-            <igx-waterfall-series valueMemberPath="NetIncomeValue"
-                    [xAxis]="xAxis"
+            <igx-waterfall-series valueMemberPath="NetIncome"
+                    [xAxis]="xAxis" title="Net Income"
                     [yAxis]="yAxis"
-                    Brush="#7446B9"
-                    Outline="#7446B9"
+                    thickness="0"
                     showDefaultTooltip="true"
                     isTransitionInEnabled="true">
             </igx-waterfall-series>

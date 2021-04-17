@@ -7,14 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataChartScatterLineChartComponent implements OnInit {
 
-    public germanyDataSource: any[];
-    public franceDataSource: any[];
-    public luxembourgDataSource: any[];
+    public gerData: any[];
+    public fraData: any[];
+    public luxData: any[];
 
     constructor() { }
 
     ngOnInit(): void {
-        this.franceDataSource = [
+        this.fraData = [
             { Country: "France", Year: "1985", HealthExpense: 1923.14, LifeExpectancy: 75.30 },
             { Country: "France", Year: "1990", HealthExpense: 2300.90, LifeExpectancy: 76.60 },
             { Country: "France", Year: "1991", HealthExpense: 2377.84, LifeExpectancy: 76.85 },
@@ -44,7 +44,7 @@ export class DataChartScatterLineChartComponent implements OnInit {
             { Country: "France", Year: "2015", HealthExpense: 4027.95, LifeExpectancy: 82.27 }
         ];
 
-        this.germanyDataSource = [
+        this.gerData = [
             { Country: "Germany", Year: "1985", HealthExpense: 2579.64, LifeExpectancy: 74.05 },
             { Country: "Germany", Year: "1986", HealthExpense: 2603.94, LifeExpectancy: 74.31 },
             { Country: "Germany", Year: "1987", HealthExpense: 2668.49, LifeExpectancy: 74.56 },
@@ -77,7 +77,7 @@ export class DataChartScatterLineChartComponent implements OnInit {
             { Country: "Germany", Year: "2015", HealthExpense: 4772.33, LifeExpectancy: 80.64 }
         ];
 
-        this.luxembourgDataSource = [
+        this.luxData = [
             { Country: "Luxembourg", Year: "1995", HealthExpense: 3316.78, LifeExpectancy: 76.51 },
             { Country: "Luxembourg", Year: "1996", HealthExpense: 3373.07, LifeExpectancy: 76.52 },
             { Country: "Luxembourg", Year: "1997", HealthExpense: 3489.24, LifeExpectancy: 76.88 },

@@ -15,6 +15,9 @@
         </label>
     </div>
 
+    <div class="options vertical">
+        <label id="legendTitle">Renewable Electricity Generated</label>
+    </div>
     <div class="container">
         <igx-category-chart height="100%" width="100%"
             [dataSource]="data"
@@ -22,8 +25,6 @@
             yAxisTitle="TWh"
             yAxisTitleLeftMargin="5"
             yAxisLabelLocation="OutsideRight"
-            subtitle="Renewable Electricity Generated"
-            thickness="2"
             crosshairsSnapToData="false"
             [crosshairsDisplayMode]="crosshairsDisplay"
             [crosshairsAnnotationEnabled]="crosshairAnnotations"

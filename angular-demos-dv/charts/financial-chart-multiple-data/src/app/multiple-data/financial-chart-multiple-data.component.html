@@ -1,9 +1,11 @@
 <div class="container sample">
+    <div class="options vertical" >
+        <label id="legendTitle">Stock Changes: Microsoft vs Google </label>
+    </div>
+
     <igx-financial-chart height="100%" width="100%"
     [dataSource]="data"
     chartType="line"
-    chartTitle="Google vs Microsoft Changes"
-    subtitle="Between 2013 and 2017"
     thickness=2
     yAxisMode="PercentChange"
     yAxisTitle="Percent Changed">

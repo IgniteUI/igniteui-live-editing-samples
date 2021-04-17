@@ -8,95 +8,81 @@
         </igx-geographic-map>
     </div>
 
-    <div class="overlay-top-left" >
-        <label class="mapPanelItem">Select Map Region</label>
-        <select [(ngModel)]="regionType" (change)="onSelectionChanged($event)">
-            <option>Australia</option>
-            <option>Caribbean</option>
-            <option>Egypt</option>
-            <option>European</option>
-            <option>Japan</option>
-            <option>Hawaii</option>
-            <option>Poland</option>
-            <option>South Africa</option>
-            <option>United States</option>
-            <option>United Kingdom</option>
-            <option>Uruguay</option>
-        </select>
-        <label class="mapPanelItem">Map Geographic Rect</label>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Top:</label>
-            <label #top class="mapPanelValue">{{geoTop}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Left:</label>
-            <label class="mapPanelValue">{{geoLeft}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Height:</label>
-            <label class="mapPanelValue">{{geoHeight}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Width:</label>
-            <label class="mapPanelValue">{{geoWidth}}</label>
-        </div>
+    <div class="overlay-left" >
+        <div class="vertical overlay-border" style="background: rgba(217, 217, 217, 0.5)" >
+            <label style="font-weight: 600" >Select Map Region</label>
+            <select [(ngModel)]="regionType" (change)="onSelectionChanged($event)">
+                <option>Australia</option>
+                <option>Caribbean</option>
+                <option>Egypt</option>
+                <option>European</option>
+                <option>Japan</option>
+                <option>Hawaii</option>
+                <option>Poland</option>
+                <option>South Africa</option>
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Uruguay</option>
+            </select>
+            <label style="font-weight: 600">Map Geographic Rect</label>
 
-        <label class="mapPanelItem">Map Window Rect</label>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Top:</label>
-            <label class="mapPanelValue">{{winTop}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Left:</label>
-            <label class="mapPanelValue">{{winLeft}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Height:</label>
-            <label class="mapPanelValue">{{winHeight}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Width:</label>
-            <label class="mapPanelValue">{{winWidth}}</label>
-        </div>
+            <div class="horizontal" >
+                <div class="vertical"  style="margin-right: 1rem">
+                    <label >{{geoT}}</label>
+                    <label >{{geoL}}</label>
+                </div>
+                <div class="vertical">
+                    <label >{{geoH}}</label>
+                    <label >{{geoW}}</label>
+                </div>
+            </div>
 
-        <label class="mapPanelItem">Map Window Position</label>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Horizontal:</label>
-            <label class="mapPanelValue">{{posHorizontal}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Vertical:</label>
-            <label class="mapPanelValue">{{posVertical}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Scale:</label>
-            <label class="mapPanelValue">{{scale}}</label>
-        </div>
+            <label style="font-weight: 600">Map Window Rect</label>
+            <div class="horizontal">
+                <div class="vertical" style="margin-right: 1rem">
+                    <label >{{winT}}</label>
+                    <label >{{winL}}</label>
+                </div>
+                <div class="vertical">
+                    <label >{{winH}}</label>
+                    <label >{{winW}}</label>
+                </div>
+            </div>
 
-        <label class="mapPanelItem">Map Hover Coordinates</label>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Longitude:</label>
-            <label class="mapPanelValue">{{mapHoverLongitude}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Latitude:</label>
-            <label class="mapPanelValue">{{mapHoverLatitude}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Window X:</label>
-            <label class="mapPanelValue">{{mapHoverX}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Window Y:</label>
-            <label class="mapPanelValue">{{mapHoverY}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Pixel X:</label>
-            <label class="mapPanelValue">{{mapHoverPixelX}}</label>
-        </div>
-        <div class="mapPanelLine">
-            <label class="mapPanelField">Pixel Y:</label>
-            <label class="mapPanelValue">{{mapHoverPixelY}}</label>
+            <label style="font-weight: 600">Map Window Position</label>
+            <div class="horizontal">
+                <div class="vertical" style="margin-right: 1rem">
+                    <label >Horizontal:</label>
+                    <label >Vertical:</label>
+                    <label >Scale:</label>
+                </div>
+                <div class="vertical">
+                    <label >{{posHorizontal}}</label>
+                    <label >{{posVertical}}</label>
+                    <label >{{scale}}</label>
+                </div>
+            </div>
+
+            <label style="font-weight: 600">Map Hover Coordinates</label>
+            <div class="horizontal">
+                <div class="vertical" style="margin-right: 1rem">
+                    <label >Longitude: </label>
+                    <label >Latitude: </label>
+                    <label >Window X: </label>
+                    <label >Window Y: </label>
+                    <label >Pixel X: </label>
+                    <label >Pixel Y: </label>
+                </div>
+                <div class="vertical">
+                    <label >{{mapHoverLatitude}}</label>
+                    <label >{{mapHoverLongitude}}</label>
+                    <label >{{mapHoverX}}</label>
+                    <label >{{mapHoverY}}</label>
+                    <label >{{mapHoverPixelX}}</label>
+                    <label >{{mapHoverPixelY}}</label>
+                </div>
+            </div>
+
         </div>
     </div>
 

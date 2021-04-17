@@ -1,5 +1,6 @@
 <div class="container sample">
     <div class="options vertical" >
+        <label id="legendTitle">Time Spend Online By Activity: </label>
         <igx-legend #legend class="legend" orientation="horizontal" ></igx-legend>
     </div>
     <div class="container">
@@ -10,9 +11,6 @@
             (seriesAdded)="onSeriesAdded($event)"
             height="100%" width="100%"
             chartType="column"
-            chartTitle="TIME SPENT ONLINE BY ACTIVITY"
-            chartTitleTextColor="black"
-            chartTitleTextStyle="13pt Verdana"
              brushes="#7446B9 #9FB328 #F96232 #2E9CA6 #DC3F76"
             outlines="#7446B9 #9FB328 #F96232 #2E9CA6 #DC3F76"
             includedProperties="StackBlogging, StackSocial, StackNews, StackTV, StackMusic, Country"

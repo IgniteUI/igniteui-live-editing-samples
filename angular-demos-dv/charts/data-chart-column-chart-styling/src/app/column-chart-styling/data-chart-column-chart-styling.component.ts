@@ -15,15 +15,15 @@ export class DataChartColumnChartStylingComponent implements OnInit{
 
     public ngOnInit() {
         this.data = [
-            { Location: "World", Solar: 23, Coal: -1, Hydropower: 1, Wind: 12, Nuclear: 3 },
-            { Location: "China", Solar: 26, Coal: 2, Hydropower: 5, Wind: 10, Nuclear: 18 },
-            { Location: "U.S.", Solar: 15, Coal: -15, Hydropower: -7, Wind: 10, Nuclear: 1 },
-            { Location: "EU", Solar: 11, Coal: -12, Hydropower: -2, Wind: 14, Nuclear: -1 }
+            { Location: "World", Solar: 23, Coal: -1, Hydro: 1, Wind: 12, Nuclear: 3 },
+            { Location: "China", Solar: 26, Coal: 2, Hydro: 5, Wind: 10, Nuclear: 18 },
+            { Location: "U.S.", Solar: 15, Coal: -15, Hydro: -7, Wind: 10, Nuclear: 1 },
+            { Location: "EU", Solar: 11, Coal: -12, Hydro: -2, Wind: 14, Nuclear: -1 }
         ];
     }
 
     public getMarker() : any {
-        let style = { outline: "#8B5BB1", fill: "white", text: "black" };
+        const style = { outline: "#8B5BB1", fill: "white", text: "black" };
         const size = 12;
 
         return {
@@ -31,9 +31,8 @@ export class DataChartColumnChartStylingComponent implements OnInit{
                 const data = measureInfo.data;
                 const context = measureInfo.context;
                 let value = "0.00";
-                let item = data.item;
-                if (item != null) {
-                    value = item.Solar.toString();
+                if (data.item != null) {
+                    value = data.item.Solar.toString();
                 }
                 const height = context.measureText("M").width;
                 const width = context.measureText(value).width;
@@ -43,52 +42,39 @@ export class DataChartColumnChartStylingComponent implements OnInit{
             render: function (renderInfo: DataTemplateRenderInfo) {
                 const item = renderInfo.data.item;
                 const series = renderInfo.data.series;
-
                 const valuePath = series.valueColumn.propertyName;
-
-                var value = 0;
-
+                let value = 0;
                 switch (valuePath) {
-                    case "Solar":
-                        value = item.Solar;
-                        break;
-                    case "Coal":
-                        value = item.Coal;
-                        break;
-                    case "Hydropower":
-                        value = item.Hydropower;
-                        break;
-                    case "Wind":
-                        value = item.Wind;
-                        break;
-                    case "Nuclear":
-                        value = item.Nuclear;
-                        break;
+                    case "Solar": value = item.Solar; break;
+                    case "Coal": value = item.Coal; break;
+                    case "Hydro": value = item.Hydro; break;
+                    case "Wind": value = item.Wind; break;
+                    case "Nuclear": value = item.Nuclear; break;
                 }
 
                 const ctx = renderInfo.context;
-                let x = renderInfo.xPosition;
-                let y = renderInfo.yPosition;
+                const x = renderInfo.xPosition;
+                const y = renderInfo.yPosition;
 
                 if (renderInfo.isHitTestRender) {
                     ctx.fillStyle = renderInfo.data.actualItemBrush.fill;
 
-                    let width = renderInfo.availableWidth;
-                    let height = renderInfo.availableHeight;
+                    const width = renderInfo.availableWidth;
+                    const height = renderInfo.availableHeight;
 
                     ctx.fillRect(x - (width / 2), y - (height), renderInfo.availableWidth, renderInfo.availableHeight);
                     return;
                 }
 
-                let xOffset = 20;
-                let yOffset = 10;
+                const xOffset = 20;
+                const yOffset = 10;
 
                 ctx.font = '8pt Verdana';
                 ctx.textBaseline = 'top';
                 ctx.fillStyle = style.text;
 
                 if (value < 0) {
-                    ctx.fillText(value + "%", x - (xOffset / 2), y + (yOffset ));
+                    ctx.fillText(value + "%", x - (xOffset / 2), y + (yOffset));
                 }
                 else {
                     ctx.fillText(value + "%", x - (xOffset / 2), y - (yOffset * 2));

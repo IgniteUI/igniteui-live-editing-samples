@@ -1,9 +1,6 @@
 <div class="container sample">
-    <div class="options horizontal">
-        <span class="legend-title">Life Expectancy versus Health Expenditure for European Countries</span>
-    </div>
-    <div class="options horizontal">
-        <span class="legend-title">Continent: </span>
+    <div class="options vertical">
+        <span id="legendTitle">Life Expectancy vs Health Expenditure</span>
         <div class="legend">
             <igx-legend #legend orientation="Horizontal"></igx-legend>
         </div>
@@ -13,17 +10,17 @@
             isVerticalZoomEnabled="false">
 
             <igx-numeric-x-axis #xAxis labelFormat="${0}" title="Health Expenditure"></igx-numeric-x-axis>
-            <igx-numeric-y-axis #yAxis labelFormat="{0} years" title="Life Expectancy"></igx-numeric-y-axis>
+            <igx-numeric-y-axis #yAxis labelFormat="{0}" title="Life Expectancy (in years)"></igx-numeric-y-axis>
 
-            <igx-scatter-spline-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="germanyDataSource"
+            <igx-scatter-spline-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="gerData"
                 xMemberPath="HealthExpense" yMemberPath="LifeExpectancy" title="Germany" markerType="Circle">
             </igx-scatter-spline-series>
 
-            <igx-scatter-spline-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="franceDataSource"
+            <igx-scatter-spline-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="fraData"
                 xMemberPath="HealthExpense" yMemberPath="LifeExpectancy" title="France" markerType="Circle">
             </igx-scatter-spline-series>
 
-            <igx-scatter-spline-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="luxembourgDataSource"
+            <igx-scatter-spline-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="luxData"
                 xMemberPath="HealthExpense" yMemberPath="LifeExpectancy" title="Luxembourg" markerType="Circle">
             </igx-scatter-spline-series>
         </igx-data-chart>

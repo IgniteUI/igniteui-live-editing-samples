@@ -1,6 +1,6 @@
 <div class="container sample">
     <div class="options vertical">
-        <span class="legend-title">Renewable Electricity Generated</span>
+        <span id="legendTitle">Renewable Electricity Generated</span>
         <div class="legend">
             <igx-legend #Legend orientation="horizontal"></igx-legend>
         </div>
@@ -20,7 +20,7 @@
         </div>
     </div>
     <div class="container">
-        <igx-category-chart height="100%" width="98%"
+        <igx-category-chart height="100%" width="100%"
             [dataSource]="data"
             chartType="Line"
             [legend]="Legend"
@@ -35,8 +35,6 @@
             yAxisLabelTextStyle="10pt 'Titillium Web'"
             yAxisLabelRightMargin="5"
             yAxisLabelLocation="OutsideRight"
-            titleTopMargin="10"
-            chartTitle=""
         >
         </igx-category-chart>
     </div>

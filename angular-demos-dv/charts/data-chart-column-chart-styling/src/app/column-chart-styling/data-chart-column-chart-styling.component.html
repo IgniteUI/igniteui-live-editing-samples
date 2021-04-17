@@ -1,6 +1,6 @@
 <div class="container sample">
     <div class="options vertical">
-        <span class="legend-title">Annual Percentage Change in Energy Generation in 2019</span>
+        <span id="legendTitle">Annual Percentage Change in Energy Generation in 2019</span>
         <igx-legend #legend orientation="horizontal"></igx-legend>
     </div>
     <div class="container">
@@ -17,7 +17,7 @@
             <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="data" valueMemberPath="Coal" title="Coal"
                 showDefaultTooltip=true [markerTemplate]="getMarker()">
             </igx-column-series>
-            <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="data" valueMemberPath="Hydropower" title="Hydropower"
+            <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="data" valueMemberPath="Hydro" title="Hydro"
                 showDefaultTooltip=true [markerTemplate]="getMarker()">
             </igx-column-series>
             <igx-column-series [xAxis]="xAxis" [yAxis]="yAxis" [dataSource]="data" valueMemberPath="Wind" title="Wind"

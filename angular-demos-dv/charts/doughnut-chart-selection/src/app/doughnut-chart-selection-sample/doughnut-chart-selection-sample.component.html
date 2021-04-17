@@ -1,7 +1,7 @@
 <div class="container sample">
     <div class="options horizontal">
         <div class="options vertical">
-            <span class="legend-title">Global Electricity Demand by Energy Use</span>
+            <span id="legendTitle">Global Electricity Demand by Energy Use</span>
             <div class="legend">
                 <igx-item-legend #legend height="100px" width="100px" orientation="horizontal"></igx-item-legend>
             </div>
@@ -34,9 +34,9 @@
                 </igx-ring-series>
             </igx-doughnut-chart>
 
-        <div class="overlay-center" style="line-height: 1.1">
-            <label class="options-label" style="font-size: 1.2rem;"><span [textContent]="SelectedSliceLabel"></span></label>
-            <label class="options-value" style="font-size: 2.2rem;"><span [textContent]="SelectedSliceValue"></span></label>
+        <div class="overlay-center" style="line-height: 1.1; text-align: center;">
+            <label style="font-size: 1.2rem;"><span [textContent]="selectedSliceLabel"></span></label>
+            <label style="font-size: 2.2rem;"><span [textContent]="selectedSliceValue"></span></label>
         </div>
     </div>
   </div>

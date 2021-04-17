@@ -16,11 +16,11 @@ export class DoughnutChartExplosionSampleComponent implements AfterViewInit {
 
     constructor() {
         this.data = [
-            { Value: 37, Label: "Space Cooling", Summary: "Space Cooling 37%" },
-            { Value: 25, Label: "Residential Appliance", Summary: "Residential Appliance 25%"  },
+            { Value: 37, Label: "Cooling", Summary: "Cooling 37%" },
+            { Value: 25, Label: "Residential", Summary: "Residential 25%"  },
             { Value: 12, Label: "Heating", Summary: "Heating 12%" },
-            { Value: 8, Label: "Lighting", Summary: "Lighting 8%" },                
-            { Value: 18, Label: "Other Services", Summary: "Other Services 18%" }           
+            { Value: 11, Label: "Lighting", Summary: "Lighting 11%" },
+            { Value: 18, Label: "Other", Summary: "Other 18%" }
         ];
     }
 

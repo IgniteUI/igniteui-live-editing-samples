@@ -1,4 +1,8 @@
 <div class="container sample">
+    <div class="options vertical" >
+        <label id="legendTitle">Stock Changes: Amazon vs Google </label>
+    </div>
+
     <igx-financial-chart #chart
         [dataSource]="financialStocks"
         [xAxisMode]="selectedXAxisMode"
@@ -8,12 +12,7 @@
         (seriesAdded)="onSeriesAdded($event)"
         chartType="candle"
         isToolbarVisible="false"
-        isWindowSyncedToVisibleRange="true"
-        subtitle="BETWEEN 2013-2018"
-        chartTitle="STOCK PRICES: GOOGLE vs AMAZON"
-        titleTextColor="black"
-        titleTextStyle="11pt Verdana"
-        titleTopMargin="10">
+        isWindowSyncedToVisibleRange="true">
     </igx-financial-chart>
 
     <div class="options vertical">

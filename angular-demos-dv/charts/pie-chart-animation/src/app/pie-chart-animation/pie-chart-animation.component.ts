@@ -19,11 +19,11 @@ export class PieChartAnimationComponent implements AfterViewInit {
 
     constructor(private _zone: NgZone) {
         this.data = [
-            { MarketShare : 25, Company : "Residential Appliance" },
+            { MarketShare : 25, Company : "Residential" },
             { MarketShare : 12, Company : "Heating" },
             { MarketShare : 8,  Company : "Lighting" },
-            { MarketShare : 18, Company : "Other Services" },
-            { MarketShare : 37, Company : "Space Cooling" }
+            { MarketShare : 18, Company : "Other" },
+            { MarketShare : 37, Company : "Cooling" }
         ];
     }
 

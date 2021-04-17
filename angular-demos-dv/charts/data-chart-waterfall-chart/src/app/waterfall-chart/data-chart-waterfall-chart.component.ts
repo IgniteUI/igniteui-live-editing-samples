@@ -8,13 +8,14 @@ import { Component } from "@angular/core";
 export class DataChartWaterfallChartComponent {
 
     public data = [
-        { Category: "Revenue", Value: 55, NetIncomeValue: Number.NaN },
-        { Category: "Cost of Revenue", Value: 45, NetIncomeValue: Number.NaN },
-        { Category: "Research and Development", Value: 35, NetIncomeValue: Number.NaN },
-        { Category: "Marketing and Sales", Value: 28, NetIncomeValue: Number.NaN },
-        { Category: "General and Administrative", Value: 25, NetIncomeValue: Number.NaN },
-        { Category: "Total Costs and Expenses", Value: 55, NetIncomeValue: Number.NaN },
-        { Category: "Net Income", Value: Number.NaN, NetIncomeValue: 25 },
+        { Category: "Revenue", Value: 55, NetIncome: Number.NaN },
+        { Category: "Fixed Cost", Value: 45, NetIncome: Number.NaN },
+        { Category: "Research", Value: 35, NetIncome: Number.NaN },
+        { Category: "Marketing", Value: 30, NetIncome: Number.NaN },
+        { Category: "Sales", Value: 25, NetIncome: Number.NaN },
+        { Category: "Administration", Value: 20, NetIncome: Number.NaN },
+        { Category: "Total Costs", Value: 55, NetIncome: Number.NaN },
+        { Category: "Net Income", Value: Number.NaN, NetIncome: 20 }
     ];
 
     constructor() { }

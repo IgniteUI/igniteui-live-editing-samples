@@ -30,13 +30,13 @@
             <label class="options-item"><input [(ngModel)]="sampleOptions.crosshairAnnotations" type="checkbox" />Enable Crosshairs Annotations</label>
         </div>
     </div>
-
+    <div class="options vertical">
+        <label id="legendTitle">Weather Data</label>
+    </div>
     <div class="container">
         <igx-category-chart height="100%" width="100%"
             [dataSource]="categoryData"
             [chartType]="sampleOptions.chartType"
-            chartTitle="Weather Data"
-            subtitle="(High, Low)"
             xAxisInterval="1"
             yAxisMinimumValue="60"
             yAxisMaximumValue="110"

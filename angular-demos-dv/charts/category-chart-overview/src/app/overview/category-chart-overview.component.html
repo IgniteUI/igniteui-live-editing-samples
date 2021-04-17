@@ -14,10 +14,12 @@
             <option>Waterfall</option>
         </select>
     </div>
+    <div class="options horizontal">
+        <label id="legendTitle">Olympic Medals By Country</label>
+    </div>
     <div class="container">
         <igx-category-chart height="100%" width="100%"
             [dataSource]="data"
-            chartTitle="Olympic Medals By Country"
             [chartType]="chartType">
         </igx-category-chart>
     </div>

@@ -1,10 +1,7 @@
 <div class="container sample">
     <div class="options horizontal">
-        <label #loadTimeSpan class="options-label">Load Time: </label>
-        <button igxButton="raised" style="margin-right: 10px;" igxRipple="white"
-            (click)="onGenerateDataClicked()">Generate Data</button>
-        <button igxButton="raised" style="margin-right: 10px;" igxRipple="white" (click)="onAssignDataClicked()">Assign
-            Data</button>
+        <button (click)="onGenerateDataClicked()">Generate Data</button>
+        <button (click)="onAssignDataClicked()">AssignData</button>
 
         <label class="options-label">Data amount: {{ maxPointsText }}</label>
         <igx-slider id="slider" minValue="5000" maxValue="2000000" [value]="maxPoints" [continuous]=true

@@ -1,4 +1,7 @@
 <div class="container sample">
+    <div class="options vertical">
+        <label id="legendTitle">Distribution of Magnetic Field</label>
+    </div>
     <div class="container">
         <igx-data-chart #chart
             height="100%"
@@ -6,8 +9,6 @@
             [dataSource]="data"
             isHorizontalZoomEnabled=true
             isVerticalZoomEnabled=true
-            subtitle="Distribution of Magnetic Field"
-            subtitleTopMargin=10
             gridMode="BeforeSeries">
             <igx-numeric-x-axis #xAxis labelLocation="OutsideLeft" minimumValue=-180 maximumValue=180 title="Longitude"></igx-numeric-x-axis>
             <igx-numeric-y-axis #yAxis labelLocation="OutsideBottom" minimumValue=-90 maximumValue=90 title="Latitude"></igx-numeric-y-axis>

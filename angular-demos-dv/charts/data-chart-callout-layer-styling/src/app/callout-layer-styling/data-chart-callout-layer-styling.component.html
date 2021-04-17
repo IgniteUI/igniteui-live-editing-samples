@@ -1,5 +1,8 @@
 <div class="container sample">
-    <igx-data-chart height="100%" width="100%" subtitle="Renewable Energy Generated">
+    <div class="options vertical">
+        <label id="legendTitle">Renewable Electricity Generated</label>
+    </div>
+    <igx-data-chart height="100%" width="100%" >
         <igx-category-x-axis #xAxis [dataSource]="data" label="Year"></igx-category-x-axis>
         <igx-numeric-y-axis #yAxis title="TWh" labelLocation="OutsideRight"></igx-numeric-y-axis>
 

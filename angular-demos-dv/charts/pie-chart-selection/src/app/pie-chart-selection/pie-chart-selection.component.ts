@@ -16,12 +16,12 @@ export class PieChartSelectionComponent implements AfterViewInit {
 
     constructor() {
         this.data = [
-            { Value: 25, Label: "Residential Appliance", },
-            { Value: 12, Label: "Heating", },
-            { Value: 8, Label: "Lighting", },
-            { Value: 18, Label: "Other Services", },
-            { Value: 37, Label: "Space Cooling", },
-         ];
+            { Value: 25, Label: "Residential" },
+            { Value: 12, Label: "Heating" },
+            { Value: 11, Label: "Lighting" },
+            { Value: 18, Label: "Other" },
+            { Value: 37, Label: "Cooling" }
+        ];
 
         this.selectionType = "Single";
     }

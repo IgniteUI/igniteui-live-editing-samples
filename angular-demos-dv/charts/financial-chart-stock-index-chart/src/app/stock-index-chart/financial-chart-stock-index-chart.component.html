@@ -1,18 +1,12 @@
 <div class="container sample">
+    <div class="options vertical" >
+        <label id="legendTitle">S&P 500 Index </label>
+    </div>
+
     <igx-financial-chart height="100%" width="100%"
     [dataSource]="stocksData"
     isToolbarVisible="false"
     chartType="Candle"
-    chartTitle="S&P 500"
-    titleAlignment="Left"
-    titleLeftMargin="25"
-    titleTopMargin="10"
-    titleBottomMargin="10"
-    subtitle="CME - CME Delayed Price, Currency in USD"
-    subtitleAlignment="Left"
-    subtitleLeftMargin="25"
-    subtitleTopMargin="5"
-    subtitleBottomMargin="10"
     yAxisLabelLocation="OutsideLeft"
     yAxisMode="Numeric"
     yAxisTitle="Financial Prices"

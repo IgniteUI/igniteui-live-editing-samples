@@ -1,6 +1,6 @@
 <div class="container sample">
     <div class="options vertical">
-        <span class="legend-title">Global Electricity Demand by Energy Use</span>
+        <span id="legendTitle">Global Electricity Demand by Energy Use</span>
         <igx-item-legend #legend></igx-item-legend>
     </div>
 
@@ -9,8 +9,8 @@
             width="100%"
             [dataSource]="data"
             [legend]="legend"
-            valueMemberPath="MarketShare"
-            labelMemberPath="Company"
+            valueMemberPath="Value"
+            labelMemberPath="Label"
             labelsPosition="BestFit"
             radiusFactor="0.7">
         </igx-pie-chart>

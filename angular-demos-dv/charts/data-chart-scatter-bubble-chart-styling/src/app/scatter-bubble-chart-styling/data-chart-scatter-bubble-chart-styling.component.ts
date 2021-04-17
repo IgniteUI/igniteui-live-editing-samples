@@ -41,7 +41,7 @@ export class DataChartScatterBubbleChartStylingComponent implements OnInit {
     constructor() {}
 
     ngOnInit(): void {
-               
+
         const data: any[] = [
             {Location: "Abkhazia",Code: "OWID_ABK",Year: "2015",TotalPopulation:  0.00},
             {Location: "Afghanistan",Code: "AFG",Year: "2015",TotalPopulation:  34414000.00,Continent: "Asia",GDPPerCapita: 1809.02},
@@ -340,30 +340,30 @@ export class DataChartScatterBubbleChartStylingComponent implements OnInit {
         for (let i = 0; i < data.length; i++) {
             const item = data[i];
 
-            if (item.Continent == "Africa") {
+            if (item.Continent === "Africa") {
                 this.africaDataSource.push(item);
             }
-            if (item.Continent == "Europe") {
+            if (item.Continent === "Europe") {
                 this.europeDataSource.push(item);
             }
-            if (item.Continent == "Asia") {
+            if (item.Continent === "Asia") {
                 this.asiaDataSource.push(item);
             }
-            if (item.Continent == "North America") {
+            if (item.Continent === "North America") {
                 this.northAmericaDataSource.push(item);
             }
-            if (item.Continent == "Oceania") {
+            if (item.Continent === "Oceania") {
                 this.oceaniaDataSource.push(item);
             }
-            if (item.Continent == "South America") {
+            if (item.Continent === "South America") {
                 this.southAmericaDataSource.push(item);
             }
         }
 
         const sizeScale1 = new IgxSizeScaleComponent();
         sizeScale1.minimumValue = 10;
-        sizeScale1.maximumValue = 30;   
-        
+        sizeScale1.maximumValue = 30;
+
         const sizeScale2 = new IgxSizeScaleComponent();
         sizeScale2.minimumValue = 10;
         sizeScale2.maximumValue = 50;
@@ -384,36 +384,12 @@ export class DataChartScatterBubbleChartStylingComponent implements OnInit {
         sizeScale6.minimumValue = 10;
         sizeScale6.maximumValue = 30;
 
-        const valueBrushScale1 = new IgxValueBrushScaleComponent();
-        valueBrushScale1.brushes.push("rgba(186, 231, 114, 0.75)");
-
-        const valueBrushScale2 = new IgxValueBrushScaleComponent();
-        valueBrushScale2.brushes.push("rgba(248, 174, 95, 0.75)");
-
-        const valueBrushScale3 = new IgxValueBrushScaleComponent();
-        valueBrushScale3.brushes.push("rgba(197, 173, 216, 0.75)");
-
-        const valueBrushScale4 = new IgxValueBrushScaleComponent();
-        valueBrushScale4.brushes.push("rgba(224, 81, 169, 0.75)");
-
-        const valueBrushScale5 = new IgxValueBrushScaleComponent();
-        valueBrushScale5.brushes.push("rgba(109, 177, 255, 0.75)");
-
-        const valueBrushScale6 = new IgxValueBrushScaleComponent();
-        valueBrushScale6.brushes.push("rgba(115, 86, 86, 0.75)");
-        
         this.series1.radiusScale = sizeScale1;
-        this.series1.fillScale = valueBrushScale1;
         this.series2.radiusScale = sizeScale2;
-        this.series2.fillScale = valueBrushScale2;
         this.series3.radiusScale = sizeScale3;
-        this.series3.fillScale = valueBrushScale3;
         this.series4.radiusScale = sizeScale4;
-        this.series4.fillScale = valueBrushScale4;
         this.series5.radiusScale = sizeScale5;
-        this.series5.fillScale = valueBrushScale5;
         this.series6.radiusScale = sizeScale6;
-        this.series6.fillScale = valueBrushScale6;
 
     }
 }
