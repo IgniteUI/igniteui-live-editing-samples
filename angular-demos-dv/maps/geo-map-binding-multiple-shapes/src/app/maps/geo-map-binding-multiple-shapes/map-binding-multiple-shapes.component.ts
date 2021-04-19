@@ -64,7 +64,6 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
     }
 
     public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
-        console.log("onPoints");
 
         const geoLocations: any[] = [];
         // parsing shapefile data and creating geo-locations
@@ -88,7 +87,6 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
     }
 
     public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
-        console.log("onPolylines");
 
         const geoPolylines: any[] = [];
         // parsing shapefile data and creating geo-polygons
@@ -111,7 +109,6 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
     }
 
     public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
-        console.log("onPolygons ");
 
         const geoPolygons: any[] = [];
         // parsing shapefile data and creating geo-polygons

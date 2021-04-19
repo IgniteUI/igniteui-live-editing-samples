@@ -19,7 +19,6 @@ export class WorldLocations {
     }
 
     public static init() {
-        // console.log("WorldLocations init");
         this.locations = [{
             cap: false,
             pop: 0.468,

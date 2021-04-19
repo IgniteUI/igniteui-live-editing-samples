@@ -65,7 +65,6 @@ export class EsriUtility {
         if (!isHttpSecured) {
             uri = uri.replace("https:", "http:");
         }
-        // console.log("uri " + uri);
         return uri;
     }
 }

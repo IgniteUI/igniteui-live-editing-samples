@@ -59,9 +59,7 @@ export class CategoryChartMarkerTemplatesComponent implements OnInit {
                 const series = renderInfo.data.series;
                 const dataPath = series.valueColumn.propertyName;
 
-                // console.log("onCategoryChatMarkerStylingTemplate render");
-
-                var dataValue = 0;
+                let dataValue = 0;
                 switch (dataPath) {
                     case "Solar": dataValue = dataItem.Solar; break;
                     case "Coal": dataValue = dataItem.Coal; break;
