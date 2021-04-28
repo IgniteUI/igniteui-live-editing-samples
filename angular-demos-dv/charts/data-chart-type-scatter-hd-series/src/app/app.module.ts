@@ -8,6 +8,7 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartScatterModule,
 	IgxDataChartScatterCoreModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
 import { SampleDensityData } from "./SampleDensityData";
@@ -27,6 +28,7 @@ import { SampleDensityData } from "./SampleDensityData";
 	IgxDataChartCoreModule,
 	IgxDataChartScatterModule,
 	IgxDataChartScatterCoreModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule
 ],
   providers: [SampleDensityData],

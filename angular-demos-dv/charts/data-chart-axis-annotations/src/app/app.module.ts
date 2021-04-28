@@ -7,6 +7,7 @@ import { DataChartAxisAnnotationsComponent } from "./data-chart-axis-annotations
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxCalloutLayerModule,
@@ -28,6 +29,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxCalloutLayerModule,

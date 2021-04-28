@@ -8,6 +8,7 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartShapeModule,
 	IgxDataChartShapeCoreModule,
+	IgxLegendModule,
 	IgxDataChartScatterModule
  } from "igniteui-angular-charts";
 import { DataChartTypeScatterPolylineSeriesComponent } from "./data-chart-type-scatter-polyline-series/data-chart-type-scatter-polyline-series.component";
@@ -28,6 +29,7 @@ import { SampleShapeData } from "./SampleShapeData";
 	IgxDataChartCoreModule,
 	IgxDataChartShapeModule,
 	IgxDataChartShapeCoreModule,
+	IgxLegendModule,
 	DataChartTypeScatterPolylineSeriesComponent,
 	IgxDataChartScatterModule
 ],

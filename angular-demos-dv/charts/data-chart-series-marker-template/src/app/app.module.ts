@@ -7,6 +7,7 @@ import { DataChartSeriesMarkerTemplateComponent } from "./data-chart-series-mark
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
 
@@ -24,6 +25,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule
 ],
   providers: [],

@@ -7,6 +7,7 @@ import { DataChartTooltipTemplateComponent } from "./tooltip-template/data-chart
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
 
@@ -24,6 +25,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule
 ],
   providers: [],

@@ -7,6 +7,7 @@ import { DataChartAxisTypesComponent } from "./data-chart-axis-types/data-chart-
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartScatterCoreModule,
 	IgxDataChartScatterModule,
 	IgxTimeXAxisModule,
@@ -36,6 +37,7 @@ import { SampleScatterData } from "./SampleScatterData";
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartScatterCoreModule,
 	IgxDataChartScatterModule,
 	IgxTimeXAxisModule,

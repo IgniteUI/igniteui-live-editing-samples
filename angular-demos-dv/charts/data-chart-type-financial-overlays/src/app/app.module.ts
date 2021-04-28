@@ -8,6 +8,7 @@ import {
 	IgxNumericXAxisModule,
 	IgxNumericYAxisModule,
 	IgxMoneyFlowIndexIndicatorModule,
+	IgxLegendModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
 	IgxFinancialPriceSeriesModule
@@ -29,6 +30,7 @@ import { SampleFinancialData } from "./SampleFinancialData";
 	IgxNumericXAxisModule,
 	IgxNumericYAxisModule,
 	IgxMoneyFlowIndexIndicatorModule,
+	IgxLegendModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
 	IgxFinancialPriceSeriesModule

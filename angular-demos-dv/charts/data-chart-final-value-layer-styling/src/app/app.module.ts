@@ -7,6 +7,7 @@ import { DataChartFinalValueLayerStylingComponent } from "./final-value-layer-st
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxFinalValueLayerModule
@@ -26,6 +27,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxFinalValueLayerModule

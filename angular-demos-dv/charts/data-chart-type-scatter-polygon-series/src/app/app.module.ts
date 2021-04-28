@@ -8,6 +8,7 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartShapeModule,
 	IgxDataChartShapeCoreModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartScatterModule
  } from "igniteui-angular-charts";
@@ -27,6 +28,7 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartShapeModule,
 	IgxDataChartShapeCoreModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartScatterModule
 ],

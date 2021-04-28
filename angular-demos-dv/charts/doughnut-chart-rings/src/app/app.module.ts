@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { DoughnutChartRingsComponent } from "./doughnut-chart-rings/doughnut-chart-rings.component";
 import { 
 	IgxDoughnutChartModule,
-	IgxRingSeriesModule
+	IgxRingSeriesModule,
+	IgxLegendModule
  } from "igniteui-angular-charts";
 
 
@@ -22,7 +23,8 @@ import {
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDoughnutChartModule,
-	IgxRingSeriesModule
+	IgxRingSeriesModule,
+	IgxLegendModule
 ],
   providers: [],
   entryComponents: [],

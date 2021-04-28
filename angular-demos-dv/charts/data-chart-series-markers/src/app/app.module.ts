@@ -7,6 +7,7 @@ import { DataChartSeriesMarkersComponent } from "./data-chart-series-markers/dat
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartScatterCoreModule,
 	IgxDataChartScatterModule,
 	IgxNumberAbbreviatorModule
@@ -27,6 +28,7 @@ import { SharedData } from "./SharedData";
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartScatterCoreModule,
 	IgxDataChartScatterModule,
 	IgxNumberAbbreviatorModule

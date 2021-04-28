@@ -4,7 +4,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { CategoryChartColumnChartWithHighlightingComponent } from "./column-chart-with-highlighting/category-chart-column-chart-with-highlighting.component";
-import { IgxCategoryChartModule } from "igniteui-angular-charts";
+import { 
+	IgxCategoryChartModule,
+	IgxLegendModule
+ } from "igniteui-angular-charts";
 
 
 
@@ -18,7 +21,8 @@ import { IgxCategoryChartModule } from "igniteui-angular-charts";
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxCategoryChartModule
+	IgxCategoryChartModule,
+	IgxLegendModule
 ],
   providers: [],
   entryComponents: [],

@@ -4,7 +4,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { FinancialChartVolumeTypeComponent } from "./volume-type/financial-chart-volume-type.component";
-import { IgxFinancialChartModule } from "igniteui-angular-charts";
+import { 
+	IgxFinancialChartModule,
+	IgxLegendModule
+ } from "igniteui-angular-charts";
 import { FinancialDataService } from "./services/generate-hourly-prices.service";
 
 
@@ -19,7 +22,8 @@ import { FinancialDataService } from "./services/generate-hourly-prices.service"
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxFinancialChartModule
+	IgxFinancialChartModule,
+	IgxLegendModule
 ],
   providers: [FinancialDataService],
   entryComponents: [],

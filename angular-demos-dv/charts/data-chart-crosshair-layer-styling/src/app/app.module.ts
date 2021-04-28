@@ -7,6 +7,7 @@ import { DataChartCrosshairLayerStylingComponent } from "./crosshair-layer-styli
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxCrosshairLayerModule
@@ -26,6 +27,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxCrosshairLayerModule

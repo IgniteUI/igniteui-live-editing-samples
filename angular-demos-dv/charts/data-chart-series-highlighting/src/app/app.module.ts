@@ -7,7 +7,8 @@ import { DataChartSeriesHighlightingComponent } from "./data-chart-series-highli
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
-	IgxDataChartInteractivityModule
+	IgxDataChartInteractivityModule,
+	IgxLegendModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
 
@@ -25,7 +26,8 @@ import { SharedData } from "./SharedData";
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
-	IgxDataChartInteractivityModule
+	IgxDataChartInteractivityModule,
+	IgxLegendModule
 ],
   providers: [SharedData],
   entryComponents: [],

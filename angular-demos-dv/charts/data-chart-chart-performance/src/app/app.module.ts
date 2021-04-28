@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { DataChartPerformanceComponent } from "./data-chart-performance/data-chart-performance.component";
 import { 
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule
+	IgxDataChartCategoryModule,
+	IgxLegendModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
 
@@ -23,7 +24,8 @@ import { SharedData } from "./SharedData";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule
+	IgxDataChartCategoryModule,
+	IgxLegendModule
 ],
   providers: [SharedData],
   entryComponents: [],

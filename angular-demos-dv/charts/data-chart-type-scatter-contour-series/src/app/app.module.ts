@@ -8,6 +8,7 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartScatterModule,
 	IgxDataChartScatterCoreModule,
+	IgxLegendModule,
 	IgxScatterContourSeriesModule,
 	IgxScatterAreaSeriesModule,
 	IgxDataChartInteractivityModule
@@ -29,6 +30,7 @@ import { SampleScatterData } from "./SampleScatterData";
 	IgxDataChartCoreModule,
 	IgxDataChartScatterModule,
 	IgxDataChartScatterCoreModule,
+	IgxLegendModule,
 	IgxScatterContourSeriesModule,
 	IgxScatterAreaSeriesModule,
 	IgxDataChartInteractivityModule
