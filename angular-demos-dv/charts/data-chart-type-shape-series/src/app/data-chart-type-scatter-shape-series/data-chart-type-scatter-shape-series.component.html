@@ -1,20 +1,18 @@
-<!-- class="sample-wrapper container" -->
+<div class="container sample">
 
-<div class="sample">
-
-    <div class="options">
-        <span class="optionLabel">Shape Series: </span>
+    <div class="options horizontal">
+        <span class="options-label">Shape Series: </span>
         <select (change)="onSeriesTypeChanged($event)">
             <option>Polygon</option>
             <option>Polyline</option>
         </select>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-data-chart #chart
             isHorizontalZoomEnabled="true"
             isVerticalZoomEnabled="true"
             width="100%"
-            height="calc(100% - 60px)"
+            height="100%"
             [dataSource]="data">
 
             <igx-numeric-x-axis #xAxis name="xAxis"></igx-numeric-x-axis>

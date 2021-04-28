@@ -58,7 +58,6 @@ export class Products {
                 Status: this.getRandomItem(this.status)
             });
         }
-        console.log("Products items=" + items.length);
         return items;
     }
 
@@ -88,7 +87,6 @@ export class Products {
 
     public static getCountryFlag(country: string): string {
         const flag = "https://github.com/HUSSAR-mtrela/geo-data/raw/master/flags/" + country + ".png";
-        // console.log("getCountryFlag " + flag)
         return flag;
     }
 

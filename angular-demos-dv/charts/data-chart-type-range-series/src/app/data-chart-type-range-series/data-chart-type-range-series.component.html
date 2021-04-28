@@ -1,7 +1,7 @@
-<div class="sample">
-    <div class="options">
+<div class="container sample">
+    <div class="options horizontal">
         <div>
-            <span class="optionLabel">Type of Range Series: </span>
+            <span class="options-label">Type of Range Series: </span>
             <select [(ngModel)]="seriesType" (change)="onSeriesTypeChanged($event.target)">
                 <option>Column</option>
                 <option>Area</option>
@@ -9,12 +9,14 @@
         </div>
     </div>
 
-    <div class="chart">
+    <div class="options vertical" >
+        <label id="legendTitle">Annual Temperature Changes: </label>
+    </div>
+    <div class="container">
         <igx-data-chart #chart
         [dataSource]="data"
-        height="calc(100% - 60px)"
+        height="100%"
         width="100%"
-        chartTitle="ANNUAL TEMPERATURE CHANGES"
         isHorizontalZoomEnabled=true
         isVerticalZoomEnabled=true>
             <igx-category-x-axis #xAxis label="Year" name="xAxis" gap=0.5></igx-category-x-axis>

@@ -1,58 +1,40 @@
-<div class="sample-wrapper container">
-    <div class="options">
-        <div>
-            <label class="optionLabel">Chart Type: </label>
-            <select class="select" [(ngModel)]="options.chartType">
-                <option>Auto</option>
-                <option>Bar</option>
-                <option>Candle</option>
-                <option>Column</option>
-                <option>Line</option>
-            </select>
-
-            <label class="optionItem"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
-            <label class="optionItem"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value Annotations</label>
-        </div>
-        <div>
-            <label class="optionLabel">Crosshairs: </label>
-            <select class="select" [(ngModel)]="options.crosshairDisplay">
-                <option>Default</option>
-                <option>None</option>
-                <option>Horizontal</option>
-                <option>Vertical</option>
-                <option>Both</option>
-            </select>
-
-            <label class="optionItem"><input [(ngModel)]="options.crosshairSnap" type="checkbox" />Snap to Data</label>
-            <label class="optionItem"><input [(ngModel)]="options.crosshairAnnotations" type="checkbox" />Crosshairs Annotations</label>
-        </div>
+<div class="container sample">
+    <div class="options horizontal">
+        <label class="options-label">Annotations: </label>
+        <label class="options-item"><input [(ngModel)]="options.calloutsVisible" type="checkbox" />Show Callouts</label>
+        <label class="option-item"><input [(ngModel)]="options.finalValueAnnotations" type="checkbox" />Final Value</label>
+        <label class="options-item">Crosshairs</label>
+        <select class="select" [(ngModel)]="options.crosshairAnnotations">
+            <option>None</option>
+            <option>Both</option>
+        </select>
+        <label class="optionItem">Item Tooltip</label>
+        <select class="select" [(ngModel)]="options.itemToolTip">
+            <option>None</option>
+            <option>Item</option>
+        </select>
+        <label class="optionItem">Markers</label>
+        <select class="select" [(ngModel)]="options.markerTypes">
+            <option>None</option>
+            <option>Circle</option>
+        </select>
     </div>
-
-    <div class="chart">
-        <igx-financial-chart height="calc(100% - 60px)" width="100%"
+    <div class="container">
+        <igx-financial-chart #financialChart height="100%" width="100%"
             [dataSource]="stocksData"
-            [chartType]="options.chartType"
-            zoomSliderType="none"
-
-            brushes="#8c42f4, #1aba2a, #6b6b6b"
-            outlines="#8c42f4, #1aba2a, #6b6b6b"
-            negativeBrushes="#e23a31"
-            negativeOutlines="#e23a31"
-
-            [crosshairsDisplayMode]="options.crosshairDisplay"
-            [crosshairsSnapToData]="options.crosshairSnap"
-            [crosshairsAnnotationEnabled]="options.crosshairAnnotations"
-
+            chartType="Line"
+            [crosshairsDisplayMode]="options.crosshairAnnotations"
             [finalValueAnnotationsVisible]="options.finalValueAnnotations"
-
+            [markerTypes]="options.markerTypes"
             [calloutsVisible]="options.calloutsVisible"
             [calloutsDataSource]="calloutsData"
             calloutsXMemberPath="index"
             calloutsYMemberPath="value"
             calloutsLabelMemberPath="label"
+            calloutsContentMemberPath="label"
+            [toolTipType]="options.itemToolTip"
             xAxisExtent="50"
-            thickness="1"
-            >
+            thickness="2">
         </igx-financial-chart>
 
     </div>

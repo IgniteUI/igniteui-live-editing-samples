@@ -1,5 +1,5 @@
-<div class="container">
-    <igx-grid #grid1 [data]="data | async" [height]="'500px'" width="100%" [autoGenerate]='false' [allowFiltering]="false">
+<div class="container sample">
+    <igx-grid #grid1 [data]="data | async" height="100%" width="100%" [autoGenerate]='false' [allowFiltering]="false">
         <igx-column [width]="'80px'" [field]="'ID'"  dataType="number"></igx-column>
         <igx-column [width]="'150px'" [field]="'Product'"></igx-column>
         <igx-column [width]="'100px'" [field]="'Price'" dataType="number" [formatter]="formatCurrency"></igx-column>

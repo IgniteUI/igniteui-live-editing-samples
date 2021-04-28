@@ -7,29 +7,34 @@ import { DataChartSeriesMarkersComponent } from "./data-chart-series-markers/dat
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartScatterCoreModule,
 	IgxDataChartScatterModule,
 	IgxNumberAbbreviatorModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartSeriesMarkersComponent
-  ],
+	AppComponent,
+	DataChartSeriesMarkersComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartScatterCoreModule,
-		IgxDataChartScatterModule,
-		IgxNumberAbbreviatorModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxDataChartScatterCoreModule,
+	IgxDataChartScatterModule,
+	IgxNumberAbbreviatorModule
+],
   providers: [SharedData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

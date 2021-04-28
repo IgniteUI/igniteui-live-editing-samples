@@ -19,14 +19,14 @@ export class PieChartAnimationComponent implements AfterViewInit {
 
     constructor(private _zone: NgZone) {
         this.data = [
-            { Label: "Administration", Value: 2 },
-            { Label: "Sales", Value: 8 },
-            { Label: "IT", Value: 3 },
-            { Label: "Marketing", Value: 8 },
-            { Label: "Development", Value: 4 },
-            { Label: "Customer Support", Value: 6 }
+            { MarketShare : 25, Company : "Residential" },
+            { MarketShare : 12, Company : "Heating" },
+            { MarketShare : 8,  Company : "Lighting" },
+            { MarketShare : 18, Company : "Other" },
+            { MarketShare : 37, Company : "Cooling" }
         ];
     }
+
     public onClicked() {
         if (!this.isTimerStarted) {
             this.animateChart = "Start Animation";

@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { MapTypeScatterDensitySeriesComponent } from "./maps/geo-map-type-scatter-density-series/map-type-scatter-density-series.component";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MapTypeScatterDensitySeriesComponent
-  ],
+	AppComponent,
+	MapTypeScatterDensitySeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGeographicMapModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGeographicMapModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

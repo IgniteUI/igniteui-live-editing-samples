@@ -1,14 +1,11 @@
-<div class="sample-wrapper container">
-    <div class="chartToolbar">
-        <span class="chartTitle">OLYMPIC MEDALS BY COUNTRY</span>
-        <igx-legend class="chartLegend" #legend
-            height="20px" width="350px"
-            orientation="horizontal" >
-        </igx-legend>
+<div class="container sample">
+    <div class="options vertical">
+        <span id="legendTitle">OLYMPIC MEDALS BY COUNTRY</span>
+        <igx-legend #legend orientation="horizontal"></igx-legend>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-category-chart
-            height="calc(100% - 60px)" width="100%"
+            height="100%" width="100%"
             #chart
             [dataSource]="data"
             [tooltipTemplate]="seriesTooltip"
@@ -23,39 +20,38 @@
             (seriesAdded)="seriesAddedEvent($event)">
         </igx-category-chart>
     </div>
-    <div class="chartNote">Note USA did not participate in 1980 Olympics nor did Russia in 1984 Olympics.</div>
 
     <!-- custom tooltip with conditional visuals -->
     <ng-template let-series="series" let-item="item" #seriesTooltip>
 
         <div class="tooltipTable">
             <div class="tooltipRow">
-                <div class="tooltipOlympics">{{item.Year}} Olympics</div>
+                <div class="tooltipLbl">{{item.Year}} Olympics</div>
             </div>
         </div>
 
         <div class="tooltipTable" *ngIf="series.name == 'USA' && item.USAMedals != 0">
             <div class="tooltipRow">
                 <div>
-                    <img class="tooltipFlag" src="https://www.infragistics.com/angular-demos-dv/assets/images/flags/usa.png">
+                    <img class="tooltipFlag" height="15px" width="25px" src="https://static.infragistics.com/xplatform/images/flags/usa.svg">
                 </div>
-                <div class="tooltipCountry">{{series.title}}</div>
-                <div class="tooltipValue">{{item.USAMedals}}</div>
+                <div class="tooltipLbl">{{series.title}}</div>
+                <div class="tooltipVal">{{item.USAMedals}}</div>
             </div>
             <div class="tooltipRow">
-                <img class="medalGold" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/gold.png">
-                <div class="tooltipProp">Gold:</div>
-                <div class="tooltipValue">{{item.USAGold}}</div>
+                <img class="medalGold" src="https://static.infragistics.com/xplatform/images/medals/gold.png">
+                <div class="tooltipLbl">Gold:</div>
+                <div class="tooltipVal">{{item.USAGold}}</div>
             </div>
             <div class="tooltipRow">
-                <img class="medalSilver" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/silver.png">
-                <div class="tooltipProp">Silver:</div>
-                <div class="tooltipValue">{{item.USASilver}}</div>
+                <img class="medalSilver" src="https://static.infragistics.com/xplatform/images/medals/silver.png">
+                <div class="tooltipLbl">Silver:</div>
+                <div class="tooltipVal">{{item.USASilver}}</div>
             </div>
             <div class="tooltipRow">
-                <img class="medalBronze" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/bronze.png">
-                <div class="tooltipProp">Bronze:</div>
-                <div class="tooltipValue">{{item.USABronze}}</div>
+                <img class="medalBronze" src="https://static.infragistics.com/xplatform/images/medals/bronze.png">
+                <div class="tooltipLbl">Bronze:</div>
+                <div class="tooltipVal">{{item.USABronze}}</div>
             </div>
         </div>
         <div class="tooltipTable" *ngIf="series.name == 'USA' && item.USAMedals == 0">
@@ -65,25 +61,25 @@
         <div class="tooltipTable" *ngIf="series.name == 'Russia' && item.RussiaMedals != 0">
             <div class="tooltipRow">
                 <div>
-                    <img class="tooltipFlag" src="https://www.infragistics.com/angular-demos-dv/assets/images/flags/russia.png">
+                    <img class="tooltipFlag" height="15px" width="25px" src="https://static.infragistics.com/xplatform/images/flags/rus.svg">
                 </div>
-                <div class="tooltipCountry">{{series.title}}</div>
-                <div class="tooltipValue">{{item.RussiaMedals}}</div>
+                <div class="tooltipLbl">{{series.title}}</div>
+                <div class="tooltipVal">{{item.RussiaMedals}}</div>
             </div>
             <div class="tooltipRow">
-                <img class="medalGold" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/gold.png">
-                <div class="tooltipProp">Gold:</div>
-                <div class="tooltipValue">{{item.RussiaGold}}</div>
+                <img class="medalGold" src="https://static.infragistics.com/xplatform/images/medals/gold.png">
+                <div class="tooltipLbl">Gold:</div>
+                <div class="tooltipVal">{{item.RussiaGold}}</div>
              </div>
              <div class="tooltipRow">
-                <img class="medalSilver" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/silver.png">
-                <div class="tooltipProp">Silver:</div>
-                <div class="tooltipValue">{{item.RussiaSilver}}</div>
+                <img class="medalSilver" src="https://static.infragistics.com/xplatform/images/medals/silver.png">
+                <div class="tooltipLbl">Silver:</div>
+                <div class="tooltipVal">{{item.RussiaSilver}}</div>
              </div>
              <div class="tooltipRow">
-                <img class="medalBronze" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/bronze.png">
-                <div class="tooltipProp">Bronze:</div>
-                <div class="tooltipValue">{{item.RussiaBronze}}</div>
+                <img class="medalBronze" src="https://static.infragistics.com/xplatform/images/medals/bronze.png">
+                <div class="tooltipLbl">Bronze:</div>
+                <div class="tooltipVal">{{item.RussiaBronze}}</div>
             </div>
         </div>
         <div *ngIf="series.name == 'Russia' && item.RussiaMedals == 0">
@@ -93,25 +89,25 @@
         <div class="tooltipTable" *ngIf="series.name == 'UK' && item.UKMedals != 0">
             <div class="tooltipRow">
                 <div>
-                    <img class="tooltipFlag" src="https://www.infragistics.com/angular-demos-dv/assets/images/flags/uk.png">
+                    <img class="tooltipFlag" height="15px" width="25px" src="https://static.infragistics.com/xplatform/images/flags/gbr.svg">
                 </div>
-                <div class="tooltipCountry">{{series.title}}</div>
-                <div class="tooltipValue">{{item.UKMedals}}</div>
+                <div class="tooltipLbl">{{series.title}}</div>
+                <div class="tooltipVal">{{item.UKMedals}}</div>
             </div>
             <div class="tooltipRow">
-                    <img class="medalGold" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/gold.png">
-                <div class="tooltipProp">Gold:</div>
-                <div class="tooltipValue">{{item.UKGold}}</div>
+                    <img class="medalGold" src="https://static.infragistics.com/xplatform/images/medals/gold.png">
+                <div class="tooltipLbl">Gold:</div>
+                <div class="tooltipVal">{{item.UKGold}}</div>
              </div>
              <div class="tooltipRow">
-                <img class="medalSilver" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/silver.png">
-                <div class="tooltipProp">Silver:</div>
-                <div class="tooltipValue">{{item.UKSilver}}</div>
+                <img class="medalSilver" src="https://static.infragistics.com/xplatform/images/medals/silver.png">
+                <div class="tooltipLbl">Silver:</div>
+                <div class="tooltipVal">{{item.UKSilver}}</div>
              </div>
              <div class="tooltipRow">
-                <img class="medalBronze" src="https://www.infragistics.com/angular-demos-dv/assets/images/medals/bronze.png">
-                <div class="tooltipProp">Bronze:</div>
-                <div class="tooltipValue">{{item.UKBronze}}</div>
+                <img class="medalBronze" src="https://static.infragistics.com/xplatform/images/medals/bronze.png">
+                <div class="tooltipLbl">Bronze:</div>
+                <div class="tooltipVal">{{item.UKBronze}}</div>
             </div>
         </div>
         <div *ngIf="series.name == 'UK' && item.UKMedals == 0">

@@ -1,10 +1,12 @@
-<div class="sample">
-    <div class="chart">
+<div class="container sample">
+    <div class="options vertical" >
+        <label id="legendTitle">Annual Temperature Changes: </label>
+    </div>
+
         <igx-data-chart #chart
         [dataSource]="data"
-        height="calc(100% - 60px)"
+        height="100%"
         width="100%"
-        chartTitle="ANNUAL TEMPERATURE CHANGES"
         isHorizontalZoomEnabled=true
         isVerticalZoomEnabled=true>
             <igx-category-x-axis #xAxis label="Year" name="xAxis" gap=0.5></igx-category-x-axis>
@@ -15,5 +17,4 @@
             </igx-range-column-series>
 
         </igx-data-chart>
-    </div>
 </div>

@@ -1,41 +1,27 @@
-<div class="container">
-    <div class="options">
-        <button igxButton="raised" (click)="onClickSliceVer()"
-                igxButtonColor="black" style="width: 180px"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Slice Vertically</button>
-        <button igxButton="raised" (click)="onClickSliceHor()"
-                igxButtonColor="black" style="width: 180px"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Slice Horizontally</button>
-
-        <button igxButton="raised" (click)="onClickSquared()"
-                igxButtonColor="black" style="width: 180px"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Squarified</button>
+<div class="container sample">
+    <div class="options vertical">
+        <span id="legendTitle">Comparing Population of Countries</span>
     </div>
-    <div class="options">
-        <button igxButton="raised" (click)="onClickStripVer()"
-                igxButtonColor="black" style="width: 180px"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Strip Vertically</button>
-        <button igxButton="raised" (click)="onClickStripHor()"
-                igxButtonColor="black" style="width: 180px"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Strip Horizontally</button>
-    </div>
-
-    <div style="width: 100%; height: calc(100% - 75px)">
-        <igx-treemap
-            #treeMap
-            height="100%"
-            width="100%"
-            parentIdMemberPath="parent"
-            idMemberPath="id"
-            labelMemberPath="name"
-            valueMemberPath="pop"
-            transitionDuration="500"
-            rootTitle="Countries">
+    <div class="container" style="padding: 0.75rem; padding-top: 0.5rem;">
+        <igx-treemap height="100%" width="100%"
+                     [dataSource]="data"
+                     parentIdMemberPath="Parent"
+                     idMemberPath="Name"
+                     labelMemberPath="Name"
+                     valueMemberPath="Pop"
+                     fillScaleMode="Value"
+                     fillScaleMinimumValue=0
+                     fillScaleMaximumValue=1500000000
+                     fillBrushes="#4e62cf, #8a58d6"
+                     isFillScaleLogarithmic="true"
+                     rootTitle="Countries"
+                     headerDisplayMode="Overlay"
+                     parentNodeBottomPadding="0"
+                     parentNodeLeftPadding="0"
+                     parentNodeRightPadding="0"
+                     parentNodeTopPadding="0"
+                     outline="black"
+                     strokeThickness="1">
         </igx-treemap>
     </div>
 </div>

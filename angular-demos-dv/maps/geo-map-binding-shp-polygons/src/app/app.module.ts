@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { MapBindingShapefilePolygonsComponent } from "./maps/geo-map-binding-shp-polygons/map-binding-shp-polygons.component";
 import { IgxGeographicMapModule } from "igniteui-angular-maps";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		MapBindingShapefilePolygonsComponent
-  ],
+	AppComponent,
+	MapBindingShapefilePolygonsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxGeographicMapModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxGeographicMapModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

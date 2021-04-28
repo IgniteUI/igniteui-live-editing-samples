@@ -6,23 +6,28 @@ import { AppComponent } from "./app.component";
 import { DoughnutChartAnimationSampleComponent } from "./doughnut-chart-animation-sample/doughnut-chart-animation-sample.component";
 import { 
 	IgxDoughnutChartModule,
-	IgxRingSeriesModule
+	IgxRingSeriesModule,
+	IgxLegendModule
  } from "igniteui-angular-charts";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DoughnutChartAnimationSampleComponent
-  ],
+	AppComponent,
+	DoughnutChartAnimationSampleComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDoughnutChartModule,
-		IgxRingSeriesModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDoughnutChartModule,
+	IgxRingSeriesModule,
+	IgxLegendModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

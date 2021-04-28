@@ -1,21 +1,19 @@
-<div class="container">
-    <div>         
+<div class="container sample">
+    <div class="options horizontal">
         <button class="button" (click)="onClicked()" >
             <label>{{animateChart}}</label>
-        </button>  
+        </button>
     </div>
-
-    <div class="chart">
-        <igx-pie-chart #chart height="100%" 
-        width="100%" 
-        [dataSource]="data" 
-        valueMemberPath="Value" 
-        labelMemberPath="Label" 
-        labelsPosition="InsideEnd"       
-        startAngle = 0 
-        labelExtent = 0.7 
-        radiusFactor = 0.1>
+    <div class="container">
+        <igx-pie-chart #chart height="100%"
+            width="100%"
+            [dataSource]="data"
+            valueMemberPath="MarketShare"
+            labelMemberPath="Company"
+            labelsPosition="InsideEnd"
+            startAngle = 0
+            labelExtent = 0.7
+            radiusFactor = 0.1>
         </igx-pie-chart>
-
     </div>
 </div>

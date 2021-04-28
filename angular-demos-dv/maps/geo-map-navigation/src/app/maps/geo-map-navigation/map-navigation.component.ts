@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, TemplateRef, ViewChild, ChangeDetectorRef } from "@angular/core";
-import { IgxGeographicHighDensityScatterSeriesComponent, ArcGISOnlineMapImagery, IgxArcGISOnlineMapImagery
-} from "igniteui-angular-maps";
+import { IgxArcGISOnlineMapImagery  } from "igniteui-angular-maps";
 import { IgxGeographicMapComponent } from "igniteui-angular-maps";
 import { EsriUtility, EsriStyle } from "../../utilities/EsriUtility";
 import { MapUtility, MapRegion } from "../../utilities/MapUtility";
@@ -20,15 +19,18 @@ export class MapNavigationComponent implements AfterViewInit {
     public geoMap: IgxGeographicMapComponent;
     @ViewChild("template", {static: true})
     public tooltip: TemplateRef<object>;
+
     public geoRect: any;
-    public geoTop: string;
-    public geoLeft: string;
-    public geoHeight: string;
-    public geoWidth: string;
-    public winTop: string;
-    public winLeft: string;
-    public winHeight: string;
-    public winWidth: string;
+    public geoT: string;
+    public geoL: string;
+    public geoH: string;
+    public geoW: string;
+
+    public winT: string;
+    public winL: string;
+    public winH: string;
+    public winW: string;
+
     public posHorizontal: number;
     public posVertical: number;
     public scale: number;
@@ -66,8 +68,6 @@ export class MapNavigationComponent implements AfterViewInit {
 
             const tileSource = new IgxArcGISOnlineMapImagery();
             tileSource.mapServerUri = EsriUtility.getUri(EsriStyle.WorldOceansMap);
-            // or
-            // tileSource.mapServerUri = "https://services.arcgisonline.com/ArcGIS/rest/services/Ocean_Basemap/MapServer";
             this.geoMap.backgroundContent = tileSource;
             this.geoMap.windowPositionHorizontal = 0.1;
             this.geoMap.windowPositionVertical = 0.1;
@@ -90,15 +90,15 @@ export class MapNavigationComponent implements AfterViewInit {
         const v = geoMap.actualWindowPositionVertical;
         const s = geoMap.actualWindowScale;
 
-        this.geoTop = MapUtility.toLat(this.geoRect.top);
-        this.geoLeft = MapUtility.toLng(this.geoRect.left);
-        this.geoHeight = MapUtility.toLng(this.geoRect.height);
-        this.geoWidth = MapUtility.toLng(this.geoRect.width);
+        this.geoT = "T: " + MapUtility.toLat(this.geoRect.top);
+        this.geoL = "L: " + MapUtility.toLng(this.geoRect.left);
+        this.geoH = "H: " + MapUtility.toLng(this.geoRect.height);
+        this.geoW = "W: " + MapUtility.toLng(this.geoRect.width);
 
-        this.winTop = e.args.newRect.top.toFixed(4);
-        this.winLeft = e.args.newRect.left.toFixed(4);
-        this.winHeight = e.args.newRect.height.toFixed(4);
-        this.winWidth = e.args.newRect.width.toFixed(4);
+        this.winT = "T: " + e.args.newRect.top.toFixed(4);
+        this.winL = "L: " + e.args.newRect.left.toFixed(4);
+        this.winH = "H: " + e.args.newRect.height.toFixed(4);
+        this.winW = "W: " + e.args.newRect.width.toFixed(4);
 
         this.posHorizontal = parseFloat(h.toFixed(4));
         this.posVertical = parseFloat(v.toFixed(4));

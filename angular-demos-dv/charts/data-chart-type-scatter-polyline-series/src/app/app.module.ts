@@ -8,27 +8,32 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartShapeModule,
 	IgxDataChartShapeCoreModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartScatterModule
  } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeScatterPolylineSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeScatterPolylineSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartShapeModule,
-		IgxDataChartShapeCoreModule,
-		IgxDataChartInteractivityModule,
-		IgxDataChartScatterModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartShapeModule,
+	IgxDataChartShapeCoreModule,
+	IgxLegendModule,
+	IgxDataChartInteractivityModule,
+	IgxDataChartScatterModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

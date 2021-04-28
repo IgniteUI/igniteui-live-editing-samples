@@ -7,6 +7,7 @@ import { DataChartAxisAnnotationsComponent } from "./data-chart-axis-annotations
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartInteractivityModule,
 	IgxDataChartAnnotationModule,
 	IgxCalloutLayerModule,
@@ -14,25 +15,29 @@ import {
 	IgxCrosshairLayerModule
  } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartAxisAnnotationsComponent
-  ],
+	AppComponent,
+	DataChartAxisAnnotationsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartInteractivityModule,
-		IgxDataChartAnnotationModule,
-		IgxCalloutLayerModule,
-		IgxFinalValueLayerModule,
-		IgxCrosshairLayerModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxDataChartInteractivityModule,
+	IgxDataChartAnnotationModule,
+	IgxCalloutLayerModule,
+	IgxFinalValueLayerModule,
+	IgxCrosshairLayerModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

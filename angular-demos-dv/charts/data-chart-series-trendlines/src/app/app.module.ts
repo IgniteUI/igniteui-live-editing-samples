@@ -14,24 +14,27 @@ import {
  } from "igniteui-angular-charts";
 import { SampleFinancialData } from "./SampleFinancialData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartSeriesTrendlinesComponent
-  ],
+	AppComponent,
+	DataChartSeriesTrendlinesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxLegendModule,
-		IgxDataChartInteractivityModule,
-		IgxDataChartCategoryTrendLineModule,
-		IgxFinancialPriceSeriesModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxDataChartInteractivityModule,
+	IgxDataChartCategoryTrendLineModule,
+	IgxFinancialPriceSeriesModule
+],
   providers: [SampleFinancialData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

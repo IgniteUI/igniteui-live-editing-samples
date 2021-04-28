@@ -1,6 +1,6 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionItem"> Series Type: </span>
+<div class="container sample">
+    <div class="options horizontal">
+        <span class="options-item"> Series Type: </span>
         <!-- [(ngModel)]="chartType"  -->
         <select value={{chartType}}
             (change)="this.onAxisTypeChange($event)">
@@ -10,10 +10,10 @@
             <option>Financial (TimeXAxis)</option>
         </select>
     </div>
-    <div class="chart">
+    <div class="container">
         <igx-data-chart #chart
             width="100%"
-            height="calc(100% - 60px)">
+            height="100%">
         </igx-data-chart>
     </div>
 </div>

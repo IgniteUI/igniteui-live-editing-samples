@@ -1,6 +1,6 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionLabel">Tooltip Type: </span>
+<div class="container sample">
+    <div class="options horizontal">
+        <span class="options-label">Tooltip Type: </span>
         <select [(ngModel)]="toolTipType">
             <option>Default</option>
             <option>Item</option>
@@ -8,8 +8,8 @@
         </select>
     </div>
 
-    <div class="chart">
-      <igx-data-chart #chart height="calc(100% - 60px)" width="100%" [dataSource]="data">
+    <div class="container">
+      <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
 
         <igx-category-x-axis #xAxis name="xAxis" label="Country"></igx-category-x-axis>
         <igx-numeric-y-axis #yAxis name="yAxis" minValue=0></igx-numeric-y-axis>

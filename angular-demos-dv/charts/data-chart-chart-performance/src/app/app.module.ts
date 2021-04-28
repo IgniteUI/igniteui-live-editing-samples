@@ -6,24 +6,29 @@ import { AppComponent } from "./app.component";
 import { DataChartPerformanceComponent } from "./data-chart-performance/data-chart-performance.component";
 import { 
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule
+	IgxDataChartCategoryModule,
+	IgxLegendModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartPerformanceComponent
-  ],
+	AppComponent,
+	DataChartPerformanceComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule
+],
   providers: [SharedData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

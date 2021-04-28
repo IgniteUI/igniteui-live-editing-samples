@@ -1,5 +1,7 @@
-<div class="chart">
-    <igx-data-chart #chart height="calc(100% - 20px)" width="100%" [dataSource]="data">
+<div class="container sample">
+    <igx-legend #legend orientation="horizontal"></igx-legend>
+
+    <igx-data-chart #chart height="100%" width="100%" [dataSource]="data">
         <igx-category-x-axis #xAxis label="Label"></igx-category-x-axis>
         <igx-numeric-y-axis #yAxis minimumValue=0 maximumValue=10></igx-numeric-y-axis>
 
@@ -17,6 +19,4 @@
     </igx-data-chart>
 </div>
 
-<div class="legend">
-    <igx-legend #legend></igx-legend>
-</div>
+

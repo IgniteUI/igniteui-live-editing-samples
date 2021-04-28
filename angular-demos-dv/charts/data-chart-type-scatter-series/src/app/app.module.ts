@@ -13,23 +13,26 @@ import {
  } from "igniteui-angular-charts";
 import { SampleScatterStats } from "./SampleScatterStats";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeScatterSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeScatterSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartScatterModule,
-		IgxDataChartScatterCoreModule,
-		IgxDataChartInteractivityModule,
-		IgxLegendModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartScatterModule,
+	IgxDataChartScatterCoreModule,
+	IgxDataChartInteractivityModule,
+	IgxLegendModule
+],
   providers: [SampleScatterStats],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

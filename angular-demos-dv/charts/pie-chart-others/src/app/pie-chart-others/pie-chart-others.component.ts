@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-pie-chart-others",
-  styleUrls: ["./pie-chart-others.component.scss"],
-  templateUrl: "./pie-chart-others.component.html"
+    selector: "app-pie-chart-others",
+    styleUrls: ["./pie-chart-others.component.scss"],
+    templateUrl: "./pie-chart-others.component.html"
 })
 export class PieChartOthersComponent {
 
@@ -11,15 +11,11 @@ export class PieChartOthersComponent {
 
     constructor() {
         this.data = [
-            { Label: "IBM", Value: 7 },
-            { Label: "SONY", Value: 5 },
-            { Label: "DELL", Value: 3 },
-            { Label: "Apple", Value: 4 },
-            { Label: "Hitachi", Value: 1 },
-            { Label: "Acer", Value: 1 },
-            { Label: "HP", Value: 2 },
-            { Label: "Asus", Value: 2 },
-            { Label: "Gateway", Value: 1 }
+            { Value: 25, Label: "Residential" },
+            { Value: 12, Label: "Heating" },
+            { Value: 11, Label: "Lighting" },
+            { Value: 18, Label: "Other" },
+            { Value: 37, Label: "Cooling" }
         ];
-      }
+    }
 }

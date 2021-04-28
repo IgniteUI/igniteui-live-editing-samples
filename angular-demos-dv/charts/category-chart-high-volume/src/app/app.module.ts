@@ -4,23 +4,30 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { CategoryChartHighVolumeComponent } from "./high-volume/category-chart-high-volume.component";
-import { IgxCategoryChartModule } from "igniteui-angular-charts";
+import { 
+	IgxCategoryChartModule,
+	IgxLegendModule
+ } from "igniteui-angular-charts";
 import { IgxSliderModule } from "igniteui-angular";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		CategoryChartHighVolumeComponent
-  ],
+	AppComponent,
+	CategoryChartHighVolumeComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxCategoryChartModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxCategoryChartModule,
+	IgxLegendModule,
+	IgxSliderModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

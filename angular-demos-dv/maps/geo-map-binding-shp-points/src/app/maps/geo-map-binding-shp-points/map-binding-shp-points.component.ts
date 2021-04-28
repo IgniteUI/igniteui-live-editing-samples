@@ -23,7 +23,7 @@ export class MapBindingShapefilePointsComponent implements AfterViewInit {
         const sds = new IgxShapeDataSource();
         sds.importCompleted.subscribe(() => this.onDataLoaded(sds, ""));
         sds.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCities.shp";
-        sds.databaseSource = "https://static.infragistics.com/xplatform/shapes/WorldCities.dbf";
+        sds.databaseSource  = "https://static.infragistics.com/xplatform/shapes/WorldCities.dbf";
         sds.dataBind();
     }
 

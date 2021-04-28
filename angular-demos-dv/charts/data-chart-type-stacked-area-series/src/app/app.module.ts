@@ -8,26 +8,33 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
 	IgxDataChartInteractivityModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxDataChartStackedModule,
+	IgxStackedFragmentSeriesModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeStackedAreaSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeStackedAreaSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartInteractivityModule,
-		IgxLegendModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartInteractivityModule,
+	IgxLegendModule,
+	IgxDataChartStackedModule,
+	IgxStackedFragmentSeriesModule
+],
   providers: [SharedData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

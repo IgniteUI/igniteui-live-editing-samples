@@ -4,21 +4,28 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { PieChartSelectionComponent } from "./pie-chart-selection/pie-chart-selection.component";
-import { IgxPieChartModule } from "igniteui-angular-charts";
+import { 
+	IgxPieChartModule,
+	IgxLegendModule
+ } from "igniteui-angular-charts";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		PieChartSelectionComponent
-  ],
+	AppComponent,
+	PieChartSelectionComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxPieChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxPieChartModule,
+	IgxLegendModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

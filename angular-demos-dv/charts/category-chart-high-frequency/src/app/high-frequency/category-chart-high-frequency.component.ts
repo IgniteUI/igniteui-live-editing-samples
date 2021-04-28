@@ -18,19 +18,16 @@ import { IgxCategoryChartComponent } from "igniteui-angular-charts";
 })
 export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDestroy {
 
-    @Input()
-    public scalingRatio: number = 1;
-
     public data: any[];
 
     @ViewChild("chart", { static: true })
     public chart: IgxCategoryChartComponent;
 
-    @ViewChild("fpsSpan", { static: true })
-    public fpsSpan: ElementRef;
-
     private currValue: number = 15;
     private currIndex: number = 0;
+
+    private shouldTick: boolean = true;
+    private _timerStatusText: string = "Stop";
 
     private _maxPoints: number = 5000;
 
@@ -43,16 +40,19 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
         this.data = this.generateData();
     }
 
-    public onOptimizeScalingChanged(checked: boolean) {
-        if (checked) {
-            this.scalingRatio = 1.0;
-        } else {
-            this.scalingRatio = NaN;
-        }
-    }
-
     public onChangeAmountClicked() {
         this.data = this.generateData();
+    }
+
+    public onTimerStartStopClick() {
+        if (this.shouldTick) {
+            this.shouldTick = false;
+            this._timerStatusText = "Start";
+        }
+        else {
+            this.shouldTick = true;
+            this._timerStatusText = "Stop";
+        }
     }
 
     public onRefreshFrequencyChanged(val: string) {
@@ -93,6 +93,7 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
     public get maxPoints(): number {
         return this._maxPoints;
     }
+
     @Input()
     public set maxPoints(v: number) {
         this._maxPoints = v;
@@ -101,13 +102,24 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
     public get refreshInterval(): number {
         return this._refreshInterval;
     }
+
     @Input()
     public set refreshInterval(v: number) {
         this._refreshInterval = v;
         this.setupInterval();
     }
+
     public get refreshIntervalText(): string {
         return (this._refreshInterval / 1000).toFixed(3) + "s";
+    }
+
+    public get timerStatusText() {
+        return this._timerStatusText;
+    }
+
+    @Input()
+    public set timerStatusText(v: string) {
+        this._timerStatusText = v;
     }
 
     public ngOnDestroy(): void {
@@ -127,14 +139,14 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
     private setupInterval(): void {
         if (this._interval >= 0) {
             this._zone.runOutsideAngular(() => {
-            window.clearInterval(this._interval);
+                window.clearInterval(this._interval);
             });
             this._interval = -1;
         }
 
         this._zone.runOutsideAngular(() => {
             this._interval = window.setInterval(() => this.tick(),
-            this.refreshInterval);
+                this.refreshInterval);
         });
     }
 
@@ -147,25 +159,30 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
         return data;
     }
 
+
+
     private tick(): void {
-        this.currValue += Math.random() * 4.0 - 2.0;
-        this.currIndex++;
-        const newVal = { Label: this.currIndex.toString(), Value: this.currValue };
 
-        const oldVal = this.data[0];
-        this.data.push(newVal);
-        this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
-        this.data.shift();
-        this.chart.notifyRemoveItem(this.data, 0, oldVal);
+        if (this.shouldTick) {
 
-        this._frames++;
-        const currTime = new Date();
-        const elapsed = (currTime.getTime() - this._time.getTime());
-        if (elapsed > 5000) {
-            const fps = this._frames / (elapsed / 1000.0);
-            this._time = currTime;
-            this._frames = 0;
-            this.fpsSpan.nativeElement.textContent = Math.round(fps).toString();
+            this.currValue += Math.random() * 4.0 - 2.0;
+            this.currIndex++;
+            const newVal = { Label: this.currIndex.toString(), Value: this.currValue };
+
+            const oldVal = this.data[0];
+            this.data.push(newVal);
+            this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
+            this.data.shift();
+            this.chart.notifyRemoveItem(this.data, 0, oldVal);
+
+            this._frames++;
+            const currTime = new Date();
+            const elapsed = (currTime.getTime() - this._time.getTime());
+            if (elapsed > 5000) {
+                const fps = this._frames / (elapsed / 1000.0);
+                this._time = currTime;
+                this._frames = 0;
+            }
         }
     }
 

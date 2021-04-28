@@ -19,7 +19,6 @@ export class MapUtility {
     public static navigateTo(geoMap: IgxGeographicMapComponent, name: MapRegion) {
 
         const geoRect = this.getRegions()[name];
-        // console.log("MapUtils " + name) ;
         geoMap.zoomToGeographic(geoRect);
     }
 

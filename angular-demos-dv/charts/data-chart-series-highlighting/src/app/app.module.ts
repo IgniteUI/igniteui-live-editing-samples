@@ -7,25 +7,30 @@ import { DataChartSeriesHighlightingComponent } from "./data-chart-series-highli
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
-	IgxDataChartInteractivityModule
+	IgxDataChartInteractivityModule,
+	IgxLegendModule
  } from "igniteui-angular-charts";
 import { SharedData } from "./SharedData";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartSeriesHighlightingComponent
-  ],
+	AppComponent,
+	DataChartSeriesHighlightingComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartInteractivityModule,
+	IgxLegendModule
+],
   providers: [SharedData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

@@ -46,25 +46,24 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
         // loading a shapefile with geographic polygons
         const sdsPolygons = new IgxShapeDataSource();
         sdsPolygons.importCompleted.subscribe(() => this.onPolygonsLoaded(sdsPolygons, ""));
-        sdsPolygons.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCountries.shp";
-        sdsPolygons.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCountries.dbf";
+        sdsPolygons.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCountries.shp";
+        sdsPolygons.databaseSource  = "https://static.infragistics.com/xplatform/shapes/WorldCountries.dbf";
         sdsPolygons.dataBind();
         // loading a shapefile with geographic polylines at runtime.
         const sdsPolylines = new IgxShapeDataSource();
-        sdsPolylines.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCableRoutes.shp";
-        sdsPolylines.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCableRoutes.dbf";
+        sdsPolylines.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCableRoutes.shp";
+        sdsPolylines.databaseSource  = "https://static.infragistics.com/xplatform/shapes/WorldCableRoutes.dbf";
         sdsPolylines.dataBind();
         sdsPolylines.importCompleted.subscribe(() => this.onPolylinesLoaded(sdsPolylines, ""));
         // loading a shapefile with geographic points
         const sdsPoints = new IgxShapeDataSource();
         sdsPoints.importCompleted.subscribe(() => this.onPointsLoaded(sdsPoints, ""));
-        sdsPoints.shapefileSource = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCities.shp";
-        sdsPoints.databaseSource  = "https://www.infragistics.com/angular-demos-dv/assets/Shapes/WorldCities.dbf";
+        sdsPoints.shapefileSource = "https://static.infragistics.com/xplatform/shapes/WorldCities.shp";
+        sdsPoints.databaseSource  = "https://static.infragistics.com/xplatform/shapes/WorldCities.dbf";
         sdsPoints.dataBind();
     }
 
     public onPointsLoaded(sds: IgxShapeDataSource, e: any) {
-        console.log("onPoints");
 
         const geoLocations: any[] = [];
         // parsing shapefile data and creating geo-locations
@@ -88,7 +87,6 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
     }
 
     public onPolylinesLoaded(sds: IgxShapeDataSource, e: any) {
-        console.log("onPolylines");
 
         const geoPolylines: any[] = [];
         // parsing shapefile data and creating geo-polygons
@@ -111,7 +109,6 @@ export class MapBindingMultipleShapesComponent implements AfterViewInit {
     }
 
     public onPolygonsLoaded(sds: IgxShapeDataSource, e: any) {
-        console.log("onPolygons ");
 
         const geoPolygons: any[] = [];
         // parsing shapefile data and creating geo-polygons

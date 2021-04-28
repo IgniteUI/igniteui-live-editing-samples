@@ -1,4 +1,13 @@
-<igx-financial-chart height="calc(100% - 60px)" width="100%"
+<div class="container sample">
+    <div class="options vertical" >
+        <label id="legendTitle">Stock Changes: Microsoft vs Google </label>
+    </div>
+
+    <igx-financial-chart height="100%" width="100%"
     [dataSource]="data"
-    chartType="line">
-</igx-financial-chart>
+    chartType="line"
+    thickness=2
+    yAxisMode="PercentChange"
+    yAxisTitle="Percent Changed">
+    </igx-financial-chart>
+</div>

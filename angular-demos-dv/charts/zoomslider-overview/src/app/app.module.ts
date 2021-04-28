@@ -20,30 +20,33 @@ import {
  } from "igniteui-angular-charts";
 import { SampleScatterStats } from "./SampleScatterStats";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		ZoomSliderOverviewComponent
-  ],
+	AppComponent,
+	ZoomSliderOverviewComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxZoomSliderDynamicModule,
-		IgxNumericYAxisModule,
-		IgxNumericXAxisModule,
-		IgxCrosshairLayerModule,
-		IgxDataChartScatterModule,
-		IgxDataChartScatterCoreModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartCategoryCoreModule,
-		IgxDataChartAnnotationModule,
-		IgxDataChartInteractivityModule,
-		IgxBubbleSeriesModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxZoomSliderDynamicModule,
+	IgxNumericYAxisModule,
+	IgxNumericXAxisModule,
+	IgxCrosshairLayerModule,
+	IgxDataChartScatterModule,
+	IgxDataChartScatterCoreModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxDataChartCategoryCoreModule,
+	IgxDataChartAnnotationModule,
+	IgxDataChartInteractivityModule,
+	IgxBubbleSeriesModule
+],
   providers: [SampleScatterStats],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

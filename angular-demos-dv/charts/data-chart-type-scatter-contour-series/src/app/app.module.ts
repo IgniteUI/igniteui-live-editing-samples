@@ -8,30 +8,35 @@ import {
 	IgxDataChartCoreModule,
 	IgxDataChartScatterModule,
 	IgxDataChartScatterCoreModule,
+	IgxLegendModule,
 	IgxScatterContourSeriesModule,
 	IgxScatterAreaSeriesModule,
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
 import { SampleScatterData } from "./SampleScatterData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartTypeScatterContourSeriesComponent
-  ],
+	AppComponent,
+	DataChartTypeScatterContourSeriesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartScatterModule,
-		IgxDataChartScatterCoreModule,
-		IgxScatterContourSeriesModule,
-		IgxScatterAreaSeriesModule,
-		IgxDataChartInteractivityModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartScatterModule,
+	IgxDataChartScatterCoreModule,
+	IgxLegendModule,
+	IgxScatterContourSeriesModule,
+	IgxScatterAreaSeriesModule,
+	IgxDataChartInteractivityModule
+],
   providers: [SampleScatterData],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

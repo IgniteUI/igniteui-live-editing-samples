@@ -49,7 +49,6 @@ export class MapBindingDataCsvComponent implements AfterViewInit {
             };
             geoLocations.push(location);
         }
-        console.log("csvLines " + csvLines.length);
 
         // creating HD series with loaded data
         const geoSeries = new IgxGeographicHighDensityScatterSeriesComponent();

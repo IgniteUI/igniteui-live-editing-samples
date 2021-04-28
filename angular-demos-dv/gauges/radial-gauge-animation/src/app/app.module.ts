@@ -7,20 +7,23 @@ import { IgxRadialGaugeModule } from "igniteui-angular-gauges";
 import { RadialGaugeAnimationComponent } from "./radial-gauge-animation/radial-gauge-animation.component";
 import { IgxButtonModule } from "igniteui-angular";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		RadialGaugeAnimationComponent
-  ],
+	AppComponent,
+	RadialGaugeAnimationComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxRadialGaugeModule,
-		IgxButtonModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxRadialGaugeModule,
+	IgxButtonModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

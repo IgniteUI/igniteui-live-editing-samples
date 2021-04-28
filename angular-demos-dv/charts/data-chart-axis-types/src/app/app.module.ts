@@ -7,6 +7,7 @@ import { DataChartAxisTypesComponent } from "./data-chart-axis-types/data-chart-
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxLegendModule,
 	IgxDataChartScatterCoreModule,
 	IgxDataChartScatterModule,
 	IgxTimeXAxisModule,
@@ -22,34 +23,38 @@ import { SampleFinancialData } from "./SampleFinancialData";
 import { SampleCategoryData } from "./SampleCategoryData";
 import { SampleScatterData } from "./SampleScatterData";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		DataChartAxisTypesComponent
-  ],
+	AppComponent,
+	DataChartAxisTypesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxDataChartCoreModule,
-		IgxDataChartCategoryModule,
-		IgxDataChartScatterCoreModule,
-		IgxDataChartScatterModule,
-		IgxTimeXAxisModule,
-		IgxCategoryXAxisModule,
-		IgxCategoryYAxisModule,
-		IgxNumericXAxisModule,
-		IgxNumericYAxisModule,
-		IgxNumericAngleAxisModule,
-		IgxNumericRadiusAxisModule,
-		IgxCategoryAngleAxisModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxDataChartCoreModule,
+	IgxDataChartCategoryModule,
+	IgxLegendModule,
+	IgxDataChartScatterCoreModule,
+	IgxDataChartScatterModule,
+	IgxTimeXAxisModule,
+	IgxCategoryXAxisModule,
+	IgxCategoryYAxisModule,
+	IgxNumericXAxisModule,
+	IgxNumericYAxisModule,
+	IgxNumericAngleAxisModule,
+	IgxNumericRadiusAxisModule,
+	IgxCategoryAngleAxisModule
+],
   providers: [
-		SampleFinancialData,
-		SampleCategoryData,
-		SampleScatterData
-	],
-  entryComponents: []
+	SampleFinancialData,
+	SampleCategoryData,
+	SampleScatterData
+],
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

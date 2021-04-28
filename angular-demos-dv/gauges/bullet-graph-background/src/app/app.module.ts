@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { IgxBulletGraphModule } from "igniteui-angular-gauges";
 import { BulletGraphBackgroundComponent } from "./bullet-graph-background/bullet-graph-background.component";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		BulletGraphBackgroundComponent
-  ],
+	AppComponent,
+	BulletGraphBackgroundComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxBulletGraphModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxBulletGraphModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

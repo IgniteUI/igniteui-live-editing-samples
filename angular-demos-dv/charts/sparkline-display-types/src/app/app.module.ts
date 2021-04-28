@@ -6,19 +6,22 @@ import { AppComponent } from "./app.component";
 import { SparklineDisplayTypesComponent } from "./sparkline-display-types/sparkline-display-types.component";
 import { IgxSparklineModule } from "igniteui-angular-charts";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		SparklineDisplayTypesComponent
-  ],
+	AppComponent,
+	SparklineDisplayTypesComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxSparklineModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxSparklineModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

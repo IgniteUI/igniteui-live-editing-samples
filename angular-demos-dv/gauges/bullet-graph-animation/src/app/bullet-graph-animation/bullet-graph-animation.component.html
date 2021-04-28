@@ -1,20 +1,14 @@
-<div >
-    <div>
-        <button igxButton="raised" (click)="AnimateToGauge1()"
-                igxButtonColor="black"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Gauge Animation #1</button>
-        <button igxButton="raised" (click)="AnimateToGauge2()"
-                igxButtonColor="black"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Gauge Animation #2</button>
-        <button igxButton="raised" (click)="AnimateToGauge3()"
-                igxButtonColor="black"
-                igxButtonBackground="#e2e2e2"
-                class="sample-button">Gauge Animation #3</button>
+<div class="container sample">
+    <div class="options horizontal">
+        <button (click)="AnimateToGauge1()"
+                class="options-button">Animation #1</button>
+        <button (click)="AnimateToGauge2()"
+                class="options-button">Animation #2</button>
+        <button (click)="AnimateToGauge3()"
+                class="options-button">Animation #3</button>
     </div>
 
-    <div class="sample-container"   >
+    <div class="container">
 
         <!-- Note the bullet graph requires settings only for
         minimumValue, maximumValue, and value, targetValue properties.

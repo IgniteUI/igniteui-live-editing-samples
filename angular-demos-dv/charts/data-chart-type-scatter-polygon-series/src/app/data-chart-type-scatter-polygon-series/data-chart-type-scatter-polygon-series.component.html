@@ -1,11 +1,12 @@
-<div class="sample">
-    <div class="chart">
+<div class="container sample">
+    <div class="options vertical">
+        <label id="legendTitle">Airplane Seating Chart (Polygons)</label>
+    </div>
+    <div class="container">
         <igx-data-chart isHorizontalZoomEnabled="true" isVerticalZoomEnabled="true"
-          subtitleTopMargin="10"
-          subtitle="Airplane Seating Chart (Polygons)"
           width="100%"
-          height="calc(100% - 2rem)">
-            <igx-numeric-x-axis #xAxis name="xAxis" minimumValue="-800" maximumValue="800" interval="200"></igx-numeric-x-axis>
+          height="100%">
+            <igx-numeric-x-axis #xAxis name="xAxis" minimumValue="-1000" maximumValue="1000" interval="200"></igx-numeric-x-axis>
             <igx-numeric-y-axis #yAxis name="yAxis" minimumValue="-600" maximumValue="600" interval="200"></igx-numeric-y-axis>
 
              <igx-scatter-polygon-series name="airplaneShapeSeries" #airplaneShapeSeries
@@ -23,7 +24,8 @@
 
         </igx-data-chart>
     </div>
-    <div class="legend">
+
+    <div class="options horizontal">
       <div><span style="background: dodgerblue; "></span><label>First Class</label></div>
       <div><span style="background: LimeGreen; "></span><label>Business Class</label></div>
       <div><span style="background: Orange; "></span><label>Premium Class</label></div>

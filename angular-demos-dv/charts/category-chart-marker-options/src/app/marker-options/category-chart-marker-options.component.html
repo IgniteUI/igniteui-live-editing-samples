@@ -1,6 +1,6 @@
-<div class="sample-wrapper container">
-    <div class="options">
-        <span>Chart Type: </span>
+<div class="container sample">
+    <div class="options horizontal">
+        <label class="options-label">Chart Type: </label>
         <select [(ngModel)]="chartType">
             <option>Auto</option>
             <option>Area</option>
@@ -13,27 +13,36 @@
             <option>StepLine</option>
             <option>Waterfall</option>
         </select>
+        <label class="options-label">Marker Type: </label>
+        <select [(ngModel)]="markerType">
+            <option>Circle</option>
+            <option>Automatic</option>
+            <option>Triangle</option>
+            <option>Pyramid</option>
+            <option>Square</option>
+            <option>Diamond</option>
+            <option>Pentagon</option>
+            <option>Hexagon</option>
+            <option>Tetragram</option>
+            <option>Pentagram</option>
+            <option>Hexagram</option>
+            <option>None</option>
+        </select>
     </div>
-    <div class="chart">
-        <igx-category-chart height="calc(100% - 60px)" width="98%"
+    <div class="container">
+        <igx-category-chart height="100%" width="100%"
             [dataSource]="data"
             [chartType]="chartType"
-            chartTitle="Olympic Medals By Country"
-            yAxisMinimumValue="50"
+            yAxisMinimumValue="0"
             yAxisMaximumValue="150"
+            yAxisTitle="TWh"
             xAxisOverlap="0"
-
-            negativeBrushes="Red"
-            negativeOutlines="Red"
             brushes="#4286f4, #e8b220, #11c111"
             outlines="#4286f4, #e8b220, #11c111"
             markerOutlines="#4286f4, #e8b220, #11c111"
             markerBrushes="White"
-            markerTypes="Circle"
-            thickness="2"
-            isTransitionInEnabled="true"
-            transitionInDuration="1500"
-            transitionInMode="AccordionFromBottom" >
+            [markerTypes]="markerType"
+            isTransitionInEnabled="true">
         </igx-category-chart>
     </div>
 </div>

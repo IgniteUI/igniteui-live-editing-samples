@@ -1,12 +1,12 @@
-<div class="sample">
-    <div class="options">
-        <span class="optionItem">Default Drag Option:</span>
+<div class="container sample">
+    <div class="options horizontal">
+        <span class="options-item">Default Drag Option:</span>
         <select [(ngModel)]="defaultInteraction">
             <option>DragZoom</option>
             <option>DragPan</option>
             <option>None</option>
         </select>
-        <span class="optionItem">Pan Modifier:</span>
+        <span class="options-item">Pan Modifier:</span>
         <select [(ngModel)]="panModifier">
             <option>Alt</option>
             <option>Control</option>
@@ -15,7 +15,7 @@
             <option>Apple</option>
             <option>None</option>
         </select>
-        <span class="optionItem">Zoom Modifier:</span>
+        <span class="options-item">Zoom Modifier:</span>
         <select [(ngModel)]="zoomModifier">
             <option>Alt</option>
             <option>Control</option>
@@ -25,18 +25,18 @@
             <option>None</option>
         </select>
     </div>
-    <div class="options">
-        <label class="optionItem"><input type="checkbox" [(ngModel)]="isZoomEnabled" /> Enable Zooming</label>
-        <button class="optionItem" (click)="onPanUpClick()">Pan Up</button>
-        <button class="optionItem" (click)="onPanDownClick()">Pan Down</button>
-        <button class="optionItem" (click)="onPanLeftClick()">Pan Left</button>
-        <button class="optionItem" (click)="onPanRightClick()">Pan Right</button>
+    <div class="options horizontal">
+        <label class="options-item"><input type="checkbox" [(ngModel)]="isZoomEnabled" /> Enable Zooming</label>
+        <button class="options-item" (click)="onPanUpClick()">Pan Up</button>
+        <button class="options-item" (click)="onPanDownClick()">Pan Down</button>
+        <button class="options-item" (click)="onPanLeftClick()">Pan Left</button>
+        <button class="options-item" (click)="onPanRightClick()">Pan Right</button>
     </div>
 
-    <div class="chart">
+    <div class="container">
         <igx-data-chart #chart [dataSource]="data"
             width="100%"
-            height="calc(100% - 85px)"
+            height="100%"
             [defaultInteraction]="defaultInteraction"
             [dragModifier]="zoomModifier"
             [panModifier]="panModifier"

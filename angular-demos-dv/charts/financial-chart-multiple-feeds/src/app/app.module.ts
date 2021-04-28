@@ -4,21 +4,28 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { FinancialChartMultipleFeedsComponent } from "./multiple-feeds/financial-chart-multiple-feeds.component";
-import { IgxFinancialChartModule } from "igniteui-angular-charts";
+import { 
+	IgxFinancialChartModule,
+	IgxLegendModule
+ } from "igniteui-angular-charts";
+
+
 
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinancialChartMultipleFeedsComponent
-  ],
+	AppComponent,
+	FinancialChartMultipleFeedsComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxFinancialChartModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxFinancialChartModule,
+	IgxLegendModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

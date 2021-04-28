@@ -1,5 +1,5 @@
-<div class="sample-wrapper container">
-    <div class="options">
+<div class="container sample">
+    <div class="options horizontal">
         <span>Chart Type: </span>
         <select [(ngModel)]="chartType">
             <option>Auto</option>
@@ -14,11 +14,13 @@
             <option>Waterfall</option>
         </select>
     </div>
-    <div class="chart">
-        <igx-category-chart height="calc(100% - 60px)" width="98%"
+    <div class="options vertical">
+        <label id="legendTitle">Olympic Medals By Country</label>
+    </div>
+    <div class="container">
+        <igx-category-chart height="100%" width="100%"
             [dataSource]="data"
             [chartType]="chartType"
-            chartTitle="Olympic Medals By Country"
 
             xAxisLabelTextStyle="10pt Verdana"
             xAxisLabelTopMargin="5"

@@ -7,20 +7,23 @@ import { FinancialChartHighFrequencyComponent } from "./high-frequency/financial
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
 import { IgxSliderModule } from "igniteui-angular";
 
+
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
-    AppComponent,
-		FinancialChartHighFrequencyComponent
-  ],
+	AppComponent,
+	FinancialChartHighFrequencyComponent
+],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-		IgxFinancialChartModule,
-		IgxSliderModule
-  ],
+	BrowserModule,
+	BrowserAnimationsModule,
+	FormsModule,
+	IgxFinancialChartModule,
+	IgxSliderModule
+],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  schemas: []
 })
 export class AppModule {}

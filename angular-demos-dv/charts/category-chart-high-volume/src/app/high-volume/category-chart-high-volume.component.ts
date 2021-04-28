@@ -29,9 +29,6 @@ export class CategoryChartHighVolumeComponent implements AfterViewInit, OnDestro
     @ViewChild("chart", { static: true })
     public chart: IgxCategoryChartComponent;
 
-    @ViewChild("loadTimeSpan", { static: true })
-    public loadTimeSpan: ElementRef;
-
     private currValue: number = 15;
     private currIndex: number = 0;
 
@@ -102,10 +99,7 @@ export class CategoryChartHighVolumeComponent implements AfterViewInit, OnDestro
                     this._assigningData = false;
 
                     this._zone.runOutsideAngular(() => {
-                        window.setTimeout(() => {
-                            const elapsed = new Date().getTime() - this._time.getTime();
-                            this.loadTimeSpan.nativeElement.textContent = "Load Time: " + elapsed.toFixed(2) + "ms";
-                        }, 0);
+                        window.setTimeout(() => {}, 0);
                     });
                 }
             });
