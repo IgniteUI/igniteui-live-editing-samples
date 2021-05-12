@@ -55,8 +55,8 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
         }
     }
 
-    public onRefreshFrequencyChanged(val: string) {
-        let num: number = parseInt(val, 10);
+    public onRefreshFrequencyChanged(e: any) {
+        let num: number = parseInt(e.target.value, 10);
 
         if (isNaN(num)) {
             num = 10;
@@ -71,8 +71,8 @@ export class CategoryChartHighFrequencyComponent implements AfterViewInit, OnDes
         this.setupInterval();
     }
 
-    public onMaxPointsChanged(val: string) {
-        let num: number = parseInt(val, 10);
+    public onMaxPointsChanged(e: any) {
+        let num: number = parseInt(e.target.value, 10);
 
         if (isNaN(num)) {
             num = 1000;

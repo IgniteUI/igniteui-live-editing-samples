@@ -55,8 +55,8 @@ export class CategoryChartHighVolumeComponent implements AfterViewInit, OnDestro
         this.chart.dataSource = this._data;
     }
 
-    public onMaxPointsChanged(val: string) {
-        let num: number = parseInt(val, 10);
+    public onMaxPointsChanged(e: any) {
+        let num: number = parseInt(e.target.value, 10);
         if (isNaN(num)) {
             num = 5000;
         }

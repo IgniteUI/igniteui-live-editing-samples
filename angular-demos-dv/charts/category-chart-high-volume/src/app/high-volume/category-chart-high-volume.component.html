@@ -4,9 +4,8 @@
         <button (click)="onAssignDataClicked()">AssignData</button>
 
         <label class="options-label">Data amount: {{ maxPointsText }}</label>
-        <igx-slider id="slider" minValue="5000" maxValue="2000000" [value]="maxPoints" [continuous]=true
-            (onValueChange)="onMaxPointsChanged($event.value)">
-        </igx-slider>
+        <input class="options-slider" type="range" id="slider" min="5000" max="2000000" step="1000" [value]="maxPoints"
+            (input)="onMaxPointsChanged($event)"/>
     </div>
     <div class="container">
         <igx-category-chart height="100%" yAxisLabelExtent="40" #chart>
