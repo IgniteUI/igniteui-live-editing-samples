@@ -7,6 +7,10 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 import { IgxTreeGridModule } from "igniteui-angular";
 import { TGridSaveStateComponent } from "./tree-grid-save-state/tGrid-state.component";
 import { TGridAboutComponent } from "./tree-grid-save-state/about.component";
+import { 
+	Router,
+	RouterModule
+ } from "@angular/router";
 
 
 
@@ -23,7 +27,7 @@ import { TGridAboutComponent } from "./tree-grid-save-state/about.component";
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	RouterModule.forRoot([{component: 'TGridAboutComponent', path: 'tree-grid-state-about'},{component: 'TGridSaveStateComponent', path: 'tree-grid-state'},{ path: '', redirectTo: '/tree-grid-state', pathMatch: 'full' }])]
+	RouterModule.forRoot([{component: TGridAboutComponent, path: 'tree-grid-state-about'},{component: TGridSaveStateComponent, path: 'tree-grid-state'},{ path: '', redirectTo: '/tree-grid-state', pathMatch: 'full' }])
 ],
   providers: [],
   entryComponents: [],

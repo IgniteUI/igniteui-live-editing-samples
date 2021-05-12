@@ -33,7 +33,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
 	IgxTooltipModule,
-	RouterModule.forRoot([{component: 'AboutComponent', path: 'grid-about'},{component: 'GridSaveStateComponent', path: 'grid-state'},{ path: '', redirectTo: '/grid-state', pathMatch: 'full' }]),
+	RouterModule.forRoot([{component: AboutComponent, path: 'grid-about'},{component: GridSaveStateComponent, path: 'grid-state'},{ path: '', redirectTo: '/grid-state', pathMatch: 'full' }]),
 	IgxToastModule,
 	IgxSwitchModule
 ],
