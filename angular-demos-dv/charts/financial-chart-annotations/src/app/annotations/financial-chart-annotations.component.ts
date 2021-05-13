@@ -1,6 +1,6 @@
-import {AfterViewInit, ViewChild, ChangeDetectionStrategy, Component } from "@angular/core";
+import { AfterViewInit, ViewChild, ChangeDetectionStrategy, Component } from "@angular/core";
 import { IgxFinancialChartComponent } from "igniteui-angular-charts";
-import { StocksUtility } from "../../data-chart/StocksUtility";
+import { StocksUtility } from "../../../utilities/StocksUtility";
 
 @Component({
     changeDetection: ChangeDetectionStrategy.OnPush,
@@ -20,24 +20,22 @@ export class FinancialChartAnnotationsComponent implements AfterViewInit {
 
     constructor(private dataService: StocksUtility) {
 
-        var today = new Date()
-        var year = today.getFullYear();
-        var dateMonth = today.getMonth();
-        var dateEnd = new Date(year + 5, dateMonth, 1);
-        var dateStart = new Date(year - 1, dateMonth, 1);
-        
+        const today = new Date()
+        const year = today.getFullYear();
+        const dateMonth = today.getMonth();
+        const dateEnd = new Date(year + 5, dateMonth, 1);
+        const dateStart = new Date(year - 1, dateMonth, 1);
+
         this.stocksData = [
-            this.dataService = StocksUtility.GetStocksBetween(dateStart, dateEnd)            
+            this.dataService = StocksUtility.GetStocksBetween(dateStart, dateEnd)
         ];
-        
+
         this.calloutsData = this.getCallouts(this.stocksData);
     }
 
     public ngAfterViewInit(): void {
         // binding only properties with "stack" prefix
-        this.chart.excludedProperties = [
-            "info", "label", "value"
-        ];
+        this.chart.excludedProperties = [ "info", "label", "value" ];
     }
 
     public getCallouts(stocks: any[]): any[] {
@@ -51,8 +49,6 @@ export class FinancialChartAnnotationsComponent implements AfterViewInit {
             calloutMin.value = Number.MAX_VALUE;
             calloutMax.value = Number.MIN_VALUE;
             let idx: number = 0;
-            let currentYear: number = 0;
-            let currentQuarter: number = 0;
 
             for (const item of stock) {
                 // finding item with min/max price
@@ -66,7 +62,7 @@ export class FinancialChartAnnotationsComponent implements AfterViewInit {
                 }
                 const offset = idx + 10;
                 const calloutEvent = new CalloutDataItem({index: idx });
-                // creating SPLIT/DIVIDENT events at specific intervals
+                // creating SPLIT/DIVIDEND events at specific intervals
                 if (offset % intervalSplit === 5) {
                     calloutEvent.value = item.close;
                     calloutEvent.label = "SPLIT";

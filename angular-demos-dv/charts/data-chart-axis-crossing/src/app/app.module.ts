@@ -7,6 +7,7 @@ import { DataChartAxisCrossingComponent } from "./axis-crossing/data-chart-axis-
 import { 
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxDataChartScatterModule,
 	IgxLegendModule
  } from "igniteui-angular-charts";
 
@@ -24,6 +25,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxDataChartCategoryModule,
+	IgxDataChartScatterModule,
 	IgxLegendModule
 ],
   providers: [],

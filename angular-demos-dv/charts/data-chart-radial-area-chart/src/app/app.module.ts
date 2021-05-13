@@ -7,8 +7,7 @@ import { DataChartRadialAreaChartComponent } from "./radial-area-chart/data-char
 import { 
 	IgxDataChartCoreModule,
 	IgxLegendModule,
-	IgxDataChartPolarModule,
-	IgxDataChartPolarCoreModule,
+	IgxDataChartRadialModule,
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
 
@@ -26,8 +25,7 @@ import {
 	FormsModule,
 	IgxDataChartCoreModule,
 	IgxLegendModule,
-	IgxDataChartPolarModule,
-	IgxDataChartPolarCoreModule,
+	IgxDataChartRadialModule,
 	IgxDataChartInteractivityModule
 ],
   providers: [],

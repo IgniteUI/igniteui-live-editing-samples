@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { PieChartStylingComponent } from "./pie-chart-styling/pie-chart-styling.component";
 import { 
 	IgxPieChartModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxItemLegendModule
  } from "igniteui-angular-charts";
 
 
@@ -22,7 +23,8 @@ import {
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPieChartModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxItemLegendModule
 ],
   providers: [],
   entryComponents: [],

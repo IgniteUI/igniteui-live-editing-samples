@@ -10,7 +10,8 @@ import {
 	IgxDataChartInteractivityModule,
 	IgxLegendModule,
 	IgxDataChartStackedModule,
-	IgxStackedFragmentSeriesModule
+	IgxStackedFragmentSeriesModule,
+	IgxDataChartAnnotationModule
  } from "igniteui-angular-charts";
 
 
@@ -30,7 +31,8 @@ import {
 	IgxDataChartInteractivityModule,
 	IgxLegendModule,
 	IgxDataChartStackedModule,
-	IgxStackedFragmentSeriesModule
+	IgxStackedFragmentSeriesModule,
+	IgxDataChartAnnotationModule
 ],
   providers: [],
   entryComponents: [],
