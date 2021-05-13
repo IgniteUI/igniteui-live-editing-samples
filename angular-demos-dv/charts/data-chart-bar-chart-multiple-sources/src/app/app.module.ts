@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { DataChartBarChartMultipleSourcesComponent } from "./bar-chart-multiple-sources/data-chart-bar-chart-multiple-sources.component";
 import { 
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule,
+	IgxDataChartVerticalCategoryModule,
 	IgxLegendModule,
 	IgxDataChartInteractivityModule
  } from "igniteui-angular-charts";
@@ -24,7 +24,7 @@ import {
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule,
+	IgxDataChartVerticalCategoryModule,
 	IgxLegendModule,
 	IgxDataChartInteractivityModule
 ],
