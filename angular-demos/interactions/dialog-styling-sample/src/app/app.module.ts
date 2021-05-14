@@ -10,7 +10,7 @@ import {
 	IgxIconModule,
 	IgxToggleModule
  } from "igniteui-angular";
-import { DialogStylingSample } from "./dialog/dialog-styling-sample/dialog-styling-sample.component";
+import { DialogStylingSampleComponent } from "./dialog/dialog-styling-sample/dialog-styling-sample.component";
 
 
 
@@ -18,7 +18,7 @@ import { DialogStylingSample } from "./dialog/dialog-styling-sample/dialog-styli
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	DialogStylingSample
+	DialogStylingSampleComponent
 ],
   imports: [
 	BrowserModule,

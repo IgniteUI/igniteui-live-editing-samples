@@ -7,7 +7,7 @@ import {
 	IgxComboModule,
 	IgxSwitchModule
  } from "igniteui-angular";
-import { ComboFeatures } from "./combo-features/combo-features.component";
+import { ComboFeaturesComponent } from "./combo-features/combo-features.component";
 
 
 
@@ -15,7 +15,7 @@ import { ComboFeatures } from "./combo-features/combo-features.component";
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	ComboFeatures
+	ComboFeaturesComponent
 ],
   imports: [
 	BrowserModule,

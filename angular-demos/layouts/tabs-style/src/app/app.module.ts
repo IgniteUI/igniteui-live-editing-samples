@@ -4,6 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
+	IgxIconModule,
 	IgxTabsModule,
 	IgxCardModule,
 	IgxAvatarModule,
@@ -24,6 +25,7 @@ import { TabsStyleComponent } from "./tabs-style/tabs-style.component";
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
+	IgxIconModule,
 	IgxTabsModule,
 	IgxCardModule,
 	IgxAvatarModule,

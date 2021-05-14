@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxIconModule } from "igniteui-angular";
-import { IconStylingSample } from "./icon-styling-sample/icon-styling-sample.component";
+import { IconStylingSampleComponent } from "./icon-styling-sample/icon-styling-sample.component";
 
 
 
@@ -12,7 +12,7 @@ import { IconStylingSample } from "./icon-styling-sample/icon-styling-sample.com
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	IconStylingSample
+	IconStylingSampleComponent
 ],
   imports: [
 	BrowserModule,

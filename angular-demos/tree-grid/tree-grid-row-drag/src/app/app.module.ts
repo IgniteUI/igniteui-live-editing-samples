@@ -11,7 +11,7 @@ import {
 	IgxIconModule,
 	IgxDragDropModule
  } from "igniteui-angular";
-import { TreeGridRowDrag } from "./tree-grid-row-drag/tree-grid-row-drag.component";
+import { TreeGridRowDragComponent } from "./tree-grid-row-drag/tree-grid-row-drag.component";
 
 
 
@@ -19,7 +19,7 @@ import { TreeGridRowDrag } from "./tree-grid-row-drag/tree-grid-row-drag.compone
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridRowDrag
+	TreeGridRowDragComponent
 ],
   imports: [
 	BrowserModule,

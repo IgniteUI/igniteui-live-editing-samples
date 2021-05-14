@@ -7,7 +7,7 @@ import {
 	IgxDatePickerModule,
 	IgxIconModule
  } from "igniteui-angular";
-import { DatepickerStylingSample } from "./scheduling/datepicker/datepicker-styling-sample/datepicker-styling-sample.component";
+import { DatepickerStylingSampleComponent } from "./scheduling/datepicker/datepicker-styling-sample/datepicker-styling-sample.component";
 
 
 
@@ -15,7 +15,7 @@ import { DatepickerStylingSample } from "./scheduling/datepicker/datepicker-styl
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	DatepickerStylingSample
+	DatepickerStylingSampleComponent
 ],
   imports: [
 	BrowserModule,

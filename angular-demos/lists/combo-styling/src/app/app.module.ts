@@ -7,7 +7,7 @@ import {
 	IgxComboModule,
 	IgxToastModule
  } from "igniteui-angular";
-import { ComboStyling } from "./lists/combo/combo-styling/combo-styling.component";
+import { ComboStylingComponent } from "./lists/combo/combo-styling/combo-styling.component";
 
 
 
@@ -15,7 +15,7 @@ import { ComboStyling } from "./lists/combo/combo-styling/combo-styling.componen
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	ComboStyling
+	ComboStylingComponent
 ],
   imports: [
 	BrowserModule,

@@ -3,7 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { CustomGridPagingStyleSample } from "./grid/custom-grid-paging-style/custom-grid-paging-style.component";
+import { CustomGridPagingStyleSampleComponent } from "./grid/custom-grid-paging-style/custom-grid-paging-style.component";
 import { IgxGridModule } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -13,7 +13,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	CustomGridPagingStyleSample
+	CustomGridPagingStyleSampleComponent
 ],
   imports: [
 	BrowserModule,

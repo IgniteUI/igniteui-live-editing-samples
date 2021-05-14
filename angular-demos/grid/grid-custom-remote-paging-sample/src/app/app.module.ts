@@ -3,7 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { CustomRemotePagingGridSample } from "./grid/grid-custom-remote-paging-sample/custom-remote-paging-sample.component";
+import { CustomRemotePagingGridSampleComponent } from "./grid/grid-custom-remote-paging-sample/custom-remote-paging-sample.component";
 import { 
 	IgxGridModule,
 	IgxSelectModule
@@ -19,7 +19,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	CustomRemotePagingGridSample
+	CustomRemotePagingGridSampleComponent
 ],
   imports: [
 	BrowserModule,

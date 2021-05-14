@@ -7,7 +7,7 @@ import {
 	IgxComboModule,
 	IgxSelectModule
  } from "igniteui-angular";
-import { CascadingCombos } from "./cascading-combos/cascading-combos.component";
+import { CascadingCombosComponent } from "./cascading-combos/cascading-combos.component";
 
 
 
@@ -15,7 +15,7 @@ import { CascadingCombos } from "./cascading-combos/cascading-combos.component";
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	CascadingCombos
+	CascadingCombosComponent
 ],
   imports: [
 	BrowserModule,

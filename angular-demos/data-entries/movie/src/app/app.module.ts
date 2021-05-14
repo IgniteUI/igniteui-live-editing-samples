@@ -9,6 +9,7 @@ import {
 	IgxInputGroupModule
  } from "igniteui-angular";
 import { MovieComponent } from "./data-entries/autocomplete/movie/movie.component";
+import { AutocompletePipeStartsWith2 } from "./data-entries/autocomplete/movie/movie.component";
 
 
 
@@ -16,7 +17,8 @@ import { MovieComponent } from "./data-entries/autocomplete/movie/movie.componen
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	MovieComponent
+	MovieComponent,
+	AutocompletePipeStartsWith2
 ],
   imports: [
 	BrowserModule,

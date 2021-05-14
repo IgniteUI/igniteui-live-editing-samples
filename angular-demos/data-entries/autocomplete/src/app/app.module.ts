@@ -8,7 +8,7 @@ import {
 	IgxDropDownModule,
 	IgxInputGroupModule
  } from "igniteui-angular";
-import { AutocompleteBasic } from "./autocomplete/autocomplete.component";
+import { AutocompleteBasicComponent } from "./autocomplete/autocomplete.component";
 import { AutocompletePipeStartsWith } from "./autocomplete/autocomplete.component";
 
 
@@ -17,7 +17,7 @@ import { AutocompletePipeStartsWith } from "./autocomplete/autocomplete.componen
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	AutocompleteBasic,
+	AutocompleteBasicComponent,
 	AutocompletePipeStartsWith
 ],
   imports: [
