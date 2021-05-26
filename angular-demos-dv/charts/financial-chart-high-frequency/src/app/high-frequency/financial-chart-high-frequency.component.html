@@ -1,44 +1,35 @@
 <div class="container sample">
-
-    <div class="container horizontal">
-        <div class="vertical">
-            <span class="options-label">Refresh Interval: {{ refreshIntervalText }} </span>
-            <input class="options-slider" type="range" step="5"
-            [min]="5"
-            [max]="1000"
-            [value]="refreshInterval"
-            (input)="onRefreshFrequencyChanged($event)"/>
-        </div>
-        <div class="vertical">
-            <span class="options-label">Data Points: {{ maxPointsText }}</span>
-            <input class="options-slider" type="range" step="1000"
-            [min]="250"
-            [max]="100000"
-            [value]="maxPoints"
-            (input)="onMaxPointsChanged($event)"/>
-        </div>
-        <button (click)="onChangeAmountClicked()">Assign Data</button>
-
-        <div class="vertical">
-            <span class="options-label">FPS: </span>
-            <span #fpsSpan class="options-label"> 60</span>
-        </div>
-        <div class="horizontal">
-            <span class="options-label">Optimize Scaling: </span>
-            <input class="options-checkbox" type="checkbox" (change)="onOptimizeScalingChanged($event.target.checked)"/>
-        </div>
+    <div class="options horizontal">
+        <label class="options-label" style="width: 5rem;">Data Update:</label>
+        <label class="options-value">{{refreshIntervalText}}</label>
+        <input class="options-slider" type="range" step="5"
+        [min]="5"
+        [max]="1000"
+        [value]="refreshInterval"
+        (input)="onRefreshFrequencyChanged($event)"/>
+        <button #timerButton (click)="onTimerButtonClicked()">{{timerButtonText}}</button>
+        <label class="options-label">FPS: </label>
+        <span #fpsSpan class="options-label"> 60</span>
+    </div>
+    <div class="options horizontal">
+        <label class="options-label" style="width: 5rem;">Data Points:</label>
+        <label class="options-value">{{maxPointsText}}</label>
+        <input class="options-slider" type="range" step="1000"
+        [min]="250"
+        [max]="100000"
+        [value]="maxPoints"
+        (input)="onMaxPointsChanged($event)"/>
+        <button (click)="onChangeAmountClicked()">Generate</button>
+        <label class="options-label">Optimize Scaling: </label>
+        <input class="options-checkbox" type="checkbox" (change)="onOptimizeScalingChanged($event.target.checked)"/>
     </div>
 
-    <div class="container">
-        <igx-financial-chart height="100%" width="100%"
-            [dataSource]="data"
-            [pixelScalingRatio]="scalingRatio"
-            chartType="candle"
-            zoomSliderType="candle"
-            volumeType="none"
-            isToolbarVisible=false
-            #chart>
-        </igx-financial-chart>
-      <!-- yAxisLabelExtent="40" -->
-    </div>
+    <igx-financial-chart height="100%" width="100%"
+        [dataSource]="data"
+        [pixelScalingRatio]="scalingRatio"
+        chartType="line"
+        zoomSliderType="none"
+        thickness="2"
+        #chart>
+    </igx-financial-chart>
 </div>
