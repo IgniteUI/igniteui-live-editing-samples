@@ -6,7 +6,7 @@ import { AppComponent } from "./app.component";
 import { DataChartBarChartStylingComponent } from "./bar-chart-styling/data-chart-bar-chart-styling.component";
 import { 
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule,
+	IgxDataChartVerticalCategoryModule,
 	IgxDataChartAnnotationModule,
 	IgxLegendModule,
 	IgxDataChartInteractivityModule,
@@ -26,7 +26,7 @@ import {
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDataChartCoreModule,
-	IgxDataChartCategoryModule,
+	IgxDataChartVerticalCategoryModule,
 	IgxDataChartAnnotationModule,
 	IgxLegendModule,
 	IgxDataChartInteractivityModule,

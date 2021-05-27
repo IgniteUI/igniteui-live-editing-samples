@@ -28,8 +28,8 @@ export class CategoryChartLineChartWithAnimationsComponent {
         this.data = this.generateData();
     }
 
-    public OnTransitionIntervalChange(val: string) {
-        this.transitionInInterval = val;
+    public OnTransitionIntervalChange(e: any) {
+        this.transitionInInterval = e.target.value;
     }
 
     private generateData(): any[] {
@@ -44,9 +44,9 @@ export class CategoryChartLineChartWithAnimationsComponent {
             { Year: "2016", Europe: 13, China: 90, USA: 52 },
             { Year: "2017", Europe: 78, China: 132, USA: 50 },
             { Year: "2018", Europe: 40, China: 134, USA: 34 },
-            { Year: "2019", Europe: 80, China: 96, USA: 38 },
+            { Year: "2019", Europe: 80, China: 96, USA: 38 }
         ];
-       
+
         return data;
     }
 }

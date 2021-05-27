@@ -24,7 +24,7 @@ export class MapBindingDataJsonPointsComponent implements AfterViewInit {
 
     public componentDidMount() {
         // fetching JSON data with geographic locations from public folder
-        fetch("http://static.infragistics.com/xplatform/data/WorldCities.json")
+        fetch("https://static.infragistics.com/xplatform/data/WorldCities.json")
             .then((response) => response.json())
             .then((data) => this.onDataLoaded(data));
     }

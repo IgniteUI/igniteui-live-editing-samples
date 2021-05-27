@@ -8,7 +8,7 @@ import {
 	IgxFinancialChartModule,
 	IgxLegendModule
  } from "igniteui-angular-charts";
-import { FinancialDataService } from "./services/generate-hourly-prices.service";
+import { FinancialDataService } from "./services/financial-data.service";
 
 
 

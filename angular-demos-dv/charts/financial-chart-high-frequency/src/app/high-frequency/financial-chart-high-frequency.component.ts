@@ -39,6 +39,8 @@ export class FinancialChartHighFrequencyComponent implements AfterViewInit, OnDe
     private _interval: number = -1;
     private _frames: number = 0;
     private _time: Date;
+    private _shouldTick = true;
+    private _timerButtonText = "Stop Data";
 
     constructor(private _zone: NgZone) {
         this.data = this.generateData();
@@ -56,8 +58,19 @@ export class FinancialChartHighFrequencyComponent implements AfterViewInit, OnDe
         this.data = this.generateData();
     }
 
-    public onRefreshFrequencyChanged(val: string) {
-        let num: number = parseInt(val, 10);
+    public onTimerButtonClicked() {
+        this._shouldTick = !this._shouldTick;
+
+        if (this._shouldTick) {
+            this.timerButtonText = "Stop Data";
+        }
+        else {
+            this.timerButtonText = "Live Data";
+        }
+    }
+
+    public onRefreshFrequencyChanged(e: any) {
+        let num: number = parseInt(e.target.value, 10);
         if (isNaN(num)) {
             num = 10;
         }
@@ -71,8 +84,8 @@ export class FinancialChartHighFrequencyComponent implements AfterViewInit, OnDe
         this.setupInterval();
     }
 
-    public onMaxPointsChanged(val: string) {
-        let num: number = parseInt(val, 10);
+    public onMaxPointsChanged(e: any) {
+        let num: number = parseInt(e.target.value, 10);
 
         if (isNaN(num)) {
             num = 250;
@@ -108,6 +121,15 @@ export class FinancialChartHighFrequencyComponent implements AfterViewInit, OnDe
     }
     public get refreshIntervalText(): string {
         return (this._refreshInterval / 1000).toFixed(3) + "s";
+    }
+
+    @Input()
+    public set timerButtonText(v: string){
+        this._timerButtonText = v;
+    }
+
+    public get timerButtonText(): string{
+        return this._timerButtonText;
     }
 
     public ngOnDestroy(): void {
@@ -163,24 +185,26 @@ export class FinancialChartHighFrequencyComponent implements AfterViewInit, OnDe
     }
 
     private tick(): void {
-        this.currValue += Math.random() * 4.0 - 2.0;
-        this.currIndex++;
-        const newVal = this.getValue();
-        const oldVal = this.data[0];
+        if (this._shouldTick) {
+            this.currValue += Math.random() * 4.0 - 2.0;
+            this.currIndex++;
+            const newVal = this.getValue();
+            const oldVal = this.data[0];
 
-        this.data.push(newVal);
-        this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
-        this.data.shift();
-        this.chart.notifyRemoveItem(this.data, 0, oldVal);
+            this.data.push(newVal);
+            this.chart.notifyInsertItem(this.data, this.data.length - 1, newVal);
+            this.data.shift();
+            this.chart.notifyRemoveItem(this.data, 0, oldVal);
 
-        this._frames++;
-        const currTime = new Date();
-        const elapsed = (currTime.getTime() - this._time.getTime());
-        if (elapsed > 5000) {
-            const fps = this._frames / (elapsed / 1000.0);
-            this._time = currTime;
-            this._frames = 0;
-            this.fpsSpan.nativeElement.textContent = Math.round(fps).toString();
+            this._frames++;
+            const currTime = new Date();
+            const elapsed = (currTime.getTime() - this._time.getTime());
+            if (elapsed > 5000) {
+                const fps = this._frames / (elapsed / 1000.0);
+                this._time = currTime;
+                this._frames = 0;
+                this.fpsSpan.nativeElement.textContent = Math.round(fps).toString();
+            }
         }
     }
 

@@ -7,17 +7,17 @@ import { ChangeDetectionStrategy, Component, ViewChild } from "@angular/core";
     templateUrl: "./category-chart-axis-range.component.html"
 })
 export class CategoryChartAxisRangeComponent {
-   
-    public data: any;
-    public YAxisMinValue : number =0 ;
-    public YAxisMaxValue : number = 150 ;
 
-    public OnYAxisMinValueChanged(e : any) {        
-        this.YAxisMinValue = e.target.value;
+    public data: any;
+    public yAxisMinValue : number = 0;
+    public yAxisMaxValue : number = 150 ;
+
+    public OnYAxisMinValueChanged(e : any) {
+        this.yAxisMinValue = e.target.value;
     }
 
-    public OnYAxisMaxValueChanged(e : any) {       
-        this.YAxisMaxValue = e.target.value;
+    public OnYAxisMaxValueChanged(e : any) {
+        this.yAxisMaxValue = e.target.value;
     }
 
     constructor() {
@@ -32,7 +32,7 @@ export class CategoryChartAxisRangeComponent {
             { Year: "2016", Europe: 13, China: 90, USA: 52 },
             { Year: "2017", Europe: 78, China: 132, USA: 50 },
             { Year: "2018", Europe: 40, China: 134, USA: 34 },
-            { Year: "2019", Europe: 80, China: 96, USA: 38 },
+            { Year: "2019", Europe: 80, China: 96, USA: 38 }
         ];
     }
 }

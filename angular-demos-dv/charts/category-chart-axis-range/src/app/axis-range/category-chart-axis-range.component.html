@@ -8,14 +8,13 @@
         <div class="overlay-right" >
             <div class="options horizontal" >
                 <label class="options-label">Y - Axis Minimum Value </label>
-                <label class="options-value"><span [textContent]="YAxisMinValue" ></span></label>
+                <label class="options-value"><span [textContent]="yAxisMinValue" ></span></label>
                 <input type="range" min="0" max="100" step="10" value="0" (input)="OnYAxisMinValueChanged($event)" />
           </div>
-            <div class="options horizontal" >
+          <div class="options horizontal" >
                 <label class="options-label">Y - Axis Maximum Value </label>
-                <label class="options-value"><span [textContent]="YAxisMaxValue" ></span></label>
+                <label class="options-value"><span [textContent]="yAxisMaxValue" ></span></label>
                 <input type="range" min="100" max="200" step="10" value="150" (input)="OnYAxisMaxValueChanged($event)" />
-
             </div>
         </div>
     </div>
@@ -26,8 +25,8 @@
             [legend]="Legend"
             isHorizontalZoomEnabled="false"
             isVerticalZoomEnabled="false"
-            [yAxisMinimumValue]="YAxisMinValue"
-            [yAxisMaximumValue]="YAxisMaxValue">
+            [yAxisMinimumValue]="yAxisMinValue"
+            [yAxisMaximumValue]="yAxisMaxValue">
         </igx-category-chart>
     </div>
 </div>

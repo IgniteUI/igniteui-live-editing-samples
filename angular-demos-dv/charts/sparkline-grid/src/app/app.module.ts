@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { SparklineGridComponent } from "./sparkline-grid/sparkline-grid.component";
 import { IgxSparklineModule } from "igniteui-angular-charts";
 import { IgxGridModule } from "igniteui-angular";
+import { Products } from "./utilities/Products.ts";
 
 
 
@@ -22,7 +23,7 @@ import { IgxGridModule } from "igniteui-angular";
 	IgxSparklineModule,
 	IgxGridModule
 ],
-  providers: [],
+  providers: [Products],
   entryComponents: [],
   schemas: []
 })

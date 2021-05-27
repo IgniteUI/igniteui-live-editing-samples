@@ -7,7 +7,8 @@ import { DoughnutChartSelectionSampleComponent } from "./doughnut-chart-selectio
 import { 
 	IgxDoughnutChartModule,
 	IgxRingSeriesModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxItemLegendModule
  } from "igniteui-angular-charts";
 
 
@@ -24,7 +25,8 @@ import {
 	FormsModule,
 	IgxDoughnutChartModule,
 	IgxRingSeriesModule,
-	IgxLegendModule
+	IgxLegendModule,
+	IgxItemLegendModule
 ],
   providers: [],
   entryComponents: [],
