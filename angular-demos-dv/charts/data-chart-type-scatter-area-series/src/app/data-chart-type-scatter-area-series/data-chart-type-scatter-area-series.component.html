@@ -24,9 +24,11 @@
             (change)="this.seriesScaleMaxChanged($event)"/>
 
     </div>
-    <div class="options vertical" >
-        <label id="legendTitle">Magnetic Field Distribution </label>
+
+    <div class="options vertical">
+        <label id="legendTitle">Distribution of Magnetic Field</label>
     </div>
+
     <div class="container">
         <igx-data-chart #chart
             isHorizontalZoomEnabled="true"
@@ -35,22 +37,14 @@
             height="100%"
             gridMode="BeforeSeries"
             [dataSource]="data">
-            <igx-numeric-x-axis #xAxis1
-                name="xAxis1" labelLocation="OutsideLeft"
-                minimumValue="-180" maximumValue="180" title="Longitude">
-            </igx-numeric-x-axis>
-            <igx-numeric-y-axis #yAxis1
-                name="yAxis1" labelLocation="OutsideBottom"
-                minimumValue="-90" maximumValue="90" title="Latitude">
-            </igx-numeric-y-axis>
-            <igx-numeric-x-axis #xAxis2
-                name="xAxis2" labelLocation="OutsideTop"
-                minimumValue="-180" maximumValue="180">
-            </igx-numeric-x-axis>
-            <igx-numeric-y-axis #yAxis2
-                name="yAxis2" labelLocation="OutsideRight"
-                minimumValue="-90" maximumValue="90" title="Latitude">
-            </igx-numeric-y-axis>
+
+            <!-- primary axes required for scatter-contour-series -->
+            <igx-numeric-x-axis #xAxis1 labelLocation="OutsideLeft" minimumValue=-180 maximumValue=180 title="Longitude"></igx-numeric-x-axis>
+            <igx-numeric-y-axis #yAxis1 labelLocation="OutsideBottom" minimumValue=-90 maximumValue=90 title="Latitude"></igx-numeric-y-axis>
+
+            <!-- optional axes that provide more context for displayed data -->
+            <igx-numeric-x-axis #xAxis2 labelLocation="OutsideRight" minimumValue=-180 maximumValue=180 title="Longitude"></igx-numeric-x-axis>
+            <igx-numeric-y-axis #yAxis2 labelLocation="OutsideTop" minimumValue=-90 maximumValue=90 title="Latitude"></igx-numeric-y-axis>
 
             <igx-scatter-area-series #series
                 name="series"
