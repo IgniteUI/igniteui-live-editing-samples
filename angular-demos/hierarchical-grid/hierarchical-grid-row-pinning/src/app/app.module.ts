@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { HGridRowPinningSampleComponent } from "./hierarchical-grid/hierarchical-grid-row-pinning/hierarchical-grid-row-pinning.component";
 import { 
 	IgxHierarchicalGridModule,
-	IgxActionStripModule
+	IgxActionStripModule,
+	IgxSwitchModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 

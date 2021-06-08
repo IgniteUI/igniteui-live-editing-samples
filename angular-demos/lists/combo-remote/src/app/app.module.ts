@@ -9,7 +9,7 @@ import {
  } from "igniteui-angular";
 import { ComboRemoteComponent } from "./lists/combo/combo-remote/combo-remote.component";
 import { HttpClientModule } from "@angular/common/http";
-import { RemoteService } from "./grid/services/remote.service";
+import { RemoteNWindService } from "./services/remoteNwind.service";
 
 
 
@@ -27,7 +27,7 @@ import { RemoteService } from "./grid/services/remote.service";
 	IgxToastModule,
 	HttpClientModule
 ],
-  providers: [RemoteService],
+  providers: [RemoteNWindService],
   entryComponents: [],
   schemas: []
 })

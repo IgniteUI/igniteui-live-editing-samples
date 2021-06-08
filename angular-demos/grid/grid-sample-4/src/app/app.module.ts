@@ -10,7 +10,7 @@ import {
 	IgxBadgeModule
  } from "igniteui-angular";
 import { HttpClientModule } from "@angular/common/http";
-import { RemoteServiceVirt } from "./grid/services/remoteService";
+import { RemoteServiceVirt } from "./services/remoteVirtualization.service";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
