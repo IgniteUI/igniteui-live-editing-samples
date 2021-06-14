@@ -4,6 +4,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { DateTimePickerTDFSampleComponent } from "./scheduling/datepicker/template-driven-form/template-driven-form.component";
+import { 
+	IgxDatePickerModule,
+	IgxTimePickerModule
+ } from "igniteui-angular";
 
 
 
