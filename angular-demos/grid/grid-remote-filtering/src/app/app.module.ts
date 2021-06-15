@@ -10,7 +10,7 @@ import {
 	IgxToastModule
  } from "igniteui-angular";
 import { HttpClientModule } from "@angular/common/http";
-import { RemoteFilteringService } from "./grid/services/remoteFilteringService";
+import { RemoteFilteringService } from "./services/remoteFiltering.service";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 

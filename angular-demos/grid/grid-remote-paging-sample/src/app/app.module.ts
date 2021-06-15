@@ -10,7 +10,7 @@ import {
  } from "igniteui-angular";
 import { RouterModule } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
-import { RemotePagingService } from "./grid/services/remotePagingService";
+import { RemotePagingService } from "./services/remotePaging.service";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 

@@ -12,7 +12,7 @@ import {
  } from "igniteui-angular";
 import { DropDownRemoteComponent } from "./data-entries/dropdown/drop-down-remote-virtual/drop-down-remote.component";
 import { HttpClientModule } from "@angular/common/http";
-import { RemoteService } from "./grid/services/remote.service";
+import { RemoteNWindService } from "./services/remoteNwind.service";
 
 
 
@@ -33,7 +33,7 @@ import { RemoteService } from "./grid/services/remote.service";
 	IgxForOfModule,
 	HttpClientModule
 ],
-  providers: [RemoteService],
+  providers: [RemoteNWindService],
   entryComponents: [],
   schemas: []
 })

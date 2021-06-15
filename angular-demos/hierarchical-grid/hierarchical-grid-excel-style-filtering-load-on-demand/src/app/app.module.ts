@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxHierarchicalGridModule } from "igniteui-angular";
 import { HierarchicalGridExcelStyleFilteringLoadOnDemandComponent } from "./hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand/hierarchical-grid-excel-style-filtering-load-on-demand.component";
-import { RemoteValuesService } from "./hierarchical-grid/hierarchical-grid-excel-style-filtering-load-on-demand/remoteValues.service";
+import { RemoteValuesService } from "./services/remoteValues.service";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 

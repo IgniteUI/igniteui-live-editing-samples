@@ -16,6 +16,7 @@ import {
  } from "igniteui-angular";
 import { GridSelectionSampleComponent } from "./grid/grid-sample-selection/grid-selection.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
+import { FinancialDataService } from "./services/financial.service";
 
 
 
@@ -40,7 +41,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxSwitchModule,
 	HttpClientModule
 ],
-  providers: [],
+  providers: [FinancialDataService],
   entryComponents: [],
   schemas: []
 })
