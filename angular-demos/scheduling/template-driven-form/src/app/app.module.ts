@@ -8,7 +8,6 @@ import {
 	IgxDatePickerModule,
 	IgxTimePickerModule
  } from "igniteui-angular";
-import { FormsModule } from "@angular/forms";
 
 
 
@@ -23,8 +22,7 @@ import { FormsModule } from "@angular/forms";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDatePickerModule,
-	IgxTimePickerModule,
-	FormsModule
+	IgxTimePickerModule
 ],
   providers: [],
   entryComponents: [],
