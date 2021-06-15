@@ -10,6 +10,7 @@ import {
 	IgxSparklineCoreModule,
 	IgxSparklineModule
  } from "igniteui-angular-charts";
+import { RemoteValuesService } from "./services/remoteValues.service";
 
 
 
@@ -28,7 +29,7 @@ import {
 	IgxSparklineCoreModule,
 	IgxSparklineModule
 ],
-  providers: [],
+  providers: [RemoteValuesService],
   entryComponents: [],
   schemas: []
 })

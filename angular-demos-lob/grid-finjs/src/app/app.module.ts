@@ -20,7 +20,7 @@ import {
 	IgxToastModule
  } from "igniteui-angular";
 import { FinJSDemoComponent } from "./grid-finjs/main.component";
-import { LocalDataService } from "./grid-finjs/localData.service";
+import { FinancialDataService } from "./services/financial.service";
 import { ControllerComponent } from "./grid-finjs/controllers.component";
 import { GridFinJSComponent } from "./grid-finjs/grid-finjs.component";
 import { HttpClientModule } from "@angular/common/http";
@@ -55,7 +55,7 @@ import { SignalRService } from "./services/signal-r.service";
 	HttpClientModule
 ],
   providers: [
-	LocalDataService,
+	FinancialDataService,
 	IgxExcelExporterService,
 	IgxCsvExporterService,
 	SignalRService
