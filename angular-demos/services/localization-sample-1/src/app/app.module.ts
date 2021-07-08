@@ -8,7 +8,7 @@ import {
 	IgxGridModule,
 	IgxIconModule
  } from "igniteui-angular";
-import { LocalizationSample1Component } from "./services/localization-sample-1/localization-sample-1.component";
+import { LocalizationSample1Component } from "./services/localization-samples/localization-sample-1/localization-sample-1.component";
 
 
 

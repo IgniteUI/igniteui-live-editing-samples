@@ -9,7 +9,7 @@ import {
 	IgxIconModule,
 	IgxSelectModule
  } from "igniteui-angular";
-import { LocalizationAllResourcesComponent } from "./services/localization-all-resources/localization-all-resources.component";
+import { LocalizationAllResourcesComponent } from "./services/localization-samples/localization-all-resources/localization-all-resources.component";
 
 
 
