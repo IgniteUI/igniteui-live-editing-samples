@@ -9,7 +9,7 @@ import {
 	IgxTimePickerModule,
 	IgxGridModule
  } from "igniteui-angular";
-import { LocalizationSample2Component } from "./services/localization-sample-2/localization-sample-2.component";
+import { LocalizationSample2Component } from "./services/localization-samples/localization-sample-2/localization-sample-2.component";
 
 
 
