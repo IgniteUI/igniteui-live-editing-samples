@@ -9,7 +9,6 @@ import {
 	IgxDialogModule,
 	IgxButtonModule
  } from "igniteui-angular";
-import { GridWithTransactions2Component } from "./grid/grid-batchEditing-remotePaging/transaction.component";
 import { RemotePagingService } from "./services/remotePaging.service";
 import { HttpClientModule } from "@angular/common/http";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -20,8 +19,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	RemotePagingBatchEditingComponent,
-	GridWithTransactions2Component
+	RemotePagingBatchEditingComponent
 ],
   imports: [
 	BrowserModule,
