@@ -3,7 +3,10 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxListModule } from "igniteui-angular";
+import { 
+	IgxListModule,
+	IgxRippleModule
+ } from "igniteui-angular";
 import { ListSample3Component } from "./list-sample-3/list-sample-3.component";
 
 
@@ -18,7 +21,8 @@ import { ListSample3Component } from "./list-sample-3/list-sample-3.component";
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxListModule
+	IgxListModule,
+	IgxRippleModule
 ],
   providers: [],
   entryComponents: [],

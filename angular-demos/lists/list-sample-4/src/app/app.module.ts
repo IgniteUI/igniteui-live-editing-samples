@@ -9,7 +9,8 @@ import {
 	IgxIconModule,
 	IgxListModule,
 	IgxInputGroupModule,
-	IgxButtonGroupModule
+	IgxButtonGroupModule,
+	IgxRippleModule
  } from "igniteui-angular";
 import { ListSample4Component } from "./list-sample-4/list-sample-4.component";
 
@@ -30,7 +31,8 @@ import { ListSample4Component } from "./list-sample-4/list-sample-4.component";
 	IgxIconModule,
 	IgxListModule,
 	IgxInputGroupModule,
-	IgxButtonGroupModule
+	IgxButtonGroupModule,
+	IgxRippleModule
 ],
   providers: [],
   entryComponents: [],

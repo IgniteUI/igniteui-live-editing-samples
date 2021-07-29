@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxButtonModule,
-	IgxListModule
+	IgxListModule,
+	IgxRippleModule
  } from "igniteui-angular";
 import { ListSample6Component } from "./list-sample-6/list-sample-6.component";
 
@@ -22,7 +23,8 @@ import { ListSample6Component } from "./list-sample-6/list-sample-6.component";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxButtonModule,
-	IgxListModule
+	IgxListModule,
+	IgxRippleModule
 ],
   providers: [],
   entryComponents: [],
