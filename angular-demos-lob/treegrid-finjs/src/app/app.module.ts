@@ -17,7 +17,6 @@ import {
  } from "igniteui-angular";
 import { TreeGridFinJSComponent } from "./treegrid-finjs/tree-grid-finjs-sample.component";
 import { FinancialDataService } from "./services/financial.service";
-import { TreeGridGroupingPipe } from "./treegrid-finjs/tree-grid-grouping.pipe";
 import { HttpClientModule } from "@angular/common/http";
 import { SignalRService } from "./services/signal-r.service";
 
@@ -27,8 +26,7 @@ import { SignalRService } from "./services/signal-r.service";
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridFinJSComponent,
-	TreeGridGroupingPipe
+	TreeGridFinJSComponent
 ],
   imports: [
 	BrowserModule,
