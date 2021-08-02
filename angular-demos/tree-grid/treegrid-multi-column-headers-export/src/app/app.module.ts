@@ -4,7 +4,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { TreeGridMultiColumnHeadersExportComponent } from "./tree-grid/tree-grid-multi-column-headers-export/tree-grid-multi-column-headers-export.component";
-import { IgxTreeGridModule } from "igniteui-angular";
+import { 
+	IgxTreeGridModule,
+	IgxExcelExporterService
+ } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
@@ -22,7 +25,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule
 ],
-  providers: [],
+  providers: [IgxExcelExporterService],
   entryComponents: [],
   schemas: []
 })
