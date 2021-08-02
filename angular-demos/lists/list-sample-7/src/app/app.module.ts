@@ -7,6 +7,7 @@ import {
 	IgxAvatarModule,
 	IgxIconModule,
 	IgxListModule,
+	IgxRippleModule,
 	IgxSliderModule,
 	IgxToastModule,
 	IgxButtonModule
@@ -28,6 +29,7 @@ import { ListSample7Component } from "./list-sample-7/list-sample-7.component";
 	IgxAvatarModule,
 	IgxIconModule,
 	IgxListModule,
+	IgxRippleModule,
 	IgxSliderModule,
 	IgxToastModule,
 	IgxButtonModule

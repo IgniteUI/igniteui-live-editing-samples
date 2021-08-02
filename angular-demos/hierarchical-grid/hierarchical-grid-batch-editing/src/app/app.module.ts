@@ -12,7 +12,6 @@ import {
 	IgxDialogModule
  } from "igniteui-angular";
 import { HGridBatchEditingSampleComponent } from "./hierarchical-grid/hierarchical-grid-batch-editing/hierarchical-grid-batch-editing.component";
-import { HierarchicalGridWithTransactionsComponent } from "./hierarchical-grid/hierarchical-grid-batch-editing/hierarchical-grid-transactions.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
@@ -21,8 +20,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	HGridBatchEditingSampleComponent,
-	HierarchicalGridWithTransactionsComponent
+	HGridBatchEditingSampleComponent
 ],
   imports: [
 	BrowserModule,

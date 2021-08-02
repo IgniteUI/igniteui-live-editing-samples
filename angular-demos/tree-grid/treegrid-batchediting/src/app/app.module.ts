@@ -11,7 +11,6 @@ import {
 	IgxGridModule
  } from "igniteui-angular";
 import { TreeGridBatchEditingSampleComponent } from "./tree-grid/tree-grid-batch-editing/tree-grid-batch-editing-sample.component";
-import { TreeGridWithTransactionsComponent } from "./tree-grid/tree-grid-batch-editing/tree-grid-with-transactions.component";
 
 
 
@@ -19,8 +18,7 @@ import { TreeGridWithTransactionsComponent } from "./tree-grid/tree-grid-batch-e
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridBatchEditingSampleComponent,
-	TreeGridWithTransactionsComponent
+	TreeGridBatchEditingSampleComponent
 ],
   imports: [
 	BrowserModule,

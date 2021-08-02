@@ -11,7 +11,6 @@ import {
 	IgxFocusModule,
 	IgxActionStripModule
  } from "igniteui-angular";
-import { GridWithTransactionsComponent } from "./grid/grid-batch-editing/grid-transaction.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
@@ -20,8 +19,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	GridActionStripSampleComponent,
-	GridWithTransactionsComponent
+	GridActionStripSampleComponent
 ],
   imports: [
 	BrowserModule,
