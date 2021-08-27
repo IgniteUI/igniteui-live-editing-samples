@@ -14,7 +14,7 @@ export class CardComponent {
                   a densely populated borough that’s among the world’s major commercial,
                   financial and cultural centers.`,
         icons: ['favorite', 'share'],
-        imageUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/media/ny.jpg',
+        imageUrl: 'https://staging.infragistics.com/angular-demos/assets/images/card/media/ny.jpg',
         subtitle: 'City in New York',
         title: 'New York City'
     });

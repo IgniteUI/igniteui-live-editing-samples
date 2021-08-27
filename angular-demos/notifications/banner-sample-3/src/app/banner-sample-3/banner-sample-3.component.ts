@@ -10,8 +10,8 @@ import { IgxBannerComponent, slideInLeft, slideOutRight } from 'igniteui-angular
 export class BannerSample3Component implements OnInit {
     @ViewChild(IgxBannerComponent, { static: true }) public banner: IgxBannerComponent;
     public contentWidth = '384px';
-    public imageUrls = ['https://www.infragistics.com/angular-demos/assets/images/card/media/the_red_ice_forest.jpg',
-        'https://www.infragistics.com/angular-demos/assets/images/card/media/yosemite.jpg'];
+    public imageUrls = ['https://staging.infragistics.com/angular-demos/assets/images/card/media/the_red_ice_forest.jpg',
+        'https://staging.infragistics.com/angular-demos/assets/images/card/media/yosemite.jpg'];
     public animationSettings = {
         closeAnimation: slideOutRight,
         openAnimation: slideInLeft

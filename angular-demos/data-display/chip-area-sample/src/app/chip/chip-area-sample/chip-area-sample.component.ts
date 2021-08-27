@@ -12,17 +12,17 @@ export class ChipAreaSampleComponent {
         {
             id: '770-504-2217',
             name: 'Terrance Orta',
-            photo: 'https://www.infragistics.com/angular-demos/assets/images/men/27.jpg'
+            photo: 'https://staging.infragistics.com/angular-demos/assets/images/men/27.jpg'
         },
         {
             id: '423-676-2869',
             name: 'Richard Mahoney',
-            photo: 'https://www.infragistics.com/angular-demos/assets/images/men/13.jpg'
+            photo: 'https://staging.infragistics.com/angular-demos/assets/images/men/13.jpg'
         },
         {
             id: '859-496-2817',
             name: 'Donna Price',
-            photo: 'https://www.infragistics.com/angular-demos/assets/images/women/50.jpg'
+            photo: 'https://staging.infragistics.com/angular-demos/assets/images/women/50.jpg'
         }
     ];
 

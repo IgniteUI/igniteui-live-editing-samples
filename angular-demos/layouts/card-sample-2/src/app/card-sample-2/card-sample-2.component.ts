@@ -11,7 +11,7 @@ export class CardSample2Component {
         content: `As I have always said: I write what’s real and what’s true,
         even if it means throwing myself under the bus.`,
         icons: ['skip_previous', 'play_arrow', 'skip_next'],
-        imageUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/media/ROZES-Under-the-Grave.jpg',
+        imageUrl: 'https://staging.infragistics.com/angular-demos/assets/images/card/media/ROZES-Under-the-Grave.jpg',
         subtitle: 'Under the Grave (2016)',
         title: 'Rozes'
     });

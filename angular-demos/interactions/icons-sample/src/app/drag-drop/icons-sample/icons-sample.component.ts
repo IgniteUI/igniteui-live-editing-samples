@@ -11,31 +11,31 @@ export class IconsSampleComponent {
     public dropTileId: number;
     public icons = [
         {
-            id: 0, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/profile.png'
+            id: 0, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/profile.png'
         },
         {
-            id: 1, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/calendar.png'
+            id: 1, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/calendar.png'
         },
         {
-            id: 2, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/mail.png'
+            id: 2, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/mail.png'
         },
         {
-            id: 3, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/photos.png'
+            id: 3, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/photos.png'
         },
         {
-            id: 4, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/videos.png'
+            id: 4, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/videos.png'
         },
         {
-            id: 5, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/cloud.png'
+            id: 5, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/cloud.png'
         },
         {
-            id: 6, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/map.png'
+            id: 6, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/map.png'
         },
         {
-            id: 7, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/contacts.png'
+            id: 7, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/contacts.png'
         },
         {
-            id: 8, url: 'https://www.infragistics.com/angular-demos/assets/images/drag-drop/chat.png'
+            id: 8, url: 'https://staging.infragistics.com/angular-demos/assets/images/drag-drop/chat.png'
         }
     ];
 

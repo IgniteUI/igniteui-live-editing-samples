@@ -23,8 +23,8 @@ export class CardSample4Component implements OnInit {
     public days: IWeatherList[];
 
     constructor(private iconService: IgxIconService) {
-        this.iconService.addSvgIcon('rain', 'https://www.infragistics.com/angular-demos/assets/images/card/icons/rain.svg', 'weather-icons');
-        this.iconService.addSvgIcon('breeze', 'https://www.infragistics.com/angular-demos/assets/images/card/icons/breeze.svg', 'weather-icons');
+        this.iconService.addSvgIcon('rain', 'https://staging.infragistics.com/angular-demos/assets/images/card/icons/rain.svg', 'weather-icons');
+        this.iconService.addSvgIcon('breeze', 'https://staging.infragistics.com/angular-demos/assets/images/card/icons/breeze.svg', 'weather-icons');
     }
 
     public toggleDetails() {
@@ -37,14 +37,14 @@ export class CardSample4Component implements OnInit {
                 buttons: ['RESERVE'],
                 chips: ['5:30', '7:30', '8:00', '9:00'],
                 content: `Small plates, salads & sandwiches setting with 12 indoor seats plus patio seating.`,
-                imageUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/media/cafe.jpg',
+                imageUrl: 'https://staging.infragistics.com/angular-demos/assets/images/card/media/cafe.jpg',
                 subtitle: '$ - Italian, Cafe',
                 title: 'Café Badilico'
             }),
             new Card({
                 buttons: ['Details'],
                 content: '37',
-                imageUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/media/weather.png',
+                imageUrl: 'https://staging.infragistics.com/angular-demos/assets/images/card/media/weather.png',
                 subtitle: 'Mon 12:30 PM, Mostly sunny',
                 title: 'Sofia - Bulgaria',
                 unit: '°C'

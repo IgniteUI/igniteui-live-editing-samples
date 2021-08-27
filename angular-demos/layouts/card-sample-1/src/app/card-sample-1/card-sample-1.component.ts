@@ -9,7 +9,7 @@ import { Card } from '../card.blueprint';
 export class CardSample1Component {
     public card = new Card({
         icons: ['skip_previous', 'play_arrow', 'skip_next'],
-        imageUrl: 'https://www.infragistics.com/angular-demos/assets/images/card/media/ROZES-Under-the-Grave.jpg',
+        imageUrl: 'https://staging.infragistics.com/angular-demos/assets/images/card/media/ROZES-Under-the-Grave.jpg',
         subtitle: 'Under the Grave (2016)',
         title: 'Rozes'
     });

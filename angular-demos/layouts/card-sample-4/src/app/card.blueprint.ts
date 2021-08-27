@@ -41,8 +41,8 @@ export class Card {
         this.subtitle = obj.subtitle || 'Card Subtitle';
         this.content = obj.content ||
             'Some card content should be placed here. Description or other related information.';
-        this.imageUrl = obj.imageUrl || 'https://www.infragistics.com/angular-demos/assets/images/card/media/placeholder.jpg';
-        this.avatarUrl = obj.avatarUrl || 'https://www.infragistics.com/angular-demos/assets/images/card/avatars/rupert_stadler.jpg';
+        this.imageUrl = obj.imageUrl || 'https://staging.infragistics.com/angular-demos/assets/images/card/media/placeholder.jpg';
+        this.avatarUrl = obj.avatarUrl || 'https://staging.infragistics.com/angular-demos/assets/images/card/avatars/rupert_stadler.jpg';
         this.buttons = obj.buttons || ['ACTION1', 'ACTION2'];
         this.icons = obj.icons || ['favorite', 'bookmark', 'share'];
         this.chips = obj.chips || [];

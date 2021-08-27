@@ -12,8 +12,8 @@ export class BannerStylingComponent implements OnInit, OnDestroy {
     @ViewChild(IgxBannerComponent, { static: true }) public banner: IgxBannerComponent;
     @ViewChild(IgxToastComponent, { static: true }) public eventToast: IgxToastComponent;
     public contentWidth = '384px';
-    public imageUrls = ['https://www.infragistics.com/angular-demos/assets/images/card/media/the_red_ice_forest.jpg',
-        'https://www.infragistics.com/angular-demos/assets/images/card/media/yosemite.jpg'];
+    public imageUrls = ['https://staging.infragistics.com/angular-demos/assets/images/card/media/the_red_ice_forest.jpg',
+        'https://staging.infragistics.com/angular-demos/assets/images/card/media/yosemite.jpg'];
     public toastPosition: 'middle';
     public animationSettings = {
         closeAnimation: slideOutRight,

@@ -6,15 +6,15 @@ import { Component } from '@angular/core';
 })
 export class TabsHeaderPrefixSuffixComponent {
     public tabs = [{
-        image: 'https://www.infragistics.com/angular-demos/assets/images/card/avatars/igLogo.png',
+        image: 'https://staging.infragistics.com/angular-demos/assets/images/card/avatars/igLogo.png',
         header: 'Tab1',
         content: 'Content1'
     }, {
-        image: 'https://www.infragistics.com/angular-demos/assets/images/card/avatars/igLogo.png',
+        image: 'https://staging.infragistics.com/angular-demos/assets/images/card/avatars/igLogo.png',
         header: 'Tab2',
         content: 'Content2'
     }, {
-        image: 'https://www.infragistics.com/angular-demos/assets/images/card/avatars/igLogo.png',
+        image: 'https://staging.infragistics.com/angular-demos/assets/images/card/avatars/igLogo.png',
         header: 'Tab3',
         content: 'Content3'
     }];
