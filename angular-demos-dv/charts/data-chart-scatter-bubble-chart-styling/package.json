@@ -7,8 +7,6 @@
     "@angular/forms": "12.2.1",
     "@angular/platform-browser": "12.2.1",
     "@angular/platform-browser-dynamic": "12.2.1",
-    "igniteui-angular-charts": "12.1.0",
-    "igniteui-angular-core": "12.1.0",
     "@types/hammerjs": "^2.0.35",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.6.2",
