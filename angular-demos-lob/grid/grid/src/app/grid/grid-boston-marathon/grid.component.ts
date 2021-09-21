@@ -116,13 +116,13 @@ export class GridComponent implements OnInit, OnDestroy, AfterViewInit {
 
     public getTrophyUrl(index: number) {
         if (index === 0) {
-            return 'https://www.infragistics.com/angular-demos-lob/assets/images/grid/trophy_gold.svg';
+            return 'https://staging.infragistics.com/angular-demos-lob/assets/images/grid/trophy_gold.svg';
         }
         if (index === 1) {
-            return 'https://www.infragistics.com/angular-demos-lob/assets/images/grid/trophy_silver.svg';
+            return 'https://staging.infragistics.com/angular-demos-lob/assets/images/grid/trophy_silver.svg';
         }
         if (index === 2) {
-            return 'https://www.infragistics.com/angular-demos-lob/assets/images/grid/trophy_bronze.svg';
+            return 'https://staging.infragistics.com/angular-demos-lob/assets/images/grid/trophy_bronze.svg';
         }
     }
 
