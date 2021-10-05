@@ -1,0 +1,55 @@
+@import './variables';
+@import './app-layout';
+
+
+.light-theme {
+    @include igx-light-theme($default-palette);
+}
+
+$grays-btn-color: igx-color($green-palette, 'grays', 800);
+
+/* autoprefixer grid: on */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+@include igx-core();
+@include igx-typography();
+@include igx-theme(
+    $palette: $palette,
+    $schema: $schema,
+    $legacy-support: $legacy-support
+);
+
+:root {
+    @include igx-palette-vars($palette);
+}
+
+.light-theme {
+    @include igx-light-theme($palette);
+}
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+    @include igx-dark-theme(
+        $palette: $green-palette,
+        $legacy-support: $legacy-support
+    );
+
+    .grid-chart-contextmenu-wrapper {
+        @include igx-fluent-dark-theme($fluent-excel-palette);
+    }
+}
+
+.fin-dark-theme {
+    @include igx-dark-theme($green-palette);
+    background: #333;
+
+    ::-moz-placeholder {
+        opacity: 1;
+    }
+}
