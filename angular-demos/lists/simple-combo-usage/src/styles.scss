@@ -1,0 +1,48 @@
+@use '~igniteui-angular/lib/core/styles/themes/index' as *;
+@forward '~igniteui-angular/lib/core/styles/themes/index';
+@use 'variables' as *;
+@use 'app-layout';
+
+/* autoprefixer grid: on */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+@include igx-core();
+@include igx-typography();
+@include igx-theme(
+    $palette: $palette,
+    $schema: $schema
+);
+
+:root {
+    @include igx-palette-vars($palette);
+}
+
+.light-theme {
+    @include igx-light-theme($palette);
+}
+
+.dark-theme {
+    background: #333;
+    color: #fff;
+    @include igx-dark-theme(
+        $palette: $green-palette
+    );
+
+    .grid-chart-contextmenu-wrapper {
+        @include igx-fluent-dark-theme($fluent-excel-palette);
+    }
+}
+
+.fin-dark-theme {
+    @include igx-dark-theme($green-palette);
+    background: #333;
+
+    ::-moz-placeholder {
+        opacity: 1;
+    }
+}
