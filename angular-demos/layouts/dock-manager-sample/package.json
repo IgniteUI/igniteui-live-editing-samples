@@ -11,7 +11,7 @@
     "@types/hammerjs": "^2.0.39",
     "core-js": "2.6.2",
     "hammerjs": "^2.0.8",
-    "igniteui-angular": "13.0.0-rc.0",
+    "igniteui-angular": "13.0.0-rc.1",
     "igniteui-dockmanager": "^1.6.0",
     "immediate": "^3.2.3",
     "intl": "^1.2.5",
