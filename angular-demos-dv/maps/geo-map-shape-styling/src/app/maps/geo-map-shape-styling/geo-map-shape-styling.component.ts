@@ -31,7 +31,7 @@ export class MapShapeStylingComponent implements AfterViewInit {
 
     public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
-        console.log("loaded WorldCountries.shp " + shapeRecords.length);
+        // console.log("loaded WorldCountries.shp " + shapeRecords.length);
 
         const countriesNATO: any[] = [];
         const countriesSCO: any[] = [];

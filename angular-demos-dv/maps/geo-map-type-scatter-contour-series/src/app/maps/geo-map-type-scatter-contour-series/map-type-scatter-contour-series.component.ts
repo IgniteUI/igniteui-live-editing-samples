@@ -31,7 +31,7 @@ export class MapTypeScatterContourSeriesComponent implements AfterViewInit {
 
     public onDataLoaded(sds: IgxShapeDataSource, e: any) {
         const shapeRecords = sds.getPointData();
-        console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
+        // console.log("loaded contour shapes: " + shapeRecords.length + " from /Shapes/WorldTemperatures.shp");
 
         const contourPoints: any[] = [];
         for (const record of shapeRecords) {
@@ -50,7 +50,7 @@ export class MapTypeScatterContourSeriesComponent implements AfterViewInit {
             }
         }
 
-        console.log("loaded contour points: " + contourPoints.length);
+        // console.log("loaded contour points: " + contourPoints.length);
         this.createContourSeries(contourPoints);
     }
 

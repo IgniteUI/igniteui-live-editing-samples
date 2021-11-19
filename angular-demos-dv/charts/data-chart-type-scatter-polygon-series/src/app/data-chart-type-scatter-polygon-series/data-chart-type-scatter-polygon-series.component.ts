@@ -34,12 +34,12 @@ export class DataChartTypeScatterPolygonSeriesComponent implements AfterViewInit
     }
 
     public onLoadedJsonShape(jsonData: any[]) {
-        console.log('airplane-shape.json ' + jsonData.length);
+        // console.log('airplane-shape.json ' + jsonData.length);
         this.airplaneShapeSeries.dataSource = jsonData;
     }
 
     public onLoadedJsonSeats(jsonData: any[]) {
-      console.log('airplane-seats.json ' + jsonData.length);
+      // console.log('airplane-seats.json ' + jsonData.length);
       this.airplaneSeatSeries.dataSource = jsonData;
       this.airplaneSeatSeries.showDefaultTooltip = true;
       this.airplaneSeatSeries.tooltipTemplate = this.seatTooltip;

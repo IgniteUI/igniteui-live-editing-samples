@@ -30,7 +30,7 @@ export class MapBindingDataJsonPointsComponent implements AfterViewInit {
     }
 
     public onDataLoaded(jsonData: any[]) {
-        console.log("loaded https://staging.infragistics.com/angular-demos-dv/assets/Data/WorldCities.json " + jsonData.length);
+        // console.log("loaded https://staging.infragistics.com/angular-demos-dv/assets/Data/WorldCities.json " + jsonData.length);
 
         const geoLocations: any[] = [];
         // parsing JSON data and using only cities that are capitals

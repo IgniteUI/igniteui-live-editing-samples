@@ -33,7 +33,7 @@ export class MapTypeShapePolylineSeriesComponent implements AfterViewInit {
 
   public onDataLoaded(sds: IgxShapeDataSource, e: any) {
     const shapeRecords = sds.getPointData();
-    console.log("loaded /Shapes/AmericanRoads.shp " + shapeRecords.length);
+    // console.log("loaded /Shapes/AmericanRoads.shp " + shapeRecords.length);
 
     const roadsUSA: any[] = [];
     const roadsMEX: any[] = [];
