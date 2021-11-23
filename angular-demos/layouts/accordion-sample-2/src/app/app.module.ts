@@ -4,7 +4,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { AccordionSample2Component } from "./accordion-sample-2/accordion-sample-2.component";
-import { IgxAccordionModule } from "igniteui-angular";
+import { 
+	IgxAccordionModule,
+	IgxSwitchModule
+ } from "igniteui-angular";
 
 
 
@@ -18,7 +21,8 @@ import { IgxAccordionModule } from "igniteui-angular";
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxAccordionModule
+	IgxAccordionModule,
+	IgxSwitchModule
 ],
   providers: [],
   entryComponents: [],
