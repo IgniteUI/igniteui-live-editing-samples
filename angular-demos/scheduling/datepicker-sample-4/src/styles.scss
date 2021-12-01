@@ -1,6 +1,5 @@
-@use 'igniteui-angular/theming' as *;
-@use 'variables' as *;
-@use 'app-layout';
+@import './variables';
+@import './app-layout';
 
 /* autoprefixer grid: on */
 html,
@@ -14,7 +13,8 @@ body {
 @include igx-typography();
 @include igx-theme(
     $palette: $palette,
-    $schema: $schema
+    $schema: $schema,
+    $legacy-support: $legacy-support
 );
 
 :root {
@@ -29,7 +29,8 @@ body {
     background: #333;
     color: #fff;
     @include igx-dark-theme(
-        $palette: $green-palette
+        $palette: $green-palette,
+        $legacy-support: $legacy-support
     );
 
     .grid-chart-contextmenu-wrapper {
