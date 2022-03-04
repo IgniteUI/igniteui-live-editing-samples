@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxIconModule,
-	IgxNavbarModule
+	IgxNavbarModule,
+	IgxButtonModule
  } from "igniteui-angular";
 import { NavbarStyleComponent } from "./navbar-style/navbar-style.component";
 
@@ -22,7 +23,8 @@ import { NavbarStyleComponent } from "./navbar-style/navbar-style.component";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxIconModule,
-	IgxNavbarModule
+	IgxNavbarModule,
+	IgxButtonModule
 ],
   providers: [],
   entryComponents: [],
