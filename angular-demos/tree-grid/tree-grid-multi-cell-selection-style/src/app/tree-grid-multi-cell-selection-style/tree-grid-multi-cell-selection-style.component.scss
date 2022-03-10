@@ -1,4 +1,4 @@
-@use '../../../variables' as *;
+@use '../../variables' as *;
 
 $text-color: contrast-color($default-palette, 'primary', 900);
 $background-color: color($default-palette, "primary", 900);

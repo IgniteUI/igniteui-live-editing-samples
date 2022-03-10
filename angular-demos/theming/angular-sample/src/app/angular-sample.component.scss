@@ -1,5 +1,5 @@
 @use '@angular/material' as mat;
-@use "../../../variables" as *;
+@use "../variables" as *;
 @use "@angular/material/theming";
 
 $custom-typography: mat.define-typography-config(
