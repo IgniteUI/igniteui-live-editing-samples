@@ -3,8 +3,11 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxComboModule } from "igniteui-angular";
-import { SimpleComboCascadingComponent } from "./simple-combo-cascading/simple-combo-cascading.component";
+import { 
+	IgxComboModule,
+	IgxSimpleComboModule
+ } from "igniteui-angular";
+import { SimpleComboCascadingComponent } from "./lists/combo/simple-combo-cascading/simple-combo-cascading.component";
 
 
 
@@ -18,7 +21,8 @@ import { SimpleComboCascadingComponent } from "./simple-combo-cascading/simple-c
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxComboModule
+	IgxComboModule,
+	IgxSimpleComboModule
 ],
   providers: [],
   entryComponents: [],
