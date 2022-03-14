@@ -1,5 +1,5 @@
 // Stepper theme
-@use '../../../../variables' as *;
+@use '../../variables' as *;
 
 $stepper-theme: stepper-theme(
 	$indicator-background: #fff,

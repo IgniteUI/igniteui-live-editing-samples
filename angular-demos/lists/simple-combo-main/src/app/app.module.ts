@@ -5,10 +5,11 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxButtonGroupModule,
-	IgxComboModule
+	IgxComboModule,
+	IgxSimpleComboModule
  } from "igniteui-angular";
 import { IgxFinancialChartModule } from "igniteui-angular-charts";
-import { SimpleComboMainComponent } from "./simple-combo-main/simple-combo-main.component";
+import { SimpleComboMainComponent } from "./lists/combo/simple-combo-main/simple-combo-main.component";
 
 
 
@@ -24,7 +25,8 @@ import { SimpleComboMainComponent } from "./simple-combo-main/simple-combo-main.
 	FormsModule,
 	IgxButtonGroupModule,
 	IgxComboModule,
-	IgxFinancialChartModule
+	IgxFinancialChartModule,
+	IgxSimpleComboModule
 ],
   providers: [],
   entryComponents: [],

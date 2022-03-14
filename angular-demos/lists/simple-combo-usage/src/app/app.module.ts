@@ -3,8 +3,11 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxComboModule } from "igniteui-angular";
-import { SimpleComboUsageComponent } from "./simple-combo-usage/simple-combo-usage.component";
+import { 
+	IgxComboModule,
+	IgxSimpleComboModule
+ } from "igniteui-angular";
+import { SimpleComboUsageComponent } from "./lists/combo/simple-combo-usage/simple-combo-usage.component";
 
 
 
@@ -18,7 +21,8 @@ import { SimpleComboUsageComponent } from "./simple-combo-usage/simple-combo-usa
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxComboModule
+	IgxComboModule,
+	IgxSimpleComboModule
 ],
   providers: [],
   entryComponents: [],
