@@ -4,7 +4,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxHierarchicalGridModule } from "igniteui-angular";
-import { HGridPagingStyleSampleComponent } from "./hierarchical-grid-paging-style/hierarchical-grid-paging-style.component";
+import { HGridPagingStyleSampleComponent } from "./hierarchical-grid/hierarchical-grid-paging-style/hierarchical-grid-paging-style.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
