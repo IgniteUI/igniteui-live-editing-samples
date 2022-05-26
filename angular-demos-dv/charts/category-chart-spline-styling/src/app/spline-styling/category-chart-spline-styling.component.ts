@@ -10,8 +10,8 @@ export class CategoryChartSplineStylingComponent {
 
     public data: any;
 
-    constructor() {      
-        
+    constructor() {
+
         this.data = [
             { Year: "2009", Europe: 31, China: 21, USA: 19 },
             { Year: "2010", Europe: 43, China: 26, USA: 24 },
@@ -23,8 +23,7 @@ export class CategoryChartSplineStylingComponent {
             { Year: "2016", Europe: 13, China: 90, USA: 52 },
             { Year: "2017", Europe: 78, China: 132, USA: 50 },
             { Year: "2018", Europe: 40, China: 134, USA: 34 },
-            { Year: "2019", Europe: 80, China: 96, USA: 38 },
-         
+            { Year: "2019", Europe: 80, China: 96, USA: 38 }
         ];
     }
 }
