@@ -15,10 +15,7 @@ import {
 	IgxSelectModule
  } from "igniteui-angular";
 import { ReactiveFormsSampleComponent } from "./how-to/reactive-forms/reactive-forms.component";
-import { 
-	FormsModule,
-	ReactiveFormsModule
- } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 
@@ -39,7 +36,6 @@ import {
 	IgxDatePickerModule,
 	IgxTimePickerModule,
 	IgxComboModule,
-	FormsModule,
 	ReactiveFormsModule,
 	IgxDropDownModule,
 	IgxSelectModule
