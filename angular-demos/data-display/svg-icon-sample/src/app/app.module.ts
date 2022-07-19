@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxIconModule } from "igniteui-angular";
 import { SvgIconSampleComponent } from "./svg-icon-sample/svg-icon-sample.component";
+import { HttpClientModule } from "@angular/common/http";
 
 
 
@@ -18,7 +19,8 @@ import { SvgIconSampleComponent } from "./svg-icon-sample/svg-icon-sample.compon
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxIconModule
+	IgxIconModule,
+	HttpClientModule
 ],
   providers: [],
   entryComponents: [],
