@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { GridValidatorServiceCrossFieldComponent } from "./grid/grid-validator-service-cross-field/grid-validator-service-cross-field.component";
 import { 
 	IgxGridModule,
+	IgxTooltipModule,
 	IgxFocusModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -16,8 +17,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	GridValidatorServiceCrossFieldComponent,
-	ForbiddenValidatorDirective
+	GridValidatorServiceCrossFieldComponent
 ],
   imports: [
 	BrowserModule,
@@ -25,7 +25,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxFocusModule
+	IgxFocusModule,
+	IgxTooltipModule
 ],
   providers: [],
   entryComponents: [],

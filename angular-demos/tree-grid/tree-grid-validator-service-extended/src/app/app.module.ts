@@ -16,8 +16,7 @@ import { TreeGridValidatorServiceExtendedComponent } from "./tree-grid/tree-grid
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	TreeGridValidatorServiceExtendedComponent,
-	ForbiddenValidatorDirective
+	TreeGridValidatorServiceExtendedComponent
 ],
   imports: [
 	BrowserModule,

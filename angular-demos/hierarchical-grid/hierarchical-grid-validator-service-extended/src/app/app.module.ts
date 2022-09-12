@@ -13,8 +13,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	HierarchicalGridValidatorServiceExtendedComponent,
-	ForbiddenValidatorDirective
+	HierarchicalGridValidatorServiceExtendedComponent
 ],
   imports: [
 	BrowserModule,
