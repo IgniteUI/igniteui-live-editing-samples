@@ -10,6 +10,7 @@ import {
 	IgxTooltipModule
  } from "igniteui-angular";
 import { TreeGridValidatorServiceCrossFieldComponent } from "./tree-grid/tree-grid-validator-service-cross-field/tree-grid-validator-service-cross-field.component";
+import { ReactiveFormsModule } from "@angular/forms";
 
 
 
@@ -26,7 +27,8 @@ import { TreeGridValidatorServiceCrossFieldComponent } from "./tree-grid/tree-gr
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
 	IgxButtonModule,
-	IgxTooltipModule
+	IgxTooltipModule,
+	ReactiveFormsModule
 ],
   providers: [],
   entryComponents: [],
