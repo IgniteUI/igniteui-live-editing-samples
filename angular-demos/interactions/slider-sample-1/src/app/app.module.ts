@@ -8,6 +8,7 @@ import {
 	IgxSliderModule
  } from "igniteui-angular";
 import { SliderSample1Component } from "./slider-sample-1/slider-sample-1.component";
+import { HammerModule } from "@angular/platform-browser";
 
 
 
@@ -22,7 +23,8 @@ import { SliderSample1Component } from "./slider-sample-1/slider-sample-1.compon
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxInputGroupModule,
-	IgxSliderModule
+	IgxSliderModule,
+	HammerModule
 ],
   providers: [],
   entryComponents: [],
