@@ -8,6 +8,7 @@ import {
 	IgxSliderModule
  } from "igniteui-angular";
 import { SliderTicksBottomtotopLabelsComponent } from "./slider-ticks-bottomtotop-labels/slider-ticks-bottomtotop-labels.component";
+import { HammerModule } from "@angular/platform-browser";
 
 
 
@@ -22,7 +23,8 @@ import { SliderTicksBottomtotopLabelsComponent } from "./slider-ticks-bottomtoto
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxInputGroupModule,
-	IgxSliderModule
+	IgxSliderModule,
+	HammerModule
 ],
   providers: [],
   entryComponents: [],

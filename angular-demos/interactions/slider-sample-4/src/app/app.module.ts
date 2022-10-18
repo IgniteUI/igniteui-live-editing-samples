@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxSliderModule } from "igniteui-angular";
 import { SliderSample4Component } from "./slider-sample-4/slider-sample-4.component";
+import { HammerModule } from "@angular/platform-browser";
 
 
 
@@ -18,7 +19,8 @@ import { SliderSample4Component } from "./slider-sample-4/slider-sample-4.compon
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxSliderModule
+	IgxSliderModule,
+	HammerModule
 ],
   providers: [],
   entryComponents: [],

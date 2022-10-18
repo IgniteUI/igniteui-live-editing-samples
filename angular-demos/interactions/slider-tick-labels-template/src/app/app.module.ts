@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxSliderModule } from "igniteui-angular";
 import { TickLabelsTemplateComponent } from "./slider-tick-labels-template/tick-labels-template.component";
+import { HammerModule } from "@angular/platform-browser";
 
 
 
@@ -18,7 +19,8 @@ import { TickLabelsTemplateComponent } from "./slider-tick-labels-template/tick-
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxSliderModule
+	IgxSliderModule,
+	HammerModule
 ],
   providers: [],
   entryComponents: [],

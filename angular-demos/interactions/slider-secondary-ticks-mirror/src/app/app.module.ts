@@ -9,6 +9,7 @@ import {
 	IgxSliderModule
  } from "igniteui-angular";
 import { SliderSecondaryTicksMirrorComponent } from "./slider-secondary-ticks-mirror/slider-secondary-ticks-mirror.component";
+import { HammerModule } from "@angular/platform-browser";
 
 
 
@@ -24,7 +25,8 @@ import { SliderSecondaryTicksMirrorComponent } from "./slider-secondary-ticks-mi
 	FormsModule,
 	IgxButtonModule,
 	IgxIconModule,
-	IgxSliderModule
+	IgxSliderModule,
+	HammerModule
 ],
   providers: [],
   entryComponents: [],

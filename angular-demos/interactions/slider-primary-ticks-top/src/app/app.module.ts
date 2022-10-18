@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxSliderModule } from "igniteui-angular";
 import { SliderPrimaryTicksTopComponent } from "./slider-primary-ticks-top/slider-primary-ticks-top.component";
+import { HammerModule } from "@angular/platform-browser";
 
 
 
@@ -18,7 +19,8 @@ import { SliderPrimaryTicksTopComponent } from "./slider-primary-ticks-top/slide
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxSliderModule
+	IgxSliderModule,
+	HammerModule
 ],
   providers: [],
   entryComponents: [],
