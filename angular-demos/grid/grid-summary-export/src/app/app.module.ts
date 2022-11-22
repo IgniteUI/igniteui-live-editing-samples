@@ -23,8 +23,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxGridModule,
-	IgxExcelExporterService
+	IgxGridModule
 ],
   providers: [IgxExcelExporterService],
   entryComponents: [],

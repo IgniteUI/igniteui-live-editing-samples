@@ -25,8 +25,7 @@ import { TreeGridSummaryExportComponent } from "./tree-grid-summary-export/tree-
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxIconModule,
-	IgxExcelExporterService
+	IgxIconModule
 ],
   providers: [IgxExcelExporterService],
   entryComponents: [],
