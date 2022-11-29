@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { 
 	IgxTreeGridModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxSwitchModule
  } from "igniteui-angular";
 import { TreeGridValidatorServiceComponent } from "./tree-grid/tree-grid-validator-service/tree-grid-validator-service.component";
 
@@ -24,7 +25,8 @@ import { TreeGridValidatorServiceComponent } from "./tree-grid/tree-grid-validat
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxSwitchModule
 ],
   providers: [],
   entryComponents: [],

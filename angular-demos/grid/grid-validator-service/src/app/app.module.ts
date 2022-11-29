@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { GridValidatorServiceComponent } from "./grid/grid-validator-service/grid-validator-service.component";
 import { 
 	IgxGridModule,
-	IgxFocusModule
+	IgxFocusModule,
+	IgxSwitchModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -24,7 +25,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxFocusModule
+	IgxFocusModule,
+	IgxSwitchModule
 ],
   providers: [],
   entryComponents: [],
