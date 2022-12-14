@@ -12,7 +12,7 @@ import { RadioGroupVerticalComponent } from "./radio-group-vertical/radio-group-
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	RadioGroupSampleComponent
+	RadioGroupVerticalComponent
 ],
   imports: [
 	BrowserModule,
