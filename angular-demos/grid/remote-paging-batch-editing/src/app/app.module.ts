@@ -9,8 +9,7 @@ import {
 	IgxDialogModule,
 	IgxButtonModule
  } from "igniteui-angular";
-import { RemotePagingService } from "./services/remotePaging.service";
-import { HttpClientModule } from "@angular/common/http";
+import { RemotePagingWithBatchEditingService } from "./services/remotePagingWithBatchEditing.service";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
@@ -28,10 +27,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
 	IgxDialogModule,
-	IgxButtonModule,
-	HttpClientModule
+	IgxButtonModule
 ],
-  providers: [RemotePagingService],
+  providers: [RemotePagingWithBatchEditingService],
   entryComponents: [],
   schemas: []
 })
