@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { 
 	IgxTreeGridModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxSimpleComboModule
  } from "igniteui-angular";
 import { TreeGridSortingSampleComponent } from "./tree-grid-sorting-sample/tree-grid-sorting-sample.component";
 import { TreeGridContextmenuComponent } from "./tree-grid-sorting-sample/tree-grid-contextmenu/tree-grid-contextmenu.component";
@@ -26,7 +27,8 @@ import { TreeGridContextmenuComponent } from "./tree-grid-sorting-sample/tree-gr
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxSimpleComboModule
 ],
   providers: [],
   entryComponents: [],
