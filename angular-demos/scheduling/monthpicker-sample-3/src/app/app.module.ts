@@ -29,7 +29,6 @@ import { MonthpickerSample3Component } from "./monthpicker-sample-3/monthpicker-
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

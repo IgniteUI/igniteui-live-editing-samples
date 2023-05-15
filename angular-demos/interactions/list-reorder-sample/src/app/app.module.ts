@@ -29,7 +29,6 @@ import { ListReorderSampleComponent } from "./drag-drop/list-reorder-sample/list
 	IgxDragDropModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

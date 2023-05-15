@@ -27,7 +27,6 @@ import { GridEditingLifecycleComponent } from "./grid/grid-editing-lifecycle-sam
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -21,7 +21,6 @@ import { SwitchStylingComponent } from "./switch-styling/switch-styling.componen
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

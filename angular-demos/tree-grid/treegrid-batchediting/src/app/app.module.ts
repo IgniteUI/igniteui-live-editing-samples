@@ -31,7 +31,6 @@ import { TreeGridBatchEditingSampleComponent } from "./tree-grid/tree-grid-batch
 	IgxGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -29,7 +29,6 @@ import { TreeGridRemoteFilteringSampleComponent } from "./tree-grid-remote-filte
 	IgxToastModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

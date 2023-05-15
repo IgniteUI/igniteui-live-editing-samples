@@ -21,7 +21,6 @@ import { InputGroupSample1Component } from "./input-group-sample-1/input-group-s
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

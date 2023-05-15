@@ -29,7 +29,6 @@ import { ListChatSampleComponent } from "./list-chat-sample/list-chat-sample.com
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

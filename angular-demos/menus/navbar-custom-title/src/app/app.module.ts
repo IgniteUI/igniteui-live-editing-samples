@@ -27,7 +27,6 @@ import { NavbarCustomTitleComponent } from "./navbar-custom-title/navbar-custom-
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

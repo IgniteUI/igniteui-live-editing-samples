@@ -25,7 +25,6 @@ import { SimpleComboUsageComponent } from "./lists/combo/simple-combo-usage/simp
 	IgxSimpleComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

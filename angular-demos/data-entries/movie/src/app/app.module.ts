@@ -29,7 +29,6 @@ import { AutocompletePipeStartsWith2 } from "./data-entries/autocomplete/movie/m
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

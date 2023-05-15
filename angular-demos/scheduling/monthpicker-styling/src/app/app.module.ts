@@ -21,7 +21,6 @@ import { MonthpickerStylingComponent } from "./monthpicker-styling/monthpicker-s
 	IgxCalendarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

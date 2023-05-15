@@ -29,7 +29,6 @@ import { CircularDynamicSampleComponent } from "./circular-progressbar/circular-
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

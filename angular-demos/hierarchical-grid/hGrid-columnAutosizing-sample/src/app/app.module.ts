@@ -23,7 +23,6 @@ import { HGridColumnAutoSizingSampleComponent } from "./hierarchical-grid/hgrid-
 	IgxHierarchicalGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

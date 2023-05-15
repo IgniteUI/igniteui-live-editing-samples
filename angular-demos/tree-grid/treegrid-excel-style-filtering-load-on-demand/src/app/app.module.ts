@@ -28,7 +28,6 @@ import { RemoteValuesService } from "./tree-grid/tree-grid-excel-style-filtering
 	IgxIconModule
 ],
   providers: [RemoteValuesService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

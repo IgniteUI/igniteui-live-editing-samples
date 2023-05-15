@@ -27,7 +27,6 @@ import { GridSelectComponent } from "./grid/grid-select/grid-select-sample.compo
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -33,7 +33,6 @@ import {
 	IgxRadioModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { TreeAdvancedSampleComponent } from "./lists/tree/tree-advanced-sample/t
 	IgxTooltipModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

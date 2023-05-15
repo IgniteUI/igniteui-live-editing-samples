@@ -31,7 +31,6 @@ import { TextHighlightStyleComponent } from "./text-highlight-style/text-highlig
 	IgxTextHighlightModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

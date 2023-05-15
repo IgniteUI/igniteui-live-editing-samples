@@ -27,7 +27,6 @@ import { TimePickerSample5Component } from "./timepicker-sample-5/timepicker-sam
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -29,7 +29,6 @@ import { ButtonGroupSampleComponent } from "./button-group-sample-4/button-group
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

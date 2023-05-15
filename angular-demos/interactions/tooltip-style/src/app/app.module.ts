@@ -27,7 +27,6 @@ import { TooltipStyleComponent } from "./tooltip-style/tooltip-style.component";
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

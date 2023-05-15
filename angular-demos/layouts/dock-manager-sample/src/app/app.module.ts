@@ -22,7 +22,6 @@ defineCustomElements();
 	FormsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

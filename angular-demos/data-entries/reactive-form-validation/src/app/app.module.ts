@@ -29,7 +29,6 @@ import { ReactiveFormValidationComponent } from "./input-group/reactive-form-val
 	ReactiveFormsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

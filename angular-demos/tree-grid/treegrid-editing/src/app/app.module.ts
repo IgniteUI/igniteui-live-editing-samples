@@ -35,7 +35,6 @@ import { TreeGridEditingSampleComponent } from "./tree-grid-editing-sample/tree-
 	IgxDatePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

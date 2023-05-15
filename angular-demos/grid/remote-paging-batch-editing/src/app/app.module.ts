@@ -30,7 +30,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxButtonModule
 ],
   providers: [RemotePagingWithBatchEditingService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

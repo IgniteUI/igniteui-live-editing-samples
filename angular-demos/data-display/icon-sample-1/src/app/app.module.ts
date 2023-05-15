@@ -21,7 +21,6 @@ import { IconSample1Component } from "./icon-sample-1/icon-sample-1.component";
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

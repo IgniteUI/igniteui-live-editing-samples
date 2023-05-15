@@ -27,7 +27,6 @@ import { CalendarRtlSampleComponent } from "./calendar-rtl-sample/calendar-rtl-s
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

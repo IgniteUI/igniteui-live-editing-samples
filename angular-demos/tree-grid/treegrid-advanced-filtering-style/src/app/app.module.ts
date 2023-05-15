@@ -23,7 +23,6 @@ import { TreeGridAdvancedFilteringStyleComponent } from "./tree-grid/tree-grid-a
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { TreeGridRemotePagingSampleComponent } from "./tree-grid-remote-paging-s
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

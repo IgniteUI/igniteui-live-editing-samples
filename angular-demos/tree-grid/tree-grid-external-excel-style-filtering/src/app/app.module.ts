@@ -23,7 +23,6 @@ import { TreeGridExternalExcelStyleFilteringComponent } from "./tree-grid-extern
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

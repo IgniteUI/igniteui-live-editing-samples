@@ -21,7 +21,6 @@ import { IgxHierarchicalGridModule } from "igniteui-angular";
 	IgxHierarchicalGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

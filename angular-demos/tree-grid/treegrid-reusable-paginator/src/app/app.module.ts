@@ -33,7 +33,6 @@ import { TreeGridPagerSampleComponent } from "./tree-grid-pager-sample/tree-grid
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

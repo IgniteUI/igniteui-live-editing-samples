@@ -25,7 +25,6 @@ import { CarouselNoNavigationSampleComponent } from "./carousel-no-navigation-sa
 	IgxListModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

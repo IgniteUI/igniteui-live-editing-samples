@@ -19,7 +19,6 @@ import { ShadowsSampleComponent } from "./shadows-sample-1/shadows-sample.compon
 	FormsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

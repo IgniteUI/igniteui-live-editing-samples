@@ -27,7 +27,6 @@ import { LocalizationSample3Component } from "./services/localization-samples/lo
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

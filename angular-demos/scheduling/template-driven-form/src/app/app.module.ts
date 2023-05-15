@@ -25,7 +25,6 @@ import {
 	IgxTimePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

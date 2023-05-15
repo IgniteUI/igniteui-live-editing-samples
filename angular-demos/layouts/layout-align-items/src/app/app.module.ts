@@ -29,7 +29,6 @@ import { LayoutAlignItemsComponent } from "./layout/layout-align-items/layout-al
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

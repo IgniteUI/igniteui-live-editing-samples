@@ -31,7 +31,6 @@ import { CarouselAnimationsSampleComponent } from "./carousel-animations-sample/
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

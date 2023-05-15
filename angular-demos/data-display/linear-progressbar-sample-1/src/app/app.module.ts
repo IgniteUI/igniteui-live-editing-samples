@@ -21,7 +21,6 @@ import { LinearProgressbarSample1Component } from "./linear-progressbar-sample-1
 	IgxProgressBarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

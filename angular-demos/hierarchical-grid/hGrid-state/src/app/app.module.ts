@@ -30,7 +30,6 @@ import {
 	RouterModule.forRoot([{component: HGridAboutComponent, path: 'hGrid-state-about'},{component: HGridSaveStateComponent, path: 'hGrid-state'},{ path: '', redirectTo: '/hGrid-state', pathMatch: 'full' }])
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

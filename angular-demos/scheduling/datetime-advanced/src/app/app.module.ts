@@ -27,7 +27,6 @@ import { DateTimeAdvancedComponent } from "./datetime-advanced/datetime-advanced
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

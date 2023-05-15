@@ -27,7 +27,6 @@ import { ToastStyleComponent } from "./toast-style/toast-style.component";
 	IgxToastModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

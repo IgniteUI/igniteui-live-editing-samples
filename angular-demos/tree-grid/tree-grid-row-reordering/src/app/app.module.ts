@@ -27,7 +27,6 @@ import { TreeGridRowReorderComponent } from "./tree-grid-row-reorder/tree-grid-r
 	IgxDragDropModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -35,7 +35,6 @@ import { TreeGridSearchSampleComponent } from "./tree-grid-search-sample/tree-gr
 	IgxChipsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -25,7 +25,6 @@ import { BasicDateRangePickerComponent } from "./daterangepicker-basic/daterange
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

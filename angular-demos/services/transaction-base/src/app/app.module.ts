@@ -32,7 +32,6 @@ import { TransactionBasePipe } from "./services/transaction/pipes/transaction-ba
 	IgxIconModule
 ],
   providers: [IgxTransactionService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

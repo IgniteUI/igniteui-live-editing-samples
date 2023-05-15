@@ -31,7 +31,6 @@ import { NavDrawerSimpleComponent } from "./nav-drawer-simple/nav-drawer-simple.
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

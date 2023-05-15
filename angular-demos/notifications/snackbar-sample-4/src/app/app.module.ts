@@ -33,7 +33,6 @@ import { SnackbarSample4Component } from "./snackbar-sample-4/snackbar-sample-4.
 	IgxSnackbarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

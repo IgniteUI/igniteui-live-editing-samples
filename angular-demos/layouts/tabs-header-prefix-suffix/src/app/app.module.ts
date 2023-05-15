@@ -31,7 +31,6 @@ import { TabsHeaderPrefixSuffixComponent } from "./tabs-header-prefix-suffix/tab
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

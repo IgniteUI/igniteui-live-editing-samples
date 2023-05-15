@@ -35,7 +35,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 	NgbModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

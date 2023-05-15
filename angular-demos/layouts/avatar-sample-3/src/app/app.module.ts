@@ -21,7 +21,6 @@ import { AvatarSample3Component } from "./avatar-sample-3/avatar-sample-3.compon
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

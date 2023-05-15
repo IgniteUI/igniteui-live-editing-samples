@@ -31,7 +31,6 @@ import { DropdownMenuComponent } from "./dropdown-menu/dropdown-menu.component";
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

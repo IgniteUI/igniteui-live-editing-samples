@@ -29,7 +29,6 @@ import { DropDownSample5Component } from "./dropdown-sample-5/dropdown-sample-5.
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

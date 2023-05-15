@@ -24,7 +24,6 @@ import { CsvExportSample1Component } from "./services/csv-export-sample-1/csv-ex
 	IgxGridModule
 ],
   providers: [IgxCsvExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

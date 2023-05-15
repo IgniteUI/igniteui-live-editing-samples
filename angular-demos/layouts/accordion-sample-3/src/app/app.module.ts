@@ -31,7 +31,6 @@ import { AccordionSample3Component } from "./accordion-sample-3/accordion-sample
 	IgxAccordionModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

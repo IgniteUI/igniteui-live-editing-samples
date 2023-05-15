@@ -25,7 +25,6 @@ import { ToggleComponent } from "./toggle/toggle.component";
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

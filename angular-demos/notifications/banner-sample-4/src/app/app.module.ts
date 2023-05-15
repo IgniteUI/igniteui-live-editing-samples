@@ -38,7 +38,6 @@ import { BannerSample4Component } from "./banner-sample-4/banner-sample-4.compon
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { TreeGridColumnMovingStyledSampleComponent } from "./tree-grid-column-mo
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

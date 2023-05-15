@@ -27,7 +27,6 @@ import { NavbarStyleComponent } from "./navbar-style/navbar-style.component";
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

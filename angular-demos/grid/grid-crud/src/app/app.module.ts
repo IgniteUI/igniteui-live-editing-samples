@@ -30,7 +30,6 @@ import { CRUDService } from "./services/crud.service";
 	HttpClientModule
 ],
   providers: [CRUDService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

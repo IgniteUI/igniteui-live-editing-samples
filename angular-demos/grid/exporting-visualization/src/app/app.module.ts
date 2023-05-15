@@ -30,7 +30,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxExcelExporterService,
 	IgxCsvExporterService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

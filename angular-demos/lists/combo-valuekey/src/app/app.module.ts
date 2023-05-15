@@ -25,7 +25,6 @@ import { ComboValueKeyComponent } from "./combo-valuekey/combo-valuekey.componen
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

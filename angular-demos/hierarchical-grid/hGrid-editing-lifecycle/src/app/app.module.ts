@@ -27,7 +27,6 @@ import { HGridEditingLifecycleComponent } from "./hierarchical-grid/hgrid-editin
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

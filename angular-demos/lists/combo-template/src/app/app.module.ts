@@ -27,7 +27,6 @@ import { ComboTemplateComponent } from "./combo-template/combo-template.componen
 	IgxPrefixModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

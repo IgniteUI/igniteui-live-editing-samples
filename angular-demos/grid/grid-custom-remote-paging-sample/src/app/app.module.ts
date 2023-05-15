@@ -32,7 +32,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxSelectModule
 ],
   providers: [RemotePagingService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

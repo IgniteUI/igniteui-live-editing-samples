@@ -29,7 +29,6 @@ import { LocalizationSample2Component } from "./services/localization-samples/lo
 	IgxGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

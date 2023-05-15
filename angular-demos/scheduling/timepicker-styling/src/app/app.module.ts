@@ -21,7 +21,6 @@ import { TimePickerStylingComponent } from "./timepicker-styling/timepicker-styl
 	IgxTimePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

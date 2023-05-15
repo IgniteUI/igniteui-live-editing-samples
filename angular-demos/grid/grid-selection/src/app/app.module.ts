@@ -42,7 +42,6 @@ import { FinancialDataService } from "./services/financial.service";
 	HttpClientModule
 ],
   providers: [FinancialDataService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

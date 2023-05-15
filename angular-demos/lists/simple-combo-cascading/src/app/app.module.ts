@@ -25,7 +25,6 @@ import { SimpleComboCascadingComponent } from "./lists/combo/simple-combo-cascad
 	IgxSimpleComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

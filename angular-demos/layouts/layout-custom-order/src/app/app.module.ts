@@ -21,7 +21,6 @@ import { LayoutCustomOrderComponent } from "./layout/layout-custom-order/layout-
 	IgxLayoutModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

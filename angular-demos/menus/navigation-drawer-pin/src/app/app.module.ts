@@ -33,7 +33,6 @@ import { NavDrawerPinComponent } from "./nav-drawer-pin/nav-drawer-pin.component
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

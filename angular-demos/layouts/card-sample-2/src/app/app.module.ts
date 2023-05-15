@@ -31,7 +31,6 @@ import { CardSample2Component } from "./card-sample-2/card-sample-2.component";
 	IgxLayoutModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

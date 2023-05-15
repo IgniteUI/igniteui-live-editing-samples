@@ -29,7 +29,6 @@ import { ListSample8Component } from "./list-sample-8/list-sample-8.component";
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

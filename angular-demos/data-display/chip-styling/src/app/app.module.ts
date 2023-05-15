@@ -25,7 +25,6 @@ import { ChipStylingSampleComponent } from "./chip/chip-styling/chip-styling.com
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

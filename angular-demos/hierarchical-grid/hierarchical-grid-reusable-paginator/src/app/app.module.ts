@@ -31,7 +31,6 @@ import { HierarchicalGridPagerSampleComponent } from "./hierarchical-grid/hierar
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

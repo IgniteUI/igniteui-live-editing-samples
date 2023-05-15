@@ -41,7 +41,6 @@ import { CardSample4Component } from "./card-sample-4/card-sample-4.component";
 	IgxSliderModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

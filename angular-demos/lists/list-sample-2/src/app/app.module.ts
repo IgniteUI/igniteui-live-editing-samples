@@ -21,7 +21,6 @@ import { ListSample2Component } from "./list-sample-2/list-sample-2.component";
 	IgxListModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { ExpansionPanelSample4Component } from "./expansion-sample-4/expansion-s
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

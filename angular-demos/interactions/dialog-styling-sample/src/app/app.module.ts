@@ -31,7 +31,6 @@ import { DialogStylingSampleComponent } from "./dialog/dialog-styling-sample/dia
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

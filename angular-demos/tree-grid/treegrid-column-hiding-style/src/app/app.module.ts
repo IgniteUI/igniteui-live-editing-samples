@@ -23,7 +23,6 @@ import { TreeGridColumnHidingToolbarStyleComponent } from "./tree-grid-column-hi
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

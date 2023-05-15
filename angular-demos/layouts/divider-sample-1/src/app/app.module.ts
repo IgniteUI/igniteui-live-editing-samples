@@ -21,7 +21,6 @@ import { DividerDefaultComponent } from "./default/divider-default.component";
 	IgxDividerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

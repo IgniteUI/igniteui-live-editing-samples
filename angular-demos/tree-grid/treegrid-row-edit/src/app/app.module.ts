@@ -23,7 +23,6 @@ import { TreeGridRowEditSampleComponent } from "./tree-grid-row-edit/tree-grid-r
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

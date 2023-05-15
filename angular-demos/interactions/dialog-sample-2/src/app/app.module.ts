@@ -27,7 +27,6 @@ import { DialogSample2Component } from "./dialog-sample-2/dialog-sample-2.compon
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

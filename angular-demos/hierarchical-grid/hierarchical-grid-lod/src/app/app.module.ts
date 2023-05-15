@@ -26,7 +26,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	HttpClientModule
 ],
   providers: [RemoteLoDService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

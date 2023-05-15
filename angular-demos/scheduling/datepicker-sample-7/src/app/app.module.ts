@@ -29,7 +29,6 @@ import { DatepickerSample7Component } from "./scheduling/datepicker/datepicker-s
 	IgxSnackbarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

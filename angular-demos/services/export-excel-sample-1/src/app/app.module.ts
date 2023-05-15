@@ -26,7 +26,6 @@ import { ExcelExportSample1Component } from "./services/excel-export-sample-1/ex
 	IgxButtonModule
 ],
   providers: [IgxExcelExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { TabsSample2Component } from "./tabs-sample-2/tabs-sample-2.component";
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

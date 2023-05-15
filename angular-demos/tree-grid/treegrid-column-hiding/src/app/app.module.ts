@@ -27,7 +27,6 @@ import { TreeGridColumnHidingSampleComponent } from "./tree-grid-column-hiding-s
 	IgxRadioModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

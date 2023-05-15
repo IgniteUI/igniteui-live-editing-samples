@@ -29,7 +29,6 @@ import { LayoutDirectionRowComponent } from "./layout/layout-direction-row/layou
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

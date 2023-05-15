@@ -27,7 +27,6 @@ import { TreeGridToolbarSample4Component } from "./tree-grid-toolbar-sample-4/tr
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -31,7 +31,6 @@ import { TreeGridSelectionSampleComponent } from "./tree-grid-selection-sample/t
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

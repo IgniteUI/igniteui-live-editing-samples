@@ -32,7 +32,6 @@ import { FinancialDataService } from "./services/financial.service";
 	IgxSwitchModule
 ],
   providers: [FinancialDataService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

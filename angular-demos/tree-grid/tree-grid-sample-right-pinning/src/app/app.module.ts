@@ -21,7 +21,6 @@ import { IgxTreeGridModule } from "igniteui-angular";
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

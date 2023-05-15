@@ -26,7 +26,6 @@ import {
 	IgxListModule
 ],
   providers: [IgxOverlayService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

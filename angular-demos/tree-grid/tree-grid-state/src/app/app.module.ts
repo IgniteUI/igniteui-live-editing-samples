@@ -30,7 +30,6 @@ import {
 	RouterModule.forRoot([{component: TGridAboutComponent, path: 'tree-grid-state-about'},{component: TGridSaveStateComponent, path: 'tree-grid-state'},{ path: '', redirectTo: '/tree-grid-state', pathMatch: 'full' }])
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

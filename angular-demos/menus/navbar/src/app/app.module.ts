@@ -25,7 +25,6 @@ import { NavbarComponent } from "./navbar/navbar.component";
 	IgxNavbarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

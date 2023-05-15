@@ -21,7 +21,6 @@ import { LinearProgressbarStylingComponent } from ".//linear-progressbar-styling
 	IgxProgressBarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

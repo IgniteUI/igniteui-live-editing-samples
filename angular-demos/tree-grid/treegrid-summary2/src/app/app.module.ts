@@ -33,7 +33,6 @@ import { TreeGridSummary2SampleComponent } from "./tree-grid-summary2-sample/tre
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

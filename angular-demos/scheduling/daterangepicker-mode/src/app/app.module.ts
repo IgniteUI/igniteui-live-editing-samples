@@ -21,7 +21,6 @@ import { DateRangePickerModeComponent } from "./daterangepicker-mode/daterangepi
 	IgxDateRangePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

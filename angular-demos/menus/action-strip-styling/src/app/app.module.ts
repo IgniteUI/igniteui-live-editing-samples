@@ -29,7 +29,6 @@ import { ActionStripStylingComponent } from "./action-strip-paragraph-styling/ac
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

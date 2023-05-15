@@ -25,7 +25,6 @@ import { InputGroupStyleComponent } from "./input-group/input-group-styling/inpu
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

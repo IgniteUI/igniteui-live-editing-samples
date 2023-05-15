@@ -23,7 +23,6 @@ import { TreeGridAllDataSummaryComponent } from "./tree-grid/treegrid-allData-su
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -24,7 +24,6 @@ import { PivotDataService } from "./services/pivotRemoteData.service";
 	IgxPivotGridModule
 ],
   providers: [PivotDataService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

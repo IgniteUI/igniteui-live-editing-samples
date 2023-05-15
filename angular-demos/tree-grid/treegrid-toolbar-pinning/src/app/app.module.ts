@@ -27,7 +27,6 @@ import { TreeGridPinningToolbarSampleComponent } from "./tree-grid-column-pinnin
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

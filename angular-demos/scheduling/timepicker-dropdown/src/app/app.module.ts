@@ -27,7 +27,6 @@ import { TimepickerDropdownComponent } from "./timepicker-dropdown/timepicker-dr
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

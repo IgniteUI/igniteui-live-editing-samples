@@ -27,7 +27,6 @@ import { DateRangePickerValidationComponent } from "./daterangepicker-validation
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

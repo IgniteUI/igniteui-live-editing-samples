@@ -27,7 +27,6 @@ import { TreeGridConditionalRowSelectorsSampleComponent } from "./tree-grid/tree
 	IgxCheckboxModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

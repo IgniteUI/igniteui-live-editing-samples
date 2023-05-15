@@ -21,7 +21,6 @@ import { DividerInsetComponent } from "./inset/divider-inset.component";
 	IgxDividerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

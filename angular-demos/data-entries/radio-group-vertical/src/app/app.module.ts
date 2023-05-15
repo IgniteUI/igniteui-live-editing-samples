@@ -21,7 +21,6 @@ import { RadioGroupVerticalComponent } from "./radio-group-vertical/radio-group-
 	IgxRadioModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

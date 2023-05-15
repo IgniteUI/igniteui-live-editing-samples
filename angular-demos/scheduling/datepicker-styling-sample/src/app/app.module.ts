@@ -25,7 +25,6 @@ import { DatepickerStylingSampleComponent } from "./scheduling/datepicker/datepi
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -25,7 +25,6 @@ import { TimePickerSample4Component } from "./timepicker-sample-4/timepicker-sam
 	IgxToastModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

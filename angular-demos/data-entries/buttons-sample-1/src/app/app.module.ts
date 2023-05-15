@@ -27,7 +27,6 @@ import { ButtonsSample1Component } from "./buttons-sample-1/buttons-sample-1.com
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

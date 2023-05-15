@@ -29,7 +29,6 @@ import { SimpleComboMainComponent } from "./lists/combo/simple-combo-main/simple
 	IgxSimpleComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

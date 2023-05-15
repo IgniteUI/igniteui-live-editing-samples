@@ -29,7 +29,6 @@ import { MaskSample1Component } from "./mask-sample-1/mask-sample-1.component";
 	IgxTextSelectionModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

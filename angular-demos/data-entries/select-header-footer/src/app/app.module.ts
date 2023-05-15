@@ -33,7 +33,6 @@ import { SelectHeaderFooterComponent } from "./select-header-footer/select-heade
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

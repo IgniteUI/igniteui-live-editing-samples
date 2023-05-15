@@ -31,7 +31,6 @@ import { PasteHandler } from "./grid/paste-handler.directive";
 	IgxButtonModule
 ],
   providers: [IgxExcelExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

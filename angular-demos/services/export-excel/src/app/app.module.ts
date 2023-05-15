@@ -20,7 +20,6 @@ import { ExcelExportComponent } from "./services/export-excel/excel-export.compo
 	FormsModule
 ],
   providers: [IgxExcelExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

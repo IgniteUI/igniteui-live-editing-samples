@@ -21,7 +21,6 @@ import { SplitterStylingSampleComponent } from "./splitter-styling-sample/splitt
 	IgxSplitterModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

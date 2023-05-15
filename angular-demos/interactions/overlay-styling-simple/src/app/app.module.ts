@@ -26,7 +26,6 @@ import { OverlayStylingComponent } from "./overlay-styling/overlay-styling.compo
 	IgxComboModule
 ],
   providers: [IgxOverlayService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

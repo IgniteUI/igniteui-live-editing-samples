@@ -27,7 +27,6 @@ import { TreeGridSelectionTemplateNumbersSampleComponent } from "./tree-grid-sel
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

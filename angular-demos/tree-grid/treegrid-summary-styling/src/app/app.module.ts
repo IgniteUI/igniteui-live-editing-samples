@@ -27,7 +27,6 @@ import { TreeGridSummaryStylingComponent } from "./tree-grid-summary-styling/tre
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

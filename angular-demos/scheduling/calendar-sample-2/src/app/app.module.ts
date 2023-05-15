@@ -27,7 +27,6 @@ import { CalendarSample2Component } from "./calendar-sample-2/calendar-sample-2.
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -23,7 +23,6 @@ import { TreeGridConditionalCellStyle2Component } from "./tree-grid/tree-grid-co
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

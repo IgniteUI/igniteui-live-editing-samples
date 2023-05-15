@@ -21,7 +21,6 @@ import { CheckboxStylingComponent } from "./checkbox-styling/checkbox-styling.co
 	IgxCheckboxModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

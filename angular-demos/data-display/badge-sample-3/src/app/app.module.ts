@@ -27,7 +27,6 @@ import { BadgeSample3Component } from "./badge-sample-3/badge-sample-3.component
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

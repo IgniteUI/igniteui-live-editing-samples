@@ -23,7 +23,6 @@ import { TreeGridRemotePagingDefaultTemplateComponent } from "./tree-grid-remote
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

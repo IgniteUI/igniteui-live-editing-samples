@@ -32,7 +32,6 @@ import { TreeGridExportVisualizationComponent } from "./tree-grid-export-visuali
 	IgxExcelExporterService,
 	IgxCsvExporterService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

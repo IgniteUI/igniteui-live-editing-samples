@@ -32,7 +32,6 @@ import { MyDynamicCardComponent } from "./overlay-dynamic-card/overlay-dynamic-c
 	IgxButtonModule
 ],
   providers: [IgxOverlayService],
-  entryComponents: [MyDynamicCardComponent],
   schemas: []
 })
 export class AppModule {}

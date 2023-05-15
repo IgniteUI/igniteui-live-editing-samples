@@ -30,7 +30,6 @@ import { SimpleComboRemoteComponent } from "./lists/combo/simple-combo-remote/si
 	HttpClientModule
 ],
   providers: [RemoteNWindService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

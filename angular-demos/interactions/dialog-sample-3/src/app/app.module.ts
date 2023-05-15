@@ -31,7 +31,6 @@ import { DialogSample3Component } from "./dialog-sample-3/dialog-sample-3.compon
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

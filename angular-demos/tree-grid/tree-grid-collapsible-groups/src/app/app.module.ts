@@ -27,7 +27,6 @@ import { TreeGridMultiCollapsibleColumnGroupsComponent } from "./tree-grid/tree-
 	IgxTooltipModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

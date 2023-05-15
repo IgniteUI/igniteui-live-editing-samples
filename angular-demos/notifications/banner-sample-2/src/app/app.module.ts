@@ -35,7 +35,6 @@ import { BannerSample2Component } from "./banner-sample-2/banner-sample-2.compon
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

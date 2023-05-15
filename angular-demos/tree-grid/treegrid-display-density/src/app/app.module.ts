@@ -27,7 +27,6 @@ import { TreeGridDisplaydensitySampleComponent } from "./tree-grid-displaydensit
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

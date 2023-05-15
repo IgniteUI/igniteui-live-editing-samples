@@ -27,7 +27,6 @@ import { ComboBindingComponent } from "./combo-binding/combo-binding.component";
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

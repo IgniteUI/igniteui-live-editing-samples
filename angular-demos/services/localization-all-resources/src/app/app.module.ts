@@ -29,7 +29,6 @@ import { LocalizationAllResourcesComponent } from "./services/localization-sampl
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

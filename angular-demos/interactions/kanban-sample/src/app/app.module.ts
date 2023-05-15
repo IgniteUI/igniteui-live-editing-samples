@@ -30,7 +30,6 @@ import {
 	IgxChipsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

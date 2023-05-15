@@ -27,7 +27,6 @@ import { TreeGridVirtualizationSampleComponent } from "./tree-grid-virtualizatio
 	IgxBadgeModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

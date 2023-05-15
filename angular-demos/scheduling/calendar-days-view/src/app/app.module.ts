@@ -25,7 +25,6 @@ import { CalendarDaysViewComponent } from "./calendar-days-view/calendar-days-vi
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

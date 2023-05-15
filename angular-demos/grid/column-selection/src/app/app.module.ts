@@ -21,7 +21,6 @@ import { IgxGridModule } from "igniteui-angular";
 	IgxGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

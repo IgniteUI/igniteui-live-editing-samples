@@ -21,7 +21,6 @@ import { AvatarStylingSampleComponent } from "./avatar-styling/avatar-styling.co
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

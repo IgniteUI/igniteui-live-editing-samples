@@ -27,7 +27,6 @@ import { TreeGridClipboardSampleComponent } from "./tree-grid-clipboard-operatio
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

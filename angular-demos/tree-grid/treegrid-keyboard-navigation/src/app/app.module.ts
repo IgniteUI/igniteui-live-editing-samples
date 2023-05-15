@@ -23,7 +23,6 @@ import { TreeGridKBNavigationComponent } from "./tree-grid-keyboard-navigation/t
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

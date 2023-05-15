@@ -27,7 +27,6 @@ import { TreeGridSortingStylingComponent } from "./tree-grid-sorting-styling/tre
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { DateRangePickerStartEndComponent } from "./daterangepicker-start-end/da
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -29,7 +29,6 @@ import { ButtonsStyleComponent } from "./buttons-style/buttons-style.component";
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

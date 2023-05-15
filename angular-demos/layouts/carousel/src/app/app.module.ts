@@ -25,7 +25,6 @@ import { CarouselComponent } from "./carousel/carousel.component";
 	IgxSliderModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

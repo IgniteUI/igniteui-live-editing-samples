@@ -21,7 +21,6 @@ import { DividerVerticalComponent } from "./vertical/divider-vertical.component"
 	IgxDividerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

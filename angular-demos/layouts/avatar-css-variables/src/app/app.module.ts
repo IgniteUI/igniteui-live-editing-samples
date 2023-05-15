@@ -21,7 +21,6 @@ import { AvatarCSSVariablesComponent } from "./avatar-css-variables/avatar-css-v
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

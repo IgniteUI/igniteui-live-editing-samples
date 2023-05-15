@@ -34,7 +34,6 @@ import { CardSample1Component } from "./layouts/card/card-sample-1/card-sample-1
 	IgxButtonModule
 ],
   providers: [IgxOverlayService],
-  entryComponents: [CardSample1Component],
   schemas: []
 })
 export class AppModule {}

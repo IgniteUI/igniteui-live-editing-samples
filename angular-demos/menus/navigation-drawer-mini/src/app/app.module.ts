@@ -33,7 +33,6 @@ import { NavDrawerMiniComponent } from "./nav-drawer-mini/nav-drawer-mini.compon
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

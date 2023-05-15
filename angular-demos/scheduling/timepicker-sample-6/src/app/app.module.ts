@@ -29,7 +29,6 @@ import { TimePickerSample6Component } from "./timepicker-sample-6/timepicker-sam
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -29,7 +29,6 @@ import { LinearDynamicSampleComponent } from "./linear-dynamic-sample/linear-dyn
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

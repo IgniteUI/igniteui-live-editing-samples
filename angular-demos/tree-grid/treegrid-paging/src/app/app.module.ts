@@ -31,7 +31,6 @@ import { TreeGridPagingSampleComponent } from "./tree-grid-paging-sample/tree-gr
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

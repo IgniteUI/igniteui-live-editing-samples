@@ -31,7 +31,6 @@ import { TreeGridContextmenuComponent } from "./tree-grid-sorting-sample/tree-gr
 	IgxSimpleComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}
