@@ -4,7 +4,10 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { GridColumnSelectionComponent } from "./grid/column-selection-sample/column-selection-sample.component";
-import { IgxGridModule } from "igniteui-angular";
+import { 
+	IgxGridModule,
+	IgxSelectModule
+ } from "igniteui-angular";
 
 
 
@@ -18,7 +21,8 @@ import { IgxGridModule } from "igniteui-angular";
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxSelectModule
 ],
   providers: [],
   schemas: []

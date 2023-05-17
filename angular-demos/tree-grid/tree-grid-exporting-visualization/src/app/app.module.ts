@@ -7,6 +7,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 import { 
 	IgxTreeGridModule,
 	IgxToggleModule,
+	IgxButtonModule,
 	IgxExcelExporterService,
 	IgxCsvExporterService
  } from "igniteui-angular";
@@ -26,7 +27,8 @@ import { TreeGridExportVisualizationComponent } from "./tree-grid-export-visuali
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxToggleModule
+	IgxToggleModule,
+	IgxButtonModule
 ],
   providers: [
 	IgxExcelExporterService,

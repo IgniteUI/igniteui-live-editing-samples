@@ -9,6 +9,7 @@ import {
 	IgxIconModule
  } from "igniteui-angular";
 import { TreeGridPinningToolbarSampleComponent } from "./tree-grid-column-pinning-sample/tree-grid-toolbar-pinning.component";
+import { RouterModule } from "@angular/router";
 
 
 
@@ -24,7 +25,9 @@ import { TreeGridPinningToolbarSampleComponent } from "./tree-grid-column-pinnin
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxIconModule
+	IgxIconModule,
+	RouterModule,
+	RouterModule.forRoot([])
 ],
   providers: [],
   schemas: []

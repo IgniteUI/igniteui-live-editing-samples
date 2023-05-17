@@ -9,6 +9,7 @@ import {
 	IgxIconModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
+import { RouterModule } from "@angular/router";
 
 
 
@@ -24,7 +25,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxIconModule
+	IgxIconModule,
+	RouterModule,
+	RouterModule.forRoot([])
 ],
   providers: [],
   schemas: []

@@ -12,7 +12,8 @@ import {
 	IgxGridModule,
 	IgxIconModule,
 	IgxInputGroupModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxButtonGroupModule
  } from "igniteui-angular";
 import { GridSelectionSampleComponent } from "./grid/grid-sample-selection/grid-selection.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -39,6 +40,7 @@ import { FinancialDataService } from "./services/financial.service";
 	IgxIconModule,
 	IgxInputGroupModule,
 	IgxSwitchModule,
+	IgxButtonGroupModule,
 	HttpClientModule
 ],
   providers: [FinancialDataService],

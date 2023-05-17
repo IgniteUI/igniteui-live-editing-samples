@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { IgxHierarchicalGridModule } from "igniteui-angular";
 import { HGridToolbarPinningComponent } from "./hierarchical-grid/hierarchical-grid-column-pinning/hierarchical-grid-toolbar-pinning.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
+import { RouterModule } from "@angular/router";
 
 
 
@@ -20,7 +21,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxHierarchicalGridModule
+	IgxHierarchicalGridModule,
+	RouterModule,
+	RouterModule.forRoot([])
 ],
   providers: [],
   schemas: []

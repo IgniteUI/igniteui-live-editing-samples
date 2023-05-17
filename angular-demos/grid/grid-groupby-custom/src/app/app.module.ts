@@ -8,7 +8,9 @@ import {
 	IgxGridModule,
 	IgxSwitchModule,
 	IgxIconModule,
-	IgxBadgeModule
+	IgxBadgeModule,
+	IgxDropDownModule,
+	IgxToggleModule
  } from "igniteui-angular";
 import { GridGroupBySampleComponent } from "./grid/grid-groupby-sample/grid-groupby-sample.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -19,7 +21,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	GridGroupBySampleComponent
+	GridGroupByCustomSampleComponent
 ],
   imports: [
 	BrowserModule,
@@ -29,7 +31,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxButtonModule,
 	IgxGridModule,
 	IgxIconModule,
-	IgxBadgeModule
+	IgxBadgeModule,
+	IgxDropDownModule,
+	IgxToggleModule
 ],
   providers: [],
   schemas: []

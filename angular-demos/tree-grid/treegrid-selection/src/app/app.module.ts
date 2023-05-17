@@ -8,7 +8,9 @@ import {
 	IgxTreeGridModule,
 	IgxSwitchModule,
 	IgxSnackbarModule,
-	IgxButtonGroupModule
+	IgxButtonGroupModule,
+	IgxIconModule,
+	IgxCheckboxModule
  } from "igniteui-angular";
 import { TreeGridSelectionSampleComponent } from "./tree-grid-selection-sample/tree-grid-selection-sample.component";
 
@@ -28,7 +30,9 @@ import { TreeGridSelectionSampleComponent } from "./tree-grid-selection-sample/t
 	IgxTreeGridModule,
 	IgxSwitchModule,
 	IgxSnackbarModule,
-	IgxButtonGroupModule
+	IgxButtonGroupModule,
+	IgxIconModule,
+	IgxCheckboxModule
 ],
   providers: [],
   schemas: []

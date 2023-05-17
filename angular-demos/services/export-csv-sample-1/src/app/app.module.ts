@@ -8,6 +8,7 @@ import {
 	IgxCsvExporterService
  } from "igniteui-angular";
 import { CsvExportSample1Component } from "./services/csv-export-sample-1/csv-export-sample-1.component";
+import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
 
@@ -21,7 +22,8 @@ import { CsvExportSample1Component } from "./services/csv-export-sample-1/csv-ex
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxPreventDocumentScrollModule
 ],
   providers: [IgxCsvExporterService],
   schemas: []

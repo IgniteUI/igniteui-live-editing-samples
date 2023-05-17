@@ -8,10 +8,12 @@ import {
 	IgxExcelExporterService,
 	IgxDropDownComponent,
 	IgxDropDownModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxToggleModule
  } from "igniteui-angular";
 import { GridPasteSampleComponent } from "./grid/grid-paste-sample.component";
 import { PasteHandler } from "./grid/paste-handler.directive";
+import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
 
@@ -28,7 +30,9 @@ import { PasteHandler } from "./grid/paste-handler.directive";
 	FormsModule,
 	IgxGridModule,
 	IgxDropDownModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxToggleModule,
+	IgxPreventDocumentScrollModule
 ],
   providers: [IgxExcelExporterService],
   schemas: []

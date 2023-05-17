@@ -7,7 +7,8 @@ import {
 	IgxHierarchicalGridModule,
 	IgxSwitchModule,
 	IgxSnackbarModule,
-	IgxButtonGroupModule
+	IgxButtonGroupModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { HGridSelectionSampleComponent } from "./hierarchical-grid/hierarchical-grid-selection/hierarchical-grid-selection.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -28,7 +29,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxHierarchicalGridModule,
 	IgxSwitchModule,
 	IgxSnackbarModule,
-	IgxButtonGroupModule
+	IgxButtonGroupModule,
+	IgxIconModule
 ],
   providers: [],
   schemas: []

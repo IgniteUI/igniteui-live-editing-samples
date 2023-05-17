@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { TreeGridColumnGroupSelectionComponent } from "./tree-grid/column-group-selection/column-group-selection.component";
 import { IgxTreeGridModule } from "igniteui-angular";
+import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
 
@@ -18,7 +19,8 @@ import { IgxTreeGridModule } from "igniteui-angular";
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
-	IgxTreeGridModule
+	IgxTreeGridModule,
+	IgxPreventDocumentScrollModule
 ],
   providers: [],
   schemas: []

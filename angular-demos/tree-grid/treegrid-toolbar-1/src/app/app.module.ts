@@ -9,7 +9,8 @@ import {
 	IgxAvatarModule,
 	IgxExcelExporterService,
 	IgxCsvExporterService,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxInputGroupModule
  } from "igniteui-angular";
 import { TreeGridToolbarSample1Component } from "./tree-grid-toolbar-sample-1/tree-grid-toolbar-sample-1.component";
 
@@ -28,7 +29,8 @@ import { TreeGridToolbarSample1Component } from "./tree-grid-toolbar-sample-1/tr
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
 	IgxAvatarModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxInputGroupModule
 ],
   providers: [
 	IgxExcelExporterService,

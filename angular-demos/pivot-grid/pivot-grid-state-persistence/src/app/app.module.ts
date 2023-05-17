@@ -7,7 +7,9 @@ import {
 	IgxPivotGridModule,
 	IgxTooltipModule,
 	IgxToastModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxCheckboxModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { PivotGridStatePersistenceSampleComponent } from "./pivot-grid/pivot-state-persistence/pivot-grid-state-persistence-sample.component";
 import { PivotGridAboutComponent } from "./pivot-grid/pivot-state-persistence/about.component";
@@ -23,7 +25,8 @@ import {
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	PivotGridStatePersistenceSampleComponent
+	PivotGridStatePersistenceSampleComponent,
+	PivotGridAboutComponent
 ],
   imports: [
 	BrowserModule,
@@ -32,7 +35,8 @@ import {
 	IgxPreventDocumentScrollModule,
 	IgxPivotGridModule,
 	IgxTooltipModule,
-	PivotGridAboutComponent,
+	IgxCheckboxModule,
+	IgxIconModule,
 	RouterModule.forRoot([{component: PivotGridAboutComponent, path: 'pivot-grid-about'},{component: PivotGridStatePersistenceSampleComponent, path: 'pivot-grid-state-persistance'},{ path: '', redirectTo: '/pivot-grid-state-persistance', pathMatch: 'full' }]),
 	IgxToastModule,
 	IgxSwitchModule

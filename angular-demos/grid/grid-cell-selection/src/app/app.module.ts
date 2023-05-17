@@ -28,7 +28,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxSnackbarModule
+	IgxSnackbarModule,
+	IgxIconModule,
+	IgxButtonGroupModule
 ],
   providers: [],
   schemas: []

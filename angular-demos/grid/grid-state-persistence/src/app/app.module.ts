@@ -8,6 +8,8 @@ import {
 	IgxAvatarModule,
 	IgxGridModule,
 	IgxSwitchModule,
+	IgxIconModule,
+	IgxButtonModule,
 	IgxExcelExporterService,
 	IgxCsvExporterService
  } from "igniteui-angular";
@@ -29,7 +31,9 @@ import { FinancialDataService } from "./services/financial.service";
 	IgxPreventDocumentScrollModule,
 	IgxAvatarModule,
 	IgxGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule,
+	IgxButtonModule
 ],
   providers: [FinancialDataService],
   schemas: []

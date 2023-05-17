@@ -7,7 +7,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 import { TGridEditingLifecycleComponent } from "./tgrid-editing-lifecycle-sample/tgrid-editing-lifecycle.component";
 import { 
 	IgxTreeGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule,
+	IgxButtonModule
  } from "igniteui-angular";
 
 
@@ -24,7 +26,9 @@ import {
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule,
+	IgxButtonModule
 ],
   providers: [],
   schemas: []

@@ -9,7 +9,8 @@ import {
 	IgxGridModule,
 	IgxSwitchModule,
 	IgxExcelExporterService,
-	IgxCsvExporterService
+	IgxCsvExporterService,
+	IgxInputGroupModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -28,7 +29,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPreventDocumentScrollModule,
 	IgxAvatarModule,
 	IgxGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxInputGroupModule
 ],
   providers: [
 	IgxExcelExporterService,

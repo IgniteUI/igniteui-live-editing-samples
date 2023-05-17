@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { GridEditingLifecycleComponent } from "./grid/grid-editing-lifecycle-sample/grid-editing-lifecycle.component";
@@ -24,7 +25,8 @@ import { GridEditingLifecycleComponent } from "./grid/grid-editing-lifecycle-sam
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule
 ],
   providers: [],
   schemas: []
