@@ -36,7 +36,6 @@ import {
 	IgxExcelExporterService,
 	IgxCsvExporterService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

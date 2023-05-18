@@ -49,7 +49,6 @@ import {
 	IgxSparklineModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -66,10 +66,6 @@ defineCustomElements();
 	SignalRService,
 	FloatingPanesService
 ],
-  entryComponents: [
-	IgxGridComponent,
-	DockSlotComponent
-],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
