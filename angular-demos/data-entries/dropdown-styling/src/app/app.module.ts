@@ -27,7 +27,6 @@ import { DropDownStylingComponent } from "./data-entries/dropdown/dropdown-styli
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

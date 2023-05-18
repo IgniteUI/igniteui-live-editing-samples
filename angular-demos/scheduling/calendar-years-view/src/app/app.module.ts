@@ -25,7 +25,6 @@ import { CalendarYearsViewComponent } from "./calendar-years-view/calendar-years
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -21,7 +21,6 @@ import { IconStylingSampleComponent } from "./icon-styling-sample/icon-styling-s
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

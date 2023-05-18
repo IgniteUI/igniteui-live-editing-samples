@@ -28,7 +28,6 @@ import { OverlayScrollSample1Component } from "./overlay-scroll-1/overlay-scroll
 	IgxCardModule
 ],
   providers: [IgxOverlayService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

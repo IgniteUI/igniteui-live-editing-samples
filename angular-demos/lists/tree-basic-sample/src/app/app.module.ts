@@ -25,7 +25,6 @@ import { TreeBasicSampleComponent } from "./lists/tree/tree-basic-sample/tree-ba
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

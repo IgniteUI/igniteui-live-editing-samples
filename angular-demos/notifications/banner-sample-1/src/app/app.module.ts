@@ -29,7 +29,6 @@ import { BannerSample1Component } from "./banner-sample-1/banner-sample-1.compon
 	IgxNavbarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

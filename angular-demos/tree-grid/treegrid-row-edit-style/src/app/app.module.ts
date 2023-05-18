@@ -27,7 +27,6 @@ import { TreeGridRowEditStyleComponent } from "./tree-grid-row-edit-style/tree-g
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

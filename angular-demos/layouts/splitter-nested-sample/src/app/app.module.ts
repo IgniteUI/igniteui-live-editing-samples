@@ -21,7 +21,6 @@ import { SplitterNestedSampleComponent } from "./splitter-nested-sample/splitter
 	IgxSplitterModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

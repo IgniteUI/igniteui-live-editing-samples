@@ -27,7 +27,6 @@ import { ToastSample2Component } from "./toast-sample-2/toast-sample-2.component
 	IgxToastModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

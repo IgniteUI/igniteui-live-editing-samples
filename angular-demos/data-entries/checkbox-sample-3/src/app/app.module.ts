@@ -21,7 +21,6 @@ import { CheckboxSample3Component } from "./checkbox-sample-3/checkbox-sample-3.
 	IgxCheckboxModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

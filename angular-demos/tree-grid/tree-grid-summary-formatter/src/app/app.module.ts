@@ -23,7 +23,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

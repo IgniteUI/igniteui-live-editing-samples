@@ -25,7 +25,6 @@ import { CalendarMonthsViewComponent } from "./calendar-months-view/calendar-mon
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { GridToolbarSample4Component } from "./grid/grid-toolbar-sample/grid-toolbar-sample-4.component";
 import { 
 	IgxAvatarModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -24,10 +25,10 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxAvatarModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

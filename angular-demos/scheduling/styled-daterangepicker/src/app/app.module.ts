@@ -27,7 +27,6 @@ import { StyledDateRangePickerComponent } from "./daterangepicker-styling/datera
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

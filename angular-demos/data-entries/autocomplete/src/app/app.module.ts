@@ -29,7 +29,6 @@ import { AutocompletePipeStartsWith } from "./autocomplete/autocomplete.componen
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

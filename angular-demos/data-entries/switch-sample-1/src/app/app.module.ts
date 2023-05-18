@@ -21,7 +21,6 @@ import { SwitchSample1Component } from "./switch-sample-1/switch-sample-1.compon
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

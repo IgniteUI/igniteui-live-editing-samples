@@ -27,7 +27,6 @@ import { CalendarMultiViewComponent } from "./multiview/multiview.component";
 	IgxDialogModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

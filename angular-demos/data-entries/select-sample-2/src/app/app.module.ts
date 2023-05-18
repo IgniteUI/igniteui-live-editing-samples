@@ -29,7 +29,6 @@ import { SelectSample2Component } from "./select-sample-2/select-sample-2.compon
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

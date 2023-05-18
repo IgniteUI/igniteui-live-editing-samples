@@ -24,7 +24,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxHierarchicalGridModule
 ],
   providers: [RemoteValuesService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

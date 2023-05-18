@@ -29,7 +29,6 @@ import { CardComponent } from "./card.component";
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

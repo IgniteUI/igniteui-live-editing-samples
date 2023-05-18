@@ -21,7 +21,6 @@ import { SplitterHorizontalSampleComponent } from "./splitter-horizontal-sample/
 	IgxSplitterModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

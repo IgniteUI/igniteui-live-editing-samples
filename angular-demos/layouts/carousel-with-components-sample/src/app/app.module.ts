@@ -31,7 +31,6 @@ import { CarouselWithComponentsSampleComponent } from "./carousel-with-component
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

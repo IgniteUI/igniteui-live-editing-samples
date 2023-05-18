@@ -29,7 +29,6 @@ import { TreeGridExcelStyleFilteringSample1Component } from "./tree-grid-excel-s
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

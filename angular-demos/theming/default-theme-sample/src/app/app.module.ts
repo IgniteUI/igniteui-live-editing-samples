@@ -46,7 +46,6 @@ import { DefaultThemeSampleComponent } from "./default-theme-sample/default-them
 	IgxLayoutModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

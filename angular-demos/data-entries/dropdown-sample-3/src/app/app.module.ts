@@ -35,7 +35,6 @@ import { DropDownSample3Component } from "./dropdown-sample-3/dropdown-sample-3.
 	IgxDividerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

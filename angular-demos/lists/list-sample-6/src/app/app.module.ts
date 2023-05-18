@@ -27,7 +27,6 @@ import { ListSample6Component } from "./list-sample-6/list-sample-6.component";
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

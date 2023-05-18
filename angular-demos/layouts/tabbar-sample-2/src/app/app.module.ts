@@ -25,7 +25,6 @@ import { TabbarSample2Component } from "./tabbar-sample-2/tabbar-sample-2.compon
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

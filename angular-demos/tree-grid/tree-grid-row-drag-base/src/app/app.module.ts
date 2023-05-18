@@ -8,7 +8,8 @@ import {
 	IgxTreeGridModule,
 	IgxButtonModule,
 	IgxInputGroupModule,
-	IgxDragDropModule
+	IgxDragDropModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { TreeGridRowDragBaseComponent } from "./tree-grid-row-drag-base/tree-grid-row-drag-base.component";
 
@@ -28,10 +29,10 @@ import { TreeGridRowDragBaseComponent } from "./tree-grid-row-drag-base/tree-gri
 	IgxTreeGridModule,
 	IgxButtonModule,
 	IgxInputGroupModule,
-	IgxDragDropModule
+	IgxDragDropModule,
+	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

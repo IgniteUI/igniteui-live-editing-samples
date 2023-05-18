@@ -25,7 +25,6 @@ import { ComboFeaturesComponent } from "./combo-features/combo-features.componen
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

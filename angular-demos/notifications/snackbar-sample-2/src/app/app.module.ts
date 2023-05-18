@@ -29,7 +29,6 @@ import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

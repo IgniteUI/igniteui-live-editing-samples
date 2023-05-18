@@ -28,7 +28,6 @@ import { RemoteNWindService } from "./services/remoteNwind.service";
 	HttpClientModule
 ],
   providers: [RemoteNWindService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

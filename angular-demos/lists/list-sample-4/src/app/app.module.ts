@@ -35,7 +35,6 @@ import { ListSample4Component } from "./list-sample-4/list-sample-4.component";
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

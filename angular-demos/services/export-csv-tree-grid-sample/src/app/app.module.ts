@@ -24,7 +24,6 @@ import { TreeGridCsvExportSample1Component } from "./services/csv-export-tree-gr
 	IgxTreeGridModule
 ],
   providers: [IgxCsvExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

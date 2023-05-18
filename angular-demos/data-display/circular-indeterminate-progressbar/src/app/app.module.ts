@@ -21,7 +21,6 @@ import { CircularIndeterminateProgressbarComponent } from "./circular-indetermin
 	IgxProgressBarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

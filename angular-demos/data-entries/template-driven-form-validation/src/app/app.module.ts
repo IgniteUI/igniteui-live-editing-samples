@@ -27,7 +27,6 @@ import { TemplateDrivenFormValidationComponent } from "./input-group/template-dr
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

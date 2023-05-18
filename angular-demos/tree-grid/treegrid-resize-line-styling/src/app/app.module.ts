@@ -23,7 +23,6 @@ import { TreeGridResizeLineStylingSampleComponent } from "./tree-grid-resize-lin
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

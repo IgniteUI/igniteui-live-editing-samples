@@ -21,7 +21,6 @@ import { LayoutSampleComponent } from "./layout/layout-sample/layout-sample.comp
 	IgxLayoutModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

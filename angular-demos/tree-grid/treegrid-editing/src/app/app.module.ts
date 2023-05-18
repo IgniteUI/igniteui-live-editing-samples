@@ -10,7 +10,8 @@ import {
 	IgxDialogModule,
 	IgxInputGroupModule,
 	IgxCheckboxModule,
-	IgxDatePickerModule
+	IgxDatePickerModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { TreeGridEditingSampleComponent } from "./tree-grid-editing-sample/tree-grid-editing-sample.component";
 
@@ -32,10 +33,10 @@ import { TreeGridEditingSampleComponent } from "./tree-grid-editing-sample/tree-
 	IgxDialogModule,
 	IgxInputGroupModule,
 	IgxCheckboxModule,
-	IgxDatePickerModule
+	IgxDatePickerModule,
+	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

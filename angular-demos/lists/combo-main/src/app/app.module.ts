@@ -21,7 +21,6 @@ import { ComboMainComponent } from "./combo-main/combo-main.component";
 	IgxComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

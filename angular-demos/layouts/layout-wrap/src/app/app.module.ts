@@ -21,7 +21,6 @@ import { LayoutWrapComponent } from "./layout/layout-wrap/layout-wrap.component"
 	IgxLayoutModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

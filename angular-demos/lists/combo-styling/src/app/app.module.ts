@@ -25,7 +25,6 @@ import { ComboStylingComponent } from "./lists/combo/combo-styling/combo-styling
 	IgxToastModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

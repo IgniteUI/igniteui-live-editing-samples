@@ -29,7 +29,6 @@ import { ExpansionPanelStylingComponent } from "./expansion-styling/expansion-st
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

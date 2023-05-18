@@ -24,7 +24,6 @@ import { FinancialDataService } from "./services/financial.service";
 	IgxGridModule
 ],
   providers: [FinancialDataService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

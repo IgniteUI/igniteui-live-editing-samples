@@ -29,7 +29,6 @@ import { LayoutContentSpaceComponent } from "./layout/layout-content-space/layou
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import {
 	IgxTooltipModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

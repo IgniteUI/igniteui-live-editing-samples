@@ -29,7 +29,6 @@ import { LayoutJustifyContentComponent } from "./layout/layout-justify-content/l
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

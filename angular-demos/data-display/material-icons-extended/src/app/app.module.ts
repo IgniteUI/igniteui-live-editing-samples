@@ -35,7 +35,6 @@ import {
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

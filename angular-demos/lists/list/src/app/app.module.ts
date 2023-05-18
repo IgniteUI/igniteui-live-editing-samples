@@ -32,7 +32,6 @@ import { ListComponent } from "./list/list.component";
 	IgxListModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

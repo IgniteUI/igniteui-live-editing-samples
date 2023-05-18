@@ -23,7 +23,6 @@ import { TreeGridValidationStyleComponent } from "./tree-grid-validation-style/t
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

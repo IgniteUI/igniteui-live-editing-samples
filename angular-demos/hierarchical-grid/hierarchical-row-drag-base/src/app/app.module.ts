@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { 
 	IgxHierarchicalGridModule,
 	IgxDragDropModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { HGridRowDragBaseComponent } from "./hierarchical-grid/hierarchical-grid-row-drag-base/hierarchical-row-drag-base.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -26,10 +27,10 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPreventDocumentScrollModule,
 	IgxHierarchicalGridModule,
 	IgxDragDropModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

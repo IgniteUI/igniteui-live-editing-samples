@@ -25,7 +25,6 @@ import { SimpleComboStylingComponent } from "./lists/combo/simple-combo-styling/
 	IgxSimpleComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

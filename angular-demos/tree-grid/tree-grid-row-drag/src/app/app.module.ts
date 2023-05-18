@@ -33,7 +33,6 @@ import { TreeGridRowDragComponent } from "./tree-grid-row-drag/tree-grid-row-dra
 	IgxDragDropModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

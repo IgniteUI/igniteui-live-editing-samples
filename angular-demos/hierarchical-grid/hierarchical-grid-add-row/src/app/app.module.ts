@@ -35,7 +35,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxActionStripModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

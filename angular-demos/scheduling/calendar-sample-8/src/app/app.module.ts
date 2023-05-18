@@ -25,7 +25,6 @@ import { CalendarSample8Component } from "./calendar-sample-8/calendar-sample-8.
 	IgxSnackbarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

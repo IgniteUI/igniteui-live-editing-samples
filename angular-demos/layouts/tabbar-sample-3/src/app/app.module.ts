@@ -36,7 +36,6 @@ import { TabbarView3Component } from "./views/view3/view3.component";
                     ])
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

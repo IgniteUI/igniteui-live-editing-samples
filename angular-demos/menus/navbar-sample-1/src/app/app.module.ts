@@ -27,7 +27,6 @@ import { NavbarSample1Component } from "./navbar-sample-1/navbar-sample-1.compon
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

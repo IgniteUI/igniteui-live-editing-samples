@@ -25,7 +25,6 @@ import { ChipSimpleComponent } from "./chip/chip-simple/chip-simple.component";
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

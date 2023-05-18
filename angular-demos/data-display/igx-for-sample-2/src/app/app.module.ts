@@ -33,7 +33,6 @@ import { IgxForHorizontalComponent } from "./igxFor/igxFor-horizontal-sample/igx
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

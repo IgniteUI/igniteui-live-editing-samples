@@ -31,7 +31,6 @@ import { DropdownTreeGridHierarchicalSelectionComponent } from "./dropdown-tree-
 	IgxChipsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -20,7 +20,6 @@ import { CsvExportComponent } from "./services/export-csv/csv-export.component";
 	FormsModule
 ],
   providers: [IgxCsvExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

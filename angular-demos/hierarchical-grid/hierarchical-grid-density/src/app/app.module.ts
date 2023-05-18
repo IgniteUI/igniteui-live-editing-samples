@@ -3,7 +3,10 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxHierarchicalGridModule } from "igniteui-angular";
+import { 
+	IgxHierarchicalGridModule,
+	IgxButtonGroupModule
+ } from "igniteui-angular";
 import { HGridDisplayDensitySampleComponent } from "./hierarchical-grid/hierarchical-grid-display-density/hierarchical-grid-density.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -20,10 +23,10 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxHierarchicalGridModule
+	IgxHierarchicalGridModule,
+	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

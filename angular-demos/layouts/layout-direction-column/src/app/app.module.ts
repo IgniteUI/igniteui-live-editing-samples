@@ -29,7 +29,6 @@ import { LayoutDirectionColumnComponent } from "./layout/layout-direction-column
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

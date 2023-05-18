@@ -27,7 +27,6 @@ import { BadgeStylingSampleComponent } from "./badge-styling-sample/badge-stylin
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

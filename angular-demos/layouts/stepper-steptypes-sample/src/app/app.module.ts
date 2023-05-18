@@ -25,7 +25,6 @@ import {
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -29,7 +29,6 @@ import { ToastSample3Component } from "./toast-sample-3/toast-sample-3.component
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

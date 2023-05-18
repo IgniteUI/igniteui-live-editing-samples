@@ -27,7 +27,6 @@ import { TreeGridMultiColumnHeadersStylingComponent } from "./tree-grid-multi-co
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

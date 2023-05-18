@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxCalendarModule,
-	IgxPrefixModule,
 	IgxSelectModule
  } from "igniteui-angular";
 import { CalendarSample2Component } from "./calendar-sample-2/calendar-sample-2.component";
@@ -23,11 +22,9 @@ import { CalendarSample2Component } from "./calendar-sample-2/calendar-sample-2.
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxCalendarModule,
-	IgxPrefixModule,
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

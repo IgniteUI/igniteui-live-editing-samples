@@ -28,7 +28,6 @@ import { TreeGridSummaryExportComponent } from "./tree-grid-summary-export/tree-
 	IgxIconModule
 ],
   providers: [IgxExcelExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -9,7 +9,8 @@ import {
 	IgxCheckboxModule,
 	IgxDatePickerModule,
 	IgxGridModule,
-	IgxDialogModule
+	IgxDialogModule,
+	IgxInputGroupModule
  } from "igniteui-angular";
 import { HGridBatchEditingSampleComponent } from "./hierarchical-grid/hierarchical-grid-batch-editing/hierarchical-grid-batch-editing.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -32,10 +33,10 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxCheckboxModule,
 	IgxDatePickerModule,
 	IgxGridModule,
-	IgxDialogModule
+	IgxDialogModule,
+	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

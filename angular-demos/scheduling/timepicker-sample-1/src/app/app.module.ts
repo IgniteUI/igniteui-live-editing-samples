@@ -21,7 +21,6 @@ import { TimePickerSample1Component } from "./timepicker-sample-1/timepicker-sam
 	IgxTimePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

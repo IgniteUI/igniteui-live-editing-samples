@@ -29,7 +29,6 @@ import { DropDownVirtualComponent } from "./drop-down-virtual/drop-down-virtual.
 	IgxForOfModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

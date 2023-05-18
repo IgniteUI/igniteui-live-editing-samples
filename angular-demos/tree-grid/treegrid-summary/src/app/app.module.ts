@@ -27,7 +27,6 @@ import { TreeGridSummarySampleComponent } from "./tree-grid-summary-sample/tree-
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

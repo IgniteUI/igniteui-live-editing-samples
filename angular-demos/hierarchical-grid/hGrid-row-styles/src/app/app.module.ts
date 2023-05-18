@@ -23,7 +23,6 @@ import { HGridRowStylesSampleComponent } from "./hierarchical-grid/hgrid-rowStyl
 	IgxHierarchicalGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

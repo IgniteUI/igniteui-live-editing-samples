@@ -28,10 +28,11 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxSnackbarModule
+	IgxSnackbarModule,
+	IgxIconModule,
+	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

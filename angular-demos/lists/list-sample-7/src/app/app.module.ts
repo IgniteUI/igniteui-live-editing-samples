@@ -35,7 +35,6 @@ import { ListSample7Component } from "./list-sample-7/list-sample-7.component";
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

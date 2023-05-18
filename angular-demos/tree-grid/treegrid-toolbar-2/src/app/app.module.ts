@@ -32,7 +32,6 @@ import { TreeGridToolbarSample2Component } from "./tree-grid-toolbar-sample-2/tr
 	IgxExcelExporterService,
 	IgxCsvExporterService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

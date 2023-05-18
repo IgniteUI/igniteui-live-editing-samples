@@ -27,7 +27,6 @@ import { ChipAreaSampleComponent } from "./chip/chip-area-sample/chip-area-sampl
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

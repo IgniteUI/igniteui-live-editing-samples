@@ -27,7 +27,6 @@ import { TooltipRichComponent } from "./tooltip-rich/tooltip-rich.component";
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

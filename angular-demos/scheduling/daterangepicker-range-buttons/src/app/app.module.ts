@@ -21,7 +21,6 @@ import { DateRangePickerRangeButtonsComponent } from "./daterangepicker-range-bu
 	IgxDateRangePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

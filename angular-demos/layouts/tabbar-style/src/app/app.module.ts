@@ -25,7 +25,6 @@ import { TabbarStyleComponent } from "./tabbar-style/tabbar-style.component";
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

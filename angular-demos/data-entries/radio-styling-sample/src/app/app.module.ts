@@ -21,7 +21,6 @@ import { RadioStylingSampleComponent } from "./radio-styling-sample/radio-stylin
 	IgxRadioModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -31,7 +31,6 @@ import { TextHighlightSample1Component } from "./text-highlight-sample-1/text-hi
 	IgxTextHighlightModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

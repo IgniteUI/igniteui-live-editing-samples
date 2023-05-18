@@ -27,7 +27,6 @@ import { ButtonsRoundnessComponent } from "./buttons-roundness-sample/buttons-ro
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

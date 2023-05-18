@@ -27,7 +27,6 @@ import { ButtonsDisabledComponent } from "./buttons-disabled-sample/buttons-disa
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

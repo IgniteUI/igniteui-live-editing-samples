@@ -27,7 +27,6 @@ import { TreeGridExcelStyleFilteringSample2Component } from "./tree-grid-excel-s
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

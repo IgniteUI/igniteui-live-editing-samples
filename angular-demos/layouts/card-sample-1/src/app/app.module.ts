@@ -29,7 +29,6 @@ import { CardSample1Component } from "./card-sample-1/card-sample-1.component";
 	IgxDividerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

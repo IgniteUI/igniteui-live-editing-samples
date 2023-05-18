@@ -55,7 +55,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 	ReactiveFormsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

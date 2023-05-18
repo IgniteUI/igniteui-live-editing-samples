@@ -31,7 +31,6 @@ import { TabsAlignmentComponent } from "./tabs-alignment/tabs-alignment.componen
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

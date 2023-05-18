@@ -31,7 +31,6 @@ import { ListItemSelectionComponent } from "./list-item-selection/list-item-sele
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

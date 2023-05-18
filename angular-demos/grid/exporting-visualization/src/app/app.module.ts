@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { GridExportVisualizationComponent } from "./grid/grid-export-visualization/grid-export-visualization.component";
 import { 
 	IgxGridModule,
+	IgxButtonModule,
 	IgxExcelExporterService,
 	IgxCsvExporterService
  } from "igniteui-angular";
@@ -24,13 +25,13 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxButtonModule
 ],
   providers: [
 	IgxExcelExporterService,
 	IgxCsvExporterService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

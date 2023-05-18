@@ -25,7 +25,6 @@ import { ExpansionPanelSample1Component } from "./expansion-sample-1/expansion-s
 	IgxExpansionPanelModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

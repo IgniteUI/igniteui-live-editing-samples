@@ -31,7 +31,6 @@ import { EmailSampleComponent } from "./drag-drop/email-sample/email-sample.comp
 	IgxListModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

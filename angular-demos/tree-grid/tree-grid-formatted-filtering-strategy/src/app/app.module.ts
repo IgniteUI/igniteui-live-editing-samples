@@ -23,7 +23,6 @@ import { TreeGridFormattedFilteringStrategyComponent } from "./tree-grid-formatt
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

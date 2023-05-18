@@ -27,7 +27,6 @@ import { MaskSample5Component } from "./mask-sample-5/mask-sample-5.component";
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

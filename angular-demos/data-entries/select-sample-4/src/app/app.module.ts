@@ -25,7 +25,6 @@ import { SelectSample4Component } from "./select-sample-4/select-sample-4.compon
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

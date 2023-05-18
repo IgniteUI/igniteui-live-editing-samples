@@ -35,7 +35,6 @@ import { IgxForComponent } from "./igxFor/igxFor.component";
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

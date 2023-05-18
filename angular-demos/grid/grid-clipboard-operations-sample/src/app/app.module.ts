@@ -6,7 +6,9 @@ import { AppComponent } from "./app.component";
 import { GridClipboardSampleComponent } from "./grid/grid-clipboard-operations-sample/grid-clipboard-operations-sample.component";
 import { 
 	IgxGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxInputGroupModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -24,10 +26,11 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxInputGroupModule,
+	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

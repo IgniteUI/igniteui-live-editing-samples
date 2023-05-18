@@ -27,7 +27,6 @@ import { DatepickerDropdownComponent } from "./scheduling/datepicker/datepicker-
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

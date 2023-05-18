@@ -21,7 +21,6 @@ import { RadioSample2Component } from "./radio-sample-2/radio-sample-2.component
 	IgxRadioModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

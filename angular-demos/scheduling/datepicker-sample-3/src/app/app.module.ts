@@ -21,7 +21,6 @@ import { DatepickerSample3Component } from "./datepicker-sample-3/datepicker-sam
 	IgxDatePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

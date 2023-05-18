@@ -3,7 +3,10 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxPivotGridModule } from "igniteui-angular";
+import { 
+	IgxPivotGridModule,
+	IgxIconModule
+ } from "igniteui-angular";
 import { PivotGridNoopPersistenceSampleComponent } from "./pivot-grid/pivot-grid-noop-persistence/pivot-grid-noop-persistence-sample.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { PivotDataService } from "./services/pivotRemoteData.service";
@@ -21,10 +24,10 @@ import { PivotDataService } from "./services/pivotRemoteData.service";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxPivotGridModule
+	IgxPivotGridModule,
+	IgxIconModule
 ],
   providers: [PivotDataService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

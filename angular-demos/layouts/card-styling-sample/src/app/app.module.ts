@@ -29,7 +29,6 @@ import { CardStylingSampleComponent } from "./card-styling-sample/card-styling-s
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

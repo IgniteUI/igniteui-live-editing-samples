@@ -27,7 +27,6 @@ import { MaskSample3Component } from "./mask-sample-3/mask-sample-3.component";
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

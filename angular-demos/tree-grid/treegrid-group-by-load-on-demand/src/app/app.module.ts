@@ -23,7 +23,6 @@ import { TreeGridGroupByLoadOnDemandComponent } from "./tree-grid/tree-grid-grou
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

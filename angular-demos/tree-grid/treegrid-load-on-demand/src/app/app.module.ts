@@ -23,7 +23,6 @@ import { TreeGridLoadOnDemandSampleComponent } from "./tree-grid/tree-grid-load-
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

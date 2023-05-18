@@ -11,7 +11,8 @@ import {
 	IgxIconModule,
 	IgxButtonGroupModule,
 	IgxAvatarModule,
-	IgxTreeGridModule
+	IgxTreeGridModule,
+	IgxSnackbarModule
  } from "igniteui-angular";
 
 
@@ -32,10 +33,10 @@ import {
 	IgxSwitchModule,
 	IgxButtonGroupModule,
 	IgxAvatarModule,
-	IgxTreeGridModule
+	IgxTreeGridModule,
+	IgxSnackbarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

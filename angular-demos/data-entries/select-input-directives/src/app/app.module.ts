@@ -27,7 +27,6 @@ import { SelectInputDirectivesComponent } from "./data-entries/select/select-inp
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

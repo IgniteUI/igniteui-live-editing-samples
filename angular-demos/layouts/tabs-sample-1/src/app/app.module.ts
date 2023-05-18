@@ -25,7 +25,6 @@ import { TabsSample1Component } from "./tabs-sample-1/tabs-sample-1.component";
 	IgxTabsModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

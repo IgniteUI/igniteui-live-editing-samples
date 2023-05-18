@@ -35,7 +35,6 @@ import { BannerAdvancedSampleComponent } from "./banner-advanced-sample/banner-a
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

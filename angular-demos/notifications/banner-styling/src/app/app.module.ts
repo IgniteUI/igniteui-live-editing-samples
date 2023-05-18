@@ -39,7 +39,6 @@ import { BannerStylingComponent } from "./banner-styling/banner-styling.componen
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -21,7 +21,6 @@ import { ComboOverlayComponent } from "./lists/combo/combo-overlay/combo-overlay
 	IgxComboModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

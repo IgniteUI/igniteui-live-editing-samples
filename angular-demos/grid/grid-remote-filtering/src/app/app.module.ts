@@ -32,7 +32,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxToastModule
 ],
   providers: [RemoteFilteringService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

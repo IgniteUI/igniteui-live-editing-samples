@@ -27,7 +27,6 @@ import { TreeGridExternalOutletComponent } from "./tree-grid-external-outlet/tre
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

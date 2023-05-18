@@ -27,7 +27,6 @@ import { IconsSampleComponent } from "./drag-drop/icons-sample/icons-sample.comp
 	IgxDialogModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

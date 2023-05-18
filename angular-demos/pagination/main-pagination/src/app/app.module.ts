@@ -33,7 +33,6 @@ import { PaginationSampleComponent } from "./pagination/paginator/pagination-sam
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

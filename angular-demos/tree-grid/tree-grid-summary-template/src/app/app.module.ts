@@ -31,7 +31,6 @@ import { TreeGridSummaryTemplateComponent } from "./tree-grid/treegrid-summary-t
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

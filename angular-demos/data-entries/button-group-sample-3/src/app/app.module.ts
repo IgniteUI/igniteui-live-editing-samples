@@ -21,7 +21,6 @@ import { ButtonGroupSample3Component } from "./button-group-sample-3/button-grou
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -27,7 +27,6 @@ import { InputTextSelectionComponent } from "./input-group/input-text-selection/
 	IgxFocusModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

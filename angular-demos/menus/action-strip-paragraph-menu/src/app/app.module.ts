@@ -29,7 +29,6 @@ import { ActionStripParagraphMenuComponent } from "./action-strip-paragraph-menu
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

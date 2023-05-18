@@ -27,7 +27,6 @@ import {
 	IgxListModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

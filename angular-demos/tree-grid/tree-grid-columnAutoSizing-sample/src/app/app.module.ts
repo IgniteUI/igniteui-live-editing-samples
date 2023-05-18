@@ -23,7 +23,6 @@ import { TreeGridColumnAutoSizingSampleComponent } from "./treegrid-column-autos
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

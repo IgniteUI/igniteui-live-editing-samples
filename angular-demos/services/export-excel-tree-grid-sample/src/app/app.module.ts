@@ -9,6 +9,7 @@ import {
 	IgxButtonModule
  } from "igniteui-angular";
 import { TreeGridExcelExportSample1Component } from "./services/export-excel/excel-export-tree-grid-sample/excel-export-tree-grid-sample.component";
+import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
 
 
@@ -23,10 +24,10 @@ import { TreeGridExcelExportSample1Component } from "./services/export-excel/exc
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxTreeGridModule,
-	IgxButtonModule
+	IgxButtonModule,
+	IgxPreventDocumentScrollModule
 ],
   providers: [IgxExcelExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

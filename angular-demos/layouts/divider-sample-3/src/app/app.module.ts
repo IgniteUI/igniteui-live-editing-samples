@@ -21,7 +21,6 @@ import { DividerDashedComponent } from "./dashed/divider-dashed.component";
 	IgxDividerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

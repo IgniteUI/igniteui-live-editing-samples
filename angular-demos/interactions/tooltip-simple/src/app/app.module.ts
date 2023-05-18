@@ -25,7 +25,6 @@ import { TooltipSimpleComponent } from "./tooltip-simple/tooltip-simple.componen
 	IgxTooltipModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

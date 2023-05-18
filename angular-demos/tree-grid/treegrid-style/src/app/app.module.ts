@@ -27,7 +27,6 @@ import { TreeGridStyleComponent } from "./tree-grid-style/tree-grid-style.compon
 	IgxAvatarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

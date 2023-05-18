@@ -21,7 +21,6 @@ import { CircularStylingSampleComponent } from "./circular-styling-sample/circul
 	IgxProgressBarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

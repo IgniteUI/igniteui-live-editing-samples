@@ -29,7 +29,6 @@ import { TreeGridValidatorServiceComponent } from "./tree-grid/tree-grid-validat
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

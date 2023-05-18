@@ -27,7 +27,6 @@ import { TreeGridValidatorServiceExtendedComponent } from "./tree-grid/tree-grid
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

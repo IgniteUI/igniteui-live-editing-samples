@@ -23,7 +23,6 @@ import { TreeGridMultiColumnHeaderTemplateSampleComponent } from "./tree-grid-mu
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

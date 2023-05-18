@@ -37,7 +37,6 @@ import { TreeGridAddRowSampleComponent } from "./tree-grid-add-row-sample/tree-g
 	IgxActionStripModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

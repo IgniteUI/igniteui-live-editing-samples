@@ -31,7 +31,6 @@ import { ActionStripParagraphComponent } from "./action-strip-paragraph/action-s
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

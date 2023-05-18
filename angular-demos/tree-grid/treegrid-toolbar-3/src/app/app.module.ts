@@ -33,7 +33,6 @@ import { TreeGridToolbarSample3Component } from "./tree-grid-toolbar-sample-3/tr
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -41,7 +41,6 @@ import { RouterModule } from "@angular/router";
                     ])
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

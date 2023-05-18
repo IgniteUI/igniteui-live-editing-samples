@@ -21,7 +21,6 @@ import { QueryBuilderSample1Component } from "./query-builder-sample-1/query-bui
 	IgxQueryBuilderModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

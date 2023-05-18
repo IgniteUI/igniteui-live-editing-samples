@@ -27,7 +27,6 @@ import { DropDownSample2Component } from "./dropdown-sample-2/dropdown-sample-2.
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

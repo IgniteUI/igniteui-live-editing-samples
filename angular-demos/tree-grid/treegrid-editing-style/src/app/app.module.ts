@@ -23,7 +23,6 @@ import { TreeGridEditingStyleComponent } from "./tree-grid-editing-style/tree-gr
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

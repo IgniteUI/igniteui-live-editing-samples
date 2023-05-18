@@ -21,7 +21,6 @@ import { CalendarStylingSampleComponent } from "./calendar-styling-sample/calend
 	IgxCalendarModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

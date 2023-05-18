@@ -33,7 +33,6 @@ import { TabsStyleComponent } from "./tabs-style/tabs-style.component";
 	IgxRippleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

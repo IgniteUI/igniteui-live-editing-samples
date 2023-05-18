@@ -5,7 +5,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxHierarchicalGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule,
+	IgxButtonModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { HGridEditingLifecycleComponent } from "./hierarchical-grid/hgrid-editing-lifecycle-sample/hgrid-editing-lifecycle.component";
@@ -24,10 +26,11 @@ import { HGridEditingLifecycleComponent } from "./hierarchical-grid/hgrid-editin
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxHierarchicalGridModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxIconModule,
+	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -34,7 +34,6 @@ import { DragDialogSampleComponent } from "./drag-drop/dialog-sample/drag-dialog
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -41,7 +41,6 @@ import { ReactiveFormsModule } from "@angular/forms";
 	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -41,7 +41,6 @@ import {
 	IgxBadgeModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -23,7 +23,6 @@ import { TreeGridColumnResizingSampleComponent } from "./tree-grid-column-resizi
 	IgxTreeGridModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

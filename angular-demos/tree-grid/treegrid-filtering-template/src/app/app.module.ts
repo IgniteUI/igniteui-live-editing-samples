@@ -29,7 +29,6 @@ import { TreeGridFilteringTemplateSampleComponent } from "./tree-grid-filtering-
 	IgxDatePickerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

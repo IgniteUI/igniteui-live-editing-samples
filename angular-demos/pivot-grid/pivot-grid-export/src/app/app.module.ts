@@ -26,7 +26,6 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPivotGridModule
 ],
   providers: [IgxExcelExporterService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

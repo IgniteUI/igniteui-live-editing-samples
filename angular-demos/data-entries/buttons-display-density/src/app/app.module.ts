@@ -29,7 +29,6 @@ import { ButtonsDisplayDensityComponent } from "./buttons-display-density/button
 	IgxButtonGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -25,7 +25,6 @@ import { MonthpickerSample1Component } from "./monthpicker-sample-1/monthpicker-
 	IgxCardModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

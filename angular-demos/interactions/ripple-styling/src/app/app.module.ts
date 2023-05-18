@@ -29,7 +29,6 @@ import { RippleStylingSampleComponent } from "./ripple-stying/ripple-styling-sam
 	IgxButtonModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

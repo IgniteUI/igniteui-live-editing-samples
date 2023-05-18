@@ -31,7 +31,6 @@ import { PipeWithoutTownFrom } from "./daterangepicker-flight-booking/daterangep
 	IgxIconModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

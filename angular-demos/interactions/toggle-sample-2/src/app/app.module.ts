@@ -25,7 +25,6 @@ import { ToggleSample2Component } from "./toggle-sample-2/toggle-sample-2.compon
 	IgxToggleModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

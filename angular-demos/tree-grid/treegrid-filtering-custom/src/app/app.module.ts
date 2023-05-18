@@ -27,7 +27,6 @@ import { TreeGridFilteringCustomSampleComponent } from "./tree-grid-filtering-cu
 	IgxInputGroupModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

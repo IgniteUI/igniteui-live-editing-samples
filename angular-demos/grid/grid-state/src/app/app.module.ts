@@ -7,6 +7,8 @@ import { GridSaveStateComponent } from "./grid/grid-save-state/grid-state.compon
 import { 
 	IgxGridModule,
 	IgxTooltipModule,
+	IgxCheckboxModule,
+	IgxIconModule,
 	IgxToastModule,
 	IgxSwitchModule
  } from "igniteui-angular";
@@ -33,12 +35,13 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
 	IgxTooltipModule,
+	IgxCheckboxModule,
+	IgxIconModule,
 	RouterModule.forRoot([{component: AboutComponent, path: 'grid-about'},{component: GridSaveStateComponent, path: 'grid-state'},{ path: '', redirectTo: '/grid-state', pathMatch: 'full' }]),
 	IgxToastModule,
 	IgxSwitchModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

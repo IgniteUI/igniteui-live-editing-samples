@@ -23,7 +23,6 @@ import { HammerModule } from "@angular/platform-browser";
 	HammerModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

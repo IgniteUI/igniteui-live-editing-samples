@@ -9,7 +9,8 @@ import {
 	IgxButtonModule,
 	IgxRippleModule,
 	IgxIconModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxSelectModule
  } from "igniteui-angular";
 import { TreeGridPagerSampleComponent } from "./tree-grid-pager-sample/tree-grid-pager-sample.component";
 
@@ -30,10 +31,10 @@ import { TreeGridPagerSampleComponent } from "./tree-grid-pager-sample/tree-grid
 	IgxButtonModule,
 	IgxRippleModule,
 	IgxIconModule,
-	IgxSwitchModule
+	IgxSwitchModule,
+	IgxSelectModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

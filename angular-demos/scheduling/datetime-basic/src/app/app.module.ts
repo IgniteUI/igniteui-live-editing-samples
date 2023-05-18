@@ -27,7 +27,6 @@ import { DateTimeBasicComponent } from "./datetime-basic/datetime-basic.componen
 	IgxTextSelectionModule
 ],
   providers: [],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}
