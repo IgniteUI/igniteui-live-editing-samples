@@ -48,7 +48,6 @@ import { SignalRService } from "./services/signal-r.service";
 	IgxExcelExporterService,
 	SignalRService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

@@ -30,7 +30,6 @@ import { RemoteValuesService } from "./services/remoteValues.service";
 	IgxSparklineModule
 ],
   providers: [RemoteValuesService],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}

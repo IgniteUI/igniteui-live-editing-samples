@@ -60,7 +60,6 @@ import { SignalRService } from "./services/signal-r.service";
 	IgxCsvExporterService,
 	SignalRService
 ],
-  entryComponents: [],
   schemas: []
 })
 export class AppModule {}
