@@ -6,7 +6,9 @@ import { AppComponent } from "./app.component";
 import { GridColumnDataTypesSampleComponent } from "./grid/grid-column-data-types-sample/grid-column-data-types-sample.component";
 import { 
 	IgxGridModule,
-	IgxTooltipModule
+	IgxTooltipModule,
+	IgxInputGroupModule,
+	IgxSelectModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -24,7 +26,9 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxTooltipModule
+	IgxTooltipModule,
+	IgxInputGroupModule,
+	IgxSelectModule
 ],
   providers: [],
   schemas: []

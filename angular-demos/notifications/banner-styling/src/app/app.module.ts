@@ -10,9 +10,7 @@ import {
 	IgxNavbarModule,
 	IgxButtonModule,
 	IgxRippleModule,
-	IgxIconModule,
-	IgxButtonModule,
-	IgxRippleModule
+	IgxIconModule
  } from "igniteui-angular";
 import { BannerStylingComponent } from "./banner-styling/banner-styling.component";
 

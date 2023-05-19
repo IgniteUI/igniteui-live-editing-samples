@@ -7,7 +7,8 @@ import {
 	IgxAvatarModule,
 	IgxButtonModule,
 	IgxCardModule,
-	IgxRippleModule
+	IgxRippleModule,
+	IgxLayoutModule
  } from "igniteui-angular";
 import { CardSample3Component } from "./card-sample-3/card-sample-3.component";
 
@@ -26,7 +27,8 @@ import { CardSample3Component } from "./card-sample-3/card-sample-3.component";
 	IgxAvatarModule,
 	IgxButtonModule,
 	IgxCardModule,
-	IgxRippleModule
+	IgxRippleModule,
+	IgxLayoutModule
 ],
   providers: [],
   schemas: []
