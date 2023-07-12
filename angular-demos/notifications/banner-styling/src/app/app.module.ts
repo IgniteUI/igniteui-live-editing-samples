@@ -32,9 +32,7 @@ import { BannerStylingComponent } from "./banner-styling/banner-styling.componen
 	IgxNavbarModule,
 	IgxButtonModule,
 	IgxRippleModule,
-	IgxIconModule,
-	IgxButtonModule,
-	IgxRippleModule
+	IgxIconModule
 ],
   providers: [],
   schemas: []
