@@ -8,7 +8,8 @@ import {
 	IgxGridModule,
 	IgxSwitchModule,
 	IgxInputGroupModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxButtonModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -28,7 +29,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxGridModule,
 	IgxSwitchModule,
 	IgxInputGroupModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxButtonModule
 ],
   providers: [],
   schemas: []
