@@ -6,7 +6,9 @@ import { AppComponent } from "./app.component";
 import { 
 	IgxDateRangePickerModule,
 	IgxInputGroupModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxDatePickerModule,
+	IgxDateTimeEditorModule
  } from "igniteui-angular";
 import { StyledDateRangePickerComponent } from "./daterangepicker-styling/daterangepicker-styling";
 
@@ -23,6 +25,8 @@ import { StyledDateRangePickerComponent } from "./daterangepicker-styling/datera
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDateRangePickerModule,
+	IgxDatePickerModule,
+	IgxDateTimeEditorModule,
 	IgxInputGroupModule,
 	IgxIconModule
 ],

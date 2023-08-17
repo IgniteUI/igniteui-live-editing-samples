@@ -8,7 +8,8 @@ import {
 	IgxSliderModule,
 	IgxRadioModule,
 	IgxTimePickerModule,
-	IgxAccordionModule
+	IgxAccordionModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { AccordionSample3Component } from "./accordion-sample-3/accordion-sample-3.component";
 
@@ -28,7 +29,8 @@ import { AccordionSample3Component } from "./accordion-sample-3/accordion-sample
 	IgxSliderModule,
 	IgxRadioModule,
 	IgxTimePickerModule,
-	IgxAccordionModule
+	IgxAccordionModule,
+	IgxIconModule
 ],
   providers: [],
   schemas: []

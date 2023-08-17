@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxDateRangePickerModule,
+	IgxDatePickerModule,
+	IgxDateTimeEditorModule,
 	IgxInputGroupModule,
 	IgxIconModule
  } from "igniteui-angular";
@@ -23,6 +25,8 @@ import { DateRangePickerStartEndComponent } from "./daterangepicker-start-end/da
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDateRangePickerModule,
+	IgxDatePickerModule,
+	IgxDateTimeEditorModule,
 	IgxInputGroupModule,
 	IgxIconModule
 ],

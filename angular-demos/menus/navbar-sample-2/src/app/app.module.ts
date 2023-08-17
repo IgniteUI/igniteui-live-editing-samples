@@ -16,15 +16,15 @@ import { NavbarSample2Component } from "./navbar-sample-2/navbar-sample-2.compon
   bootstrap: [AppComponent],
   declarations: [
 	AppComponent,
-	NavbarSample2Component,
-	IgxButtonModule
+	NavbarSample2Component
 ],
   imports: [
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxIconModule,
-	IgxNavbarModule
+	IgxNavbarModule,
+	IgxButtonModule
 ],
   providers: [],
   schemas: []

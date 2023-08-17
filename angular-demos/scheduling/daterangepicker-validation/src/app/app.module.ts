@@ -5,8 +5,10 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxDateRangePickerModule,
+	IgxDatePickerModule,
 	IgxInputGroupModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxDateTimeEditorModule
  } from "igniteui-angular";
 import { DateRangePickerValidationComponent } from "./daterangepicker-validation/daterangepicker-validation";
 
@@ -23,8 +25,10 @@ import { DateRangePickerValidationComponent } from "./daterangepicker-validation
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxDateRangePickerModule,
+	IgxDatePickerModule,
 	IgxInputGroupModule,
-	IgxIconModule
+	IgxIconModule,
+	IgxDateTimeEditorModule
 ],
   providers: [],
   schemas: []
