@@ -8,7 +8,8 @@ import {
 	IgxButtonModule,
 	IgxToggleModule,
 	IgxTreeGridModule,
-	IgxChipsModule
+	IgxChipsModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { DropdownTreeGridHierarchicalSelectionComponent } from "./dropdown-tree-grid-hierarchical-selection/dropdown-tree-grid-hierarchical-selection.component";
 
@@ -28,7 +29,8 @@ import { DropdownTreeGridHierarchicalSelectionComponent } from "./dropdown-tree-
 	IgxButtonModule,
 	IgxToggleModule,
 	IgxTreeGridModule,
-	IgxChipsModule
+	IgxChipsModule,
+	IgxIconModule
 ],
   providers: [],
   schemas: []
