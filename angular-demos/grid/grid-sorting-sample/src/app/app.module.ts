@@ -9,7 +9,8 @@ import {
 	IgxRippleModule,
 	IgxInputGroupModule,
 	IgxSelectModule,
-	IgxSimpleComboModule
+	IgxSimpleComboModule,
+	IgxButtonModule
  } from "igniteui-angular";
 import { SortingSampleComponent } from "./grid/grid-sorting-sample/grid-sorting-sample.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
@@ -32,7 +33,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxIconModule,
 	IgxInputGroupModule,
 	IgxSelectModule,
-	IgxSimpleComboModule
+	IgxSimpleComboModule,
+	IgxButtonModule
 ],
   providers: [],
   schemas: []
