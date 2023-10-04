@@ -10,8 +10,8 @@
     "@angular/router": "^16.1.8",
     "@types/hammerjs": "^2.0.39",
     "hammerjs": "^2.0.8",
-    "igniteui-angular": "16.1.0-beta.10",
-    "igniteui-angular-i18n": "^16.1.0-beta.10",
+    "igniteui-angular": "16.1.0",
+    "igniteui-angular-i18n": "^16.1.0",
     "rxjs": "^6.6.7",
     "tslib": "^2.6.1",
     "zone.js": "~0.13.1"
