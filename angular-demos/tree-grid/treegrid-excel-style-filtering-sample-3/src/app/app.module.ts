@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { 
 	IgxTreeGridModule,
-	IgxInputGroupModule
+	IgxInputGroupModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { TreeGridExcelStyleFilteringSample3Component } from "./tree-grid-excel-style-filtering-sample-3/tree-grid-excel-style-filtering-sample-3.component";
 
@@ -24,7 +25,8 @@ import { TreeGridExcelStyleFilteringSample3Component } from "./tree-grid-excel-s
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxInputGroupModule
+	IgxInputGroupModule,
+	IgxIconModule
 ],
   providers: [],
   schemas: []
