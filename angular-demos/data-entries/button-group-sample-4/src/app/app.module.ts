@@ -7,7 +7,8 @@ import {
 	IgxButtonGroupModule,
 	IgxIconModule,
 	IgxButtonModule,
-	IgxRippleModule
+	IgxRippleModule,
+	IgxRadioModule
  } from "igniteui-angular";
 import { ButtonGroupSampleComponent } from "./button-group-sample-4/button-group-sample.component";
 
@@ -26,7 +27,8 @@ import { ButtonGroupSampleComponent } from "./button-group-sample-4/button-group
 	IgxButtonGroupModule,
 	IgxIconModule,
 	IgxButtonModule,
-	IgxRippleModule
+	IgxRippleModule,
+	IgxRadioModule
 ],
   providers: [],
   schemas: []

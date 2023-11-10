@@ -9,6 +9,7 @@ import {
 	IgxTooltipModule,
 	IgxCheckboxModule,
 	IgxIconModule,
+	IgxButtonModule,
 	IgxToastModule,
 	IgxSwitchModule
  } from "igniteui-angular";
@@ -37,6 +38,7 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	IgxTooltipModule,
 	IgxCheckboxModule,
 	IgxIconModule,
+	IgxButtonModule,
 	RouterModule.forRoot([{component: AboutComponent, path: 'grid-about'},{component: GridSaveStateComponent, path: 'grid-state'},{ path: '', redirectTo: '/grid-state', pathMatch: 'full' }]),
 	IgxToastModule,
 	IgxSwitchModule
