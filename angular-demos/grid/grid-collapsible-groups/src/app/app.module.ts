@@ -6,7 +6,8 @@ import { AppComponent } from "./app.component";
 import { GridCollapsibleColumnGroupsComponent } from "./grid/grid-collapsible-columnGroups/grid-collapsible-column-groups.component";
 import { 
 	IgxGridModule,
-	IgxTooltipModule
+	IgxTooltipModule,
+	IgxIconModule
  } from "igniteui-angular";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 
@@ -24,7 +25,8 @@ import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.dire
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
-	IgxTooltipModule
+	IgxTooltipModule,
+	IgxIconModule
 ],
   providers: [],
   schemas: []
