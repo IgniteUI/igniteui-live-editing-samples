@@ -3,7 +3,10 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
-import { IgxGridModule } from "igniteui-angular";
+import { 
+	IgxGridModule,
+	IgxBadgeModule
+ } from "igniteui-angular";
 import { GridRowStylesComponent } from "./grid/grid-rowStyles-sample/grid-rowStyles.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { FinancialDataService } from "./services/financial.service";
@@ -21,7 +24,8 @@ import { FinancialDataService } from "./services/financial.service";
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxGridModule
+	IgxGridModule,
+	IgxBadgeModule
 ],
   providers: [FinancialDataService],
   schemas: []
