@@ -6,11 +6,7 @@ import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
 import { 
 	IgxTreeGridModule,
-	IgxButtonModule,
-	IgxDialogModule,
-	IgxInputGroupModule,
-	IgxCheckboxModule,
-	IgxDatePickerModule,
+	IgxIconModule,
 	IgxActionStripModule
  } from "igniteui-angular";
 import { TreeGridAddRowSampleComponent } from "./tree-grid-add-row-sample/tree-grid-add-row-sample.component";
@@ -29,11 +25,7 @@ import { TreeGridAddRowSampleComponent } from "./tree-grid-add-row-sample/tree-g
 	FormsModule,
 	IgxPreventDocumentScrollModule,
 	IgxTreeGridModule,
-	IgxButtonModule,
-	IgxDialogModule,
-	IgxInputGroupModule,
-	IgxCheckboxModule,
-	IgxDatePickerModule,
+	IgxIconModule,
 	IgxActionStripModule
 ],
   providers: [],
