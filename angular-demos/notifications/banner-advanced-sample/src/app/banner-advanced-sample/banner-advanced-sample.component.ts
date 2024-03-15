@@ -15,7 +15,7 @@ export class BannerAdvancedSampleComponent implements OnInit, OnDestroy {
     public contentWidth = '384px';
     public imageUrls = ['https://staging.infragistics.com/angular-demos/assets/images/card/media/the_red_ice_forest.jpg',
         'https://staging.infragistics.com/angular-demos/assets/images/card/media/yosemite.jpg'];
-    public onNetworkStateChange = new Subject();
+    public onNetworkStateChange = new Subject<void>();
 
     private _wifiState = false;
     public get wifiState(): boolean {

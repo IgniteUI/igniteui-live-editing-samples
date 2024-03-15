@@ -4,7 +4,11 @@ import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { IgxPreventDocumentScrollModule } from "./directives/prevent-scroll.directive";
-import { IgxHierarchicalGridModule } from "igniteui-angular";
+import { 
+	IgxHierarchicalGridModule,
+	IgxIconModule,
+	IgxButtonModule
+ } from "igniteui-angular";
 import { HGridRowClassesSampleComponent } from "./hierarchical-grid/hgrid-rowClasses-sample/hgrid-rowClasses.component";
 
 
@@ -20,7 +24,9 @@ import { HGridRowClassesSampleComponent } from "./hierarchical-grid/hgrid-rowCla
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxPreventDocumentScrollModule,
-	IgxHierarchicalGridModule
+	IgxHierarchicalGridModule,
+	IgxIconModule,
+	IgxButtonModule
 ],
   providers: [],
   schemas: []
