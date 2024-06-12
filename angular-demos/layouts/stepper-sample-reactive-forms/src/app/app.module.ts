@@ -3,6 +3,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
+import { ReactiveFormsModule } from "@angular/forms";
 import { StepperSampleReactiveFormsComponent } from "./stepper-sample-reactive-forms/stepper-sample-reactive-forms.component";
 import { 
 	IgxStepperModule,
@@ -29,6 +30,7 @@ import {
 	BrowserModule,
 	BrowserAnimationsModule,
 	FormsModule,
+	ReactiveFormsModule,
 	IgxStepperModule,
 	IgxMaskModule,
 	IgxInputGroupModule,
