@@ -3,14 +3,14 @@
   "setupTasks": [
     {
       "name": "Install Dependencies",
-      "command": "yarn install"
+      "command": "yarn install --ignore-engines"
     }
   ],
     // These tasks can be run from CodeSandbox. Running one will open a log in the app.
     "tasks": {
         "node node_modules/@angular/cli/bin/ng serve -o --disable-host-check": {
             "name": "Start Project",
-            "command": "node node_modules/@angular/cli/bin/ng serve -o --disable-host-check",
+            "command": "node --max_old_space_size=12192 node_modules/@angular/cli/bin/ng serve -o --disable-host-check",
             "runAtStart": true
         }
     }
