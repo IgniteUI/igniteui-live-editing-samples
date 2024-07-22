@@ -8,6 +8,7 @@ import { IgxCategoryChartModule } from "igniteui-angular-charts";
 import { 
 	IgxGridModule,
 	IgxButtonGroupModule,
+	IgxFocusModule,
 	IgxIconModule,
 	IgxSliderModule,
 	IgxToggleModule,
@@ -25,6 +26,7 @@ import { ControllerComponent } from "./grid-finjs/controllers.component";
 import { GridFinJSComponent } from "./grid-finjs/grid-finjs.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SignalRService } from "./services/signal-r.service";
+import { RouterModule } from "@angular/router";
 
 
 
@@ -43,6 +45,7 @@ import { SignalRService } from "./services/signal-r.service";
 	IgxPreventDocumentScrollModule,
 	IgxGridModule,
 	IgxButtonGroupModule,
+	IgxFocusModule,
 	IgxIconModule,
 	IgxSliderModule,
 	IgxToggleModule,
@@ -52,7 +55,9 @@ import { SignalRService } from "./services/signal-r.service";
 	IgxCategoryChartModule,
 	IgxDialogModule,
 	IgxToastModule,
-	HttpClientModule
+	HttpClientModule,
+	RouterModule,
+	RouterModule.forRoot([])
 ],
   providers: [
 	FinancialDataService,
