@@ -5,7 +5,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { AppComponent } from "./app.component";
 import { 
 	IgxComboModule,
-	IgxSimpleComboModule
+	IgxSimpleComboModule,
+	IgxProgressBarModule
  } from "igniteui-angular";
 import { SimpleComboCascadingComponent } from "./lists/combo/simple-combo-cascading/simple-combo-cascading.component";
 
@@ -22,7 +23,8 @@ import { SimpleComboCascadingComponent } from "./lists/combo/simple-combo-cascad
 	BrowserAnimationsModule,
 	FormsModule,
 	IgxComboModule,
-	IgxSimpleComboModule
+	IgxSimpleComboModule,
+	IgxProgressBarModule
 ],
   providers: [],
   schemas: []
