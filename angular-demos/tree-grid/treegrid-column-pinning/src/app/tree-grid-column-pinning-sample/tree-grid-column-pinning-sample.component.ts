@@ -1,8 +1,8 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { ColumnType, IgxIconService, IgxTreeGridComponent, IgxCellHeaderTemplateDirective, IgxIconComponent, IgxColumnComponent } from 'igniteui-angular';
 import { generateEmployeeDetailedFlatData } from '../data/employees-flat-detailed';
-import { icons } from "../../services/svgIcons";
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { icons } from "../services/svgIcons";
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 const FILTERING_ICONS_FONT_SET = "filtering-icons";
 @Component({

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ORDERS_DATA } from '../data/orders';
 import { IgxTreeGridComponent, IgxGridToolbarComponent, IgxGridToolbarActionsComponent, IgxButtonDirective, IgxGridToolbarExporterComponent, IgxColumnComponent, IgxCellTemplateDirective } from 'igniteui-angular';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 import { CurrencyPipe } from '@angular/common';
 
 @Component({

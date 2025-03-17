@@ -2,7 +2,7 @@
 import { Component, ViewChild } from '@angular/core';
 
 import { CsvFileTypes, IgxCsvExporterOptions, IgxCsvExporterService, IgxGridComponent, IgxGridToolbarComponent, IgxGridToolbarActionsComponent, IgxGridToolbarExporterComponent } from 'igniteui-angular';
-import { IgxPreventDocumentScrollDirective } from '../../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-csv-export-sample-1',

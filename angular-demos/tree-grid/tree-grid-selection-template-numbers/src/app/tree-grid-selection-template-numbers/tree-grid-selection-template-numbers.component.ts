@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { generateEmployeeFlatData } from '../data/employees-flat';
 import { IgxTreeGridComponent, IgxPaginatorComponent, IgxColumnComponent, IgxHeadSelectorDirective, IgxRowSelectorDirective, IgxCheckboxComponent } from 'igniteui-angular';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-tree-grid-selection-template-numbers',

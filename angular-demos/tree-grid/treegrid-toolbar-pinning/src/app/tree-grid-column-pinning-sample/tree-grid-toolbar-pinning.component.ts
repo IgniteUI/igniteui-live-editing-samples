@@ -3,7 +3,7 @@ import { IgxTreeGridComponent, IgxGridToolbarComponent, IgxGridToolbarActionsCom
 import { generateEmployeeDetailedFlatData } from '../data/employees-flat-detailed';
 import { ActivatedRoute } from '@angular/router';
 import { NgClass } from '@angular/common';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 @Component({
     providers: [],

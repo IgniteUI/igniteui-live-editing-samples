@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IgxTreeGridComponent, IgxPaginatorComponent, IgxColumnComponent, IgxCellTemplateDirective, IgxIconComponent } from 'igniteui-angular';
 import { generateEmployeeFlatData } from '../data/employees-flat';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-tree-grid-editing-sample',

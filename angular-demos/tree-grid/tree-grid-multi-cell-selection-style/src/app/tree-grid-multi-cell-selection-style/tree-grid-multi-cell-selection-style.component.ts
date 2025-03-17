@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IgxColumnComponent, IgxTreeGridComponent } from 'igniteui-angular';
 import { ORDERS_DATA } from '../data/orders';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-tree-grid-multi-cell-selection-style-sample',

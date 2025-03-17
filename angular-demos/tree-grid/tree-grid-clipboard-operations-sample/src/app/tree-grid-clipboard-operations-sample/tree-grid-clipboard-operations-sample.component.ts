@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { EMPLOYEE_DATA } from './data';
 import { IgxInputGroupComponent, IgxLabelDirective, IgxInputDirective, IgxSuffixDirective, IgxIconComponent, IgxHintDirective, IgxTreeGridComponent, IgxGridToolbarComponent, IgxSwitchComponent, IgxButtonDirective, IgxRippleDirective, IgxColumnComponent } from 'igniteui-angular';
 import { FormsModule } from '@angular/forms';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-tree-grid-clipboard-operations-sample',

@@ -2,7 +2,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { IDropDroppedEventArgs, IgxTreeGridComponent, RowType, IgxDropDirective, IgxIconComponent, IgxPaginatorComponent, IgxColumnComponent } from 'igniteui-angular';
 import { FULL_EMPLOYEE_DATA } from '../data/employees';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 // eslint-disable-next-line no-shadow
 enum DragIcon {

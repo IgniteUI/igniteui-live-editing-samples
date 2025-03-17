@@ -3,7 +3,7 @@ import { IgxTreeGridComponent, NoopFilteringStrategy, IgxColumnComponent, IgxCel
 import { Observable, Subject } from 'rxjs';
 import { debounceTime, takeUntil } from 'rxjs/operators';
 import { RemoteFilteringService } from '../services/remoteFilteringService';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 import { AsyncPipe } from '@angular/common';
 
 const DEBOUNCE_TIME = 300;

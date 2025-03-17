@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/naming-convention */
 /* eslint-disable @typescript-eslint/quotes */
 import {
-    AfterViewInit,
     ChangeDetectorRef,
     Component,
     ElementRef,
+    Inject,
     QueryList,
     ViewChild,
     ViewChildren,
     ViewEncapsulation } from "@angular/core";
 import { IDropBaseEventArgs, IDropDroppedEventArgs, IgxDialogComponent, IgxGridComponent, IgxChipsAreaComponent, IgxChipComponent, IgxSuffixDirective, IgxIconButtonDirective, IgxIconComponent, IgxPrefixDirective, IgxInputGroupComponent, IgxInputDirective, IgxDropDirective, IgxButtonDirective } from "igniteui-angular";
-import { NgFor, NgIf, NgStyle, NgClass } from "@angular/common";
+import { NgStyle, NgClass, DOCUMENT } from "@angular/common";
 
 interface IColumnConfig {
     key: string;
@@ -42,7 +42,7 @@ enum DialogType {
     selector: "app-grid-multi-row-layout-configuration-sample",
     styleUrls: ["./grid-multi-row-layout-configuration.component.scss"],
     templateUrl: "./grid-multi-row-layout-configuration.component.html",
-    imports: [IgxChipsAreaComponent, NgFor, IgxChipComponent, IgxSuffixDirective, IgxIconButtonDirective, IgxIconComponent, IgxPrefixDirective, NgIf, IgxInputGroupComponent, IgxInputDirective, NgStyle, IgxDropDirective, NgClass, IgxButtonDirective, IgxDialogComponent]
+    imports: [IgxChipsAreaComponent, IgxChipComponent, IgxSuffixDirective, IgxIconButtonDirective, IgxIconComponent, IgxPrefixDirective, IgxInputGroupComponent, IgxInputDirective, NgStyle, IgxDropDirective, NgClass, IgxButtonDirective, IgxDialogComponent]
 })
 export class GridMultiRowLayoutConfigurationComponent {
 
@@ -119,7 +119,10 @@ export class GridMultiRowLayoutConfigurationComponent {
     private resizeInitialWidth = 0;
     private resizeInitialHeight = 0;
 
-    constructor(public cdr: ChangeDetectorRef) {
+    constructor(
+        public cdr: ChangeDetectorRef,
+        @Inject(DOCUMENT) private document: Document
+    ) {
         const newCollection1 = [
             [
                 { colSpan: 1, colStart: 1, hovered: false, key: "ID", rowSpan: 2, rowStart: 1, selected: false,
@@ -434,7 +437,7 @@ export class GridMultiRowLayoutConfigurationComponent {
 
     public copyToClipboard() {
         this.textArea.nativeElement.select();
-        document.execCommand("copy");
+        this.document.execCommand("copy");
     }
 
     public clickCell(cellRef, blockIndex, rowIndex, colIndex) {

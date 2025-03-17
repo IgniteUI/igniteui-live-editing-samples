@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { IgxBooleanFilteringOperand, IgxStringFilteringOperand, IgxTreeGridComponent, IgxColumnComponent, IgxCellTemplateDirective } from 'igniteui-angular';
 import { ORDERS_DATA } from '../data/orders';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
-import { NgIf } from '@angular/common';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
+
 
 @Component({
     selector: 'app-tree-grid-filtering-custom-sample',
     styleUrls: ['./tree-grid-filtering-custom-sample.component.scss'],
     templateUrl: './tree-grid-filtering-custom-sample.component.html',
-    imports: [IgxTreeGridComponent, IgxPreventDocumentScrollDirective, IgxColumnComponent, IgxCellTemplateDirective, NgIf]
+    imports: [IgxTreeGridComponent, IgxPreventDocumentScrollDirective, IgxColumnComponent, IgxCellTemplateDirective]
 })
 export class TreeGridFilteringCustomSampleComponent implements OnInit {
     public data: any[];
@@ -35,7 +35,7 @@ export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
         super();
         const customOperations = [
             {
-                iconName: 'contains',
+                iconName: 'filter_contains',
                 isUnary: false,
                 logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
                     ignoreCase = false;
@@ -46,7 +46,7 @@ export class CaseSensitiveFilteringOperand extends IgxStringFilteringOperand {
                 name: 'Contains (case sensitive)'
             },
             {
-                iconName: 'does-not-contain',
+                iconName: 'filter_does_not_contain',
                 isUnary: false,
                 logic: (target: string, searchVal: string, ignoreCase?: boolean) => {
                     ignoreCase = false;

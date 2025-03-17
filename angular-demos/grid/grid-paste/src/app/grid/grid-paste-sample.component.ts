@@ -4,15 +4,15 @@ import { IgxExcelExporterOptions, IgxExcelExporterService, IgxGridComponent, Igx
 import { EXCEL_DATA, LOCAL_DATA } from './data';
 
 import { first } from 'rxjs/operators';
-import { NgFor } from '@angular/common';
+
 import { PasteHandler } from './paste-handler.directive';
-import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-grid-paste-sample',
     styleUrls: ['./grid-paste-sample.component.scss'],
     templateUrl: './grid-paste-sample.component.html',
-    imports: [IgxButtonDirective, IgxToggleActionDirective, IgxDropDownItemNavigationDirective, IgxDropDownComponent, NgFor, IgxDropDownItemComponent, IgxGridComponent, PasteHandler, IgxPreventDocumentScrollDirective, IgxColumnComponent]
+    imports: [IgxButtonDirective, IgxToggleActionDirective, IgxDropDownItemNavigationDirective, IgxDropDownComponent, IgxDropDownItemComponent, IgxGridComponent, PasteHandler, IgxPreventDocumentScrollDirective, IgxColumnComponent]
 })
 export class GridPasteSampleComponent {
     @ViewChild('grid1', { read: IgxGridComponent, static: true })
