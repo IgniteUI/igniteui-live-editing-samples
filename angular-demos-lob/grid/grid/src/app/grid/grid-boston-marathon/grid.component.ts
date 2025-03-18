@@ -9,18 +9,17 @@ import {
     AfterViewInit
 } from '@angular/core';
 import { IgxGridComponent, IgxNumberSummaryOperand, IgxStringFilteringOperand, IgxSummaryResult, CellType, OverlaySettings, IgxOverlayService, AbsolutePosition, OverlayClosingEventArgs, IgxSwitchComponent, IgxInputGroupComponent, IgxInputDirective, IgxPaginatorComponent, IgxColumnComponent, IgxCellTemplateDirective, IgxAvatarComponent, IgxBadgeComponent, IgxCircularProgressBarComponent } from 'igniteui-angular';
-import { IgxGridCellComponent } from 'igniteui-angular/lib/grids/cell.component';
 import { Athlete, АthletesData, SpeedDescriptor } from '../../data/athletesData';
 import { FormsModule } from '@angular/forms';
-import { IgxPreventDocumentScrollDirective } from '../../../../../../src/app/directives/prevent-scroll.directive';
-import { NgIf, NgClass, NgFor, DecimalPipe } from '@angular/common';
+import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
+import { NgClass, DecimalPipe, DOCUMENT } from '@angular/common';
 import { IgxSparklineCoreModule } from 'igniteui-angular-charts';
 
 @Component({
     selector: 'app-grid',
     styleUrls: ['./grid.component.scss'],
     templateUrl: './grid.component.html',
-    imports: [IgxSwitchComponent, FormsModule, IgxInputGroupComponent, IgxInputDirective, IgxGridComponent, IgxPreventDocumentScrollDirective, IgxPaginatorComponent, IgxColumnComponent, IgxCellTemplateDirective, NgIf, IgxAvatarComponent, IgxBadgeComponent, IgxSparklineCoreModule, IgxCircularProgressBarComponent, NgClass, NgFor, DecimalPipe]
+    imports: [IgxSwitchComponent, FormsModule, IgxInputGroupComponent, IgxInputDirective, IgxGridComponent, IgxPreventDocumentScrollDirective, IgxPaginatorComponent, IgxColumnComponent, IgxCellTemplateDirective, IgxAvatarComponent, IgxBadgeComponent, IgxSparklineCoreModule, IgxCircularProgressBarComponent, NgClass, DecimalPipe]
 })
 export class GridComponent implements OnInit, OnDestroy, AfterViewInit {
 
@@ -49,6 +48,7 @@ export class GridComponent implements OnInit, OnDestroy, AfterViewInit {
     private _timer: any;
     private windowWidth: any;
     private _overlayId: string;
+    currentYear: number;
 
     get live(): boolean {
         return this._live;
@@ -78,11 +78,12 @@ export class GridComponent implements OnInit, OnDestroy, AfterViewInit {
         return (this.windowWidth && this.windowWidth < 860) || !this.live;
     }
 
-    constructor(@Inject(IgxOverlayService) public overlayService: IgxOverlayService) {}
+    constructor(@Inject(IgxOverlayService) public overlayService: IgxOverlayService, @Inject(DOCUMENT) private document: Document) {}
     public ngOnInit(): void {
+        this.currentYear = new Date().getFullYear();
         this.localData = АthletesData.slice(0, 30).sort((a, b) => b.TrackProgress - a.TrackProgress);
         this.localData.forEach(rec => this.getSpeed(rec));
-        this.windowWidth = window.innerWidth;
+        this.windowWidth = this.document.defaultView.innerWidth;
         this._timer = setInterval(() => this.ticker(), 1500);
         this.overlayService.closing.subscribe((event: OverlayClosingEventArgs) => {
             this.showOverlay = false;

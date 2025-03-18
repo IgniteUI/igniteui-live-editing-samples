@@ -3,7 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { IgxColumnComponent, IgxGridComponent, IgxGridDetailTemplateDirective, IgxTabsComponent, IgxTabItemComponent, IgxTabHeaderComponent, IgxTabHeaderLabelDirective, IgxTabContentComponent, IgxAvatarComponent, IgxDividerDirective } from 'igniteui-angular';
 import { IgxLegendComponent, IgxPieChartCoreModule, IgxLegendModule, IgxCategoryChartCoreModule } from 'igniteui-angular-charts';
 import { employeesData } from '../../data/employeesData';
-import { IgxPreventDocumentScrollDirective } from '../../../../../../src/app/directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../../directives/prevent-scroll.directive';
 
 @Component({
     selector: 'app-grid-master-detail',
