@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
-import { TreeGridFinJSComponent } from "./treegrid-finjs/tree-grid-finjs-sample.component";
+import { GridFinJSDockManagerComponent } from "./grid-finjs-dock-manager/grid-finjs-dock-manager.component";
 
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
     templateUrl: "./app.component.html",
-    imports: [TreeGridFinJSComponent]
+    imports: [GridFinJSDockManagerComponent]
 })
 export class AppComponent {}
