@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { provideAnimations } from '@angular/platform-browser/animations';
 
 
+
 export const AppConfig: ApplicationConfig = {
     providers: [
         importProvidersFrom(
