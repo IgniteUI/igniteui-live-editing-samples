@@ -5,6 +5,7 @@ import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideRouter, withComponentInputBinding } from '@angular/router';
 
 
+
 export const AppConfig: ApplicationConfig = {
     providers: [
         importProvidersFrom(
