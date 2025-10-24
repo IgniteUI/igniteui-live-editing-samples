@@ -8,10 +8,10 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/platform-browser-dynamic": "^20.3.0",
     "@angular/router": "^20.3.0",
-    "@infragistics/igniteui-angular": "20.1.0",
-    "@infragistics/igniteui-dockmanager": "^1.17.0",
     "@types/hammerjs": "^2.0.39",
     "hammerjs": "^2.0.8",
+    "igniteui-angular": "20.1.4",
+    "igniteui-dockmanager": "^1.17.0",
     "rxjs": "^7.8.2",
     "tslib": "^2.6.1",
     "zone.js": "~0.15.0"
