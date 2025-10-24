@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { MonthpickerStylingComponent } from "./monthpicker-styling/monthpicker-styling.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { DividerVerticalComponent } from "./vertical/divider-vertical.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

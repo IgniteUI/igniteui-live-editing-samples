@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ToastSample3Component } from "./toast-sample-3/toast-sample-3.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

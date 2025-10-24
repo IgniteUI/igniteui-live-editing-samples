@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { LinearProgressbarComponent } from "./linear-progressbar/linear-progressbar.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

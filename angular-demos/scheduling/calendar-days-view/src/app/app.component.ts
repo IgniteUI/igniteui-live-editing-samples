@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CalendarDaysViewComponent } from "./calendar-days-view/calendar-days-view.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

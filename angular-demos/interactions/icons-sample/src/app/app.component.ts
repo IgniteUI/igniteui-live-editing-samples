@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { IconsSampleComponent } from "./drag-drop/icons-sample/icons-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

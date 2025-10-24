@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ExpansionPanelStylingComponent } from "./expansion-styling/expansion-styling.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

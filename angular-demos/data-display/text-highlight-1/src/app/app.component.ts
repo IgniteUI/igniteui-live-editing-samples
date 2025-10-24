@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { TextHighlightSample1Component } from "./text-highlight-sample-1/text-highlight-sample-1.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

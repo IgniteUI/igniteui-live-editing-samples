@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridFilteringStyleComponent } from "./grid/grid-filtering-style/grid-filtering-style.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

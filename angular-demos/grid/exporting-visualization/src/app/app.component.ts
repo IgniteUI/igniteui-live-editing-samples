@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridExportVisualizationComponent } from "./grid/grid-export-visualization/grid-export-visualization.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ActionStripStylingComponent } from "./action-strip-paragraph-styling/action-strip-paragraph-styling.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

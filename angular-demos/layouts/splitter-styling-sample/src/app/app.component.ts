@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { SplitterStylingSampleComponent } from "./splitter-styling-sample/splitter-styling-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

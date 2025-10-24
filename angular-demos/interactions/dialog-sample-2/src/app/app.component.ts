@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { DialogSample2Component } from "./dialog-sample-2/dialog-sample-2.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

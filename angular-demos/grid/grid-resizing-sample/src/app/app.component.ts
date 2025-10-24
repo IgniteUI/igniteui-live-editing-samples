@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { ResizingSampleComponent } from "./grid/grid-resizing-sample/grid-resizing-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { TabbarStyleComponent } from "./tabbar-style/tabbar-style.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
