@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridComponent } from "./grid/grid-boston-marathon/grid.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
