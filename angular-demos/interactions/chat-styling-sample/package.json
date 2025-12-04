@@ -11,7 +11,7 @@
     "@types/hammerjs": "^2.0.39",
     "dompurify": "^3.2.7",
     "hammerjs": "^2.0.8",
-    "igniteui-angular": "21.0.0-rc.0",
+    "igniteui-angular": "21.0.0",
     "igniteui-webcomponents": "^6.2.0",
     "rxjs": "^7.8.2",
     "shiki": "^3.13.0",
