@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { HierarchicalGridLoDSampleComponent } from "./hierarchical-grid/hierarchical-grid-lod/hierarchical-grid-lod.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { HGridRowPinningExtraColumnSampleComponent } from "./hierarchical-grid/hierarchical-grid-row-pinning-extra-column/hierarchical-grid-row-pinning-extra-column.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

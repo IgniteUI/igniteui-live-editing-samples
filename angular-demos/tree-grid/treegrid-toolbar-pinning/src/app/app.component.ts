@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { TreeGridPinningToolbarSampleComponent } from "./tree-grid-column-pinning-sample/tree-grid-toolbar-pinning.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

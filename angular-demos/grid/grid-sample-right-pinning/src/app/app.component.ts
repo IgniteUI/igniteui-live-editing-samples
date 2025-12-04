@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { RightPinningSampleComponent } from "./grid/grid-sample-right-pinning/grid-right-pinning.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

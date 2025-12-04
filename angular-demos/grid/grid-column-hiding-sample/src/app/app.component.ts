@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridColumnHidingSampleComponent } from "./grid/grid-column-hiding-sample/grid-column-hiding-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

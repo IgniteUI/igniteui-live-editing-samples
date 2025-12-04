@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { HGridSummaryExportComponent } from "./hierarchical-grid/hgrid-summary-export/hgrid-summary-export.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { DateRangePickerValidationComponent } from "./daterangepicker-validation/daterangepicker-validation";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

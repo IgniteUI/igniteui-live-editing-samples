@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { SnackbarSample2Component } from "./snackbar-sample-2/snackbar-sample-2.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

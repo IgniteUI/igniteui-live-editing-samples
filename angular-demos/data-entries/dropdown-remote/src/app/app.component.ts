@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { DropDownRemoteComponent } from "./data-entries/dropdown/drop-down-remote-virtual/drop-down-remote.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { RippleStylingSampleComponent } from "./ripple-stying/ripple-styling-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

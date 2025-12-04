@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CalendarStylingSampleComponent } from "./calendar-styling-sample/calendar-styling-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

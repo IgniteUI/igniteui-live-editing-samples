@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { LocalizationSample3Component } from "./services/localization-samples/localization-sample-3/localization-sample-3.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

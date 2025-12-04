@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { TooltipPlacementComponent } from "./tooltip-placement/tooltip-placement.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

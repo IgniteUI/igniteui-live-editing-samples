@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridSortingIndicatorsComponent } from "./grid/grid-sorting-indicators/grid-sorting-indicators.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

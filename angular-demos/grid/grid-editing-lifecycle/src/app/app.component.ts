@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridEditingLifecycleComponent } from "./grid/grid-editing-lifecycle-sample/grid-editing-lifecycle.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { CarouselAnimationsSampleComponent } from "./carousel-animations-sample/carousel-animations-sample.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],

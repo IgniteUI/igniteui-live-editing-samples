@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { GridValidatorServiceExtendedComponent } from "./grid/grid-validator-service-extended/grid-validator-service-extended.component";
 
+
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
