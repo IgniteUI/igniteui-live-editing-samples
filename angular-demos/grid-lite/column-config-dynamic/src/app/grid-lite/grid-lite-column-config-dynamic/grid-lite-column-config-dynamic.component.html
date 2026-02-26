@@ -1,17 +1,73 @@
 <div class="grid-lite-wrapper">
-  <section class="panel">
-    <igc-button variant="outlined">Column properties</igc-button>
-    <igc-switch 
-      label-position="before"
-      [checked]="hasFormatters"
-      (igcChange)="toggleFormatters($event.detail.checked)">
-      Value formatters:
-    </igc-switch>
-  </section>
-  
-  <igc-grid-lite 
-    #gridLite
-    [columns]="columns" 
-    [data]="data">
-  </igc-grid-lite>
+    <section class="panel">
+        <button igxButton="outlined" [igxToggleAction]="dropdown" [igxDropDownItemNavigation]="dropdown">
+            Column Properties
+        </button>
+        <igx-drop-down #dropdown [isOverlay]="true" [autoClose]="false" [closed]="false">
+            @for (column of columns; track column) {
+            <igx-drop-down-item>
+                <div class="config">
+                    <span class="config-key">{{ column.header }}</span>
+                    <igx-checkbox #hiddenChk [checked]="column.hidden" (click)="$event.stopPropagation()"
+                        (change)="toggleColumnProperty(column, 'hidden', hiddenChk.checked)">
+                        Hidden
+                    </igx-checkbox>
+                    <igx-checkbox #resizableChk [checked]="column.resizable" (click)="$event.stopPropagation()"
+                        (change)="toggleColumnProperty(column, 'resizable', resizableChk.checked)">
+                        Resizable
+                    </igx-checkbox>
+                    <igx-checkbox #filterChk [checked]="column.filterable" (click)="$event.stopPropagation()"
+                        (change)="toggleColumnProperty(column, 'filterable', filterChk.checked)">
+                        Filter
+                    </igx-checkbox>
+                    <igx-checkbox #sortableChk [checked]="column.sortable" (click)="$event.stopPropagation()"
+                        (change)="toggleColumnProperty(column, 'sortable', sortableChk.checked)">
+                        Sort
+                    </igx-checkbox>
+                </div>
+            </igx-drop-down-item>
+            }
+        </igx-drop-down>
+
+        <igx-switch labelPosition="before" [checked]="hasFormatters" (change)="toggleFormatters($event)">
+            Value formatters:
+        </igx-switch>
+    </section>
+
+    <igx-grid-lite [data]="data">
+        @for (col of columns; track col) {
+
+        <!-- Rating column -->
+        @if (col.field === 'rating') {
+        <igx-grid-lite-column [field]="col.field" [header]="col.header" [hidden]="col.hidden" [dataType]="col.dataType"
+            [resizable]="col.resizable" [sortable]="col.sortable" [filterable]="col.filterable">
+
+            <ng-template igxGridLiteCell let-value>
+                <igc-rating [value]="value" readonly step="0.01" min="0" max="5">
+                </igc-rating>
+            </ng-template>
+
+        </igx-grid-lite-column>
+        }
+
+        <!-- Currency columns -->
+        @else if (col.field === 'price' || col.field === 'total') {
+        <igx-grid-lite-column [field]="col.field" [header]="col.header" [hidden]="col.hidden" [dataType]="col.dataType"
+            [resizable]="col.resizable" [sortable]="col.sortable" [filterable]="col.filterable">
+
+            <ng-template igxGridLiteCell let-value>
+                {{ hasFormatters ? formatCurrency(value) : value }}
+            </ng-template>
+
+        </igx-grid-lite-column>
+        }
+
+        <!-- All other columns (NO template) -->
+        @else {
+        <igx-grid-lite-column [field]="col.field" [header]="col.header" [hidden]="col.hidden" [dataType]="col.dataType"
+            [resizable]="col.resizable" [sortable]="col.sortable" [filterable]="col.filterable">
+        </igx-grid-lite-column>
+        }
+        }
+    </igx-grid-lite>
 </div>

@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { LocalizationSample1Component } from "./services/localization-samples/localization-sample-1/localization-sample-1.component";
+import { LocalizationSample1Component } from "./services/localization-samples-old/localization-sample-1/localization-sample-1.component";
 
 
 @Component({

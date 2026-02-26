@@ -1,111 +1,66 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, ViewChild, ElementRef, inject } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { defineComponents, IgcButtonComponent, IgcCheckboxComponent, IgcDropdownComponent, IgcSwitchComponent } from 'igniteui-webcomponents';
-import { IgcGridLite } from 'igniteui-grid-lite';
+import { IgxButtonDirective, IgxToggleActionDirective } from 'igniteui-angular/directives';
+import { IgxCheckboxComponent } from 'igniteui-angular/checkbox';
+import { IgxDropDownComponent, IgxDropDownItemComponent, IgxDropDownItemNavigationDirective } from 'igniteui-angular/drop-down';
+import { defineComponents, IgcRatingComponent } from 'igniteui-webcomponents';
 import { GridLiteDataService, ProductInfo } from '../grid-lite-data.service';
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective, IgxGridLiteColumnConfiguration } from 'igniteui-angular/grids/lite';
+import { IgxSwitchComponent } from 'igniteui-angular/switch';
 
-IgcGridLite.register();
-defineComponents(IgcCheckboxComponent, IgcDropdownComponent, IgcSwitchComponent, IgcButtonComponent);
+defineComponents(IgcRatingComponent);
 
 @Component({
-  selector: 'app-grid-lite-column-config-dynamic',
-  templateUrl: './grid-lite-column-config-dynamic.component.html',
-  styleUrls: ['./grid-lite-column-config-dynamic.component.scss'],
-  imports: [CommonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    selector: 'app-grid-lite-column-config-dynamic',
+    templateUrl: './grid-lite-column-config-dynamic.component.html',
+    styleUrls: ['./grid-lite-column-config-dynamic.component.scss'],
+    imports: [
+        CommonModule,
+        IgxGridLiteComponent,
+        IgxGridLiteColumnComponent,
+        IgxGridLiteCellTemplateDirective,
+        IgxButtonDirective,
+        IgxToggleActionDirective,
+        IgxDropDownItemNavigationDirective,
+        IgxDropDownComponent,
+        IgxDropDownItemComponent,
+        IgxCheckboxComponent,
+        IgxSwitchComponent
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    standalone: true
 })
 export class GridLiteColumnConfigDynamicComponent implements OnInit {
-  private dataService = inject(GridLiteDataService);
-  
-  @ViewChild('gridLite', { static: false }) gridLite!: ElementRef;
-  
-  public data: ProductInfo[] = [];
-  public columns: any[] = [];
-  public hasFormatters = true;
+    private dataService = inject(GridLiteDataService);
 
-  private formatter = new Intl.NumberFormat('en-EN', {
-    style: 'currency',
-    currency: 'EUR'
-  });
+    public data: ProductInfo[] = [];
+    public hasFormatters = true;
 
-  ngOnInit() {
-    this.data = this.dataService.generateProducts(50);
-    
-    this.columns = [
-      { 
-        key: 'id', 
-        hidden: true, 
-        headerText: 'ID',
-        width: '15rem'
-      },
-      { 
-        key: 'name', 
-        headerText: 'Product Name',
-        width: '15rem'
-      },
-      {
-        key: 'price',
-        headerText: 'Price',
-        type: 'number',
-        width: '15rem',
-        cellTemplate: (params: any) => {
-          const span = document.createElement('span');
-          span.textContent = this.formatter.format(params.value);
-          return span;
-        }
-      },
-      { 
-        key: 'sold', 
-        type: 'number', 
-        headerText: 'Units sold',
-        width: '15rem'
-      },
-      { 
-        key: 'total', 
-        headerText: 'Total sold',
-        width: '15rem',
-        cellTemplate: (params: any) => {
-          const span = document.createElement('span');
-          span.textContent = this.formatter.format(params.value);
-          return span;
-        }
-      },
-      {
-        key: 'rating',
-        type: 'number',
-        headerText: 'Customer rating',
-        width: '15rem',
-        cellTemplate: (params: any) => {
-          const rating = document.createElement('igc-rating');
-          rating.setAttribute('readonly', '');
-          rating.setAttribute('step', '0.01');
-          rating.setAttribute('value', params.value.toString());
-          return rating;
-        }
-      }
+    public columns: IgxGridLiteColumnConfiguration<ProductInfo>[] = [
+        { field: 'id', header: 'ID', hidden: true, resizable: true, sortable: false, filterable: false, dataType: 'string'},
+        { field: 'name', header: 'Product Name', hidden: false, resizable: true, sortable: false, filterable: false, dataType: 'string'},
+        { field: 'price', header: 'Price', hidden: false, resizable: true, sortable: false, filterable: false, dataType: 'number' },
+        { field: 'sold', header: 'Units Sold', hidden: false, resizable: true, sortable: false, filterable: false, dataType: 'number' },
+        { field: 'total', header: 'Total Sold', hidden: false, resizable: true, sortable: false, filterable: false, dataType: 'number' },
+        { field: 'rating', header: 'Customer Rating', hidden: false, resizable: true, sortable: false, filterable: false, dataType: 'number' }
     ];
-  }
 
-  updateColumnProperty(key: string, prop: string, value: any) {
-    const grid = this.gridLite?.nativeElement as any;
-    if (grid && grid.updateColumns) {
-      grid.updateColumns({ key, [prop]: value });
-    }
-  }
+    public formatter = new Intl.NumberFormat('en-150', { style: 'currency', currency: 'EUR' });
 
-  toggleFormatters(enabled: boolean) {
-    this.hasFormatters = enabled;
-    const grid = this.gridLite?.nativeElement as any;
-    if (grid && grid.updateColumns) {
-      const updates = ['price', 'total'].map(key => ({
-        key,
-        cellTemplate: enabled ? (params: any) => {
-          const span = document.createElement('span');
-          span.textContent = this.formatter.format(params.value);
-          return span;
-        } : undefined
-      }));
-      grid.updateColumns(updates);
+    ngOnInit() {
+        this.data = this.dataService.generateProducts(50);
     }
-  }
+
+    protected formatCurrency = (value: number) =>
+        this.formatter.format(value);
+
+    toggleColumnProperty(column: any, property: string, value: boolean) {
+        column[property] = value;
+        // Trigger Angular change detection
+        this.columns = [...this.columns];
+    }
+
+    toggleFormatters(event: any) {
+        this.hasFormatters = event.checked;
+    }
 }

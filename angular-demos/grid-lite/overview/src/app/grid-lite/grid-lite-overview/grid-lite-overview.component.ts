@@ -1,130 +1,70 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { 
-  defineComponents,
-  IgcRatingComponent,
-  IgcCheckboxComponent,
-  IgcSelectComponent,
-  IgcAvatarComponent
+import {
+    defineComponents,
+    IgcRatingComponent
 } from 'igniteui-webcomponents';
-import { IgcGridLite } from 'igniteui-grid-lite';
 import { GridLiteDataService, User } from '../grid-lite-data.service';
+import { IgxGridLiteComponent, IgxGridLiteColumnComponent, IgxGridLiteCellTemplateDirective } from 'igniteui-angular/grids/lite';
+import { IgxAvatarComponent } from 'igniteui-angular/avatar';
+import { IgxCheckboxComponent } from 'igniteui-angular/checkbox';
+import { IgxSelectComponent } from 'igniteui-angular/select';
+import { IgxBadgeComponent, IgxBadgeModule } from 'igniteui-angular/badge';
+import { IgxChipComponent } from 'igniteui-angular';
 
-IgcGridLite.register();
 
 defineComponents(
-  IgcAvatarComponent,
-  IgcRatingComponent,
-  IgcCheckboxComponent,
-  IgcSelectComponent
+    IgcRatingComponent
 );
 
 @Component({
-  selector: 'app-grid-lite-overview',
-  templateUrl: './grid-lite-overview.component.html',
-  styleUrls: ['./grid-lite-overview.component.scss'],
-  imports: [CommonModule],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    selector: 'app-grid-lite-overview',
+    templateUrl: './grid-lite-overview.component.html',
+    styleUrls: ['./grid-lite-overview.component.scss'],
+    imports: [
+        CommonModule,
+        IgxGridLiteComponent,
+        IgxGridLiteColumnComponent,
+        IgxAvatarComponent,
+        IgxGridLiteCellTemplateDirective,
+        IgxCheckboxComponent,
+        IgxSelectComponent,
+        IgxBadgeModule,
+        IgxBadgeComponent,
+        IgxChipComponent
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class GridLiteOverviewComponent implements OnInit {
-  private dataService = inject(GridLiteDataService);
-  
-  public data: User[] = [];
-  public columns: any[] = [];
-  private choices = ['Low', 'Standard', 'High'];
+    private dataService = inject(GridLiteDataService);
 
-  ngOnInit() {
-    this.data = this.dataService.generateUsers(1000);
-    
-    this.columns = [
-      {
-        key: 'avatar',
-        headerText: 'Avatar',
-        cellTemplate: (params: any) => {
-          const cell = document.createElement('igc-avatar');
-          cell.setAttribute('shape', 'circle');
-          cell.setAttribute('alt', 'User avatar');
-          cell.setAttribute('src', params.value);
-          return cell;
+    public data: User[] = [];
+
+    ngOnInit() {
+        this.data = this.dataService.generateUsers(1000);
+    }
+
+    public getDepartmentBadgeVariant = (status: string): string => {
+        switch (status) {
+            case "Engineering":
+                return "primary";
+            case "Marketing":
+                return "warning";
+            case "Sales":
+                return "error";
+            case "Finance":
+                return "success";
+            default:
+                return "primary";
         }
-      },
-      {
-        key: 'firstName',
-        headerText: 'First name',
-        sort: true,
-        filter: true,
-        resizable: true
-      },
-      {
-        key: 'lastName',
-        headerText: 'Last name',
-        sort: true,
-        filter: true,
-        resizable: true
-      },
-      {
-        key: 'email',
-        headerText: 'Email Address'
-      },
-      {
-        key: 'priority',
-        headerText: 'Priority',
-        width: '12rem',
-        sort: {
-          comparer: (a: string, b: string) => this.choices.indexOf(a) - this.choices.indexOf(b),
-          caseSensitive: true
-        },
-        cellTemplate: (params: any) => {
-          const select = document.createElement('igc-select');
-          select.setAttribute('outlined', '');
-          select.setAttribute('flip', '');
-          select.setAttribute('value', params.value);
-          
-          this.choices.forEach(choice => {
-            const item = document.createElement('igc-select-item');
-            item.setAttribute('value', choice);
-            item.textContent = choice;
-            select.appendChild(item);
-          });
-          
-          return select;
+    };
+
+    public getEmploymentTypeOutline = (type: string): string => {
+        switch (type) {
+            case 'Full-Time': return 'outline-success';
+            case 'Part-Time': return 'outline-warning';
+            case 'Contract': return 'outline-primary';
+            default: return 'outline-primary';
         }
-      },
-      {
-        key: 'satisfaction',
-        headerText: 'Satisfaction rating',
-        type: 'number',
-        sort: true,
-        filter: true,
-        cellTemplate: (params: any) => {
-          const rating = document.createElement('igc-rating');
-          rating.setAttribute('readonly', '');
-          rating.setAttribute('value', params.value.toString());
-          return rating;
-        }
-      },
-      {
-        key: 'registeredAt',
-        headerText: 'Registered @',
-        sort: true,
-        cellTemplate: (params: any) => {
-          const span = document.createElement('span');
-          span.textContent = params.value.toLocaleString();
-          return span;
-        }
-      },
-      {
-        key: 'active',
-        type: 'boolean',
-        headerText: 'Active',
-        cellTemplate: (params: any) => {
-          const checkbox = document.createElement('igc-checkbox');
-          if (params.value) {
-            checkbox.setAttribute('checked', '');
-          }
-          return checkbox;
-        }
-      }
-    ];
-  }
+    };
 }
