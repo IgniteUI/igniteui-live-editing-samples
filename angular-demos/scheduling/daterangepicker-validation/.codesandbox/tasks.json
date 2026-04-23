@@ -7,11 +7,14 @@
     }
   ],
     // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-    "tasks": {
-        "node node_modules/@angular/cli/bin/ng serve -o --disable-host-check": {
-            "name": "Start Project",
-            "command": "node --max_old_space_size=12192 node_modules/@angular/cli/bin/ng serve -o --disable-host-check",
-            "runAtStart": true
-        }
+  "tasks": {
+    "start": {
+      "name": "Start Project",
+      "command": "node --max-old-space-size=4096 node_modules/@angular/cli/bin/ng serve --host 0.0.0.0 --port 4200 --allowed-hosts=all",
+      "runAtStart": true,
+      "preview": {
+        "port": 4200
+      }
     }
+  }
 }
