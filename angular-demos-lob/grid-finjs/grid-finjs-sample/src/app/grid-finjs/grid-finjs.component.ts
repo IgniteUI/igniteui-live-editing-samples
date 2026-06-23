@@ -10,7 +10,7 @@ import { IgxIconComponent } from 'igniteui-angular/icon';
 import { BehaviorSubject } from 'rxjs';
 import { Contract, REGIONS, Stock } from '../data/financialData';
 import { SignalRService } from '../services/signal-r.service';
-import { IgxPreventDocumentScrollDirective } from '../../../../../src/app/directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 import { FormsModule } from '@angular/forms';
 
 @Component({
