@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import { AsyncPipe, CurrencyPipe } from '@angular/common';
-import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, DOCUMENT, inject } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild, DOCUMENT, inject, ChangeDetectionStrategy } from '@angular/core';
 import { CellType, GridSelectionMode, IColumnExportingEventArgs, IGridKeydownEventArgs, IRowSelectionEventArgs, IgxCellEditorTemplateDirective, IgxCellTemplateDirective, IgxColumnComponent, IgxExcelTextDirective, IgxExporterEvent, IgxGridToolbarActionsComponent, IgxGridToolbarComponent, IgxGridToolbarExporterComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxPdfExporterOptions, IgxPdfExporterService, IgxPdfTextDirective } from 'igniteui-angular/grids/core';
 import { DefaultSortingStrategy, IgxOverlayOutletDirective, OverlaySettings, SortingDirection } from 'igniteui-angular/core';
 import { IgxGridComponent } from 'igniteui-angular/grids/grid';
@@ -10,13 +10,14 @@ import { IgxIconComponent } from 'igniteui-angular/icon';
 import { BehaviorSubject } from 'rxjs';
 import { Contract, REGIONS, Stock } from '../data/financialData';
 import { SignalRService } from '../services/signal-r.service';
-import { IgxPreventDocumentScrollDirective } from '../../../../../src/app/directives/prevent-scroll.directive';
+import { IgxPreventDocumentScrollDirective } from '../directives/prevent-scroll.directive';
 import { FormsModule } from '@angular/forms';
 
 @Component({
     selector: 'app-finjs-grid',
     templateUrl: './grid-finjs.component.html',
     styleUrls: ['./grid-finjs.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     imports: [IgxGridComponent, IgxPreventDocumentScrollDirective, IgxGridToolbarComponent, IgxGridToolbarActionsComponent, IgxGridToolbarHidingComponent, IgxGridToolbarPinningComponent, IgxGridToolbarExporterComponent, IgxExcelTextDirective, IgxPdfTextDirective, IgxColumnComponent, IgxCellEditorTemplateDirective, IgxSelectComponent, FormsModule, IgxFocusDirective, IgxSelectItemComponent, IgxCellTemplateDirective, IgxIconComponent, IgxIconButtonDirective, IgxOverlayOutletDirective, AsyncPipe, CurrencyPipe]
 })
 export class GridFinJSComponent implements OnInit {
