@@ -1,13 +1,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "esModuleInterop": true,
     "declaration": false,
-    "experimentalDecorators": true,
-    "module": "esnext",
+    "module": "ES2022",
     "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
@@ -17,9 +15,11 @@
     "lib": [
       "es2022",
       "dom"
-    ]
-  },
-  "angularCompilerOptions": {
-    "enableIvy": true
+    ],
+    "skipLibCheck": true,
+    "useDefineForClassFields": false,
+    "strictPropertyInitialization": false,
+    "strictNullChecks": false,
+    "noImplicitAny": false
   }
 }

@@ -1,5 +1,5 @@
 import { ApplicationConfig, importProvidersFrom } from '@angular/core';
-import { BrowserModule, HammerModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideIgniteIntl } from 'igniteui-angular';
@@ -12,11 +12,11 @@ export const AppConfig: ApplicationConfig = {
     providers: [
         importProvidersFrom(
             BrowserModule,
-            FormsModule,
-            HammerModule
+            FormsModule
         ),
         provideAnimations(),
         provideIgniteIntl(),
+        provideRouter([]),
         provideRouter(routes, withComponentInputBinding())
     ]
 };
