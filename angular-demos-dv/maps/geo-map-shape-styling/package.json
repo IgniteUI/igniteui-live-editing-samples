@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@angular/animations": "10.0.14",
-    "@angular/common": "10.0.14",
+    "@angular/common": "19.2.16",
     "@angular/compiler": "10.0.14",
     "@angular/core": "^10.0.14",
     "@angular/forms": "10.0.14",
