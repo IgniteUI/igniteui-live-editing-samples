@@ -18,7 +18,7 @@
     "@angular/router": "^22.0.1",
     "@ng-bootstrap/ng-bootstrap": "^20.0.0",
     "bootstrap": "^5.3.3",
-    "igniteui-angular": "^22.1.0-beta.1",
+    "igniteui-angular": "^22.1.0",
     "rxjs": "^7.8.2",
     "tslib": "^2.6.1"
   },

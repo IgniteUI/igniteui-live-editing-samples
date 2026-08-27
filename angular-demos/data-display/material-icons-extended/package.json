@@ -19,7 +19,7 @@
     "@igniteui/material-icons-extended": "^3.1.0",
     "file-saver": "^2.0.2",
     "fuse.js": "^7.1.0",
-    "igniteui-angular": "^22.1.0-beta.1",
+    "igniteui-angular": "^22.1.0",
     "rxjs": "^7.8.2",
     "tslib": "^2.6.1"
   },
