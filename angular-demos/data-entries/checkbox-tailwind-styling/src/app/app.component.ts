@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
-import { CheckboxSample1Component } from "./checkbox-sample-1/checkbox-sample-1.component";
+import { CheckboxTailwindStylingComponent } from "./checkbox-tailwind-styling/checkbox-tailwind-styling.component";
 
 
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
     templateUrl: "./app.component.html",
-    imports: [CheckboxSample1Component]
+    imports: [CheckboxTailwindStylingComponent]
 })
 export class AppComponent {}
