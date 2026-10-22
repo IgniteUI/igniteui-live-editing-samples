@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { OverlaySampleMain2Component } from "./interactions/overlay/overlay-main-2/overlay-main-sample-2.component";
+import { OverlaySampleMain2Component } from "./overlay-main-2/overlay-main-sample-2.component";
 
 
 @Component({
