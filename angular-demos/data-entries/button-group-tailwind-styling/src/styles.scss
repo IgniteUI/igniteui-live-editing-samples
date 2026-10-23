@@ -3,6 +3,7 @@
 @use 'igniteui-theming/tailwind/utilities/material.css';
 @use 'variables' as *;
 @use 'app-layout';
+@import "tailwindcss";
 
 // The Ignite UI theme itself is deliberately NOT compiled into this file. Every
 // sample is embedded in the documentation next to a theming widget that can
