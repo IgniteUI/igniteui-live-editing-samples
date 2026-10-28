@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
-import { IconStylingSampleComponent } from "./icon-styling-sample/icon-styling-sample.component";
+import { IconStylingComponent } from "./icon-styling/icon-styling.component";
 
 
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
     templateUrl: "./app.component.html",
-    imports: [IconStylingSampleComponent]
+    imports: [IconStylingComponent]
 })
 export class AppComponent {}
