@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
-import { CalendarRtlSampleComponent } from "./calendar-rtl-sample/calendar-rtl-sample.component";
+import { CalendarRtlComponent } from "./calendar-rtl/calendar-rtl.component";
 
 
 @Component({
     selector: "app-root",
     styleUrls: ["./app.component.scss"],
     templateUrl: "./app.component.html",
-    imports: [CalendarRtlSampleComponent]
+    imports: [CalendarRtlComponent]
 })
 export class AppComponent {}
