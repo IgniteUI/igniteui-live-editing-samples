@@ -17,8 +17,8 @@
     "@angular/platform-browser-dynamic": "^22.2.0",
     "@angular/router": "^22.2.0",
     "@tailwindcss/postcss": "^4.1.10",
-    "igniteui-angular": "^22.3.0-alpha.0",
-    "igniteui-webcomponents": "^7.4.1",
+    "igniteui-angular": "^22.3.0-beta.2",
+    "igniteui-webcomponents": "^7.5.0-beta.0",
     "rxjs": "^7.8.2",
     "tailwindcss": "^4.1.10",
     "tslib": "^2.6.1"
