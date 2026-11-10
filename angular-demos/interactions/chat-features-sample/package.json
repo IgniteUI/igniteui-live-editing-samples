@@ -16,7 +16,7 @@
     "@angular/platform-browser": "^22.2.0",
     "@angular/platform-browser-dynamic": "^22.2.0",
     "@angular/router": "^22.2.0",
-    "dompurify": "^3.2.7",
+    "dompurify": "^3.4.17",
     "igniteui-angular": "^22.2.0",
     "igniteui-webcomponents": "^7.4.1",
     "marked": "^18.0.11",
