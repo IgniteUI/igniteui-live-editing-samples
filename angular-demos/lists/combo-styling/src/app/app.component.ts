@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { ComboStylingComponent } from "./lists/combo/combo-styling/combo-styling.component";
+import { ComboStylingComponent } from "./combo-styling/combo-styling.component";
 
 
 @Component({
